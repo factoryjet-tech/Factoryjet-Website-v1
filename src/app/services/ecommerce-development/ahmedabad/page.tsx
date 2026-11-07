@@ -27,7 +27,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Ecommerce Development in Ahmedabad | FactoryJet',
   description:
-    'Shopify & WooCommerce stores for Ahmedabad brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery.',
+    'Ecommerce development in Ahmedabad for textile and denim brands, GIDC manufacturers and Kutch craft sellers. Shopify, WooCommerce, UPI, GST. 7-day delivery.',
   keywords: [
     'ecommerce development company ahmedabad',
     'ecommerce website development ahmedabad',
@@ -35,7 +35,6 @@ export const metadata: Metadata = {
     'woocommerce development ahmedabad',
     'online store development ahmedabad',
     'custom ecommerce development ahmedabad',
-    'affordable ecommerce development ahmedabad',
     'ecommerce website cost ahmedabad',
     'd2c website ahmedabad',
     'razorpay shopify ahmedabad',
@@ -50,7 +49,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Ecommerce Development Company in Ahmedabad | FactoryJet',
     description:
-      'Shopify, WooCommerce, D2C, and custom ecommerce stores for Ahmedabad businesses. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+      'Ahmedabad ecommerce: Shopify stores for textile and craft brands, wholesale portals for GIDC factories in Vatva, Naroda and Odhav, NRI checkout. 7-day delivery.',
     url: 'https://factoryjet.com/services/ecommerce-development/ahmedabad',
     images: [
       {
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ecommerce Development Ahmedabad | FactoryJet',
     description:
-      'Shopify, WooCommerce & custom ecommerce for Ahmedabad brands. Razorpay + GST + Shiprocket.',
+      'Ahmedabad ecommerce: textile, craft and GIDC wholesale stores with Gujarati, UPI and GST.',
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -93,7 +92,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-10-21';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -120,7 +119,7 @@ const serviceSchema = {
     '@id': 'https://www.wikidata.org/wiki/Q1070', // Wikidata label: Ahmedabad (city in Gujarat, India)
   },
   description:
-    'Custom ecommerce development for Ahmedabad businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',
+    'Ecommerce development for Ahmedabad businesses: Shopify and WooCommerce stores for textile, denim and Kutch craft brands, wholesale ordering portals for GIDC manufacturers, NRI checkout, GST invoicing. Lighthouse 95+.',
 };
 
 const localBusinessSchema = {
@@ -131,7 +130,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/ahmedabad',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Ahmedabad businesses. Shopify, WooCommerce, and custom stores. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+    'Ecommerce development company serving Ahmedabad and Gandhinagar businesses, from SG Highway brands to GIDC estates. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing. 7-day delivery.',
   areaServed: [
     'SG Highway', 'Prahlad Nagar', 'CG Road', 'Satellite',
     'Navrangpura', 'Bopal', 'Maninagar', 'Vastrapur',
@@ -146,33 +145,33 @@ const localBusinessSchema = {
 const AHMEDABAD_ECOM_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery & Platform Recommendation',
+    title: 'Retail, Wholesale or Both',
     description:
-      'We map your products, target audience, logistics requirements, and revenue model. Platform recommendation (Shopify, WooCommerce, or custom) is made here, before we scope or price anything.',
+      'We go through how you sell today, from counter and dealers to exports, and decide what the first phase covers. A GIDC unit may start with a dealer portal. A craft label may start with an NRI-ready store.',
   },
   {
     number: '02',
-    title: 'Figma Design & Mockup Approval',
+    title: 'Design With Your Catalogue',
     description:
-      'Custom Figma designs for your homepage, product pages, collection pages, and checkout. Mobile-first at 375px. India-specific UX: UPI placement, COD badge position, trust signals above the fold.',
+      'Screens for home, collection, product and checkout or reorder, designed with your real products and price lists, phone first. You approve fabric details, Gujarati labels and trust signals.',
   },
   {
     number: '03',
-    title: 'Development & Payment Integration',
+    title: 'Build and Accounting Links',
     description:
-      'Platform setup, theme or custom development, Razorpay / PayU integration, UPI configuration, GST auto-invoicing, Shiprocket wiring, and product catalogue import.',
+      'Store build, Razorpay with UPI, cards, wallets and COD, GST invoices with HSN codes, Tally or Zoho Books export, courier setup, and buyer logins with account-wise prices for wholesale.',
   },
   {
     number: '04',
-    title: 'QA & Lighthouse Audit',
+    title: 'Testing Orders and Invoices',
     description:
-      'End-to-end testing of every payment method (UPI, cards, COD, wallets). Lighthouse 90+ on mobile before we ship. Core Web Vitals green: LCP under 2.5s, CLS below 0.1.',
+      'We place retail and wholesale test orders, check every invoice and its GST split, test courier labels and run Lighthouse on mobile against a 90+ target.',
   },
   {
     number: '05',
-    title: 'Launch & Handover',
+    title: 'Launch and Training',
     description:
-      'Zero-downtime DNS switch. Sitemap submitted to Google Search Console. Full codebase delivered to your GitHub. 60-minute Zoom walkthrough. 30-day post-launch support window.',
+      'Domain switch with no downtime, sitemap submitted, code and every login handed over, and your team trained. Defects in our work are fixed free for the cover period agreed before we began.',
   },
 ];
 
@@ -403,8 +402,8 @@ export default function AhmedabadEcommercePage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_ahmedabad_hero" />}
           eyebrow="ECOMMERCE DEVELOPMENT · AHMEDABAD"
-          headline="Ahmedabad's Most Trusted Ecommerce Agency: Store Live in 7 Days"
-          lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Ahmedabad brands: Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. 7-day delivery."
+          headline="Ecommerce Development in Ahmedabad: Store Live in 7 Days"
+          lead="FactoryJet builds Shopify and WooCommerce stores for Ahmedabad textile, denim and Kutch craft brands, and wholesale portals for GIDC manufacturers in Vatva, Naroda and Odhav. Gujarati storefronts, UPI and COD at checkout, NRI shipping, Lighthouse 90+. 7-day delivery."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery',
@@ -420,14 +419,14 @@ export default function AhmedabadEcommercePage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+          description="Retail stores and B2B portals for businesses in India, the US, the UK and the UAE. Ahmedabad owners get a fixed price per phase, every line of code in their name, and 7-day delivery on standard stores."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="ECOMMERCE DEVELOPMENT · AHMEDABAD"
-          headline="The Right Platform for Every Ahmedabad Business Model"
-          lead="Ahmedabad's ecommerce market spans D2C textile brands on SG Highway, diamond jewellers in Prahlad Nagar, pharma manufacturers in GIDC, and artisan craft brands from Kutch. Each needs a different platform strategy. FactoryJet recommends the right one before we quote."
+          headline="The Platform Behind an Ahmedabad Store"
+          lead="A Relief Road fabric trader, a Naroda chemicals unit selling to distributors and a bandhani label shipping to New Jersey need three different builds. We study your catalogue, buyers and price lists, then recommend a platform with a fixed price."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -452,12 +451,7 @@ export default function AhmedabadEcommercePage() {
               </div>
 
               <p>
-                The average Indian ecommerce store converts at 0.8–1.2%. The top quartile converts at
-                3–5%. The difference is not the product; it is the store. Slow load times on 4G
-                networks, a UPI checkout that requires too many steps, product pages that bury the buy
-                button below three paragraphs of description, and a mobile layout that was clearly
-                designed on a desktop. These are engineering and design problems, not marketing
-                problems.
+                Ahmedabad owners count every rupee and expect the store to pay its way. That means a store that turns visitors into orders on a phone, and a portal that turns phone orders into typed-in, invoiced orders without staff time. The two goals pull in different directions, so we decide early which one comes first for your business.
               </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
@@ -491,17 +485,12 @@ export default function AhmedabadEcommercePage() {
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  A great ecommerce store is an engineering project measured in revenue, not a
-                  design project measured in compliments.
+                  An Ahmedabad store is judged on orders and margins, never on how pretty it looks.
                 </p>
               </div>
 
               <p>
-                FactoryJet designs every store around Indian consumer behaviour: where the UPI button
-                goes, when the WhatsApp chat trigger fires, how the mobile product page stacks on a
-                375px screen, what trust signals appear above the fold, and how EMI is surfaced at
-                checkout. We have built 120+ Shopify stores and hundreds of WooCommerce and custom
-                builds for Indian brands. That data informs every decision we make on the next one.
+                For retail we build fast product pages with fabric, colour and size detail, UPI first at checkout and COD with limits. For wholesale we build buyer logins, price lists per account, minimum order quantities and GST invoices that flow into Tally. Many Ahmedabad businesses need both, sharing one stock count.
               </p>
             </>
           }
@@ -551,7 +540,7 @@ export default function AhmedabadEcommercePage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  We recommend the right platform. Not the most expensive one.
+                  We choose for your margins, not for the costliest platform.
                 </p>
               </div>
             </div>
@@ -561,23 +550,23 @@ export default function AhmedabadEcommercePage() {
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Ahmedabad Brands Choose FactoryJet Over Local Agencies"
-          lead="Ahmedabad ecommerce agencies often charge several times more for a comparable project and take 10 to 20 weeks to deliver, usually without telling you the price upfront. FactoryJet gives you a fixed quote before you speak to us, puts 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. The price is fixed and confirmed in writing, and the codebase is yours to keep."
+          headline="Why Ahmedabad Owners Choose FactoryJet"
+          lead="Ahmedabad founders ask for the price on the first call and expect it to hold. We give a fixed price for each phase in writing, put 7-day delivery for standard stores into the agreement, and show a working draft on your own products before you sign."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing.',
-              body: "Ahmedabad's market moves fast. Waiting 16 weeks for an agency to deliver a store you briefed in April is not a plan; it is a liability. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the delivery date written into the project agreement. We have delivered on time for 97% of all builds.",
+              body: 'A standard Shopify or WooCommerce store for an Ahmedabad business is live in 7 days once products, photos and gateway approval arrive. The date goes into the agreement, and 97% of our builds have shipped on time.',
             },
             {
               icon: '📱',
-              title: "India's ecommerce is 65% mobile. Most stores are not built for it.",
-              body: 'Most Ahmedabad ecommerce stores are designed on a desktop and adapted down. The result: 0.4% mobile conversion rates on template stores versus 2.1% on properly designed custom builds. FactoryJet designs every store mobile-first at 375px: tap targets, product image sizing, checkout flow, and UPI placement all optimised for the phone your customer actually uses.',
+              title: 'Retail and wholesale on one phone.',
+              body: 'Your retail buyer and your dealer both order from a phone. We design at 375px first: product pages that load fast on 4G, and a dealer reorder screen that takes two taps.',
             },
             {
               icon: '📋',
               title: 'Fixed price. Agreed before we start.',
-              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your store running.",
+              body: 'Each phase is priced in writing before work starts, and the number does not change with hours. After launch, support is optional and every change is quoted for your approval.',
             },
           ]}
         />
@@ -585,20 +574,20 @@ export default function AhmedabadEcommercePage() {
         {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Platform Decision to Live Store in 7 Days"
-          lead="Platform recommendation before we scope. Design approval before we build. Full payment and logistics testing before we launch."
+          headline="How an Ahmedabad Store Gets Built"
+          lead="We settle retail, wholesale or both first, design on your products, and test every payment, invoice and courier before launch."
           stages={AHMEDABAD_ECOM_STAGES}
-          closingNote="5 STAGES · 7 DAYS · RAZORPAY + GST + SHIPROCKET · LIGHTHOUSE 90+ · ZERO-DOWNTIME LAUNCH"
+          closingNote="5 STAGES · RETAIL + WHOLESALE · UPI + GST + TALLY · LIGHTHOUSE 90+ · CODE IN YOUR NAME"
         />
 
         {/* ── 7. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="AHMEDABAD ECOMMERCE MARKET"
-          headline="Why Ahmedabad Is Gujarat's Ecommerce Engine"
+          headline="How Ahmedabad Business Is Moving Online"
           leadParagraphs={[
-            "Ahmedabad's ecommerce market is anchored by the city's extraordinary manufacturing depth: textiles, diamonds, pharmaceuticals, food processing, and industrial chemicals. Gujarat's entrepreneurial culture, combined with the state's dominant position in India's export economy, creates a unique ecommerce market where wholesale-to-D2C transitions, B2B procurement portals, and international export stores all represent major opportunities.",
-            "Ahmedabad's ecommerce transitions are accelerating. SG Highway textile traders are launching Shopify stores with NRI-targeted international shipping and COD-heavy domestic checkout. GIDC pharma manufacturers are building B2B procurement portals with CDSCO-compliant product pages. Prahlad Nagar food brands are building D2C subscription operations with FSSAI compliance. And Kutch artisan cooperatives are reaching global buyers through Shopify international with automatic currency conversion and GST export invoicing.",
-            "Gujarat's entrepreneurial culture means Ahmedabad business owners are fast decision-makers who demand transparency in pricing and delivery timelines. FactoryJet's transparent pricing, fixed project scope, and 7-day delivery are precisely the signals that resonate with Ahmedabad founders who have dealt with agencies that charge discovery fees and deliver after 20 weeks.",
+            "Ahmedabad built its name on textiles, and the trade is still everywhere: fabric markets around Relief Road and Kalupur, garment makers, and large denim and processing mills on the city's edge. Next to them, the GIDC estates of Vatva, Naroda and Odhav hold chemical, plastics, engineering and pharma manufacturers that sell mostly to distributors and other factories.",
+            'Most of this trade still runs on phone calls, WhatsApp and paper. The step many Ahmedabad businesses are taking now is a portal where trade buyers log in, see their own prices and minimum quantities, reorder past orders and receive GST invoices without anyone typing them up. A retail store often follows, aimed at buyers in India and abroad.',
+            "Gujarat's crafts and its diaspora shape the retail side. Kutch embroidery, bandhani, Patola and block-printed fabrics sell to Gujarati families in the US, UK, Canada and Africa, with peaks before Navratri, Diwali and the wedding season. Uttarayan brings its own rush for kites and festive food in January. We plan stores around those dates, in Gujarati where buyers want it.",
           ]}
           stats={[
             {
@@ -625,50 +614,50 @@ export default function AhmedabadEcommercePage() {
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="AHMEDABAD × ECOMMERCE"
-          headline="Ecommerce Development for Ahmedabad's Key Commerce Verticals"
-          lead="From SG Highway textile traders to GIDC pharma manufacturers to Kutch artisan brands , and Ahmedabad's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."
+          headline="Ahmedabad Sectors We Build For"
+          lead="From Kalupur fabric traders to Naroda chemical units and Kutch craft labels, these six sectors bring most of the Ahmedabad work we scope."
           sectors={[
             {
-              name: 'Textiles & Garments',
+              name: 'Textiles, Denim & Garments',
               description:
-                "Ahmedabad is India's textile capital. Surat Road and Ring Road textile businesses are building D2C Shopify stores and B2B wholesale portals. WhatsApp catalogue commerce, COD flows, bulk order management.",
+                'Fabric traders, denim mills and garment makers need wholesale catalogues with MOQ and price slabs, plus retail stores with fabric, colour and size detail.',
               example:
-                'Garment manufacturers, fabric wholesalers going D2C, ethnic wear brands.',
+                'Fabric wholesalers, denim and shirting mills, kurta and ethnic wear makers.',
             },
             {
-              name: 'Diamonds & Gems',
+              name: 'Diamonds & Jewellery',
               description:
-                'Ahmedabad and Surat together handle 90% of the world\'s diamond polishing. Diamond jewellery ecommerce needs high-trust checkout, COD with insured shipping, and B2B diamond trading portals.',
+                'Jewellers and diamond traders need certificate display, HUID on gold, price breakups, insured shipping and login-only catalogues for trade buyers.',
               example:
-                'Diamond jewellery brands, gem traders, B2B diamond polishing businesses.',
+                'Diamond traders, gold jewellers, silver and imitation jewellery wholesalers.',
             },
             {
-              name: 'Pharmaceuticals',
+              name: 'Pharma & Healthcare',
               description:
-                "Ahmedabad's GIDC houses India's second-largest pharma manufacturing cluster. B2B pharma procurement, online pharmacy, and OTC health D2C brands.",
+                'GIDC pharma makers sell to distributors and chemists. Portals capture drug licence numbers, show batch and expiry details and raise GST invoices automatically.',
               example:
-                'Pharma manufacturers, OTC health brands, B2B medical supplies.',
+                'Pharma formulators, API makers selling B2B, surgical and diagnostic suppliers.',
             },
             {
-              name: 'Food Processing & FMCG',
+              name: 'Food, Snacks & Spices',
               description:
-                "Gujarat's agri-based food processing industry (spices, dairy, snacks, packaged foods) is one of India's largest. FSSAI compliance, subscription commerce, and export-ready B2B portals.",
+                'Gujarati snacks, spices and sweets ship across India and abroad. Stores need FSSAI details, shelf-life notes, festival gift boxes and export rules for food.',
               example:
-                'Spice brands, dairy product companies, packaged snack D2C labels.',
+                'Farsan and namkeen makers, spice brands, khakhra and sweet shops.',
             },
             {
-              name: 'Handicrafts & Artisan Products',
+              name: 'Kutch Crafts & Bandhani',
               description:
-                "Gujarat's rich craft tradition (Patola silk, Kutch embroidery, bandhani) is finding global buyers through ecommerce. Artisan product stores need international shipping, high-trust product photography, and NRI-targeted marketing.",
+                'Hand embroidery, bandhani and Patola sell to the diaspora and gift buyers. Stores need maker stories, close-ups, NRI checkout and careful shipping.',
               example:
-                'Patola silk brands, Kutch craft D2C labels, artisan jewellery companies.',
+                'Kutch embroidery collectives, bandhani studios, Patola and craft sellers.',
             },
             {
-              name: 'Industrial & Chemical B2B',
+              name: 'Chemicals, Plastics & Engineering',
               description:
-                "GIDC's industrial estates house chemical, plastic, and engineering goods manufacturers building B2B procurement portals. GST B2B invoicing, bulk order flows, and buyer-specific catalogues.",
+                'GIDC manufacturers need RFQ forms, technical data sheets, buyer-specific catalogues, bulk orders and GST B2B invoices that export to Tally.',
               example:
-                'Chemical manufacturers, plastic component suppliers, industrial goods B2B portals.',
+                'Chemical and dye makers, plastic moulders, pumps and engineering goods suppliers.',
             },
           ]}
         />
@@ -705,14 +694,14 @@ export default function AhmedabadEcommercePage() {
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What founders say after we build their store"
+          headline="What founders say after their store goes live"
         />
 
         {/* ── 12. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Everything Ahmedabad Founders Ask Before They Sign"
-          lead="The questions we answer on every Ahmedabad ecommerce discovery call, answered here, without the runaround."
+          headline="What Ahmedabad Founders Ask Before They Sign"
+          lead="The questions Ahmedabad traders, manufacturers and craft brands raise on a first call, answered with straight numbers where we have them."
           categories={AHMEDABAD_ECOM_FAQ_CATEGORIES}
           items={AHMEDABAD_ECOM_FAQ_ITEMS}
         />
@@ -721,11 +710,11 @@ export default function AhmedabadEcommercePage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO LAUNCH"
-          headline="Your Ahmedabad Ecommerce Store. Live in 7 Days."
-          sub="Join 500+ brands across India, the US, the UK and the UAE who chose FactoryJet. We will scope your build, recommend the right platform, and deliver a Razorpay-integrated, GST-compliant, Lighthouse 90+ store in 7 business days. Free strategy call, no commitment required."
+          headline="Your Ahmedabad Store, Live in 7 Days"
+          sub="FactoryJet has worked with 500+ businesses in India, the US, the UK and the UAE. Tell us what you sell and who buys it, retail or trade. We will recommend a platform, fix the price for each phase in writing and show you a draft before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price. 7-day delivery. Razorpay + GST + Shiprocket. Your codebase delivered in full on launch day."
+          objectionHandler="Fixed price per phase. 7-day delivery. UPI, GST and Tally connected. Every account and file stays yours."
         />
 
       </main>

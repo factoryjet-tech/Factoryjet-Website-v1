@@ -27,7 +27,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Ecommerce Development in Mumbai | FactoryJet',
   description:
-    'Shopify, WooCommerce & AI-native stores for Mumbai brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery.',
+    'Ecommerce development in Mumbai for fashion labels, Zaveri Bazaar jewellers, FMCG brands and Bhiwandi-stocked sellers. Shopify, UPI, COD, GST. 7-day delivery.',
   keywords: [
     'ecommerce development company mumbai',
     'ecommerce website development mumbai',
@@ -35,7 +35,6 @@ export const metadata: Metadata = {
     'woocommerce development mumbai',
     'online store development mumbai',
     'custom ecommerce development mumbai',
-    'affordable ecommerce development mumbai',
     'ecommerce website cost mumbai',
     'd2c website mumbai',
     'razorpay shopify mumbai',
@@ -50,7 +49,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Ecommerce Development Company in Mumbai | FactoryJet',
     description:
-      'Shopify, WooCommerce, D2C, and AI-native ecommerce stores for Mumbai businesses. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+      'Mumbai ecommerce: Shopify stores for Bandra fashion and D2C beauty brands, jewellery catalogues, stock synced with Bhiwandi warehouses. 7-day delivery.',
     url: 'https://factoryjet.com/services/ecommerce-development/mumbai',
     images: [
       {
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ecommerce Development Mumbai | FactoryJet',
     description:
-      'Shopify, WooCommerce & AI ecommerce for Mumbai brands. Razorpay + GST + Shiprocket.',
+      'Mumbai ecommerce: fashion, jewellery and FMCG stores with warehouse sync, UPI and GST.',
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -93,7 +92,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-10-21';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -116,7 +115,7 @@ const serviceSchema = {
     '@id': 'https://www.wikidata.org/wiki/Q1156', // Wikidata label: Mumbai (capital of Maharashtra, India)
   },
   description:
-    'Custom ecommerce development for Mumbai businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and AI-native stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',
+    'Ecommerce development for Mumbai businesses: Shopify and WooCommerce stores for fashion, beauty and FMCG brands, jewellery catalogues with gold-rate pricing, omnichannel stock with outlets, warehouse integrations, GST invoicing. Lighthouse 95+.',
 };
 
 const localBusinessSchema = {
@@ -127,7 +126,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/mumbai',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Mumbai businesses. Shopify, WooCommerce, and custom stores. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+    'Ecommerce development company serving Mumbai, Thane and Navi Mumbai businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD, warehouse sync and GST invoicing. 7-day delivery.',
   areaServed: [
     'Andheri', 'Bandra', 'BKC', 'Lower Parel', 'Navi Mumbai',
     'Thane', 'Powai', 'Malad', 'Goregaon', 'Kurla',
@@ -142,33 +141,33 @@ const localBusinessSchema = {
 const MUMBAI_ECOM_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery & Platform Recommendation',
+    title: 'Channels and Stock Map',
     description:
-      'We map your products, target audience, logistics requirements, and revenue model. Platform recommendation (Shopify, WooCommerce, or custom) is made here, before we scope or price anything.',
+      'We list every place you sell and every place stock sits: website, marketplaces, outlets, Bhiwandi or a 3PL. That map decides the platform, the inventory tool and the order routing.',
   },
   {
     number: '02',
-    title: 'Figma Design & Mockup Approval',
+    title: 'Design on Your Range',
     description:
-      'Custom Figma designs for your homepage, product pages, collection pages, and checkout. Mobile-first at 375px. India-specific UX: UPI placement, COD badge position, trust signals above the fold.',
+      'Home, collection, product and checkout screens designed with your real products, phone first. You approve size guides, exchange flows, price breakups and trust details before build.',
   },
   {
     number: '03',
-    title: 'Development & Payment Integration',
+    title: 'Build and System Links',
     description:
-      'Platform setup, theme or custom development, Razorpay / PayU integration, UPI configuration, GST auto-invoicing, Shiprocket wiring, and product catalogue import.',
+      'Store build, Razorpay with UPI, cards, wallets and COD, GST invoicing, warehouse and outlet sync, marketplace connectors, courier setup and catalogue import.',
   },
   {
     number: '04',
-    title: 'QA & Lighthouse Audit',
+    title: 'Test Orders and Stock Sync',
     description:
-      'End-to-end testing of every payment method (UPI, cards, COD, wallets). Lighthouse 90+ on mobile before we ship. Core Web Vitals green: LCP under 2.5s, CLS below 0.1.',
+      'We place orders from each channel, check that stock updates everywhere, test invoices and labels, and run Lighthouse on mobile against a 90+ target.',
   },
   {
     number: '05',
-    title: 'Launch & Handover',
+    title: 'Launch and Handover',
     description:
-      'Zero-downtime DNS switch. Sitemap submitted to Google Search Console. Full codebase delivered to your GitHub. 60-minute Zoom walkthrough. 30-day post-launch support window.',
+      'Domain switch with no downtime, sitemap submitted, code and logins handed to your team, staff trained. Defects in our build are fixed free for the cover period agreed upfront.',
   },
 ];
 
@@ -199,15 +198,15 @@ const MUMBAI_ECOM_FAQ_ITEMS = [
   },
   {
     category: 'pricing',
-    question: "How do I pay for an ecommerce build?",
+    question: 'How is a Mumbai build billed?',
     answer:
-      "We split the build into phases. Each phase is scoped, priced and signed on its own, so you never pay for work that has not been agreed. The price is fixed in writing and does not move with hours. You can pay by NEFT, RTGS or UPI.",
+      'Phase by phase. The storefront might be phase one, and warehouse or outlet sync phase two. Each phase has a written scope and a fixed price you sign before it starts, so the bill never grows with hours. Bank transfer by NEFT or RTGS, or UPI, all work.',
   },
   {
     category: 'pricing',
-    question: "Can I see my store before I sign a contract?",
+    question: 'Do we get to see a working store before signing?',
     answer:
-      "Yes. Before a contract, we build a draft of your store on your own products and show it to you working. You judge the design, the product pages and the checkout on real items, not a sample theme. If it is not right, you have spent nothing.",
+      'Yes. We set up a draft on a handful of your real products, so your team can browse, add to cart and reach payment on their own phones. If the draft does not fit your brand, there is no contract to cancel and nothing to pay.',
   },
   {
     category: 'pricing',
@@ -241,21 +240,21 @@ const MUMBAI_ECOM_FAQ_ITEMS = [
   },
   {
     category: 'platform',
-    question: "Do you set up Razorpay, UPI and Cash on Delivery?",
+    question: 'Which payment methods can a Mumbai store accept?',
     answer:
-      "Yes, on every store. Razorpay is our default gateway and covers UPI, cards, net banking, wallets and EMI in one account. We connect PayU, CCAvenue or PhonePe if you already use one. Cash on Delivery is switched on with the limits you choose, such as a maximum order value or pincodes where COD is off.",
+      'UPI, cards, net banking, wallets, EMI and pay-later options through one Razorpay account, which is our usual starting point. If your finance team already uses PayU, Cashfree or PhonePe, we connect that instead. COD runs with rules you choose, such as a value cap or prepaid-only for first orders.',
   },
   {
     category: 'platform',
-    question: "Can you sync my Mumbai store with Amazon, Flipkart, Myntra and Ajio?",
+    question: 'Can my store share stock with Myntra, Ajio, Amazon and Flipkart?',
     answer:
-      "Yes. A multi-channel tool such as Unicommerce connects your store to the marketplaces you sell on, including Myntra and Ajio for fashion. Products, prices and stock stay in step, and orders from every channel land in one dashboard. That stops the classic oversell: the last piece in a size selling on two channels within minutes during a sale.",
+      'Yes. An inventory tool such as Unicommerce or EasyEcom sits between your store and each marketplace, so one stock count feeds every channel. Orders land in a single dashboard and route to the right warehouse. During a sale, the last piece in a size cannot be sold twice.',
   },
   {
     category: 'india',
-    question: "Do your stores handle GST invoicing?",
+    question: 'How are GST invoices set up for Mumbai orders?',
     answer:
-      "Yes. Every store raises a GST invoice when an order is placed, with HSN codes per product and the right IGST, or CGST and SGST, split for the buyer's state. B2B buyers can enter a GSTIN at checkout. If your turnover puts you inside GST e-invoicing, we connect the store to your e-invoicing setup so B2B invoices carry an IRN. Orders export to Tally or Zoho Books.",
+      'Orders inside Maharashtra carry CGST and SGST, and orders to other states carry IGST. The invoice is raised automatically with HSN codes and, for business buyers, their GSTIN. If your turnover puts you under e-invoicing, B2B invoices get an IRN through your e-invoicing setup. Exports go to Tally or Zoho Books.',
   },
   {
     category: 'india',
@@ -265,21 +264,21 @@ const MUMBAI_ECOM_FAQ_ITEMS = [
   },
   {
     category: 'india',
-    question: "How do Mumbai exporters sell to buyers abroad?",
+    question: 'How do Mumbai exporters reach overseas buyers?',
     answer:
-      "Shopify Markets shows prices in each buyer's currency and handles international checkout. We connect a cross-border courier, such as Shiprocket X or DHL, and show duties and delivery times before payment. Jewellery and fashion exporters often run two storefronts: retail for overseas consumers and a login-only wholesale catalogue for overseas stores, each with its own prices.",
+      'Retail buyers abroad see prices in their own currency through Shopify Markets, with a cross-border courier such as DHL or Shiprocket X and duties shown before payment. Overseas stores and distributors get a separate login with trade prices. Jewellery and leather exporters often run both side by side.',
   },
   {
     category: 'india',
-    question: "Which courier should a Mumbai store use?",
+    question: 'What courier setup works for a Mumbai store?',
     answer:
-      "Shiprocket is the default for most stores. One account gives you Delhivery, Blue Dart, Xpressbees, Ekart and others, with automatic courier choice and return handling. Brands shipping from a Bhiwandi warehouse at volume often sign direct contracts later. For same-day delivery inside Mumbai, a hyperlocal partner works for food and gifts. During the monsoon, we show buyers longer delivery estimates.",
+      'Most Mumbai stores ship from Bhiwandi through Shiprocket or a 3PL, which gives Delhivery, Blue Dart, Xpressbees and others under one panel. Brands at volume often sign a direct contract later. Same-day delivery inside the city suits food, beauty and gifts. In the monsoon we lengthen delivery estimates automatically.',
   },
   {
     category: 'india',
-    question: "How do I cut COD returns on a Mumbai store?",
+    question: 'How can a Mumbai store bring down COD returns?',
     answer:
-      "Three changes do most of the work. Ask for a small prepaid amount on COD orders, confirm each COD order by WhatsApp before it ships, and switch COD off for pincodes and order values where returns are high. We also show a clear returns policy at checkout, because unclear terms are a common reason buyers refuse a parcel at the door.",
+      'Send a WhatsApp confirmation for each COD order before it leaves the warehouse, take a token prepaid amount on larger orders, and switch COD off for pincodes and products with high refusal rates. Exchange-first returns for fashion also help, because buyers who can swap a size rarely refuse the parcel.',
   },
   {
     category: 'india',
@@ -289,45 +288,45 @@ const MUMBAI_ECOM_FAQ_ITEMS = [
   },
   {
     category: 'seo',
-    question: "Will my store rank for Mumbai searches?",
+    question: 'Can my store show up in Mumbai local searches?',
     answer:
-      "It can, if the basics are right from launch. We add product and breadcrumb schema, clean titles, canonical URLs and a sitemap submitted to Search Console. If you have outlets in Andheri, Thane or Navi Mumbai, a store locator with one page per outlet, linked to each Google Business Profile, helps you show on the map in each area.",
+      'Yes, with the right setup at launch: product and breadcrumb schema, clean titles, canonical tags and a sitemap in Search Console. Brands with outlets in Andheri, Thane or Navi Mumbai get a store locator with one page per outlet, each tied to its Google Business Profile, so you appear on the map in each area.',
   },
   {
     category: 'seo',
-    question: "Do you test the store speed before handover?",
+    question: 'Is the store speed checked before launch?',
     answer:
-      "Yes. Before handover we test the main pages against Google's Core Web Vitals: LCP under 2.5 seconds, INP under 200 milliseconds and CLS under 0.1, on a mobile connection. We share the Lighthouse report with you. Most of the work is in images, apps and theme code, so we keep apps to the ones your store actually uses.",
+      'Yes. We run Lighthouse on mobile for home, collection, product and cart pages and send you the report. The target is 90+, with LCP below 2.5 seconds and little layout shift. Fashion catalogues need the most image work, and app scripts are the next usual cause.',
   },
   {
     category: 'seo',
-    question: "Can you fix a Mumbai store that is already slow?",
+    question: 'Our Mumbai store is slow. What can you do?',
     answer:
-      "Yes. We start with an audit of the slowest pages: image sizes, apps loading scripts on every page, theme code and third-party chat or review widgets. You get a written list of fixes in order of impact, with a fixed price for doing them. Often the biggest gain comes from removing apps nobody uses any more.",
+      'Start with an audit of the slowest templates. We list each cause, such as oversized photos, apps loading on every page, review or chat widgets and theme code, then quote a fixed price for the fixes in order of impact. Many stores speed up most from dropping apps they no longer use.',
   },
   {
     category: 'trust',
-    question: "Do I own the store and all the code?",
+    question: 'Who owns the store, code and accounts?',
     answer:
-      "Yes, from day one. The store account, domain, payment gateway and courier accounts sit in your business name, and you get the code repository and every admin login. Hosting and app bills can run in your own accounts at cost, with no markup from us. You can move to another developer whenever you like.",
+      'Your company does, from the first day. The store, domain, gateway, courier and warehouse accounts are registered to you, and the code lives in your own repository with every admin login handed over. Hosting and app bills can sit on your cards at cost. You can bring in another developer whenever you like.',
   },
   {
     category: 'trust',
-    question: "What support do I get after launch?",
+    question: 'What happens after the store is live?',
     answer:
-      "Defects in what we built are fixed inside the build price for a cover period agreed before work starts. After that, support is optional. Each change is quoted and approved by you before we do it, and there is no monthly minimum. If you want us to keep running updates and checks, we quote that as a fixed price too.",
+      'Defects in anything we built are fixed within the build price during a cover period agreed before work starts. After that you decide. Each change is quoted and approved before we do it, and there is no monthly minimum to keep us on.',
   },
   {
     category: 'pricing',
-    question: "Who is the best ecommerce development company in Mumbai?",
+    question: 'Who is the best ecommerce development company in Mumbai?',
     answer:
-      "For D2C fashion, jewellery and FMCG brands, FactoryJet makes a strong case: a fixed written price, senior engineers, a draft of your store before you sign, and you own everything at the end. Any ecommerce website development company in Mumbai, or ecommerce solution company in Mumbai, should pass three checks: who writes the code, is the price fixed, and do you own the store.",
+      'Before you pick an ecommerce website development company in Mumbai, ask three things: which engineer writes the code, is the price fixed in writing, and will you own the store outright. FactoryJet says yes to all three for fashion, jewellery and FMCG brands, and builds a draft of your store before you sign. Ask every ecommerce solution company in Mumbai the same.',
   },
   {
     category: 'pricing',
-    question: "Should I hire an ecommerce developer in Mumbai or use an agency?",
+    question: 'Should I hire an ecommerce developer in Mumbai or an agency?',
     answer:
-      "One developer can build a simple store. A real shop also needs design, payments, couriers, GST and SEO working together, and one person rarely covers all five. A small senior team does, at a fixed price. If you hire an ecommerce developer in Mumbai directly, open two of their past stores on your phone and check how fast they load first.",
+      'A freelancer can put up a basic store. A Mumbai brand usually also needs warehouse sync, marketplace connectors, payments, GST, couriers and SEO, which is more than one person covers well. A small senior team handles it for a fixed price. If you do hire an ecommerce developer in Mumbai, load two of their live stores on your phone first.',
   },
 ];
 
@@ -405,8 +404,8 @@ export default function MumbaiEcommercePage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_mumbai_hero" />}
           eyebrow="ECOMMERCE DEVELOPMENT · MUMBAI"
-          headline="Mumbai's Most Trusted Ecommerce Agency: Store Live in 7 Days"
-          lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Mumbai brands: Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. 7-day delivery."
+          headline="Ecommerce Development in Mumbai: Store Live in 7 Days"
+          lead="FactoryJet builds Shopify stores for Mumbai fashion, beauty and FMCG brands, jewellery catalogues for Zaveri Bazaar houses, and omnichannel setups that share stock between your outlets and a Bhiwandi warehouse. UPI and COD at checkout, Lighthouse 90+. 7-day delivery."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery',
@@ -422,14 +421,14 @@ export default function MumbaiEcommercePage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+          description="Stores, catalogues and B2B portals for businesses in India, the US, the UK and the UAE. Mumbai brands get a fixed price per phase, full ownership of code and accounts, and 7-day delivery on standard stores."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="ECOMMERCE DEVELOPMENT · MUMBAI"
-          headline="The Right Platform for Every Mumbai Business Model"
-          lead="Mumbai's ecommerce market spans D2C fashion brands in Bandra, B2B exporters in SEEPZ, FMCG distributors in Bhiwandi, and jewellery houses in Zaveri Bazaar. Each needs a different platform strategy. FactoryJet recommends the right one before we quote."
+          headline="Getting the Stack Right for a Mumbai Brand"
+          lead="A Bandra fashion label with three outlets, a Zaveri Bazaar jeweller pricing by the daily gold rate and an FMCG brand shipping from Bhiwandi each need a different setup. We look at your catalogue, channels and warehouse first, then propose a platform and a fixed price."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -454,12 +453,7 @@ export default function MumbaiEcommercePage() {
               </div>
 
               <p>
-                The average Indian ecommerce store converts at 0.8–1.2%. The top quartile converts at
-                3–5%. The difference is not the product; it is the store. Slow load times on 4G
-                networks, a UPI checkout that requires too many steps, product pages that bury the buy
-                button below three paragraphs of description, and a mobile layout that was clearly
-                designed on a desktop. These are engineering and design problems, not marketing
-                problems.
+                Mumbai brands rarely sell through one channel. A label might sell on its own site, on Myntra and Ajio, on Instagram and in two malls, all from stock held in Bhiwandi. If those channels do not share one stock count, the same size sells twice and someone gets a refund instead of a kurta. The store is the hub that keeps them honest.
               </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
@@ -493,17 +487,12 @@ export default function MumbaiEcommercePage() {
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  A great ecommerce store is an engineering project measured in revenue, not a
-                  design project measured in compliments.
+                  In Mumbai, the store is only as good as the stock count behind it.
                 </p>
               </div>
 
               <p>
-                FactoryJet designs every store around Indian consumer behaviour: where the UPI button
-                goes, when the WhatsApp chat trigger fires, how the mobile product page stacks on a
-                375px screen, what trust signals appear above the fold, and how EMI is surfaced at
-                checkout. We have built 120+ Shopify stores and hundreds of WooCommerce and custom
-                builds for Indian brands. That data informs every decision we make on the next one.
+                We connect Mumbai stores to the systems that hold the stock: warehouse software, outlet billing and marketplaces. Orders route to the right location, stock updates everywhere, and buyers see real delivery dates. On the front end, fashion gets exchange-first returns, jewellery gets price breakups and FMCG gets subscriptions and reorder buttons.
               </p>
             </>
           }
@@ -553,7 +542,7 @@ export default function MumbaiEcommercePage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  We recommend the right platform. Not the most expensive one.
+                  We fit the stack to your channels, not to the priciest quote.
                 </p>
               </div>
             </div>
@@ -563,23 +552,23 @@ export default function MumbaiEcommercePage() {
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Mumbai Brands Choose FactoryJet Over Local Agencies"
-          lead="Mumbai ecommerce agencies often charge several times more for a comparable project and take 10 to 20 weeks to deliver, usually without telling you the price upfront. FactoryJet gives you a fixed quote before you speak to us, puts 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. The price is fixed and confirmed in writing, and the codebase is yours to keep."
+          headline="Why Mumbai Brands Work With FactoryJet"
+          lead="Mumbai brands live by launch dates: a drop, a sale, a season. We put a fixed price on each phase in writing, write 7-day delivery for standard stores into the agreement, and show you a working draft on your own products before you sign."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing.',
-              body: "Mumbai's market moves fast. Waiting 16 weeks for an agency to deliver a store you briefed in April is not a plan; it is a liability. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the delivery date written into the project agreement. We have delivered on time for 97% of all builds.",
+              body: 'A standard Shopify or WooCommerce store for a Mumbai brand goes live in 7 days once products, photos and gateway approval are in. The date is in the agreement, and 97% of our builds have launched on schedule.',
             },
             {
               icon: '📱',
-              title: "India's ecommerce is 65% mobile. Most stores are not built for it.",
-              body: 'Most Mumbai ecommerce stores are designed on a desktop and adapted down. The result: 0.4% mobile conversion rates on template stores versus 2.1% on properly designed custom builds. FactoryJet designs every store mobile-first at 375px: tap targets, product image sizing, checkout flow, and UPI placement all optimised for the phone your customer actually uses.',
+              title: 'Designed for the local train scroll.',
+              body: 'Mumbai buyers shop in short bursts on the move. We design at 375px first, with fast photos on patchy networks, sticky Add to Cart, and a checkout that finishes before the next station.',
             },
             {
               icon: '📋',
               title: 'Fixed price. Agreed before we start.',
-              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your store running.",
+              body: 'Scope and price for each phase are written and signed before work begins. No hourly meter and no launch-day extras. Support afterwards is optional, with each change quoted first.',
             },
           ]}
         />
@@ -587,20 +576,20 @@ export default function MumbaiEcommercePage() {
         {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Platform Decision to Live Store in 7 Days"
-          lead="Platform recommendation before we scope. Design approval before we build. Full payment and logistics testing before we launch."
+          headline="How We Launch a Mumbai Store"
+          lead="We map channels and stock first, design on your products second, and test orders, stock sync and couriers before go-live."
           stages={MUMBAI_ECOM_STAGES}
-          closingNote="5 STAGES · 7 DAYS · RAZORPAY + GST + SHIPROCKET · LIGHTHOUSE 90+ · ZERO-DOWNTIME LAUNCH"
+          closingNote="5 STAGES · ONE STOCK COUNT · UPI + COD + GST · LIGHTHOUSE 90+ · ACCOUNTS AND CODE IN YOUR NAME"
         />
 
         {/* ── 7. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="MUMBAI ECOMMERCE MARKET"
-          headline="Why Mumbai Is India's Most Competitive Ecommerce Market"
+          headline="How Mumbai Sells Online"
           leadParagraphs={[
-            "Mumbai drives more ecommerce transactions than any other Indian city. The Bandra-Kurla Complex houses the Indian headquarters of every global logistics, payment, and retail technology company. Andheri East and Goregaon are home to India's largest garment and lifestyle brand operations. Dharavi, often called the world's largest informal manufacturing cluster, is undergoing rapid digital commerce adoption, with thousands of leather goods, textile, and pottery manufacturers launching online stores for the first time.",
-            "Mumbai's ecommerce verticals are as diverse as the city itself. Zaveri Bazaar jewellers are building direct-to-consumer Shopify stores with COD and Razorpay Turbo checkout. Fashion brands from Linking Road and Bandra are running omnichannel operations across their own store, Instagram Shop, and Myntra simultaneously. FMCG distributors in Bhiwandi are building B2B portals with tiered dealer pricing and GST-split invoicing. And D2C supplement and beauty brands in Malad and Goregaon are scaling subscription commerce to eight-figure annual run rates.",
-            "The brands winning in Mumbai's ecommerce market are not the ones with the biggest marketing budgets; they are the ones with the fastest stores, the cleanest checkout experience, and the most India-ready payment stack. FactoryJet has built for all of these verticals and knows exactly what each one needs before the first discovery call.",
+            "Mumbai is home to many of India's fashion, beauty and consumer brands, and a lot of the country's online retail is run from offices in Lower Parel, Andheri and BKC. Bandra's Linking Road and Hill Road are street-fashion landmarks, and the city's D2C brands sell across India through their own stores and marketplaces such as Myntra, Ajio and Nykaa.",
+            "The city's older trades are moving online too. Zaveri Bazaar is one of India's best-known jewellery markets, and SEEPZ in Andheri hosts gems and jewellery exporters. Lamington Road sells electronics and components, Dharavi makes leather goods sold across the world, and Kalbadevi's cloth markets supply retailers. Each of these needs a store or a trade portal built for how it actually sells.",
+            'Behind almost every Mumbai brand sits a warehouse in Bhiwandi or a 3PL, and that is where stores succeed or fail. Stock must sync, orders must route and delivery dates must be honest, especially in the monsoon when deliveries slow down. We build Mumbai stores around the warehouse first and the storefront second.',
           ]}
           stats={[
             {
@@ -627,50 +616,50 @@ export default function MumbaiEcommercePage() {
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="MUMBAI × ECOMMERCE"
-          headline="Ecommerce Development for Mumbai's Key Commerce Verticals"
-          lead="From Zaveri Bazaar jewellers to Bandra fashion labels to Bhiwandi FMCG distributors , and Mumbai's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."
+          headline="Mumbai Sectors We Build For"
+          lead="From Bandra fashion labels to Zaveri Bazaar jewellers and Bhiwandi-stocked FMCG brands, these six sectors cover most Mumbai briefs."
           sectors={[
             {
               name: 'Fashion & Apparel',
               description:
-                "Mumbai is India's fashion capital, home to Linking Road, Hill Road, and the largest garment export cluster in Asia at SEEPZ. D2C fashion brands need Shopify stores with AI size recommendations, try-before-you-buy flows, WhatsApp-native lookbooks, and Myntra + Instagram Shop integration. B2B exporters need order management portals with buyer-specific pricing and digital tech-pack uploads.",
+                'Labels selling online and in outlets need size guides, exchange-first returns, marketplace sync with Myntra and Ajio, and one stock count across every channel.',
               example:
-                'D2C fashion brands in Bandra and Andheri, ethnic wear labels, garment exporters in SEEPZ targeting US, EU, and Middle East buyers.',
+                'D2C fashion labels in Bandra and Lower Parel, ethnic wear houses, kidswear brands.',
             },
             {
-              name: 'Jewellery & Luxury',
+              name: 'Jewellery & Diamonds',
               description:
-                "Zaveri Bazaar is India's largest jewellery market and is rapidly going digital. Jewellery ecommerce requires hallmark compliance display, video consultation booking, COD with insured shipping options, and high-trust checkout design. B2B gold and diamond dealers need private catalogues with RTGS payment flows and GST B2B invoicing.",
+                'Zaveri Bazaar and SEEPZ businesses need gold-rate pricing, HUID and certificate display, insured shipping, video consultations and login-only trade catalogues.',
               example:
-                'Jewellery retailers in Zaveri Bazaar and Dhantoli, custom jewellery brands targeting NRI buyers, B2B diamond and gemstone traders.',
+                'Gold and diamond jewellers, gem exporters, lab-grown jewellery labels.',
             },
             {
-              name: 'FMCG & Grocery',
+              name: 'FMCG & Food',
               description:
-                "Bhiwandi and Navi Mumbai house thousands of FMCG distributors and manufacturers scaling online. FMCG ecommerce needs FSSAI-compliant labelling, subscription replenishment flows, hyperlocal delivery routing, and retail distributor portals with territory-based pricing.",
+                'Brands shipping from Bhiwandi need FSSAI details, subscriptions, reorder buttons and a separate portal where retailers and distributors place repeat orders.',
               example:
-                'FMCG brands in Bhiwandi and Turbhe, direct-to-consumer grocery and health food brands, subscription box companies.',
+                'Packaged food brands, health snack makers, home care and personal care FMCG.',
             },
             {
-              name: 'Pharmaceuticals & Health',
+              name: 'Beauty & Personal Care',
               description:
-                "Mumbai houses India's largest pharma export cluster in Andheri and Malad. Online pharmacy stores require prescription upload flows, CDSCO-compliant product pages, temperature-sensitive logistics integration, and B2B procurement portals for hospital and clinic buyers.",
+                'D2C beauty brands need shade finders, ingredient lists, sampling kits, subscriptions and marketplace sync with Nykaa and Amazon.',
               example:
-                'Pharmaceutical exporters in MIDC Andheri, OTC health brands, ayurvedic and wellness D2C brands, B2B pharma distributors.',
+                "Skincare and haircare brands, cosmetics labels, men's grooming brands.",
             },
             {
-              name: 'Electronics & Tech',
+              name: 'Electronics & Components',
               description:
-                "Lamington Road and SP Road are India's original electronics retail corridors now going digital. Electronics ecommerce requires EMI checkout at the product page level, warranty registration flows, service centre integration, and complex specification filtering for technical buyers.",
+                'Lamington Road dealers need spec filters, bulk quotes for companies, EMI for consumers and GST invoices for business buyers.',
               example:
-                'Electronics retailers in Lamington Road and SP Road, component suppliers, consumer electronics D2C brands, IT hardware distributors.',
+                'Electronics and component dealers, CCTV and networking suppliers, accessory brands.',
             },
             {
-              name: 'Home, Décor & Lifestyle',
+              name: 'Leather & Lifestyle',
               description:
-                "Mumbai's premium interior market (Pali Hill, Powai, and Worli) is driving demand for high-AOV home décor ecommerce. These stores need AR product preview, room visualiser integrations, white-glove delivery options, and a product discovery experience designed for considered, high-value purchases.",
+                'Dharavi leather makers and lifestyle brands need product close-ups, care notes, gift options and wholesale ordering for boutiques in India and abroad.',
               example:
-                'Home décor brands, furniture companies, art and gifting stores, premium lifestyle brands targeting Mumbai\'s upper-middle and luxury segments.',
+                'Leather bag and wallet makers, footwear brands, home and gifting labels.',
             },
           ]}
         />
@@ -707,14 +696,14 @@ export default function MumbaiEcommercePage() {
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What founders say after we build their store"
+          headline="What founders say after we launch their store"
         />
 
         {/* ── 12. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Everything Mumbai Founders Ask Before They Sign"
-          lead="The questions we answer on every Mumbai ecommerce discovery call, answered here, without the runaround."
+          headline="What Mumbai Founders Ask Before They Sign"
+          lead="The questions Mumbai brands, jewellers and distributors ask on a first call, from Bhiwandi stock sync to monsoon delivery dates."
           categories={MUMBAI_ECOM_FAQ_CATEGORIES}
           items={MUMBAI_ECOM_FAQ_ITEMS}
         />
@@ -723,11 +712,11 @@ export default function MumbaiEcommercePage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO LAUNCH"
-          headline="Your Mumbai Ecommerce Store. Live in 7 Days."
-          sub="Join 500+ brands across India, the US, the UK and the UAE who chose FactoryJet. We will scope your build, recommend the right platform, and deliver a Razorpay-integrated, GST-compliant, Lighthouse 90+ store in 7 business days. Free strategy call, no commitment required."
+          headline="Your Mumbai Store, Live in 7 Days"
+          sub="500+ businesses across India, the US, the UK and the UAE have worked with FactoryJet. Tell us where you sell and where your stock sits. We will recommend a platform, price each phase in writing and show you a draft of your store before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price. 7-day delivery. Razorpay + GST + Shiprocket. Your codebase delivered in full on launch day."
+          objectionHandler="Fixed price per phase. 7-day delivery. Stock synced, UPI and GST set up. Your code and accounts from day one."
         />
 
       </main>

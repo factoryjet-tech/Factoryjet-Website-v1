@@ -27,7 +27,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Ecommerce Development in Chandigarh | FactoryJet',
   description:
-    'Shopify & WooCommerce stores for Chandigarh brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery.',
+    'Ecommerce development in Chandigarh for Tricity brands, Baddi pharma makers and Ludhiana suppliers. Shopify, WooCommerce, UPI, COD, GST. 7-day delivery.',
   keywords: [
     'ecommerce development company chandigarh',
     'ecommerce website development chandigarh',
@@ -35,7 +35,6 @@ export const metadata: Metadata = {
     'woocommerce development chandigarh',
     'online store development chandigarh',
     'custom ecommerce development chandigarh',
-    'affordable ecommerce development chandigarh',
     'ecommerce website cost chandigarh',
     'd2c website chandigarh',
     'razorpay shopify chandigarh',
@@ -50,7 +49,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Ecommerce Development Company in Chandigarh | FactoryJet',
     description:
-      'Shopify, WooCommerce, D2C, and custom ecommerce stores for Chandigarh businesses. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+      'Ecommerce stores for Chandigarh, Mohali and Panchkula: Phulkari and jutti labels, Punjabi food brands, B2B portals for pharma and hosiery. 7-day delivery.',
     url: 'https://factoryjet.com/services/ecommerce-development/chandigarh',
     images: [
       {
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ecommerce Development Chandigarh | FactoryJet',
     description:
-      'Shopify, WooCommerce & custom ecommerce for Chandigarh brands. Razorpay + GST + Shiprocket.',
+      'Chandigarh ecommerce: Shopify and WooCommerce stores, diaspora shipping, B2B portals, GST invoicing.',
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -93,7 +92,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -120,7 +119,7 @@ const serviceSchema = {
     '@id': 'https://www.wikidata.org/wiki/Q43433', // Wikidata label: Chandigarh (Union Territory, capital of Punjab and Haryana, India)
   },
   description:
-    'Custom ecommerce development for Chandigarh businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',
+    'Ecommerce development for Chandigarh Tricity businesses: Shopify and WooCommerce stores for fashion and food brands, international shipping to the Punjabi diaspora, B2B ordering for pharma and hosiery makers. Lighthouse 95+.',
 };
 
 const localBusinessSchema = {
@@ -131,7 +130,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/chandigarh',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Chandigarh businesses. Shopify, WooCommerce, and custom stores. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+    'Ecommerce development company serving Chandigarh, Mohali and Panchkula businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing. 7-day delivery.',
   areaServed: [
     'Sector 17', 'Sector 22', 'Sector 35', 'IT Park', 'Industrial Area Phase 1',
     'Mohali', 'Panchkula', 'Zirakpur',
@@ -146,33 +145,33 @@ const localBusinessSchema = {
 const CHANDIGARH_ECOM_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery & Platform Recommendation',
+    title: 'Buyers, Markets and Platform',
     description:
-      'We map your products, target audience, logistics requirements, and revenue model. Platform recommendation (Shopify, WooCommerce, or custom) is made here, before we scope or price anything.',
+      'We map who buys from you: Tricity shoppers, the rest of India, NRIs in Canada and the UK, or trade buyers. That decides the platform, the currencies and the courier mix.',
   },
   {
     number: '02',
-    title: 'Figma Design & Mockup Approval',
+    title: 'Design With Your Own Photos',
     description:
-      'Custom Figma designs for your homepage, product pages, collection pages, and checkout. Mobile-first at 375px. India-specific UX: UPI placement, COD badge position, trust signals above the fold.',
+      'Figma screens for home, collection, product and checkout, built with your real images and prices. You sign off on layout, size guides, gifting options and trust details before development.',
   },
   {
     number: '03',
-    title: 'Development & Payment Integration',
+    title: 'Build, Payments and Shipping',
     description:
-      'Platform setup, theme or custom development, Razorpay / PayU integration, UPI configuration, GST auto-invoicing, Shiprocket wiring, and product catalogue import.',
+      'Theme or custom build, Razorpay for UPI, cards, wallets and COD, international payments where needed, GST invoices, Shiprocket for India and a cross-border courier for overseas orders.',
   },
   {
     number: '04',
-    title: 'QA & Lighthouse Audit',
+    title: 'Test Orders From Both Sides',
     description:
-      'End-to-end testing of every payment method (UPI, cards, COD, wallets). Lighthouse 90+ on mobile before we ship. Core Web Vitals green: LCP under 2.5s, CLS below 0.1.',
+      'We place orders as a Chandigarh buyer and as an overseas buyer, check invoices, duties messages and labels, and run Lighthouse on mobile against a 90+ target.',
   },
   {
     number: '05',
-    title: 'Launch & Handover',
+    title: 'Launch and Handover',
     description:
-      'Zero-downtime DNS switch. Sitemap submitted to Google Search Console. Full codebase delivered to your GitHub. 60-minute Zoom walkthrough. 30-day post-launch support window.',
+      'We switch the domain with no downtime, submit the sitemap, hand over the code and every login, and train your staff. Defects in our build are fixed at no extra cost during the agreed cover period.',
   },
 ];
 
@@ -189,149 +188,137 @@ const CHANDIGARH_ECOM_FAQ_CATEGORIES = [
 ];
 
 const CHANDIGARH_ECOM_FAQ_ITEMS = [
-
-  /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How long does it take to launch a Chandigarh ecommerce store?',
+    question: 'How long does it take to launch a store in Chandigarh?',
     answer:
-      'FactoryJet delivers standard Shopify and WooCommerce stores in 7 business days for Starter and Growth builds. Day 1 is a discovery call to finalise your catalogue, payment preferences, and logistics setup. Days 2–3 are Figma design and mockup approval. Days 3–5 are development and integration. Day 6 is QA and Lighthouse testing. Day 7 is launch. Custom platform and marketplace builds take longer, usually 8 to 16 weeks depending on scope.',
+      'A standard Shopify or WooCommerce store goes live in 7 days once we have products, photos and gateway approval. A custom theme takes 3 to 5 weeks. Stores with wholesale pricing, subscriptions or a migration take 5 to 8 weeks, and fully custom builds take 8 to 14 weeks.',
   },
   {
     category: 'pricing',
-    question: 'How much does ecommerce development cost in Chandigarh?',
+    question: 'What does an ecommerce website cost in Chandigarh?',
     answer:
-      "FactoryJet ecommerce projects are fixed-price and scoped to your build. The main cost drivers are your platform (Shopify or WooCommerce vs a custom build), number of products, the payment and shipping integrations you need, and any custom features like subscriptions or B2B pricing. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts. The price is fixed and confirmed in writing, with no hourly billing and no scope creep.",
+      'Scope sets the price. For Tricity businesses the main factors are international selling to the diaspora, wholesale price lists, the number of products and variants, and links to billing or ERP software. We give a fixed price in writing after one scoping call.',
   },
   {
     category: 'pricing',
-    question: 'Do you offer payment plans for the development cost?',
+    question: 'How do payments for the build work?',
     answer:
-      'Yes. All plans can be split 50% upfront and 50% on launch day. Growth and Custom plans can be structured as 40-30-30 across the build. We accept NEFT, RTGS, UPI, and all major credit cards. No interest or fees are charged on installment plans; it is simply a split of the quoted fixed price.',
+      'The project is split into phases, each with its own scope and fixed price that you sign before we start it. A retail store might be phase one and a trade portal phase two. You pay by NEFT, RTGS or UPI, with no hourly charges.',
   },
   {
     category: 'pricing',
-    question: 'What happens if my store is not ready in 7 days?',
+    question: 'We need the store before wedding season. Is that realistic?',
     answer:
-      'We have delivered on time for 97% of all builds. When a build does run over, the cause is almost always a delay in receiving product images, content, or payment gateway credentials, which we flag upfront in the onboarding checklist.',
-  },
-
-  /* ── Platform & Tech ── */
-  {
-    category: 'platform',
-    question: 'Which ecommerce platform is right for my Chandigarh business?',
-    answer:
-      'Shopify is the best default for most Chandigarh D2C and B2C brands: fast to launch, easy to manage, and natively supports Razorpay, PayU, and UPI. WooCommerce is the right choice when you are already on WordPress or need deep content-commerce integration (recipes, guides, editorial content). Custom Next.js platforms make sense for high-volume D2C brands, B2B wholesale portals with complex pricing rules, or multi-vendor marketplaces where Shopify and WooCommerce hit their ceiling. FactoryJet makes this recommendation during discovery at no charge.',
+      'Yes, if you brief us early. Most Punjabi wedding demand runs from October to February, and NRI buyers order weeks ahead. Brief us at least 8 weeks before you want orders, so there is time to build, get gateway approval and test overseas shipping.',
   },
   {
     category: 'platform',
-    question: 'Do you set up Razorpay, UPI, and Cash on Delivery for all stores?',
+    question: 'Which platform suits a Phulkari or jutti brand?',
     answer:
-      'Yes, all India payment methods are configured in every plan. Razorpay is our primary gateway and covers UPI, net banking, cards, wallets (Paytm, PhonePe, Mobikwik), EMI on major cards, and BNPL (LazyPay, Simpl). We also integrate PayU, CCAvenue, or PhonePe Business if you have an existing relationship. Cash on Delivery is configured with prepaid-to-COD ratios you control. Razorpay\'s fraud detection rules are configured at launch to keep COD abuse low.',
+      'Shopify for most. It handles colour and size variants, takes UPI and COD in India and cards abroad, and Shopify Markets shows prices in Canadian dollars or pounds. If you sell wholesale to boutiques as well, we add a trade price list behind a login.',
   },
   {
     category: 'platform',
-    question: 'Can you connect my Chandigarh store to Amazon India and Flipkart?',
+    question: 'Can I sell to buyers in Canada and the UK from Chandigarh?',
     answer:
-      'Yes, this is included in the Growth plan and above. We use Cedcommerce or Unicommerce to sync your product catalogue, pricing, and inventory between your Shopify or WooCommerce store and your Amazon India and Flipkart seller accounts. Orders from all channels flow into one dashboard. When stock sells on Amazon, it is deducted from your store automatically, preventing overselling.',
+      'Yes. We set up local currency pricing, a cross-border courier such as Shiprocket X, DHL or Aramex, and clear duty and delivery messages at checkout. We also add size charts in both Indian and overseas sizes, because returns from abroad are slow and costly.',
   },
   {
     category: 'platform',
-    question: 'Can you set up WhatsApp Commerce and automated order flows?',
+    question: 'Do you set up UPI, cards and COD?',
     answer:
-      'Yes. We integrate WhatsApp Business API via Interakt, Wati, or AiSensy to send order confirmations, shipping updates, and abandoned cart messages on WhatsApp, where open rates are 85%+ versus email\'s 20%. We also build conversational product discovery chatbots where customers browse and order directly in WhatsApp, with Razorpay payment links sent in-chat. This is included in Growth and Custom plans.',
-  },
-
-  /* ── India-Specific ── */
-  {
-    category: 'india',
-    question: 'Do your stores support GST invoicing and compliance?',
-    answer:
-      'Yes, GST compliance is built into every Indian ecommerce store we deliver. This includes auto-generated GST invoices at order placement, GSTIN capture at checkout for B2B buyers, HSN code mapping per product category, state-wise IGST/CGST/SGST rate configuration, and monthly GSTR-1 export compatibility. We integrate with Tally, Zoho Books, or custom accounting exports on request.',
+      'Yes. Razorpay is our default and covers UPI, cards, net banking, wallets and EMI. We can use PayU, CCAvenue or PhonePe instead if you already have an account. COD can be capped by order value or turned off for pincodes with high return rates.',
   },
   {
-    category: 'india',
-    question: 'Which logistics partner should I use for a Chandigarh store?',
+    category: 'platform',
+    question: 'Can a Baddi pharma company take orders from chemists online?',
     answer:
-      'Shiprocket is our default recommendation for most Chandigarh ecommerce stores. It gives you access to Delhivery, Bluedart, XpressBees, Ekart, and Shadowfax under one integration, with automated NDR workflows, returns management, and weight dispute resolution. Delhivery directly via API is better for high-volume brands (10,000+ shipments per month) needing custom SLAs. For hyperlocal same-day delivery in Chandigarh, Shadowfax and Porter are the right fit.',
+      'Yes, through a login-only trade portal. Each stockist or chemist registers with their drug licence and GSTIN, sees their own rates, checks batch and expiry details, and places repeat orders. Selling prescription medicines straight to consumers needs legal advice before any build.',
   },
   {
     category: 'india',
-    question: 'Can you add Hindi or Punjabi language support to my store?',
+    question: 'How does GST work for a Chandigarh store?',
     answer:
-      'Yes, multi-language support is available for all platforms. For Shopify we use the Translate & Adapt app or Langify for regional language storefronts. For WooCommerce we implement WPML or TranslatePress. For custom platforms we build the i18n layer natively. Language-switched URLs follow SEO-safe hreflang patterns. We have built stores in Hindi, Marathi, Tamil, Gujarati, and Bengali.',
+      'Chandigarh is a Union Territory, so sales within it carry CGST and UTGST rather than SGST. Orders to Mohali in Punjab or Panchkula in Haryana carry IGST. We set these rules in the store so every invoice shows the right split, with HSN codes and buyer GSTIN where given.',
   },
   {
     category: 'india',
-    question: 'How do you handle cart abandonment for Indian shoppers?',
+    question: 'Which couriers should a Tricity store use?',
     answer:
-      'India has a 78% cart abandonment rate, higher than global averages because COD hesitancy and payment UX friction are common. We build a 3-touch recovery sequence: 1) WhatsApp message within 30 minutes with a direct Razorpay payment link, 2) SMS at 2 hours with a small discount, 3) email at 24 hours with a trust signal (reviews, return policy). Stores with this sequence recover 18–22% of abandoned carts on average.',
-  },
-
-  /* ── Speed & SEO ── */
-  {
-    category: 'seo',
-    question: 'Will my Chandigarh ecommerce store rank on Google?',
-    answer:
-      'Every store we build includes technical SEO from day one: Product and BreadcrumbList schema for Google Shopping eligibility, optimised title and meta templates, canonical URLs to prevent duplicate content (a common Shopify and WooCommerce issue), GST price display, Core Web Vitals green on mobile, and sitemap submission to Google Search Console. LocalBusiness schema with Chandigarh geo-coordinates is included for local search visibility.',
+      'Shiprocket for orders inside India: one account covers Delhivery, Blue Dart, Xpressbees, Ekart and others, with returns handling. For overseas orders we connect a cross-border service. Same-day delivery within the Tricity works through a local partner for food and gifts.',
   },
   {
-    category: 'seo',
-    question: 'Do you guarantee a Lighthouse score?',
+    category: 'india',
+    question: 'Can my store be in Punjabi?',
     answer:
-      'Yes, Lighthouse 90+ on Performance, Accessibility, Best Practices, and SEO is a contractual commitment on all builds. We achieve this by serving WebP images from CDN, deferring non-critical JavaScript, inlining critical CSS, using next-gen fonts with preload, and hosting on Cloudflare Pages with assets served from the nearest edge node to your customer. We QA the score before handover and fix any regression post-launch within 48 hours at no charge.',
+      'Yes. A Punjabi version in Gurmukhi can sit next to English on its own URL, and Hindi can be added too. We test Gurmukhi fonts on budget Android phones before launch, and we recommend a person writes the product copy, since machine translation gets fabric and food terms wrong.',
   },
   {
-    category: 'seo',
-    question: 'What are Core Web Vitals and why do they matter for my store?',
+    category: 'india',
+    question: 'Can Ludhiana hosiery makers sell wholesale and retail from one store?',
     answer:
-      'Core Web Vitals are Google\'s three page experience signals: LCP (Largest Contentful Paint, how fast the main content loads, target under 2.5s), INP (Interaction to Next Paint, how fast the page responds to clicks, target under 200ms), and CLS (Cumulative Layout Shift, whether elements jump around, target below 0.1). Google confirmed these are a ranking signal. More importantly, a 1-second delay in mobile load time reduces conversion rates by 20%. For a high-revenue store, that adds up to significant lost revenue every second of slowness.',
+      'Yes. Retail buyers see single-piece prices and pay at checkout. Approved retailers log in to see dozen or size-set pricing, minimum order quantities and credit terms. Both draw from the same stock, so a sale on one side updates the other.',
   },
   {
     category: 'seo',
-    question: 'Can you optimise an existing Chandigarh store that is already slow?',
+    question: 'Will my store rank in Chandigarh and Punjab searches?',
     answer:
-      'Yes, we offer a standalone Speed & SEO Audit + Fix package. We diagnose all Lighthouse failures, compress and convert your image library to WebP, remove render-blocking resources, fix CLS issues from unloaded fonts or images, and migrate your hosting to Cloudflare if needed. Most stores see a 30–60 point Lighthouse improvement within one sprint. We issue a written commitment: if we do not reach Lighthouse 90+ overall, we continue working at no additional charge.',
-  },
-
-  /* ── Process & Ownership ── */
-  {
-    category: 'trust',
-    question: 'Do I own my store and all the code after launch?',
-    answer:
-      '100% yes. On launch day we transfer full ownership of the store account, the theme code, all integrations, and every custom component we built. You get GitHub repository access for all code assets and full admin credentials for every tool. We do not hold your store with ongoing fees. You can take the store to any developer after handover; we encourage it. What we hope is that you come back to us for the next phase.',
+      'It can if the groundwork is right. We add product and breadcrumb schema, clean titles, canonical tags and a sitemap from day one. If you have a showroom in Sector 17 or Elante, we link the store to your Google Business Profile. Punjabi pages open up searches few rivals target.',
   },
   {
-    category: 'trust',
-    question: 'What does the handover process look like?',
+    category: 'seo',
+    question: 'Do you test speed before handover?',
     answer:
-      'Day 7 is handover day. We schedule a 60–90 minute Zoom walkthrough covering: admin panel navigation, adding and editing products, processing orders, managing discounts, viewing analytics, and handling basic shipping issues. We deliver a handover document with all credentials, API keys, support contacts for each integration, and a first-30-days checklist. Post-handover, we are available on WhatsApp for 30 days for quick questions at no charge.',
+      'Yes. We test the home, collection and product pages on mobile with Lighthouse and share the results. Our target is 90+, with LCP under 2.5 seconds. Image-heavy fashion stores need the most work, so we size and compress every photo.',
+  },
+  {
+    category: 'seo',
+    question: 'Can you speed up a slow Tricity store?',
+    answer:
+      'Yes. We find what slows each page, such as oversized photos, unused apps, heavy themes or chat widgets, and give you a ranked list of fixes at a fixed price. Often a few changes recover most of the lost speed.',
+  },
+  {
+    category: 'seo',
+    question: 'Will big product photos slow my fashion store down?',
+    answer:
+      'Not if they are handled well. We serve modern image formats at the right size for each screen, load images below the fold only when needed, and keep zoom views sharp without loading them upfront. You keep the detail buyers want.',
   },
   {
     category: 'trust',
-    question: 'Do you offer post-launch maintenance for Chandigarh stores?',
+    question: 'Do I own my store and its code?',
     answer:
-      'Yes. Our Care Plan covers plugin and platform updates, a monthly Lighthouse audit and performance fixes, uptime monitoring, a few hours of content or feature changes each month, and priority support with a 4-hour response SLA. Our Growth Retainer adds monthly A/B tests, conversion optimization, and new campaign landing pages. Both are month-to-month with no lock-in, and we share the exact monthly price on your free call.',
+      'Yes, fully. The store, domain, payment and courier accounts are in your business name, and you get the code repository and all admin logins. Hosting and apps can bill your own account at cost. You are free to move to another developer at any time.',
   },
   {
     category: 'trust',
-    question: 'Can I manage and update the store myself after launch?',
+    question: 'How do you hand the store over?',
     answer:
-      'Absolutely, self-management is the goal. For Shopify stores, adding products, updating prices, creating discount codes, and reviewing orders requires zero coding knowledge. WooCommerce is slightly more technical but we set up a simplified admin workflow for non-technical founders. We build a short video library covering the 10 most common tasks your team will perform, so you are not dependent on a developer for day-to-day operations.',
+      'We run a training session for your team on products, orders, discounts, returns and international orders. You get a handover file with all logins, each integration contact and a checklist for the first month of trading.',
   },
-
-  // Money-query coverage, added 2026-06-11
+  {
+    category: 'trust',
+    question: 'What support is available after launch?',
+    answer:
+      'Defects in what we built are fixed inside the build price for a cover period agreed upfront. After that, support is optional. You get a quote for each change and approve it before work starts, with no monthly minimum.',
+  },
+  {
+    category: 'trust',
+    question: 'Can my staff update products and prices themselves?',
+    answer:
+      'Yes. On Shopify, adding products, changing prices, running offers and processing orders need no technical skill. We set up staff logins and record short how-to videos for the tasks your team repeats each week.',
+  },
   {
     category: 'pricing',
     question: 'Who is the best ecommerce development company in Chandigarh?',
     answer:
-      'For D2C brands and small businesses, FactoryJet makes a strong case: fixed written prices, senior engineers, and stores that launch in weeks. Any ecommerce website development company in Chandigarh, or any ecommerce solution company in Chandigarh, should pass three checks: who writes the code, is the price fixed, and do you own the store at the end. That is how to find the best ecommerce website development company in Chandigarh and the best ecommerce solution company in Chandigarh for your catalog.',
+      'Measure any ecommerce website development company in Chandigarh against three questions: who writes the code, is the price fixed in writing, and do you own the store at the end. FactoryJet answers yes to the last two, names the engineer, and builds a draft before you sign. Ask any ecommerce solution company in Chandigarh the same.',
   },
   {
     category: 'pricing',
-    question: 'Should I hire ecommerce developer in Chandigarh or use an agency?',
+    question: 'Should I hire an ecommerce developer in Chandigarh or use an agency?',
     answer:
-      'One developer can build a basic store, but a real shop needs design, payments, shipping, and SEO together. A small senior team covers all of it at a fixed price. If you do hire ecommerce developer in Chandigarh directly, check store speed scores from their past work first.',
+      "One developer can launch a simple store. Selling to Punjab and the diaspora also needs design, payments, cross-border shipping, GST and SEO, which is rarely one person's skill set. A small senior team covers it for a fixed price. If you hire an ecommerce developer in Chandigarh, check their past stores on your phone first.",
   },
 ];
 
@@ -409,8 +396,8 @@ export default function ChandigarhEcommercePage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_chandigarh_hero" />}
           eyebrow="ECOMMERCE DEVELOPMENT · CHANDIGARH"
-          headline="Chandigarh's Most Trusted Ecommerce Agency: Store Live in 7 Days"
-          lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Chandigarh brands: Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. 7-day delivery."
+          headline="Ecommerce Development in Chandigarh: Store Live in 7 Days"
+          lead="FactoryJet builds online stores for Tricity fashion and food brands that sell to Punjab and to families in Canada and the UK, plus ordering portals for pharma and hosiery suppliers across the region. UPI, COD and international cards at checkout, Lighthouse 90+ on mobile. 7-day delivery."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery',
@@ -426,14 +413,14 @@ export default function ChandigarhEcommercePage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+          description="We have built for businesses across India, the US, the UK and the UAE, from D2C labels to B2B distributors. Tricity clients get the same deal: a fixed price per phase, every line of code handed over, and 7-day delivery."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="ECOMMERCE DEVELOPMENT · CHANDIGARH"
-          headline="The Right Platform for Every Chandigarh Business Model"
-          lead="Chandigarh's ecommerce market spans premium D2C fashion brands in Sector 17, Baddi pharma manufacturers, Punjab agri D2C brands, and Mohali IT companies. Each needs a different platform strategy. FactoryJet recommends the right one before we quote."
+          headline="The Right Build for a Chandigarh Business"
+          lead="A Sector 17 boutique selling Phulkari dupattas, a Mohali ghee brand shipping to Toronto and a Baddi drug maker taking orders from chemists each need their own setup. We study your buyers and catalogue first, then recommend a platform and a fixed price."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -458,12 +445,7 @@ export default function ChandigarhEcommercePage() {
               </div>
 
               <p>
-                The average Indian ecommerce store converts at 0.8–1.2%. The top quartile converts at
-                3–5%. The difference is not the product; it is the store. Slow load times on 4G
-                networks, a UPI checkout that requires too many steps, product pages that bury the buy
-                button below three paragraphs of description, and a mobile layout that was clearly
-                designed on a desktop. These are engineering and design problems, not marketing
-                problems.
+                Tricity shoppers spend on quality and expect a store to look the part. Weak photos, a template that feels cheap, or a checkout that fails on the second try will cost you the order. Many of your buyers also live abroad, in Brampton, Surrey or Southall, and they need prices in their currency and a delivery date they can trust.
               </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
@@ -497,17 +479,12 @@ export default function ChandigarhEcommercePage() {
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  A great ecommerce store is an engineering project measured in revenue, not a
-                  design project measured in compliments.
+                  For a premium Punjabi brand, the product page is the shop window and the shop counter at once.
                 </p>
               </div>
 
               <p>
-                FactoryJet designs every store around Indian consumer behaviour: where the UPI button
-                goes, when the WhatsApp chat trigger fires, how the mobile product page stacks on a
-                375px screen, what trust signals appear above the fold, and how EMI is surfaced at
-                checkout. We have built 120+ Shopify stores and hundreds of WooCommerce and custom
-                builds for Indian brands. That data informs every decision we make on the next one.
+                We build Chandigarh stores with large, fast-loading photos, honest stock and delivery details, and a checkout that offers UPI and COD at home and international cards abroad. B2B buyers, from chemists ordering from Baddi to retailers buying Ludhiana knitwear, get a login with their own prices and repeat orders in two taps.
               </p>
             </>
           }
@@ -557,7 +534,7 @@ export default function ChandigarhEcommercePage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  We recommend the right platform. Not the most expensive one.
+                  We recommend what fits your buyers, never the costliest stack.
                 </p>
               </div>
             </div>
@@ -567,23 +544,23 @@ export default function ChandigarhEcommercePage() {
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Chandigarh Brands Choose FactoryJet Over Local Agencies"
-          lead="Chandigarh ecommerce agencies often charge several times more for a comparable project and take 10 to 20 weeks to deliver, usually without telling you the price upfront. FactoryJet gives you a fixed quote before you speak to us, puts 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. The price is fixed and confirmed in writing, and the codebase is yours to keep."
+          headline="Why Tricity Brands Work With FactoryJet"
+          lead="A Tricity store has to look premium, take payments from two continents and ship on time in wedding season. We price each phase in writing, commit to 7-day delivery for standard stores, and show you a working draft built on your own products before any contract."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing.',
-              body: "Chandigarh buyers have high expectations: a slow store on a low-trust template is immediately disqualifying in this market. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the delivery date written into the project agreement. We have delivered on time for 97% of all builds.",
+              body: 'Standard Shopify and WooCommerce stores for Chandigarh brands go live in 7 days after products, photos and gateway approval arrive. The date is in the agreement. Our on-time record is 97% of builds, and delays nearly always traced back to missing content.',
             },
             {
               icon: '📱',
-              title: "India's ecommerce is 65% mobile. Most stores are not built for it.",
-              body: 'Most Chandigarh ecommerce stores are designed on a desktop and adapted down. The result: 0.4% mobile conversion rates on template stores versus 2.1% on properly designed custom builds. FactoryJet designs every store mobile-first at 375px: tap targets, product image sizing, checkout flow, and UPI placement all optimised for the phone your customer actually uses.',
+              title: 'Photos that sell, on a phone, fast.',
+              body: 'Premium fashion and food brands need big images, and big images slow a store down. We compress and size every photo for the screen it lands on, design at 375px first, and keep the checkout to a few taps.',
             },
             {
               icon: '📋',
               title: 'Fixed price. Agreed before we start.',
-              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your store running.",
+              body: 'Each phase is scoped and priced in writing up front. Nothing is billed by the hour. After launch, support is optional, with each change quoted and approved before work begins.',
             },
           ]}
         />
@@ -591,20 +568,20 @@ export default function ChandigarhEcommercePage() {
         {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Platform Decision to Live Store in 7 Days"
-          lead="Platform recommendation before we scope. Design approval before we build. Full payment and logistics testing before we launch."
+          headline="How We Take a Tricity Store Live"
+          lead="We agree the platform, design on your products, then test payments from India and abroad before launch day."
           stages={CHANDIGARH_ECOM_STAGES}
-          closingNote="5 STAGES · 7 DAYS · RAZORPAY + GST + SHIPROCKET · LIGHTHOUSE 90+ · ZERO-DOWNTIME LAUNCH"
+          closingNote="5 STAGES · DOMESTIC + DIASPORA CHECKOUT · CGST + UTGST READY · LIGHTHOUSE 90+ · FULL HANDOVER"
         />
 
         {/* ── 7. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="CHANDIGARH ECOMMERCE MARKET"
-          headline="Why Chandigarh Is North India's Most Affluent Ecommerce Market"
+          headline="What Sells Online From Chandigarh and Punjab"
           leadParagraphs={[
-            "Chandigarh, and the Tricity of Chandigarh, Mohali, and Panchkula, punches well above its population weight in ecommerce. As one of India's highest per-capita income regions, Chandigarh consumers are among India's most premium buyers, willing to pay more for quality, authenticity, and a seamless purchase experience. Combined with Punjab's dominant agricultural economy and Baddi's massive pharmaceutical manufacturing cluster, the Chandigarh market represents both a premium B2C opportunity and a significant B2B ecommerce play.",
-            "Chandigarh's ecommerce market is driven by its affluence and its agricultural hinterland. Sector 17 fashion retailers are transitioning to D2C Shopify operations with premium product photography and Instagram Shop integration. Baddi pharma manufacturers are building B2B procurement portals with CDSCO compliance. Punjab agri brands are launching D2C Basmati rice and premium honey stores targeting urban India and the global Punjabi diaspora. And Mohali IT companies are building B2B SaaS and hardware bundle portals.",
-            "Chandigarh buyers (educated, mobile-first, high disposable income) have high expectations for store quality, load speed, and checkout experience. A slow store on a low-trust template is immediately disqualifying in this market. FactoryJet's Lighthouse 90+ commitment, custom Figma design, and seamless Razorpay checkout are the baseline that Chandigarh buyers expect. We build to that standard on every project.",
+            'Chandigarh, Mohali and Panchkula form one market with spending power well above its size. Shoppers here buy premium clothing, home goods and gifts, and they compare your store with the best brands they know. A store that looks cheap or loads slowly loses them on the first visit.',
+            'The Tricity is also the commercial centre for a much wider region. Ludhiana makes hosiery, woollens and cycle parts. Jalandhar is known for sports goods. The Baddi belt across the Himachal border is a large pharma manufacturing base. Punjab farms supply basmati, and its kitchens supply ghee, pickles and sweets. Many of these businesses still sell through distributors and are now adding a direct store or a trade portal.',
+            "Punjab's diaspora changes the maths. Families in Canada, the UK, Australia and the US buy Phulkari, juttis, wedding wear and food from home, often for occasions planned months ahead. Selling to them needs local currency prices, a cross-border courier, clear duty information and a store that reads well in English and Punjabi. We build for that buyer as well as the one in Sector 35.",
           ]}
           stats={[
             {
@@ -631,50 +608,50 @@ export default function ChandigarhEcommercePage() {
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="CHANDIGARH × ECOMMERCE"
-          headline="Ecommerce Development for Chandigarh's Key Commerce Verticals"
-          lead="From Sector 17 premium fashion retailers to Baddi pharma manufacturers to Punjab agri brands , and Chandigarh's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."
+          headline="Tricity and Punjab Sectors We Build For"
+          lead="From Sector 17 boutiques to Ludhiana knitwear units and Baddi drug makers, these are the sectors that bring the most Chandigarh-region briefs."
           sectors={[
             {
-              name: 'Agriculture & Punjab Produce',
+              name: 'Phulkari, Juttis & Punjabi Fashion',
               description:
-                "Punjab is India's breadbasket. D2C agricultural brands, organic farm produce, and B2B agri-commodity portals. Basmati rice, honey, organic grains, and premium agri-products with FSSAI compliance and export documentation.",
+                'Wedding wear, Phulkari dupattas and hand-made juttis sell at home and abroad. Stores need detailed close-ups, size help for footwear, and delivery dates that work back from the wedding.',
               example:
-                'Premium basmati brands, honey D2C companies, organic farming produce labels.',
+                'Phulkari studios, jutti makers, bridal and Punjabi suit boutiques.',
             },
             {
-              name: 'Pharmaceuticals & Healthcare',
+              name: 'Pharma & Healthcare',
               description:
-                "Chandigarh's Baddi pharmaceutical cluster is one of Asia's largest. B2B pharma procurement, OTC health D2C, and online pharmacy with CDSCO compliance.",
+                "Drug makers in the Baddi belt sell to stockists and chemists. Trade portals capture each buyer's drug licence, show batch-wise stock and raise GST invoices automatically.",
               example:
-                'Pharma manufacturers, OTC health brands, B2B medical supply portals.',
+                'Generic drug manufacturers, ayurvedic medicine makers, surgical supply distributors.',
             },
             {
-              name: 'Auto Parts & Engineering',
+              name: 'Hosiery & Woollens',
               description:
-                "Chandigarh and Mohali's industrial areas house significant auto component manufacturing. B2B auto parts portals with specification search, bulk order flows, and GST B2B invoicing.",
+                'Ludhiana knitwear sells by the dozen to retailers and by the piece to consumers. Stores need wholesale price breaks, size-set ordering and a separate retail checkout.',
               example:
-                'Auto component manufacturers, engineering goods exporters, industrial supply companies.',
+                'Hosiery manufacturers, winter wear brands, kids clothing makers.',
             },
             {
-              name: 'Fashion & Lifestyle',
+              name: 'Sports Goods & Cycle Parts',
               description:
-                "Chandigarh's affluent consumer base, one of India's highest per-capita income cities, drives demand for premium fashion and lifestyle D2C. Instagram Shop integration, premium product photography, and high-AOV checkout optimisation.",
+                'Jalandhar sports goods and Ludhiana cycle parts sell to dealers across India and abroad. Portals need part search, bulk quotes and export-ready invoices.',
               example:
-                'Premium lifestyle brands, sustainable fashion D2C, ethnic wear labels.',
+                'Cricket and fitness equipment makers, cycle component suppliers, bicycle brands.',
             },
             {
-              name: 'Food & Punjabi Products',
+              name: 'Ghee, Pickles & Basmati',
               description:
-                "Punjab's food culture drives a growing D2C market for premium Punjabi products: ghee, pickles, artisanal honey, Phulkari crafts, and premium spices. FSSAI compliance, gifting SKUs, and subscription boxes.",
+                'Punjabi food brands ship to cities across India and to the diaspora. They need FSSAI details, shelf-life notes, gift hampers for Lohri and Diwali, and safe packaging rules.',
               example:
-                'Punjabi food brands, artisanal dairy companies, premium spice D2C labels.',
+                'Desi ghee brands, pickle and achaar makers, basmati and organic grain labels.',
             },
             {
-              name: 'Real Estate & Interior',
+              name: 'Home, Furniture & Decor',
               description:
-                "Chandigarh's planned city structure and high per-capita income drive significant home furnishing and interior D2C demand. High-AOV home décor stores with AR preview, white-glove delivery, and B2B interior supply portals.",
+                'Tricity homes spend on furniture and decor. These stores need room photos, custom size options, delivery and installation booking, and EMI on big tickets.',
               example:
-                'Interior product brands, premium furniture companies, home décor D2C labels.',
+                'Furniture makers, home decor stores, furnishing and carpet brands.',
             },
           ]}
         />
@@ -711,14 +688,14 @@ export default function ChandigarhEcommercePage() {
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What founders say after we build their store"
+          headline="What founders say once their store is live"
         />
 
         {/* ── 12. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Everything Chandigarh Founders Ask Before They Sign"
-          lead="The questions we answer on every Chandigarh ecommerce discovery call, answered here, without the runaround."
+          headline="What Tricity Founders Ask Us First"
+          lead="Answers to the questions Chandigarh, Mohali and Panchkula businesses raise on a first call, from wedding-season deadlines to GST in a Union Territory."
           categories={CHANDIGARH_ECOM_FAQ_CATEGORIES}
           items={CHANDIGARH_ECOM_FAQ_ITEMS}
         />
@@ -727,11 +704,11 @@ export default function ChandigarhEcommercePage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO LAUNCH"
-          headline="Your Chandigarh Ecommerce Store. Live in 7 Days."
-          sub="Join 500+ brands across India, the US, the UK and the UAE who chose FactoryJet. We will scope your build, recommend the right platform, and deliver a Razorpay-integrated, GST-compliant, Lighthouse 90+ store in 7 business days. Free strategy call, no commitment required."
+          headline="Your Chandigarh Store, Live in 7 Days"
+          sub="500+ businesses in India, the US, the UK and the UAE have built with FactoryJet. Tell us what you sell and where your buyers live. We will suggest a platform, fix the price for each phase in writing and show you a draft of your store before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price. 7-day delivery. Razorpay + GST + Shiprocket. Your codebase delivered in full on launch day."
+          objectionHandler="Fixed price per phase. 7-day delivery. UPI, COD and international cards. Every login and every file is yours."
         />
 
       </main>

@@ -27,7 +27,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Ecommerce Development in Kochi | FactoryJet',
   description:
-    'Shopify & WooCommerce stores for Kochi brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery.',
+    'Ecommerce development in Kochi for spice traders, ayurveda brands, Kasavu sellers and seafood exporters. Shopify, UPI, Gulf shipping, GST. 7-day delivery.',
   keywords: [
     'ecommerce development company kochi',
     'ecommerce website development kochi',
@@ -35,7 +35,6 @@ export const metadata: Metadata = {
     'woocommerce development kochi',
     'online store development kochi',
     'custom ecommerce development kochi',
-    'affordable ecommerce development kochi',
     'ecommerce website cost kochi',
     'd2c website kochi',
     'razorpay shopify kochi',
@@ -50,7 +49,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Ecommerce Development Company in Kochi | FactoryJet',
     description:
-      'Shopify, WooCommerce, D2C, and custom ecommerce stores for Kochi businesses. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+      'Kochi ecommerce stores: Kerala spices and ayurveda, Kasavu and handloom, coir and snacks, with checkout for Gulf and NRI buyers. 7-day delivery.',
     url: 'https://factoryjet.com/services/ecommerce-development/kochi',
     images: [
       {
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ecommerce Development Kochi | FactoryJet',
     description:
-      'Shopify, WooCommerce & custom ecommerce for Kochi brands. Razorpay + GST + Shiprocket.',
+      'Kochi ecommerce: spice, ayurveda and handloom stores with Malayalam, UPI and Gulf shipping.',
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -93,7 +92,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -120,7 +119,7 @@ const serviceSchema = {
     '@id': 'https://www.wikidata.org/wiki/Q1800', // Wikidata label: Kochi (city in Kerala, India)
   },
   description:
-    'Custom ecommerce development for Kochi businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',
+    'Ecommerce development for Kochi businesses: Shopify and WooCommerce stores for spice, ayurveda, handloom and snack brands, international checkout for Gulf and NRI buyers, B2B portals for exporters, GST invoicing. Lighthouse 95+.',
 };
 
 const localBusinessSchema = {
@@ -131,7 +130,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/kochi',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Kochi businesses. Shopify, WooCommerce, and custom stores. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+    'Ecommerce development company serving Kochi and Ernakulam businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD, international shipping and GST invoicing. 7-day delivery.',
   areaServed: [
     'Kakkanad', 'Infopark', 'Edappally', 'MG Road', 'Fort Kochi',
     'Aluva', 'Thrippunithura', 'Kalamassery',
@@ -146,33 +145,33 @@ const localBusinessSchema = {
 const KOCHI_ECOM_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery & Platform Recommendation',
+    title: 'Markets and Products',
     description:
-      'We map your products, target audience, logistics requirements, and revenue model. Platform recommendation (Shopify, WooCommerce, or custom) is made here, before we scope or price anything.',
+      'We map where your orders come from: Kerala, the rest of India, the Gulf, Europe or trade buyers. Spices, ayurveda and food each carry different shipping rules abroad, and that shapes the platform and courier choice.',
   },
   {
     number: '02',
-    title: 'Figma Design & Mockup Approval',
+    title: 'Design on Your Products',
     description:
-      'Custom Figma designs for your homepage, product pages, collection pages, and checkout. Mobile-first at 375px. India-specific UX: UPI placement, COD badge position, trust signals above the fold.',
+      'Home, collection, product and checkout screens designed with your real photos and prices, phone first. You approve origin notes, batch dates, Malayalam labels and gifting options before code.',
   },
   {
     number: '03',
-    title: 'Development & Payment Integration',
+    title: 'Build and Integrations',
     description:
-      'Platform setup, theme or custom development, Razorpay / PayU integration, UPI configuration, GST auto-invoicing, Shiprocket wiring, and product catalogue import.',
+      'Store build, Razorpay for UPI, cards and COD, international payments, GST invoices, Shiprocket for India and a cross-border courier for the Gulf, plus catalogue import.',
   },
   {
     number: '04',
-    title: 'QA & Lighthouse Audit',
+    title: 'Testing From Both Ends',
     description:
-      'End-to-end testing of every payment method (UPI, cards, COD, wallets). Lighthouse 90+ on mobile before we ship. Core Web Vitals green: LCP under 2.5s, CLS below 0.1.',
+      'We place test orders as a buyer in Kochi and a buyer in Dubai, check duties messages, invoices and labels, and test mobile speed against a Lighthouse 90+ target.',
   },
   {
     number: '05',
-    title: 'Launch & Handover',
+    title: 'Launch and Training',
     description:
-      'Zero-downtime DNS switch. Sitemap submitted to Google Search Console. Full codebase delivered to your GitHub. 60-minute Zoom walkthrough. 30-day post-launch support window.',
+      'Domain switch with no downtime, sitemap submitted, code and logins handed over, team trained. Defects in our build are fixed free during the cover period agreed before work began.',
   },
 ];
 
@@ -189,149 +188,137 @@ const KOCHI_ECOM_FAQ_CATEGORIES = [
 ];
 
 const KOCHI_ECOM_FAQ_ITEMS = [
-
-  /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How long does it take to launch a Kochi ecommerce store?',
+    question: 'How long does it take to set up an online store in Kochi?',
     answer:
-      'FactoryJet delivers standard Shopify and WooCommerce stores in 7 business days for Starter and Growth builds. Day 1 is a discovery call to finalise your catalogue, payment preferences, and logistics setup. Days 2–3 are Figma design and mockup approval. Days 3–5 are development and integration. Day 6 is QA and Lighthouse testing. Day 7 is launch. Custom platform and marketplace builds take longer, usually 8 to 16 weeks depending on scope.',
+      'A standard Shopify or WooCommerce store goes live in 7 days once your products, photos and gateway approval are ready. A custom theme takes 3 to 5 weeks. Stores with export trade portals or subscriptions take 5 to 8 weeks, and custom platforms take 8 to 14 weeks.',
   },
   {
     category: 'pricing',
     question: 'How much does ecommerce development cost in Kochi?',
     answer:
-      "FactoryJet ecommerce projects are fixed-price and scoped to your build. The main cost drivers are your platform (Shopify or WooCommerce vs a custom build), number of products, the payment and shipping integrations you need, and any custom features like subscriptions or B2B pricing. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts. The price is fixed and confirmed in writing, with no hourly billing and no scope creep.",
+      'It depends on what the store does. For Kerala businesses, Gulf and international selling, a Malayalam storefront, export trade portals and the size of the catalogue are the main factors. We give you a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'Do you offer payment plans for the development cost?',
+    question: 'Can the build be paid in phases?',
     answer:
-      'Yes. All plans can be split 50% upfront and 50% on launch day. Growth and Custom plans can be structured as 40-30-30 across the build. We accept NEFT, RTGS, UPI, and all major credit cards. No interest or fees are charged on installment plans; it is simply a split of the quoted fixed price.',
+      'Yes. Each phase, for example the Kerala store first and Gulf shipping next, is scoped and priced in writing and signed before it starts. Pay by NEFT, RTGS or UPI. We never bill by the hour.',
   },
   {
     category: 'pricing',
-    question: 'What happens if my store is not ready in 7 days?',
+    question: 'We want to launch before Onam. When should we start?',
     answer:
-      'We have delivered on time for 97% of all builds. When a build does run over, the cause is almost always a delay in receiving product images, content, or payment gateway credentials, which we flag upfront in the onboarding checklist.',
-  },
-
-  /* ── Platform & Tech ── */
-  {
-    category: 'platform',
-    question: 'Which ecommerce platform is right for my Kochi business?',
-    answer:
-      'Shopify is the best default for most Kochi D2C and B2C brands: fast to launch, easy to manage, and natively supports Razorpay, PayU, and UPI. WooCommerce is the right choice when you are already on WordPress or need deep content-commerce integration (recipes, guides, editorial content). Custom Next.js platforms make sense for high-volume D2C brands, B2B wholesale portals with complex pricing rules, or multi-vendor marketplaces where Shopify and WooCommerce hit their ceiling. FactoryJet makes this recommendation during discovery at no charge.',
+      'Brief us at least 8 weeks before Onam. Gulf buyers order early to allow for shipping, and Kasavu and spice stock needs to be on the site before they start looking. That window covers build, gateway approval and test shipments.',
   },
   {
     category: 'platform',
-    question: 'Do you set up Razorpay, UPI, and Cash on Delivery for all stores?',
+    question: 'Which platform suits a Kerala spice or ayurveda brand?',
     answer:
-      'Yes, all India payment methods are configured in every plan. Razorpay is our primary gateway and covers UPI, net banking, cards, wallets (Paytm, PhonePe, Mobikwik), EMI on major cards, and BNPL (LazyPay, Simpl). We also integrate PayU, CCAvenue, or PhonePe Business if you have an existing relationship. Cash on Delivery is configured with prepaid-to-COD ratios you control. Razorpay\'s fraud detection rules are configured at launch to keep COD abuse low.',
+      'Shopify suits most. It handles pack sizes as variants, shows prices in dirhams, riyals or pounds through Shopify Markets, and takes UPI, COD and international cards. WooCommerce works if you already have a WordPress site with recipes or wellness content.',
   },
   {
     category: 'platform',
-    question: 'Can you connect my Kochi store to Amazon India and Flipkart?',
+    question: 'Can I sell to customers in the Gulf from Kochi?',
     answer:
-      'Yes, this is included in the Growth plan and above. We use Cedcommerce or Unicommerce to sync your product catalogue, pricing, and inventory between your Shopify or WooCommerce store and your Amazon India and Flipkart seller accounts. Orders from all channels flow into one dashboard. When stock sells on Amazon, it is deducted from your store automatically, preventing overselling.',
+      'Yes. We set up Gulf currency pricing, a cross-border courier such as Shiprocket X, DHL or Aramex, and clear duty and delivery information at checkout. Some food and herbal products face import rules in certain Gulf countries, so we flag those per product.',
   },
   {
     category: 'platform',
-    question: 'Can you set up WhatsApp Commerce and automated order flows?',
+    question: 'Do you set up UPI, cards and COD?',
     answer:
-      'Yes. We integrate WhatsApp Business API via Interakt, Wati, or AiSensy to send order confirmations, shipping updates, and abandoned cart messages on WhatsApp, where open rates are 85%+ versus email\'s 20%. We also build conversational product discovery chatbots where customers browse and order directly in WhatsApp, with Razorpay payment links sent in-chat. This is included in Growth and Custom plans.',
-  },
-
-  /* ── India-Specific ── */
-  {
-    category: 'india',
-    question: 'Do your stores support GST invoicing and compliance?',
-    answer:
-      'Yes, GST compliance is built into every Indian ecommerce store we deliver. This includes auto-generated GST invoices at order placement, GSTIN capture at checkout for B2B buyers, HSN code mapping per product category, state-wise IGST/CGST/SGST rate configuration, and monthly GSTR-1 export compatibility. We integrate with Tally, Zoho Books, or custom accounting exports on request.',
+      'Yes. Razorpay is our default, covering UPI, cards, net banking, wallets and EMI in India and international cards for approved accounts. We can connect PayU, CCAvenue or PhonePe if you already use one. COD is for Indian orders only and can be capped.',
   },
   {
-    category: 'india',
-    question: 'Which logistics partner should I use for a Kochi store?',
+    category: 'platform',
+    question: 'Can seafood exporters take trade orders online?',
     answer:
-      'Shiprocket is our default recommendation for most Kochi ecommerce stores. It gives you access to Delhivery, Bluedart, XpressBees, Ekart, and Shadowfax under one integration, with automated NDR workflows, returns management, and weight dispute resolution. Delhivery directly via API is better for high-volume brands (10,000+ shipments per month) needing custom SLAs. For hyperlocal same-day delivery in Kochi, Shadowfax and Porter are the right fit.',
+      'Yes, through a login-only portal. Approved importers and hotel buyers see spec sheets, MOQ, lead times and their own prices, and can request quotes for custom packs. Retail sales of dry fish, pickles and snacks can run in a separate public store.',
   },
   {
     category: 'india',
-    question: 'Can you add Malayalam or Hindi language support to my store?',
+    question: 'How does GST work on a Kochi store?',
     answer:
-      'Yes, multi-language support is available for all platforms. For Shopify we use the Translate & Adapt app or Langify for regional language storefronts. For WooCommerce we implement WPML or TranslatePress. For custom platforms we build the i18n layer natively. Language-switched URLs follow SEO-safe hreflang patterns. We have built stores in Hindi, Marathi, Tamil, Gujarati, and Bengali.',
+      'Orders within Kerala carry CGST and SGST, and orders to other states carry IGST. Exports are zero-rated with the right invoice format. The store prints HSN codes and lets business buyers add a GSTIN, and exports sync with Tally or Zoho Books.',
   },
   {
     category: 'india',
-    question: 'How do you handle cart abandonment for Indian shoppers?',
+    question: 'Which couriers should a Kochi store use?',
     answer:
-      'India has a 78% cart abandonment rate, higher than global averages because COD hesitancy and payment UX friction are common. We build a 3-touch recovery sequence: 1) WhatsApp message within 30 minutes with a direct Razorpay payment link, 2) SMS at 2 hours with a small discount, 3) email at 24 hours with a trust signal (reviews, return policy). Stores with this sequence recover 18–22% of abandoned carts on average.',
-  },
-
-  /* ── Speed & SEO ── */
-  {
-    category: 'seo',
-    question: 'Will my Kochi ecommerce store rank on Google?',
-    answer:
-      'Every store we build includes technical SEO from day one: Product and BreadcrumbList schema for Google Shopping eligibility, optimised title and meta templates, canonical URLs to prevent duplicate content (a common Shopify and WooCommerce issue), GST price display, Core Web Vitals green on mobile, and sitemap submission to Google Search Console. LocalBusiness schema with Kochi geo-coordinates is included for local search visibility.',
+      'Shiprocket for orders inside India, with Delhivery, Blue Dart, Xpressbees, India Post and others in one account. For the Gulf and other countries, a cross-border courier. During the monsoon we extend delivery estimates for Kerala pincodes so buyers are not surprised.',
   },
   {
-    category: 'seo',
-    question: 'Do you guarantee a Lighthouse score?',
+    category: 'india',
+    question: 'Can my store be in Malayalam?',
     answer:
-      'Yes, Lighthouse 90+ on Performance, Accessibility, Best Practices, and SEO is a contractual commitment on all builds. We achieve this by serving WebP images from CDN, deferring non-critical JavaScript, inlining critical CSS, using next-gen fonts with preload, and hosting on Cloudflare Pages with assets served from the nearest edge node to your customer. We QA the score before handover and fix any regression post-launch within 48 hours at no charge.',
+      'Yes. A Malayalam version can run next to English, each on its own URL so both get indexed. We test Malayalam script on low-cost Android phones and suggest a native speaker writes the product text, since machine translation gets spice and ayurveda terms wrong.',
   },
   {
-    category: 'seo',
-    question: 'What are Core Web Vitals and why do they matter for my store?',
+    category: 'india',
+    question: 'Can ayurveda products be sold online from Kerala?',
     answer:
-      'Core Web Vitals are Google\'s three page experience signals: LCP (Largest Contentful Paint, how fast the main content loads, target under 2.5s), INP (Interaction to Next Paint, how fast the page responds to clicks, target under 200ms), and CLS (Cumulative Layout Shift, whether elements jump around, target below 0.1). Google confirmed these are a ranking signal. More importantly, a 1-second delay in mobile load time reduces conversion rates by 20%. For a high-revenue store, that adds up to significant lost revenue every second of slowness.',
+      'Yes, with care. Product pages should show the AYUSH licence number, ingredients and usage, and avoid medical claims. Some countries restrict certain herbs, so we can block those products for those destinations. Prescription-only items need legal advice first.',
   },
   {
     category: 'seo',
-    question: 'Can you optimise an existing Kochi store that is already slow?',
+    question: 'Will my store rank in Kerala searches?',
     answer:
-      'Yes, we offer a standalone Speed & SEO Audit + Fix package. We diagnose all Lighthouse failures, compress and convert your image library to WebP, remove render-blocking resources, fix CLS issues from unloaded fonts or images, and migrate your hosting to Cloudflare if needed. Most stores see a 30–60 point Lighthouse improvement within one sprint. We issue a written commitment: if we do not reach Lighthouse 90+ overall, we continue working at no additional charge.',
-  },
-
-  /* ── Process & Ownership ── */
-  {
-    category: 'trust',
-    question: 'Do I own my store and all the code after launch?',
-    answer:
-      '100% yes. On launch day we transfer full ownership of the store account, the theme code, all integrations, and every custom component we built. You get GitHub repository access for all code assets and full admin credentials for every tool. We do not hold your store with ongoing fees. You can take the store to any developer after handover; we encourage it. What we hope is that you come back to us for the next phase.',
+      'It can, with the right foundations. We set up product and breadcrumb schema, clean titles, canonical tags and a sitemap at launch. If you have a shop in Fort Kochi or on MG Road, we connect the store to your Google Business Profile. Malayalam pages reach searches few competitors target.',
   },
   {
-    category: 'trust',
-    question: 'What does the handover process look like?',
+    category: 'seo',
+    question: 'Do you test the store speed?',
     answer:
-      'Day 7 is handover day. We schedule a 60–90 minute Zoom walkthrough covering: admin panel navigation, adding and editing products, processing orders, managing discounts, viewing analytics, and handling basic shipping issues. We deliver a handover document with all credentials, API keys, support contacts for each integration, and a first-30-days checklist. Post-handover, we are available on WhatsApp for 30 days for quick questions at no charge.',
+      'Yes. We test the key pages on mobile with Lighthouse before handover and share the report. We aim for 90+ and LCP under 2.5 seconds. Image sizes and app scripts are where most of the gains come from.',
+  },
+  {
+    category: 'seo',
+    question: 'Our current Kerala store is slow. Can you help?',
+    answer:
+      'Yes. We audit the slowest pages, list what slows them down, from big photos to unused apps and heavy themes, and give a fixed price for the fixes, ordered by impact. Often a few changes recover most of the speed.',
+  },
+  {
+    category: 'seo',
+    question: 'Will Gulf buyers find the store fast enough?',
+    answer:
+      'Yes. Shopify and the hosting we use serve pages through a global CDN, so files load from servers near buyers in Dubai or Doha as well as Kochi. Light pages and well-sized photos matter more than distance, and those are part of every build.',
   },
   {
     category: 'trust',
-    question: 'Do you offer post-launch maintenance for Kochi stores?',
+    question: 'Do I own the store and the code?',
     answer:
-      'Yes. Our Care Plan covers plugin and platform updates, a monthly Lighthouse audit and performance fixes, uptime monitoring, a few hours of content or feature changes each month, and priority support with a 4-hour response SLA. Our Growth Retainer adds monthly A/B tests, conversion optimization, and new campaign landing pages. Both are month-to-month with no lock-in, and we share the exact monthly price on your free call.',
+      'Yes, completely. The store, domain, payment and courier accounts are registered to your business, and the code and all logins are handed over. Hosting and app bills can run in your own accounts at cost. You can move to any developer later.',
   },
   {
     category: 'trust',
-    question: 'Can I manage and update the store myself after launch?',
+    question: 'What does handover look like?',
     answer:
-      'Absolutely, self-management is the goal. For Shopify stores, adding products, updating prices, creating discount codes, and reviewing orders requires zero coding knowledge. WooCommerce is slightly more technical but we set up a simplified admin workflow for non-technical founders. We build a short video library covering the 10 most common tasks your team will perform, so you are not dependent on a developer for day-to-day operations.',
+      'We train your team on products, prices, domestic and Gulf orders, returns and offers. You receive a file with every login, each integration contact and a checklist for your first month online.',
   },
-
-  // Money-query coverage, added 2026-06-11
+  {
+    category: 'trust',
+    question: 'What support is available after launch?',
+    answer:
+      'Defects in what we built are fixed inside the build price for a cover period agreed before work starts. After that, support is optional. You approve a quote for each change, and there is no monthly minimum.',
+  },
+  {
+    category: 'trust',
+    question: 'Can my staff manage the store without coding?',
+    answer:
+      'Yes. On Shopify, adding products, updating prices, running Onam or Christmas offers and processing orders need no coding. We set up staff logins and record short videos for the common tasks.',
+  },
   {
     category: 'pricing',
     question: 'Who is the best ecommerce development company in Kochi?',
     answer:
-      'For D2C brands and small businesses, FactoryJet makes a strong case: fixed written prices, senior engineers, and stores that launch in weeks. Any ecommerce website development company in Kochi, or any ecommerce solution company in Kochi, should pass three checks: who writes the code, is the price fixed, and do you own the store at the end. That is how to find the best ecommerce website development company in Kochi and the best ecommerce solution company in Kochi for your catalog.',
+      'The right ecommerce website development company in Kochi should tell you who writes the code, fix the price in writing and give you ownership of everything. FactoryJet does all three and builds a draft of your store before you sign. Put the same questions to any ecommerce solution company in Kochi you consider.',
   },
   {
     category: 'pricing',
-    question: 'Should I hire ecommerce developer in Kochi or use an agency?',
+    question: 'Should I hire an ecommerce developer in Kochi or an agency?',
     answer:
-      'One developer can build a basic store, but a real shop needs design, payments, shipping, and SEO together. A small senior team covers all of it at a fixed price. If you do hire ecommerce developer in Kochi directly, check store speed scores from their past work first.',
+      'A single developer can build a basic store. Selling across Kerala and the Gulf also needs design, multi-currency payments, export shipping, GST and SEO, which is more than most individuals cover. A small senior team handles it at a fixed price. If you hire an ecommerce developer in Kochi, try their past stores on your phone first.',
   },
 ];
 
@@ -409,8 +396,8 @@ export default function KochiEcommercePage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_kochi_hero" />}
           eyebrow="ECOMMERCE DEVELOPMENT · KOCHI"
-          headline="Kochi's Most Trusted Ecommerce Agency: Store Live in 7 Days"
-          lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Kochi brands: Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. 7-day delivery."
+          headline="Ecommerce Development in Kochi: Store Live in 7 Days"
+          lead="FactoryJet builds online stores for Kochi spice, ayurveda, Kasavu and snack brands that sell across Kerala, India and the Gulf, plus trade portals for exporters. Malayalam storefronts on request, UPI and COD at home, cards abroad, Lighthouse 90+. 7-day delivery."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery',
@@ -426,14 +413,14 @@ export default function KochiEcommercePage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+          description="Stores and trade portals for businesses in India, the US, the UK and the UAE. Kochi brands get a fixed price per phase, the full codebase in their own name, and 7-day delivery on standard stores."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="ECOMMERCE DEVELOPMENT · KOCHI"
-          headline="The Right Platform for Every Kochi Business Model"
-          lead="Kochi's ecommerce market spans seafood exporters at the port, spice traders in the commercial district, Kasavu saree cooperatives reaching the global diaspora, and IT companies in Infopark building SaaS products. Each needs a different platform strategy. FactoryJet recommends the right one before we quote."
+          headline="Choosing a Platform for a Kochi Brand"
+          lead="A Mattancherry pepper trader, an ayurveda oil maker shipping to Dubai and a Kasavu weaver selling before Onam need different stores. We review your products, buyers and export plans first, then recommend a platform with a fixed price."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -458,12 +445,7 @@ export default function KochiEcommercePage() {
               </div>
 
               <p>
-                The average Indian ecommerce store converts at 0.8–1.2%. The top quartile converts at
-                3–5%. The difference is not the product; it is the store. Slow load times on 4G
-                networks, a UPI checkout that requires too many steps, product pages that bury the buy
-                button below three paragraphs of description, and a mobile layout that was clearly
-                designed on a desktop. These are engineering and design problems, not marketing
-                problems.
+                Kerala brands sell to two audiences at once. One lives in Kerala and the rest of India and pays by UPI. The other lives in Dubai, Doha, Riyadh or London, misses home, and buys spices, snacks, sarees and ayurveda products for themselves and for family visits. A store built for only one of them leaves money on the table.
               </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
@@ -497,17 +479,12 @@ export default function KochiEcommercePage() {
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  A great ecommerce store is an engineering project measured in revenue, not a
-                  design project measured in compliments.
+                  A Kerala brand online sells to two homes: the one in Kerala and the one in the Gulf.
                 </p>
               </div>
 
               <p>
-                FactoryJet designs every store around Indian consumer behaviour: where the UPI button
-                goes, when the WhatsApp chat trigger fires, how the mobile product page stacks on a
-                375px screen, what trust signals appear above the fold, and how EMI is surfaced at
-                checkout. We have built 120+ Shopify stores and hundreds of WooCommerce and custom
-                builds for Indian brands. That data informs every decision we make on the next one.
+                We set up Kochi stores with prices in rupees and dirhams or riyals, couriers that reach the Gulf, and clear notes on what customs allows for food and ayurveda. Product pages show origin, harvest or batch dates, and ingredients in plain words. Malayalam can run next to English for buyers at home.
               </p>
             </>
           }
@@ -557,7 +534,7 @@ export default function KochiEcommercePage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  We recommend the right platform. Not the most expensive one.
+                  You get the platform your exports need, not the costliest one.
                 </p>
               </div>
             </div>
@@ -567,23 +544,23 @@ export default function KochiEcommercePage() {
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Kochi Brands Choose FactoryJet Over Local Agencies"
-          lead="Kochi ecommerce agencies often charge several times more for a comparable project and take 10 to 20 weeks to deliver, usually without telling you the price upfront. FactoryJet gives you a fixed quote before you speak to us, puts 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. The price is fixed and confirmed in writing, and the codebase is yours to keep."
+          headline="Why Kochi Businesses Work With FactoryJet"
+          lead="Kerala brands often lose overseas orders to a checkout that only takes Indian cards or a courier that cannot reach the Gulf. We fix the price per phase in writing, commit to 7-day delivery for standard stores, and show you a working draft with your own products before you sign."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing.',
-              body: "Kochi's market moves fast. Waiting 16 weeks for an agency to deliver a store you briefed in April is not a plan; it is a liability. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the delivery date written into the project agreement. We have delivered on time for 97% of all builds.",
+              body: 'Standard Shopify and WooCommerce stores for Kochi brands go live in 7 days once products, photos and gateway approval arrive. The date is in the agreement, and 97% of our builds have shipped on time.',
             },
             {
               icon: '📱',
-              title: "India's ecommerce is 65% mobile. Most stores are not built for it.",
-              body: 'Most Kochi ecommerce stores are designed on a desktop and adapted down. The result: 0.4% mobile conversion rates on template stores versus 2.1% on properly designed custom builds. FactoryJet designs every store mobile-first at 375px: tap targets, product image sizing, checkout flow, and UPI placement all optimised for the phone your customer actually uses.',
+              title: 'One store for Kerala and the Gulf.',
+              body: 'Your buyers in Kakkanad and in Sharjah both use phones. We design at 375px first, switch currency by country, and keep checkout short, with UPI at home and cards abroad.',
             },
             {
               icon: '📋',
               title: 'Fixed price. Agreed before we start.',
-              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your store running.",
+              body: 'Every phase is scoped and priced in writing before work begins. No hourly meter and no extra charge at launch. Support after launch is optional, with every change quoted first.',
             },
           ]}
         />
@@ -591,20 +568,20 @@ export default function KochiEcommercePage() {
         {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Platform Decision to Live Store in 7 Days"
-          lead="Platform recommendation before we scope. Design approval before we build. Full payment and logistics testing before we launch."
+          headline="How We Build a Kochi Store"
+          lead="Markets and platform first, then design on your products, then test orders from Kerala and from the Gulf before launch."
           stages={KOCHI_ECOM_STAGES}
-          closingNote="5 STAGES · 7 DAYS · RAZORPAY + GST + SHIPROCKET · LIGHTHOUSE 90+ · ZERO-DOWNTIME LAUNCH"
+          closingNote="5 STAGES · KERALA + GULF CHECKOUT · UPI + CARDS + GST · LIGHTHOUSE 90+ · CODE HANDED OVER"
         />
 
         {/* ── 7. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="KOCHI ECOMMERCE MARKET"
-          headline="Why Kochi Is Kerala's Gateway to Global Ecommerce"
+          headline="What Kochi Sells Online"
           leadParagraphs={[
-            "Kochi sits at a unique intersection: India's largest seafood export port, the global spice trading hub, a UNESCO-heritage fort city with a global tourism footprint, and one of South India's fastest-growing IT corridors. This combination of deep export manufacturing, premium heritage products, and a digitally sophisticated IT workforce makes Kochi one of India's most strategically positioned cities for ecommerce growth.",
-            "Kochi's ecommerce transitions are driven by its export heritage going direct-to-consumer. Seafood exporters are building B2B procurement portals for international hotel chains. Spice traders are launching D2C Shopify stores with dollar pricing and FedEx international shipping for NRI buyers. Kasavu saree cooperatives are reaching the global Malayalam diaspora through Instagram Shop integration. And Infopark IT companies are building subscription SaaS and hardware bundle operations.",
-            "Kerala's consumer base (highly literate, globally connected through the diaspora, and comfortable with digital transactions) converts at significantly higher rates than national averages when presented with a trustworthy store experience. Kochi buyers expect Malayalam language support, clear international shipping policies, and seamless UPI/card checkout as baseline requirements. FactoryJet builds these as standard on every Kochi store.",
+            "Kochi has been a spice port for centuries, and the warehouses of Mattancherry still trade pepper, cardamom and other spices. The port also handles a large share of Kerala's seafood exports. Around them sits a wider Kerala economy of ayurveda, coir, rubber products, banana chips and snacks, much of it sold through traders and exporters rather than direct.",
+            "Kerala's diaspora, much of it in the Gulf, is a ready market. Families in the UAE, Saudi Arabia, Qatar, Oman and Kuwait buy Kerala spices, snacks, ayurveda oils and Kasavu sarees, especially before Onam, Vishu and Christmas. Selling to them needs local currency prices, a courier that delivers reliably to the Gulf, and honest notes on what customs allows.",
+            "At home, Kakkanad's Infopark and the city's newer suburbs bring a growing base of online shoppers. Monsoon months slow deliveries across the state, so delivery estimates need to change with the season. We build Kochi stores with these patterns in mind, and with Malayalam where your buyers expect it.",
           ]}
           stats={[
             {
@@ -631,50 +608,50 @@ export default function KochiEcommercePage() {
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="KOCHI × ECOMMERCE"
-          headline="Ecommerce Development for Kochi's Key Commerce Verticals"
-          lead="From seafood exporters at the port to spice traders in the commercial district to IT companies in Infopark , and Kochi's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."
+          headline="Kochi and Kerala Sectors We Build For"
+          lead="From Mattancherry spice traders to ayurveda makers and Kasavu weavers, these six sectors make up most of the Kerala briefs we scope."
           sectors={[
             {
-              name: 'Seafood & Aquaculture',
+              name: 'Spices & Plantation Produce',
               description:
-                "Kochi is India's largest seafood export hub. Seafood ecommerce needs cold-chain logistics integration, FSSAI compliance, export documentation, and B2B procurement portals for international hotel and restaurant buyers.",
+                'Pepper, cardamom, cloves and tea sell to home cooks in India and buyers abroad. Stores need origin and harvest notes, pack sizes, FSSAI details and export-ready shipping.',
               example:
-                'Seafood exporters, frozen fish D2C brands, aquaculture companies.',
+                'Spice traders, estate brands, organic spice cooperatives.',
             },
             {
-              name: 'Spices & Ayurveda',
+              name: 'Ayurveda & Wellness',
               description:
-                "Kerala is the land of spices (pepper, cardamom, turmeric, ginger), and Kochi is the global trading hub. Spice D2C stores, international export portals, and ayurvedic product stores with AYUSH compliance.",
+                'Oils, herbal powders and wellness products need ingredient lists, AYUSH licence details, usage notes and shipping rules for countries that restrict some herbs.',
               example:
-                'Spice brands, ayurvedic product D2C companies, herbal supplement labels.',
+                'Ayurveda oil and medicine makers, herbal skincare brands, wellness retreats selling products.',
             },
             {
-              name: 'Handlooms & Kasavu',
+              name: 'Kasavu & Kerala Handloom',
               description:
-                "Kerala's handloom tradition (Kasavu sarees, Kerala cotton, Kannur cotton) is finding national and NRI buyers online. Regional language support (Malayalam), NRI-targeted international shipping, and WhatsApp commerce.",
+                'Kasavu sarees and set mundu sell most before Onam and weddings. Stores need drape photos, border details, Malayalam labels and Gulf shipping.',
               example:
-                'Kasavu saree brands, handloom D2C cooperatives, traditional wear labels.',
+                'Handloom cooperatives, Kasavu weavers, Kerala ethnic wear boutiques.',
             },
             {
-              name: 'IT Products & Tech D2C',
+              name: 'Seafood & Food Exports',
               description:
-                "Infopark and SmartCity Kochi house 300+ IT companies. Tech D2C brands and SaaS product companies. Subscription management, international billing, and B2B software resellers.",
+                'Exporters sell to importers and hotel buyers abroad. Trade portals need buyer logins, spec sheets, MOQ and quote requests. Retail stores sell dry fish, pickles and banana chips.',
               example:
-                'Tech hardware D2C brands, SaaS product companies, IT equipment distributors.',
+                'Seafood exporters, pickle and chips makers, Kerala snack brands.',
             },
             {
-              name: 'Tourism & Experiences',
+              name: 'Coir & Natural Products',
               description:
-                "Kochi's global tourism and backwater culture drives demand for premium experience products. Tourism product ecommerce: Kathakali masks, coir products, coconut shell crafts, and luxury houseboat bookings.",
+                'Coir mats, coconut-shell craft and natural fibre goods sell to homes and retailers. Stores need size options, bulk pricing and freight for heavier orders.',
               example:
-                'Tourism product brands, Kerala craft D2C labels, premium experience companies.',
+                'Coir mat makers, coconut craft studios, natural fibre home goods brands.',
             },
             {
-              name: 'Rubber & Coir Products',
+              name: 'Tourism & Gifting',
               description:
-                "Kerala's rubber and coir industries create significant B2B and D2C export opportunities. Industrial rubber product portals, coir matting D2C brands, and export documentation.",
+                'Fort Kochi visitors and the diaspora buy Kerala gifts: Kathakali masks, brass lamps, spice gift boxes. Stores need gift messages, international checkout and careful packaging.',
               example:
-                'Rubber product manufacturers, coir product exporters, industrial supply B2B portals.',
+                'Handicraft shops, gift box brands, brass and bell metal makers.',
             },
           ]}
         />
@@ -711,14 +688,14 @@ export default function KochiEcommercePage() {
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What founders say after we build their store"
+          headline="What founders say after their store goes live"
         />
 
         {/* ── 12. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Everything Kochi Founders Ask Before They Sign"
-          lead="The questions we answer on every Kochi ecommerce discovery call, answered here, without the runaround."
+          headline="What Kochi Businesses Ask Before They Sign"
+          lead="The questions Kerala spice, ayurveda and handloom businesses ask us first, from Gulf shipping to Malayalam and GST."
           categories={KOCHI_ECOM_FAQ_CATEGORIES}
           items={KOCHI_ECOM_FAQ_ITEMS}
         />
@@ -727,11 +704,11 @@ export default function KochiEcommercePage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO LAUNCH"
-          headline="Your Kochi Ecommerce Store. Live in 7 Days."
-          sub="Join 500+ brands across India, the US, the UK and the UAE who chose FactoryJet. We will scope your build, recommend the right platform, and deliver a Razorpay-integrated, GST-compliant, Lighthouse 90+ store in 7 business days. Free strategy call, no commitment required."
+          headline="Your Kochi Store, Live in 7 Days"
+          sub="FactoryJet has worked with 500+ businesses in India, the US, the UK and the UAE. Tell us what you sell and where your buyers live. We will recommend a platform, fix the price for each phase in writing and show you a draft of your store before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price. 7-day delivery. Razorpay + GST + Shiprocket. Your codebase delivered in full on launch day."
+          objectionHandler="Fixed price per phase. 7-day delivery. UPI, COD and Gulf-ready checkout. Your code, your accounts, from day one."
         />
 
       </main>

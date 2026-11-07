@@ -27,7 +27,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Ecommerce Development in Chennai | FactoryJet',
   description:
-    'Shopify & WooCommerce stores for Chennai brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery.',
+    'Ecommerce development in Chennai for Kanchipuram silk sellers, T. Nagar jewellers and auto parts suppliers. Shopify, WooCommerce, UPI, GST. 7-day delivery.',
   keywords: [
     'ecommerce development company chennai',
     'ecommerce website development chennai',
@@ -35,7 +35,6 @@ export const metadata: Metadata = {
     'woocommerce development chennai',
     'online store development chennai',
     'custom ecommerce development chennai',
-    'affordable ecommerce development chennai',
     'ecommerce website cost chennai',
     'd2c website chennai',
     'razorpay shopify chennai',
@@ -50,7 +49,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Ecommerce Development Company in Chennai | FactoryJet',
     description:
-      'Shopify, WooCommerce, D2C, and custom ecommerce stores for Chennai businesses. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+      'Chennai ecommerce stores: silk sarees and gold jewellery with Tamil storefronts, dealer portals for Ambattur and Oragadam suppliers. 7-day delivery.',
     url: 'https://factoryjet.com/services/ecommerce-development/chennai',
     images: [
       {
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ecommerce Development Chennai | FactoryJet',
     description:
-      'Shopify, WooCommerce & custom ecommerce for Chennai brands. Razorpay + GST + Shiprocket.',
+      'Chennai ecommerce: silk, jewellery and auto parts stores with Tamil, UPI, COD and GST invoicing.',
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -93,7 +92,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -120,7 +119,7 @@ const serviceSchema = {
     '@id': 'https://www.wikidata.org/wiki/Q1352', // Wikidata label: Chennai (capital of Tamil Nadu, India)
   },
   description:
-    'Custom ecommerce development for Chennai businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',
+    'Ecommerce development for Chennai businesses: Shopify and WooCommerce stores for silk, jewellery and food brands, Tamil storefronts, dealer portals for auto component makers, GST invoicing. Lighthouse 95+.',
 };
 
 const localBusinessSchema = {
@@ -131,7 +130,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/chennai',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Chennai businesses. Shopify, WooCommerce, and custom stores. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+    'Ecommerce development company serving Chennai retailers, D2C brands and manufacturers. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing. 7-day delivery.',
   areaServed: [
     'Anna Nagar', 'T. Nagar', 'Velachery', 'Sholinganallur',
     'Nungambakkam', 'Adyar', 'OMR', 'Ambattur',
@@ -146,33 +145,33 @@ const localBusinessSchema = {
 const CHENNAI_ECOM_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery & Platform Recommendation',
+    title: 'Products, Buyers and Platform',
     description:
-      'We map your products, target audience, logistics requirements, and revenue model. Platform recommendation (Shopify, WooCommerce, or custom) is made here, before we scope or price anything.',
+      'We go through your catalogue and how it sells: retail in Tamil Nadu, NRIs abroad, or dealers across India. Silk and jewellery need detail-heavy product pages. Auto parts need search by part number. The platform follows from that.',
   },
   {
     number: '02',
-    title: 'Figma Design & Mockup Approval',
+    title: 'Design Approval',
     description:
-      'Custom Figma designs for your homepage, product pages, collection pages, and checkout. Mobile-first at 375px. India-specific UX: UPI placement, COD badge position, trust signals above the fold.',
+      'We design home, category, product and checkout screens on your own products, phone first. You approve price breakups, size and length info, Tamil labels and trust badges before we build.',
   },
   {
     number: '03',
-    title: 'Development & Payment Integration',
+    title: 'Development and Integrations',
     description:
-      'Platform setup, theme or custom development, Razorpay / PayU integration, UPI configuration, GST auto-invoicing, Shiprocket wiring, and product catalogue import.',
+      'Store build, Razorpay with UPI, cards, wallets and COD, GST invoices with HSN codes, courier links and product import. Dealer portals get logins, account pricing and fast reorder.',
   },
   {
     number: '04',
-    title: 'QA & Lighthouse Audit',
+    title: 'Testing',
     description:
-      'End-to-end testing of every payment method (UPI, cards, COD, wallets). Lighthouse 90+ on mobile before we ship. Core Web Vitals green: LCP under 2.5s, CLS below 0.1.',
+      'We run real test orders through each payment option, check every invoice and label, and test speed on mobile. Our goal is Lighthouse 90+ and LCP under 2.5 seconds.',
   },
   {
     number: '05',
-    title: 'Launch & Handover',
+    title: 'Launch and Training',
     description:
-      'Zero-downtime DNS switch. Sitemap submitted to Google Search Console. Full codebase delivered to your GitHub. 60-minute Zoom walkthrough. 30-day post-launch support window.',
+      'We move the domain without downtime, submit the sitemap, hand over the code and all logins, and train your staff. Any defect in our work is fixed free for the cover period agreed at the start.',
   },
 ];
 
@@ -189,149 +188,137 @@ const CHENNAI_ECOM_FAQ_CATEGORIES = [
 ];
 
 const CHENNAI_ECOM_FAQ_ITEMS = [
-
-  /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How long does it take to launch a Chennai ecommerce store?',
+    question: 'How soon can my Chennai store go live?',
     answer:
-      'FactoryJet delivers standard Shopify and WooCommerce stores in 7 business days for Starter and Growth builds. Day 1 is a discovery call to finalise your catalogue, payment preferences, and logistics setup. Days 2–3 are Figma design and mockup approval. Days 3–5 are development and integration. Day 6 is QA and Lighthouse testing. Day 7 is launch. Custom platform and marketplace builds take longer, usually 8 to 16 weeks depending on scope.',
+      'A standard Shopify or WooCommerce store goes live in 7 days after you share products, photos and gateway approval. A custom-designed theme takes 3 to 5 weeks. Dealer portals and stores with daily gold-rate pricing take 5 to 8 weeks. Fully custom platforms take 8 to 14 weeks.',
   },
   {
     category: 'pricing',
     question: 'How much does ecommerce development cost in Chennai?',
     answer:
-      "FactoryJet ecommerce projects are fixed-price and scoped to your build. The main cost drivers are your platform (Shopify or WooCommerce vs a custom build), number of products, the payment and shipping integrations you need, and any custom features like subscriptions or B2B pricing. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts. The price is fixed and confirmed in writing, with no hourly billing and no scope creep.",
+      'It depends on what the store must do. Daily gold-rate pricing, a Tamil storefront, dealer price lists, international shipping and ERP links all add scope. A simple retail store costs far less. We quote a fixed price in writing after a short call about your catalogue.',
   },
   {
     category: 'pricing',
-    question: 'Do you offer payment plans for the development cost?',
+    question: 'Can I pay in stages?',
     answer:
-      'Yes. All plans can be split 50% upfront and 50% on launch day. Growth and Custom plans can be structured as 40-30-30 across the build. We accept NEFT, RTGS, UPI, and all major credit cards. No interest or fees are charged on installment plans; it is simply a split of the quoted fixed price.',
+      'Yes. Work is split into phases, and each phase is scoped, priced and signed before it starts. A silk store might launch retail first and add NRI shipping next. Payment by NEFT, RTGS or UPI, never by the hour.',
   },
   {
     category: 'pricing',
-    question: 'What happens if my store is not ready in 7 days?',
+    question: 'Will I see the store before I sign a contract?',
     answer:
-      'We have delivered on time for 97% of all builds. When a build does run over, the cause is almost always a delay in receiving product images, content, or payment gateway credentials, which we flag upfront in the onboarding checklist.',
-  },
-
-  /* ── Platform & Tech ── */
-  {
-    category: 'platform',
-    question: 'Which ecommerce platform is right for my Chennai business?',
-    answer:
-      'Shopify is the best default for most Chennai D2C and B2C brands: fast to launch, easy to manage, and natively supports Razorpay, PayU, and UPI. WooCommerce is the right choice when you are already on WordPress or need deep content-commerce integration (recipes, guides, editorial content). Custom Next.js platforms make sense for high-volume D2C brands, B2B wholesale portals with complex pricing rules, or multi-vendor marketplaces where Shopify and WooCommerce hit their ceiling. FactoryJet makes this recommendation during discovery at no charge.',
+      'Yes. We build a draft with a few of your real products and show it working, from product page to payment. You and your family or partners can test it on your own phones. If you are not happy, you owe nothing.',
   },
   {
     category: 'platform',
-    question: 'Do you set up Razorpay, UPI, and Cash on Delivery for all stores?',
+    question: 'Which platform is best for a Chennai silk or saree store?',
     answer:
-      'Yes, all India payment methods are configured in every plan. Razorpay is our primary gateway and covers UPI, net banking, cards, wallets (Paytm, PhonePe, Mobikwik), EMI on major cards, and BNPL (LazyPay, Simpl). We also integrate PayU, CCAvenue, or PhonePe Business if you have an existing relationship. Cash on Delivery is configured with prepaid-to-COD ratios you control. Razorpay\'s fraud detection rules are configured at launch to keep COD abuse low.',
+      'Shopify suits most saree stores. It handles colours, blouse options and lengths as variants, supports video on product pages, and takes UPI, COD and international cards. WooCommerce works if you already run a WordPress site with a lot of content.',
   },
   {
     category: 'platform',
-    question: 'Can you connect my Chennai store to Amazon India and Flipkart?',
+    question: "Can my jewellery store show prices based on today's gold rate?",
     answer:
-      'Yes, this is included in the Growth plan and above. We use Cedcommerce or Unicommerce to sync your product catalogue, pricing, and inventory between your Shopify or WooCommerce store and your Amazon India and Flipkart seller accounts. Orders from all channels flow into one dashboard. When stock sells on Amazon, it is deducted from your store automatically, preventing overselling.',
+      'Yes. Product prices can update from a daily gold rate you set, using weight, purity and making charges. Each product page shows the price breakup, the hallmark and HUID, and insured shipping. Dealers can get a login-only catalogue with trade rates.',
   },
   {
     category: 'platform',
-    question: 'Can you set up WhatsApp Commerce and automated order flows?',
+    question: 'Do you set up UPI, cards and COD?',
     answer:
-      'Yes. We integrate WhatsApp Business API via Interakt, Wati, or AiSensy to send order confirmations, shipping updates, and abandoned cart messages on WhatsApp, where open rates are 85%+ versus email\'s 20%. We also build conversational product discovery chatbots where customers browse and order directly in WhatsApp, with Razorpay payment links sent in-chat. This is included in Growth and Custom plans.',
-  },
-
-  /* ── India-Specific ── */
-  {
-    category: 'india',
-    question: 'Do your stores support GST invoicing and compliance?',
-    answer:
-      'Yes, GST compliance is built into every Indian ecommerce store we deliver. This includes auto-generated GST invoices at order placement, GSTIN capture at checkout for B2B buyers, HSN code mapping per product category, state-wise IGST/CGST/SGST rate configuration, and monthly GSTR-1 export compatibility. We integrate with Tally, Zoho Books, or custom accounting exports on request.',
+      'Yes. Razorpay is our standard gateway and covers UPI, cards, net banking, wallets and EMI. We can connect PayU, CCAvenue or PhonePe if you already have one. COD can be limited by value, pincode or product, which matters for high-value jewellery.',
   },
   {
-    category: 'india',
-    question: 'Which logistics partner should I use for a Chennai store?',
+    category: 'platform',
+    question: 'Can auto component makers take dealer orders online?',
     answer:
-      'Shiprocket is our default recommendation for most Chennai ecommerce stores. It gives you access to Delhivery, Bluedart, XpressBees, Ekart, and Shadowfax under one integration, with automated NDR workflows, returns management, and weight dispute resolution. Delhivery directly via API is better for high-volume brands (10,000+ shipments per month) needing custom SLAs. For hyperlocal same-day delivery in Chennai, Shadowfax and Porter are the right fit.',
+      'Yes. Dealers and workshops log in, search by part number or vehicle, see their own price and credit terms, and reorder past orders quickly. The portal raises GST invoices and can export orders to Tally, Zoho Books or your ERP.',
   },
   {
     category: 'india',
-    question: 'Can you add Tamil language support to my store?',
+    question: 'How does GST work on a Chennai store?',
     answer:
-      'Yes, multi-language support is available for all platforms. For Shopify we use the Translate & Adapt app or Langify for regional language storefronts. For WooCommerce we implement WPML or TranslatePress. For custom platforms we build the i18n layer natively. Language-switched URLs follow SEO-safe hreflang patterns. We have built stores in Hindi, Tamil, Telugu, Gujarati, and Bengali.',
+      'Orders within Tamil Nadu carry CGST and SGST. Orders to other states carry IGST. The store applies the right split automatically, prints HSN codes, and lets business buyers enter a GSTIN. Data exports line up with GSTR-1 filing.',
   },
   {
     category: 'india',
-    question: 'How do you handle cart abandonment for Indian shoppers?',
+    question: 'Which courier is best for shipping from Chennai?',
     answer:
-      'India has a 78% cart abandonment rate, higher than global averages because COD hesitancy and payment UX friction are common. We build a 3-touch recovery sequence: 1) WhatsApp message within 30 minutes with a direct Razorpay payment link, 2) SMS at 2 hours with a small discount, 3) email at 24 hours with a trust signal (reviews, return policy). Stores with this sequence recover 18–22% of abandoned carts on average.',
-  },
-
-  /* ── Speed & SEO ── */
-  {
-    category: 'seo',
-    question: 'Will my Chennai ecommerce store rank on Google?',
-    answer:
-      'Every store we build includes technical SEO from day one: Product and BreadcrumbList schema for Google Shopping eligibility, optimised title and meta templates, canonical URLs to prevent duplicate content (a common Shopify and WooCommerce issue), GST price display, Core Web Vitals green on mobile, and sitemap submission to Google Search Console. LocalBusiness schema with Chennai geo-coordinates is included for local search visibility.',
+      'Most Chennai stores start with Shiprocket, which brings Delhivery, Blue Dart, Xpressbees, DTDC and others into one panel with returns handling. High-value jewellery needs insured shipping through a specialist service. For same-day delivery inside Chennai, a local partner works for food and gifts.',
   },
   {
-    category: 'seo',
-    question: 'Do you guarantee a Lighthouse score?',
+    category: 'india',
+    question: 'Can my store be in Tamil?',
     answer:
-      'Yes, Lighthouse 90+ on Performance, Accessibility, Best Practices, and SEO is a contractual commitment on all builds. We achieve this by serving WebP images from CDN, deferring non-critical JavaScript, inlining critical CSS, using next-gen fonts with preload, and hosting on Cloudflare Pages with assets served from the nearest edge node to your customer. We QA the score before handover and fix any regression post-launch within 48 hours at no charge.',
+      'Yes. We can run a full Tamil version next to English, each on its own URL so Google can index both. We test Tamil fonts on low-cost Android phones before launch. Product names and descriptions should be written by a Tamil speaker, not machine-translated.',
   },
   {
-    category: 'seo',
-    question: 'What are Core Web Vitals and why do they matter for my store?',
+    category: 'india',
+    question: 'How do I sell silk and jewellery to NRIs from Chennai?',
     answer:
-      'Core Web Vitals are Google\'s three page experience signals: LCP (Largest Contentful Paint, how fast the main content loads, target under 2.5s), INP (Interaction to Next Paint, how fast the page responds to clicks, target under 200ms), and CLS (Cumulative Layout Shift, whether elements jump around, target below 0.1). Google confirmed these are a ranking signal. More importantly, a 1-second delay in mobile load time reduces conversion rates by 20%. For a high-revenue store, that adds up to significant lost revenue every second of slowness.',
+      'Shopify Markets shows prices in dollars, pounds or Singapore dollars, and we connect a cross-border courier such as Shiprocket X or DHL. Checkout shows duties and delivery times. Wedding buyers order weeks ahead, so we add clear dispatch dates and a WhatsApp line for questions.',
   },
   {
     category: 'seo',
-    question: 'Can you optimise an existing Chennai store that is already slow?',
+    question: 'Will my store rank for Chennai searches?',
     answer:
-      'Yes, we offer a standalone Speed & SEO Audit + Fix package. We diagnose all Lighthouse failures, compress and convert your image library to WebP, remove render-blocking resources, fix CLS issues from unloaded fonts or images, and migrate your hosting to Cloudflare if needed. Most stores see a 30–60 point Lighthouse improvement within one sprint. We issue a written commitment: if we do not reach Lighthouse 90+ overall, we continue working at no additional charge.',
-  },
-
-  /* ── Process & Ownership ── */
-  {
-    category: 'trust',
-    question: 'Do I own my store and all the code after launch?',
-    answer:
-      '100% yes. On launch day we transfer full ownership of the store account, the theme code, all integrations, and every custom component we built. You get GitHub repository access for all code assets and full admin credentials for every tool. We do not hold your store with ongoing fees. You can take the store to any developer after handover; we encourage it. What we hope is that you come back to us for the next phase.',
+      'It can. We set up product and breadcrumb schema, clear titles, canonical tags and a sitemap at launch. If you have a showroom in T. Nagar, Mylapore or Anna Nagar, we link the store to your Google Business Profile so you appear in local results too.',
   },
   {
-    category: 'trust',
-    question: 'What does the handover process look like?',
+    category: 'seo',
+    question: 'Do you test the store speed?',
     answer:
-      'Day 7 is handover day. We schedule a 60–90 minute Zoom walkthrough covering: admin panel navigation, adding and editing products, processing orders, managing discounts, viewing analytics, and handling basic shipping issues. We deliver a handover document with all credentials, API keys, support contacts for each integration, and a first-30-days checklist. Post-handover, we are available on WhatsApp for 30 days for quick questions at no charge.',
+      'Yes, before handover. We test the main pages on mobile with Lighthouse and share the report, aiming for 90+ with LCP under 2.5 seconds. Heavy saree photos and videos are where most of the tuning goes.',
+  },
+  {
+    category: 'seo',
+    question: 'Our existing store is slow. Can you fix it?',
+    answer:
+      'Yes. We audit the slowest pages and list each cause: image sizes, apps loading scripts everywhere, theme code, chat or review widgets. You get the fixes in order of impact with a fixed price. Removing unused apps often helps most.',
+  },
+  {
+    category: 'seo',
+    question: 'Can product videos work without slowing the store?',
+    answer:
+      'Yes. We host videos so they stream instead of loading in full, show a light preview image first, and play only when the buyer taps. Saree drape and jewellery close-up videos stay on the page without hurting load time.',
   },
   {
     category: 'trust',
-    question: 'Do you offer post-launch maintenance for Chennai stores?',
+    question: 'Do I own the store and the code?',
     answer:
-      'Yes. Our Care Plan covers plugin and platform updates, a monthly Lighthouse audit and performance fixes, uptime monitoring, a few hours of content or feature changes each month, and priority support with a 4-hour response SLA. Our Growth Retainer adds monthly A/B tests, conversion optimization, and new campaign landing pages. Both are month-to-month with no lock-in, and we share the exact monthly price on your free call.',
+      'Yes. The store, domain, payment and courier accounts are registered in your business name. You get the code repository and every admin login. Hosting and apps can bill your own account at cost, and you can move developers whenever you choose.',
   },
   {
     category: 'trust',
-    question: 'Can I manage and update the store myself after launch?',
+    question: 'What happens at handover?',
     answer:
-      'Absolutely, self-management is the goal. For Shopify stores, adding products, updating prices, creating discount codes, and reviewing orders requires zero coding knowledge. WooCommerce is slightly more technical but we set up a simplified admin workflow for non-technical founders. We build a short video library covering the 10 most common tasks your team will perform, so you are not dependent on a developer for day-to-day operations.',
+      'We train your team on adding products, updating prices, handling orders, returns and offers. You receive a document with every login, integration contacts and a checklist for the first month after launch.',
   },
-
-  // Money-query coverage, added 2026-06-11
+  {
+    category: 'trust',
+    question: 'What support do I get after the store is live?',
+    answer:
+      'Defects in our work are fixed inside the build price for a cover period agreed before we start. After that, support is optional. Each change gets a quote that you approve first, and there is no monthly minimum.',
+  },
+  {
+    category: 'trust',
+    question: 'Can my shop staff manage the store without coding?',
+    answer:
+      'Yes. On Shopify, adding sarees, changing prices, setting up Aadi or Deepavali offers and processing orders need no coding. We create staff logins and short training videos for the tasks they repeat.',
+  },
   {
     category: 'pricing',
     question: 'Who is the best ecommerce development company in Chennai?',
     answer:
-      'For D2C brands and small businesses, FactoryJet makes a strong case: fixed written prices, senior engineers, and stores that launch in weeks. Any ecommerce website development company in Chennai, or any ecommerce solution company in Chennai, should pass three checks: who writes the code, is the price fixed, and do you own the store at the end. That is how to find the best ecommerce website development company in Chennai and the best ecommerce solution company in Chennai for your catalog.',
+      'For silk houses, jewellers and component makers, a good ecommerce website development company in Chennai should tell you who writes the code, fix the price in writing and give you full ownership. FactoryJet does all three and shows a draft before you sign. Hold every ecommerce solution company in Chennai to the same standard.',
   },
   {
     category: 'pricing',
-    question: 'Should I hire ecommerce developer in Chennai or use an agency?',
+    question: 'Should I hire an ecommerce developer in Chennai or an agency?',
     answer:
-      'One developer can build a basic store, but a real shop needs design, payments, shipping, and SEO together. A small senior team covers all of it at a fixed price. If you do hire ecommerce developer in Chennai directly, check store speed scores from their past work first.',
+      'A single developer can build a basic store. Running one well takes design, payments, couriers, GST, Tamil content and SEO together, which few individuals cover. A small senior team handles all of it at a fixed price. If you hire an ecommerce developer in Chennai, open two of their stores on your phone and time them.',
   },
 ];
 
@@ -409,8 +396,8 @@ export default function ChennaiEcommercePage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_chennai_hero" />}
           eyebrow="ECOMMERCE DEVELOPMENT · CHENNAI"
-          headline="Chennai's Most Trusted Ecommerce Agency: Store Live in 7 Days"
-          lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Chennai brands: Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. 7-day delivery."
+          headline="Ecommerce Development in Chennai: Store Live in 7 Days"
+          lead="FactoryJet builds online stores for Chennai silk, jewellery and food brands, with Tamil where your buyers want it, and dealer portals for auto component makers from Ambattur to Oragadam. Razorpay, UPI and COD at checkout, Lighthouse 90+ on mobile. 7-day delivery."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery',
@@ -426,14 +413,14 @@ export default function ChennaiEcommercePage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+          description="From D2C labels to component suppliers, we have built for businesses in India, the US, the UK and the UAE. Chennai clients get a fixed price per phase, the complete codebase, and 7-day delivery on standard stores."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="ECOMMERCE DEVELOPMENT · CHENNAI"
-          headline="The Right Platform for Every Chennai Business Model"
-          lead="Chennai's ecommerce market spans auto component manufacturers in Ambattur, silk weavers in T. Nagar, IT product brands on OMR, and jewellers in T. Nagar's Pondy Bazaar. Each needs a different platform strategy. FactoryJet recommends the right one before we quote."
+          headline="Matching the Platform to a Chennai Business"
+          lead="A T. Nagar silk house selling to NRIs in Singapore, a filter coffee brand on subscription and an Oragadam supplier taking repeat orders from dealers need different builds. We look at your products and buyers, then recommend a platform with a fixed price."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -458,12 +445,7 @@ export default function ChennaiEcommercePage() {
               </div>
 
               <p>
-                The average Indian ecommerce store converts at 0.8–1.2%. The top quartile converts at
-                3–5%. The difference is not the product; it is the store. Slow load times on 4G
-                networks, a UPI checkout that requires too many steps, product pages that bury the buy
-                button below three paragraphs of description, and a mobile layout that was clearly
-                designed on a desktop. These are engineering and design problems, not marketing
-                problems.
+                Chennai buyers are careful with money and want full details before they pay. For silk that means weave, zari type and length. For gold, it means weight, purity, making charges and the hallmark. For an auto part, it means the part number and the vehicles it fits. A store that hides any of this gets a phone call at best and a lost sale at worst.
               </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
@@ -497,17 +479,12 @@ export default function ChennaiEcommercePage() {
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  A great ecommerce store is an engineering project measured in revenue, not a
-                  design project measured in compliments.
+                  In Chennai, trust is built with detail. The store has to show it before the buyer asks.
                 </p>
               </div>
 
               <p>
-                FactoryJet designs every store around Indian consumer behaviour: where the UPI button
-                goes, when the WhatsApp chat trigger fires, how the mobile product page stacks on a
-                375px screen, what trust signals appear above the fold, and how EMI is surfaced at
-                checkout. We have built 120+ Shopify stores and hundreds of WooCommerce and custom
-                builds for Indian brands. That data informs every decision we make on the next one.
+                We design Chennai stores so the answer is on the page: spec tables beside the price, video of the saree drape, a price breakup for jewellery, and WhatsApp for the questions that remain. Checkout leads with UPI, keeps COD where it makes sense, and shows the delivery date by pincode.
               </p>
             </>
           }
@@ -557,7 +534,7 @@ export default function ChennaiEcommercePage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  We recommend the right platform. Not the most expensive one.
+                  We choose the platform your products need, not the dearest one.
                 </p>
               </div>
             </div>
@@ -567,23 +544,23 @@ export default function ChennaiEcommercePage() {
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Chennai Brands Choose FactoryJet Over Local Agencies"
-          lead="Chennai ecommerce agencies often charge several times more for a comparable project and take 10 to 20 weeks to deliver, usually without telling you the price upfront. FactoryJet gives you a fixed quote before you speak to us, puts 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. The price is fixed and confirmed in writing, and the codebase is yours to keep."
+          headline="Why Chennai Businesses Choose FactoryJet"
+          lead="Chennai owners tend to ask hard questions about cost and timing before they commit. We answer with a fixed price per phase in writing, 7-day delivery for standard stores in the agreement, and a working draft built on your own products before you sign anything."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing.',
-              body: "Chennai's market moves fast. Waiting 16 weeks for an agency to deliver a store you briefed in April is not a plan; it is a liability. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the delivery date written into the project agreement. We have delivered on time for 97% of all builds.",
+              body: 'A standard store for a Chennai business is live in 7 days from the day products, photos and payment gateway approval reach us. That date goes into the agreement. We have hit our deadline on 97% of builds.',
             },
             {
               icon: '📱',
-              title: "India's ecommerce is 65% mobile. Most stores are not built for it.",
-              body: 'Most Chennai ecommerce stores are designed on a desktop and adapted down. The result: 0.4% mobile conversion rates on template stores versus 2.1% on properly designed custom builds. FactoryJet designs every store mobile-first at 375px: tap targets, product image sizing, checkout flow, and UPI placement all optimised for the phone your customer actually uses.',
+              title: 'Made for mobile and for detail.',
+              body: 'Most Chennai buyers will see your store on a phone. We design at 375px first and still fit the detail they need: spec tables that scroll cleanly, zoomable photos of the weave, and a checkout that finishes in a few taps.',
             },
             {
               icon: '📋',
               title: 'Fixed price. Agreed before we start.',
-              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your store running.",
+              body: 'Scope and price for each phase are written down and signed before we begin. You will not see hourly charges or a bigger bill at launch. Support afterwards is optional, priced change by change.',
             },
           ]}
         />
@@ -591,20 +568,20 @@ export default function ChennaiEcommercePage() {
         {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Platform Decision to Live Store in 7 Days"
-          lead="Platform recommendation before we scope. Design approval before we build. Full payment and logistics testing before we launch."
+          headline="How a Chennai Store Moves From Brief to Launch"
+          lead="Platform choice, design on your own products, then test orders on every payment method and courier before we switch the domain."
           stages={CHENNAI_ECOM_STAGES}
-          closingNote="5 STAGES · 7 DAYS · RAZORPAY + GST + SHIPROCKET · LIGHTHOUSE 90+ · ZERO-DOWNTIME LAUNCH"
+          closingNote="5 STAGES · TAMIL-READY · RAZORPAY + GST + COURIERS · LIGHTHOUSE 90+ · CODE AND LOGINS HANDED OVER"
         />
 
         {/* ── 7. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="CHENNAI ECOMMERCE MARKET"
-          headline="Why Chennai Is South India's Manufacturing Ecommerce Powerhouse"
+          headline="How Chennai Commerce Is Moving Online"
           leadParagraphs={[
-            "Chennai's ecommerce market is built on the city's extraordinary manufacturing depth. As India's auto manufacturing capital, IT corridor anchor, and Southeast Asia's largest textile export hub, Chennai's businesses are going digital from a position of deep manufacturing expertise, not just retail aspiration. This creates a unique ecommerce market where B2B procurement portals, D2C manufacturer brands, and regional wholesale-to-retail transitions all coexist.",
-            "Chennai's D2C market is defined by its manufacturing-to-consumer transitions. Ambattur auto component manufacturers are building B2B procurement portals with OEM specification search and GST B2B invoicing. Kanchipuram silk weavers are launching Shopify stores with Tamil language support and NRI-targeted international shipping. OMR IT product companies are building subscription SaaS and hardware bundles. And T. Nagar jewellers are launching hallmark-compliant gold jewellery stores with COD and Razorpay Turbo checkout.",
-            "The unique characteristic of Chennai's ecommerce market is its combination of deep product expertise and a highly value-conscious consumer base. Chennai shoppers require clear product specifications, transparent pricing, and strong return policies before they convert, and they convert at significantly higher rates when these signals are present. FactoryJet builds these trust layers into every Chennai store as a standard deliverable.",
+            "Chennai is one of India's main auto and manufacturing centres. The belt from Ambattur and Guindy out to Sriperumbudur and Oragadam is full of component makers, tool rooms and suppliers to the big vehicle plants. Many sell aftermarket parts to dealers too, and they are replacing phone orders and spreadsheets with trade portals.",
+            "The city's retail core is just as strong. T. Nagar, around Ranganathan Street and Pondy Bazaar, is packed with silk and gold jewellery stores, and Kanchipuram silk draws buyers from across the world. Mylapore and Anna Nagar shoppers buy coffee, sweets and pooja items online, and families abroad, in Singapore, the Gulf and the US, order silk and jewellery for weddings back home.",
+            'Two dates shape the year for Chennai retail: the Aadi month sales and Deepavali, with Pongal and wedding seasons close behind. Gold buying peaks around Akshaya Tritiya. We plan launches and stock pages around those dates, and we build in Tamil where your buyers prefer it, so the store reads as local as your showroom.',
           ]}
           stats={[
             {
@@ -631,50 +608,50 @@ export default function ChennaiEcommercePage() {
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="CHENNAI × ECOMMERCE"
-          headline="Ecommerce Development for Chennai's Key Commerce Verticals"
-          lead="From Ambattur auto manufacturers to T. Nagar silk weavers to OMR IT brands , and Chennai's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."
+          headline="Chennai Sectors We Build For"
+          lead="These six sectors cover most Chennai ecommerce work, from component makers in Oragadam to silk houses in T. Nagar and coffee brands in Mylapore."
           sectors={[
             {
               name: 'Automotive & Components',
               description:
-                "Chennai is India's Detroit, home to Ford, Hyundai, BMW, and 4,000+ auto component manufacturers. B2B auto parts portals need complex specification filtering, OEM part number search, bulk order flows, and GST B2B invoicing.",
+                'Suppliers in Ambattur, Guindy and Oragadam sell parts to dealers and workshops. Portals need part number search, fitment by vehicle, price by dealer and GST invoices.',
               example:
-                'Auto component exporters, spare parts D2C brands, EV component suppliers.',
+                'Aftermarket parts sellers, tool rooms, EV and two-wheeler component makers.',
             },
             {
-              name: 'Textiles & Silk',
+              name: 'Silk & Textiles',
               description:
-                'T. Nagar is India\'s largest silk and textile retail corridor. Textile ecommerce needs regional language support (Tamil), WhatsApp order flows, and COD-heavy checkout optimisation.',
+                'Kanchipuram and Arani silk sells on detail and trust. Stores need drape videos, zari and weave notes, Tamil labels and careful international shipping for NRI buyers.',
               example:
-                'Kanchipuram silk brands, cotton textile D2C labels, garment exporters.',
+                'Silk saree houses, cotton handloom labels, Tiruppur knitwear brands.',
             },
             {
-              name: 'Electronics Manufacturing',
+              name: 'Gold & Jewellery',
               description:
-                'Ambattur and Sriperumbudur house global electronics manufacturing operations. Electronics D2C brands and B2B component suppliers.',
+                'T. Nagar jewellers need product pages with weight, purity, making charges and HUID, prices linked to the daily gold rate, and insured delivery.',
               example:
-                'Electronics D2C brands, components distributors, IT hardware exporters.',
+                'Gold and diamond jewellers, temple jewellery makers, silver article sellers.',
             },
             {
-              name: 'Pharmaceuticals & Healthcare',
+              name: 'Electronics & Appliances',
               description:
-                "Chennai is Tamil Nadu's pharma hub with a major cluster in Ambattur and Old Mahabalipuram Road. Online pharmacy, OTC health brands, and B2B medical supplies.",
+                'Chennai has a large electronics manufacturing base around Sriperumbudur. Retail and D2C sellers need spec filters, EMI on the product page and warranty registration.',
               example:
-                'Pharma manufacturers, hospital supply companies, ayurvedic health brands.',
+                'Appliance retailers, mobile accessory brands, electrical goods distributors.',
             },
             {
-              name: 'Food & Spices',
+              name: 'Coffee, Sweets & Food',
               description:
-                "Chennai's food culture drives a growing D2C packaged food market. FSSAI compliance, cold-chain logistics, and regional cuisine-specific gifting SKUs.",
+                'Filter coffee, Chettinad spice mixes and sweets ship across India. Stores need FSSAI details, shelf-life notes, festival gift boxes and subscriptions.',
               example:
-                'South Indian spice brands, filter coffee D2C companies, ready-to-cook packaged food brands.',
+                'Filter coffee roasters, spice mix brands, sweet and savoury shops.',
             },
             {
-              name: 'Jewellery & Gold',
+              name: 'Pharma & Healthcare',
               description:
-                "T. Nagar's Pondy Bazaar is India's second-largest jewellery retail corridor. Gold jewellery ecommerce needs hallmark compliance, making-charge transparency, and BIS certification display.",
+                'Chennai has a strong hospital and pharma trade. B2B portals let pharmacies and clinics log in, see their rates and reorder, with drug licence capture at sign-up.',
               example:
-                'Gold jewellery retailers, diamond brands, B2B jewellery wholesalers.',
+                'Medical supply distributors, ayurvedic and siddha brands, OTC health makers.',
             },
           ]}
         />
@@ -711,14 +688,14 @@ export default function ChennaiEcommercePage() {
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What founders say after we build their store"
+          headline="What founders say after their store launches"
         />
 
         {/* ── 12. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Everything Chennai Founders Ask Before They Sign"
-          lead="The questions we answer on every Chennai ecommerce discovery call, answered here, without the runaround."
+          headline="What Chennai Owners Ask Before Signing"
+          lead="Clear answers to the questions Chennai retailers and manufacturers bring to a first call, covering timing, price, Tamil, GST and ownership."
           categories={CHENNAI_ECOM_FAQ_CATEGORIES}
           items={CHENNAI_ECOM_FAQ_ITEMS}
         />
@@ -727,11 +704,11 @@ export default function ChennaiEcommercePage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO LAUNCH"
-          headline="Your Chennai Ecommerce Store. Live in 7 Days."
-          sub="Join 500+ brands across India, the US, the UK and the UAE who chose FactoryJet. We will scope your build, recommend the right platform, and deliver a Razorpay-integrated, GST-compliant, Lighthouse 90+ store in 7 business days. Free strategy call, no commitment required."
+          headline="Your Chennai Store, Live in 7 Days"
+          sub="500+ businesses in India, the US, the UK and the UAE have worked with FactoryJet. Share what you sell and who buys it. We will recommend a platform, put the price for each phase in writing and show you a draft of your store before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price. 7-day delivery. Razorpay + GST + Shiprocket. Your codebase delivered in full on launch day."
+          objectionHandler="Fixed price per phase. 7-day delivery. Tamil-ready, with UPI, COD and GST. Your code, your accounts."
         />
 
       </main>

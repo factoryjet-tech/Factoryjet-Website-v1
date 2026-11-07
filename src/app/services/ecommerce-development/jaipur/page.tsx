@@ -27,7 +27,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Ecommerce Development in Jaipur | FactoryJet',
   description:
-    'Shopify & WooCommerce stores for Jaipur brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery.',
+    'Ecommerce development in Jaipur for gem and silver jewellers, block-print and blue pottery brands, and exporters. Shopify, UPI, global checkout. 7-day delivery.',
   keywords: [
     'ecommerce development company jaipur',
     'ecommerce website development jaipur',
@@ -35,7 +35,6 @@ export const metadata: Metadata = {
     'woocommerce development jaipur',
     'online store development jaipur',
     'custom ecommerce development jaipur',
-    'affordable ecommerce development jaipur',
     'ecommerce website cost jaipur',
     'd2c website jaipur',
     'razorpay shopify jaipur',
@@ -50,7 +49,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Ecommerce Development Company in Jaipur | FactoryJet',
     description:
-      'Shopify, WooCommerce, D2C, and custom ecommerce stores for Jaipur businesses. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+      'Jaipur ecommerce stores for Johari Bazaar jewellers, Sanganer and Bagru block printers, blue pottery makers and wholesale exporters. 7-day delivery.',
     url: 'https://factoryjet.com/services/ecommerce-development/jaipur',
     images: [
       {
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ecommerce Development Jaipur | FactoryJet',
     description:
-      'Shopify, WooCommerce & custom ecommerce for Jaipur brands. Razorpay + GST + Shiprocket.',
+      'Jaipur ecommerce: gems, block print and craft stores with global checkout, UPI and GST.',
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -93,7 +92,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -120,7 +119,7 @@ const serviceSchema = {
     '@id': 'https://www.wikidata.org/wiki/Q66485', // Wikidata label: Jaipur (capital of Rajasthan, India)
   },
   description:
-    'Custom ecommerce development for Jaipur businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',
+    'Ecommerce development for Jaipur businesses: Shopify and WooCommerce stores for gemstone and silver jewellers, block-print textile and blue pottery brands, wholesale catalogues for overseas boutiques, GST invoicing. Lighthouse 95+.',
 };
 
 const localBusinessSchema = {
@@ -131,7 +130,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/jaipur',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Jaipur businesses. Shopify, WooCommerce, and custom stores. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+    'Ecommerce development company serving Jaipur jewellers, craft brands and exporters. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD, international checkout and GST invoicing. 7-day delivery.',
   areaServed: [
     'Vaishali Nagar', 'Malviya Nagar', 'C-Scheme', 'Mansarovar', 'Jagatpura',
     'Sanganer', 'Bani Park', 'Tonk Road',
@@ -146,33 +145,33 @@ const localBusinessSchema = {
 const JAIPUR_ECOM_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery & Platform Recommendation',
+    title: 'Markets and Platform',
     description:
-      'We map your products, target audience, logistics requirements, and revenue model. Platform recommendation (Shopify, WooCommerce, or custom) is made here, before we scope or price anything.',
+      'We map where your buyers are: Rajasthan, the rest of India, overseas retail or overseas boutiques. That sets the currencies, couriers, wholesale rules and the platform we recommend.',
   },
   {
     number: '02',
-    title: 'Figma Design & Mockup Approval',
+    title: 'Design With Your Craft',
     description:
-      'Custom Figma designs for your homepage, product pages, collection pages, and checkout. Mobile-first at 375px. India-specific UX: UPI placement, COD badge position, trust signals above the fold.',
+      'Figma screens built with your real products: close-ups, colour variants, maker notes and gift options. You approve layouts and trust details, including certificates, before development.',
   },
   {
     number: '03',
-    title: 'Development & Payment Integration',
+    title: 'Build, Payments and Shipping',
     description:
-      'Platform setup, theme or custom development, Razorpay / PayU integration, UPI configuration, GST auto-invoicing, Shiprocket wiring, and product catalogue import.',
+      'Store build, Razorpay for UPI, cards and COD, international payments, GST invoices with HSN codes, Shiprocket for India and a cross-border courier for exports, plus catalogue upload.',
   },
   {
     number: '04',
-    title: 'QA & Lighthouse Audit',
+    title: 'Test Orders, Home and Abroad',
     description:
-      'End-to-end testing of every payment method (UPI, cards, COD, wallets). Lighthouse 90+ on mobile before we ship. Core Web Vitals green: LCP under 2.5s, CLS below 0.1.',
+      'We test orders as an Indian buyer and an overseas buyer, check duty messages, invoices and labels, and run Lighthouse on mobile against a 90+ score.',
   },
   {
     number: '05',
-    title: 'Launch & Handover',
+    title: 'Launch and Handover',
     description:
-      'Zero-downtime DNS switch. Sitemap submitted to Google Search Console. Full codebase delivered to your GitHub. 60-minute Zoom walkthrough. 30-day post-launch support window.',
+      'Domain switch without downtime, sitemap submitted, code and logins handed over, team trained. Defects in our work are fixed at no charge within the agreed cover period.',
   },
 ];
 
@@ -189,149 +188,137 @@ const JAIPUR_ECOM_FAQ_CATEGORIES = [
 ];
 
 const JAIPUR_ECOM_FAQ_ITEMS = [
-
-  /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How long does it take to launch a Jaipur ecommerce store?',
+    question: 'How long will it take to launch my Jaipur store?',
     answer:
-      'FactoryJet delivers standard Shopify and WooCommerce stores in 7 business days for Starter and Growth builds. Day 1 is a discovery call to finalise your catalogue, payment preferences, and logistics setup. Days 2–3 are Figma design and mockup approval. Days 3–5 are development and integration. Day 6 is QA and Lighthouse testing. Day 7 is launch. Custom platform and marketplace builds take longer, usually 8 to 16 weeks depending on scope.',
+      'A standard Shopify or WooCommerce store goes live in 7 days once products, photos and gateway approval arrive. A custom theme takes 3 to 5 weeks. Wholesale catalogues for overseas boutiques take 5 to 8 weeks, and fully custom platforms take 8 to 14 weeks.',
   },
   {
     category: 'pricing',
-    question: 'How much does ecommerce development cost in Jaipur?',
+    question: 'What does an ecommerce store cost in Jaipur?',
     answer:
-      "FactoryJet ecommerce projects are fixed-price and scoped to your build. The main cost drivers are your platform (Shopify or WooCommerce vs a custom build), number of products, the payment and shipping integrations you need, and any custom features like subscriptions or B2B pricing. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts. The price is fixed and confirmed in writing, with no hourly billing and no scope creep.",
+      'It depends on scope. For Jaipur businesses, the largest factors are overseas selling in several currencies, wholesale rules for boutiques, the number of products and colourways, and certificate handling for stones. We quote a fixed price in writing after a short call.',
   },
   {
     category: 'pricing',
-    question: 'Do you offer payment plans for the development cost?',
+    question: 'How do I pay for the project?',
     answer:
-      'Yes. All plans can be split 50% upfront and 50% on launch day. Growth and Custom plans can be structured as 40-30-30 across the build. We accept NEFT, RTGS, UPI, and all major credit cards. No interest or fees are charged on installment plans; it is simply a split of the quoted fixed price.',
+      'Phase by phase. Each phase, such as the retail store and then a wholesale portal, is scoped and priced in writing, and you sign it before work starts. Pay by NEFT, RTGS or UPI. Nothing is billed by the hour.',
   },
   {
     category: 'pricing',
-    question: 'What happens if my store is not ready in 7 days?',
+    question: 'Can I see the store working before I sign?',
     answer:
-      'We have delivered on time for 97% of all builds. When a build does run over, the cause is almost always a delay in receiving product images, content, or payment gateway credentials, which we flag upfront in the onboarding checklist.',
-  },
-
-  /* ── Platform & Tech ── */
-  {
-    category: 'platform',
-    question: 'Which ecommerce platform is right for my Jaipur business?',
-    answer:
-      'Shopify is the best default for most Jaipur D2C and B2C brands: fast to launch, easy to manage, and natively supports Razorpay, PayU, and UPI. WooCommerce is the right choice when you are already on WordPress or need deep content-commerce integration (recipes, guides, editorial content). Custom Next.js platforms make sense for high-volume D2C brands, B2B wholesale portals with complex pricing rules, or multi-vendor marketplaces where Shopify and WooCommerce hit their ceiling. FactoryJet makes this recommendation during discovery at no charge.',
+      'Yes. We build a draft with a few of your real products and walk you through it, from product page to payment. You can test it as a buyer would. If it does not show your craft well, you owe us nothing.',
   },
   {
     category: 'platform',
-    question: 'Do you set up Razorpay, UPI, and Cash on Delivery for all stores?',
+    question: 'Which platform suits a block-print or blue pottery brand?',
     answer:
-      'Yes, all India payment methods are configured in every plan. Razorpay is our primary gateway and covers UPI, net banking, cards, wallets (Paytm, PhonePe, Mobikwik), EMI on major cards, and BNPL (LazyPay, Simpl). We also integrate PayU, CCAvenue, or PhonePe Business if you have an existing relationship. Cash on Delivery is configured with prepaid-to-COD ratios you control. Razorpay\'s fraud detection rules are configured at launch to keep COD abuse low.',
+      'Shopify for most. It handles colours, sizes and sets as variants, shows prices in overseas currencies through Shopify Markets, and takes UPI, COD and international cards. WooCommerce fits if you already have a WordPress site with lots of craft stories.',
   },
   {
     category: 'platform',
-    question: 'Can you connect my Jaipur store to Amazon India and Flipkart?',
+    question: 'Can overseas boutiques order wholesale from my store?',
     answer:
-      'Yes, this is included in the Growth plan and above. We use Cedcommerce or Unicommerce to sync your product catalogue, pricing, and inventory between your Shopify or WooCommerce store and your Amazon India and Flipkart seller accounts. Orders from all channels flow into one dashboard. When stock sells on Amazon, it is deducted from your store automatically, preventing overselling.',
+      'Yes. Approved boutiques log in to see trade prices, minimum order quantities and lead times, request quotes for custom colours or sizes, and pay by card or bank transfer. Retail buyers never see the trade prices.',
   },
   {
     category: 'platform',
-    question: 'Can you set up WhatsApp Commerce and automated order flows?',
+    question: 'Do you set up UPI, cards and COD?',
     answer:
-      'Yes. We integrate WhatsApp Business API via Interakt, Wati, or AiSensy to send order confirmations, shipping updates, and abandoned cart messages on WhatsApp, where open rates are 85%+ versus email\'s 20%. We also build conversational product discovery chatbots where customers browse and order directly in WhatsApp, with Razorpay payment links sent in-chat. This is included in Growth and Custom plans.',
-  },
-
-  /* ── India-Specific ── */
-  {
-    category: 'india',
-    question: 'Do your stores support GST invoicing and compliance?',
-    answer:
-      'Yes, GST compliance is built into every Indian ecommerce store we deliver. This includes auto-generated GST invoices at order placement, GSTIN capture at checkout for B2B buyers, HSN code mapping per product category, state-wise IGST/CGST/SGST rate configuration, and monthly GSTR-1 export compatibility. We integrate with Tally, Zoho Books, or custom accounting exports on request.',
+      'Yes. Razorpay is our default gateway, covering UPI, cards, net banking, wallets and EMI in India, with international cards for approved accounts. PayPal or Stripe can be added for overseas buyers. COD can be limited by order value.',
   },
   {
-    category: 'india',
-    question: 'Which logistics partner should I use for a Jaipur store?',
+    category: 'platform',
+    question: 'Can gem dealers sell online safely?',
     answer:
-      'Shiprocket is our default recommendation for most Jaipur ecommerce stores. It gives you access to Delhivery, Bluedart, XpressBees, Ekart, and Shadowfax under one integration, with automated NDR workflows, returns management, and weight dispute resolution. Delhivery directly via API is better for high-volume brands (10,000+ shipments per month) needing custom SLAs. For hyperlocal same-day delivery in Jaipur, Shadowfax and Porter are the right fit.',
+      'Yes. Each stone gets a certificate image, carat and cut details and close-up video. High-value pieces can be made enquiry-only, with insured shipping and COD switched off. Trade buyers see a login-only catalogue with dealer rates.',
   },
   {
     category: 'india',
-    question: 'Can you add Hindi or Rajasthani language support to my store?',
+    question: 'How does GST work on a Jaipur store?',
     answer:
-      'Yes, multi-language support is available for all platforms. For Shopify we use the Translate & Adapt app or Langify for regional language storefronts. For WooCommerce we implement WPML or TranslatePress. For custom platforms we build the i18n layer natively. Language-switched URLs follow SEO-safe hreflang patterns. We have built stores in Hindi, Marathi, Tamil, Gujarati, and Bengali.',
+      'Orders within Rajasthan carry CGST and SGST, and orders from other states carry IGST. Exports are handled as zero-rated supplies with the right invoice format. The store prints HSN codes and lets business buyers add a GSTIN.',
   },
   {
     category: 'india',
-    question: 'How do you handle cart abandonment for Indian shoppers?',
+    question: 'Which couriers work for Jaipur shipments?',
     answer:
-      'India has a 78% cart abandonment rate, higher than global averages because COD hesitancy and payment UX friction are common. We build a 3-touch recovery sequence: 1) WhatsApp message within 30 minutes with a direct Razorpay payment link, 2) SMS at 2 hours with a small discount, 3) email at 24 hours with a trust signal (reviews, return policy). Stores with this sequence recover 18–22% of abandoned carts on average.',
-  },
-
-  /* ── Speed & SEO ── */
-  {
-    category: 'seo',
-    question: 'Will my Jaipur ecommerce store rank on Google?',
-    answer:
-      'Every store we build includes technical SEO from day one: Product and BreadcrumbList schema for Google Shopping eligibility, optimised title and meta templates, canonical URLs to prevent duplicate content (a common Shopify and WooCommerce issue), GST price display, Core Web Vitals green on mobile, and sitemap submission to Google Search Console. LocalBusiness schema with Jaipur geo-coordinates is included for local search visibility.',
+      'Shiprocket for Indian orders, with Delhivery, Blue Dart, Xpressbees and others in one account and returns handled. For overseas orders we connect a cross-border courier such as DHL, FedEx or Shiprocket X. Fragile pottery and marble need packaging rules and insurance set per product.',
   },
   {
-    category: 'seo',
-    question: 'Do you guarantee a Lighthouse score?',
+    category: 'india',
+    question: 'Can my store be in Hindi?',
     answer:
-      'Yes, Lighthouse 90+ on Performance, Accessibility, Best Practices, and SEO is a contractual commitment on all builds. We achieve this by serving WebP images from CDN, deferring non-critical JavaScript, inlining critical CSS, using next-gen fonts with preload, and hosting on Cloudflare Pages with assets served from the nearest edge node to your customer. We QA the score before handover and fix any regression post-launch within 48 hours at no charge.',
+      'Yes. A Hindi version can run next to English on its own URL. Overseas stores can also add French or German storefronts if you sell to European boutiques. We test fonts on budget phones and recommend a person writes the product text.',
   },
   {
-    category: 'seo',
-    question: 'What are Core Web Vitals and why do they matter for my store?',
+    category: 'india',
+    question: 'How do I handle colour variation in hand-made products?',
     answer:
-      'Core Web Vitals are Google\'s three page experience signals: LCP (Largest Contentful Paint, how fast the main content loads, target under 2.5s), INP (Interaction to Next Paint, how fast the page responds to clicks, target under 200ms), and CLS (Cumulative Layout Shift, whether elements jump around, target below 0.1). Google confirmed these are a ranking signal. More importantly, a 1-second delay in mobile load time reduces conversion rates by 20%. For a high-revenue store, that adds up to significant lost revenue every second of slowness.',
+      'Say it clearly on every product page and in the cart: hand-printed and hand-glazed pieces vary slightly. We add a short note, a photo showing two real pieces side by side, and a returns policy that explains how variation is treated.',
   },
   {
     category: 'seo',
-    question: 'Can you optimise an existing Jaipur store that is already slow?',
+    question: 'Will my store rank for Jaipur and craft searches?',
     answer:
-      'Yes, we offer a standalone Speed & SEO Audit + Fix package. We diagnose all Lighthouse failures, compress and convert your image library to WebP, remove render-blocking resources, fix CLS issues from unloaded fonts or images, and migrate your hosting to Cloudflare if needed. Most stores see a 30–60 point Lighthouse improvement within one sprint. We issue a written commitment: if we do not reach Lighthouse 90+ overall, we continue working at no additional charge.',
-  },
-
-  /* ── Process & Ownership ── */
-  {
-    category: 'trust',
-    question: 'Do I own my store and all the code after launch?',
-    answer:
-      '100% yes. On launch day we transfer full ownership of the store account, the theme code, all integrations, and every custom component we built. You get GitHub repository access for all code assets and full admin credentials for every tool. We do not hold your store with ongoing fees. You can take the store to any developer after handover; we encourage it. What we hope is that you come back to us for the next phase.',
+      'It can. We set up product and breadcrumb schema, clean titles, canonical tags and a sitemap from launch. Craft and process pages help you rank for searches like block print bedsheets. A showroom in C-Scheme or Johari Bazaar gets linked to your Google Business Profile.',
   },
   {
-    category: 'trust',
-    question: 'What does the handover process look like?',
+    category: 'seo',
+    question: 'Do you test the store speed?',
     answer:
-      'Day 7 is handover day. We schedule a 60–90 minute Zoom walkthrough covering: admin panel navigation, adding and editing products, processing orders, managing discounts, viewing analytics, and handling basic shipping issues. We deliver a handover document with all credentials, API keys, support contacts for each integration, and a first-30-days checklist. Post-handover, we are available on WhatsApp for 30 days for quick questions at no charge.',
+      'Yes. Before handover we test the main pages on mobile with Lighthouse and share the report. We aim for 90+ with LCP under 2.5 seconds, which takes careful work on image-heavy craft stores.',
+  },
+  {
+    category: 'seo',
+    question: 'Can you speed up an existing slow store?',
+    answer:
+      'Yes. We audit the slowest pages, find what slows them, such as large photos, unused apps or heavy themes, and give you ranked fixes at a fixed price. Often a handful of changes recovers most of the speed.',
+  },
+  {
+    category: 'seo',
+    question: 'Will close-up craft photos slow the site?',
+    answer:
+      'Not when they are prepared properly. We serve modern formats sized for each screen, load zoom images only when tapped and lazy-load photos further down the page. You keep the detail without the wait.',
   },
   {
     category: 'trust',
-    question: 'Do you offer post-launch maintenance for Jaipur stores?',
+    question: 'Do I own the store and the code?',
     answer:
-      'Yes. Our Care Plan covers plugin and platform updates, a monthly Lighthouse audit and performance fixes, uptime monitoring, a few hours of content or feature changes each month, and priority support with a 4-hour response SLA. Our Growth Retainer adds monthly A/B tests, conversion optimization, and new campaign landing pages. Both are month-to-month with no lock-in, and we share the exact monthly price on your free call.',
+      'Yes. The store, domain, payment and courier accounts are in your business name, and you get the code repository and every admin login. Hosting and apps can bill your account at cost. You are free to change developers whenever you wish.',
   },
   {
     category: 'trust',
-    question: 'Can I manage and update the store myself after launch?',
+    question: 'What happens at handover?',
     answer:
-      'Absolutely, self-management is the goal. For Shopify stores, adding products, updating prices, creating discount codes, and reviewing orders requires zero coding knowledge. WooCommerce is slightly more technical but we set up a simplified admin workflow for non-technical founders. We build a short video library covering the 10 most common tasks your team will perform, so you are not dependent on a developer for day-to-day operations.',
+      'We train your team on adding products, updating prices, handling domestic and overseas orders and managing wholesale accounts. You get a handover file with every login, integration contacts and a first-month checklist.',
   },
-
-  // Money-query coverage, added 2026-06-11
+  {
+    category: 'trust',
+    question: 'What support do you offer after launch?',
+    answer:
+      'Defects in our build are fixed within the build price during a cover period agreed at the start. After that, support is optional. Changes are quoted one at a time and approved first, with no monthly minimum.',
+  },
+  {
+    category: 'trust',
+    question: 'Can my workshop staff update the store?',
+    answer:
+      'Yes. On Shopify, adding products, updating stock and prices, and processing orders need no coding. We set up staff accounts and record short videos of the tasks they repeat, such as adding a new print in several colours.',
+  },
   {
     category: 'pricing',
     question: 'Who is the best ecommerce development company in Jaipur?',
     answer:
-      'For D2C brands and small businesses, FactoryJet makes a strong case: fixed written prices, senior engineers, and stores that launch in weeks. Any ecommerce website development company in Jaipur, or any ecommerce solution company in Jaipur, should pass three checks: who writes the code, is the price fixed, and do you own the store at the end. That is how to find the best ecommerce website development company in Jaipur and the best ecommerce solution company in Jaipur for your catalog.',
+      'Before choosing an ecommerce website development company in Jaipur, ask who writes the code, whether the price is fixed in writing and whether you own the store at the end. FactoryJet answers all three plainly and builds a draft before you sign. Ask every ecommerce solution company in Jaipur the same three questions.',
   },
   {
     category: 'pricing',
-    question: 'Should I hire ecommerce developer in Jaipur or use an agency?',
+    question: 'Should I hire an ecommerce developer in Jaipur or an agency?',
     answer:
-      'One developer can build a basic store, but a real shop needs design, payments, shipping, and SEO together. A small senior team covers all of it at a fixed price. If you do hire ecommerce developer in Jaipur directly, check store speed scores from their past work first.',
+      'A single developer can make a basic store. Selling crafts at home and abroad also needs design, payments in several currencies, export shipping, GST and SEO. A small senior team covers it at a fixed price. If you hire an ecommerce developer in Jaipur, check two of their stores on your phone first.',
   },
 ];
 
@@ -409,8 +396,8 @@ export default function JaipurEcommercePage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_jaipur_hero" />}
           eyebrow="ECOMMERCE DEVELOPMENT · JAIPUR"
-          headline="Jaipur's Most Trusted Ecommerce Agency: Store Live in 7 Days"
-          lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Jaipur brands: Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. 7-day delivery."
+          headline="Ecommerce Development in Jaipur: Store Live in 7 Days"
+          lead="FactoryJet builds online stores for Jaipur gem and silver jewellers, block-print and blue pottery brands, and wholesale catalogues for exporters who sell to boutiques abroad. UPI and COD for Indian buyers, cards and local currency for overseas ones, Lighthouse 90+. 7-day delivery."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery',
@@ -426,14 +413,14 @@ export default function JaipurEcommercePage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+          description="Stores for craft brands, jewellers and exporters in India, the US, the UK and the UAE. Jaipur makers get a fixed price per phase, every file and login handed over, and 7-day delivery on standard stores."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="ECOMMERCE DEVELOPMENT · JAIPUR"
-          headline="The Right Platform for Every Jaipur Business Model"
-          lead="Jaipur's ecommerce market spans D2C gem jewellery brands in Johari Bazaar, handicraft stores in Sanganer, textile traders in Bapu Bazaar, and marble exporters in Makrana. Each needs a different platform strategy. FactoryJet recommends the right one before we quote."
+          headline="The Right Store for a Jaipur Maker"
+          lead="A Johari Bazaar emerald dealer, a Bagru block printer selling bedsheets to Europe and a blue pottery studio shipping gifts across India each need a different store. We look at your buyers and products first, then propose a platform and a fixed price."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -458,12 +445,7 @@ export default function JaipurEcommercePage() {
               </div>
 
               <p>
-                The average Indian ecommerce store converts at 0.8–1.2%. The top quartile converts at
-                3–5%. The difference is not the product; it is the store. Slow load times on 4G
-                networks, a UPI checkout that requires too many steps, product pages that bury the buy
-                button below three paragraphs of description, and a mobile layout that was clearly
-                designed on a desktop. These are engineering and design problems, not marketing
-                problems.
+                Jaipur products carry a story: a hand-carved block, a natural dye, a stone cut in the old city. Online, that story is most of the sale. A buyer in Paris or Pune cannot touch the fabric, so the photos, the maker details and the care notes have to do the work a shopkeeper does in Johari Bazaar. A generic template hides all of it.
               </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
@@ -497,17 +479,12 @@ export default function JaipurEcommercePage() {
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  A great ecommerce store is an engineering project measured in revenue, not a
-                  design project measured in compliments.
+                  A hand-made product needs a page that shows the hand that made it.
                 </p>
               </div>
 
               <p>
-                FactoryJet designs every store around Indian consumer behaviour: where the UPI button
-                goes, when the WhatsApp chat trigger fires, how the mobile product page stacks on a
-                375px screen, what trust signals appear above the fold, and how EMI is surfaced at
-                checkout. We have built 120+ Shopify stores and hundreds of WooCommerce and custom
-                builds for Indian brands. That data informs every decision we make on the next one.
+                We design Jaipur stores around the craft. Close-up photos of the print and the glaze, maker and process notes, colour variation explained up front, and certificates for stones. Checkout offers UPI and COD at home and cards in local currency abroad. Wholesale buyers get a login, minimum order quantities and a quote request for custom runs.
               </p>
             </>
           }
@@ -557,7 +534,7 @@ export default function JaipurEcommercePage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  We recommend the right platform. Not the most expensive one.
+                  We suggest the platform your craft needs, not the costliest option.
                 </p>
               </div>
             </div>
@@ -567,23 +544,23 @@ export default function JaipurEcommercePage() {
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Jaipur Brands Choose FactoryJet Over Local Agencies"
-          lead="Jaipur ecommerce agencies often charge several times more for a comparable project and take 10 to 20 weeks to deliver, usually without telling you the price upfront. FactoryJet gives you a fixed quote before you speak to us, puts 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. The price is fixed and confirmed in writing, and the codebase is yours to keep."
+          headline="Why Jaipur Makers Work With FactoryJet"
+          lead="Many Jaipur businesses have been burned by a site that looked fine and sold nothing abroad. We price each phase in writing, put 7-day delivery for standard stores into the agreement, and build a draft on your own products before you pay us anything."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing.',
-              body: "Jaipur's market moves fast. Waiting 16 weeks for an agency to deliver a store you briefed in April is not a plan; it is a liability. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the delivery date written into the project agreement. We have delivered on time for 97% of all builds.",
+              body: 'Standard stores for Jaipur brands go live in 7 days once products, photos and gateway approval are ready. The date sits in the agreement. We have delivered on time on 97% of builds.',
             },
             {
               icon: '📱',
-              title: "India's ecommerce is 65% mobile. Most stores are not built for it.",
-              body: 'Most Jaipur ecommerce stores are designed on a desktop and adapted down. The result: 0.4% mobile conversion rates on template stores versus 2.1% on properly designed custom builds. FactoryJet designs every store mobile-first at 375px: tap targets, product image sizing, checkout flow, and UPI placement all optimised for the phone your customer actually uses.',
+              title: 'Craft that reads on a small screen.',
+              body: 'Your overseas buyer and your Indian buyer both shop on phones. We design at 375px first, with zoomable photos of the print and glaze, clear size and colour notes, and a short checkout in their currency.',
             },
             {
               icon: '📋',
               title: 'Fixed price. Agreed before we start.',
-              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your store running.",
+              body: 'Each phase has a written scope and fixed price before work starts. No hourly billing, no surprise bill at launch. Support after go-live is optional and quoted per change.',
             },
           ]}
         />
@@ -591,20 +568,20 @@ export default function JaipurEcommercePage() {
         {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Platform Decision to Live Store in 7 Days"
-          lead="Platform recommendation before we scope. Design approval before we build. Full payment and logistics testing before we launch."
+          headline="From Workshop to Online Store in Jaipur"
+          lead="We agree the platform and markets, design with your products, and test domestic and overseas orders before launch."
           stages={JAIPUR_ECOM_STAGES}
-          closingNote="5 STAGES · 7 DAYS · RAZORPAY + GST + SHIPROCKET · LIGHTHOUSE 90+ · ZERO-DOWNTIME LAUNCH"
+          closingNote="5 STAGES · INDIA + OVERSEAS CHECKOUT · UPI + CARDS + GST · LIGHTHOUSE 90+ · EVERY FILE HANDED OVER"
         />
 
         {/* ── 7. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="JAIPUR ECOMMERCE MARKET"
-          headline="Why Jaipur Is Rajasthan's Pink City of Ecommerce Opportunity"
+          headline="What Jaipur Sells to the World"
           leadParagraphs={[
-            "Jaipur's ecommerce opportunity is unique in India: a city where the world's largest gemstone market, a UNESCO-recognised craft tradition, and a global tourism footprint combine to create extraordinary demand for authentic, heritage-backed products. Jaipur's brands have a story to tell that global buyers, from NRIs in the US to boutique buyers in Europe, will pay a premium for, if they can reach them through a fast, trustworthy store.",
-            "Jaipur's D2C transitions are accelerating across its artisan economy. Johari Bazaar gem traders are building international Shopify stores with dollar pricing and DHL/FedEx international shipping. Sanganer block printers are launching D2C stores with Instagram Shop integration and WhatsApp-native product catalogues for bulk international buyers. Bapu Bazaar textile traders are transitioning from wholesale-only to D2C operations. And Makrana marble exporters are building B2B procurement portals with sample ordering and bulk price negotiation flows.",
-            "What makes Jaipur's ecommerce market distinctive is the authenticity premium. Jaipur products, when sold with proper provenance signals, quality photography, and a seamless checkout experience, command 3–5x the price of mass-market equivalents. FactoryJet builds these trust signals (product story, certification display, artisan credentials, international shipping clarity) into every Jaipur store from day one.",
+            "Jaipur is one of the world's best-known centres for coloured gemstones, and Johari Bazaar and the old city workshops cut, set and trade emeralds and other stones for buyers at home and abroad. Silver and kundan jewellery sell alongside them. Online, this trade needs certificates, close-up video and insured shipping before a buyer will pay.",
+            "The city's textile crafts are just as famous. Sanganer and Bagru print fabric by hand with wooden blocks, and leheriya and bandhej dyeing are sold in Bapu Bazaar next to mojaris and quilts. Blue pottery, carpets and dhurries, and marble work from Makrana round out a craft economy that already ships to boutiques in Europe, the US and Australia, often through email and spreadsheets.",
+            'That is the opportunity. A Jaipur maker who moves wholesale orders into a portal and adds a retail store with global checkout can reach buyers directly. Tourists who visited once can reorder from home. Festive peaks around Teej, Diwali and wedding season drive domestic orders. We build for both markets and keep the store fast on a phone.',
           ]}
           stats={[
             {
@@ -631,50 +608,50 @@ export default function JaipurEcommercePage() {
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="JAIPUR × ECOMMERCE"
-          headline="Ecommerce Development for Jaipur's Key Commerce Verticals"
-          lead="From Johari Bazaar gem traders to Sanganer block printers to Makrana marble exporters , and Jaipur's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."
+          headline="Jaipur Sectors We Build For"
+          lead="From Johari Bazaar gem dealers to Bagru printers and Makrana marble carvers, these six sectors cover most of the Jaipur work we scope."
           sectors={[
             {
               name: 'Gems & Jewellery',
               description:
-                "Jaipur is the world's largest gemstone cutting and polishing centre. Gem jewellery ecommerce needs high-trust product photography, COD with insured shipping, international shipping with customs, and B2B gem trading portals.",
+                'Gemstone and silver jewellers need certificate display, carat and cut details, close-up video, insured shipping and a login-only catalogue for trade buyers.',
               example:
-                'Gemstone jewellery brands, B2B gem exporters, silver jewellery D2C labels.',
+                'Emerald and coloured stone dealers, silver and kundan jewellers, Sitapura jewellery exporters.',
             },
             {
-              name: 'Handicrafts & Blue Pottery',
+              name: 'Block Print & Textiles',
               description:
-                "Jaipur's UNESCO-recognised handicraft tradition (block printing, blue pottery, leheriya, bandhej) is finding global buyers online. Artisan stores with international shipping, NRI targeting, and premium product photography.",
+                'Sanganer and Bagru printers sell bedsheets, quilts, kurtas and fabric by the metre. Stores need colour variation notes, fabric care, size charts and wholesale ordering.',
               example:
-                'Block print brands, blue pottery D2C labels, Rajasthani craft cooperatives.',
+                'Block print studios, quilt and bedding brands, leheriya and bandhej sellers.',
             },
             {
-              name: 'Textiles & Ethnic Wear',
+              name: 'Blue Pottery & Home Decor',
               description:
-                "Jaipur's Bapu Bazaar and Johari Bazaar are national centres for Rajasthani textiles and ethnic wear. Ethnic wear ecommerce with regional language support, COD flows, and WhatsApp catalogue commerce.",
+                'Fragile, hand-made goods need careful product photos, breakage-safe packaging rules, gift messages and clear delivery dates.',
               example:
-                'Ethnic wear D2C brands, Rajasthani fabric labels, bridal lehenga companies.',
+                'Blue pottery studios, home decor brands, carpet and dhurrie makers.',
             },
             {
-              name: 'Tourism & Lifestyle Products',
+              name: 'Mojaris & Fashion',
               description:
-                "Jaipur's global tourism draws buyers for premium Rajasthani lifestyle products: miniature paintings, marble artefacts, camel leather goods. Tourism product ecommerce with international shipping and currency conversion.",
+                'Bapu Bazaar mojaris and Rajasthani fashion sell to brides, tourists and gift buyers. Stores need size help for hand-made footwear and exchange flows.',
               example:
-                'Heritage craft brands, miniature painting companies, Rajasthani décor labels.',
+                'Mojari makers, Rajasthani ethnic wear labels, bridal accessory sellers.',
             },
             {
-              name: 'Marble & Stone Products',
+              name: 'Marble & Stone Craft',
               description:
-                "Makrana marble and Rajasthan's stone quarrying industry creates a large B2B and D2C market for marble products. B2B portals with sample ordering, bulk pricing, and export documentation.",
+                'Makrana marble and stone craft sells to homes, temples and designers. Stores need custom size requests, quote forms, freight options and export invoices.',
               example:
-                'Marble exporters, stone product manufacturers, home décor companies.',
+                'Marble idol and inlay makers, stone furniture brands, architectural stone suppliers.',
             },
             {
-              name: 'Food & Agri Products',
+              name: 'Rajasthani Food & Spices',
               description:
-                "Rajasthan's agricultural produce (spices, pulses, organic grains) is a major export and D2C opportunity. FSSAI-compliant product pages, export B2B portals, and subscription food boxes.",
+                'Spices, pickles and sweets ship across India and to the diaspora. Stores need FSSAI details, shelf-life notes and festival gift boxes.',
               example:
-                'Spice brands, organic grain D2C labels, Rajasthani food gift companies.',
+                'Spice and masala brands, pickle makers, Rajasthani sweet and namkeen shops.',
             },
           ]}
         />
@@ -711,14 +688,14 @@ export default function JaipurEcommercePage() {
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What founders say after we build their store"
+          headline="What founders say once their store goes live"
         />
 
         {/* ── 12. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Everything Jaipur Founders Ask Before They Sign"
-          lead="The questions we answer on every Jaipur ecommerce discovery call, answered here, without the runaround."
+          headline="What Jaipur Makers Ask Before They Sign"
+          lead="Answers to the questions Jaipur jewellers, printers and exporters ask most, from overseas payments to wholesale minimums and GST."
           categories={JAIPUR_ECOM_FAQ_CATEGORIES}
           items={JAIPUR_ECOM_FAQ_ITEMS}
         />
@@ -727,11 +704,11 @@ export default function JaipurEcommercePage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO LAUNCH"
-          headline="Your Jaipur Ecommerce Store. Live in 7 Days."
-          sub="Join 500+ brands across India, the US, the UK and the UAE who chose FactoryJet. We will scope your build, recommend the right platform, and deliver a Razorpay-integrated, GST-compliant, Lighthouse 90+ store in 7 business days. Free strategy call, no commitment required."
+          headline="Your Jaipur Store, Live in 7 Days"
+          sub="FactoryJet has worked with 500+ businesses across India, the US, the UK and the UAE. Tell us what you make and where your buyers are. We will recommend a platform, put the price per phase in writing and show you a working draft before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price. 7-day delivery. Razorpay + GST + Shiprocket. Your codebase delivered in full on launch day."
+          objectionHandler="Fixed price per phase. 7-day delivery. UPI, COD and global checkout. The code and every account belong to you."
         />
 
       </main>

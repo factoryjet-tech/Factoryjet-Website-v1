@@ -27,7 +27,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Ecommerce Development in Bangalore | FactoryJet',
   description:
-    'Shopify & WooCommerce stores for Bangalore brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery.',
+    'Ecommerce development in Bangalore for D2C startups, SP Road electronics sellers and Peenya suppliers. Shopify, headless, Razorpay and GST. 7-day delivery.',
   keywords: [
     'ecommerce development company bangalore',
     'ecommerce website development bangalore',
@@ -35,7 +35,6 @@ export const metadata: Metadata = {
     'woocommerce development bangalore',
     'online store development bangalore',
     'custom ecommerce development bangalore',
-    'affordable ecommerce development bangalore',
     'ecommerce website cost bangalore',
     'd2c website bangalore',
     'razorpay shopify bangalore',
@@ -50,7 +49,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Ecommerce Development Company in Bangalore | FactoryJet',
     description:
-      'Shopify, WooCommerce, D2C, and custom ecommerce stores for Bangalore businesses. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+      'Bangalore ecommerce builds: Shopify stores for Koramangala D2C brands, headless storefronts, B2B portals for Peenya makers. UPI, COD, GST. 7-day delivery.',
     url: 'https://factoryjet.com/services/ecommerce-development/bangalore',
     images: [
       {
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ecommerce Development Bangalore | FactoryJet',
     description:
-      'Shopify, WooCommerce & custom ecommerce for Bangalore brands. Razorpay + GST + Shiprocket.',
+      'Bangalore ecommerce: Shopify, headless and B2B builds with Razorpay, UPI and GST invoicing.',
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -93,7 +92,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -116,7 +115,7 @@ const serviceSchema = {
     '@id': 'https://www.wikidata.org/wiki/Q1355', // Wikidata label: Bengaluru (capital of Karnataka, India)
   },
   description:
-    'Custom ecommerce development for Bangalore businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',
+    'Ecommerce development for Bangalore businesses: Shopify and headless stores for D2C startups, electronics catalogues with EMI, B2B portals for Peenya and Electronic City manufacturers, GST invoicing. Lighthouse 95+.',
 };
 
 const localBusinessSchema = {
@@ -127,7 +126,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/bangalore',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Bangalore businesses. Shopify, WooCommerce, and custom stores. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+    'Ecommerce development company serving Bengaluru startups, retailers and manufacturers. Shopify, WooCommerce, headless and B2B builds with Razorpay, UPI, COD and GST invoicing. 7-day delivery.',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Bangalore',
@@ -148,33 +147,33 @@ const localBusinessSchema = {
 const BANGALORE_ECOM_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery & Platform Recommendation',
+    title: 'Stack and Scope Call',
     description:
-      'We map your products, target audience, logistics requirements, and revenue model. Platform recommendation (Shopify, WooCommerce, or custom) is made here, before we scope or price anything.',
+      'We look at your catalogue size, growth plan, team and tools. A seed-stage D2C brand may get a Shopify theme. A brand with its own developers and heavy content may get a headless build. You get the reasoning in writing.',
   },
   {
     number: '02',
-    title: 'Figma Design & Mockup Approval',
+    title: 'Figma on Real Products',
     description:
-      'Custom Figma designs for your homepage, product pages, collection pages, and checkout. Mobile-first at 375px. India-specific UX: UPI placement, COD badge position, trust signals above the fold.',
+      'We design the home, listing, product and checkout screens with your own photos and prices, phone first. Spec tables, EMI badges and delivery-date messages are placed and approved here.',
   },
   {
     number: '03',
-    title: 'Development & Payment Integration',
+    title: 'Build and Wiring',
     description:
-      'Platform setup, theme or custom development, Razorpay / PayU integration, UPI configuration, GST auto-invoicing, Shiprocket wiring, and product catalogue import.',
+      'Theme or Next.js storefront, Razorpay with UPI, cards, wallets and EMI, COD rules, GST invoicing, courier APIs, analytics events and catalogue import from your sheet or old store.',
   },
   {
     number: '04',
-    title: 'QA & Lighthouse Audit',
+    title: 'Payment and Speed Tests',
     description:
-      'End-to-end testing of every payment method (UPI, cards, COD, wallets). Lighthouse 90+ on mobile before we ship. Core Web Vitals green: LCP under 2.5s, CLS below 0.1.',
+      'Test orders on every payment method, invoice and label checks, and Lighthouse runs on mobile for the key templates. We aim for 90+ and LCP under 2.5 seconds before launch.',
   },
   {
     number: '05',
-    title: 'Launch & Handover',
+    title: 'Go-Live and Repo Handover',
     description:
-      'Zero-downtime DNS switch. Sitemap submitted to Google Search Console. Full codebase delivered to your GitHub. 60-minute Zoom walkthrough. 30-day post-launch support window.',
+      'Domain switch with no downtime, sitemap submitted, repo and admin access handed to your team, and a walkthrough recorded for new hires. Defect cover runs for the period we agreed at the start.',
   },
 ];
 
@@ -191,149 +190,137 @@ const BANGALORE_ECOM_FAQ_CATEGORIES = [
 ];
 
 const BANGALORE_ECOM_FAQ_ITEMS = [
-
-  /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How long does it take to launch a Bangalore ecommerce store?',
+    question: 'How long does a Bangalore ecommerce build take?',
     answer:
-      'FactoryJet delivers standard Shopify and WooCommerce stores in 7 business days for Starter and Growth builds. Day 1 is a discovery call to finalise your catalogue, payment preferences, and logistics setup. Days 2–3 are Figma design and mockup approval. Days 3–5 are development and integration. Day 6 is QA and Lighthouse testing. Day 7 is launch. Custom platform and marketplace builds take longer, usually 8 to 16 weeks depending on scope.',
+      'A standard Shopify or WooCommerce store is live in 7 days once products, photos and gateway approval are with us. A custom theme takes 3 to 5 weeks. Subscriptions, B2B pricing or a migration from another platform take 5 to 8 weeks. A headless Next.js storefront takes 8 to 14 weeks.',
   },
   {
     category: 'pricing',
-    question: 'How much does ecommerce development cost in Bangalore?',
+    question: 'What does ecommerce development cost in Bangalore?',
     answer:
-      "FactoryJet ecommerce projects are fixed-price and scoped to your build. The main cost drivers are your platform (Shopify or WooCommerce vs a custom build), number of products, the payment and shipping integrations you need, and any custom features like subscriptions or B2B pricing. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts. The price is fixed and confirmed in writing, with no hourly billing and no scope creep.",
+      'It depends on the stack and the scope. The biggest swings come from headless versus theme builds, international payments, subscription logic and how many systems the store must talk to. We send a fixed written price after a short call, and it stays fixed for that phase.',
   },
   {
     category: 'pricing',
-    question: 'Do you offer payment plans for the development cost?',
+    question: 'How are payments split across the build?',
     answer:
-      'Yes. All plans can be split 50% upfront and 50% on launch day. Growth and Custom plans can be structured as 40-30-30 across the build. We accept NEFT, RTGS, UPI, and all major credit cards. No interest or fees are charged on installment plans; it is simply a split of the quoted fixed price.',
+      'By phase. A common split is storefront first, then subscriptions or a B2B portal. Each phase has its own written scope and price, and you approve each before work starts. NEFT, RTGS and UPI are all fine.',
   },
   {
     category: 'pricing',
-    question: 'What happens if my store is not ready in 7 days?',
+    question: 'Can we test a working version before signing anything?',
     answer:
-      'We have delivered on time for 97% of all builds. When a build does run over, the cause is almost always a delay in receiving product images, content, or payment gateway credentials, which we flag upfront in the onboarding checklist.',
-  },
-
-  /* ── Platform & Tech ── */
-  {
-    category: 'platform',
-    question: 'Which ecommerce platform is right for my Bangalore business?',
-    answer:
-      'Shopify is the best default for most Bangalore D2C and B2C brands: fast to launch, easy to manage, and natively supports Razorpay, PayU, and UPI. WooCommerce is the right choice when you are already on WordPress or need deep content-commerce integration (recipes, guides, editorial content). Custom Next.js platforms make sense for high-volume D2C brands, B2B wholesale portals with complex pricing rules, or multi-vendor marketplaces where Shopify and WooCommerce hit their ceiling. FactoryJet makes this recommendation during discovery at no charge.',
+      'Yes. We set up a draft using some of your real products and take you through browsing, cart and payment. Your team can click through it on their own phones. If it is not right, there is no contract and no bill.',
   },
   {
     category: 'platform',
-    question: 'Do you set up Razorpay, UPI, and Cash on Delivery for all stores?',
+    question: 'Should a funded D2C brand go headless?',
     answer:
-      'Yes, all India payment methods are configured in every plan. Razorpay is our primary gateway and covers UPI, net banking, cards, wallets (Paytm, PhonePe, Mobikwik), EMI on major cards, and BNPL (LazyPay, Simpl). We also integrate PayU, CCAvenue, or PhonePe Business if you have an existing relationship. Cash on Delivery is configured with prepaid-to-COD ratios you control. Razorpay\'s fraud detection rules are configured at launch to keep COD abuse low.',
+      'Only when there is a reason. Headless, with a Next.js front end on top of Shopify, makes sense when you publish a lot of content, run many campaigns or have your own developers. For most early brands a fast Shopify theme sells just as well and costs less to run. We tell you which, and why.',
   },
   {
     category: 'platform',
-    question: 'Can you connect my Bangalore store to Amazon India and Flipkart?',
+    question: 'Can my store take payments from customers abroad?',
     answer:
-      'Yes, this is included in the Growth plan and above. We use Cedcommerce or Unicommerce to sync your product catalogue, pricing, and inventory between your Shopify or WooCommerce store and your Amazon India and Flipkart seller accounts. Orders from all channels flow into one dashboard. When stock sells on Amazon, it is deducted from your store automatically, preventing overselling.',
+      'Yes. Razorpay supports international cards for approved accounts, and Shopify Markets shows prices in local currencies. For brands selling heavily to the US or Europe, we can add a second gateway such as Stripe or PayPal. Duties and delivery times are shown before payment.',
   },
   {
     category: 'platform',
-    question: 'Can you set up WhatsApp Commerce and automated order flows?',
+    question: 'Do you set up UPI, cards and COD?',
     answer:
-      'Yes. We integrate WhatsApp Business API via Interakt, Wati, or AiSensy to send order confirmations, shipping updates, and abandoned cart messages on WhatsApp, where open rates are 85%+ versus email\'s 20%. We also build conversational product discovery chatbots where customers browse and order directly in WhatsApp, with Razorpay payment links sent in-chat. This is included in Growth and Custom plans.',
-  },
-
-  /* ── India-Specific ── */
-  {
-    category: 'india',
-    question: 'Do your stores support GST invoicing and compliance?',
-    answer:
-      'Yes, GST compliance is built into every Indian ecommerce store we deliver. This includes auto-generated GST invoices at order placement, GSTIN capture at checkout for B2B buyers, HSN code mapping per product category, state-wise IGST/CGST/SGST rate configuration, and monthly GSTR-1 export compatibility. We integrate with Tally, Zoho Books, or custom accounting exports on request.',
+      'Yes, on every build. Razorpay is our usual choice and covers UPI, cards, net banking, wallets and EMI in one account. PayU, Cashfree or PhonePe work too if you already use them. COD can be limited by order value or pincode.',
   },
   {
-    category: 'india',
-    question: 'Which logistics partner should I use for a Bangalore store?',
+    category: 'platform',
+    question: 'Can you sync my store with Amazon, Flipkart, Myntra and Nykaa?',
     answer:
-      'Shiprocket is our default recommendation for most Bangalore ecommerce stores. It gives you access to Delhivery, Bluedart, XpressBees, Ekart, and Shadowfax under one integration, with automated NDR workflows, returns management, and weight dispute resolution. Delhivery directly via API is better for high-volume brands (10,000+ shipments per month) needing custom SLAs. For hyperlocal same-day delivery in Bangalore, Shadowfax and Porter are the right fit.',
+      'Yes. We connect the store to your seller accounts through a tool such as Unicommerce, EasyEcom or CedCommerce. Stock and prices stay aligned, and orders from every channel show up in one place, which stops overselling during sale weeks.',
   },
   {
     category: 'india',
-    question: 'Can you add Kannada or Hindi language support to my store?',
+    question: 'How is GST set up on a Bangalore store?',
     answer:
-      'Yes, multi-language support is available for all platforms. For Shopify we use the Translate & Adapt app or Langify for regional language storefronts. For WooCommerce we implement WPML or TranslatePress. For custom platforms we build the i18n layer natively. Language-switched URLs follow SEO-safe hreflang patterns. We have built stores in Hindi, Kannada, Tamil, Gujarati, and Bengali.',
+      'Every order gets an invoice with HSN codes and the right tax split: CGST and SGST for buyers in Karnataka, IGST for buyers elsewhere. Business customers can add a GSTIN at checkout. Exports match GSTR-1, and invoices can flow into Tally or Zoho Books.',
   },
   {
     category: 'india',
-    question: 'How do you handle cart abandonment for Indian shoppers?',
+    question: 'Which couriers work for a store shipping from Bengaluru?',
     answer:
-      'India has a 78% cart abandonment rate, higher than global averages because COD hesitancy and payment UX friction are common. We build a 3-touch recovery sequence: 1) WhatsApp message within 30 minutes with a direct Razorpay payment link, 2) SMS at 2 hours with a small discount, 3) email at 24 hours with a trust signal (reviews, return policy). Stores with this sequence recover 18–22% of abandoned carts on average.',
-  },
-
-  /* ── Speed & SEO ── */
-  {
-    category: 'seo',
-    question: 'Will my Bangalore ecommerce store rank on Google?',
-    answer:
-      'Every store we build includes technical SEO from day one: Product and BreadcrumbList schema for Google Shopping eligibility, optimised title and meta templates, canonical URLs to prevent duplicate content (a common Shopify and WooCommerce issue), GST price display, Core Web Vitals green on mobile, and sitemap submission to Google Search Console. LocalBusiness schema with Bangalore geo-coordinates is included for local search visibility.',
+      'Shiprocket covers most needs: one panel for Delhivery, Blue Dart, Xpressbees, Ekart and more, with returns and failed-delivery follow-up. For same-day delivery inside the city, Porter, Borzo or Shadowfax fit food, gifts and urgent parts. Big shippers often sign a direct Delhivery contract later.',
   },
   {
-    category: 'seo',
-    question: 'Do you guarantee a Lighthouse score?',
+    category: 'india',
+    question: 'Can my store be in Kannada?',
     answer:
-      'Yes, Lighthouse 90+ on Performance, Accessibility, Best Practices, and SEO is a contractual commitment on all builds. We achieve this by serving WebP images from CDN, deferring non-critical JavaScript, inlining critical CSS, using next-gen fonts with preload, and hosting on Cloudflare Pages with assets served from the nearest edge node to your customer. We QA the score before handover and fix any regression post-launch within 48 hours at no charge.',
+      'Yes. We can run a Kannada version next to English, each on its own URL so search engines index both. We check Kannada script on low-cost Android phones and suggest a person writes the product text, because machine translation mangles sizes and ingredients.',
   },
   {
-    category: 'seo',
-    question: 'What are Core Web Vitals and why do they matter for my store?',
+    category: 'india',
+    question: 'How can a D2C store compete with quick-commerce apps?',
     answer:
-      'Core Web Vitals are Google\'s three page experience signals: LCP (Largest Contentful Paint, how fast the main content loads, target under 2.5s), INP (Interaction to Next Paint, how fast the page responds to clicks, target under 200ms), and CLS (Cumulative Layout Shift, whether elements jump around, target below 0.1). Google confirmed these are a ranking signal. More importantly, a 1-second delay in mobile load time reduces conversion rates by 20%. For a high-revenue store, that adds up to significant lost revenue every second of slowness.',
+      'By being clear about speed and better at everything else. Show the delivery date by pincode on the product page, offer same-day delivery inside Bengaluru where it makes sense, and give reasons to buy direct: bundles, subscriptions, full range and better support.',
   },
   {
     category: 'seo',
-    question: 'Can you optimise an existing Bangalore store that is already slow?',
+    question: 'Will my Bangalore store rank on Google?',
     answer:
-      'Yes, we offer a standalone Speed & SEO Audit + Fix package. We diagnose all Lighthouse failures, compress and convert your image library to WebP, remove render-blocking resources, fix CLS issues from unloaded fonts or images, and migrate your hosting to Cloudflare if needed. Most stores see a 30–60 point Lighthouse improvement within one sprint. We issue a written commitment: if we do not reach Lighthouse 90+ overall, we continue working at no additional charge.',
-  },
-
-  /* ── Process & Ownership ── */
-  {
-    category: 'trust',
-    question: 'Do I own my store and all the code after launch?',
-    answer:
-      '100% yes. On launch day we transfer full ownership of the store account, the theme code, all integrations, and every custom component we built. You get GitHub repository access for all code assets and full admin credentials for every tool. We do not hold your store with ongoing fees. You can take the store to any developer after handover; we encourage it. What we hope is that you come back to us for the next phase.',
+      'Good structure gives it a fair chance. We add product and breadcrumb schema, clean URLs and titles, canonical tags and a sitemap from launch. Experience stores in Indiranagar or Jayanagar get linked to their Google Business Profiles. Content answering buyer questions does the rest over time.',
   },
   {
-    category: 'trust',
-    question: 'What does the handover process look like?',
+    category: 'seo',
+    question: 'Does a headless store hurt SEO?',
     answer:
-      'Day 7 is handover day. We schedule a 60–90 minute Zoom walkthrough covering: admin panel navigation, adding and editing products, processing orders, managing discounts, viewing analytics, and handling basic shipping issues. We deliver a handover document with all credentials, API keys, support contacts for each integration, and a first-30-days checklist. Post-handover, we are available on WhatsApp for 30 days for quick questions at no charge.',
+      'Not if it is built right. We render product and collection pages on the server, keep URLs stable, ship structured data and handle redirects from the old store. Done badly, headless can hide content from Google, so we check rendering with Search Console before launch.',
+  },
+  {
+    category: 'seo',
+    question: 'How do you test speed before launch?',
+    answer:
+      'We run Lighthouse on mobile for the home, listing, product and cart pages and send you the report. The aim is 90+, with LCP below 2.5 seconds and minimal layout shift. Images, third-party scripts and app bloat are where most of the work goes.',
+  },
+  {
+    category: 'seo',
+    question: 'Our current store is slow. Can you fix it without a rebuild?',
+    answer:
+      'Often, yes. We audit the slow pages, list each cause, and price the fixes as a fixed package. Common causes are oversized images, apps loading scripts everywhere, heavy fonts and chat widgets. If a rebuild is the cheaper route, we say so.',
   },
   {
     category: 'trust',
-    question: 'Do you offer post-launch maintenance for Bangalore stores?',
+    question: 'Who owns the code and accounts?',
     answer:
-      'Yes. Our Care Plan covers plugin and platform updates, a monthly Lighthouse audit and performance fixes, uptime monitoring, a few hours of content or feature changes each month, and priority support with a 4-hour response SLA. Our Growth Retainer adds monthly A/B tests, conversion optimization, and new campaign landing pages. Both are month-to-month with no lock-in, and we share the exact monthly price on your free call.',
+      "Your company does. The store, domain, payment and courier accounts are registered to you, and the code lives in your GitHub organisation. Hosting and app costs can be billed to your own cards at cost. Switching developers later needs nobody's permission.",
   },
   {
     category: 'trust',
-    question: 'Can I manage and update the store myself after launch?',
+    question: 'Can our in-house developers keep building after handover?',
     answer:
-      'Absolutely, self-management is the goal. For Shopify stores, adding products, updating prices, creating discount codes, and reviewing orders requires zero coding knowledge. WooCommerce is slightly more technical but we set up a simplified admin workflow for non-technical founders. We build a short video library covering the 10 most common tasks your team will perform, so you are not dependent on a developer for day-to-day operations.',
+      'Yes. The repo is yours, with a README covering setup, environment variables and deploy steps. We walk your developers through the structure on handover day, and they can ship changes the next morning.',
   },
-
-  // Money-query coverage, added 2026-06-11
+  {
+    category: 'trust',
+    question: 'What help do we get once the store is live?',
+    answer:
+      'Any defect in our work is fixed inside the build price during a cover period agreed at the start. After that, you choose. Changes are quoted one by one and approved before we begin, and there is no monthly minimum.',
+  },
+  {
+    category: 'trust',
+    question: 'Can non-technical staff run the store day to day?',
+    answer:
+      'Yes. On Shopify, adding products, editing prices, creating offers and handling orders need no code. We set up staff accounts with the right permissions and record short videos of the tasks your team does most.',
+  },
   {
     category: 'pricing',
     question: 'Who is the best ecommerce development company in Bangalore?',
     answer:
-      'For D2C brands and small businesses, FactoryJet makes a strong case: fixed written prices, senior engineers, and stores that launch in weeks. Any ecommerce website development company in Bangalore, or any ecommerce solution company in Bangalore, should pass three checks: who writes the code, is the price fixed, and do you own the store at the end. That is how to find the best ecommerce website development company in Bangalore and the best ecommerce solution company in Bangalore for your catalog.',
+      'The best ecommerce website development company in Bangalore for you is one that names the engineer writing your code, fixes the price in writing and hands you the repo. FactoryJet does all three and shows a draft before you sign. Ask the same of every ecommerce solution company in Bangalore you meet.',
   },
   {
     category: 'pricing',
-    question: 'Should I hire ecommerce developer in Bangalore or use an agency?',
+    question: 'Should I hire an ecommerce developer in Bangalore or an agency?',
     answer:
-      'One developer can build a basic store, but a real shop needs design, payments, shipping, and SEO together. A small senior team covers all of it at a fixed price. If you do hire ecommerce developer in Bangalore directly, check store speed scores from their past work first.',
+      'Hiring works if you plan a long product roadmap and can manage engineers. For a launch, one hire rarely covers design, payments, logistics, tax and search together. A small senior team does it at a fixed price. If you hire an ecommerce developer in Bangalore, ask to see two stores they shipped, live, on your phone.',
   },
 ];
 
@@ -411,8 +398,8 @@ export default function BangaloreEcommercePage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_bangalore_hero" />}
           eyebrow="ECOMMERCE DEVELOPMENT · BANGALORE"
-          headline="Bangalore's Most Trusted Ecommerce Agency: Store Live in 7 Days"
-          lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Bangalore brands: Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. 7-day delivery."
+          headline="Ecommerce Development in Bangalore: Store Live in 7 Days"
+          lead="FactoryJet builds Shopify and headless stores for Bengaluru D2C startups, EMI-ready catalogues for electronics sellers, and trade portals for Peenya manufacturers. UPI first at checkout, GST on every invoice, Lighthouse 90+ on mobile. 7-day delivery."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery',
@@ -428,14 +415,14 @@ export default function BangaloreEcommercePage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+          description="Stores and B2B portals for founders in India, the US, the UK and the UAE. Bengaluru teams get a fixed price per phase, a repo they own from day one, and 7-day delivery on standard stores."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="ECOMMERCE DEVELOPMENT · BANGALORE"
-          headline="The Right Platform for Every Bangalore Business Model"
-          lead="Bangalore's ecommerce market spans D2C tech brands in Whitefield, B2B manufacturers in Electronic City, fashion labels in Koramangala, and health brands in Indiranagar. Each needs a different platform strategy. FactoryJet recommends the right one before we quote."
+          headline="Picking a Platform for a Bangalore Brand"
+          lead="A funded Koramangala skincare brand, an SP Road dealer listing thousands of components and a Peenya machine shop selling spares do not belong on the same stack. We look at your catalogue, growth plan and team before we name a platform or a price."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -460,12 +447,7 @@ export default function BangaloreEcommercePage() {
               </div>
 
               <p>
-                The average Indian ecommerce store converts at 0.8–1.2%. The top quartile converts at
-                3–5%. The difference is not the product; it is the store. Slow load times on 4G
-                networks, a UPI checkout that requires too many steps, product pages that bury the buy
-                button below three paragraphs of description, and a mobile layout that was clearly
-                designed on a desktop. These are engineering and design problems, not marketing
-                problems.
+                Bengaluru buyers order groceries in minutes and expect the same speed from every app on their phone. A store that takes four seconds to show a product photo loses them. So does a checkout that asks for an address twice or hides the UPI option below the cards. These are build decisions, made long before any ad goes live.
               </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
@@ -499,17 +481,12 @@ export default function BangaloreEcommercePage() {
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  A great ecommerce store is an engineering project measured in revenue, not a
-                  design project measured in compliments.
+                  Speed on a cheap phone over 4G is the first feature a Bengaluru store needs.
                 </p>
               </div>
 
               <p>
-                FactoryJet designs every store around Indian consumer behaviour: where the UPI button
-                goes, when the WhatsApp chat trigger fires, how the mobile product page stacks on a
-                375px screen, what trust signals appear above the fold, and how EMI is surfaced at
-                checkout. We have built 120+ Shopify stores and hundreds of WooCommerce and custom
-                builds for Indian brands. That data informs every decision we make on the next one.
+                For funded D2C brands we often suggest a headless storefront on Next.js with Shopify behind it, so the marketing team can ship pages fast while orders stay on a stable backend. For simpler catalogues, a well-built Shopify theme does the job at a lower cost. Electronics sellers get spec filters and EMI on the product page. Trade buyers get logins and price lists.
               </p>
             </>
           }
@@ -559,7 +536,7 @@ export default function BangaloreEcommercePage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  We recommend the right platform. Not the most expensive one.
+                  The platform should match your stage, not your ambition deck.
                 </p>
               </div>
             </div>
@@ -569,23 +546,23 @@ export default function BangaloreEcommercePage() {
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Bangalore Brands Choose FactoryJet Over Local Agencies"
-          lead="Bangalore ecommerce agencies often charge several times more for a comparable project and take 10 to 20 weeks to deliver, usually without telling you the price upfront. FactoryJet gives you a fixed quote before you speak to us, puts 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. The price is fixed and confirmed in writing, and the codebase is yours to keep."
+          headline="Why Bengaluru Founders Pick FactoryJet"
+          lead="Startup founders in Bengaluru usually have a launch date tied to a funding round, a festival sale or an influencer drop. We fix the price per phase in writing, put 7-day delivery for standard stores into the agreement, and show you a working draft on your own products before you commit."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing.',
-              body: "Bangalore's market moves fast. Waiting 16 weeks for an agency to deliver a store you briefed in April is not a plan; it is a liability. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the delivery date written into the project agreement. We have delivered on time for 97% of all builds.",
+              body: 'A standard store goes live in 7 days once your products, photos and gateway approval are ready, and that date is written into the agreement. We have delivered on time on 97% of builds. When one slipped, it was usually waiting on assets from the client.',
             },
             {
               icon: '📱',
-              title: "India's ecommerce is 65% mobile. Most stores are not built for it.",
-              body: 'Most Bangalore ecommerce stores are designed on a desktop and adapted down. The result: 0.4% mobile conversion rates on template stores versus 2.1% on properly designed custom builds. FactoryJet designs every store mobile-first at 375px: tap targets, product image sizing, checkout flow, and UPI placement all optimised for the phone your customer actually uses.',
+              title: 'Designed for the 10-minute delivery generation.',
+              body: 'Bengaluru shoppers compare every store with the fastest app on their phone. We design at 375px first, keep scripts lean, show the delivery date by pincode, and put UPI where the thumb lands.',
             },
             {
               icon: '📋',
               title: 'Fixed price. Agreed before we start.',
-              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your store running.",
+              body: 'Every phase has a written scope and a fixed price before work begins. No hourly billing, no change in price because a sprint ran long. Support later is optional and quoted per change.',
             },
           ]}
         />
@@ -593,20 +570,20 @@ export default function BangaloreEcommercePage() {
         {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Platform Decision to Live Store in 7 Days"
-          lead="Platform recommendation before we scope. Design approval before we build. Full payment and logistics testing before we launch."
+          headline="From Brief to Launch for a Bengaluru Store"
+          lead="Stack decision first. Design on your real products second. Payments, couriers and speed tested before the domain switches."
           stages={BANGALORE_ECOM_STAGES}
-          closingNote="5 STAGES · 7 DAYS · RAZORPAY + GST + SHIPROCKET · LIGHTHOUSE 90+ · ZERO-DOWNTIME LAUNCH"
+          closingNote="5 STAGES · STACK FIRST · UPI + GST + COURIERS · LIGHTHOUSE 90+ · REPO IN YOUR NAME"
         />
 
         {/* ── 7. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="BANGALORE ECOMMERCE MARKET"
-          headline="Why Bangalore Is India's Most Tech-Forward Ecommerce Market"
+          headline="How Bengaluru Buys and Sells Online"
           leadParagraphs={[
-            "Bangalore drives more technology-native D2C ecommerce than any other Indian city. The city's 13,000+ startups, 500+ multinational tech companies, and 1.5 million tech workers create the most demanding and digitally sophisticated consumer base in India, one that expects sub-2-second load times, seamless UPI checkout, and post-purchase WhatsApp updates as a baseline, not a differentiator.",
-            "Bangalore's ecommerce verticals reflect the city's diversity. Koramangala and HSR Layout D2C brands are running sophisticated Shopify Plus operations with international shipping and multi-currency pricing. Electronic City manufacturers are building B2B procurement portals with tiered dealer pricing and GST B2B invoicing. Health and wellness brands in Indiranagar are scaling subscription commerce with AI-driven personalisation and cold-chain logistics. And fashion brands from UB City and Sadashivanagar are targeting premium buyers across India with mobile-first Shopify stores and Instagram Shop integrations.",
-            "The brands winning in Bangalore's ecommerce market share one trait: they treat their store as an engineering project, not a design project. Fast load times on Bangalore's 5G-forward mobile users, frictionless UPI and card checkout, and a mobile product page built for a 375px screen. These are the decisions that separate high-performing stores from the rest. FactoryJet has built for Bangalore's most demanding verticals and applies that experience to every new build.",
+            'Bengaluru is where a large share of Indian D2C brands and commerce apps are started, run and staffed. Koramangala, HSR Layout and Indiranagar are full of young brands in skincare, coffee, apparel and snacks. Their founders and buyers often work in tech, and they judge a store the way they judge software: by speed, clarity and how few taps it takes to pay.',
+            'Beyond the startup belt sits an older trading and industrial city. SP Road and the Avenue Road area sell electronics, components and hardware to buyers across South India. Peenya and Electronic City house machine shops, fabricators and component makers who sell to OEMs and distributors. Many are moving from phone and email orders to a portal where trade buyers log in and reorder.',
+            'Then there is heritage retail: Mysore silk sarees, Channapatna wooden toys, and coffee from the estates of Chikkamagaluru and Coorg, sold to buyers in India and abroad. These stores need strong photos, origin stories, international shipping and Kannada where local buyers expect it. We build for all three groups, and the build looks different for each.',
           ]}
           stats={[
             {
@@ -633,50 +610,50 @@ export default function BangaloreEcommercePage() {
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="BANGALORE × ECOMMERCE"
-          headline="Ecommerce Development for Bangalore's Key Commerce Verticals"
-          lead="From Whitefield tech D2C brands to Koramangala fashion labels to Electronic City B2B manufacturers , and Bangalore's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."
+          headline="Bangalore Sectors We Build For"
+          lead="From Koramangala skincare startups to Peenya fabricators, these six sectors make up most of the ecommerce briefs we see from Bengaluru."
           sectors={[
             {
-              name: 'Tech D2C & SaaS Products',
+              name: 'Tech D2C & Gadgets',
               description:
-                "Bangalore's startup ecosystem produces India's most sophisticated D2C brands: premium electronics, IoT devices, software tools, and subscription SaaS products. These stores need tiered pricing, licence key delivery, subscription management, and integration with Stripe/Razorpay for international billing.",
+                'Audio, wearables and smart home brands need comparison tables, EMI on the product page, warranty registration and fast replacement flows.',
               example:
-                'D2C electronics brands in Whitefield, SaaS product companies selling physical merchandise, IoT device manufacturers.',
+                'Wearable and audio brands, smart home device makers, phone accessory labels.',
             },
             {
               name: 'Fashion & Apparel',
               description:
-                'Koramangala and Indiranagar house Bangalore\'s premium independent fashion scene. D2C fashion needs AI size guides, try-at-home flows, Instagram Shop and Myntra integration, and WhatsApp-native lookbooks.',
+                'Indiranagar and Koramangala labels sell through Instagram first. They need size guides, exchange flows, drops with limited stock and Myntra sync.',
               example:
-                'Premium lifestyle brands in Indiranagar, ethnic wear D2C brands, sportswear startups.',
+                'Streetwear and athleisure labels, sustainable fashion brands, ethnic wear studios.',
             },
             {
               name: 'Electronics & Components',
               description:
-                'SP Road Bangalore and Electronic City are supply hubs for consumer electronics and components. Electronics ecommerce needs EMI at product page level, warranty registration, and complex specification filtering for technical buyers.',
+                'SP Road dealers list thousands of parts. They need spec filters, bulk pricing, GST invoices for businesses and stock synced from a billing system.',
               example:
-                'Electronics retailers, component suppliers for hardware startups, IT peripherals distributors.',
+                'Component distributors, IT peripherals sellers, CCTV and networking dealers.',
             },
             {
-              name: 'Health, Wellness & Nutrition',
+              name: 'Coffee, Food & Wellness',
               description:
-                "Bangalore's fitness-conscious tech population drives India's largest D2C health market. Health stores need subscription replenishment, FSSAI-compliant product pages, cold-chain logistics integration, and personalised bundle builders.",
+                'Estate coffee, millet snacks and supplements sell on subscription. These stores need FSSAI details, roast or batch dates and UPI AutoPay renewals.',
               example:
-                'Supplement brands, ayurvedic D2C companies, organic food brands targeting Bangalore\'s premium segment.',
+                'Specialty coffee roasters, millet and health snack brands, supplement makers.',
             },
             {
-              name: 'Home & Interior',
+              name: 'Silk, Toys & Heritage Crafts',
               description:
-                'Indiranagar and Koramangala premium interior market drives high-AOV home décor ecommerce. These stores need AR product preview, room visualiser integrations, and white-glove delivery scheduling.',
+                'Mysore silk and Channapatna toys sell well to NRIs and gift buyers. Stores need origin details, careful photography and international checkout.',
               example:
-                'Premium home décor brands, furniture D2C companies, artisan lifestyle brands.',
+                'Silk saree sellers, Channapatna toy makers, handloom and craft cooperatives.',
             },
             {
               name: 'B2B Manufacturing & Industrial',
               description:
-                'Electronic City and Peenya Industrial Area house thousands of B2B manufacturers going digital. B2B portals need tiered dealer pricing, GST B2B invoicing, bulk order flows, and buyer-specific catalogues.',
+                'Peenya and Electronic City makers need trade portals: buyer logins, price lists by account, RFQ forms, bulk orders and GST B2B invoices.',
               example:
-                'Industrial component manufacturers, MSME exporters, B2B chemical and raw material suppliers.',
+                'Machine shops, sheet metal fabricators, industrial component suppliers.',
             },
           ]}
         />
@@ -713,14 +690,14 @@ export default function BangaloreEcommercePage() {
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What founders say after we build their store"
+          headline="What founders say after we ship their store"
         />
 
         {/* ── 12. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Everything Bangalore Founders Ask Before They Sign"
-          lead="The questions we answer on every Bangalore ecommerce discovery call, answered here, without the runaround."
+          headline="What Bengaluru Founders Ask Before They Sign"
+          lead="The questions Bengaluru founders and operators ask us first, about stack, speed, payments, GST and code ownership."
           categories={BANGALORE_ECOM_FAQ_CATEGORIES}
           items={BANGALORE_ECOM_FAQ_ITEMS}
         />
@@ -729,11 +706,11 @@ export default function BangaloreEcommercePage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO LAUNCH"
-          headline="Your Bangalore Ecommerce Store. Live in 7 Days."
-          sub="Join 500+ brands across India, the US, the UK and the UAE who chose FactoryJet. We will scope your build, recommend the right platform, and deliver a Razorpay-integrated, GST-compliant, Lighthouse 90+ store in 7 business days. Free strategy call, no commitment required."
+          headline="Your Bangalore Store, Live in 7 Days"
+          sub="FactoryJet has worked with 500+ businesses in India, the US, the UK and the UAE. Send us your catalogue and launch date, and we will propose a stack, price each phase in writing and show you a draft of your store before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price. 7-day delivery. Razorpay + GST + Shiprocket. Your codebase delivered in full on launch day."
+          objectionHandler="Fixed price per phase. 7-day delivery. UPI, GST and couriers wired in. Repo in your name from day one."
         />
 
       </main>

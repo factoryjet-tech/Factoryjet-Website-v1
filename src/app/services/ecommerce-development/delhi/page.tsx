@@ -27,7 +27,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Ecommerce Development in Delhi | FactoryJet',
   description:
-    'Shopify & WooCommerce stores for Delhi brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery.',
+    'Ecommerce development in Delhi NCR for Chandni Chowk and Karol Bagh traders, Sadar Bazaar wholesalers and D2C brands. Shopify, UPI, COD, GST. 7-day delivery.',
   keywords: [
     'ecommerce development company delhi',
     'ecommerce website development delhi',
@@ -35,7 +35,6 @@ export const metadata: Metadata = {
     'woocommerce development delhi',
     'online store development delhi',
     'custom ecommerce development delhi',
-    'affordable ecommerce development delhi',
     'ecommerce website cost delhi',
     'd2c website delhi',
     'razorpay shopify delhi',
@@ -50,7 +49,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Ecommerce Development Company in Delhi | FactoryJet',
     description:
-      'Shopify, WooCommerce, D2C, and custom ecommerce stores for Delhi businesses. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+      'Delhi NCR ecommerce: bridal and jewellery stores, wholesale ordering for Sadar Bazaar and Gandhi Nagar traders, D2C brands in Gurugram, Noida. 7-day delivery.',
     url: 'https://factoryjet.com/services/ecommerce-development/delhi',
     images: [
       {
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ecommerce Development Delhi | FactoryJet',
     description:
-      'Shopify, WooCommerce & custom ecommerce for Delhi brands. Razorpay + GST + Shiprocket.',
+      'Delhi NCR ecommerce: retail, wholesale and D2C stores with UPI, COD and GST invoicing.',
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -93,7 +92,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -120,7 +119,7 @@ const serviceSchema = {
     '@id': 'https://www.wikidata.org/wiki/Q1353', // Wikidata label: Delhi (city and union territory, India)
   },
   description:
-    'Custom ecommerce development for Delhi businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',
+    'Ecommerce development for Delhi NCR businesses: Shopify and WooCommerce stores for bridal, jewellery and gifting brands, wholesale ordering portals for market traders, corporate gifting catalogues, GST invoicing. Lighthouse 95+.',
 };
 
 const localBusinessSchema = {
@@ -131,7 +130,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/delhi',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Delhi businesses. Shopify, WooCommerce, and custom stores. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+    'Ecommerce development company serving Delhi, Noida, Gurugram, Ghaziabad and Faridabad businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing. 7-day delivery.',
   areaServed: [
     'Connaught Place', 'Lajpat Nagar', 'Karol Bagh', 'Rohini',
     'Dwarka', 'Noida', 'Gurugram', 'Saket',
@@ -146,33 +145,33 @@ const localBusinessSchema = {
 const DELHI_ECOM_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery & Platform Recommendation',
+    title: 'How You Sell Today',
     description:
-      'We map your products, target audience, logistics requirements, and revenue model. Platform recommendation (Shopify, WooCommerce, or custom) is made here, before we scope or price anything.',
+      'We start with your current trade: retail counter, wholesale lane, marketplace or Instagram. That tells us whether you need a retail store, a wholesale portal or both, and which platform fits.',
   },
   {
     number: '02',
-    title: 'Figma Design & Mockup Approval',
+    title: 'Design on Your Products',
     description:
-      'Custom Figma designs for your homepage, product pages, collection pages, and checkout. Mobile-first at 375px. India-specific UX: UPI placement, COD badge position, trust signals above the fold.',
+      'We design home, collection, product and checkout or reorder screens with your own photos and prices, phone first. You approve price displays, return terms and WhatsApp placement before development.',
   },
   {
     number: '03',
-    title: 'Development & Payment Integration',
+    title: 'Build and Connect',
     description:
-      'Platform setup, theme or custom development, Razorpay / PayU integration, UPI configuration, GST auto-invoicing, Shiprocket wiring, and product catalogue import.',
+      'Store build, Razorpay with UPI, cards, wallets and COD, GST invoicing that handles Delhi, UP and Haryana buyers, courier links and catalogue upload from your billing software or sheets.',
   },
   {
     number: '04',
-    title: 'QA & Lighthouse Audit',
+    title: 'Test Every Order Path',
     description:
-      'End-to-end testing of every payment method (UPI, cards, COD, wallets). Lighthouse 90+ on mobile before we ship. Core Web Vitals green: LCP under 2.5s, CLS below 0.1.',
+      'Test orders on each payment method, wholesale logins with different price slabs, invoice checks for buyers in Delhi, Noida and Gurugram, and Lighthouse on mobile against a 90+ target.',
   },
   {
     number: '05',
-    title: 'Launch & Handover',
+    title: 'Launch and Hand Over',
     description:
-      'Zero-downtime DNS switch. Sitemap submitted to Google Search Console. Full codebase delivered to your GitHub. 60-minute Zoom walkthrough. 30-day post-launch support window.',
+      'Domain switch without downtime, sitemap submitted, code and every login handed over, staff trained. Defects in our work are fixed free during the cover period agreed before work began.',
   },
 ];
 
@@ -189,149 +188,137 @@ const DELHI_ECOM_FAQ_CATEGORIES = [
 ];
 
 const DELHI_ECOM_FAQ_ITEMS = [
-
-  /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How long does it take to launch a Delhi ecommerce store?',
+    question: 'How long does it take to build an ecommerce store in Delhi?',
     answer:
-      'FactoryJet delivers standard Shopify and WooCommerce stores in 7 business days for Starter and Growth builds. Day 1 is a discovery call to finalise your catalogue, payment preferences, and logistics setup. Days 2–3 are Figma design and mockup approval. Days 3–5 are development and integration. Day 6 is QA and Lighthouse testing. Day 7 is launch. Custom platform and marketplace builds take longer, usually 8 to 16 weeks depending on scope.',
+      'A standard Shopify or WooCommerce store is ready in 7 days once your products, photos and payment gateway approval arrive. A custom theme takes 3 to 5 weeks. Wholesale portals with price slabs and credit limits take 5 to 8 weeks, and custom platforms take 8 to 14 weeks.',
   },
   {
     category: 'pricing',
-    question: 'How much does ecommerce development cost in Delhi?',
+    question: 'How much does an ecommerce website cost in Delhi?',
     answer:
-      "FactoryJet ecommerce projects are fixed-price and scoped to your build. The main cost drivers are your platform (Shopify or WooCommerce vs a custom build), number of products, the payment and shipping integrations you need, and any custom features like subscriptions or B2B pricing. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts. The price is fixed and confirmed in writing, with no hourly billing and no scope creep.",
+      'Price follows scope. In Delhi the big factors are wholesale price slabs, bridal made-to-measure options, large catalogues pulled from billing software, and corporate gifting flows. A simple retail store costs far less than a wholesale portal. We give you a fixed written price after a short call.',
   },
   {
     category: 'pricing',
-    question: 'Do you offer payment plans for the development cost?',
+    question: 'Can I pay for the build in parts?',
     answer:
-      'Yes. All plans can be split 50% upfront and 50% on launch day. Growth and Custom plans can be structured as 40-30-30 across the build. We accept NEFT, RTGS, UPI, and all major credit cards. No interest or fees are charged on installment plans; it is simply a split of the quoted fixed price.',
+      'Yes. We split the work into phases and price each one separately in writing. You sign a phase before it starts, so you never pay for work you did not agree to. NEFT, RTGS and UPI are accepted, and there is no hourly billing.',
   },
   {
     category: 'pricing',
-    question: 'What happens if my store is not ready in 7 days?',
+    question: 'Can I check the store before paying anything?',
     answer:
-      'We have delivered on time for 97% of all builds. When a build does run over, the cause is almost always a delay in receiving product images, content, or payment gateway credentials, which we flag upfront in the onboarding checklist.',
-  },
-
-  /* ── Platform & Tech ── */
-  {
-    category: 'platform',
-    question: 'Which ecommerce platform is right for my Delhi business?',
-    answer:
-      'Shopify is the best default for most Delhi D2C and B2C brands: fast to launch, easy to manage, and natively supports Razorpay, PayU, and UPI. WooCommerce is the right choice when you are already on WordPress or need deep content-commerce integration (recipes, guides, editorial content). Custom Next.js platforms make sense for high-volume D2C brands, B2B wholesale portals with complex pricing rules, or multi-vendor marketplaces where Shopify and WooCommerce hit their ceiling. FactoryJet makes this recommendation during discovery at no charge.',
+      'Yes. We build a working draft with some of your actual products and show you the full buying path. Your family or partners can test it on their phones. If it is not what you want, you have spent nothing.',
   },
   {
     category: 'platform',
-    question: 'Do you set up Razorpay, UPI, and Cash on Delivery for all stores?',
+    question: 'Which platform suits a Delhi bridal or ethnic wear house?',
     answer:
-      'Yes, all India payment methods are configured in every plan. Razorpay is our primary gateway and covers UPI, net banking, cards, wallets (Paytm, PhonePe, Mobikwik), EMI on major cards, and BNPL (LazyPay, Simpl). We also integrate PayU, CCAvenue, or PhonePe Business if you have an existing relationship. Cash on Delivery is configured with prepaid-to-COD ratios you control. Razorpay\'s fraud detection rules are configured at launch to keep COD abuse low.',
+      'Shopify works for most. It handles sizes, colours and custom measurements, supports video and appointment booking apps, and takes UPI, cards and international payments for NRI brides. For catalogues with thousands of items and complex options, a custom build may fit better.',
   },
   {
     category: 'platform',
-    question: 'Can you connect my Delhi store to Amazon India and Flipkart?',
+    question: 'Can my Sadar Bazaar or Gandhi Nagar wholesale business take orders online?',
     answer:
-      'Yes, this is included in the Growth plan and above. We use Cedcommerce or Unicommerce to sync your product catalogue, pricing, and inventory between your Shopify or WooCommerce store and your Amazon India and Flipkart seller accounts. Orders from all channels flow into one dashboard. When stock sells on Amazon, it is deducted from your store automatically, preventing overselling.',
+      'Yes. We build a login-only portal where approved shops see their own price slab, carton or set quantities and credit limit. They reorder past orders in a couple of taps, and every order produces a GST invoice. Orders can export to Tally or Busy.',
   },
   {
     category: 'platform',
-    question: 'Can you set up WhatsApp Commerce and automated order flows?',
+    question: 'Do you set up UPI, cards and COD?',
     answer:
-      'Yes. We integrate WhatsApp Business API via Interakt, Wati, or AiSensy to send order confirmations, shipping updates, and abandoned cart messages on WhatsApp, where open rates are 85%+ versus email\'s 20%. We also build conversational product discovery chatbots where customers browse and order directly in WhatsApp, with Razorpay payment links sent in-chat. This is included in Growth and Custom plans.',
-  },
-
-  /* ── India-Specific ── */
-  {
-    category: 'india',
-    question: 'Do your stores support GST invoicing and compliance?',
-    answer:
-      'Yes, GST compliance is built into every Indian ecommerce store we deliver. This includes auto-generated GST invoices at order placement, GSTIN capture at checkout for B2B buyers, HSN code mapping per product category, state-wise IGST/CGST/SGST rate configuration, and monthly GSTR-1 export compatibility. We integrate with Tally, Zoho Books, or custom accounting exports on request.',
+      'Yes, on every store. Razorpay is our default, covering UPI, cards, net banking, wallets and EMI. We can connect PayU, CCAvenue or PhonePe instead. COD limits can be set by order value or pincode, which helps keep return-to-origin orders down.',
   },
   {
-    category: 'india',
-    question: 'Which logistics partner should I use for a Delhi store?',
+    category: 'platform',
+    question: 'Can you run a corporate gifting catalogue for Diwali?',
     answer:
-      'Shiprocket is our default recommendation for most Delhi ecommerce stores. It gives you access to Delhivery, Bluedart, XpressBees, Ekart, and Shadowfax under one integration, with automated NDR workflows, returns management, and weight dispute resolution. Delhivery directly via API is better for high-volume brands (10,000+ shipments per month) needing custom SLAs. For hyperlocal same-day delivery in Delhi NCR, Shadowfax and Porter are the right fit.',
+      'Yes. Companies can browse a catalogue, request a quote for bulk quantities, upload a list of delivery addresses and pay by bank transfer against a GST invoice. We build it as a separate section or a login-only portal for repeat corporate buyers.',
   },
   {
     category: 'india',
-    question: 'Can you add Hindi language support to my store?',
+    question: 'How does GST work for a Delhi store selling across NCR?',
     answer:
-      'Yes, multi-language support is available for all platforms. For Shopify we use the Translate & Adapt app or Langify for regional language storefronts. For WooCommerce we implement WPML or TranslatePress. For custom platforms we build the i18n layer natively. Language-switched URLs follow SEO-safe hreflang patterns. We have built stores in Hindi, Marathi, Tamil, Gujarati, and Bengali.',
+      'Delhi orders carry CGST and SGST. Orders to Noida or Ghaziabad in Uttar Pradesh, or Gurugram and Faridabad in Haryana, are inter-state and carry IGST. The store applies the right split, prints HSN codes and lets business buyers add a GSTIN.',
   },
   {
     category: 'india',
-    question: 'How do you handle cart abandonment for Indian shoppers?',
+    question: 'Which couriers work for Delhi stores?',
     answer:
-      'India has a 78% cart abandonment rate, higher than global averages because COD hesitancy and payment UX friction are common. We build a 3-touch recovery sequence: 1) WhatsApp message within 30 minutes with a direct Razorpay payment link, 2) SMS at 2 hours with a small discount, 3) email at 24 hours with a trust signal (reviews, return policy). Stores with this sequence recover 18–22% of abandoned carts on average.',
-  },
-
-  /* ── Speed & SEO ── */
-  {
-    category: 'seo',
-    question: 'Will my Delhi ecommerce store rank on Google?',
-    answer:
-      'Every store we build includes technical SEO from day one: Product and BreadcrumbList schema for Google Shopping eligibility, optimised title and meta templates, canonical URLs to prevent duplicate content (a common Shopify and WooCommerce issue), GST price display, Core Web Vitals green on mobile, and sitemap submission to Google Search Console. LocalBusiness schema with Delhi geo-coordinates is included for local search visibility.',
+      'Shiprocket covers most stores, with Delhivery, Blue Dart, Xpressbees, Ekart and others in one account and returns handled. For same-day delivery across NCR, partners such as Porter or Borzo work for gifts, food and urgent orders. Bulky wholesale orders may need a transport partner.',
   },
   {
-    category: 'seo',
-    question: 'Do you guarantee a Lighthouse score?',
+    category: 'india',
+    question: 'Can my store be in Hindi?',
     answer:
-      'Yes, Lighthouse 90+ on Performance, Accessibility, Best Practices, and SEO is a contractual commitment on all builds. We achieve this by serving WebP images from CDN, deferring non-critical JavaScript, inlining critical CSS, using next-gen fonts with preload, and hosting on Cloudflare Pages with assets served from the nearest edge node to your customer. We QA the score before handover and fix any regression post-launch within 48 hours at no charge.',
+      'Yes. A Hindi version can run next to English, each on its own URL so Google can index both. We check Devanagari fonts on budget Android phones before launch and recommend that a person writes the product text.',
   },
   {
-    category: 'seo',
-    question: 'What are Core Web Vitals and why do they matter for my store?',
+    category: 'india',
+    question: 'How do I cut COD returns on a Delhi store?',
     answer:
-      'Core Web Vitals are Google\'s three page experience signals: LCP (Largest Contentful Paint, how fast the main content loads, target under 2.5s), INP (Interaction to Next Paint, how fast the page responds to clicks, target under 200ms), and CLS (Cumulative Layout Shift, whether elements jump around, target below 0.1). Google confirmed these are a ranking signal. More importantly, a 1-second delay in mobile load time reduces conversion rates by 20%. For a high-revenue store, that adds up to significant lost revenue every second of slowness.',
+      'Confirm each COD order on WhatsApp before dispatch, ask for a small advance on high-value COD orders, and turn COD off for pincodes with poor history. Showing the returns policy clearly at checkout also reduces refusals at the door.',
   },
   {
     category: 'seo',
-    question: 'Can you optimise an existing Delhi store that is already slow?',
+    question: 'Will my store rank for Delhi searches?',
     answer:
-      'Yes, we offer a standalone Speed & SEO Audit + Fix package. We diagnose all Lighthouse failures, compress and convert your image library to WebP, remove render-blocking resources, fix CLS issues from unloaded fonts or images, and migrate your hosting to Cloudflare if needed. Most stores see a 30–60 point Lighthouse improvement within one sprint. We issue a written commitment: if we do not reach Lighthouse 90+ overall, we continue working at no additional charge.',
-  },
-
-  /* ── Process & Ownership ── */
-  {
-    category: 'trust',
-    question: 'Do I own my store and all the code after launch?',
-    answer:
-      '100% yes. On launch day we transfer full ownership of the store account, the theme code, all integrations, and every custom component we built. You get GitHub repository access for all code assets and full admin credentials for every tool. We do not hold your store with ongoing fees. You can take the store to any developer after handover; we encourage it. What we hope is that you come back to us for the next phase.',
+      'It can. We add product and breadcrumb schema, clean titles, canonical tags and a sitemap at launch. If you have a shop in Karol Bagh or Chandni Chowk, we connect the store to your Google Business Profile so you show up on the map and in local searches.',
   },
   {
-    category: 'trust',
-    question: 'What does the handover process look like?',
+    category: 'seo',
+    question: 'Do you check speed before launch?',
     answer:
-      'Day 7 is handover day. We schedule a 60–90 minute Zoom walkthrough covering: admin panel navigation, adding and editing products, processing orders, managing discounts, viewing analytics, and handling basic shipping issues. We deliver a handover document with all credentials, API keys, support contacts for each integration, and a first-30-days checklist. Post-handover, we are available on WhatsApp for 30 days for quick questions at no charge.',
+      'Yes. We test the home, collection and product pages on mobile with Lighthouse and share the report. The goal is 90+ and LCP under 2.5 seconds. Image sizes and unnecessary apps are the usual culprits.',
+  },
+  {
+    category: 'seo',
+    question: 'Can you fix my slow Delhi store?',
+    answer:
+      'Yes. We audit the slowest pages, list the causes in order of impact, and quote a fixed price for the fixes. Common problems are oversized photos, apps loading on every page, heavy themes and chat widgets.',
+  },
+  {
+    category: 'seo',
+    question: 'Will a large wholesale catalogue load fast enough?',
+    answer:
+      'Yes, with the right setup. We use filtered search, load products in pages instead of all at once, and resize images for each screen. Buyers can also search by item code, which is faster than scrolling for most traders.',
   },
   {
     category: 'trust',
-    question: 'Do you offer post-launch maintenance for Delhi stores?',
+    question: 'Who owns the store and code?',
     answer:
-      'Yes. Our Care Plan covers plugin and platform updates, a monthly Lighthouse audit and performance fixes, uptime monitoring, a few hours of content or feature changes each month, and priority support with a 4-hour response SLA. Our Growth Retainer adds monthly A/B tests, conversion optimization, and new campaign landing pages. Both are month-to-month with no lock-in, and we share the exact monthly price on your free call.',
+      'You do. The store, domain, payment and courier accounts are in your business name, and the code repository and admin logins are handed to you. Hosting and app costs can run in your accounts at cost. You can change developers whenever you like.',
   },
   {
     category: 'trust',
-    question: 'Can I manage and update the store myself after launch?',
+    question: 'What does handover include?',
     answer:
-      'Absolutely, self-management is the goal. For Shopify stores, adding products, updating prices, creating discount codes, and reviewing orders requires zero coding knowledge. WooCommerce is slightly more technical but we set up a simplified admin workflow for non-technical founders. We build a short video library covering the 10 most common tasks your team will perform, so you are not dependent on a developer for day-to-day operations.',
+      'A training session for your team on products, prices, orders, returns and wholesale accounts, plus a document with every login, integration contact and a checklist for the first month.',
   },
-
-  // Money-query coverage, added 2026-06-11
+  {
+    category: 'trust',
+    question: 'Is there support after launch?',
+    answer:
+      'Yes. Defects in our work are fixed inside the build price during a cover period we agree before starting. After that, support is optional. You approve a quote for each change, and there is no monthly minimum.',
+  },
+  {
+    category: 'trust',
+    question: 'Can my staff manage the store without a developer?',
+    answer:
+      'Yes. On Shopify, adding products, updating prices, creating festive offers and processing orders need no coding. We set up staff logins and record short videos of the common tasks.',
+  },
   {
     category: 'pricing',
     question: 'Who is the best ecommerce development company in Delhi?',
     answer:
-      'For D2C brands and small businesses, FactoryJet makes a strong case: fixed written prices, senior engineers, and stores that launch in weeks. Any ecommerce website development company in Delhi, or any ecommerce solution company in Delhi, should pass three checks: who writes the code, is the price fixed, and do you own the store at the end. That is how to find the best ecommerce website development company in Delhi and the best ecommerce solution company in Delhi for your catalog.',
+      'Any ecommerce website development company in Delhi worth hiring should name who writes your code, fix the price in writing, and hand you full ownership at the end. FactoryJet does all three, for traders, wholesalers and D2C brands, and builds a draft before you sign. Test every ecommerce solution company in Delhi on those points.',
   },
   {
     category: 'pricing',
-    question: 'Should I hire ecommerce developer in Delhi or use an agency?',
+    question: 'Should I hire an ecommerce developer in Delhi or an agency?',
     answer:
-      'One developer can build a basic store, but a real shop needs design, payments, shipping, and SEO together. A small senior team covers all of it at a fixed price. If you do hire ecommerce developer in Delhi directly, check store speed scores from their past work first.',
+      'A solo developer can launch a basic store. A store that trades well also needs design, payments, couriers, GST across states and SEO, which is a lot for one person. A small senior team covers it at a fixed price. If you hire an ecommerce developer in Delhi, test their past stores on your phone before you commit.',
   },
 ];
 
@@ -409,8 +396,8 @@ export default function DelhiEcommercePage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_delhi_hero" />}
           eyebrow="ECOMMERCE DEVELOPMENT · DELHI"
-          headline="Delhi's Most Trusted Ecommerce Agency: Store Live in 7 Days"
-          lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Delhi brands: Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. 7-day delivery."
+          headline="Ecommerce Development in Delhi: Store Live in 7 Days"
+          lead="FactoryJet builds online stores for Delhi traders taking their market names online, wholesale ordering portals for Sadar Bazaar and Gandhi Nagar businesses, and D2C stores for Gurugram and Noida brands. UPI and COD at checkout, GST done right across NCR, Lighthouse 90+. 7-day delivery."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery',
@@ -426,14 +413,14 @@ export default function DelhiEcommercePage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+          description="Retail stores, wholesale portals and D2C builds for businesses in India, the US, the UK and the UAE. Delhi NCR clients get a fixed price per phase, the full code in their name, and 7-day delivery."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="ECOMMERCE DEVELOPMENT · DELHI"
-          headline="The Right Platform for Every Delhi Business Model"
-          lead="Delhi's ecommerce market spans D2C fashion brands in Lajpat Nagar, B2B manufacturers in Okhla, jewellers in Karol Bagh, and FMCG distributors in Naraina. Each needs a different platform strategy. FactoryJet recommends the right one before we quote."
+          headline="One City, Very Different Stores"
+          lead="A Chandni Chowk lehenga house, a Sadar Bazaar toy wholesaler and a Gurugram skincare startup all sell in Delhi NCR, but they need different builds. We look at how you sell today and who buys, then recommend a platform and a fixed price."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -458,12 +445,7 @@ export default function DelhiEcommercePage() {
               </div>
 
               <p>
-                The average Indian ecommerce store converts at 0.8–1.2%. The top quartile converts at
-                3–5%. The difference is not the product; it is the store. Slow load times on 4G
-                networks, a UPI checkout that requires too many steps, product pages that bury the buy
-                button below three paragraphs of description, and a mobile layout that was clearly
-                designed on a desktop. These are engineering and design problems, not marketing
-                problems.
+                Delhi trade runs on trust built over decades in one market lane. Online, that trust has to be rebuilt from scratch. Buyers want to see the real product, the real price, the return terms and a phone number that answers. Wholesale buyers want something else again: price slabs, minimum quantities, credit and a GST invoice for every order.
               </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
@@ -497,17 +479,12 @@ export default function DelhiEcommercePage() {
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  A great ecommerce store is an engineering project measured in revenue, not a
-                  design project measured in compliments.
+                  The family name that sells in the market has to be earned again on the screen.
                 </p>
               </div>
 
               <p>
-                FactoryJet designs every store around Indian consumer behaviour: where the UPI button
-                goes, when the WhatsApp chat trigger fires, how the mobile product page stacks on a
-                375px screen, what trust signals appear above the fold, and how EMI is surfaced at
-                checkout. We have built 120+ Shopify stores and hundreds of WooCommerce and custom
-                builds for Indian brands. That data informs every decision we make on the next one.
+                We build Delhi stores to carry that trust across. Real photos and video, clear prices and making charges, WhatsApp next to the buy button, COD with sensible limits, and returns explained before checkout. For wholesalers we add a login-only catalogue where each buyer sees their own rates and can reorder without calling.
               </p>
             </>
           }
@@ -557,7 +534,7 @@ export default function DelhiEcommercePage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  We recommend the right platform. Not the most expensive one.
+                  You get the platform your business needs, not the most expensive one.
                 </p>
               </div>
             </div>
@@ -567,23 +544,23 @@ export default function DelhiEcommercePage() {
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Delhi Brands Choose FactoryJet Over Local Agencies"
-          lead="Delhi ecommerce agencies often charge several times more for a comparable project and take 10 to 20 weeks to deliver, usually without telling you the price upfront. FactoryJet gives you a fixed quote before you speak to us, puts 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. The price is fixed and confirmed in writing, and the codebase is yours to keep."
+          headline="Why Delhi NCR Businesses Pick FactoryJet"
+          lead="Delhi owners know how to bargain and hate surprises. So we put the price for each phase in writing, write 7-day delivery for standard stores into the agreement, and build a working draft on your own products before you sign."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing.',
-              body: "Delhi's market moves fast. Waiting 16 weeks for an agency to deliver a store you briefed in April is not a plan; it is a liability. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the delivery date written into the project agreement. We have delivered on time for 97% of all builds.",
+              body: 'Standard Shopify and WooCommerce stores for Delhi NCR businesses go live in 7 days once products, photos and gateway approval are in. The date is part of the agreement. We have delivered on time on 97% of builds.',
             },
             {
               icon: '📱',
-              title: "India's ecommerce is 65% mobile. Most stores are not built for it.",
-              body: 'Most Delhi ecommerce stores are designed on a desktop and adapted down. The result: 0.4% mobile conversion rates on template stores versus 2.1% on properly designed custom builds. FactoryJet designs every store mobile-first at 375px: tap targets, product image sizing, checkout flow, and UPI placement all optimised for the phone your customer actually uses.',
+              title: 'Your buyers shop on phones. So do your wholesalers.',
+              body: 'Retail buyers browse on the metro and wholesale buyers order from the shop floor. We design at 375px first, with thumb-friendly buttons, fast photos and a checkout or reorder screen that takes a few taps.',
             },
             {
               icon: '📋',
               title: 'Fixed price. Agreed before we start.',
-              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your store running.",
+              body: 'Each phase is scoped and priced in writing before work begins. No hourly bills, no last-minute extras. Support after launch is optional, and any change is quoted for your approval first.',
             },
           ]}
         />
@@ -591,20 +568,20 @@ export default function DelhiEcommercePage() {
         {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Platform Decision to Live Store in 7 Days"
-          lead="Platform recommendation before we scope. Design approval before we build. Full payment and logistics testing before we launch."
+          headline="How We Take a Delhi Store Live"
+          lead="We fix the platform and scope, design on your products, and test payments, couriers and GST across NCR before launch."
           stages={DELHI_ECOM_STAGES}
-          closingNote="5 STAGES · 7 DAYS · RAZORPAY + GST + SHIPROCKET · LIGHTHOUSE 90+ · ZERO-DOWNTIME LAUNCH"
+          closingNote="5 STAGES · RETAIL OR WHOLESALE · UPI + COD + GST ACROSS NCR · LIGHTHOUSE 90+ · YOUR CODE"
         />
 
         {/* ── 7. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="DELHI ECOMMERCE MARKET"
-          headline="Why Delhi Is India's Largest Ecommerce Opportunity"
+          headline="How Delhi NCR Trades Online"
           leadParagraphs={[
-            "Delhi NCR, spanning Delhi, Noida, Gurugram, Faridabad, and Ghaziabad, is India's largest single metro ecommerce market by transaction volume. The region's 30 million consumers, 200,000+ registered businesses, and direct access to pan-India logistics hubs make it the most strategically important market for any Indian ecommerce brand to crack.",
-            "Delhi's ecommerce verticals are defined by the city's deep wholesale roots going direct-to-consumer. Chandni Chowk fabric traders are building Shopify stores targeting international Indian diaspora buyers. Karol Bagh jewellers are launching COD-enabled stores with Razorpay Turbo checkout. Lajpat Nagar fashion wholesalers are transitioning to D2C operations with Myntra and Instagram Shop integration. And Okhla manufacturers are building B2B procurement portals with GST-split invoicing and tiered dealer pricing.",
-            "The brands winning in Delhi's ecommerce market are not the ones with the largest offline retail footprints; they are the ones that translated their offline trust signals (authenticity, pricing transparency, return ease) into a digital store experience. FactoryJet has built for every Delhi commerce vertical and understands the specific UX requirements (COD trust, GST invoicing, wholesale-to-D2C transitions) that Delhi buyers expect.",
+            "Delhi is one of India's oldest trading cities, and its markets each have a speciality. Chandni Chowk sells bridal wear, sarees and fabric. Karol Bagh is known for jewellery and wedding shopping, and Dariba Kalan for silver. Sadar Bazaar is a wholesale hub for toys, stationery and household goods, Gandhi Nagar for garments, and Khari Baoli for spices and dry fruits. Nehru Place sells computers and electronics.",
+            'Many of these traders already sell to shops across North India by phone and WhatsApp. The next step is a wholesale portal where approved buyers log in, see their own rates, place orders and download GST invoices. At the same time, a second generation is taking the family name to retail buyers through a direct store, with real photos and video replacing the walk through the lane.',
+            'Around the city, Gurugram and Noida host D2C brands in skincare, apparel and food, and the industrial areas of Okhla, Naraina and Mayapuri hold manufacturers selling to distributors. Corporate gifting is a busy seasonal trade across NCR, with orders peaking before Diwali. Each of these needs a different store, and we scope it that way.',
           ]}
           stats={[
             {
@@ -631,50 +608,50 @@ export default function DelhiEcommercePage() {
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="DELHI × ECOMMERCE"
-          headline="Ecommerce Development for Delhi's Key Commerce Verticals"
-          lead="From Lajpat Nagar fashion wholesalers to Karol Bagh jewellers to Okhla manufacturers , and Delhi's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."
+          headline="Delhi NCR Sectors We Build For"
+          lead="From Chandni Chowk bridal houses to Okhla manufacturers, these six sectors account for most of the Delhi ecommerce work we are asked to scope."
           sectors={[
             {
-              name: 'Fashion & Ethnic Wear',
+              name: 'Bridal & Ethnic Wear',
               description:
-                'Lajpat Nagar, Karol Bagh, and Chandni Chowk are India\'s largest wholesale fashion markets going direct-to-consumer. D2C fashion needs AI size guides, WhatsApp lookbooks, and omnichannel sync.',
+                'Chandni Chowk and Karol Bagh bridal houses need video-rich product pages, made-to-measure options, appointment booking and dispatch dates planned around the wedding.',
               example:
-                'Ethnic wear brands, bridal lehenga D2C labels, wholesale-to-retail transition businesses.',
+                'Lehenga and saree houses, sherwani makers, ethnic wear labels in Lajpat Nagar.',
             },
             {
-              name: 'Jewellery & Gems',
+              name: 'Jewellery & Silver',
               description:
-                'Karol Bagh and Dariba Kalan jewellers are building COD-enabled Shopify stores with hallmark compliance display and video consultation flows.',
+                'Karol Bagh jewellers and Dariba Kalan silversmiths need weight and purity details, HUID for gold, insured shipping and COD limits for high-value orders.',
               example:
-                'Jewellery retailers, custom jewellery brands, B2B gem traders.',
+                'Gold jewellers, silver article makers, artificial and kundan jewellery sellers.',
             },
             {
-              name: 'Electronics & Mobiles',
+              name: 'Electronics & IT',
               description:
-                'Nehru Place is India\'s second-largest electronics market. Electronics ecommerce needs EMI checkout, warranty flows, and B2B procurement portals.',
+                'Nehru Place dealers sell to offices and homes. Stores need spec filters, bulk quotes for companies, EMI for consumers and GST invoices for business buyers.',
               example:
-                'Electronics retailers, mobile accessory brands, IT hardware distributors.',
+                'Laptop and peripheral dealers, networking suppliers, mobile accessory brands.',
             },
             {
-              name: 'Home Furnishing & Décor',
+              name: 'Wholesale Trade',
               description:
-                "Delhi's premium interior market in Greater Kailash and South Extension drives high-AOV home décor ecommerce.",
+                'Sadar Bazaar and Gandhi Nagar wholesalers need login-only catalogues with price slabs, carton quantities, credit limits and fast reorder for shops across North India.',
               example:
-                'Furniture D2C brands, premium home décor labels, gifting companies.',
+                'Toy and stationery wholesalers, garment traders, household goods distributors.',
             },
             {
-              name: 'Food & Grocery',
+              name: 'Food, Spices & Gifting',
               description:
-                "Delhi NCR's FMCG and gourmet food market is one of India's largest. Subscription replenishment, FSSAI compliance, and hyperlocal delivery integration.",
+                'Khari Baoli spice and dry fruit traders and NCR gifting firms need FSSAI details, festival hampers, bulk corporate orders and branded packaging options.',
               example:
-                'Gourmet food brands, organic grocery D2C, restaurant chains selling packaged products.',
+                'Dry fruit and spice sellers, mithai brands, corporate gifting companies.',
             },
             {
-              name: 'B2B Wholesale & Manufacturing',
+              name: 'Manufacturing & D2C',
               description:
-                'Okhla and Naraina industrial areas house thousands of B2B manufacturers. Tiered dealer pricing, GST B2B invoicing, and bulk order flows.',
+                'Okhla, Naraina and Noida makers and Gurugram D2C brands need either trade portals with dealer pricing or fast Shopify stores with subscriptions and Instagram selling.',
               example:
-                'Industrial manufacturers, MSME exporters, B2B textile and garment suppliers.',
+                'Apparel export units, skincare and personal care brands, home goods makers.',
             },
           ]}
         />
@@ -711,14 +688,14 @@ export default function DelhiEcommercePage() {
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What founders say after we build their store"
+          headline="What founders tell us after launch"
         />
 
         {/* ── 12. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Everything Delhi Founders Ask Before They Sign"
-          lead="The questions we answer on every Delhi ecommerce discovery call, answered here, without the runaround."
+          headline="What Delhi NCR Owners Ask Before They Sign"
+          lead="The questions Delhi traders, wholesalers and D2C founders raise most, answered plainly: time, cost, wholesale, GST across NCR and ownership."
           categories={DELHI_ECOM_FAQ_CATEGORIES}
           items={DELHI_ECOM_FAQ_ITEMS}
         />
@@ -727,11 +704,11 @@ export default function DelhiEcommercePage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO LAUNCH"
-          headline="Your Delhi Ecommerce Store. Live in 7 Days."
-          sub="Join 500+ brands across India, the US, the UK and the UAE who chose FactoryJet. We will scope your build, recommend the right platform, and deliver a Razorpay-integrated, GST-compliant, Lighthouse 90+ store in 7 business days. Free strategy call, no commitment required."
+          headline="Your Delhi Store, Live in 7 Days"
+          sub="FactoryJet has worked with 500+ businesses across India, the US, the UK and the UAE. Tell us how you sell today, retail or wholesale, and we will propose a platform, fix the price per phase in writing and show you a draft before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price. 7-day delivery. Razorpay + GST + Shiprocket. Your codebase delivered in full on launch day."
+          objectionHandler="Fixed price per phase. 7-day delivery. UPI, COD and NCR-ready GST. The code and every account stay in your name."
         />
 
       </main>

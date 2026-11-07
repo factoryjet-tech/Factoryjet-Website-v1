@@ -27,7 +27,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Ecommerce Development in Kolkata | FactoryJet',
   description:
-    'Shopify & WooCommerce stores for Kolkata brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery.',
+    'Ecommerce development in Kolkata for saree and Kantha sellers, leather makers, tea traders and Burrabazar wholesalers. Shopify, UPI, GST. 7-day delivery.',
   keywords: [
     'ecommerce development company kolkata',
     'ecommerce website development kolkata',
@@ -35,7 +35,6 @@ export const metadata: Metadata = {
     'woocommerce development kolkata',
     'online store development kolkata',
     'custom ecommerce development kolkata',
-    'affordable ecommerce development kolkata',
     'ecommerce website cost kolkata',
     'd2c website kolkata',
     'razorpay shopify kolkata',
@@ -50,7 +49,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Ecommerce Development Company in Kolkata | FactoryJet',
     description:
-      'Shopify, WooCommerce, D2C, and custom ecommerce stores for Kolkata businesses. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+      'Kolkata ecommerce stores: tant and Baluchari sarees, Kantha, leather goods, tea and mishti, plus wholesale portals for Burrabazar traders. 7-day delivery.',
     url: 'https://factoryjet.com/services/ecommerce-development/kolkata',
     images: [
       {
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ecommerce Development Kolkata | FactoryJet',
     description:
-      'Shopify, WooCommerce & custom ecommerce for Kolkata brands. Razorpay + GST + Shiprocket.',
+      'Kolkata ecommerce: saree, leather, tea and wholesale stores with Bengali, UPI and GST.',
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -93,7 +92,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -120,7 +119,7 @@ const serviceSchema = {
     '@id': 'https://www.wikidata.org/wiki/Q1348', // Wikidata label: Kolkata (capital of West Bengal, India)
   },
   description:
-    'Custom ecommerce development for Kolkata businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',
+    'Ecommerce development for Kolkata businesses: Shopify and WooCommerce stores for saree, Kantha, leather, tea and sweet brands, wholesale portals for Burrabazar traders, Bengali storefronts, GST invoicing. Lighthouse 95+.',
 };
 
 const localBusinessSchema = {
@@ -131,7 +130,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/kolkata',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Kolkata businesses. Shopify, WooCommerce, and custom stores. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+    'Ecommerce development company serving Kolkata, Howrah and Salt Lake businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing. 7-day delivery.',
   areaServed: [
     'Salt Lake', 'Rajarhat', 'Park Street', 'Alipore', 'Gariahat',
     'New Town', 'Behala', 'Ballygunge',
@@ -146,33 +145,33 @@ const localBusinessSchema = {
 const KOLKATA_ECOM_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery & Platform Recommendation',
+    title: 'Buyers and Platform',
     description:
-      'We map your products, target audience, logistics requirements, and revenue model. Platform recommendation (Shopify, WooCommerce, or custom) is made here, before we scope or price anything.',
+      'We map who buys: Kolkata shoppers, Bengalis elsewhere in India and abroad, or wholesale buyers across East India. Retail, wholesale or both decides the platform and the courier mix.',
   },
   {
     number: '02',
-    title: 'Figma Design & Mockup Approval',
+    title: 'Design With Your Products',
     description:
-      'Custom Figma designs for your homepage, product pages, collection pages, and checkout. Mobile-first at 375px. India-specific UX: UPI placement, COD badge position, trust signals above the fold.',
+      'Figma screens for home, collection, product and checkout, built with your real photos and prices, phone first. You approve weave and origin details, Bengali labels and trust signals before code.',
   },
   {
     number: '03',
-    title: 'Development & Payment Integration',
+    title: 'Build and Integrations',
     description:
-      'Platform setup, theme or custom development, Razorpay / PayU integration, UPI configuration, GST auto-invoicing, Shiprocket wiring, and product catalogue import.',
+      'Store build, Razorpay for UPI, cards, wallets and COD, GST invoicing, Shiprocket and regional couriers, international shipping if needed, and catalogue import. Wholesale portals get buyer logins and price lists.',
   },
   {
     number: '04',
-    title: 'QA & Lighthouse Audit',
+    title: 'Testing',
     description:
-      'End-to-end testing of every payment method (UPI, cards, COD, wallets). Lighthouse 90+ on mobile before we ship. Core Web Vitals green: LCP under 2.5s, CLS below 0.1.',
+      'Test orders on every payment method, invoice and label checks, wholesale logins tested with different price lists, and Lighthouse on mobile aiming for 90+.',
   },
   {
     number: '05',
-    title: 'Launch & Handover',
+    title: 'Launch and Handover',
     description:
-      'Zero-downtime DNS switch. Sitemap submitted to Google Search Console. Full codebase delivered to your GitHub. 60-minute Zoom walkthrough. 30-day post-launch support window.',
+      'Domain switch without downtime, sitemap submitted, code and logins handed over, staff trained. Defects in our work are fixed at no charge for the cover period we agree at the start.',
   },
 ];
 
@@ -189,149 +188,137 @@ const KOLKATA_ECOM_FAQ_CATEGORIES = [
 ];
 
 const KOLKATA_ECOM_FAQ_ITEMS = [
-
-  /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How long does it take to launch a Kolkata ecommerce store?',
+    question: 'How long does a Kolkata ecommerce store take?',
     answer:
-      'FactoryJet delivers standard Shopify and WooCommerce stores in 7 business days for Starter and Growth builds. Day 1 is a discovery call to finalise your catalogue, payment preferences, and logistics setup. Days 2–3 are Figma design and mockup approval. Days 3–5 are development and integration. Day 6 is QA and Lighthouse testing. Day 7 is launch. Custom platform and marketplace builds take longer, usually 8 to 16 weeks depending on scope.',
+      'A standard Shopify or WooCommerce store goes live in 7 days once we have your products, photos and gateway approval. A custom theme takes 3 to 5 weeks. Wholesale portals for Burrabazar traders take 5 to 8 weeks, and custom platforms take 8 to 14 weeks.',
   },
   {
     category: 'pricing',
     question: 'How much does ecommerce development cost in Kolkata?',
     answer:
-      "FactoryJet ecommerce projects are fixed-price and scoped to your build. The main cost drivers are your platform (Shopify or WooCommerce vs a custom build), number of products, the payment and shipping integrations you need, and any custom features like subscriptions or B2B pricing. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts. The price is fixed and confirmed in writing, with no hourly billing and no scope creep.",
+      'Scope decides it. In Kolkata the main factors are wholesale price lists and credit terms, a Bengali storefront, diaspora shipping, and delivery rules for perishable sweets. A retail store with none of these costs much less. We give a fixed price in writing after a short scoping call.',
   },
   {
     category: 'pricing',
-    question: 'Do you offer payment plans for the development cost?',
+    question: 'Can I pay for the build in instalments?',
     answer:
-      'Yes. All plans can be split 50% upfront and 50% on launch day. Growth and Custom plans can be structured as 40-30-30 across the build. We accept NEFT, RTGS, UPI, and all major credit cards. No interest or fees are charged on installment plans; it is simply a split of the quoted fixed price.',
+      'We split it into phases, each with its own written scope and fixed price that you sign before it starts. A retail store can come first and a wholesale portal second. Pay by NEFT, RTGS or UPI, never by the hour.',
   },
   {
     category: 'pricing',
-    question: 'What happens if my store is not ready in 7 days?',
+    question: 'We need the store before Durga Puja. When should we start?',
     answer:
-      'We have delivered on time for 97% of all builds. When a build does run over, the cause is almost always a delay in receiving product images, content, or payment gateway credentials, which we flag upfront in the onboarding checklist.',
-  },
-
-  /* ── Platform & Tech ── */
-  {
-    category: 'platform',
-    question: 'Which ecommerce platform is right for my Kolkata business?',
-    answer:
-      'Shopify is the best default for most Kolkata D2C and B2C brands: fast to launch, easy to manage, and natively supports Razorpay, PayU, and UPI. WooCommerce is the right choice when you are already on WordPress or need deep content-commerce integration (recipes, guides, editorial content). Custom Next.js platforms make sense for high-volume D2C brands, B2B wholesale portals with complex pricing rules, or multi-vendor marketplaces where Shopify and WooCommerce hit their ceiling. FactoryJet makes this recommendation during discovery at no charge.',
+      'Brief us at least 8 weeks before Puja. Shoppers start buying weeks ahead, and diaspora orders need extra shipping time. That gives room to build, get gateway approval, test courier pickups and load festive stock before demand peaks.',
   },
   {
     category: 'platform',
-    question: 'Do you set up Razorpay, UPI, and Cash on Delivery for all stores?',
+    question: 'Which platform suits a Kolkata saree brand?',
     answer:
-      'Yes, all India payment methods are configured in every plan. Razorpay is our primary gateway and covers UPI, net banking, cards, wallets (Paytm, PhonePe, Mobikwik), EMI on major cards, and BNPL (LazyPay, Simpl). We also integrate PayU, CCAvenue, or PhonePe Business if you have an existing relationship. Cash on Delivery is configured with prepaid-to-COD ratios you control. Razorpay\'s fraud detection rules are configured at launch to keep COD abuse low.',
+      'Shopify for most. It handles colours, blouse options and fabric types as variants, supports video, and takes UPI, COD and international cards. If you also supply other shops, we add a wholesale price list behind a login or build a separate portal.',
   },
   {
     category: 'platform',
-    question: 'Can you connect my Kolkata store to Amazon India and Flipkart?',
+    question: 'Can a Burrabazar trader take wholesale orders online?',
     answer:
-      'Yes, this is included in the Growth plan and above. We use Cedcommerce or Unicommerce to sync your product catalogue, pricing, and inventory between your Shopify or WooCommerce store and your Amazon India and Flipkart seller accounts. Orders from all channels flow into one dashboard. When stock sells on Amazon, it is deducted from your store automatically, preventing overselling.',
+      'Yes. Approved shops log in and see their own rates, carton or set quantities and credit limit. They reorder past orders quickly, and every order raises a GST invoice. Orders can export to Tally or Busy for your accounts team.',
   },
   {
     category: 'platform',
-    question: 'Can you set up WhatsApp Commerce and automated order flows?',
+    question: 'Do you set up UPI, cards and COD?',
     answer:
-      'Yes. We integrate WhatsApp Business API via Interakt, Wati, or AiSensy to send order confirmations, shipping updates, and abandoned cart messages on WhatsApp, where open rates are 85%+ versus email\'s 20%. We also build conversational product discovery chatbots where customers browse and order directly in WhatsApp, with Razorpay payment links sent in-chat. This is included in Growth and Custom plans.',
-  },
-
-  /* ── India-Specific ── */
-  {
-    category: 'india',
-    question: 'Do your stores support GST invoicing and compliance?',
-    answer:
-      'Yes, GST compliance is built into every Indian ecommerce store we deliver. This includes auto-generated GST invoices at order placement, GSTIN capture at checkout for B2B buyers, HSN code mapping per product category, state-wise IGST/CGST/SGST rate configuration, and monthly GSTR-1 export compatibility. We integrate with Tally, Zoho Books, or custom accounting exports on request.',
+      'Yes. Razorpay is our default, with UPI, cards, net banking, wallets and EMI. We can use PayU, CCAvenue or PhonePe instead if you already have an account. COD can be capped by order value or turned off for distant pincodes.',
   },
   {
-    category: 'india',
-    question: 'Which logistics partner should I use for a Kolkata store?',
+    category: 'platform',
+    question: 'Can I sell leather goods to boutiques abroad?',
     answer:
-      'Shiprocket is our default recommendation for most Kolkata ecommerce stores. It gives you access to Delhivery, Bluedart, XpressBees, Ekart, and Shadowfax under one integration, with automated NDR workflows, returns management, and weight dispute resolution. Delhivery directly via API is better for high-volume brands (10,000+ shipments per month) needing custom SLAs. For hyperlocal same-day delivery in Kolkata, Shadowfax and Porter are the right fit.',
+      'Yes. Overseas boutiques get a login with trade prices, MOQ and lead times, and can request quotes for custom colours or logos. Retail buyers abroad see local currency prices, with a cross-border courier and duties shown at checkout.',
   },
   {
     category: 'india',
-    question: 'Can you add Hindi or Bengali language support to my store?',
+    question: 'How is GST handled for a Kolkata store?',
     answer:
-      'Yes, multi-language support is available for all platforms. For Shopify we use the Translate & Adapt app or Langify for regional language storefronts. For WooCommerce we implement WPML or TranslatePress. For custom platforms we build the i18n layer natively. Language-switched URLs follow SEO-safe hreflang patterns. We have built stores in Hindi, Marathi, Tamil, Gujarati, and Bengali.',
+      'Orders within West Bengal carry CGST and SGST, and orders to other states carry IGST. The store applies the right split, prints HSN codes and lets business buyers add a GSTIN. Exports are invoiced as zero-rated supplies.',
   },
   {
     category: 'india',
-    question: 'How do you handle cart abandonment for Indian shoppers?',
+    question: 'Which couriers work for stores shipping from Kolkata?',
     answer:
-      'India has a 78% cart abandonment rate, higher than global averages because COD hesitancy and payment UX friction are common. We build a 3-touch recovery sequence: 1) WhatsApp message within 30 minutes with a direct Razorpay payment link, 2) SMS at 2 hours with a small discount, 3) email at 24 hours with a trust signal (reviews, return policy). Stores with this sequence recover 18–22% of abandoned carts on average.',
-  },
-
-  /* ── Speed & SEO ── */
-  {
-    category: 'seo',
-    question: 'Will my Kolkata ecommerce store rank on Google?',
-    answer:
-      'Every store we build includes technical SEO from day one: Product and BreadcrumbList schema for Google Shopping eligibility, optimised title and meta templates, canonical URLs to prevent duplicate content (a common Shopify and WooCommerce issue), GST price display, Core Web Vitals green on mobile, and sitemap submission to Google Search Console. LocalBusiness schema with Kolkata geo-coordinates is included for local search visibility.',
+      'Shiprocket covers most orders, giving Delhivery, Blue Dart, Xpressbees, India Post and others in one account. Some Northeast pincodes are slower, so we show longer delivery estimates there. For same-day delivery inside Kolkata, a local partner suits sweets and gifts.',
   },
   {
-    category: 'seo',
-    question: 'Do you guarantee a Lighthouse score?',
+    category: 'india',
+    question: 'Can my store be in Bengali?',
     answer:
-      'Yes, Lighthouse 90+ on Performance, Accessibility, Best Practices, and SEO is a contractual commitment on all builds. We achieve this by serving WebP images from CDN, deferring non-critical JavaScript, inlining critical CSS, using next-gen fonts with preload, and hosting on Cloudflare Pages with assets served from the nearest edge node to your customer. We QA the score before handover and fix any regression post-launch within 48 hours at no charge.',
+      'Yes. A Bengali version can run next to English, each on its own URL so both are indexed. We test Bengali script on low-cost Android phones before launch, and recommend a person writes the product text, since machine translation gets weave and food names wrong.',
   },
   {
-    category: 'seo',
-    question: 'What are Core Web Vitals and why do they matter for my store?',
+    category: 'india',
+    question: 'Can mishti brands sell online?',
     answer:
-      'Core Web Vitals are Google\'s three page experience signals: LCP (Largest Contentful Paint, how fast the main content loads, target under 2.5s), INP (Interaction to Next Paint, how fast the page responds to clicks, target under 200ms), and CLS (Cumulative Layout Shift, whether elements jump around, target below 0.1). Google confirmed these are a ranking signal. More importantly, a 1-second delay in mobile load time reduces conversion rates by 20%. For a high-revenue store, that adds up to significant lost revenue every second of slowness.',
+      'Yes, with limits set in the store. Short shelf-life items can be restricted to delivery zones inside Kolkata, with dispatch cut-off times and same-day courier. Longer-life items, such as tinned rosogolla or dry sweets, can ship across India. FSSAI details show on every product page.',
   },
   {
     category: 'seo',
-    question: 'Can you optimise an existing Kolkata store that is already slow?',
+    question: 'Will my store rank for Kolkata searches?',
     answer:
-      'Yes, we offer a standalone Speed & SEO Audit + Fix package. We diagnose all Lighthouse failures, compress and convert your image library to WebP, remove render-blocking resources, fix CLS issues from unloaded fonts or images, and migrate your hosting to Cloudflare if needed. Most stores see a 30–60 point Lighthouse improvement within one sprint. We issue a written commitment: if we do not reach Lighthouse 90+ overall, we continue working at no additional charge.',
-  },
-
-  /* ── Process & Ownership ── */
-  {
-    category: 'trust',
-    question: 'Do I own my store and all the code after launch?',
-    answer:
-      '100% yes. On launch day we transfer full ownership of the store account, the theme code, all integrations, and every custom component we built. You get GitHub repository access for all code assets and full admin credentials for every tool. We do not hold your store with ongoing fees. You can take the store to any developer after handover; we encourage it. What we hope is that you come back to us for the next phase.',
+      'It can, if the basics are right from launch. We add product and breadcrumb schema, clean titles, canonical tags and a sitemap. If you have a shop in Gariahat or New Market, we link the store to your Google Business Profile. Bengali pages reach searches many competitors skip.',
   },
   {
-    category: 'trust',
-    question: 'What does the handover process look like?',
+    category: 'seo',
+    question: 'Do you test the store speed?',
     answer:
-      'Day 7 is handover day. We schedule a 60–90 minute Zoom walkthrough covering: admin panel navigation, adding and editing products, processing orders, managing discounts, viewing analytics, and handling basic shipping issues. We deliver a handover document with all credentials, API keys, support contacts for each integration, and a first-30-days checklist. Post-handover, we are available on WhatsApp for 30 days for quick questions at no charge.',
+      'Yes. Before handover we test the main pages on mobile with Lighthouse and share the report. Our target is 90+ with LCP under 2.5 seconds. Saree and craft photos get the most tuning.',
+  },
+  {
+    category: 'seo',
+    question: 'Can you fix a slow Kolkata store?',
+    answer:
+      'Yes. We audit the slowest pages, list the causes, such as large images, unused apps, heavy themes or chat widgets, and quote a fixed price for the fixes in order of impact.',
+  },
+  {
+    category: 'seo',
+    question: 'Will a Bengali storefront hurt search rankings?',
+    answer:
+      'No, if it is set up properly. Each language gets its own URL and the right hreflang tags, so Google shows Bengali pages to Bengali searchers and English pages to others. Done badly, languages compete with each other, so we check this before launch.',
   },
   {
     category: 'trust',
-    question: 'Do you offer post-launch maintenance for Kolkata stores?',
+    question: 'Do I own the store and the code?',
     answer:
-      'Yes. Our Care Plan covers plugin and platform updates, a monthly Lighthouse audit and performance fixes, uptime monitoring, a few hours of content or feature changes each month, and priority support with a 4-hour response SLA. Our Growth Retainer adds monthly A/B tests, conversion optimization, and new campaign landing pages. Both are month-to-month with no lock-in, and we share the exact monthly price on your free call.',
+      'Yes. The store, domain, payment and courier accounts are registered in your business name, and the code repository and every login are handed to you. Hosting and app costs can bill your accounts at cost. You can switch developers whenever you like.',
   },
   {
     category: 'trust',
-    question: 'Can I manage and update the store myself after launch?',
+    question: 'What is included at handover?',
     answer:
-      'Absolutely, self-management is the goal. For Shopify stores, adding products, updating prices, creating discount codes, and reviewing orders requires zero coding knowledge. WooCommerce is slightly more technical but we set up a simplified admin workflow for non-technical founders. We build a short video library covering the 10 most common tasks your team will perform, so you are not dependent on a developer for day-to-day operations.',
+      'We train your staff on products, prices, orders, returns and wholesale accounts. You receive a document with all logins, integration contacts and a checklist for the first month after launch.',
   },
-
-  // Money-query coverage, added 2026-06-11
+  {
+    category: 'trust',
+    question: 'What support is there once the store is live?',
+    answer:
+      'Any defect in our work is fixed inside the build price for a cover period agreed before we start. After that, support is optional. Each change gets a quote you approve first, and there is no monthly minimum.',
+  },
+  {
+    category: 'trust',
+    question: 'Can my staff run the store without a developer?',
+    answer:
+      'Yes. On Shopify, adding products, changing prices, creating Puja offers and processing orders need no coding. We set up staff logins and record short videos showing the common tasks.',
+  },
   {
     category: 'pricing',
     question: 'Who is the best ecommerce development company in Kolkata?',
     answer:
-      'For D2C brands and small businesses, FactoryJet makes a strong case: fixed written prices, senior engineers, and stores that launch in weeks. Any ecommerce website development company in Kolkata, or any ecommerce solution company in Kolkata, should pass three checks: who writes the code, is the price fixed, and do you own the store at the end. That is how to find the best ecommerce website development company in Kolkata and the best ecommerce solution company in Kolkata for your catalog.',
+      'Any ecommerce website development company in Kolkata you shortlist should say who writes the code, fix the price in writing and hand you full ownership. FactoryJet does all three for weavers, traders and brands, and shows a draft before you sign. Use the same checks on every ecommerce solution company in Kolkata.',
   },
   {
     category: 'pricing',
-    question: 'Should I hire ecommerce developer in Kolkata or use an agency?',
+    question: 'Should I hire an ecommerce developer in Kolkata or an agency?',
     answer:
-      'One developer can build a basic store, but a real shop needs design, payments, shipping, and SEO together. A small senior team covers all of it at a fixed price. If you do hire ecommerce developer in Kolkata directly, check store speed scores from their past work first.',
+      'A lone developer can put up a basic store. Selling well also needs design, payments, couriers to the Northeast, GST and SEO, which is a wide spread of skills. A small senior team covers it at a fixed price. If you hire an ecommerce developer in Kolkata, open their past stores on your phone and check them first.',
   },
 ];
 
@@ -409,8 +396,8 @@ export default function KolkataEcommercePage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_kolkata_hero" />}
           eyebrow="ECOMMERCE DEVELOPMENT · KOLKATA"
-          headline="Kolkata's Most Trusted Ecommerce Agency: Store Live in 7 Days"
-          lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Kolkata brands: Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. 7-day delivery."
+          headline="Ecommerce Development in Kolkata: Store Live in 7 Days"
+          lead="FactoryJet builds online stores for Kolkata saree, Kantha, leather and tea brands, and wholesale ordering portals for Burrabazar traders who supply East and Northeast India. Bengali storefronts on request, UPI and COD at checkout, Lighthouse 90+ on mobile. 7-day delivery."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery',
@@ -426,14 +413,14 @@ export default function KolkataEcommercePage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+          description="Retail stores and wholesale portals for businesses in India, the US, the UK and the UAE. Kolkata clients get a fixed price per phase, all code and logins handed over, and 7-day delivery on standard stores."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="ECOMMERCE DEVELOPMENT · KOLKATA"
-          headline="The Right Platform for Every Kolkata Business Model"
-          lead="Kolkata's ecommerce market spans D2C artisan brands in Gariahat, B2B leather exporters in Tangra, FMCG distributors across Greater Kolkata, and jewellery houses on Johurabazar. Each needs a different platform strategy. FactoryJet recommends the right one before we quote."
+          headline="A Platform That Fits a Kolkata Business"
+          lead="A Gariahat saree shop selling to Bengalis in New Jersey, a Bantala leather unit supplying boutiques and a Burrabazar trader shipping to Guwahati each need their own build. We look at your buyers and catalogue first, then recommend a platform and a fixed price."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -458,12 +445,7 @@ export default function KolkataEcommercePage() {
               </div>
 
               <p>
-                The average Indian ecommerce store converts at 0.8–1.2%. The top quartile converts at
-                3–5%. The difference is not the product; it is the store. Slow load times on 4G
-                networks, a UPI checkout that requires too many steps, product pages that bury the buy
-                button below three paragraphs of description, and a mobile layout that was clearly
-                designed on a desktop. These are engineering and design problems, not marketing
-                problems.
+                Kolkata buyers know their products. A Bengali shopper can tell a Shantipur tant from a power-loom copy, and a tea buyer knows a first flush from a second. A store that uses vague words and stock photos loses that buyer at once. The page has to name the weave, the region, the leather grade or the garden, and show real pictures.
               </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
@@ -497,17 +479,12 @@ export default function KolkataEcommercePage() {
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  A great ecommerce store is an engineering project measured in revenue, not a
-                  design project measured in compliments.
+                  Kolkata buyers know the real thing. The product page has to prove it is real.
                 </p>
               </div>
 
               <p>
-                FactoryJet designs every store around Indian consumer behaviour: where the UPI button
-                goes, when the WhatsApp chat trigger fires, how the mobile product page stacks on a
-                375px screen, what trust signals appear above the fold, and how EMI is surfaced at
-                checkout. We have built 120+ Shopify stores and hundreds of WooCommerce and custom
-                builds for Indian brands. That data informs every decision we make on the next one.
+                We build Kolkata stores with that buyer in mind: close-up photos, weave and origin details, Bengali where it helps, and a checkout led by UPI with COD where it makes sense. Wholesale buyers across Bihar, Odisha, Assam and the Northeast get a login with their own price list, credit terms and fast reorder.
               </p>
             </>
           }
@@ -557,7 +534,7 @@ export default function KolkataEcommercePage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  We recommend the right platform. Not the most expensive one.
+                  We pick what your products need, never the costliest platform.
                 </p>
               </div>
             </div>
@@ -567,23 +544,23 @@ export default function KolkataEcommercePage() {
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Kolkata Brands Choose FactoryJet Over Local Agencies"
-          lead="Kolkata ecommerce agencies often charge several times more for a comparable project and take 10 to 20 weeks to deliver, usually without telling you the price upfront. FactoryJet gives you a fixed quote before you speak to us, puts 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. The price is fixed and confirmed in writing, and the codebase is yours to keep."
+          headline="Why Kolkata Businesses Pick FactoryJet"
+          lead="For a Kolkata brand, the busiest weeks of the year come before Durga Puja, and a late or broken store costs a whole season. We fix the price per phase in writing, put 7-day delivery for standard stores into the agreement, and show you a working draft on your own products before you sign."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing.',
-              body: "Kolkata's market moves fast. Waiting 16 weeks for an agency to deliver a store you briefed in April is not a plan; it is a liability. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the delivery date written into the project agreement. We have delivered on time for 97% of all builds.",
+              body: 'Standard stores for Kolkata businesses go live in 7 days after products, photos and gateway approval reach us, and the date is written into the agreement. We have met the deadline on 97% of builds.',
             },
             {
               icon: '📱',
-              title: "India's ecommerce is 65% mobile. Most stores are not built for it.",
-              body: 'Most Kolkata ecommerce stores are designed on a desktop and adapted down. The result: 0.4% mobile conversion rates on template stores versus 2.1% on properly designed custom builds. FactoryJet designs every store mobile-first at 375px: tap targets, product image sizing, checkout flow, and UPI placement all optimised for the phone your customer actually uses.',
+              title: 'Made for phones on a busy commute.',
+              body: 'Kolkata shoppers browse on the metro, in the bus and between errands. We design at 375px first, keep photos light but sharp, and make checkout a few taps with UPI first.',
             },
             {
               icon: '📋',
               title: 'Fixed price. Agreed before we start.',
-              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your store running.",
+              body: 'Scope and price for each phase are written and signed before work starts. No hourly charges, no surprises at launch. Support afterwards is optional, priced per change.',
             },
           ]}
         />
@@ -591,20 +568,20 @@ export default function KolkataEcommercePage() {
         {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Platform Decision to Live Store in 7 Days"
-          lead="Platform recommendation before we scope. Design approval before we build. Full payment and logistics testing before we launch."
+          headline="How a Kolkata Store Comes Together"
+          lead="Platform and buyers first, design on your own products next, and full testing of payments and couriers before launch."
           stages={KOLKATA_ECOM_STAGES}
-          closingNote="5 STAGES · 7 DAYS · RAZORPAY + GST + SHIPROCKET · LIGHTHOUSE 90+ · ZERO-DOWNTIME LAUNCH"
+          closingNote="5 STAGES · BENGALI-READY · UPI + COD + GST · LIGHTHOUSE 90+ · CODE AND LOGINS HANDED OVER"
         />
 
         {/* ── 7. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="KOLKATA ECOMMERCE MARKET"
-          headline="Why Kolkata Is Eastern India's Ecommerce Gateway"
+          headline="How Kolkata Trade Is Going Online"
           leadParagraphs={[
-            'Kolkata serves as the commercial gateway to Eastern and Northeast India, a 400-million-person market that is significantly underserved by established ecommerce brands and agencies. The city\'s manufacturing base in handicrafts, leather, textiles, and food products represents one of India\'s largest D2C opportunities, with artisan and heritage product brands only beginning to reach national and global buyers through digital channels.',
-            "Kolkata's ecommerce transitions are happening across its diverse commercial base. Gariahat saree traders are launching Shopify stores with Bengali language support and NRI-targeted international shipping. Tangra leather manufacturers are building B2B procurement portals with buyer-specific catalogues. Park Street food brands are building premium gifting D2C operations with FSSAI compliance and cold-chain logistics. And Salt Lake tech companies are building subscription software and hardware bundles.",
-            "The unique opportunity in Kolkata's ecommerce market is the combination of authentic, heritage products (the kind that command premium pricing globally) with a consumer base that has been largely underserved by national D2C brands. Kolkata buyers are sophisticated, value authenticity, and convert at high rates for products that demonstrate provenance and quality. FactoryJet builds these trust signals into every Kolkata store from day one.",
+            "Kolkata has long been the trading capital of East India. Burrabazar, one of the country's oldest wholesale markets, supplies shops across Bengal, Bihar, Odisha, Assam and the Northeast. Many of its traders still take orders by phone and WhatsApp. A wholesale portal with buyer logins, price lists and GST invoices takes that work off the phone without losing the relationships.",
+            "Bengal's crafts sell well beyond the state. Tant sarees from Shantipur and Phulia, Baluchari from Bishnupur, Kantha embroidery and Dhokra metalwork reach buyers across India and the Bengali diaspora in the US and UK. The leather complex at Bantala and the older units of Tangra make bags, belts and footwear for brands and boutiques. Kolkata is also a centre of the tea trade, with merchants selling Darjeeling and Assam teas.",
+            "Durga Puja is the year's biggest retail season, with Poila Baisakh and the winter wedding months close behind. Gariahat and New Market shoppers start buying weeks ahead. Mishti brands face their own problem: short shelf life. We plan stores around these dates and limits, and build in Bengali where buyers expect it.",
           ]}
           stats={[
             {
@@ -631,50 +608,50 @@ export default function KolkataEcommercePage() {
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="KOLKATA × ECOMMERCE"
-          headline="Ecommerce Development for Kolkata's Key Commerce Verticals"
-          lead="From Johurabazar jewellers to Gariahat saree traders to Tangra leather manufacturers , and Kolkata's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."
+          headline="Kolkata Sectors We Build For"
+          lead="From Burrabazar wholesalers to Bantala leather units and Gariahat saree shops, these six sectors cover most of the Kolkata stores we are asked to build."
           sectors={[
             {
-              name: 'Handicrafts & Artisan Products',
+              name: 'Sarees & Bengal Handloom',
               description:
-                "Kolkata's rich artisan tradition (Baluchari silk, Kantha embroidery, Dhokra metalwork, terracotta) is finding national and global buyers through ecommerce. Artisan stores need high-trust product photography, COD flows, and NRI-targeted international shipping.",
+                'Tant, Baluchari, Jamdani and silk sell on weave detail. Stores need close-ups, weaver and region notes, Bengali labels and international shipping for diaspora buyers.',
               example:
-                'Baluchari silk brands, Kantha craft D2C labels, artisan jewellery and pottery companies.',
+                'Gariahat saree shops, handloom cooperatives, Shantipur and Phulia weavers.',
             },
             {
-              name: 'Leather & Footwear',
+              name: 'Leather Goods & Footwear',
               description:
-                "Kolkata's Tangra and Canning Street leather cluster is one of India's largest. Leather goods ecommerce needs product authenticity signals, COD with returns, and B2B procurement portals for bulk buyers.",
+                'Bantala and Tangra makers sell bags, belts, wallets and shoes. Stores need leather grade details, size charts, gift options and wholesale ordering for boutiques.',
               example:
-                'Leather bag and footwear brands, B2B leather goods exporters, artisan shoe makers.',
+                'Leather bag brands, footwear makers, belt and accessory exporters.',
             },
             {
-              name: 'Textiles & Jute',
+              name: 'Kantha, Dhokra & Crafts',
               description:
-                "Bengal's weaving and jute industry is transitioning to D2C ecommerce. Regional language support (Bengali), WhatsApp-native catalogues, and export-ready international stores.",
+                'Hand-stitched Kantha and Dhokra metalwork sell to gift buyers and boutiques. Stores need maker stories, careful photography and international checkout.',
               example:
-                'Muslin fabric brands, jute product D2C companies, Bengali weave labels.',
+                'Kantha embroidery collectives, Dhokra artisans, terracotta and craft studios.',
             },
             {
-              name: 'Sweets & Food Products',
+              name: 'Tea Trade',
               description:
-                "Kolkata's iconic food culture (Rasgulla, Sandesh, mishti doi) drives a growing D2C packaged food and gifting market. FSSAI compliance, cold-chain logistics, and premium gifting SKUs.",
+                'Kolkata tea merchants sell Darjeeling and Assam teas to home buyers and cafes. Stores need garden and flush details, pack sizes, subscriptions and export shipping.',
               example:
-                'Iconic sweet brands, packaged food D2C companies, regional cuisine gifting boxes.',
+                'Tea merchants and blenders, single-estate brands, tea gift box sellers.',
             },
             {
-              name: 'Jewellery & Gold',
+              name: 'Mishti & Bengali Food',
               description:
-                "Kolkata's gold jewellery market on Johurabazar is one of India's oldest. Hallmark compliance, BIS certification display, COD with insured shipping, and NRI-targeted stores.",
+                'Rosogolla, sandesh and nolen gur products have short shelf lives. Stores need delivery zones, dispatch cut-offs, FSSAI details and festival gift boxes.',
               example:
-                'Gold jewellery retailers, diamond brands, B2B jewellery wholesalers.',
+                'Sweet shops, packaged mishti brands, Bengali snack and spice makers.',
             },
             {
-              name: 'B2B Wholesale & Trade',
+              name: 'Wholesale & Distribution',
               description:
-                "Kolkata is Eastern India's commercial hub. B2B wholesale portals with tiered dealer pricing, GST B2B invoicing, and bulk order management for distributors across Eastern India.",
+                'Burrabazar traders supply shops across East and Northeast India. Portals need login-only price lists, credit limits, carton quantities and GST B2B invoices.',
               example:
-                'FMCG distributors, industrial goods wholesalers, agri-commodity traders.',
+                'Textile and garment wholesalers, FMCG distributors, hardware and household goods traders.',
             },
           ]}
         />
@@ -711,14 +688,14 @@ export default function KolkataEcommercePage() {
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What founders say after we build their store"
+          headline="What founders say after we launch their store"
         />
 
         {/* ── 12. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Everything Kolkata Founders Ask Before They Sign"
-          lead="The questions we answer on every Kolkata ecommerce discovery call, answered here, without the runaround."
+          headline="What Kolkata Owners Ask Before They Sign"
+          lead="The questions Kolkata traders, weavers and brand owners ask us first, from Durga Puja deadlines to Bengali storefronts and wholesale portals."
           categories={KOLKATA_ECOM_FAQ_CATEGORIES}
           items={KOLKATA_ECOM_FAQ_ITEMS}
         />
@@ -727,11 +704,11 @@ export default function KolkataEcommercePage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO LAUNCH"
-          headline="Your Kolkata Ecommerce Store. Live in 7 Days."
-          sub="Join 500+ brands across India, the US, the UK and the UAE who chose FactoryJet. We will scope your build, recommend the right platform, and deliver a Razorpay-integrated, GST-compliant, Lighthouse 90+ store in 7 business days. Free strategy call, no commitment required."
+          headline="Your Kolkata Store, Live in 7 Days"
+          sub="500+ businesses across India, the US, the UK and the UAE have worked with FactoryJet. Tell us what you sell, retail or wholesale, and we will recommend a platform, price each phase in writing and show you a draft of your store before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price. 7-day delivery. Razorpay + GST + Shiprocket. Your codebase delivered in full on launch day."
+          objectionHandler="Fixed price per phase. 7-day delivery. UPI, COD and GST set up. You own the code and every account."
         />
 
       </main>

@@ -27,7 +27,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Ecommerce Development in Pune | FactoryJet',
   description:
-    'Shopify & WooCommerce stores for Pune brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery.',
+    'Ecommerce development in Pune for D2C brands and Pimpri-Chinchwad suppliers. Shopify, WooCommerce, Razorpay, UPI, COD and GST invoicing. 7-day delivery.',
   keywords: [
     'ecommerce development company pune',
     'ecommerce website development pune',
@@ -35,7 +35,6 @@ export const metadata: Metadata = {
     'woocommerce development pune',
     'online store development pune',
     'custom ecommerce development pune',
-    'affordable ecommerce development pune',
     'ecommerce website cost pune',
     'd2c website pune',
     'razorpay shopify pune',
@@ -50,7 +49,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Ecommerce Development Company in Pune | FactoryJet',
     description:
-      'Shopify, WooCommerce, D2C, and custom ecommerce stores for Pune businesses. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+      'Shopify, WooCommerce and dealer portals for Pune businesses, from Hinjewadi D2C brands to Chakan auto suppliers. GST-ready checkout. 7-day delivery.',
     url: 'https://factoryjet.com/services/ecommerce-development/pune',
     images: [
       {
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ecommerce Development Pune | FactoryJet',
     description:
-      'Shopify, WooCommerce & custom ecommerce for Pune brands. Razorpay + GST + Shiprocket.',
+      'Pune ecommerce stores and dealer portals: Shopify, WooCommerce, Razorpay and GST invoicing.',
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -93,7 +92,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -120,7 +119,7 @@ const serviceSchema = {
     '@id': 'https://www.wikidata.org/wiki/Q1538', // Wikidata label: Pune (city in Maharashtra, India)
   },
   description:
-    'Custom ecommerce development for Pune businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',
+    'Ecommerce development for Pune businesses: Shopify and WooCommerce stores for D2C brands, dealer ordering portals for auto component makers, Razorpay and UPI checkout, GST invoicing. Lighthouse 95+.',
 };
 
 const localBusinessSchema = {
@@ -131,7 +130,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/pune',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Pune businesses. Shopify, WooCommerce, and custom stores. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+    'Ecommerce development company serving Pune, Pimpri-Chinchwad and Chakan businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing. 7-day delivery.',
   areaServed: [
     'Koregaon Park', 'Hinjewadi', 'Viman Nagar', 'Kothrud',
     'Baner', 'Wakad', 'Hadapsar', 'Shivajinagar',
@@ -146,33 +145,33 @@ const localBusinessSchema = {
 const PUNE_ECOM_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery & Platform Recommendation',
+    title: 'Catalogue and Buyer Mapping',
     description:
-      'We map your products, target audience, logistics requirements, and revenue model. Platform recommendation (Shopify, WooCommerce, or custom) is made here, before we scope or price anything.',
+      'We list what you sell, who buys it and how it ships. For a Pune D2C brand that may mean subscriptions and Shiprocket. For a Chakan supplier it means dealer price slabs and part numbers. The platform choice comes out of this call.',
   },
   {
     number: '02',
-    title: 'Figma Design & Mockup Approval',
+    title: 'Design on Your Products',
     description:
-      'Custom Figma designs for your homepage, product pages, collection pages, and checkout. Mobile-first at 375px. India-specific UX: UPI placement, COD badge position, trust signals above the fold.',
+      'Home, collection, product and checkout pages are designed in Figma with your real products, phone layout first. You approve where UPI, COD and trust details sit before any code is written.',
   },
   {
     number: '03',
-    title: 'Development & Payment Integration',
+    title: 'Build and Integrations',
     description:
-      'Platform setup, theme or custom development, Razorpay / PayU integration, UPI configuration, GST auto-invoicing, Shiprocket wiring, and product catalogue import.',
+      'Theme or custom build, Razorpay or PayU, UPI and COD rules, GST invoices with HSN codes, courier setup and catalogue import. Dealer portals also get logins, price lists and one-click reorder.',
   },
   {
     number: '04',
-    title: 'QA & Lighthouse Audit',
+    title: 'Testing on Real Payments',
     description:
-      'End-to-end testing of every payment method (UPI, cards, COD, wallets). Lighthouse 90+ on mobile before we ship. Core Web Vitals green: LCP under 2.5s, CLS below 0.1.',
+      'We place test orders with UPI, cards, wallets and COD, check invoices and courier labels, and run Lighthouse on mobile. The target is 90+, with LCP under 2.5 seconds.',
   },
   {
     number: '05',
-    title: 'Launch & Handover',
+    title: 'Launch and Handover',
     description:
-      'Zero-downtime DNS switch. Sitemap submitted to Google Search Console. Full codebase delivered to your GitHub. 60-minute Zoom walkthrough. 30-day post-launch support window.',
+      'DNS switch without downtime, sitemap sent to Search Console, code pushed to your GitHub and an admin walkthrough for your team. Defects in our work are fixed inside the build price for the cover period we agree.',
   },
 ];
 
@@ -189,149 +188,137 @@ const PUNE_ECOM_FAQ_CATEGORIES = [
 ];
 
 const PUNE_ECOM_FAQ_ITEMS = [
-
-  /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How long does it take to launch a Pune ecommerce store?',
+    question: 'How quickly can a Pune ecommerce store go live?',
     answer:
-      'FactoryJet delivers standard Shopify and WooCommerce stores in 7 business days for Starter and Growth builds. Day 1 is a discovery call to finalise your catalogue, payment preferences, and logistics setup. Days 2–3 are Figma design and mockup approval. Days 3–5 are development and integration. Day 6 is QA and Lighthouse testing. Day 7 is launch. Custom platform and marketplace builds take longer, usually 8 to 16 weeks depending on scope.',
+      'A standard Shopify or WooCommerce store goes live in 7 days once your products, photos and payment gateway approval are ready. A custom-theme store takes 3 to 5 weeks. Dealer portals for Pimpri-Chinchwad suppliers, with buyer price lists and GST invoicing, take 5 to 8 weeks. Headless or fully custom builds take 8 to 14 weeks.',
   },
   {
     category: 'pricing',
     question: 'How much does ecommerce development cost in Pune?',
     answer:
-      "FactoryJet ecommerce projects are fixed-price and scoped to your build. The main cost drivers are your platform (Shopify or WooCommerce vs a custom build), number of products, the payment and shipping integrations you need, and any custom features like subscriptions or B2B pricing. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts. The price is fixed and confirmed in writing, with no hourly billing and no scope creep.",
+      'The price depends on scope. For Pune projects the big drivers are dealer pricing for trade buyers, subscriptions for health brands, the number of products and variants, and links to Tally or an ERP. FactoryJet gives a fixed written price after a short scoping call, so the number does not change once work starts.',
   },
   {
     category: 'pricing',
-    question: 'Do you offer payment plans for the development cost?',
+    question: 'Do I pay for the whole build upfront?',
     answer:
-      'Yes. All plans can be split 50% upfront and 50% on launch day. Growth and Custom plans can be structured as 40-30-30 across the build. We accept NEFT, RTGS, UPI, and all major credit cards. No interest or fees are charged on installment plans; it is simply a split of the quoted fixed price.',
+      'No. We break the work into phases, such as the storefront first and the dealer portal second. Each phase has its own scope and price, and you sign each one separately. You can pay by NEFT, RTGS or UPI, and nothing is billed by the hour.',
   },
   {
     category: 'pricing',
-    question: 'What happens if my store is not ready in 7 days?',
+    question: 'Can I see a working draft before I sign?',
     answer:
-      'We have delivered on time for 97% of all builds. When a build does run over, the cause is almost always a delay in receiving product images, content, or payment gateway credentials, which we flag upfront in the onboarding checklist.',
-  },
-
-  /* ── Platform & Tech ── */
-  {
-    category: 'platform',
-    question: 'Which ecommerce platform is right for my Pune business?',
-    answer:
-      'Shopify is the best default for most Pune D2C and B2C brands: fast to launch, easy to manage, and natively supports Razorpay, PayU, and UPI. WooCommerce is the right choice when you are already on WordPress or need deep content-commerce integration (recipes, guides, editorial content). Custom Next.js platforms make sense for high-volume D2C brands, B2B wholesale portals with complex pricing rules, or multi-vendor marketplaces where Shopify and WooCommerce hit their ceiling. FactoryJet makes this recommendation during discovery at no charge.',
+      'Yes. We build a draft on a handful of your own products and walk you through the product page, cart and checkout. You judge it on real items. If it does not suit your brand, you walk away without paying anything.',
   },
   {
     category: 'platform',
-    question: 'Do you set up Razorpay, UPI, and Cash on Delivery for all stores?',
+    question: 'Shopify or WooCommerce for a Pune D2C brand?',
     answer:
-      'Yes, all India payment methods are configured in every plan. Razorpay is our primary gateway and covers UPI, net banking, cards, wallets (Paytm, PhonePe, Mobikwik), EMI on major cards, and BNPL (LazyPay, Simpl). We also integrate PayU, CCAvenue, or PhonePe Business if you have an existing relationship. Cash on Delivery is configured with prepaid-to-COD ratios you control. Razorpay\'s fraud detection rules are configured at launch to keep COD abuse low.',
+      'Shopify suits most Pune D2C brands. It is quick to run, strong on mobile, and supports Razorpay, UPI and subscriptions through apps. WooCommerce fits if your site already runs on WordPress and content drives sales, such as fitness guides or recipes. We recommend one on the scoping call and explain why.',
   },
   {
     category: 'platform',
-    question: 'Can you connect my Pune store to Amazon India and Flipkart?',
+    question: 'Can you build a dealer portal for an auto component maker in Chakan or Bhosari?',
     answer:
-      'Yes, this is included in the Growth plan and above. We use Cedcommerce or Unicommerce to sync your product catalogue, pricing, and inventory between your Shopify or WooCommerce store and your Amazon India and Flipkart seller accounts. Orders from all channels flow into one dashboard. When stock sells on Amazon, it is deducted from your store automatically, preventing overselling.',
+      'Yes. Approved dealers log in and see their own price slab, minimum order quantity and credit terms. They search by part number or vehicle model, reorder in a click and download GST invoices. We can push orders into Tally, Zoho Books or your ERP so your accounts team stops retyping them.',
   },
   {
     category: 'platform',
-    question: 'Can you set up WhatsApp Commerce and automated order flows?',
+    question: 'Which payment options will my Pune store accept?',
     answer:
-      'Yes. We integrate WhatsApp Business API via Interakt, Wati, or AiSensy to send order confirmations, shipping updates, and abandoned cart messages on WhatsApp, where open rates are 85%+ versus email\'s 20%. We also build conversational product discovery chatbots where customers browse and order directly in WhatsApp, with Razorpay payment links sent in-chat. This is included in Growth and Custom plans.',
-  },
-
-  /* ── India-Specific ── */
-  {
-    category: 'india',
-    question: 'Do your stores support GST invoicing and compliance?',
-    answer:
-      'Yes, GST compliance is built into every Indian ecommerce store we deliver. This includes auto-generated GST invoices at order placement, GSTIN capture at checkout for B2B buyers, HSN code mapping per product category, state-wise IGST/CGST/SGST rate configuration, and monthly GSTR-1 export compatibility. We integrate with Tally, Zoho Books, or custom accounting exports on request.',
+      'Razorpay is our default. One account covers UPI, cards, net banking, wallets, EMI and pay-later options. If you already use PayU, CCAvenue or PhonePe, we connect that instead. COD comes with limits you set, such as a cap on order value or COD only for repeat customers.',
   },
   {
-    category: 'india',
-    question: 'Which logistics partner should I use for a Pune store?',
+    category: 'platform',
+    question: 'Can my store sell on Amazon, Flipkart and Nykaa too?',
     answer:
-      'Shiprocket is our default recommendation for most Pune ecommerce stores. It gives you access to Delhivery, Bluedart, XpressBees, Ekart, and Shadowfax under one integration, with automated NDR workflows, returns management, and weight dispute resolution. Delhivery directly via API is better for high-volume brands (10,000+ shipments per month) needing custom SLAs. For hyperlocal same-day delivery in Pune, Shadowfax and Porter are the right fit.',
+      'Yes. A multichannel tool such as Unicommerce or CedCommerce keeps products, prices and stock in step across your own store and the marketplaces. Orders arrive in one dashboard. When the last tub of a protein powder sells on Amazon, your store marks it sold out too.',
   },
   {
     category: 'india',
-    question: 'Can you add Marathi or Hindi language support to my store?',
+    question: 'How do you handle GST on Pune orders?',
     answer:
-      'Yes, multi-language support is available for all platforms. For Shopify we use the Translate & Adapt app or Langify for regional language storefronts. For WooCommerce we implement WPML or TranslatePress. For custom platforms we build the i18n layer natively. Language-switched URLs follow SEO-safe hreflang patterns. We have built stores in Hindi, Marathi, Tamil, Gujarati, and Bengali.',
+      'Each order produces a GST invoice with HSN codes and the right split: CGST and SGST inside Maharashtra, IGST for other states. Business buyers enter a GSTIN at checkout. Monthly exports line up with GSTR-1, and invoices can sync with Tally or Zoho Books.',
   },
   {
     category: 'india',
-    question: 'How do you handle cart abandonment for Indian shoppers?',
+    question: 'Which courier works best for a store shipping from Pune?',
     answer:
-      'India has a 78% cart abandonment rate, higher than global averages because COD hesitancy and payment UX friction are common. We build a 3-touch recovery sequence: 1) WhatsApp message within 30 minutes with a direct Razorpay payment link, 2) SMS at 2 hours with a small discount, 3) email at 24 hours with a trust signal (reviews, return policy). Stores with this sequence recover 18–22% of abandoned carts on average.',
-  },
-
-  /* ── Speed & SEO ── */
-  {
-    category: 'seo',
-    question: 'Will my Pune ecommerce store rank on Google?',
-    answer:
-      'Every store we build includes technical SEO from day one: Product and BreadcrumbList schema for Google Shopping eligibility, optimised title and meta templates, canonical URLs to prevent duplicate content (a common Shopify and WooCommerce issue), GST price display, Core Web Vitals green on mobile, and sitemap submission to Google Search Console. LocalBusiness schema with Pune geo-coordinates is included for local search visibility.',
+      'Most Pune stores start on Shiprocket, which gives one dashboard for Delhivery, Blue Dart, Xpressbees, Ekart and others, plus return and failed-delivery handling. Heavy B2B parts may need a freight partner instead. For same-day orders inside Pune and PCMC, a hyperlocal service such as Porter or Shadowfax fits.',
   },
   {
-    category: 'seo',
-    question: 'Do you guarantee a Lighthouse score?',
+    category: 'india',
+    question: 'Can my store run in Marathi as well as English?',
     answer:
-      'Yes, Lighthouse 90+ on Performance, Accessibility, Best Practices, and SEO is a contractual commitment on all builds. We achieve this by serving WebP images from CDN, deferring non-critical JavaScript, inlining critical CSS, using next-gen fonts with preload, and hosting on Cloudflare Pages with assets served from the nearest edge node to your customer. We QA the score before handover and fix any regression post-launch within 48 hours at no charge.',
+      'Yes. Shopify and WooCommerce both support a Marathi version on its own URL, so Google indexes both. We test Devanagari fonts on budget Android phones, and we ask that product text be written or checked by a person, since machine translation trips on sizes and materials.',
   },
   {
-    category: 'seo',
-    question: 'What are Core Web Vitals and why do they matter for my store?',
+    category: 'india',
+    question: 'How do subscriptions work for a Pune health or coffee brand?',
     answer:
-      'Core Web Vitals are Google\'s three page experience signals: LCP (Largest Contentful Paint, how fast the main content loads, target under 2.5s), INP (Interaction to Next Paint, how fast the page responds to clicks, target under 200ms), and CLS (Cumulative Layout Shift, whether elements jump around, target below 0.1). Google confirmed these are a ranking signal. More importantly, a 1-second delay in mobile load time reduces conversion rates by 20%. For a high-revenue store, that adds up to significant lost revenue every second of slowness.',
+      'We add a subscription app on Shopify or a plugin on WooCommerce. Buyers pick a monthly or fortnightly delivery and pay by card or a UPI AutoPay mandate. They can pause or skip from their own account, so nobody has to call you to change an order.',
   },
   {
     category: 'seo',
-    question: 'Can you optimise an existing Pune store that is already slow?',
+    question: 'Will my store show up for Pune searches?',
     answer:
-      'Yes, we offer a standalone Speed & SEO Audit + Fix package. We diagnose all Lighthouse failures, compress and convert your image library to WebP, remove render-blocking resources, fix CLS issues from unloaded fonts or images, and migrate your hosting to Cloudflare if needed. Most stores see a 30–60 point Lighthouse improvement within one sprint. We issue a written commitment: if we do not reach Lighthouse 90+ overall, we continue working at no additional charge.',
-  },
-
-  /* ── Process & Ownership ── */
-  {
-    category: 'trust',
-    question: 'Do I own my store and all the code after launch?',
-    answer:
-      '100% yes. On launch day we transfer full ownership of the store account, the theme code, all integrations, and every custom component we built. You get GitHub repository access for all code assets and full admin credentials for every tool. We do not hold your store with ongoing fees. You can take the store to any developer after handover; we encourage it. What we hope is that you come back to us for the next phase.',
+      'It can. From launch we set up product and breadcrumb schema, clean titles, canonical tags and a sitemap in Search Console. If you have a shop in Kothrud or Aundh, we link the store to your Google Business Profile. For industrial suppliers, guides that answer spec questions help them rank for part searches.',
   },
   {
-    category: 'trust',
-    question: 'What does the handover process look like?',
+    category: 'seo',
+    question: 'Do you check the store speed before handover?',
     answer:
-      'Day 7 is handover day. We schedule a 60–90 minute Zoom walkthrough covering: admin panel navigation, adding and editing products, processing orders, managing discounts, viewing analytics, and handling basic shipping issues. We deliver a handover document with all credentials, API keys, support contacts for each integration, and a first-30-days checklist. Post-handover, we are available on WhatsApp for 30 days for quick questions at no charge.',
+      'Yes. We run Lighthouse on mobile for the home, collection and product pages and share the report. We aim for 90+, LCP under 2.5 seconds and CLS under 0.1. Most of the gains come from image sizes and from apps that load scripts on every page.',
+  },
+  {
+    category: 'seo',
+    question: 'My Pune store is slow. Can you fix it?',
+    answer:
+      'Yes. We audit the slowest pages first and list the causes: heavy images, unused apps, theme code, and chat or review widgets. You get the fixes ranked by impact, with a fixed price for the work. Removing apps nobody uses often gives the biggest gain.',
+  },
+  {
+    category: 'seo',
+    question: 'Do Core Web Vitals matter for an online store?',
+    answer:
+      'They are part of how Google judges page experience: LCP for loading, INP for response to taps and CLS for layout shifts. On a store they also decide how soon a buyer sees the price and can tap Add to Cart on a 4G connection.',
   },
   {
     category: 'trust',
-    question: 'Do you offer post-launch maintenance for Pune stores?',
+    question: 'Who owns the store and code after launch?',
     answer:
-      'Yes. Our Care Plan covers plugin and platform updates, a monthly Lighthouse audit and performance fixes, uptime monitoring, a few hours of content or feature changes each month, and priority support with a 4-hour response SLA. Our Growth Retainer adds monthly A/B tests, conversion optimization, and new campaign landing pages. Both are month-to-month with no lock-in, and we share the exact monthly price on your free call.',
+      'You do. The store account, domain, gateway and courier logins are in your company name, and the code sits in your GitHub. Hosting and app bills can run in your own accounts at cost. You can hire any developer later without asking us.',
   },
   {
     category: 'trust',
-    question: 'Can I manage and update the store myself after launch?',
+    question: 'What happens on handover day?',
     answer:
-      'Absolutely, self-management is the goal. For Shopify stores, adding products, updating prices, creating discount codes, and reviewing orders requires zero coding knowledge. WooCommerce is slightly more technical but we set up a simplified admin workflow for non-technical founders. We build a short video library covering the 10 most common tasks your team will perform, so you are not dependent on a developer for day-to-day operations.',
+      'We take your team through the admin: adding products, editing prices, running discounts, processing orders and printing labels. You get a handover note with every login, each integration contact and a first-month checklist. For dealer portals we also show how to add a new dealer and price list.',
   },
-
-  // Money-query coverage, added 2026-06-11
+  {
+    category: 'trust',
+    question: 'What support do Pune stores get after launch?',
+    answer:
+      'Defects in our work are fixed within the build price for a cover period we agree before starting. Beyond that, support is your choice. Each change is quoted and approved first, and there is no monthly minimum to stay with us.',
+  },
+  {
+    category: 'trust',
+    question: 'Can my team run the store without a developer?',
+    answer:
+      'Yes, for daily work. On Shopify, adding products, changing prices, creating discount codes and checking orders need no code. WooCommerce takes a little more setup, so we simplify the admin for non-technical staff and record short videos of the common tasks.',
+  },
   {
     category: 'pricing',
     question: 'Who is the best ecommerce development company in Pune?',
     answer:
-      'For D2C brands and small businesses, FactoryJet makes a strong case: fixed written prices, senior engineers, and stores that launch in weeks. Any ecommerce website development company in Pune, or any ecommerce solution company in Pune, should pass three checks: who writes the code, is the price fixed, and do you own the store at the end. That is how to find the best ecommerce website development company in Pune and the best ecommerce solution company in Pune for your catalog.',
+      'Judge any ecommerce website development company in Pune on three things: who writes the code, whether the price is fixed in writing, and whether you own everything at the end. FactoryJet meets all three for D2C brands and industrial suppliers, and shows a draft of your store before you sign. Apply the same test to any ecommerce solution company in Pune on your shortlist.',
   },
   {
     category: 'pricing',
-    question: 'Should I hire ecommerce developer in Pune or use an agency?',
+    question: 'Should I hire an ecommerce developer in Pune or an agency?',
     answer:
-      'One developer can build a basic store, but a real shop needs design, payments, shipping, and SEO together. A small senior team covers all of it at a fixed price. If you do hire ecommerce developer in Pune directly, check store speed scores from their past work first.',
+      'A freelancer can set up a basic store. Selling at volume takes design, payment setup, courier rules, GST and SEO at once, which is a lot for one person. A small senior team covers it at a fixed price. If you hire an ecommerce developer in Pune directly, test two of their live stores on your phone first.',
   },
 ];
 
@@ -409,8 +396,8 @@ export default function PuneEcommercePage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_pune_hero" />}
           eyebrow="ECOMMERCE DEVELOPMENT · PUNE"
-          headline="Pune's Most Trusted Ecommerce Agency: Store Live in 7 Days"
-          lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Pune brands: Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. 7-day delivery."
+          headline="Ecommerce Development in Pune: Store Live in 7 Days"
+          lead="FactoryJet builds Shopify and WooCommerce stores for Pune D2C brands, and ordering portals for auto component suppliers in Pimpri-Chinchwad and Chakan. Razorpay, UPI and COD at checkout, a GST invoice on every order, Lighthouse 90+ on mobile. 7-day delivery."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery',
@@ -426,14 +413,14 @@ export default function PuneEcommercePage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+          description="Built for D2C brands, B2B suppliers and Shopify sellers in India, the US, the UK and the UAE. Pune buyers get the same terms: a fixed price per phase, the full codebase, and 7-day delivery."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="ECOMMERCE DEVELOPMENT · PUNE"
-          headline="The Right Platform for Every Pune Business Model"
-          lead="Pune's ecommerce market spans D2C health brands in Koregaon Park, B2B auto manufacturers in Pimpri-Chinchwad, IT product companies in Hinjewadi, and fashion labels on FC Road. Each needs a different platform strategy. FactoryJet recommends the right one before we quote."
+          headline="Which Platform Fits a Pune Business"
+          lead="A Hinjewadi supplement brand, a Bhosari forging unit selling spares to dealers and a Laxmi Road saree shop going online need three different builds. We pick the platform after we see your catalogue and your buyers, and before we quote."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -458,12 +445,7 @@ export default function PuneEcommercePage() {
               </div>
 
               <p>
-                The average Indian ecommerce store converts at 0.8–1.2%. The top quartile converts at
-                3–5%. The difference is not the product; it is the store. Slow load times on 4G
-                networks, a UPI checkout that requires too many steps, product pages that bury the buy
-                button below three paragraphs of description, and a mobile layout that was clearly
-                designed on a desktop. These are engineering and design problems, not marketing
-                problems.
+                Pune shoppers compare before they buy. Many work in IT, read specs closely and leave a store that hides delivery dates or return terms. For them the store has to load fast on a phone, show the total price early and offer UPI in one tap. Trade buyers in the MIDC belts want something else: part numbers, price slabs and a GST invoice they can file.
               </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
@@ -497,17 +479,12 @@ export default function PuneEcommercePage() {
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  A great ecommerce store is an engineering project measured in revenue, not a
-                  design project measured in compliments.
+                  A store earns its keep in orders, not in compliments on the design.
                 </p>
               </div>
 
               <p>
-                FactoryJet designs every store around Indian consumer behaviour: where the UPI button
-                goes, when the WhatsApp chat trigger fires, how the mobile product page stacks on a
-                375px screen, what trust signals appear above the fold, and how EMI is surfaced at
-                checkout. We have built 120+ Shopify stores and hundreds of WooCommerce and custom
-                builds for Indian brands. That data informs every decision we make on the next one.
+                We design each Pune build around how its buyers pay and ask questions. That means UPI near the top of checkout, a WhatsApp button where doubts come up, size or spec tables close to the price, and EMI shown on higher-value items. Dealer portals get a quick reorder screen, because most trade orders repeat last month.
               </p>
             </>
           }
@@ -557,7 +534,7 @@ export default function PuneEcommercePage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  We recommend the right platform. Not the most expensive one.
+                  We pick the platform your catalogue needs, not the priciest one.
                 </p>
               </div>
             </div>
@@ -567,23 +544,23 @@ export default function PuneEcommercePage() {
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Pune Brands Choose FactoryJet Over Local Agencies"
-          lead="Pune ecommerce agencies often charge several times more for a comparable project and take 10 to 20 weeks to deliver, usually without telling you the price upfront. FactoryJet gives you a fixed quote before you speak to us, puts 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. The price is fixed and confirmed in writing, and the codebase is yours to keep."
+          headline="Why Pune Founders Work With FactoryJet"
+          lead="Two things go wrong most often with store builds: the price moves and the launch slips. We quote a fixed price for each phase, write 7-day delivery into the agreement for standard stores, and show you a working draft on your own products before you sign."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing.',
-              body: "Pune's market moves fast. Waiting 16 weeks for an agency to deliver a store you briefed in April is not a plan; it is a liability. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the delivery date written into the project agreement. We have delivered on time for 97% of all builds.",
+              body: 'A standard Shopify or WooCommerce store for a Pune brand goes live in 7 days once products, photos and gateway approval are in. The date sits in the agreement. We have delivered on time on 97% of builds, and most late ones were waiting on product photos.',
             },
             {
               icon: '📱',
-              title: "India's ecommerce is 65% mobile. Most stores are not built for it.",
-              body: 'Most Pune ecommerce stores are designed on a desktop and adapted down. The result: 0.4% mobile conversion rates on template stores versus 2.1% on properly designed custom builds. FactoryJet designs every store mobile-first at 375px: tap targets, product image sizing, checkout flow, and UPI placement all optimised for the phone your customer actually uses.',
+              title: 'Built for the phone your buyer holds.',
+              body: 'Pune buyers browse between shifts and on the commute. We design at 375px first: thumb-sized buttons, product photos that load fast on 4G, and a checkout that finishes in a few taps. Desktop comes second.',
             },
             {
               icon: '📋',
               title: 'Fixed price. Agreed before we start.',
-              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your store running.",
+              body: 'Each phase is scoped and priced on its own, in writing, before work begins. No hourly meter and no surprise invoice at launch. Support after launch is optional, and every change is quoted before we do it.',
             },
           ]}
         />
@@ -591,20 +568,20 @@ export default function PuneEcommercePage() {
         {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Platform Decision to Live Store in 7 Days"
-          lead="Platform recommendation before we scope. Design approval before we build. Full payment and logistics testing before we launch."
+          headline="How a Pune Store Goes From Brief to Launch"
+          lead="We settle the platform first, get your sign-off on design second, and test every payment and courier flow before go-live."
           stages={PUNE_ECOM_STAGES}
-          closingNote="5 STAGES · 7 DAYS · RAZORPAY + GST + SHIPROCKET · LIGHTHOUSE 90+ · ZERO-DOWNTIME LAUNCH"
+          closingNote="5 STAGES · PLATFORM FIRST · RAZORPAY + GST + SHIPROCKET · LIGHTHOUSE 90+ · CODE HANDED OVER"
         />
 
         {/* ── 7. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="PUNE ECOMMERCE MARKET"
-          headline="Why Pune Is Maharashtra's Rising Ecommerce Star"
+          headline="What Pune Businesses Sell Online"
           leadParagraphs={[
-            "Pune's ecommerce market combines the manufacturing depth of Maharashtra's second-largest industrial city with the digital sophistication of one of India's largest university and IT hubs. The result is a uniquely balanced market: sophisticated B2C consumers in Koregaon Park and Viman Nagar, large B2B procurement in Pimpri-Chinchwad, and a growing D2C startup ecosystem in Hinjewadi and Baner.",
-            "Pune's verticals are increasingly digital-native. Hinjewadi IT workers are buying premium health, fitness, and lifestyle products from D2C Shopify stores with subscription replenishment. Pimpri-Chinchwad auto manufacturers are building B2B procurement portals with GST B2B invoicing and tiered dealer pricing. Koregaon Park lifestyle brands are running omnichannel operations across their own store and Instagram Shop. And FC Road fashion retailers are transitioning from offline-first to D2C operations for the first time.",
-            "What makes Pune's ecommerce market distinctive is the combination of a highly educated, value-conscious consumer base and a deep manufacturing supply chain available locally. Pune buyers research extensively before purchase and convert when they find a store that delivers specification clarity, transparent pricing, and a seamless UPI or card checkout. FactoryJet builds these signals into every Pune store from day one.",
+            'Pune runs two commerce economies side by side. One is industrial: the auto and engineering suppliers of Pimpri-Chinchwad, Bhosari and Chakan, who sell parts, tooling and spares to OEMs and dealers. The other is consumer: IT staff in Hinjewadi, Kharadi and Magarpatta who buy health products, gadgets and fashion online, often from young D2C brands started in the same city.',
+            'Each side needs a different store. Industrial suppliers want a dealer portal where approved buyers log in, search by part number, see their own price and download a GST invoice. Consumer brands want a fast Shopify store with subscriptions, Instagram selling and quick delivery across the city. Older retailers on Laxmi Road and in the peth areas, selling sarees, jewellery and Paithani, are a third group taking trusted names online.',
+            'Pune buyers read before they pay. Clear specifications, honest delivery dates and a visible returns policy do more for sales here than discounts do. We put those on every product page, and write the copy in plain English, with Marathi where your customers expect it.',
           ]}
           stats={[
             {
@@ -631,50 +608,50 @@ export default function PuneEcommercePage() {
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="PUNE × ECOMMERCE"
-          headline="Ecommerce Development for Pune's Key Commerce Verticals"
-          lead="From Pimpri-Chinchwad auto manufacturers to Hinjewadi IT brands to Koregaon Park lifestyle labels , and Pune's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."
+          headline="Pune Sectors We Build Stores For"
+          lead="Pune buyers range from OEM purchase teams in Chakan to students near FC Road. These six sectors each need a different mix of catalogue, checkout and delivery."
           sectors={[
             {
               name: 'Auto Components & Engineering',
               description:
-                "Pune's Pimpri-Chinchwad is India's second-largest auto manufacturing cluster. B2B auto parts portals with specification search, bulk order flows, and GST invoicing.",
+                'Dealer and distributor portals for parts makers in Pimpri-Chinchwad, Bhosari and Chakan: part number search, fitment tables, price slabs by buyer, bulk orders and GST invoices.',
               example:
-                'Auto component manufacturers, engineering goods exporters, EV component suppliers.',
+                'Forging and casting units, aftermarket spares sellers, EV component makers.',
             },
             {
               name: 'IT Products & Tech D2C',
               description:
-                "Hinjewadi and Magarpatta's 500,000-strong IT workforce drives sophisticated D2C demand. Subscription products, SaaS bundles, and premium lifestyle D2C.",
+                'Hinjewadi and Kharadi buyers are used to fast apps. Gadget and accessory brands need spec comparison, EMI on the product page and quick doorstep delivery.',
               example:
-                'Tech hardware D2C brands, SaaS product companies, IT equipment suppliers.',
+                'Laptop accessory brands, smart home device sellers, IT hardware resellers.',
             },
             {
               name: 'Health, Wellness & Fitness',
               description:
-                "Pune's young professional population drives India's fastest-growing D2C health and fitness market. Subscription supplements, FSSAI compliance, cold-chain logistics.",
+                'Supplement and fitness brands selling to office workers need subscriptions, FSSAI details on each product and reminders that bring buyers back each month.',
               example:
-                'Supplement brands, organic food D2C, ayurvedic wellness companies.',
+                'Protein and supplement brands, millet and health food labels, ayurvedic wellness makers.',
             },
             {
-              name: 'Fashion & Lifestyle',
+              name: 'Fashion & Sarees',
               description:
-                'Koregaon Park and FC Road are Pune\'s premium fashion corridors. D2C fashion with AI size guides, Instagram Shop integration, and WhatsApp-native lookbooks.',
+                'From FC Road streetwear to Paithani weavers, fashion stores need size and drape guides, Instagram selling and an exchange flow for the wrong fit.',
               example:
-                'Premium lifestyle brands, sustainable fashion D2C, ethnic wear labels.',
+                'Paithani and Maharashtrian saree sellers, streetwear labels, ethnic wear boutiques.',
             },
             {
-              name: 'Education Products & EdTech',
+              name: 'Education Products',
               description:
-                "Pune's university city heritage creates unique demand for educational product ecommerce. Stationery, learning kits, EdTech hardware, and subscription learning boxes.",
+                'A city of colleges and coaching classes buys books, kits and stationery online. These stores need bundles by course, stock planned around the academic year, and COD.',
               example:
-                'Educational product brands, STEM kit companies, stationery D2C labels.',
+                'STEM kit makers, stationery brands, exam prep book sellers.',
             },
             {
-              name: 'Food & Beverage',
+              name: 'Food & Snacks',
               description:
-                "Pune's café culture and food innovation scene drives D2C packaged food and specialty beverage brands. FSSAI compliance, subscription replenishment, and gifting SKUs.",
+                'Pune bakeries, snack makers and coffee roasters ship across India. They need FSSAI labelling, shelf-life notes, gift boxes and festival bundles.',
               example:
-                'Specialty coffee brands, packaged food D2C, health snack companies.',
+                'Bakery and chakli makers, coffee roasters, packaged snack brands.',
             },
           ]}
         />
@@ -711,14 +688,14 @@ export default function PuneEcommercePage() {
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What founders say after we build their store"
+          headline="What founders say after a FactoryJet launch"
         />
 
         {/* ── 12. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Everything Pune Founders Ask Before They Sign"
-          lead="The questions we answer on every Pune ecommerce discovery call, answered here, without the runaround."
+          headline="Questions Pune Founders Ask Before They Sign"
+          lead="Straight answers to what Pune brands and suppliers ask on a first call: time, cost, payments, GST and who owns the code."
           categories={PUNE_ECOM_FAQ_CATEGORIES}
           items={PUNE_ECOM_FAQ_ITEMS}
         />
@@ -727,11 +704,11 @@ export default function PuneEcommercePage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO LAUNCH"
-          headline="Your Pune Ecommerce Store. Live in 7 Days."
-          sub="Join 500+ brands across India, the US, the UK and the UAE who chose FactoryJet. We will scope your build, recommend the right platform, and deliver a Razorpay-integrated, GST-compliant, Lighthouse 90+ store in 7 business days. Free strategy call, no commitment required."
+          headline="Your Pune Store, Live in 7 Days"
+          sub="500+ businesses across India, the US, the UK and the UAE have worked with FactoryJet. Tell us what you sell in Pune and we will recommend a platform, fix the price per phase in writing, and show you a draft of the store before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price. 7-day delivery. Razorpay + GST + Shiprocket. Your codebase delivered in full on launch day."
+          objectionHandler="Fixed price per phase. 7-day delivery. Razorpay, GST and Shiprocket set up. The code is yours from day one."
         />
 
       </main>

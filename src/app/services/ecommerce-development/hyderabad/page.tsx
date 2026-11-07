@@ -27,7 +27,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Ecommerce Development in Hyderabad | FactoryJet',
   description:
-    'Shopify & WooCommerce stores for Hyderabad brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery.',
+    'Ecommerce development in Hyderabad for pearl jewellers, Pochampally ikat weavers, pharma suppliers and HITEC City D2C brands. Shopify, UPI, GST. 7-day delivery.',
   keywords: [
     'ecommerce development company hyderabad',
     'ecommerce website development hyderabad',
@@ -35,7 +35,6 @@ export const metadata: Metadata = {
     'woocommerce development hyderabad',
     'online store development hyderabad',
     'custom ecommerce development hyderabad',
-    'affordable ecommerce development hyderabad',
     'ecommerce website cost hyderabad',
     'd2c website hyderabad',
     'razorpay shopify hyderabad',
@@ -50,7 +49,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Ecommerce Development Company in Hyderabad | FactoryJet',
     description:
-      'Shopify, WooCommerce, D2C, and custom ecommerce stores for Hyderabad businesses. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+      'Hyderabad ecommerce stores: pearls and bangles from the old city, ikat sarees, food brands, and B2B portals for pharma distributors. 7-day delivery.',
     url: 'https://factoryjet.com/services/ecommerce-development/hyderabad',
     images: [
       {
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ecommerce Development Hyderabad | FactoryJet',
     description:
-      'Shopify, WooCommerce & custom ecommerce for Hyderabad brands. Razorpay + GST + Shiprocket.',
+      'Hyderabad ecommerce: pearl, ikat, food and pharma B2B stores with UPI, COD, Telugu and GST.',
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -93,7 +92,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -120,7 +119,7 @@ const serviceSchema = {
     '@id': 'https://www.wikidata.org/wiki/Q1361', // Wikidata label: Hyderabad (capital of Telangana, India)
   },
   description:
-    'Custom ecommerce development for Hyderabad businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',
+    'Ecommerce development for Hyderabad businesses: Shopify and WooCommerce stores for pearl jewellers, ikat and handloom sellers and food brands, B2B ordering portals for pharma distributors, GST invoicing. Lighthouse 95+.',
 };
 
 const localBusinessSchema = {
@@ -131,7 +130,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/hyderabad',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Hyderabad businesses. Shopify, WooCommerce, and custom stores. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+    'Ecommerce development company serving Hyderabad and Secunderabad businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing. 7-day delivery.',
   areaServed: [
     'HITEC City', 'Madhapur', 'Gachibowli', 'Banjara Hills',
     'Jubilee Hills', 'Secunderabad', 'Kukatpally', 'Ameerpet',
@@ -146,33 +145,33 @@ const localBusinessSchema = {
 const HYDERABAD_ECOM_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery & Platform Recommendation',
+    title: 'Catalogue and Buyer Review',
     description:
-      'We map your products, target audience, logistics requirements, and revenue model. Platform recommendation (Shopify, WooCommerce, or custom) is made here, before we scope or price anything.',
+      'We go through what you sell and who buys it: city shoppers, NRIs, kirana stores or pharmacies. Pearls need grading details, sarees need weave notes, pharma needs licence checks. The platform follows from that.',
   },
   {
     number: '02',
-    title: 'Figma Design & Mockup Approval',
+    title: 'Design on Your Products',
     description:
-      'Custom Figma designs for your homepage, product pages, collection pages, and checkout. Mobile-first at 375px. India-specific UX: UPI placement, COD badge position, trust signals above the fold.',
+      'We design home, category, product and checkout screens with your real photos and prices, phone first. You approve layouts, language labels and trust details before code begins.',
   },
   {
     number: '03',
-    title: 'Development & Payment Integration',
+    title: 'Build and Integrations',
     description:
-      'Platform setup, theme or custom development, Razorpay / PayU integration, UPI configuration, GST auto-invoicing, Shiprocket wiring, and product catalogue import.',
+      'Store build, Razorpay for UPI, cards, wallets and COD, GST invoices with HSN codes, Shiprocket or a cross-border courier, and catalogue import. B2B portals get buyer logins and price lists.',
   },
   {
     number: '04',
-    title: 'QA & Lighthouse Audit',
+    title: 'Testing Before Launch',
     description:
-      'End-to-end testing of every payment method (UPI, cards, COD, wallets). Lighthouse 90+ on mobile before we ship. Core Web Vitals green: LCP under 2.5s, CLS below 0.1.',
+      'We place orders with each payment method, check invoices and courier labels, and test mobile speed with Lighthouse. Target: 90+ and LCP under 2.5 seconds.',
   },
   {
     number: '05',
-    title: 'Launch & Handover',
+    title: 'Launch and Training',
     description:
-      'Zero-downtime DNS switch. Sitemap submitted to Google Search Console. Full codebase delivered to your GitHub. 60-minute Zoom walkthrough. 30-day post-launch support window.',
+      'We switch the domain without downtime, submit the sitemap, hand over code and logins, and train your staff. Defects in what we built are fixed free during the agreed cover period.',
   },
 ];
 
@@ -189,149 +188,137 @@ const HYDERABAD_ECOM_FAQ_CATEGORIES = [
 ];
 
 const HYDERABAD_ECOM_FAQ_ITEMS = [
-
-  /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How long does it take to launch a Hyderabad ecommerce store?',
+    question: 'How long does a Hyderabad ecommerce store take to build?',
     answer:
-      'FactoryJet delivers standard Shopify and WooCommerce stores in 7 business days for Starter and Growth builds. Day 1 is a discovery call to finalise your catalogue, payment preferences, and logistics setup. Days 2–3 are Figma design and mockup approval. Days 3–5 are development and integration. Day 6 is QA and Lighthouse testing. Day 7 is launch. Custom platform and marketplace builds take longer, usually 8 to 16 weeks depending on scope.',
+      'A standard Shopify or WooCommerce store goes live in 7 days once products, photos and gateway approval are ready. A custom theme takes 3 to 5 weeks. B2B pharma portals or stores with subscriptions take 5 to 8 weeks, and custom platforms take 8 to 14 weeks.',
   },
   {
     category: 'pricing',
-    question: 'How much does ecommerce development cost in Hyderabad?',
+    question: 'What does ecommerce development cost in Hyderabad?',
     answer:
-      "FactoryJet ecommerce projects are fixed-price and scoped to your build. The main cost drivers are your platform (Shopify or WooCommerce vs a custom build), number of products, the payment and shipping integrations you need, and any custom features like subscriptions or B2B pricing. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts. The price is fixed and confirmed in writing, with no hourly billing and no scope creep.",
+      'The cost depends on what the store needs. In Hyderabad the main factors are NRI selling with international shipping, B2B buyer pricing, licence checks for pharma buyers, Telugu or Urdu storefronts and the size of the catalogue. We give a fixed written price after a scoping call.',
   },
   {
     category: 'pricing',
-    question: 'Do you offer payment plans for the development cost?',
+    question: 'How is payment for the build structured?',
     answer:
-      'Yes. All plans can be split 50% upfront and 50% on launch day. Growth and Custom plans can be structured as 40-30-30 across the build. We accept NEFT, RTGS, UPI, and all major credit cards. No interest or fees are charged on installment plans; it is simply a split of the quoted fixed price.',
+      'In phases. Each phase, such as the retail store or a B2B portal, has a written scope and a fixed price that you sign before it begins. NEFT, RTGS and UPI all work. There are no hourly charges.',
   },
   {
     category: 'pricing',
-    question: 'What happens if my store is not ready in 7 days?',
+    question: 'Can I try the store before committing?',
     answer:
-      'We have delivered on time for 97% of all builds. When a build does run over, the cause is almost always a delay in receiving product images, content, or payment gateway credentials, which we flag upfront in the onboarding checklist.',
-  },
-
-  /* ── Platform & Tech ── */
-  {
-    category: 'platform',
-    question: 'Which ecommerce platform is right for my Hyderabad business?',
-    answer:
-      'Shopify is the best default for most Hyderabad D2C and B2C brands: fast to launch, easy to manage, and natively supports Razorpay, PayU, and UPI. WooCommerce is the right choice when you are already on WordPress or need deep content-commerce integration (recipes, guides, editorial content). Custom Next.js platforms make sense for high-volume D2C brands, B2B wholesale portals with complex pricing rules, or multi-vendor marketplaces where Shopify and WooCommerce hit their ceiling. FactoryJet makes this recommendation during discovery at no charge.',
+      'Yes. We build a draft using some of your real products and show you browsing, cart and checkout working. Test it on your own phone. If it does not feel right, there is no contract and no payment.',
   },
   {
     category: 'platform',
-    question: 'Do you set up Razorpay, UPI, and Cash on Delivery for all stores?',
+    question: 'Which platform is best for a pearl or bangle business?',
     answer:
-      'Yes, all India payment methods are configured in every plan. Razorpay is our primary gateway and covers UPI, net banking, cards, wallets (Paytm, PhonePe, Mobikwik), EMI on major cards, and BNPL (LazyPay, Simpl). We also integrate PayU, CCAvenue, or PhonePe Business if you have an existing relationship. Cash on Delivery is configured with prepaid-to-COD ratios you control. Razorpay\'s fraud detection rules are configured at launch to keep COD abuse low.',
+      'Shopify suits most. It handles variants like pearl size, colour and strand length, supports video and certificate images, and takes UPI, COD and international cards. If you also sell wholesale to other jewellers, we add a login-only trade catalogue.',
   },
   {
     category: 'platform',
-    question: 'Can you connect my Hyderabad store to Amazon India and Flipkart?',
+    question: 'Can a pharma distributor take orders from pharmacies online?',
     answer:
-      'Yes, this is included in the Growth plan and above. We use Cedcommerce or Unicommerce to sync your product catalogue, pricing, and inventory between your Shopify or WooCommerce store and your Amazon India and Flipkart seller accounts. Orders from all channels flow into one dashboard. When stock sells on Amazon, it is deducted from your store automatically, preventing overselling.',
+      'Yes. Each pharmacy, clinic or hospital registers with its drug licence and GSTIN, then sees its own rates, batch and expiry details and stock. Orders produce GST invoices and can export to your billing software. Selling prescription drugs to consumers needs legal advice before any build.',
   },
   {
     category: 'platform',
-    question: 'Can you set up WhatsApp Commerce and automated order flows?',
+    question: 'Do you set up UPI, cards and COD?',
     answer:
-      'Yes. We integrate WhatsApp Business API via Interakt, Wati, or AiSensy to send order confirmations, shipping updates, and abandoned cart messages on WhatsApp, where open rates are 85%+ versus email\'s 20%. We also build conversational product discovery chatbots where customers browse and order directly in WhatsApp, with Razorpay payment links sent in-chat. This is included in Growth and Custom plans.',
-  },
-
-  /* ── India-Specific ── */
-  {
-    category: 'india',
-    question: 'Do your stores support GST invoicing and compliance?',
-    answer:
-      'Yes, GST compliance is built into every Indian ecommerce store we deliver. This includes auto-generated GST invoices at order placement, GSTIN capture at checkout for B2B buyers, HSN code mapping per product category, state-wise IGST/CGST/SGST rate configuration, and monthly GSTR-1 export compatibility. We integrate with Tally, Zoho Books, or custom accounting exports on request.',
+      'Yes. Razorpay is our default gateway, with UPI, cards, net banking, wallets and EMI. We can connect PayU, CCAvenue or PhonePe if you already use one. COD can be limited by order value or pincode.',
   },
   {
-    category: 'india',
-    question: 'Which logistics partner should I use for a Hyderabad store?',
+    category: 'platform',
+    question: 'Can my store sync with Amazon, Flipkart and Meesho?',
     answer:
-      'Shiprocket is our default recommendation for most Hyderabad ecommerce stores. It gives you access to Delhivery, Bluedart, XpressBees, Ekart, and Shadowfax under one integration, with automated NDR workflows, returns management, and weight dispute resolution. Delhivery directly via API is better for high-volume brands (10,000+ shipments per month) needing custom SLAs. For hyperlocal same-day delivery in Hyderabad, Shadowfax and Porter are the right fit.',
+      'Yes. A multichannel tool such as Unicommerce or EasyEcom connects your store to your marketplace accounts. Stock and prices stay aligned and orders collect in one dashboard, so a saree that sells on Flipkart is marked sold on your store too.',
   },
   {
     category: 'india',
-    question: 'Can you add Telugu or Hindi language support to my store?',
+    question: 'How is GST handled on a Hyderabad store?',
     answer:
-      'Yes, multi-language support is available for all platforms. For Shopify we use the Translate & Adapt app or Langify for regional language storefronts. For WooCommerce we implement WPML or TranslatePress. For custom platforms we build the i18n layer natively. Language-switched URLs follow SEO-safe hreflang patterns. We have built stores in Hindi, Telugu, Tamil, Gujarati, and Bengali.',
+      'Orders within Telangana carry CGST and SGST, and orders to other states carry IGST. The store applies the right split automatically, prints HSN codes and lets business buyers add a GSTIN. Exports line up with GSTR-1 and can sync with Tally or Zoho Books.',
   },
   {
     category: 'india',
-    question: 'How do you handle cart abandonment for Indian shoppers?',
+    question: 'Which couriers should a Hyderabad store use?',
     answer:
-      'India has a 78% cart abandonment rate, higher than global averages because COD hesitancy and payment UX friction are common. We build a 3-touch recovery sequence: 1) WhatsApp message within 30 minutes with a direct Razorpay payment link, 2) SMS at 2 hours with a small discount, 3) email at 24 hours with a trust signal (reviews, return policy). Stores with this sequence recover 18–22% of abandoned carts on average.',
-  },
-
-  /* ── Speed & SEO ── */
-  {
-    category: 'seo',
-    question: 'Will my Hyderabad ecommerce store rank on Google?',
-    answer:
-      'Every store we build includes technical SEO from day one: Product and BreadcrumbList schema for Google Shopping eligibility, optimised title and meta templates, canonical URLs to prevent duplicate content (a common Shopify and WooCommerce issue), GST price display, Core Web Vitals green on mobile, and sitemap submission to Google Search Console. LocalBusiness schema with Hyderabad geo-coordinates is included for local search visibility.',
+      'Most stores start on Shiprocket, which gives Delhivery, Blue Dart, Xpressbees, Ekart and others in one account, with returns handled. Pearls and gold need insured shipping. For same-day delivery inside Hyderabad, a local partner such as Porter works for food and gifts.',
   },
   {
-    category: 'seo',
-    question: 'Do you guarantee a Lighthouse score?',
+    category: 'india',
+    question: 'Can my store be in Telugu or Urdu?',
     answer:
-      'Yes, Lighthouse 90+ on Performance, Accessibility, Best Practices, and SEO is a contractual commitment on all builds. We achieve this by serving WebP images from CDN, deferring non-critical JavaScript, inlining critical CSS, using next-gen fonts with preload, and hosting on Cloudflare Pages with assets served from the nearest edge node to your customer. We QA the score before handover and fix any regression post-launch within 48 hours at no charge.',
+      'Yes. A Telugu or Urdu version can sit next to English on its own URL. Urdu needs right-to-left layout, which we build and test properly. We check fonts on low-cost Android phones and recommend that product text is written by a native speaker.',
   },
   {
-    category: 'seo',
-    question: 'What are Core Web Vitals and why do they matter for my store?',
+    category: 'india',
+    question: 'How do I sell to NRI buyers in the US and Gulf?',
     answer:
-      'Core Web Vitals are Google\'s three page experience signals: LCP (Largest Contentful Paint, how fast the main content loads, target under 2.5s), INP (Interaction to Next Paint, how fast the page responds to clicks, target under 200ms), and CLS (Cumulative Layout Shift, whether elements jump around, target below 0.1). Google confirmed these are a ranking signal. More importantly, a 1-second delay in mobile load time reduces conversion rates by 20%. For a high-revenue store, that adds up to significant lost revenue every second of slowness.',
+      'Shopify Markets shows prices in dollars or dirhams and handles international checkout. We add a cross-border courier, such as Shiprocket X or DHL, and show duties and delivery times before payment. Festive and wedding buyers order early, so clear dispatch dates matter.',
   },
   {
     category: 'seo',
-    question: 'Can you optimise an existing Hyderabad store that is already slow?',
+    question: 'Will my store rank for Hyderabad searches?',
     answer:
-      'Yes, we offer a standalone Speed & SEO Audit + Fix package. We diagnose all Lighthouse failures, compress and convert your image library to WebP, remove render-blocking resources, fix CLS issues from unloaded fonts or images, and migrate your hosting to Cloudflare if needed. Most stores see a 30–60 point Lighthouse improvement within one sprint. We issue a written commitment: if we do not reach Lighthouse 90+ overall, we continue working at no additional charge.',
-  },
-
-  /* ── Process & Ownership ── */
-  {
-    category: 'trust',
-    question: 'Do I own my store and all the code after launch?',
-    answer:
-      '100% yes. On launch day we transfer full ownership of the store account, the theme code, all integrations, and every custom component we built. You get GitHub repository access for all code assets and full admin credentials for every tool. We do not hold your store with ongoing fees. You can take the store to any developer after handover; we encourage it. What we hope is that you come back to us for the next phase.',
+      'It can, if the basics are right. We add product and breadcrumb schema, clean titles, canonical tags and a sitemap from launch. If you have a shop near Charminar or in Banjara Hills, we link the store to your Google Business Profile.',
   },
   {
-    category: 'trust',
-    question: 'What does the handover process look like?',
+    category: 'seo',
+    question: 'Do you check speed before handover?',
     answer:
-      'Day 7 is handover day. We schedule a 60–90 minute Zoom walkthrough covering: admin panel navigation, adding and editing products, processing orders, managing discounts, viewing analytics, and handling basic shipping issues. We deliver a handover document with all credentials, API keys, support contacts for each integration, and a first-30-days checklist. Post-handover, we are available on WhatsApp for 30 days for quick questions at no charge.',
+      'Yes. We test the home, category and product pages on mobile with Lighthouse and share the report. We aim for 90+ and LCP under 2.5 seconds. Image sizes and extra apps cause most slowdowns.',
+  },
+  {
+    category: 'seo',
+    question: 'Can you fix a Hyderabad store that is slow?',
+    answer:
+      'Yes. We audit your slowest pages and list what slows them: large images, unused apps, theme code and widgets. You get a ranked fix list with a fixed price. Removing apps you no longer use often gives the biggest gain.',
+  },
+  {
+    category: 'seo',
+    question: 'Does an Urdu or Telugu version slow the store down?',
+    answer:
+      'Not if it is built well. We load only the fonts each language needs, keep both versions on the same fast theme and serve images at the right size. Speed is tested on each language before launch.',
   },
   {
     category: 'trust',
-    question: 'Do you offer post-launch maintenance for Hyderabad stores?',
+    question: 'Will I own the store and code?',
     answer:
-      'Yes. Our Care Plan covers plugin and platform updates, a monthly Lighthouse audit and performance fixes, uptime monitoring, a few hours of content or feature changes each month, and priority support with a 4-hour response SLA. Our Growth Retainer adds monthly A/B tests, conversion optimization, and new campaign landing pages. Both are month-to-month with no lock-in, and we share the exact monthly price on your free call.',
+      'Yes. The store, domain, payment and courier accounts are registered to your business, and you receive the code repository and every login. Hosting and app bills can sit in your accounts at cost. You can switch developers at any time.',
   },
   {
     category: 'trust',
-    question: 'Can I manage and update the store myself after launch?',
+    question: 'What is included at handover?',
     answer:
-      'Absolutely, self-management is the goal. For Shopify stores, adding products, updating prices, creating discount codes, and reviewing orders requires zero coding knowledge. WooCommerce is slightly more technical but we set up a simplified admin workflow for non-technical founders. We build a short video library covering the 10 most common tasks your team will perform, so you are not dependent on a developer for day-to-day operations.',
+      'Training for your team on products, prices, orders, returns and B2B accounts, plus a handover file with every login, integration contacts and a first-month checklist.',
   },
-
-  // Money-query coverage, added 2026-06-11
+  {
+    category: 'trust',
+    question: 'What support is there after launch?',
+    answer:
+      'Defects in our build are fixed within the build price for a cover period agreed upfront. After that, support is optional. Each change gets a quote for you to approve, and there is no monthly minimum.',
+  },
+  {
+    category: 'trust',
+    question: 'Can my team run the store themselves?',
+    answer:
+      'Yes. On Shopify, adding products, changing prices, creating Ramzan or Diwali offers and processing orders need no coding. We set up staff accounts and record short videos of the tasks they do most.',
+  },
   {
     category: 'pricing',
     question: 'Who is the best ecommerce development company in Hyderabad?',
     answer:
-      'For D2C brands and small businesses, FactoryJet makes a strong case: fixed written prices, senior engineers, and stores that launch in weeks. Any ecommerce website development company in Hyderabad, or any ecommerce solution company in Hyderabad, should pass three checks: who writes the code, is the price fixed, and do you own the store at the end. That is how to find the best ecommerce website development company in Hyderabad and the best ecommerce solution company in Hyderabad for your catalog.',
+      'A strong ecommerce website development company in Hyderabad should say who writes the code, fix the price in writing and hand you full ownership at launch. FactoryJet does all three for jewellers, weavers, distributors and D2C brands, and builds a draft before you sign. Ask the same of any ecommerce solution company in Hyderabad.',
   },
   {
     category: 'pricing',
-    question: 'Should I hire ecommerce developer in Hyderabad or use an agency?',
+    question: 'Should I hire an ecommerce developer in Hyderabad or an agency?',
     answer:
-      'One developer can build a basic store, but a real shop needs design, payments, shipping, and SEO together. A small senior team covers all of it at a fixed price. If you do hire ecommerce developer in Hyderabad directly, check store speed scores from their past work first.',
+      'One developer can set up a simple store. Selling well also needs design, payments, couriers, GST and SEO, plus language work for Telugu or Urdu, which rarely sits with one person. A small senior team covers it at a fixed price. If you hire an ecommerce developer in Hyderabad, test their live stores on your phone first.',
   },
 ];
 
@@ -409,8 +396,8 @@ export default function HyderabadEcommercePage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_hyderabad_hero" />}
           eyebrow="ECOMMERCE DEVELOPMENT · HYDERABAD"
-          headline="Hyderabad's Most Trusted Ecommerce Agency: Store Live in 7 Days"
-          lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Hyderabad brands: Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. 7-day delivery."
+          headline="Ecommerce Development in Hyderabad: Store Live in 7 Days"
+          lead="FactoryJet builds online stores for Hyderabad pearl jewellers, Pochampally ikat weavers and food brands, plus B2B ordering portals for pharma distributors. Telugu or Urdu storefronts on request, UPI and COD at checkout, Lighthouse 90+ on mobile. 7-day delivery."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery',
@@ -426,14 +413,14 @@ export default function HyderabadEcommercePage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+          description="We have shipped stores and B2B portals for businesses in India, the US, the UK and the UAE. Hyderabad clients get the same terms: fixed price per phase, complete code ownership, and 7-day delivery on standard stores."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="ECOMMERCE DEVELOPMENT · HYDERABAD"
-          headline="The Right Platform for Every Hyderabad Business Model"
-          lead="Hyderabad's ecommerce market spans D2C tech brands in HITEC City, pearl jewellers in Laad Bazaar, pharma manufacturers in Genome Valley, and ethnic wear brands in Charminar. Each needs a different platform strategy. FactoryJet recommends the right one before we quote."
+          headline="Which Platform Suits a Hyderabad Business"
+          lead="A Pathergatti pearl shop selling to NRIs in Dallas, a Begum Bazaar wholesaler supplying kirana stores and a Gachibowli fitness brand on subscription each need a different setup. We study the catalogue and the buyer first, then name a platform and a fixed price."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -458,12 +445,7 @@ export default function HyderabadEcommercePage() {
               </div>
 
               <p>
-                The average Indian ecommerce store converts at 0.8–1.2%. The top quartile converts at
-                3–5%. The difference is not the product; it is the store. Slow load times on 4G
-                networks, a UPI checkout that requires too many steps, product pages that bury the buy
-                button below three paragraphs of description, and a mobile layout that was clearly
-                designed on a desktop. These are engineering and design problems, not marketing
-                problems.
+                Hyderabad has two kinds of online buyer. In HITEC City and Gachibowli, tech workers order everything on apps and leave any store that feels slow or clumsy. In the old city and across Telangana, buyers want to see the real product, check the price on WhatsApp and often pay on delivery. A store has to work for both without feeling built for neither.
               </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
@@ -497,17 +479,12 @@ export default function HyderabadEcommercePage() {
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  A great ecommerce store is an engineering project measured in revenue, not a
-                  design project measured in compliments.
+                  Pearls, ikat and biryani sell on trust. The store has to prove the product is real.
                 </p>
               </div>
 
               <p>
-                FactoryJet designs every store around Indian consumer behaviour: where the UPI button
-                goes, when the WhatsApp chat trigger fires, how the mobile product page stacks on a
-                375px screen, what trust signals appear above the fold, and how EMI is surfaced at
-                checkout. We have built 120+ Shopify stores and hundreds of WooCommerce and custom
-                builds for Indian brands. That data informs every decision we make on the next one.
+                We build Hyderabad stores with close-up photos and video, clear grading for pearls, weave and fabric details for sarees, and FSSAI and shelf-life details for food. Checkout leads with UPI and keeps COD with sensible limits. B2B buyers, such as pharmacies ordering from a distributor, get a login with their own rates.
               </p>
             </>
           }
@@ -557,7 +534,7 @@ export default function HyderabadEcommercePage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  We recommend the right platform. Not the most expensive one.
+                  We match the platform to your products, not to the biggest invoice.
                 </p>
               </div>
             </div>
@@ -567,23 +544,23 @@ export default function HyderabadEcommercePage() {
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Hyderabad Brands Choose FactoryJet Over Local Agencies"
-          lead="Hyderabad ecommerce agencies often charge several times more for a comparable project and take 10 to 20 weeks to deliver, usually without telling you the price upfront. FactoryJet gives you a fixed quote before you speak to us, puts 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. The price is fixed and confirmed in writing, and the codebase is yours to keep."
+          headline="Why Hyderabad Businesses Choose FactoryJet"
+          lead="Hyderabad owners want to know three things before they start: the final price, the launch date and who owns the store. Each phase gets a fixed price in writing, standard stores get 7-day delivery in the agreement, and you see a working draft on your own products before you sign."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing.',
-              body: "Hyderabad's market moves fast. Waiting 16 weeks for an agency to deliver a store you briefed in April is not a plan; it is a liability. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the delivery date written into the project agreement. We have delivered on time for 97% of all builds.",
+              body: 'A standard Shopify or WooCommerce store for a Hyderabad brand goes live in 7 days once products, photos and gateway approval are with us. The date is written into the agreement. 97% of our builds have shipped on time.',
             },
             {
               icon: '📱',
-              title: "India's ecommerce is 65% mobile. Most stores are not built for it.",
-              body: 'Most Hyderabad ecommerce stores are designed on a desktop and adapted down. The result: 0.4% mobile conversion rates on template stores versus 2.1% on properly designed custom builds. FactoryJet designs every store mobile-first at 375px: tap targets, product image sizing, checkout flow, and UPI placement all optimised for the phone your customer actually uses.',
+              title: 'Built for both halves of the city.',
+              body: 'Fast enough for an app-native buyer in Madhapur, clear enough for a first-time online buyer in Secunderabad. We design at 375px first, with large photos, UPI up front and WhatsApp a tap away.',
             },
             {
               icon: '📋',
               title: 'Fixed price. Agreed before we start.',
-              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your store running.",
+              body: 'Before each phase begins, scope and price are agreed in writing. You will not be billed by the hour or surprised at launch. Support after go-live is optional, with each change quoted first.',
             },
           ]}
         />
@@ -591,20 +568,20 @@ export default function HyderabadEcommercePage() {
         {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Platform Decision to Live Store in 7 Days"
-          lead="Platform recommendation before we scope. Design approval before we build. Full payment and logistics testing before we launch."
+          headline="How a Hyderabad Store Gets Built"
+          lead="Platform first, design on your products next, then real test orders on every payment and courier before we go live."
           stages={HYDERABAD_ECOM_STAGES}
-          closingNote="5 STAGES · 7 DAYS · RAZORPAY + GST + SHIPROCKET · LIGHTHOUSE 90+ · ZERO-DOWNTIME LAUNCH"
+          closingNote="5 STAGES · TELUGU OR URDU READY · UPI + COD + GST · LIGHTHOUSE 90+ · CODE IN YOUR NAME"
         />
 
         {/* ── 7. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="HYDERABAD ECOMMERCE MARKET"
-          headline="Why Hyderabad Is India's Rising Ecommerce Hub"
+          headline="What Hyderabad Sells Online"
           leadParagraphs={[
-            "Hyderabad has emerged as one of India's fastest-growing ecommerce markets, driven by the convergence of a 1-million-strong IT workforce in HITEC City, a deep wholesale base in Laad Bazaar and Charminar, and a rapidly expanding middle class in the outer ring road corridors. The city's ecommerce growth rate has outpaced Mumbai and Bangalore in the past three years, making it a priority market for any India-focused D2C brand.",
-            "Hyderabad's ecommerce verticals are uniquely diverse. Pearl jewellery traders in the old city are launching Shopify stores with international shipping and video consultation flows for NRI buyers. Pharma manufacturers in Genome Valley are building B2B procurement portals with CDSCO-compliant product pages. HITEC City tech brands are running sophisticated D2C subscription operations. And Pochampally silk weavers are digitising centuries-old craft supply chains for the first time.",
-            "The brands winning in Hyderabad's ecommerce market combine the city's deep manufacturing expertise with digital-native selling: fast stores, India-ready payment stacks, and localised trust signals. FactoryJet has built across every Hyderabad vertical and understands the specific requirements that Hyderabad buyers, both B2C and B2B, bring to the checkout experience.",
+            "Hyderabad is known as the City of Pearls, and the shops of Pathergatti and the lanes around Charminar still trade pearls, along with the lac bangles of Laad Bazaar. Telangana's handlooms, Pochampally ikat and Gadwal sarees among them, draw buyers across India and abroad. These products sell on trust, so the store has to show grading, weave and origin clearly.",
+            'The city is also a large pharma and life sciences base, from bulk drug makers to the research firms of Genome Valley. Distributors here serve pharmacies, hospitals and clinics across South India, and many are moving their phone and WhatsApp orders into login-only portals that check licences and raise GST invoices automatically. Begum Bazaar traders face a similar shift with their kirana and retail buyers.',
+            'In the west of the city, HITEC City, Madhapur and Gachibowli hold a large tech workforce that buys fitness gear, gadgets, fashion and food online. Hyderabadi food travels well too: biryani masalas, pickles, Osmania biscuits and festive sweets ship across India, with peaks around Ramzan, Sankranti and Diwali. We build for each of these buyers differently.',
           ]}
           stats={[
             {
@@ -631,50 +608,50 @@ export default function HyderabadEcommercePage() {
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="HYDERABAD × ECOMMERCE"
-          headline="Ecommerce Development for Hyderabad's Key Commerce Verticals"
-          lead="From Laad Bazaar pearl jewellers to HITEC City tech brands to Genome Valley pharma manufacturers , and Hyderabad's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."
+          headline="Hyderabad Sectors We Build For"
+          lead="From pearl shops near Charminar to pharma distributors in the industrial belts and D2C brands in Gachibowli, these are the six sectors behind most Hyderabad briefs."
           sectors={[
             {
               name: 'Pearls & Jewellery',
               description:
-                'Hyderabad is the global centre of the pearl trade. Jewellery ecommerce needs hallmark display, COD with insured shipping, video consultation, and high-trust checkout.',
+                'Pearl and bangle sellers need grading details, close-up video, certificate display, insured shipping and NRI checkout. Gold pieces need HUID and price breakups.',
               example:
-                'Pearl jewellery brands, Laad Bazaar jewellers, B2B gem and pearl traders targeting international buyers.',
+                'Pearl jewellers in Pathergatti, Laad Bazaar bangle makers, gold and silver jewellers.',
             },
             {
-              name: 'Pharmaceuticals & Biotech',
+              name: 'Pharma & Life Sciences',
               description:
-                "Hyderabad's Genome Valley is India's largest biotech and pharma cluster. Online pharmacy and B2B pharma procurement portals need prescription uploads, CDSCO compliance, and temperature-sensitive logistics.",
+                'Distributors and makers sell to pharmacies, hospitals and labs. Portals need licence capture, batch and expiry details, buyer-wise pricing and GST invoicing.',
               example:
-                'Pharma manufacturers, OTC health brands, biotech companies selling research supplies.',
+                'Pharma distributors, surgical and lab supply firms, nutraceutical brands.',
             },
             {
-              name: 'IT Products & Tech D2C',
+              name: 'Tech D2C & Fitness',
               description:
-                'HITEC City and Madhapur produce India\'s most technically sophisticated D2C brands and SaaS product companies. Subscription management, international billing, and tiered pricing.',
+                'HITEC City buyers expect app-level speed. Gadget and fitness brands need spec comparison, EMI, subscriptions and fast delivery inside the city.',
               example:
-                'SaaS companies, tech hardware brands, IT product D2C labels.',
+                'Fitness equipment brands, gadget accessory labels, supplement makers.',
             },
             {
-              name: 'Fashion & Ethnic Wear',
+              name: 'Ikat, Handloom & Ethnic Wear',
               description:
-                "Hyderabad's Pochampally silk weaving cluster and the Charminar market are going digital. Ethnic wear stores need WhatsApp-native product catalogues, COD flows, and Myntra integration.",
+                'Pochampally and Gadwal weaves sell on detail. Stores need weave close-ups, drape video, blouse options, Telugu labels and NRI shipping.',
               example:
-                'Pochampally silk brands, ethnic wear D2C labels, bridal wear companies.',
+                'Ikat saree weavers and cooperatives, Gadwal and Narayanpet sellers, ethnic wear boutiques.',
             },
             {
-              name: 'Food & Biryani Brands',
+              name: 'Hyderabadi Food Brands',
               description:
-                "Hyderabad's iconic food culture drives a growing D2C packaged food market. FSSAI compliance, cold-chain logistics, subscription boxes, and gifting SKUs.",
+                'Masalas, pickles, biscuits and sweets ship nationwide. Stores need FSSAI details, shelf-life notes, festival hampers and safe packaging rules for long routes.',
               example:
-                'Hyderabadi biryani brands, packaged spice companies, organic food D2C labels.',
+                'Biryani masala brands, pickle makers, bakeries and sweet shops.',
             },
             {
-              name: 'Real Estate & Construction Supplies B2B',
+              name: 'Wholesale & Building Supplies',
               description:
-                "Hyderabad's rapid real estate growth creates a massive B2B market for construction materials and interior supplies. B2B portals with bulk pricing, GST invoicing, and contractor-specific catalogues.",
+                'Begum Bazaar traders and construction suppliers sell to shops and contractors. Portals need price slabs, bulk quotes, credit terms and GST B2B invoices.',
               example:
-                'Building materials suppliers, interior product distributors, construction equipment B2B portals.',
+                'Kirana wholesalers, hardware and sanitaryware suppliers, building material dealers.',
             },
           ]}
         />
@@ -711,14 +688,14 @@ export default function HyderabadEcommercePage() {
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What founders say after we build their store"
+          headline="What founders say after their launch"
         />
 
         {/* ── 12. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Everything Hyderabad Founders Ask Before They Sign"
-          lead="The questions we answer on every Hyderabad ecommerce discovery call, answered here, without the runaround."
+          headline="What Hyderabad Founders Ask Before They Sign"
+          lead="The questions Hyderabad jewellers, weavers, distributors and D2C founders ask on a first call, answered without jargon."
           categories={HYDERABAD_ECOM_FAQ_CATEGORIES}
           items={HYDERABAD_ECOM_FAQ_ITEMS}
         />
@@ -727,11 +704,11 @@ export default function HyderabadEcommercePage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO LAUNCH"
-          headline="Your Hyderabad Ecommerce Store. Live in 7 Days."
-          sub="Join 500+ brands across India, the US, the UK and the UAE who chose FactoryJet. We will scope your build, recommend the right platform, and deliver a Razorpay-integrated, GST-compliant, Lighthouse 90+ store in 7 business days. Free strategy call, no commitment required."
+          headline="Your Hyderabad Store, Live in 7 Days"
+          sub="500+ businesses in India, the US, the UK and the UAE have built with FactoryJet. Tell us what you sell in Hyderabad and who buys it. We will recommend a platform, price each phase in writing and show you a draft of the store before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price. 7-day delivery. Razorpay + GST + Shiprocket. Your codebase delivered in full on launch day."
+          objectionHandler="Fixed price per phase. 7-day delivery. UPI, COD and GST set up. Your store, your code, your accounts."
         />
 
       </main>

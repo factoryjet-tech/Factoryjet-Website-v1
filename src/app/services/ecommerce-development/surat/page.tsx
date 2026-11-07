@@ -27,7 +27,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Ecommerce Development in Surat | FactoryJet',
   description:
-    'Shopify & WooCommerce stores for Surat brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery.',
+    'Ecommerce development in Surat for saree and dress material traders, natural and lab-grown diamond sellers and farsan brands. Shopify, UPI, GST. 7-day delivery.',
   keywords: [
     'ecommerce development company surat',
     'ecommerce website development surat',
@@ -35,7 +35,6 @@ export const metadata: Metadata = {
     'woocommerce development surat',
     'online store development surat',
     'custom ecommerce development surat',
-    'affordable ecommerce development surat',
     'ecommerce website cost surat',
     'd2c website surat',
     'razorpay shopify surat',
@@ -50,7 +49,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Ecommerce Development Company in Surat | FactoryJet',
     description:
-      'Shopify, WooCommerce, D2C, and custom ecommerce stores for Surat businesses. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+      'Surat ecommerce: retail stores and reseller catalogues for Ring Road textile traders, private portals for diamond dealers, Surti food brands. 7-day delivery.',
     url: 'https://factoryjet.com/services/ecommerce-development/surat',
     images: [
       {
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ecommerce Development Surat | FactoryJet',
     description:
-      'Shopify, WooCommerce & custom ecommerce for Surat brands. Razorpay + GST + Shiprocket.',
+      'Surat ecommerce: textile, diamond and food stores with reseller catalogues, UPI and GST.',
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -93,7 +92,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -120,7 +119,7 @@ const serviceSchema = {
     '@id': 'https://www.wikidata.org/wiki/Q4629', // Wikidata label: Surat (city in Gujarat, India)
   },
   description:
-    'Custom ecommerce development for Surat businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',
+    'Ecommerce development for Surat businesses: Shopify and WooCommerce stores for saree and dress material brands, catalogues for resellers, private portals for natural and lab-grown diamond dealers, GST invoicing. Lighthouse 95+.',
 };
 
 const localBusinessSchema = {
@@ -131,7 +130,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/surat',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Surat businesses. Shopify, WooCommerce, and custom stores. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+    'Ecommerce development company serving Surat traders and makers in Varachha, Katargam, Adajan and the Ring Road markets. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST. 7-day delivery.',
   areaServed: [
     'Althan', 'Adajan', 'Vesu', 'Udhna', 'Varachha',
     'Ring Road', 'Katargam', 'Sachin GIDC',
@@ -146,33 +145,33 @@ const localBusinessSchema = {
 const SURAT_ECOM_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery & Platform Recommendation',
+    title: 'Selling Model and Platform',
     description:
-      'We map your products, target audience, logistics requirements, and revenue model. Platform recommendation (Shopify, WooCommerce, or custom) is made here, before we scope or price anything.',
+      'We map how you sell: direct to buyers, through resellers, wholesale to shops or private trade for diamonds. Each model needs different pricing, logins and checkout, and that sets the platform.',
   },
   {
     number: '02',
-    title: 'Figma Design & Mockup Approval',
+    title: 'Design on Your Own Designs',
     description:
-      'Custom Figma designs for your homepage, product pages, collection pages, and checkout. Mobile-first at 375px. India-specific UX: UPI placement, COD badge position, trust signals above the fold.',
+      'We design home, catalogue, product and checkout screens with your real sarees, sets or stones, phone first. You approve set-wise pricing, reseller views and trust details before development.',
   },
   {
     number: '03',
-    title: 'Development & Payment Integration',
+    title: 'Build and Integrations',
     description:
-      'Platform setup, theme or custom development, Razorpay / PayU integration, UPI configuration, GST auto-invoicing, Shiprocket wiring, and product catalogue import.',
+      'Store build, Razorpay with UPI, cards and COD, GST invoices with HSN codes, bulk upload tools, reseller logins and margins, Shiprocket, and private catalogues for diamond trade.',
   },
   {
     number: '04',
-    title: 'QA & Lighthouse Audit',
+    title: 'Testing Every Buyer Type',
     description:
-      'End-to-end testing of every payment method (UPI, cards, COD, wallets). Lighthouse 90+ on mobile before we ship. Core Web Vitals green: LCP under 2.5s, CLS below 0.1.',
+      'We place orders as a retail buyer, a reseller and a wholesale shop, check invoices, margins and labels, and test mobile speed against a Lighthouse 90+ target.',
   },
   {
     number: '05',
-    title: 'Launch & Handover',
+    title: 'Launch and Handover',
     description:
-      'Zero-downtime DNS switch. Sitemap submitted to Google Search Console. Full codebase delivered to your GitHub. 60-minute Zoom walkthrough. 30-day post-launch support window.',
+      'Domain switch with no downtime, sitemap submitted, code and logins handed over, your team trained on uploads and orders. Defects in our build are fixed free during the agreed cover period.',
   },
 ];
 
@@ -189,149 +188,137 @@ const SURAT_ECOM_FAQ_CATEGORIES = [
 ];
 
 const SURAT_ECOM_FAQ_ITEMS = [
-
-  /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How long does it take to launch a Surat ecommerce store?',
+    question: 'How quickly can a Surat trader get a store live?',
     answer:
-      'FactoryJet delivers standard Shopify and WooCommerce stores in 7 business days for Starter and Growth builds. Day 1 is a discovery call to finalise your catalogue, payment preferences, and logistics setup. Days 2–3 are Figma design and mockup approval. Days 3–5 are development and integration. Day 6 is QA and Lighthouse testing. Day 7 is launch. Custom platform and marketplace builds take longer, usually 8 to 16 weeks depending on scope.',
+      'A standard Shopify or WooCommerce store goes live in 7 days once products, photos and gateway approval are ready. A custom theme takes 3 to 5 weeks. Reseller catalogues or diamond trade portals take 5 to 8 weeks, and fully custom platforms take 8 to 14 weeks.',
   },
   {
     category: 'pricing',
-    question: 'How much does ecommerce development cost in Surat?',
+    question: 'What does an ecommerce store cost in Surat?',
     answer:
-      "FactoryJet ecommerce projects are fixed-price and scoped to your build. The main cost drivers are your platform (Shopify or WooCommerce vs a custom build), number of products, the payment and shipping integrations you need, and any custom features like subscriptions or B2B pricing. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts. The price is fixed and confirmed in writing, with no hourly billing and no scope creep.",
+      'It depends on what you need. For Surat businesses the biggest factors are reseller logins with margins, set-wise wholesale pricing, bulk upload tools, private diamond catalogues and Gujarati storefronts. We give a fixed written price after a short call about how you sell.',
   },
   {
     category: 'pricing',
-    question: 'Do you offer payment plans for the development cost?',
+    question: 'How do payments for the project work?',
     answer:
-      'Yes. All plans can be split 50% upfront and 50% on launch day. Growth and Custom plans can be structured as 40-30-30 across the build. We accept NEFT, RTGS, UPI, and all major credit cards. No interest or fees are charged on installment plans; it is simply a split of the quoted fixed price.',
+      'We split the work into phases, such as the retail store first and the reseller catalogue second. Each phase has its own written scope and fixed price, signed before work starts. Payment by NEFT, RTGS or UPI, never hourly.',
   },
   {
     category: 'pricing',
-    question: 'What happens if my store is not ready in 7 days?',
+    question: 'Can I try the store on my own designs first?',
     answer:
-      'We have delivered on time for 97% of all builds. When a build does run over, the cause is almost always a delay in receiving product images, content, or payment gateway credentials, which we flag upfront in the onboarding checklist.',
-  },
-
-  /* ── Platform & Tech ── */
-  {
-    category: 'platform',
-    question: 'Which ecommerce platform is right for my Surat business?',
-    answer:
-      'Shopify is the best default for most Surat D2C and B2C brands: fast to launch, easy to manage, and natively supports Razorpay, PayU, and UPI. WooCommerce is the right choice when you are already on WordPress or need deep content-commerce integration (recipes, guides, editorial content). Custom Next.js platforms make sense for high-volume D2C brands, B2B wholesale portals with complex pricing rules, or multi-vendor marketplaces where Shopify and WooCommerce hit their ceiling. FactoryJet makes this recommendation during discovery at no charge.',
+      'Yes. We build a draft with a few of your real designs and show it working, from catalogue to payment. Share it with a few resellers and see what they think. If it does not work for you, you owe nothing.',
   },
   {
     category: 'platform',
-    question: 'Do you set up Razorpay, UPI, and Cash on Delivery for all stores?',
+    question: 'Can resellers order from my store and share my catalogue?',
     answer:
-      'Yes, all India payment methods are configured in every plan. Razorpay is our primary gateway and covers UPI, net banking, cards, wallets (Paytm, PhonePe, Mobikwik), EMI on major cards, and BNPL (LazyPay, Simpl). We also integrate PayU, CCAvenue, or PhonePe Business if you have an existing relationship. Cash on Delivery is configured with prepaid-to-COD ratios you control. Razorpay\'s fraud detection rules are configured at launch to keep COD abuse low.',
+      'Yes. Resellers register and log in to see their own prices, share product links or images on WhatsApp, and place orders shipped straight to their customers. You set margins by reseller or group, and every order raises a GST invoice.',
   },
   {
     category: 'platform',
-    question: 'Can you connect my Surat store to Amazon India and Flipkart?',
+    question: 'Can diamond dealers sell online without showing prices publicly?',
     answer:
-      'Yes, this is included in the Growth plan and above. We use Cedcommerce or Unicommerce to sync your product catalogue, pricing, and inventory between your Shopify or WooCommerce store and your Amazon India and Flipkart seller accounts. Orders from all channels flow into one dashboard. When stock sells on Amazon, it is deducted from your store automatically, preventing overselling.',
+      'Yes. We build a private catalogue where only approved buyers can log in. Each stone shows its certificate, carat, cut, colour and clarity. Buyers request quotes for single stones or parcels and pay by bank transfer. Nothing is visible to the public.',
   },
   {
     category: 'platform',
-    question: 'Can you set up WhatsApp Commerce and automated order flows?',
+    question: 'Do you set up UPI, cards and COD?',
     answer:
-      'Yes. We integrate WhatsApp Business API via Interakt, Wati, or AiSensy to send order confirmations, shipping updates, and abandoned cart messages on WhatsApp, where open rates are 85%+ versus email\'s 20%. We also build conversational product discovery chatbots where customers browse and order directly in WhatsApp, with Razorpay payment links sent in-chat. This is included in Growth and Custom plans.',
-  },
-
-  /* ── India-Specific ── */
-  {
-    category: 'india',
-    question: 'Do your stores support GST invoicing and compliance?',
-    answer:
-      'Yes, GST compliance is built into every Indian ecommerce store we deliver. This includes auto-generated GST invoices at order placement, GSTIN capture at checkout for B2B buyers, HSN code mapping per product category, state-wise IGST/CGST/SGST rate configuration, and monthly GSTR-1 export compatibility. We integrate with Tally, Zoho Books, or custom accounting exports on request.',
+      'Yes. Razorpay is our default, covering UPI, cards, net banking, wallets and EMI. We can use PayU, CCAvenue or PhonePe instead. COD can be limited by order value, pincode or buyer type, and switched off for reseller orders if you prefer prepaid.',
   },
   {
-    category: 'india',
-    question: 'Which logistics partner should I use for a Surat store?',
+    category: 'platform',
+    question: 'Can my store sync with Meesho, Amazon and Flipkart?',
     answer:
-      'Shiprocket is our default recommendation for most Surat ecommerce stores. It gives you access to Delhivery, Bluedart, XpressBees, Ekart, and Shadowfax under one integration, with automated NDR workflows, returns management, and weight dispute resolution. Delhivery directly via API is better for high-volume brands (10,000+ shipments per month) needing custom SLAs. For hyperlocal same-day delivery in Surat, Shadowfax and Porter are the right fit.',
+      'Yes. A multichannel tool such as Unicommerce or EasyEcom links your store with your marketplace accounts. Stock and prices stay aligned and orders arrive in one dashboard, so a design that sells out on one channel is marked sold out everywhere.',
   },
   {
     category: 'india',
-    question: 'Can you add Hindi or Gujarati language support to my store?',
+    question: 'How does GST work on a Surat store?',
     answer:
-      'Yes, multi-language support is available for all platforms. For Shopify we use the Translate & Adapt app or Langify for regional language storefronts. For WooCommerce we implement WPML or TranslatePress. For custom platforms we build the i18n layer natively. Language-switched URLs follow SEO-safe hreflang patterns. We have built stores in Hindi, Marathi, Tamil, Gujarati, and Bengali.',
+      'Orders within Gujarat carry CGST and SGST, and orders to other states carry IGST. The store applies the right rate for each fabric or product type, prints HSN codes and lets business buyers add a GSTIN. Exports use zero-rated invoices.',
   },
   {
     category: 'india',
-    question: 'How do you handle cart abandonment for Indian shoppers?',
+    question: 'Which couriers suit a Surat textile business?',
     answer:
-      'India has a 78% cart abandonment rate, higher than global averages because COD hesitancy and payment UX friction are common. We build a 3-touch recovery sequence: 1) WhatsApp message within 30 minutes with a direct Razorpay payment link, 2) SMS at 2 hours with a small discount, 3) email at 24 hours with a trust signal (reviews, return policy). Stores with this sequence recover 18–22% of abandoned carts on average.',
-  },
-
-  /* ── Speed & SEO ── */
-  {
-    category: 'seo',
-    question: 'Will my Surat ecommerce store rank on Google?',
-    answer:
-      'Every store we build includes technical SEO from day one: Product and BreadcrumbList schema for Google Shopping eligibility, optimised title and meta templates, canonical URLs to prevent duplicate content (a common Shopify and WooCommerce issue), GST price display, Core Web Vitals green on mobile, and sitemap submission to Google Search Console. LocalBusiness schema with Surat geo-coordinates is included for local search visibility.',
+      'Shiprocket covers most orders, with Delhivery, Blue Dart, Xpressbees, Ekart and others in one account, including reseller drop-shipping with your brand on the label. Bulk wholesale bales usually go by transport. Diamonds need specialist insured shipping.',
   },
   {
-    category: 'seo',
-    question: 'Do you guarantee a Lighthouse score?',
+    category: 'india',
+    question: 'Can my store be in Gujarati?',
     answer:
-      'Yes, Lighthouse 90+ on Performance, Accessibility, Best Practices, and SEO is a contractual commitment on all builds. We achieve this by serving WebP images from CDN, deferring non-critical JavaScript, inlining critical CSS, using next-gen fonts with preload, and hosting on Cloudflare Pages with assets served from the nearest edge node to your customer. We QA the score before handover and fix any regression post-launch within 48 hours at no charge.',
+      'Yes. A Gujarati version can sit next to English and Hindi, each on its own URL so search engines index all of them. We test Gujarati fonts on budget Android phones and suggest that a person writes the product text.',
   },
   {
-    category: 'seo',
-    question: 'What are Core Web Vitals and why do they matter for my store?',
+    category: 'india',
+    question: 'How do I upload hundreds of new designs quickly?',
     answer:
-      'Core Web Vitals are Google\'s three page experience signals: LCP (Largest Contentful Paint, how fast the main content loads, target under 2.5s), INP (Interaction to Next Paint, how fast the page responds to clicks, target under 200ms), and CLS (Cumulative Layout Shift, whether elements jump around, target below 0.1). Google confirmed these are a ranking signal. More importantly, a 1-second delay in mobile load time reduces conversion rates by 20%. For a high-revenue store, that adds up to significant lost revenue every second of slowness.',
+      'Through bulk upload. Your team fills a sheet with design codes, colours, set sizes and prices, drops in photos, and the store creates the products. On a phone, a single design can be added with photos in a few minutes.',
   },
   {
     category: 'seo',
-    question: 'Can you optimise an existing Surat store that is already slow?',
+    question: 'Will my store rank for Surat and saree searches?',
     answer:
-      'Yes, we offer a standalone Speed & SEO Audit + Fix package. We diagnose all Lighthouse failures, compress and convert your image library to WebP, remove render-blocking resources, fix CLS issues from unloaded fonts or images, and migrate your hosting to Cloudflare if needed. Most stores see a 30–60 point Lighthouse improvement within one sprint. We issue a written commitment: if we do not reach Lighthouse 90+ overall, we continue working at no additional charge.',
-  },
-
-  /* ── Process & Ownership ── */
-  {
-    category: 'trust',
-    question: 'Do I own my store and all the code after launch?',
-    answer:
-      '100% yes. On launch day we transfer full ownership of the store account, the theme code, all integrations, and every custom component we built. You get GitHub repository access for all code assets and full admin credentials for every tool. We do not hold your store with ongoing fees. You can take the store to any developer after handover; we encourage it. What we hope is that you come back to us for the next phase.',
+      'It can. We add product and breadcrumb schema, clean titles, canonical tags and a sitemap from launch. Collection pages for fabric types and occasions help you rank for searches like Navratri chaniya choli. A shop in a Ring Road market gets linked to your Google Business Profile.',
   },
   {
-    category: 'trust',
-    question: 'What does the handover process look like?',
+    category: 'seo',
+    question: 'Do you test the store speed?',
     answer:
-      'Day 7 is handover day. We schedule a 60–90 minute Zoom walkthrough covering: admin panel navigation, adding and editing products, processing orders, managing discounts, viewing analytics, and handling basic shipping issues. We deliver a handover document with all credentials, API keys, support contacts for each integration, and a first-30-days checklist. Post-handover, we are available on WhatsApp for 30 days for quick questions at no charge.',
+      'Yes. Before launch we run Lighthouse on mobile for the home, catalogue and product pages and share the report, aiming for 90+ and LCP under 2.5 seconds. Large catalogues need careful image handling, so that is where most of the work goes.',
+  },
+  {
+    category: 'seo',
+    question: 'Can you fix a slow Surat store?',
+    answer:
+      'Yes. We audit the slowest pages, list the causes, from huge photos to unused apps and heavy themes, and give a fixed price for the fixes in order of impact. Big catalogues often gain the most from image and filter fixes.',
+  },
+  {
+    category: 'seo',
+    question: 'Will thousands of products slow my store down?',
+    answer:
+      'Not if the store is built for it. We use paged and filtered collections, fast search by design code, and images sized for each screen. Buyers and resellers find a design quickly without loading the whole catalogue.',
   },
   {
     category: 'trust',
-    question: 'Do you offer post-launch maintenance for Surat stores?',
+    question: 'Do I own my store and the code?',
     answer:
-      'Yes. Our Care Plan covers plugin and platform updates, a monthly Lighthouse audit and performance fixes, uptime monitoring, a few hours of content or feature changes each month, and priority support with a 4-hour response SLA. Our Growth Retainer adds monthly A/B tests, conversion optimization, and new campaign landing pages. Both are month-to-month with no lock-in, and we share the exact monthly price on your free call.',
+      'Yes. The store, domain, payment and courier accounts are registered to your business, and the code repository and every login are handed to you. Hosting and app costs can run in your accounts at cost. You are free to change developers at any time.',
   },
   {
     category: 'trust',
-    question: 'Can I manage and update the store myself after launch?',
+    question: 'What does handover include?',
     answer:
-      'Absolutely, self-management is the goal. For Shopify stores, adding products, updating prices, creating discount codes, and reviewing orders requires zero coding knowledge. WooCommerce is slightly more technical but we set up a simplified admin workflow for non-technical founders. We build a short video library covering the 10 most common tasks your team will perform, so you are not dependent on a developer for day-to-day operations.',
+      'We train your team on bulk uploads, pricing, reseller accounts, orders and returns. You get a handover file with every login, integration contacts and a checklist for the first month.',
   },
-
-  // Money-query coverage, added 2026-06-11
+  {
+    category: 'trust',
+    question: 'Is there support after launch?',
+    answer:
+      'Yes. Defects in our work are fixed inside the build price for a cover period we agree upfront. After that, support is optional. You approve a quote for each change, and there is no monthly minimum.',
+  },
+  {
+    category: 'trust',
+    question: 'Can my staff manage designs and orders themselves?',
+    answer:
+      'Yes. On Shopify, adding designs, changing prices, approving resellers and processing orders need no coding. We set up staff logins with the right access and record short videos for the daily tasks.',
+  },
   {
     category: 'pricing',
     question: 'Who is the best ecommerce development company in Surat?',
     answer:
-      'For D2C brands and small businesses, FactoryJet makes a strong case: fixed written prices, senior engineers, and stores that launch in weeks. Any ecommerce website development company in Surat, or any ecommerce solution company in Surat, should pass three checks: who writes the code, is the price fixed, and do you own the store at the end. That is how to find the best ecommerce website development company in Surat and the best ecommerce solution company in Surat for your catalog.',
+      'When you compare any ecommerce website development company in Surat, ask who writes the code, whether the price is fixed in writing and whether the store is yours at the end. FactoryJet says yes on all three for textile, diamond and food businesses, and builds a draft before you sign. Ask any ecommerce solution company in Surat the same.',
   },
   {
     category: 'pricing',
-    question: 'Should I hire ecommerce developer in Surat or use an agency?',
+    question: 'Should I hire an ecommerce developer in Surat or use an agency?',
     answer:
-      'One developer can build a basic store, but a real shop needs design, payments, shipping, and SEO together. A small senior team covers all of it at a fixed price. If you do hire ecommerce developer in Surat directly, check store speed scores from their past work first.',
+      'One developer can start a simple store. A Surat store with resellers, wholesale pricing, bulk uploads, couriers, GST and SEO needs more hands than that. A small senior team covers it at a fixed price. If you hire an ecommerce developer in Surat, open two stores they built on your phone first.',
   },
 ];
 
@@ -409,8 +396,8 @@ export default function SuratEcommercePage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_surat_hero" />}
           eyebrow="ECOMMERCE DEVELOPMENT · SURAT"
-          headline="Surat's Most Trusted Ecommerce Agency: Store Live in 7 Days"
-          lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Surat brands: Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. 7-day delivery."
+          headline="Ecommerce Development in Surat: Store Live in 7 Days"
+          lead="FactoryJet builds online stores and reseller catalogues for Surat saree and dress material traders, private portals for natural and lab-grown diamond dealers, and stores for Surti food brands. UPI and COD at checkout, GST on every invoice, Lighthouse 90+. 7-day delivery."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery',
@@ -426,14 +413,14 @@ export default function SuratEcommercePage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+          description="Stores, reseller catalogues and trade portals for businesses in India, the US, the UK and the UAE. Surat traders get a fixed price per phase, the code and every login, and 7-day delivery on standard stores."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="ECOMMERCE DEVELOPMENT · SURAT"
-          headline="The Right Platform for Every Surat Business Model"
-          lead="Surat's ecommerce market spans D2C textile brands in Katargam, B2B diamond trading portals in Ring Road, fabric wholesalers in Varachha, and food manufacturers in Sachin GIDC. Each needs a different platform strategy. FactoryJet recommends the right one before we quote."
+          headline="Picking the Right Build for a Surat Business"
+          lead="A Ring Road saree trader supplying thousands of resellers, a Varachha lab-grown diamond maker selling to jewellers abroad and a farsan shop shipping across Gujarat need different stores. We look at how you sell today, then name a platform and a fixed price."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -458,12 +445,7 @@ export default function SuratEcommercePage() {
               </div>
 
               <p>
-                The average Indian ecommerce store converts at 0.8–1.2%. The top quartile converts at
-                3–5%. The difference is not the product; it is the store. Slow load times on 4G
-                networks, a UPI checkout that requires too many steps, product pages that bury the buy
-                button below three paragraphs of description, and a mobile layout that was clearly
-                designed on a desktop. These are engineering and design problems, not marketing
-                problems.
+                Surat textile trade moves through resellers. A trader posts a new design in a WhatsApp group in the morning and has orders by noon. The store has to fit that rhythm: new designs live in minutes, catalogues resellers can share, set-wise wholesale prices, and dispatch the same day. A slow upload screen or a clumsy cart breaks the chain.
               </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
@@ -497,17 +479,12 @@ export default function SuratEcommercePage() {
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  A great ecommerce store is an engineering project measured in revenue, not a
-                  design project measured in compliments.
+                  In Surat, the store that uploads a new design fastest wins the reseller.
                 </p>
               </div>
 
               <p>
-                FactoryJet designs every store around Indian consumer behaviour: where the UPI button
-                goes, when the WhatsApp chat trigger fires, how the mobile product page stacks on a
-                375px screen, what trust signals appear above the fold, and how EMI is surfaced at
-                checkout. We have built 120+ Shopify stores and hundreds of WooCommerce and custom
-                builds for Indian brands. That data informs every decision we make on the next one.
+                We build Surat stores so your team can add a design with photos, colours and set sizes in a few minutes. Resellers get a login, their own margins and shareable product links. Retail buyers get a clean checkout with UPI first and COD with limits. Diamond dealers get a private catalogue, certificates on every stone and quote requests for parcels.
               </p>
             </>
           }
@@ -557,7 +534,7 @@ export default function SuratEcommercePage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  We recommend the right platform. Not the most expensive one.
+                  We match the platform to your trade, not to the biggest budget.
                 </p>
               </div>
             </div>
@@ -567,23 +544,23 @@ export default function SuratEcommercePage() {
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Surat Brands Choose FactoryJet Over Local Agencies"
-          lead="Surat ecommerce agencies often charge several times more for a comparable project and take 10 to 20 weeks to deliver, usually without telling you the price upfront. FactoryJet gives you a fixed quote before you speak to us, puts 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. The price is fixed and confirmed in writing, and the codebase is yours to keep."
+          headline="Why Surat Traders Work With FactoryJet"
+          lead="Surat business is decided quickly and judged on delivery. So we give you a fixed price for each phase in writing, put 7-day delivery for standard stores into the agreement, and build a working draft on your own designs before you sign."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing.',
-              body: "Surat's business community moves at Gujarat speed. Decisions are made fast and execution is expected to match. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the delivery date written into the project agreement. We have delivered on time for 97% of all builds.",
+              body: 'A standard store for a Surat trader goes live in 7 days after products, photos and gateway approval arrive. That date is written into the agreement. We have delivered on time on 97% of builds.',
             },
             {
               icon: '📱',
-              title: "India's ecommerce is 65% mobile. Most stores are not built for it.",
-              body: 'Most Surat ecommerce stores are designed on a desktop and adapted down. The result: 0.4% mobile conversion rates on template stores versus 2.1% on properly designed custom builds. FactoryJet designs every store mobile-first at 375px: tap targets, product image sizing, checkout flow, and UPI placement all optimised for the phone your customer actually uses.',
+              title: 'Fast uploads for a fast trade.',
+              body: 'New designs drop daily in Surat. We set up bulk upload from your sheets, quick photo resizing and set-wise pricing, so a design can go live in minutes on a phone as well as a desktop.',
             },
             {
               icon: '📋',
               title: 'Fixed price. Agreed before we start.',
-              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your store running.",
+              body: 'Each phase is scoped and priced in writing up front. No hourly billing, no surprise bill when you launch. Support after launch is optional, with every change quoted for approval.',
             },
           ]}
         />
@@ -591,20 +568,20 @@ export default function SuratEcommercePage() {
         {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Platform Decision to Live Store in 7 Days"
-          lead="Platform recommendation before we scope. Design approval before we build. Full payment and logistics testing before we launch."
+          headline="How a Surat Store Gets Built"
+          lead="We fix the platform and selling model first, design on your own designs next, and test retail, reseller and wholesale orders before launch."
           stages={SURAT_ECOM_STAGES}
-          closingNote="5 STAGES · 7 DAYS · RAZORPAY + GST + SHIPROCKET · LIGHTHOUSE 90+ · ZERO-DOWNTIME LAUNCH"
+          closingNote="5 STAGES · RETAIL + RESELLER + WHOLESALE · UPI + COD + GST · LIGHTHOUSE 90+ · FULL CODE HANDOVER"
         />
 
         {/* ── 7. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="SURAT ECOMMERCE MARKET"
-          headline="Why Surat Is Gujarat's Diamond of Ecommerce Opportunity"
+          headline="How Surat Trades Online"
           leadParagraphs={[
-            "Surat is one of the world's fastest-growing cities and India's diamond city, handling 90% of global diamond polishing and supplying 40% of India's synthetic textile market. This manufacturing supremacy is creating one of India's most concentrated B2B ecommerce opportunities, with diamond traders, textile wholesalers, and fabric manufacturers all building digital-first procurement portals for the first time.",
-            "Surat's ecommerce opportunity is defined by the B2B-to-B2C transition at scale. Ring Road fabric traders are building Shopify stores with international shipping and dollar-denominated pricing for export buyers. Katargam embroidery manufacturers are launching D2C bridal fabric stores with WhatsApp-native product catalogues. Diamond polishing businesses are creating private B2B portals with RTGS payment flows. And GIDC food manufacturers are building D2C subscription operations with FSSAI compliance and pan-India logistics.",
-            "Surat's business community is characterised by Gujarat's entrepreneurial speed. Decisions are made fast and execution is expected to match. FactoryJet's 7-day delivery, transparent pricing, and fixed-scope builds are the exact signals Surat founders respond to. We have built for the Surat textile and diamond ecosystem and understand the specific B2B and D2C requirements that each vertical demands.",
+            "Surat is the centre of India's synthetic textile trade. The markets along Ring Road sell sarees, dress materials, kurtis and Navratri wear to shops and resellers across the country, while mills and processing units in Pandesara and Sachin produce the fabric. Surat zari, which carries a GI tag, and embroidery work add to the mix. Much of this trade already runs on WhatsApp and marketplaces such as Meesho.",
+            "The city is also one of the world's main diamond cutting and polishing centres. Varachha, Katargam and Mahidharpura are full of units, and the Surat Diamond Bourse has added a large trading hub. Lab-grown diamonds are a fast-growing part of the business. Diamond trade online needs privacy: approved buyers only, certificates on every stone, and quotes for parcels rather than a public price list.",
+            'Surti food has its own following. Ghari, farsan, namkeen and sweets ship across Gujarat and to Gujarati families in the US, UK and Africa, with peaks at Diwali and Chandani Padvo. We build Surat stores for these three trades, each with its own pricing, logins and checkout, and in Gujarati where buyers prefer it.',
           ]}
           stats={[
             {
@@ -631,50 +608,50 @@ export default function SuratEcommercePage() {
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="SURAT × ECOMMERCE"
-          headline="Ecommerce Development for Surat's Key Commerce Verticals"
-          lead="From Ring Road fabric traders to Katargam embroidery manufacturers to GIDC food producers , and Surat's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."
+          headline="Surat Sectors We Build For"
+          lead="From Ring Road saree traders to Varachha diamond units and farsan shops, these six sectors cover nearly every Surat brief we see."
           sectors={[
             {
-              name: 'Diamond Polishing & Trading',
+              name: 'Diamonds & Lab-Grown Stones',
               description:
-                "Surat polishes 90% of the world's diamonds. B2B diamond trading portals need private catalogues, RTGS payment flows, GST B2B invoicing, and international shipping with customs documentation.",
+                'Private catalogues for approved buyers, certificate images and numbers on every stone, parcel quotes, and payment by bank transfer against a GST invoice.',
               example:
-                'Diamond polishing businesses, B2B diamond traders, jewellery component exporters.',
+                'Natural diamond traders, lab-grown diamond makers, Diamond Bourse offices.',
             },
             {
-              name: 'Synthetic Textiles & Fabric',
+              name: 'Sarees & Dress Materials',
               description:
-                "Surat is India's largest synthetic fabric producer, supplying 40% of India's textile market. B2B fabric wholesale portals with sample order flows, bulk pricing, and export documentation.",
+                'Ring Road traders need fast design uploads, set-wise wholesale prices, retail checkout with COD, and catalogues resellers can share on WhatsApp.',
               example:
-                'Fabric manufacturers, textile wholesalers, embroidery and printing houses.',
+                'Saree and dress material traders, kurti makers, fabric wholesalers.',
             },
             {
-              name: 'Embroidery & Zari',
+              name: 'Zari & Embroidery',
               description:
-                "Surat's Katargam and Ring Road areas produce India's largest share of embroidered fabric and zari work. D2C and B2B stores for embroidered sarees, dress materials, and bridal fabric.",
+                'Zari and embroidered fabrics sell to designers and boutiques. Stores need close-ups, per-metre pricing, sample orders and bulk quotes.',
               example:
-                'Embroidery manufacturers, zari work brands, bridal fabric wholesalers.',
+                'Zari makers, embroidery units, lace and border suppliers.',
             },
             {
-              name: 'Garments & Readymade Apparel',
+              name: 'Navratri & Ethnic Wear',
               description:
-                "Surat's garment manufacturing cluster ships readymade apparel across India. D2C fashion stores with WhatsApp catalogue commerce, COD, and pan-India logistics.",
+                'Chaniya cholis and festive wear sell in one big season. Stores need pre-orders, size sets, stock that switches on before Navratri, and fast dispatch.',
               example:
-                'Garment manufacturers going D2C, readymade saree brands, wholesale-to-retail transitions.',
+                'Chaniya choli makers, festive wear brands, lehenga wholesalers.',
             },
             {
-              name: 'Jewellery & Gold',
+              name: 'Jewellery Retail',
               description:
-                "Surat's proximity to the diamond trade drives a large gold and diamond jewellery retail market. Hallmark compliance, COD with insured shipping, and high-trust checkout design.",
+                'Jewellers selling diamond and gold pieces need certificate display, HUID on gold, price breakups, insured shipping and COD limits.',
               example:
-                'Gold jewellery retailers, diamond jewellery brands, B2B jewellery component traders.',
+                'Diamond jewellery brands, gold jewellers, lab-grown jewellery labels.',
             },
             {
-              name: 'Food Processing & Namkeen',
+              name: 'Ghari, Farsan & Namkeen',
               description:
-                "Gujarat's food processing industry (namkeen, farsan, sweets) is a major D2C and gifting opportunity. FSSAI compliance, subscription boxes, and gifting SKUs for festivals and corporate orders.",
+                'Surti sweets and snacks ship across India and abroad. Stores need FSSAI details, shelf-life notes, festival boxes and delivery zones for fresh items.',
               example:
-                'Namkeen brands, Gujarati sweet companies, packaged farsan D2C labels.',
+                'Ghari and sweet shops, farsan and namkeen brands, dry snack makers.',
             },
           ]}
         />
@@ -711,14 +688,14 @@ export default function SuratEcommercePage() {
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What founders say after we build their store"
+          headline="What founders say once we launch their store"
         />
 
         {/* ── 12. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Everything Surat Founders Ask Before They Sign"
-          lead="The questions we answer on every Surat ecommerce discovery call, answered here, without the runaround."
+          headline="What Surat Traders Ask Before They Sign"
+          lead="Direct answers to what Surat textile traders, diamond dealers and food brands ask on a first call, from reseller catalogues to GST."
           categories={SURAT_ECOM_FAQ_CATEGORIES}
           items={SURAT_ECOM_FAQ_ITEMS}
         />
@@ -727,11 +704,11 @@ export default function SuratEcommercePage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO LAUNCH"
-          headline="Your Surat Ecommerce Store. Live in 7 Days."
-          sub="Join 500+ brands across India, the US, the UK and the UAE who chose FactoryJet. We will scope your build, recommend the right platform, and deliver a Razorpay-integrated, GST-compliant, Lighthouse 90+ store in 7 business days. Free strategy call, no commitment required."
+          headline="Your Surat Store, Live in 7 Days"
+          sub="500+ businesses across India, the US, the UK and the UAE have worked with FactoryJet. Tell us how you sell, retail, resellers or trade, and we will propose a platform, price each phase in writing and show you a draft of the store before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price. 7-day delivery. Razorpay + GST + Shiprocket. Your codebase delivered in full on launch day."
+          objectionHandler="Fixed price per phase. 7-day delivery. Reseller logins, UPI, COD and GST. The code and accounts stay in your name."
         />
 
       </main>

@@ -27,7 +27,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Ecommerce Development in Lucknow | FactoryJet',
   description:
-    'Shopify & WooCommerce stores for Lucknow brands. Razorpay, UPI & COD. GST-compliant. Shiprocket integrated. 7-day delivery.',
+    'Ecommerce development in Lucknow for chikankari brands, Awadhi food makers, attar sellers and UP wholesalers. Shopify, UPI, COD, Hindi and GST. 7-day delivery.',
   keywords: [
     'ecommerce development company lucknow',
     'ecommerce website development lucknow',
@@ -35,7 +35,6 @@ export const metadata: Metadata = {
     'woocommerce development lucknow',
     'online store development lucknow',
     'custom ecommerce development lucknow',
-    'affordable ecommerce development lucknow',
     'ecommerce website cost lucknow',
     'd2c website lucknow',
     'razorpay shopify lucknow',
@@ -50,7 +49,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Ecommerce Development Company in Lucknow | FactoryJet',
     description:
-      'Shopify, WooCommerce, D2C, and custom ecommerce stores for Lucknow businesses. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+      'Lucknow ecommerce stores: chikankari and zardozi, Awadhi food and mangoes, attar, plus wholesale ordering for UP traders. 7-day delivery.',
     url: 'https://factoryjet.com/services/ecommerce-development/lucknow',
     images: [
       {
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ecommerce Development Lucknow | FactoryJet',
     description:
-      'Shopify, WooCommerce & custom ecommerce for Lucknow brands. Razorpay + GST + Shiprocket.',
+      'Lucknow ecommerce: chikankari, food and wholesale stores with Hindi, Urdu, UPI and COD.',
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -93,7 +92,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -120,7 +119,7 @@ const serviceSchema = {
     '@id': 'https://www.wikidata.org/wiki/Q47916', // Wikidata label: Lucknow (capital of Uttar Pradesh, India)
   },
   description:
-    'Custom ecommerce development for Lucknow businesses. Shopify, WooCommerce, D2C platforms, B2B portals, and custom stores. Razorpay & UPI integrated. GST-compliant. Lighthouse 95+.',
+    'Ecommerce development for Lucknow businesses: Shopify and WooCommerce stores for chikankari, zardozi, Awadhi food and attar brands, wholesale portals for Uttar Pradesh traders, Hindi and Urdu storefronts, GST invoicing. Lighthouse 95+.',
 };
 
 const localBusinessSchema = {
@@ -131,7 +130,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/lucknow',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Lucknow businesses. Shopify, WooCommerce, and custom stores. Razorpay + UPI + COD integrated. GST-compliant. 7-day delivery.',
+    'Ecommerce development company serving Lucknow businesses in Hazratganj, Aminabad, Chowk and Gomti Nagar. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing. 7-day delivery.',
   areaServed: [
     'Hazratganj', 'Gomti Nagar', 'Indira Nagar', 'Aliganj', 'Mahanagar',
     'Chinhat', 'Alambagh', 'Vikas Nagar',
@@ -146,33 +145,33 @@ const localBusinessSchema = {
 const LUCKNOW_ECOM_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery & Platform Recommendation',
+    title: 'Buyers and Platform',
     description:
-      'We map your products, target audience, logistics requirements, and revenue model. Platform recommendation (Shopify, WooCommerce, or custom) is made here, before we scope or price anything.',
+      'We map your buyers: Lucknow shoppers, the rest of India, the diaspora in the Gulf, UK and US, or shops across UP. That decides retail, wholesale or both, and the platform.',
   },
   {
     number: '02',
-    title: 'Figma Design & Mockup Approval',
+    title: 'Design on Your Products',
     description:
-      'Custom Figma designs for your homepage, product pages, collection pages, and checkout. Mobile-first at 375px. India-specific UX: UPI placement, COD badge position, trust signals above the fold.',
+      'Figma screens for home, collection, product and checkout, built with your real photos and prices, phone first. You approve stitch close-ups, size charts, language labels and WhatsApp placement.',
   },
   {
     number: '03',
-    title: 'Development & Payment Integration',
+    title: 'Build and Integrations',
     description:
-      'Platform setup, theme or custom development, Razorpay / PayU integration, UPI configuration, GST auto-invoicing, Shiprocket wiring, and product catalogue import.',
+      'Store build, Razorpay for UPI, cards and COD, international payments where needed, GST invoices, Shiprocket and cross-border couriers, and product import from your sheets or billing software.',
   },
   {
     number: '04',
-    title: 'QA & Lighthouse Audit',
+    title: 'Testing',
     description:
-      'End-to-end testing of every payment method (UPI, cards, COD, wallets). Lighthouse 90+ on mobile before we ship. Core Web Vitals green: LCP under 2.5s, CLS below 0.1.',
+      'We place test orders with each payment option, confirm COD messages, check invoices and labels, and test speed on mobile against a Lighthouse 90+ target.',
   },
   {
     number: '05',
-    title: 'Launch & Handover',
+    title: 'Launch and Handover',
     description:
-      'Zero-downtime DNS switch. Sitemap submitted to Google Search Console. Full codebase delivered to your GitHub. 60-minute Zoom walkthrough. 30-day post-launch support window.',
+      'Domain switch with no downtime, sitemap submitted, code and logins handed over, staff trained. Defects in our build are fixed free during the cover period agreed upfront.',
   },
 ];
 
@@ -189,149 +188,137 @@ const LUCKNOW_ECOM_FAQ_CATEGORIES = [
 ];
 
 const LUCKNOW_ECOM_FAQ_ITEMS = [
-
-  /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How long does it take to launch a Lucknow ecommerce store?',
+    question: 'How long does it take to build a store in Lucknow?',
     answer:
-      'FactoryJet delivers standard Shopify and WooCommerce stores in 7 business days for Starter and Growth builds. Day 1 is a discovery call to finalise your catalogue, payment preferences, and logistics setup. Days 2–3 are Figma design and mockup approval. Days 3–5 are development and integration. Day 6 is QA and Lighthouse testing. Day 7 is launch. Custom platform and marketplace builds take longer, usually 8 to 16 weeks depending on scope.',
+      'A standard Shopify or WooCommerce store goes live in 7 days once your products, photos and payment gateway approval are ready. A custom theme takes 3 to 5 weeks. Wholesale portals and made-to-order setups take 5 to 8 weeks, and custom platforms take 8 to 14 weeks.',
   },
   {
     category: 'pricing',
-    question: 'How much does ecommerce development cost in Lucknow?',
+    question: 'How much does an ecommerce website cost in Lucknow?',
     answer:
-      "FactoryJet ecommerce projects are fixed-price and scoped to your build. The main cost drivers are your platform (Shopify or WooCommerce vs a custom build), number of products, the payment and shipping integrations you need, and any custom features like subscriptions or B2B pricing. Every project is quoted up front after a free discovery call, so you know the full cost before any work starts. The price is fixed and confirmed in writing, with no hourly billing and no scope creep.",
+      'The price follows the scope. For Lucknow businesses the main factors are made-to-order options for chikankari, wholesale price lists, diaspora shipping, Hindi or Urdu storefronts and seasonal stock rules for food. We give a fixed price in writing after a short call.',
   },
   {
     category: 'pricing',
-    question: 'Do you offer payment plans for the development cost?',
+    question: 'Can I pay for the build in parts?',
     answer:
-      'Yes. All plans can be split 50% upfront and 50% on launch day. Growth and Custom plans can be structured as 40-30-30 across the build. We accept NEFT, RTGS, UPI, and all major credit cards. No interest or fees are charged on installment plans; it is simply a split of the quoted fixed price.',
+      'Yes. We split the work into phases, each with a written scope and fixed price you sign before it begins. For example, the retail store first and a wholesale portal next. Pay by NEFT, RTGS or UPI, with no hourly charges.',
   },
   {
     category: 'pricing',
-    question: 'What happens if my store is not ready in 7 days?',
+    question: 'Can I see the store before I sign?',
     answer:
-      'We have delivered on time for 97% of all builds. When a build does run over, the cause is almost always a delay in receiving product images, content, or payment gateway credentials, which we flag upfront in the onboarding checklist.',
-  },
-
-  /* ── Platform & Tech ── */
-  {
-    category: 'platform',
-    question: 'Which ecommerce platform is right for my Lucknow business?',
-    answer:
-      'Shopify is the best default for most Lucknow D2C and B2C brands: fast to launch, easy to manage, and natively supports Razorpay, PayU, and UPI. WooCommerce is the right choice when you are already on WordPress or need deep content-commerce integration (recipes, guides, editorial content). Custom Next.js platforms make sense for high-volume D2C brands, B2B wholesale portals with complex pricing rules, or multi-vendor marketplaces where Shopify and WooCommerce hit their ceiling. FactoryJet makes this recommendation during discovery at no charge.',
+      'Yes. We build a working draft with some of your real products and show you browsing, cart and payment. You can try it on your own phone and share it with your family. If you do not like it, you pay nothing.',
   },
   {
     category: 'platform',
-    question: 'Do you set up Razorpay, UPI, and Cash on Delivery for all stores?',
+    question: 'Which platform suits a chikankari brand?',
     answer:
-      'Yes, all India payment methods are configured in every plan. Razorpay is our primary gateway and covers UPI, net banking, cards, wallets (Paytm, PhonePe, Mobikwik), EMI on major cards, and BNPL (LazyPay, Simpl). We also integrate PayU, CCAvenue, or PhonePe Business if you have an existing relationship. Cash on Delivery is configured with prepaid-to-COD ratios you control. Razorpay\'s fraud detection rules are configured at launch to keep COD abuse low.',
+      'Shopify suits most. It handles fabric, colour and size variants, made-to-order notes and video, and takes UPI, COD and international cards. If you also sell to boutiques and shops, we add a trade price list behind a login.',
   },
   {
     category: 'platform',
-    question: 'Can you connect my Lucknow store to Amazon India and Flipkart?',
+    question: 'How can buyers trust that my chikan work is hand-made?',
     answer:
-      'Yes, this is included in the Growth plan and above. We use Cedcommerce or Unicommerce to sync your product catalogue, pricing, and inventory between your Shopify or WooCommerce store and your Amazon India and Flipkart seller accounts. Orders from all channels flow into one dashboard. When stock sells on Amazon, it is deducted from your store automatically, preventing overselling.',
+      'Show it. We add close-up photos and short video of the stitch, notes on the stitch types used, the time each piece takes, and details of the workshop. A clear returns policy also helps, because a buyer who can return a piece is more willing to try.',
   },
   {
     category: 'platform',
-    question: 'Can you set up WhatsApp Commerce and automated order flows?',
+    question: 'Do you set up UPI, cards and COD?',
     answer:
-      'Yes. We integrate WhatsApp Business API via Interakt, Wati, or AiSensy to send order confirmations, shipping updates, and abandoned cart messages on WhatsApp, where open rates are 85%+ versus email\'s 20%. We also build conversational product discovery chatbots where customers browse and order directly in WhatsApp, with Razorpay payment links sent in-chat. This is included in Growth and Custom plans.',
-  },
-
-  /* ── India-Specific ── */
-  {
-    category: 'india',
-    question: 'Do your stores support GST invoicing and compliance?',
-    answer:
-      'Yes, GST compliance is built into every Indian ecommerce store we deliver. This includes auto-generated GST invoices at order placement, GSTIN capture at checkout for B2B buyers, HSN code mapping per product category, state-wise IGST/CGST/SGST rate configuration, and monthly GSTR-1 export compatibility. We integrate with Tally, Zoho Books, or custom accounting exports on request.',
+      'Yes. Razorpay is our default gateway, covering UPI, cards, net banking, wallets and EMI. We can connect PayU, CCAvenue or PhonePe if you already use one. COD can be capped by order value or pincode, and confirmed by WhatsApp before dispatch.',
   },
   {
-    category: 'india',
-    question: 'Which logistics partner should I use for a Lucknow store?',
+    category: 'platform',
+    question: 'Can my wholesale business take orders from shops across UP?',
     answer:
-      'Shiprocket is our default recommendation for most Lucknow ecommerce stores. It gives you access to Delhivery, Bluedart, XpressBees, Ekart, and Shadowfax under one integration, with automated NDR workflows, returns management, and weight dispute resolution. Delhivery directly via API is better for high-volume brands (10,000+ shipments per month) needing custom SLAs. For hyperlocal same-day delivery in Lucknow, Shadowfax and Porter are the right fit.',
+      'Yes. Approved shops log in to see their own rates, set or carton quantities and credit limit, and reorder past orders quickly. Every order raises a GST invoice, and orders can export to Tally or Busy.',
   },
   {
     category: 'india',
-    question: 'Can you add Hindi or Urdu language support to my store?',
+    question: 'How is GST handled on a Lucknow store?',
     answer:
-      'Yes, multi-language support is available for all platforms. For Shopify we use the Translate & Adapt app or Langify for regional language storefronts. For WooCommerce we implement WPML or TranslatePress. For custom platforms we build the i18n layer natively. Language-switched URLs follow SEO-safe hreflang patterns. We have built stores in Hindi, Marathi, Tamil, Gujarati, and Bengali.',
+      'Orders within Uttar Pradesh carry CGST and SGST, and orders to other states carry IGST. The store applies the right split, prints HSN codes and lets business buyers add a GSTIN. Exports for diaspora orders use zero-rated invoices.',
   },
   {
     category: 'india',
-    question: 'How do you handle cart abandonment for Indian shoppers?',
+    question: 'Which couriers should a Lucknow store use?',
     answer:
-      'India has a 78% cart abandonment rate, higher than global averages because COD hesitancy and payment UX friction are common. We build a 3-touch recovery sequence: 1) WhatsApp message within 30 minutes with a direct Razorpay payment link, 2) SMS at 2 hours with a small discount, 3) email at 24 hours with a trust signal (reviews, return policy). Stores with this sequence recover 18–22% of abandoned carts on average.',
-  },
-
-  /* ── Speed & SEO ── */
-  {
-    category: 'seo',
-    question: 'Will my Lucknow ecommerce store rank on Google?',
-    answer:
-      'Every store we build includes technical SEO from day one: Product and BreadcrumbList schema for Google Shopping eligibility, optimised title and meta templates, canonical URLs to prevent duplicate content (a common Shopify and WooCommerce issue), GST price display, Core Web Vitals green on mobile, and sitemap submission to Google Search Console. LocalBusiness schema with Lucknow geo-coordinates is included for local search visibility.',
+      'Shiprocket covers most stores, with Delhivery, Blue Dart, Xpressbees, Ekart and others in one account. Smaller UP towns can take longer, so we show realistic delivery dates by pincode. For overseas orders, we connect a cross-border courier.',
   },
   {
-    category: 'seo',
-    question: 'Do you guarantee a Lighthouse score?',
+    category: 'india',
+    question: 'Can my store be in Hindi or Urdu?',
     answer:
-      'Yes, Lighthouse 90+ on Performance, Accessibility, Best Practices, and SEO is a contractual commitment on all builds. We achieve this by serving WebP images from CDN, deferring non-critical JavaScript, inlining critical CSS, using next-gen fonts with preload, and hosting on Cloudflare Pages with assets served from the nearest edge node to your customer. We QA the score before handover and fix any regression post-launch within 48 hours at no charge.',
+      'Yes. Hindi and Urdu versions can run next to English, each on its own URL. Urdu needs a right-to-left layout, which we build and test. We check fonts on low-cost Android phones and recommend product text is written by a person, not a translation tool.',
   },
   {
-    category: 'seo',
-    question: 'What are Core Web Vitals and why do they matter for my store?',
+    category: 'india',
+    question: 'How do I reduce COD returns on a Lucknow store?',
     answer:
-      'Core Web Vitals are Google\'s three page experience signals: LCP (Largest Contentful Paint, how fast the main content loads, target under 2.5s), INP (Interaction to Next Paint, how fast the page responds to clicks, target under 200ms), and CLS (Cumulative Layout Shift, whether elements jump around, target below 0.1). Google confirmed these are a ranking signal. More importantly, a 1-second delay in mobile load time reduces conversion rates by 20%. For a high-revenue store, that adds up to significant lost revenue every second of slowness.',
+      'Confirm every COD order on WhatsApp before it ships, ask for a small advance on high-value orders, and switch COD off for pincodes with poor delivery history. A clear returns policy at checkout also cuts refusals at the door.',
   },
   {
     category: 'seo',
-    question: 'Can you optimise an existing Lucknow store that is already slow?',
+    question: 'Will my store rank for Lucknow and chikankari searches?',
     answer:
-      'Yes, we offer a standalone Speed & SEO Audit + Fix package. We diagnose all Lighthouse failures, compress and convert your image library to WebP, remove render-blocking resources, fix CLS issues from unloaded fonts or images, and migrate your hosting to Cloudflare if needed. Most stores see a 30–60 point Lighthouse improvement within one sprint. We issue a written commitment: if we do not reach Lighthouse 90+ overall, we continue working at no additional charge.',
-  },
-
-  /* ── Process & Ownership ── */
-  {
-    category: 'trust',
-    question: 'Do I own my store and all the code after launch?',
-    answer:
-      '100% yes. On launch day we transfer full ownership of the store account, the theme code, all integrations, and every custom component we built. You get GitHub repository access for all code assets and full admin credentials for every tool. We do not hold your store with ongoing fees. You can take the store to any developer after handover; we encourage it. What we hope is that you come back to us for the next phase.',
+      'It can. We add product and breadcrumb schema, clean titles, canonical tags and a sitemap from launch. Guides on stitch types and care help you rank for chikankari searches. A shop in Hazratganj or Chowk gets linked to your Google Business Profile.',
   },
   {
-    category: 'trust',
-    question: 'What does the handover process look like?',
+    category: 'seo',
+    question: 'Do you test speed before handover?',
     answer:
-      'Day 7 is handover day. We schedule a 60–90 minute Zoom walkthrough covering: admin panel navigation, adding and editing products, processing orders, managing discounts, viewing analytics, and handling basic shipping issues. We deliver a handover document with all credentials, API keys, support contacts for each integration, and a first-30-days checklist. Post-handover, we are available on WhatsApp for 30 days for quick questions at no charge.',
+      'Yes. We test the main pages on mobile with Lighthouse and share the report, aiming for 90+ and LCP under 2.5 seconds. Close-up embroidery photos need careful sizing, and that is where most of the work goes.',
+  },
+  {
+    category: 'seo',
+    question: 'Can you fix a slow store?',
+    answer:
+      'Yes. We audit the slowest pages, find the causes, such as large images, unused apps or heavy themes, and give a fixed price for the fixes in order of impact. Removing old apps often makes the biggest difference.',
+  },
+  {
+    category: 'seo',
+    question: 'Do Hindi or Urdu pages need separate SEO work?',
+    answer:
+      'A little. Each language needs its own URL, titles written in that language and hreflang tags, so Google shows the right version to the right searcher. We set these up at launch, and they open up searches most competitors ignore.',
   },
   {
     category: 'trust',
-    question: 'Do you offer post-launch maintenance for Lucknow stores?',
+    question: 'Do I own the store and the code?',
     answer:
-      'Yes. Our Care Plan covers plugin and platform updates, a monthly Lighthouse audit and performance fixes, uptime monitoring, a few hours of content or feature changes each month, and priority support with a 4-hour response SLA. Our Growth Retainer adds monthly A/B tests, conversion optimization, and new campaign landing pages. Both are month-to-month with no lock-in, and we share the exact monthly price on your free call.',
+      'Yes. The store, domain, payment and courier accounts are in your business name, and you get the code repository and every login. Hosting and app bills can run in your accounts at cost. You can change developers at any time.',
   },
   {
     category: 'trust',
-    question: 'Can I manage and update the store myself after launch?',
+    question: 'What happens at handover?',
     answer:
-      'Absolutely, self-management is the goal. For Shopify stores, adding products, updating prices, creating discount codes, and reviewing orders requires zero coding knowledge. WooCommerce is slightly more technical but we set up a simplified admin workflow for non-technical founders. We build a short video library covering the 10 most common tasks your team will perform, so you are not dependent on a developer for day-to-day operations.',
+      'We train your team on adding products, updating prices, handling orders, COD confirmations, returns and wholesale accounts. You get a document with every login, integration contacts and a first-month checklist.',
   },
-
-  // Money-query coverage, added 2026-06-11
+  {
+    category: 'trust',
+    question: 'What support do I get after launch?',
+    answer:
+      'Defects in our work are fixed within the build price for a cover period agreed before we start. After that, support is optional. Each change is quoted and approved by you first, and there is no monthly minimum.',
+  },
+  {
+    category: 'trust',
+    question: 'Can my staff run the store without a developer?',
+    answer:
+      'Yes. On Shopify, adding new kurtas, changing prices, setting up Eid or Diwali offers and processing orders need no coding. We set up staff logins and record short videos of the tasks they repeat.',
+  },
   {
     category: 'pricing',
     question: 'Who is the best ecommerce development company in Lucknow?',
     answer:
-      'For D2C brands and small businesses, FactoryJet makes a strong case: fixed written prices, senior engineers, and stores that launch in weeks. Any ecommerce website development company in Lucknow, or any ecommerce solution company in Lucknow, should pass three checks: who writes the code, is the price fixed, and do you own the store at the end. That is how to find the best ecommerce website development company in Lucknow and the best ecommerce solution company in Lucknow for your catalog.',
+      'A good ecommerce website development company in Lucknow should tell you who writes the code, fix the price in writing and give you full ownership at the end. FactoryJet does all three for chikankari houses, food brands and wholesalers, and builds a draft before you sign. Test any ecommerce solution company in Lucknow on the same points.',
   },
   {
     category: 'pricing',
-    question: 'Should I hire ecommerce developer in Lucknow or use an agency?',
+    question: 'Should I hire an ecommerce developer in Lucknow or an agency?',
     answer:
-      'One developer can build a basic store, but a real shop needs design, payments, shipping, and SEO together. A small senior team covers all of it at a fixed price. If you do hire ecommerce developer in Lucknow directly, check store speed scores from their past work first.',
+      'One developer can launch a simple store. A store that sells across UP and abroad also needs design, payments, couriers, GST, language work and SEO, which is a lot for one person. A small senior team covers it at a fixed price. If you hire an ecommerce developer in Lucknow, check their past stores on your phone first.',
   },
 ];
 
@@ -409,8 +396,8 @@ export default function LucknowEcommercePage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_lucknow_hero" />}
           eyebrow="ECOMMERCE DEVELOPMENT · LUCKNOW"
-          headline="Lucknow's Most Trusted Ecommerce Agency: Store Live in 7 Days"
-          lead="FactoryJet builds Shopify, WooCommerce, and custom D2C stores for Lucknow brands: Razorpay and UPI integrated, GST-compliant, Shiprocket connected, and Lighthouse 90+ before we hand you the keys. 7-day delivery."
+          headline="Ecommerce Development in Lucknow: Store Live in 7 Days"
+          lead="FactoryJet builds online stores for Lucknow chikankari and zardozi houses, Awadhi food brands and attar sellers, and wholesale portals for traders who supply shops across Uttar Pradesh. Hindi or Urdu storefronts, UPI and COD at checkout, Lighthouse 90+. 7-day delivery."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery',
@@ -426,14 +413,14 @@ export default function LucknowEcommercePage() {
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+          description="Stores and wholesale portals for businesses in India, the US, the UK and the UAE. Lucknow clients get a fixed price per phase, the complete code and every login, and 7-day delivery on standard stores."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="ECOMMERCE DEVELOPMENT · LUCKNOW"
-          headline="The Right Platform for Every Lucknow Business Model"
-          lead="Lucknow's ecommerce market spans Chikan embroidery D2C brands in Hazratganj, Awadhi food gifting operations, agri produce exporters across UP, and tech companies in Gomti Nagar. Each needs a different platform strategy. FactoryJet recommends the right one before we quote."
+          headline="Which Store Suits a Lucknow Business"
+          lead="A Chowk chikankari workshop selling kurtas to Dubai, an Aminabad wholesaler supplying shops in Kanpur and Gorakhpur and a Gomti Nagar food brand shipping kebab masalas need different builds. We look at your buyers and products first, then recommend a platform and a fixed price."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
@@ -458,12 +445,7 @@ export default function LucknowEcommercePage() {
               </div>
 
               <p>
-                The average Indian ecommerce store converts at 0.8–1.2%. The top quartile converts at
-                3–5%. The difference is not the product; it is the store. Slow load times on 4G
-                networks, a UPI checkout that requires too many steps, product pages that bury the buy
-                button below three paragraphs of description, and a mobile layout that was clearly
-                designed on a desktop. These are engineering and design problems, not marketing
-                problems.
+                Chikankari buyers have been burned by machine copies sold as hand work. Food buyers worry about freshness. Wholesale buyers want rates without five phone calls. In each case the store has to answer the worry before the buyer asks. That means honest close-ups, stitch and fabric details, clear dispatch dates, and prices that match what the buyer pays.
               </p>
 
               <div className="grid grid-cols-3 gap-3" aria-hidden>
@@ -497,17 +479,12 @@ export default function LucknowEcommercePage() {
                   className="font-fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
                 >
-                  A great ecommerce store is an engineering project measured in revenue, not a
-                  design project measured in compliments.
+                  Hand-made chikan has to look hand-made on a phone screen, or the sale goes to a copy.
                 </p>
               </div>
 
               <p>
-                FactoryJet designs every store around Indian consumer behaviour: where the UPI button
-                goes, when the WhatsApp chat trigger fires, how the mobile product page stacks on a
-                375px screen, what trust signals appear above the fold, and how EMI is surfaced at
-                checkout. We have built 120+ Shopify stores and hundreds of WooCommerce and custom
-                builds for Indian brands. That data informs every decision we make on the next one.
+                We build Lucknow stores with close-up photos of the stitch, fabric and work details, size charts for kurtas and sets, and WhatsApp next to the buy button. Checkout leads with UPI and keeps COD with limits, since many UP buyers still prefer it. Wholesale buyers get a login, their own rates and repeat orders without calls.
               </p>
             </>
           }
@@ -557,7 +534,7 @@ export default function LucknowEcommercePage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  We recommend the right platform. Not the most expensive one.
+                  We recommend what your buyers need, not the costliest stack.
                 </p>
               </div>
             </div>
@@ -567,23 +544,23 @@ export default function LucknowEcommercePage() {
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Lucknow Brands Choose FactoryJet Over Local Agencies"
-          lead="Lucknow ecommerce agencies often charge several times more for a comparable project and take 10 to 20 weeks to deliver, usually without telling you the price upfront. FactoryJet gives you a fixed quote before you speak to us, puts 7-day delivery in writing, and builds to Lighthouse 90+ on mobile. The price is fixed and confirmed in writing, and the codebase is yours to keep."
+          headline="Why Lucknow Businesses Choose FactoryJet"
+          lead="Lucknow brands tell us the same story: a site that took months and still did not sell. We fix the price per phase in writing, put 7-day delivery for standard stores into the agreement, and build a draft on your own products before you sign anything."
           pillars={[
             {
               icon: '⚡',
               title: '7-day delivery. In writing.',
-              body: "Lucknow's market moves fast. Waiting 16 weeks for an agency to deliver a store you briefed in April is not a plan; it is a liability. FactoryJet delivers Shopify and WooCommerce stores in 7 days, with the delivery date written into the project agreement. We have delivered on time for 97% of all builds.",
+              body: 'Standard Shopify and WooCommerce stores for Lucknow brands go live in 7 days once products, photos and gateway approval reach us. The date is part of the agreement. We have delivered on time on 97% of builds.',
             },
             {
               icon: '📱',
-              title: "India's ecommerce is 65% mobile. Most stores are not built for it.",
-              body: 'Most Lucknow ecommerce stores are designed on a desktop and adapted down. The result: 0.4% mobile conversion rates on template stores versus 2.1% on properly designed custom builds. FactoryJet designs every store mobile-first at 375px: tap targets, product image sizing, checkout flow, and UPI placement all optimised for the phone your customer actually uses.',
+              title: 'Built for buyers who prefer COD and WhatsApp.',
+              body: 'Many UP buyers want to ask a question and pay on delivery. We design at 375px first, put WhatsApp beside the buy button, show COD clearly, and confirm COD orders by message before they ship.',
             },
             {
               icon: '📋',
               title: 'Fixed price. Agreed before we start.',
-              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your store running.",
+              body: 'Each phase is scoped and priced in writing before work begins. No hourly billing and no surprise invoice at launch. Support after launch is optional, with every change quoted first.',
             },
           ]}
         />
@@ -591,20 +568,20 @@ export default function LucknowEcommercePage() {
         {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Platform Decision to Live Store in 7 Days"
-          lead="Platform recommendation before we scope. Design approval before we build. Full payment and logistics testing before we launch."
+          headline="How We Build a Lucknow Store"
+          lead="Platform and buyers first, design with your products second, then test every payment and courier before launch."
           stages={LUCKNOW_ECOM_STAGES}
-          closingNote="5 STAGES · 7 DAYS · RAZORPAY + GST + SHIPROCKET · LIGHTHOUSE 90+ · ZERO-DOWNTIME LAUNCH"
+          closingNote="5 STAGES · HINDI + URDU READY · UPI + COD + GST · LIGHTHOUSE 90+ · YOUR CODE, YOUR ACCOUNTS"
         />
 
         {/* ── 7. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="LUCKNOW ECOMMERCE MARKET"
-          headline="Why Lucknow Is Uttar Pradesh's Rising Ecommerce Capital"
+          headline="What Lucknow Sells Online"
           leadParagraphs={[
-            "Lucknow is the gateway to India's largest state by population: Uttar Pradesh's 240 million consumers represent one of ecommerce's largest untapped markets. The city's combination of Chikan craft heritage, Awadhi food culture, a rapidly growing tech corridor in Gomti Nagar, and UP's dominant agricultural economy creates a uniquely diverse ecommerce opportunity that few national agencies are positioned to serve.",
-            "Lucknow's D2C transitions are driven by its artisan and food heritage. Chikan embroidery manufacturers are launching Shopify stores targeting the global Indian diaspora with WhatsApp catalogues and NRI-targeted international shipping. Awadhi food brands are building subscription gifting operations with FSSAI compliance. Gomti Nagar tech companies are building B2B software and hardware portals. And UP agri producers are building direct-to-consumer organic food stores that bypass traditional commodity chains.",
-            "The Lucknow market is characterised by strong COD preference, WhatsApp-first discovery, and high sensitivity to price transparency and return policies. Building these trust signals into the checkout experience (COD clearly available, WhatsApp support visible, return policy above the fold) is the single biggest conversion driver for Lucknow buyers. FactoryJet builds these as standard on every Lucknow ecommerce store.",
+            "Lucknow's best-known product is chikankari, the white-thread hand embroidery that has a GI tag as Lucknow Chikan Craft. Workshops and shops around Chowk and Aminabad supply kurtas, sarees and sets to buyers across India and abroad. Zardozi, the metal-thread work used on bridal and festive wear, comes from the same city. Both face a flood of machine copies, so proof of hand work matters online.",
+            "Awadhi food is the city's other export. Kebab and biryani masalas, sweets, and Malihabad's Dussehri mangoes in season are sent across India and to families abroad. Attar from nearby Kannauj sells through Lucknow shops too. These products need shelf-life notes, seasonal stock and packaging rules that suit long courier routes in summer heat.",
+            "As the capital of Uttar Pradesh, Lucknow is also a trading base for India's most populous state. Wholesalers supply shops in Kanpur, Varanasi, Gorakhpur and smaller towns, mostly by phone. Buyers across UP often prefer COD and like to confirm details on WhatsApp. We build stores and wholesale portals around those habits, in Hindi or Urdu where it helps.",
           ]}
           stats={[
             {
@@ -631,50 +608,50 @@ export default function LucknowEcommercePage() {
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="LUCKNOW × ECOMMERCE"
-          headline="Ecommerce Development for Lucknow's Key Commerce Verticals"
-          lead="From Chikan embroidery brands in Hazratganj to Awadhi food companies to agri producers across UP , and Lucknow's commerce ecosystem spans verticals with very different platform requirements. FactoryJet has built for each of them."
+          headline="Lucknow Sectors We Build For"
+          lead="From Chowk chikankari workshops to Aminabad wholesalers and Awadhi food brands, these are the six sectors behind most Lucknow store briefs."
           sectors={[
             {
-              name: 'Chikan Embroidery & Textiles',
+              name: 'Chikankari & Zardozi',
               description:
-                "Lucknow's UNESCO-recognised Chikan embroidery is India's most iconic craft export. Chikan brands need high-trust product photography, WhatsApp-native catalogues, COD flows, and NRI-targeted international stores.",
+                'Hand embroidery sells on proof. Stores need stitch close-ups, fabric details, size charts, made-to-order options and international shipping for diaspora buyers.',
               example:
-                'Chikan embroidery brands, ethnic wear labels, craft D2C companies.',
+                'Chikankari workshops, zardozi bridal houses, ethnic wear labels in Hazratganj.',
             },
             {
-              name: 'Jewellery & Craft',
+              name: 'Jewellery & Silver',
               description:
-                "Lucknow's Aminabad and Hazratganj jewellery market is transitioning to digital. Hallmark compliance, COD with insured shipping, and high-trust checkout.",
+                'Aminabad and Chowk jewellers need weight and purity details, HUID on gold, insured shipping and COD limits on high-value orders.',
               example:
-                'Gold jewellery retailers, silver craft brands, B2B jewellery wholesalers.',
+                'Gold jewellers, silver ornament makers, artificial jewellery wholesalers.',
             },
             {
-              name: 'Food & Awadhi Products',
+              name: 'Awadhi Food & Sweets',
               description:
-                "Lucknow's iconic Awadhi food culture drives a growing D2C packaged food market. FSSAI compliance, cold-chain logistics, subscription gifting boxes.",
+                'Masalas, sweets and ready-to-cook products ship across India. Stores need FSSAI details, shelf-life notes, festival gift boxes for Eid and Diwali, and summer packaging rules.',
               example:
-                'Awadhi food brands, packaged biryani companies, Nawabi mithai labels.',
+                'Masala and spice brands, sweet shops, ready-to-cook Awadhi food makers.',
             },
             {
-              name: 'Agriculture & Agri-Products',
+              name: 'Mangoes & Farm Produce',
               description:
-                "UP is India's largest agricultural state. Agri D2C brands, organic farming produce, and B2B agri commodity portals. FSSAI compliance, export documentation, and cold-chain logistics.",
+                'Malihabad Dussehri and other UP produce sell in short seasons. Stores need pre-orders, delivery zones, dispatch dates and stock that switches off when the season ends.',
               example:
-                'Organic farming brands, agri commodity exporters, mango and produce D2C.',
+                'Mango orchards and traders, organic farm brands, jaggery and honey producers.',
             },
             {
-              name: 'Furniture & Home',
+              name: 'Attar & Fragrance',
               description:
-                "Lucknow's Saharanpur-proximity furniture cluster and local wooden craft tradition. Home furnishing ecommerce with product customisation, white-glove delivery, and B2B interior supply portals.",
+                'Attar and natural perfume sellers need scent notes, sample sizes, gift sets and shipping rules for oils, including limits on some overseas routes.',
               example:
-                'Furniture brands, wooden craft D2C labels, interior product companies.',
+                'Attar houses, natural perfume brands, incense and fragrance makers.',
             },
             {
-              name: 'Healthcare & Pharma',
+              name: 'Wholesale & Distribution',
               description:
-                "UP's large population drives a significant pharmacy and OTC health market. Online pharmacy, CDSCO compliance, and B2B medical supplies procurement.",
+                'Lucknow traders supply shops across UP. Portals need login-only price lists, credit limits, set or carton quantities and GST B2B invoices.',
               example:
-                'Pharma distributors, OTC health brands, hospital supply companies.',
+                'Garment and textile wholesalers, FMCG distributors, pharma and medical supply stockists.',
             },
           ]}
         />
@@ -711,14 +688,14 @@ export default function LucknowEcommercePage() {
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What founders say after we build their store"
+          headline="What founders say after their store is live"
         />
 
         {/* ── 12. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Everything Lucknow Founders Ask Before They Sign"
-          lead="The questions we answer on every Lucknow ecommerce discovery call, answered here, without the runaround."
+          headline="What Lucknow Owners Ask Before Signing"
+          lead="The questions Lucknow chikankari houses, food brands and wholesalers ask us first, answered in plain words."
           categories={LUCKNOW_ECOM_FAQ_CATEGORIES}
           items={LUCKNOW_ECOM_FAQ_ITEMS}
         />
@@ -727,11 +704,11 @@ export default function LucknowEcommercePage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO LAUNCH"
-          headline="Your Lucknow Ecommerce Store. Live in 7 Days."
-          sub="Join 500+ brands across India, the US, the UK and the UAE who chose FactoryJet. We will scope your build, recommend the right platform, and deliver a Razorpay-integrated, GST-compliant, Lighthouse 90+ store in 7 business days. Free strategy call, no commitment required."
+          headline="Your Lucknow Store, Live in 7 Days"
+          sub="500+ businesses in India, the US, the UK and the UAE have built with FactoryJet. Tell us what you sell and who buys it. We will recommend a platform, put the price for each phase in writing and show you a draft of your store before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price. 7-day delivery. Razorpay + GST + Shiprocket. Your codebase delivered in full on launch day."
+          objectionHandler="Fixed price per phase. 7-day delivery. UPI, COD and WhatsApp built in. The code and every account are yours."
         />
 
       </main>
