@@ -126,7 +126,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Music Entertainment, Creative Agencies & Media Studios',
     headline: 'Topical Authority & AI Citation Engineering for Music City Brands',
     description:
-      'Music Row talent managers, recording studios, and indie labels demand high-visibility digital footprints. We build comprehensive topical clusters, artist event schemas, and structured entity graphs that earn citations in ChatGPT Search, Perplexity, and Google AI Overviews.',
+      'Music Row talent managers, recording studios, and indie labels demand high-visibility digital footprints. We build full topical clusters, artist event schemas, and structured entity graphs that earn citations in ChatGPT Search, Perplexity, and Google AI Overviews.',
     image: '/images/us/nashville/seo/card-recording-studio-mixing-session.webp',
     alt: 'A sound engineer moving faders on a mixing console while a singer in orange headphones sings into a microphone behind the studio glass',
     points: [

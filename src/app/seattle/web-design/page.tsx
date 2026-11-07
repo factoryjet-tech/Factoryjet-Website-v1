@@ -15,14 +15,14 @@ const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/seattle/web-design';
 
 export const metadata: Metadata = {
-  title: 'Best Seattle Web Design Agency | Top Next.js Sites | FactoryJet',
+  title: 'Best Seattle Web Design Agency | Next.js Sites | FactoryJet',
   description:
     'Best Seattle web design agency. Top custom Next.js websites, sub-second load times, and custom Figma UI/UX for Pacific Northwest businesses.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best Seattle Web Design Agency | Top Next.js Sites | FactoryJet',
+    title: 'Best Seattle Web Design Agency | Next.js Sites | FactoryJet',
     description:
       'Seattle web design agency. High-converting Next.js websites, sub-second load times, and custom Figma UI/UX for Pacific Northwest businesses.',
     url: CANONICAL,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Seattle Web Design Agency | Top Next.js Sites | FactoryJet',
+    title: 'Best Seattle Web Design Agency | Next.js Sites | FactoryJet',
     description: 'Custom Next.js web design and engineering in Seattle WA. Sub-second performance, full IP code ownership, 7-day delivery.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -147,7 +147,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Redmond & Kirkland Interactive Media, Gaming Studios & Enterprise Software',
     headline: 'Interactive Flagships for Eastside Software & Digital Media Innovators',
     description:
-      'Gaming studios, interactive entertainment creators, and enterprise software engineering platforms across Redmond and Kirkland demand cutting-edge digital experiences. We engineer custom Next.js web applications featuring interactive WebGL demos, rich media asset delivery, and sub-second asset streaming.',
+      'Gaming studios, interactive entertainment creators, and enterprise software engineering platforms across Redmond and Kirkland demand modern digital experiences. We engineer custom Next.js web applications featuring interactive WebGL demos, rich media asset delivery, and sub-second asset streaming.',
     image: '/images/us/seattle/web-design/card-motion-capture-session.webp',
     alt: 'A woman in a black suit dotted with white markers holding a lunge pose while a man adjusts a camera on a tripod in a bright studio',
     points: [
@@ -202,7 +202,7 @@ const ROADMAP_STEPS = [
   {
     phase: 'Phase 01',
     title: 'Discovery, Information Architecture & Strategy',
-    desc: 'We analyze your commercial positioning, audience intent, competitor landscape, and technical requirements to define a high-conversion digital blueprint.',
+    desc: 'We analyze your commercial positioning, audience intent, competitor set, and technical requirements to define a high-conversion digital blueprint.',
     deliverables: ['Information architecture and page hierarchy map', 'Competitor visual benchmark and positioning gap analysis', 'Technical requirements and third-party API scope', 'Project milestone timeline and delivery SLA'],
   },
   {
@@ -315,7 +315,7 @@ const FAQ_ITEMS = [
     category: 'tech',
     question: 'How do you handle SEO migration to prevent traffic loss?',
     answer:
-      'We build comprehensive 1-to-1 301 redirect maps for every legacy URL, preserve existing URL slugs, implement structured JSON-LD schemas, and validate all meta tags prior to DNS cutover.',
+      'We build full 1-to-1 301 redirect maps for every legacy URL, preserve existing URL slugs, implement structured JSON-LD schemas, and validate all meta tags prior to DNS cutover.',
   },
   {
     category: 'local',
@@ -351,7 +351,7 @@ const FAQ_ITEMS = [
     category: 'ownership',
     question: 'What warranty and post-launch support do you provide?',
     answer:
-      'Every project includes a 30-day comprehensive post-launch warranty covering any bug fixes, performance tuning, and recorded video training for your internal staff.',
+      'Every project includes a 30-day post-launch warranty covering any bug fixes, performance tuning, and recorded video training for your internal staff.',
   },
   {
     category: 'ownership',
@@ -807,7 +807,7 @@ export default function SeattleWebDesignPage() {
           <WebDesignArchitectureBlueprint
             badge="// SEATTLE FRONTEND STACK &amp; CORE WEB VITALS BLUEPRINT"
             title="Next.js 15 App Router to Global Cloudflare Edge"
-            subtitle="Explore how custom Figma UI/UX, React 19 Server Components, headless content management, and Cloudflare edge caching operate together seamlessly."
+            subtitle="Explore how custom Figma UI/UX, React 19 Server Components, headless content management, and Cloudflare edge caching operate together smoothly."
             city="Seattle"
             ctaLabel="Get a Fixed-Price Quote"
             region="us"
@@ -972,7 +972,7 @@ export default function SeattleWebDesignPage() {
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear sprint schedule, and interactive Figma preview.
+              Tell us about your brand goals. We will provide a full fixed-price proposal, clear sprint schedule, and interactive Figma preview.
             </p>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>

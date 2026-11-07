@@ -15,14 +15,14 @@ const PAGE_MODIFIED = '2026-10-21';
 const CANONICAL = 'https://factoryjet.com/lakewood-ranch/seo';
 
 export const metadata: Metadata = {
-  title: 'SEO Agency for Lakewood Ranch, FL Businesses | FactoryJet',
+  title: 'SEO in Lakewood Ranch, FL | Sarasota & Manatee | FactoryJet',
   description:
     'SEO for Lakewood Ranch, FL clinics, wealth advisors, home builders and roofers in Sarasota and Manatee counties. Month-to-month terms.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Agency for Lakewood Ranch, FL Businesses | FactoryJet',
+    title: 'SEO in Lakewood Ranch, FL | Sarasota & Manatee | FactoryJet',
     description:
       'SEO for Lakewood Ranch, FL clinics, wealth advisors, home builders and roofers in Sarasota and Manatee counties. Month-to-month terms.',
     url: CANONICAL,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SEO Agency for Lakewood Ranch, FL Businesses | FactoryJet',
+    title: 'SEO in Lakewood Ranch, FL | Sarasota & Manatee | FactoryJet',
     description: 'SEO for Lakewood Ranch, FL clinics, wealth advisors, home builders and roofers in Sarasota and Manatee counties. Month-to-month terms.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -69,7 +69,7 @@ const DISTRICTS = [
   {
     corridor: 'CORE at Lakewood Ranch',
     focus: 'Healthcare Innovation, Med Spas & Specialty Clinics',
-    desc: 'Collaboration Opportunities for Research and Exploration park. Healthcare providers and medical specialists require comprehensive medical schema and physician authority.',
+    desc: 'Collaboration Opportunities for Research and Exploration park. Healthcare providers and medical specialists require full medical schema and physician authority.',
   },
   {
     corridor: 'University Parkway & UTC Corridor',
@@ -93,11 +93,11 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Healthcare, Med Spas & Concierge Longevity Practices',
     headline: 'Converting Affluent Patients in America’s Premier Master-Planned Community',
     description:
-      'Lakewood Ranch is home to high-income retirees and active families demanding premium healthcare, aesthetic medicine, and concierge longevity care. We build comprehensive medical schema, doctor profile directories, and HIPAA-aware conversion flows that help practices appear in Google Maps results and AI answer engines.',
+      'Lakewood Ranch is home to high-income retirees and active families demanding premium healthcare, aesthetic medicine, and concierge longevity care. We build full medical schema, doctor profile directories, and HIPAA-aware conversion flows that help practices appear in Google Maps results and AI answer engines.',
     image: '/images/us/lakewood-ranch/seo/card-blood-pressure-check.webp',
     alt: 'A doctor wrapping a blood pressure cuff around the arm of an older woman in a lilac cardigan seated in an armchair in a bright room',
     points: [
-      'Comprehensive schema for Physician, MedicalClinic, and MedicalSpecialty',
+      'Full schema for Physician, MedicalClinic, and MedicalSpecialty',
       'HIPAA-aware appointment scheduling and instant click-to-call mobile buttons',
       'Post-visit SMS review request workflows',
     ],
@@ -446,7 +446,7 @@ export default function LakewoodRanchSeoPage() {
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  We work on your Google Business Profile, your service pages and your listings so customers searching in Sarasota and Manatee counties can find you. No long-term contracts. Talk directly with senior technical engineers.
+                  Our Lakewood Ranch SEO work covers your Google Business Profile, your service pages and your listings, so customers searching in Sarasota and Manatee counties can find you. No long-term contracts. Talk directly with senior technical engineers.
                 </p>
 
                 <div className="rv-actions">

@@ -84,7 +84,7 @@ const DISTRICTS = [
   {
     corridor: 'The Broadmoor & South Suburbs',
     focus: 'Private Wealth, Luxury Real Estate & Med Spas',
-    desc: 'Affluent southern corridor where high-net-worth clients research provider reputations and comprehensive credentials before booking consultations.',
+    desc: 'Affluent southern corridor where high-net-worth clients research provider reputations and full credentials before booking consultations.',
   },
 ];
 
@@ -119,11 +119,11 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Healthcare, Orthopedics & Sports Medicine',
     headline: 'Winning Patient Trust in America’s Olympic City',
     description:
-      'As Olympic City USA, Colorado Springs has an active population demanding top-tier sports medicine, physical therapy, and orthodontic care. We build comprehensive medical schema, doctor profile hubs, and automated patient review systems that support organic search and AI overview visibility.',
+      'As Olympic City USA, Colorado Springs has an active population demanding top-tier sports medicine, physical therapy, and orthodontic care. We build full medical schema, doctor profile hubs, and automated patient review systems that support organic search and AI overview visibility.',
     image: '/images/us/colorado-springs/seo/card-ankle-taping-session.webp',
     alt: 'A therapist applying orange kinesiology tape to the ankle of a male runner seated on a treatment table',
     points: [
-      'Comprehensive schema for MedicalClinic, Physician, and SportsMedicine',
+      'Full schema for MedicalClinic, Physician, and SportsMedicine',
       'HIPAA-aware mobile conversion forms and instant click-to-call buttons',
       'Post-appointment SMS review request workflows',
     ],

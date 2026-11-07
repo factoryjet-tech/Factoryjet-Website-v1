@@ -17,14 +17,14 @@ const PAGE_MODIFIED = '2026-10-04';
 const CANONICAL = 'https://factoryjet.com/dallas/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Best Dallas E-Commerce Agency | Top Shopify Plus & B2B Development | FactoryJet',
+  title: 'Best Dallas E-Commerce Agency | Shopify Plus | FactoryJet',
   description:
-    'Best Dallas ecommerce development agency. Top Shopify Plus developers, BigCommerce B2B wholesale portals, NetSuite ERP integrations, and custom headless commerce for Texas brands.',
+    'Dallas ecommerce agency. Shopify Plus developers, BigCommerce B2B wholesale portals, NetSuite ERP integrations and custom headless commerce for Texas brands.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best Dallas E-Commerce Agency | Top Shopify Plus & B2B Development | FactoryJet',
+    title: 'Best Dallas E-Commerce Agency | Shopify Plus | FactoryJet',
     description:
       'Premier Dallas ecommerce agency. Top Shopify Plus developers, BigCommerce B2B portals, NetSuite ERP integrations, and custom headless commerce for Texas brands.',
     url: CANONICAL,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Dallas E-Commerce Agency | Top Shopify Plus & B2B Development | FactoryJet',
+    title: 'Best Dallas E-Commerce Agency | Shopify Plus | FactoryJet',
     description: 'Enterprise Shopify Plus, B2B wholesale portals, and headless commerce engineering in Dallas TX.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -269,7 +269,7 @@ const FAQ_ITEMS = [
     category: 'migration',
     question: 'How do you prevent organic search ranking drops during an ecommerce replatforming?',
     answer:
-      'We execute a comprehensive 1-to-1 URL redirect map for every legacy product, category, and blog URL. We preserve title tag structures, breadcrumbs, and image alt text, while injecting rich Product, AggregateRating, and Offer JSON-LD schema to maintain and enhance your organic search visibility.',
+      'We execute a full 1-to-1 URL redirect map for every legacy product, category, and blog URL. We preserve title tag structures, breadcrumbs, and image alt text, while injecting rich Product, AggregateRating, and Offer JSON-LD schema to maintain and enhance your organic search visibility.',
   },
   {
     category: 'cost',
@@ -975,7 +975,7 @@ export default function DallasEcommercePage() {
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Request a comprehensive technical architecture review. We will evaluate your catalog data, ERP integration scope, and conversion bottlenecks.
+              Request a full technical architecture review. We will evaluate your catalog data, ERP integration scope, and conversion bottlenecks.
             </p>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>

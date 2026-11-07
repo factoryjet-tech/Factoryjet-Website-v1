@@ -269,7 +269,7 @@ const FAQ_ITEMS = [
     category: 'migration',
     question: 'How do you prevent organic search ranking drops during an ecommerce replatforming?',
     answer:
-      'We execute a comprehensive 1-to-1 URL redirect map for every legacy product, category, and blog URL. We preserve title tag structures, breadcrumbs, and image alt text, while injecting rich Product, Organization, and Offer JSON-LD schema to maintain and enhance your organic search visibility.',
+      'We execute a full 1-to-1 URL redirect map for every legacy product, category, and blog URL. We preserve title tag structures, breadcrumbs, and image alt text, while injecting rich Product, Organization, and Offer JSON-LD schema to maintain and enhance your organic search visibility.',
   },
   {
     category: 'cost',
@@ -987,7 +987,7 @@ export default function ChicagoEcommercePage() {
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Request a comprehensive technical architecture review. We will evaluate your catalog data, ERP integration scope, and conversion bottlenecks.
+              Request a full technical architecture review. We will evaluate your catalog data, ERP integration scope, and conversion bottlenecks.
             </p>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>

@@ -16,14 +16,14 @@ const PAGE_MODIFIED = '2026-10-04';
 const CANONICAL = 'https://factoryjet.com/minneapolis/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Best Minneapolis E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
+  title: 'Best Minneapolis E-Commerce Agency | FactoryJet',
   description:
-    'Best Minneapolis e-commerce development agency. Top headless Shopify Plus, Next.js storefronts, sub-second checkouts, and custom B2B wholesale portals in Minnesota.',
+    'Minneapolis e-commerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkouts, and custom B2B wholesale portals in Minnesota.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best Minneapolis E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
+    title: 'Best Minneapolis E-Commerce Agency | FactoryJet',
     description:
       'Premier Minneapolis ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations.',
     url: CANONICAL,
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Minneapolis E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
-    description: 'Custom headless Shopify Plus and Next.js ecommerce development in Minneapolis MN. Sub-second performance, full IP code ownership, and a fixed quote before work starts.',
+    title: 'Best Minneapolis E-Commerce Agency | FactoryJet',
+    description: 'Headless Shopify Plus and Next.js ecommerce development in Minneapolis MN. Sub-second performance, full IP code ownership and a fixed quote before work starts.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
@@ -315,7 +315,7 @@ const FAQ_ITEMS = [
     category: 'tech',
     question: 'How do you handle SEO migration to prevent ecommerce revenue loss?',
     answer:
-      'We build comprehensive 1-to-1 301 redirect maps for every legacy product and collection URL, preserve canonical structures, implement structured Product schema markup, and validate all meta tags prior to DNS cutover.',
+      'We build full 1-to-1 301 redirect maps for every legacy product and collection URL, preserve canonical structures, implement structured Product schema markup, and validate all meta tags prior to DNS cutover.',
   },
   {
     category: 'b2b',
@@ -351,7 +351,7 @@ const FAQ_ITEMS = [
     category: 'ownership',
     question: 'What warranty and post-launch support do you provide?',
     answer:
-      'Every project includes a 30-day comprehensive post-launch warranty covering any bug fixes, checkout validation, and recorded video training for your internal staff.',
+      'Every project includes a 30-day post-launch warranty covering any bug fixes, checkout validation, and recorded video training for your internal staff.',
   },
   {
     category: 'ownership',
@@ -796,7 +796,7 @@ export default function MinneapolisEcommercePage() {
         <EnterpriseArchitectureBlueprint
             badge="// MINNEAPOLIS COMMERCE STACK &amp; HEADLESS BLUEPRINT"
             title="Headless Next.js 15 to Shopify Plus Engine"
-            subtitle="Explore how custom Figma UI/UX, React 19 Server Components, Shopify Storefront API, and Cloudflare edge caching operate together seamlessly."
+            subtitle="Explore how custom Figma UI/UX, React 19 Server Components, Shopify Storefront API, and Cloudflare edge caching operate together smoothly."
             legacySource="Legacy Magento, WooCommerce &amp; Custom PHP"
             targetStack="Headless Shopify Plus, BigCommerce B2B &amp; Next.js 15"
             ctaLabel="Get a Fixed-Price Quote"

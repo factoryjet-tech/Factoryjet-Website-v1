@@ -16,24 +16,24 @@ const PAGE_MODIFIED = '2026-10-04';
 const CANONICAL = 'https://factoryjet.com/raleigh/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Best Raleigh E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
+  title: 'Best Raleigh E-Commerce Agency | Shopify Plus | FactoryJet',
   description:
-    'Best Raleigh e-commerce development agency. Top headless Shopify Plus, Next.js storefronts, sub-second checkouts, and custom B2B wholesale portals in North Carolina.',
+    'Raleigh e-commerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkouts, and custom B2B wholesale portals in North Carolina.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best Raleigh E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
+    title: 'Best Raleigh E-Commerce Agency | Shopify Plus | FactoryJet',
     description:
-      'Premier Raleigh ecommerce development agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout, and custom B2B wholesale integrations for Research Triangle brands.',
+      'Raleigh ecommerce agency. Headless Shopify Plus, Next.js storefronts, sub-second checkout and custom B2B wholesale integrations for Research Triangle brands.',
     url: CANONICAL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Raleigh Ecommerce Development Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Raleigh E-Commerce Agency | Top Shopify Plus & Headless | FactoryJet',
-    description: 'Custom headless Shopify Plus and Next.js ecommerce development in Raleigh NC. Sub-second performance, full IP code ownership, and a fixed quote before work starts.',
+    title: 'Best Raleigh E-Commerce Agency | Shopify Plus | FactoryJet',
+    description: 'Headless Shopify Plus and Next.js ecommerce development in Raleigh NC. Sub-second performance, full IP code ownership and a fixed quote before work starts.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
@@ -297,7 +297,7 @@ const FAQ_ITEMS = [
     category: 'timeline',
     question: 'How do you guarantee zero downtime during DNS launch cutover?',
     answer:
-      'We run dual-stack delta synchronizations on launch night, ensuring every order placed on the legacy store during the DNS propagation window is captured and transferred seamlessly.',
+      'We run dual-stack delta synchronizations on launch night, ensuring every order placed on the legacy store during the DNS propagation window is captured and transferred cleanly.',
   },
   {
     category: 'timeline',
@@ -315,7 +315,7 @@ const FAQ_ITEMS = [
     category: 'tech',
     question: 'How do you preserve our hard-earned SEO rankings and organic backlinks during migration?',
     answer:
-      'We implement comprehensive 1-to-1 301 redirect maps for every legacy URL, preserve structured schema markup, replicate metadata hierarchies, and monitor Google Search Console indexing continuously.',
+      'We implement full 1-to-1 301 redirect maps for every legacy URL, preserve structured schema markup, replicate metadata hierarchies, and monitor Google Search Console indexing continuously.',
   },
   {
     category: 'tech',
@@ -363,7 +363,7 @@ const FAQ_ITEMS = [
     category: 'ownership',
     question: 'What warranty and post-launch support do you provide?',
     answer:
-      'Every engagement includes a 30-day comprehensive post-launch warranty covering bug fixes, performance monitoring, and hands-on operational training for your internal ecommerce team.',
+      'Every engagement includes a 30-day post-launch warranty covering bug fixes, performance monitoring, and hands-on operational training for your internal ecommerce team.',
   },
   {
     category: 'ownership',
@@ -808,7 +808,7 @@ export default function RaleighEcommerceDevelopmentPage() {
         <EnterpriseArchitectureBlueprint
             badge="// RALEIGH COMMERCE STACK &amp; HEADLESS BLUEPRINT"
             title="Headless Next.js 15 to Shopify Plus Engine"
-            subtitle="Explore how custom Figma UI/UX, React 19 Server Components, Shopify Storefront API, and Cloudflare edge caching operate together seamlessly."
+            subtitle="Explore how custom Figma UI/UX, React 19 Server Components, Shopify Storefront API, and Cloudflare edge caching operate together smoothly."
             legacySource="Legacy Magento, WooCommerce &amp; Custom PHP"
             targetStack="Headless Shopify Plus, BigCommerce B2B &amp; Next.js 15"
             ctaLabel="Get a Fixed-Price Quote"

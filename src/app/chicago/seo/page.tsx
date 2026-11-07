@@ -120,7 +120,7 @@ const INDUSTRY_SHOWCASE = [
     sector: 'Litigation Law Firms, Personal Injury & Defense Practices',
     headline: 'Legal Search Work in Downtown Chicago',
     description:
-      'Legal keywords in Chicago are among the most competitive in the United States. Ranking in the Map Pack and top organic positions requires deep entity authority. We build comprehensive legal practice area content silos, optimize attorney bar admission entities, earn high-tier legal directory citations, and structure verified case result knowledge panels.',
+      'Legal keywords in Chicago are among the most competitive in the United States. Ranking in the Map Pack and top organic positions requires deep entity authority. We build full legal practice area content silos, optimize attorney bar admission entities, earn high-tier legal directory citations, and structure verified case result knowledge panels.',
     image: '/images/us/chicago/seo/card-injury-client-consultation.webp',
     alt: 'A lawyer in a blue suit listening to a male client whose arm is in a sling, a closed orange ring binder on her knee',
     points: [
@@ -257,7 +257,7 @@ const FAQ_ITEMS = [
   },
   {
     category: 'citations',
-    question: 'What is NAP consistency and why is it crucial for Chicago search rankings?',
+    question: 'What is NAP consistency and why does it matter for Chicago search rankings?',
     answer:
       'NAP stands for Name, Address, and Phone number. Search engines compare your business data across hundreds of directories like Google, Apple Maps, Bing, Yelp, and Data Axle. If variations in spelling, suite numbers, or phone numbers exist, search engines lose confidence in your location data and suppress your map rankings. We audit your citations and correct the ones that do not match.',
   },
@@ -331,7 +331,7 @@ const FAQ_ITEMS = [
     category: 'citations',
     question: 'What happens if our business moves office locations within Chicago?',
     answer:
-      'We execute a comprehensive address migration protocol: updating your Google Business Profile, submitting state corporate filing verification, synchronizing primary data aggregators, updating website schema, and monitoring citations to prevent duplicate listing penalties.',
+      'We execute a full address migration protocol: updating your Google Business Profile, submitting state corporate filing verification, synchronizing primary data aggregators, updating website schema, and monitoring citations to prevent duplicate listing penalties.',
   },
   {
     category: 'timeline',

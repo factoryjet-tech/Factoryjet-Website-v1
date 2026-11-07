@@ -99,7 +99,7 @@ const DISTRICTS = [
   {
     corridor: 'Beachwood & Chagrin Highlands',
     focus: 'Financial Advisory, Med Spas & Luxury Services',
-    desc: 'Affluent eastern suburbs where high-ticket clients and patients research provider reputations and comprehensive credentials before booking consultations.',
+    desc: 'Affluent eastern suburbs where high-ticket clients and patients research provider reputations and full credentials before booking consultations.',
   },
   {
     corridor: 'Independence, Solon & Industrial Corridors',
@@ -117,7 +117,7 @@ const INDUSTRY_SHOWCASE = [
     image: '/images/us/cleveland/seo/card-clinic-stethoscope-exam.webp',
     alt: 'A doctor in a white coat listening to an older man with a stethoscope in a bright clinic exam room',
     points: [
-      'Comprehensive schema for Physician, MedicalClinic, and MedicalSpecialty',
+      'Full schema for Physician, MedicalClinic, and MedicalSpecialty',
       'HIPAA-aware mobile conversion forms and instant click-to-call buttons',
       'Post-appointment SMS review acquisition generating steady patient feedback',
     ],

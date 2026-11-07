@@ -16,14 +16,14 @@ const PAGE_MODIFIED = '2026-10-29';
 const CANONICAL = 'https://factoryjet.com/austin/ecommerce-development';
 
 export const metadata: Metadata = {
-  title: 'Best Austin E-Commerce Agency | Top Shopify Plus | FactoryJet',
+  title: 'Best Austin E-Commerce Agency | Shopify Plus | FactoryJet',
   description:
     'Best Austin ecommerce development agency. Top custom Shopify Plus, WooCommerce, and wholesale B2B portals built for high conversion.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best Austin E-Commerce Agency | Top Shopify Plus | FactoryJet',
+    title: 'Best Austin E-Commerce Agency | Shopify Plus | FactoryJet',
     description:
       'Austin ecommerce development agency. Custom Shopify Plus, WooCommerce, and wholesale B2B portals built for high conversion.',
     url: CANONICAL,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Austin E-Commerce Agency | Top Shopify Plus | FactoryJet',
+    title: 'Best Austin E-Commerce Agency | Shopify Plus | FactoryJet',
     description: 'Custom Shopify Plus and wholesale ecommerce development in Austin TX. High conversion and zero lock-in.',
     images: ['https://factoryjet.com/og-default.png'],
   },

@@ -175,7 +175,7 @@ const ROADMAP_STEPS = [
     phase: 'Phase 01',
     title: 'Entity Audit, GBP Optimization & Technical Foundations',
     desc: 'We audit your Google Business Profile, fix Name-Address-Phone (NAP) discrepancies, optimize categories, and eliminate technical website crawling bottlenecks.',
-    deliverables: ['Comprehensive local ranking audit and competitor gap analysis', 'Complete Google Business Profile category and attribute overhaul', 'NAP consistency audit across 60+ major US citation directories', 'Core Web Vitals and mobile crawlability technical fixes'],
+    deliverables: ['Full local ranking audit and competitor gap analysis', 'Complete Google Business Profile category and attribute overhaul', 'NAP consistency audit across 60+ major US citation directories', 'Core Web Vitals and mobile crawlability technical fixes'],
   },
   {
     phase: 'Phase 02',
@@ -311,7 +311,7 @@ const FAQ_ITEMS = [
     category: 'local',
     question: 'Can you optimize healthcare and dental practices across the Coastal Bend?',
     answer:
-      'Yes. We engineer comprehensive practitioner schemas and medical procedure silos targeting Corpus Christi, Portland, Rockport, and surrounding communities.',
+      'Yes. We engineer full practitioner schemas and medical procedure silos targeting Corpus Christi, Portland, Rockport, and surrounding communities.',
   },
   {
     category: 'local',

@@ -15,14 +15,14 @@ const PAGE_MODIFIED = '2026-08-30';
 const CANONICAL = 'https://factoryjet.com/portland/web-design';
 
 export const metadata: Metadata = {
-  title: 'Best Portland Web Design Agency | Top Next.js Websites | FactoryJet',
+  title: 'Best Portland Web Design Agency | Next.js Sites | FactoryJet',
   description:
-    'Best Portland web design agency. Top custom Next.js websites, sub-second load speeds, mobile conversion flows, and 100% full IP code ownership for Oregon businesses.',
+    'Portland web design agency. Custom Next.js websites, sub-second load speeds, mobile conversion flows, and 100% full IP code ownership for Oregon businesses.',
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best Portland Web Design Agency | Top Next.js Websites | FactoryJet',
+    title: 'Best Portland Web Design Agency | Next.js Sites | FactoryJet',
     description:
       'Premier Portland web design agency. Custom Next.js websites, sub-second load speeds, and full code ownership for Oregon businesses.',
     url: CANONICAL,
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Portland Web Design Agency | Top Next.js Websites | FactoryJet',
+    title: 'Best Portland Web Design Agency | Next.js Sites | FactoryJet',
     description: 'Custom Next.js web design in Portland OR. 7-day launch and 100% full IP code ownership.',
     images: ['https://factoryjet.com/og-default.png'],
   },
@@ -219,7 +219,7 @@ const ROADMAP_STEPS = [
   {
     phase: 'Phase 04',
     title: 'Core Web Vitals QA, Handoff & Launch',
-    desc: 'We execute comprehensive multi-device cross-browser testing, verify 95+ Lighthouse scores, transfer all code, and go live.',
+    desc: 'We execute full multi-device cross-browser testing, verify 95+ Lighthouse scores, transfer all code, and go live.',
     deliverables: ['95+ Google Lighthouse verification', 'Cross-browser device QA testing', 'Full GitHub & Figma asset transfer', 'Recorded video training & 30-day warranty'],
   },
 ];
@@ -796,7 +796,7 @@ export default function PortlandWebDesignPage() {
           <WebDesignArchitectureBlueprint
             badge="// PORTLAND MODERN WEB ARCHITECTURE BLUEPRINT"
             title="High-Performance Frontend: From Code to Conversion"
-            subtitle="Explore how custom Next.js components, Cloudflare Edge caching, structured JSON-LD schema, and conversion tracking work together seamlessly."
+            subtitle="Explore how custom Next.js components, Cloudflare Edge caching, structured JSON-LD schema, and conversion tracking work together smoothly."
             city="Portland"
             ctaLabel="Get a Fixed-Price Quote"
             region="us"
@@ -961,7 +961,7 @@ export default function PortlandWebDesignPage() {
             </h2>
 
             <p style={{ fontSize: 'clamp(16px, 1.8vw, 19px)', color: '#A0A0B0', lineHeight: 1.6, margin: '0 auto 36px', maxWidth: '60ch' }}>
-              Tell us about your brand goals. We will provide a comprehensive fixed-price proposal, clear timeline, and interactive Figma preview.
+              Tell us about your brand goals. We will provide a full fixed-price proposal, clear timeline, and interactive Figma preview.
             </p>
 
             <div style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }}>
