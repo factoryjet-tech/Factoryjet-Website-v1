@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'SEO Company in Noida | Best SEO Services | FactoryJet',
     description:
-      'SEO company in Noida for IT, software, startups, and online brands. Get into the top three businesses on the map, into Google results, and into Google AI answers. No lock-in. Serving Sector 62, Sector 63, the Expressway, and Greater Noida.',
+      'SEO company in Noida for IT, software, startups and online brands. Reach the top three on the map, Google results and Google AI answers. No lock-in.',
     url: 'https://factoryjet.com/seo/noida',
     images: [{ url: 'https://factoryjet.com/images/services/seo.webp', width: 1200, height: 630, alt: 'FactoryJet SEO Company in Noida' }],
     locale: 'en_IN',

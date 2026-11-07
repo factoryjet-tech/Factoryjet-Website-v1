@@ -19,7 +19,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 
 export const metadata: Metadata = {
-  title: 'Local SEO Services in India | Google Business Profile & Map Pack | FactoryJet',
+  title: 'Local SEO Services in India | Google Map Pack | FactoryJet',
   description:
     'Local SEO services in India to reach the top three on the Google map and win "near me" searches. We manage your Google listing, fix details, grow reviews.',
   keywords: [
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Local SEO Services in India | Google Business Profile & Map Pack | FactoryJet',
+    title: 'Local SEO Services in India | Google Map Pack | FactoryJet',
     description:
-      'Local SEO services in India to put your business in the top three on the Google map and in "near me" searches. We set up and look after your free Google listing, fix your details everywhere, and get you more reviews. No long contracts.',
+      'Local SEO services in India to put your business in the top three on the Google map and in "near me" searches. Google listing, details and reviews handled.',
     url: 'https://factoryjet.com/seo/local-seo',
     images: [{ url: 'https://factoryjet.com/images/services/seo.webp', width: 1200, height: 630, alt: 'FactoryJet Local SEO Services in India' }],
     locale: 'en_IN',

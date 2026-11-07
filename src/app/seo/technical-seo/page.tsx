@@ -19,7 +19,7 @@ import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 
 export const metadata: Metadata = {
-  title: 'Technical SEO Services in India | Fast, Search-Ready Sites | FactoryJet',
+  title: 'Technical SEO Services in India | Fast Sites | FactoryJet',
   description:
     'Technical SEO services in India to make your site fast and easy for Google to find, read, and trust. Full audit, faster pages, schema added, errors fixed.',
   keywords: [
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Technical SEO Services in India | Fast, Search-Ready Sites | FactoryJet',
+    title: 'Technical SEO Services in India | Fast Sites | FactoryJet',
     description:
-      'Technical SEO services in India to make your site fast and easy for Google to find, read, and trust. We run a full technical SEO audit, speed your site up, fix what Google cannot read, and add the hidden code that explains your pages. No long contracts.',
+      'Technical SEO services in India to make your site fast and easy for Google to find, read and trust: full audit, faster pages, errors fixed, schema added.',
     url: 'https://factoryjet.com/seo/technical-seo',
     images: [{ url: 'https://factoryjet.com/images/services/seo.webp', width: 1200, height: 630, alt: 'FactoryJet Technical SEO Services in India' }],
     locale: 'en_IN',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Technical SEO Services in India | FactoryJet',
-    description: 'Technical SEO services to make your site fast and easy for Google to find, read, and trust. Full audit, faster pages, hidden code added, errors fixed. No long contracts.',
+    description: 'Technical SEO to make your site fast and easy for Google to find, read and trust. Full audit, faster pages, hidden code added. No long contracts.',
     images: ['https://factoryjet.com/images/services/seo.webp'],
   },
   alternates: { canonical: 'https://factoryjet.com/seo/technical-seo', languages: seoSubServiceAlternatesIN['technical-seo'] },

@@ -20,7 +20,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 export const metadata: Metadata = {
   title: 'SEO Company in Pune | Best SEO Services Pune | FactoryJet',
   description:
-    'Looking for the best SEO company in Pune? FactoryJet delivers SEO services in Pune, technical SEO, local SEO, IT & auto B2B SEO, ecommerce SEO for Hinjewadi, Kharadi, Baner, and all of Pune. No long contracts. Book a free call.',
+    'SEO company in Pune for IT, auto, manufacturing and local businesses in Hinjewadi, Kharadi and Baner: technical, local, B2B and ecommerce SEO. No lock-in.',
   keywords: [
     'seo company in pune',
     'seo company pune',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'SEO Company in Pune | Best SEO Services | FactoryJet',
     description:
-      'Expert SEO services in Pune, local SEO, technical SEO, IT & auto B2B SEO, ecommerce SEO. 500+ businesses, 4.9-star Google rating. No long contracts. Serving Hinjewadi, Kharadi, Baner, Koregaon Park.',
+      'SEO services in Pune: local, technical, IT and auto B2B, and ecommerce SEO. 500+ businesses, 4.9-star Google rating. No long contracts. Free first check.',
     url: 'https://factoryjet.com/seo/pune',
     images: [{ url: 'https://factoryjet.com/images/services/seo.webp', width: 1200, height: 630, alt: 'FactoryJet SEO Company in Pune' }],
     locale: 'en_IN',
@@ -184,7 +184,7 @@ const PUNE_FAQ_ITEMS = [
     category: 'getting-started',
     question: 'Do I need a Pune-based SEO agency?',
     answer:
-      "You need someone who understands Pune's sectors and the buyer journeys in each: Hinjewadi IT procurement cycles, Pimpri-Chinchwad OEM supplier search, Pune student searches for coaching and colleges. We are not based in Pune, but we understand these buyer patterns and the competitive landscape across Pune's different zones. And unlike most local agencies, we do not lock you in.",
+      "You need someone who understands Pune's sectors and the buyer journeys in each: Hinjewadi IT procurement cycles, Pimpri-Chinchwad OEM supplier search, Pune student searches for coaching and colleges. We understand these buyer patterns and the competition across Pune's different zones. And unlike most local agencies, we do not lock you in.",
   },
   {
     category: 'services',
@@ -400,7 +400,7 @@ export default function SeoPune() {
           lead="Pune runs on IT, auto, manufacturing, real estate, and education: five sectors, five completely different SEO strategies. We build the right one for your market."
           sectors={[
             { name: 'IT & Software B2B SEO', description: 'For IT services, SaaS, and software companies in Hinjewadi, Kharadi, and Magarpatta. Content that reaches procurement decision-makers during the long research cycle | solution guides, comparison pages, case studies. Technical SEO for modern web stacks.', example: 'Win enterprise IT deals from Google.' },
-            { name: 'Technical SEO', description: 'Site speed, Core Web Vitals, crawl errors, schema markup, mobile optimisation. With Pune terms at KD 6–18, a clean technical foundation can unlock fast first-page results. We fix the base before writing content.', example: 'Fast, crawlable, trusted by Google.' },
+            { name: 'Technical SEO', description: 'Site speed, Core Web Vitals, crawl errors, schema markup, mobile optimisation. With Pune terms at KD 6–18, a clean technical foundation can bring fast first-page results. We fix the base before writing content.', example: 'Fast, crawlable, trusted by Google.' },
             { name: 'Local SEO for Pune', description: 'Google Business Profile, map rankings, "near me" searches, and area-specific pages for Baner, Koregaon Park, Viman Nagar, Aundh, Wakad, Kalyani Nagar, and Kharadi. Pune\'s consumer market is highly mobile-first.', example: 'Top 3 on Google Maps in your area.' },
             { name: 'Auto & Manufacturing SEO', description: 'For Pimpri-Chinchwad auto component suppliers, OEM sub-contractors, and Pune manufacturing companies. B2B supplier pages, capability and certification content, and search terms procurement teams actually use.', example: 'OEM supplier search coverage.' },
             { name: 'Education SEO', description: 'Coaching institutes, MBA programmes, engineering colleges, and professional training centres across Pune\'s massive student market. High-intent search coverage for IIT/JEE, MBA, UPSC, and professional certification terms.', example: 'Reach students before competitors do.' },

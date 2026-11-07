@@ -28,7 +28,7 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 export const metadata: Metadata = {
   title: 'Shopify Website Development Company India | FactoryJet',
   description:
-    'Shopify website development company in India. Custom Shopify & Shopify Plus stores for Indian D2C brands. Razorpay + UPI + GST integrated. Shiprocket connected. 7-day delivery. 500+ businesses served.',
+    'Shopify website development company in India. Custom Shopify and Shopify Plus stores for D2C brands, with Razorpay, UPI, GST and Shiprocket. 7-day delivery.',
   keywords: [
     'Shopify website development company India',
     'Shopify web development company India',

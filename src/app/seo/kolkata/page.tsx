@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'SEO Company in Kolkata | Best SEO Agency | FactoryJet',
     description:
-      'SEO company in Kolkata for leather, jute, and tea exporters, Sector V IT firms, B2B suppliers, and local businesses. Win abroad, all over India, and in Google AI answers. No long contracts. Serving Bantala, Sector V, New Town, and Gariahat.',
+      'SEO company in Kolkata for leather, jute and tea exporters, Sector V IT firms and local businesses. Win abroad, across India and in Google AI answers.',
     url: 'https://factoryjet.com/seo/kolkata',
     images: [{ url: 'https://factoryjet.com/images/services/seo.webp', width: 1200, height: 630, alt: 'FactoryJet SEO Company in Kolkata' }],
     locale: 'en_IN',
@@ -109,11 +109,11 @@ const speakableSchema = {
 };
 
 const KOL_JOURNEY: ServiceJourneyStage[] = [
-  { number: '01', title: 'Check', description: 'A full check of your Kolkata site: how fast it loads, whether Google can read it, the links pointing to you, and where you stand against the Bantala export, Sector V IT, or Gariahat coaching rivals you lose deals to. In plain words. (Week 1)' },
+  { number: '01', title: 'Check', description: 'An audit of your Kolkata site covering speed, which pages Google has indexed, your backlinks, and how you compare with the Bantala exporters, Sector V IT firms or Gariahat coaching centres in your space. Plain words throughout. (Week 1)' },
   { number: '02', title: 'Plan', description: 'A Kolkata search plan tied to sales: simple English searches that win overseas orders for leather, tea, and jute, supplier and wholesale searches for engineering and pharma units, searches from students for coaching, and the Google AI answers your rivals have not claimed. (Week 1 to 2)' },
-  { number: '03', title: 'Build', description: 'We fix the technical side first: the hidden code that helps Google understand your site, speed, the links between your pages, and helping Google find and read every page. Then we improve the pages that win you customers, plus your free Google listing. (Week 2 to 4)' },
-  { number: '04', title: 'Content & Links', description: 'Content planned with AI and written by a real editor for your buyer, plus real links from trusted Indian and overseas sites. No spammy link tricks, no bought links. (Ongoing)' },
-  { number: '05', title: 'Report', description: 'A one-page monthly report. The Kolkata searches that moved, visits that turn into customers, the leads we can trace, and the next three things. (Monthly)' },
+  { number: '03', title: 'Build', description: 'We start under the hood: markup, speed, internal links and making sure Google can reach every page. After that we sharpen the pages that bring leads and set up your free Google listing. (Week 2 to 4)' },
+  { number: '04', title: 'Content & Links', description: 'Content for importers, trade buyers or students, outlined with AI and written by an editor, plus links from trusted Indian and overseas sites. We never buy links. (Ongoing)' },
+  { number: '05', title: 'Report', description: 'A single monthly page: Kolkata searches that moved, visits that became leads, enquiries traced to Google, and the next three jobs. (Monthly)' },
 ];
 
 const KOL_FAQ_CATEGORIES = [
@@ -125,39 +125,39 @@ const KOL_FAQ_CATEGORIES = [
 ];
 
 const KOL_FAQ_ITEMS = [
-  { category: 'pricing', question: 'How much does SEO cost in Kolkata?', answer: 'We do not sell fixed packages. We look at what you need and only charge for work that moves you up Google. The price depends on how competitive your market is and how much work your site needs, so we give you an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.' },
-  { category: 'pricing', question: 'How long until I see SEO results in Kolkata?', answer: 'Kolkata is a softer SEO market than the biggest metros, so a well-built site can move fast. Brand searches and the top three businesses on the map often move in 30 to 60 days, and tougher "service plus Kolkata" searches in three to five months. We show early signs of progress from week one.' },
-  { category: 'pricing', question: 'Why is FactoryJet different from other Kolkata SEO agencies?', answer: 'We are a small team that uses AI plus senior people, with no fancy office or sales floor to pay for. AI does the research and reports at scale; experienced people do the strategy, writing, and technical work that moves rankings. You pay for the work, not the overheads.' },
-  { category: 'pricing', question: 'Do you require a long-term contract?', answer: 'No. SEO runs month to month, with 30 days notice to pause or stop. We keep Kolkata clients by showing real progress, not by tying them to a 12-month deal.' },
-  { category: 'included', question: 'What does a Kolkata SEO plan include?', answer: 'The technical side (a fast site Google can read), better pages that win customers, and the right search plan for your market, whether that is selling abroad, supplying all of India, or local. Bigger plans add content, real links, and getting picked up by Google AI answers, plus a monthly call and a one-page report.' },
-  { category: 'included', question: 'Do you build content that overseas buyers trust?', answer: 'Yes. For Bantala leather, Darjeeling tea, and jute eco-packaging exporters we write clear, simple English about who you are, your certificates, and what you can make, set out the way overseas buyers and their agents like to see it. This wins enquiries from abroad, and it is also what AI answers quote.' },
+  { category: 'pricing', question: 'How much does SEO cost in Kolkata?', answer: 'We quote after a free check of your site and the rivals you face. A Bantala leather exporter and a Gariahat coaching centre need very different amounts of work, so fixed packages make no sense. The quote is one written monthly figure. You pay monthly and can leave with 30 days notice.' },
+  { category: 'pricing', question: 'How long until I see SEO results in Kolkata?', answer: 'Expect your brand name and Google Maps listing to move within 30 to 60 days. Export and supplier searches are slower, four to six months, since they reward depth of content and trust. Your report shows early signals from week one.' },
+  { category: 'pricing', question: 'Why is FactoryJet different from other Kolkata SEO agencies?', answer: 'Our team is small and senior, and AI does the repetitive research and reporting. Experienced people handle strategy, writing and technical fixes. With no big office or sales floor to fund, your fee goes on the work.' },
+  { category: 'pricing', question: 'Do you require a long-term contract?', answer: 'There is no lock-in. You renew monthly and can pause or stop with 30 days notice. We would rather earn each month than hold Kolkata clients to a 12-month deal.' },
+  { category: 'included', question: 'What does a Kolkata SEO plan include?', answer: 'A sound technical base, sharper pages that bring leads, and a search plan for your market: importers abroad, trade buyers across India, or students and patients in the city. Bigger plans add content, real links and Google AI answer work, plus a monthly call and a one-page report.' },
+  { category: 'included', question: 'Do you build content that overseas buyers trust?', answer: 'Yes. Importers of Bantala leather, Darjeeling tea and jute packaging want to see certificates, production capacity and who runs the firm before they write. We publish those details in plain English, laid out for buyers and their agents. That brings enquiries from abroad and gives AI answers something solid to quote.' },
   { category: 'included', question: 'Can you handle pan-India trade and wholesale SEO?', answer: 'Yes. For Kolkata engineering, pharma, and food-processing units, we go after supplier, dealer, and wholesale searches across the whole country, build category and product pages, and add the trust signals that buyers and resellers look for.' },
-  { category: 'included', question: 'Do you write the content?', answer: 'We do. AI builds the first outline; a real editor turns it into writing that sounds human and answers the Kolkata buyer question directly. You approve every piece before it goes live.' },
-  { category: 'technical', question: 'Do you help me show up in Google AI answers?', answer: 'Yes. Many Kolkata searches now show an AI answer before anyone clicks. We lay out content as clear questions and answers, add the hidden code that helps Google understand your site, and write facts AI can quote, so Google AI answers, ChatGPT, and Perplexity name your business. It is part of every plan, not an extra.' },
-  { category: 'technical', question: "What's the difference between technical SEO and on-page SEO?", answer: 'Technical SEO is the plumbing: a fast site Google can find, read, and trust. On-page SEO is what people see on each page, like headings, words, and the links between pages. You need both, so we fix the plumbing first, then improve the pages.' },
-  { category: 'technical', question: 'Will SEO work on my WordPress, Shopify, or custom site?', answer: 'Yes, we work with whatever you have. We know WordPress and Shopify inside out, and can often work directly on modern custom sites too. Our first check finds anything about your setup that needs care, so there are no surprises.' },
+  { category: 'included', question: 'Do you write the content?', answer: 'Yes. AI produces a first outline, and an editor writes the piece for the person deciding, whether an importer in Europe or a parent choosing a coaching centre. You approve it before it goes live.' },
+  { category: 'technical', question: 'Do you help me show up in Google AI answers?', answer: 'Yes, in every plan. More Kolkata searches now show an AI summary above the links. We set pages out as questions and answers, add trust markup, and include facts AI can quote, which gives ChatGPT, Perplexity and Google AI answers a reason to name you.' },
+  { category: 'technical', question: "What's the difference between technical SEO and on-page SEO?", answer: 'Think of technical SEO as the wiring: speed, crawling, and the code that tells Google what each page covers. On-page SEO is the room itself: headings, words and links between pages. Both matter, and we always fix the wiring first.' },
+  { category: 'technical', question: 'Will SEO work on my WordPress, Shopify, or custom site?', answer: 'Yes. WordPress, Shopify and most custom sites are fine. Our first check notes anything unusual about your setup so nothing surprises you later.' },
   { category: 'technical', question: 'Do you fix site speed?', answer: 'Yes. Most Kolkata searches happen on a phone, so we make your site quick on mobile as part of the technical work. A fast site both ranks better and turns more visitors into customers, so it is never an optional extra.' },
-  { category: 'local', question: 'Can you do SEO for a Kolkata leather or tea exporter selling to the US and EU?', answer: 'Yes, and it is a different job from local SEO. Exporters need the simple English searches that overseas buyers use, content that shows who you are and what you can make so buyers and their agents trust you, and a place in Google AI answers and ChatGPT. We chase orders from abroad, not "near me" searches.' },
+  { category: 'local', question: 'Can you do SEO for a Kolkata leather or tea exporter selling to the US and EU?', answer: 'Yes. Export SEO and local SEO are different jobs. A buyer in Germany looking for leather goods or Darjeeling tea searches in plain English, wants to know who you are and what you can produce, and may ask ChatGPT first. We build for that buyer, not for "near me" searches.' },
   { category: 'local', question: 'Do you handle pan-India B2B SEO for a Kolkata engineering or pharma supplier?', answer: 'Yes. Engineering, pharma, and food-processing units sell all over India, so we go after supplier, dealer, and wholesale searches across the whole country, build the category and product pages buyers look for, and add the trust signals that win orders. A bit of local-map work for nearby buyers sits on top.' },
   { category: 'local', question: 'Can you do SEO for a Sector V or New Town IT firm?', answer: 'Yes. Sector V and New Town hold East India\'s largest IT corridor, and mid-size IT and SaaS firms there buy SEO as a lead channel. We go after the searches your buyers use across India and abroad, build content that answers their real question, and get you named in Google AI answers.' },
   { category: 'local', question: 'Do you cover local SEO for Kolkata coaching, clinics, and shops?', answer: 'Yes. For Gariahat coaching centres, clinics, and shops we work on your free Google listing, the top three businesses on the map, and local-map content for each area where you have a presence or serve customers. This is the bread-and-butter local SEO most Kolkata businesses search for.' },
-  { category: 'reporting', question: 'What does your monthly report look like?', answer: 'One page, a five-minute read. The Kolkata searches that moved and why, visits that turn into customers, the leads we can trace to Google, and the exact three things we are doing next month.' },
-  { category: 'reporting', question: 'Do I own the content and links you build?', answer: 'Yes, all of it. Every page, plan, and piece lives on your own website and is yours to keep. If you stop working with us, you keep everything. There is no special software you must keep paying for to hold your rankings.' },
+  { category: 'reporting', question: 'What does your monthly report look like?', answer: 'One page, five minutes to read. It lists the Kolkata searches that moved, visits that turned into leads, enquiries traced to Google, and the three jobs planned for next month.' },
+  { category: 'reporting', question: 'Do I own the content and links you build?', answer: 'Everything we build is yours. Content, plans and links stay on your site whether or not you keep working with us, and no software subscription is needed to hold rankings.' },
   { category: 'reporting', question: 'How do you measure success?', answer: "By leads and sales, not rankings for their own sake. We agree the searches that matter and what counts as a lead up front, set up Google's free tools properly, and report on the numbers that map to your Kolkata sales." },
-  { category: 'reporting', question: 'Who works on my Kolkata account?', answer: 'A small, senior team. FactoryJet is founder-led, so you talk to the people doing the strategy and the technical work, not a junior who got your account on day two.' },
+  { category: 'reporting', question: 'Who works on my Kolkata account?', answer: 'Senior people. FactoryJet is founder-led, so you deal directly with whoever sets the strategy and does the technical work, and no junior takes over after onboarding.' },
 
   // Money-query coverage, added 2026-06-11
   {
     category: 'pricing',
     question: 'Who is the best SEO agency in Kolkata?',
     answer:
-      'For small and mid-size businesses, FactoryJet makes a strong case as the best SEO company in Kolkata: the same engineers who build fast websites run the SEO services in Kolkata clients pay for, with a clear monthly report and no long contract. The best SEO services in Kolkata pass three checks: a plan in simple words, results with real numbers, and the price in writing. We also run local SEO services in Kolkata, the best local SEO services in Kolkata manage your Google Business Profile every week, not once a quarter.',
+      'For small and mid-size firms, FactoryJet has a good claim to be the best SEO company in Kolkata. Our engineers build fast websites and run the SEO services in Kolkata clients pay for, with a clear monthly report and no long contract. Test anyone offering the best SEO services in Kolkata on a plain-word plan, results with real numbers and a written price. We also offer local SEO services in Kolkata, and the best local SEO services in Kolkata work on your Google Business Profile every week, not once a quarter.',
   },
   {
     category: 'pricing',
     question: 'Should I hire SEO expert in Kolkata or work with an agency?',
     answer:
-      'Both can work. If you hire SEO expert in Kolkata alone, you get one set of skills, and SEO needs technical work, writing, and links together. A small senior team gives you all three for a similar monthly cost. Whichever way you go, ask for one example with real numbers before you pay.',
+      'Both routes work. Hire SEO expert in Kolkata as a single person and you get one set of skills, yet SEO needs technical work, writing and links together. A small senior team supplies all three at a similar monthly cost. Either way, ask for one real-number example first.',
   },
 ];
 
@@ -179,13 +179,13 @@ const KOL_COMPARISON_COLUMNS = [
 ] as const;
 
 const KOL_COMPARISON_ROWS = [
-  { feature: 'Long contracts', values: ['None, monthly', '6 to 12 months typical', 'Varies', 'N/A'] },
+  { feature: 'Minimum term', values: ['Month to month', 'Usually 6 to 12 months', 'Varies', 'N/A'] },
   { feature: 'SEO for selling abroad in simple English', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />] },
-  { feature: 'Gets you into Google AI answers', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />] },
-  { feature: 'Fast site Google can read', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />] },
+  { feature: 'AI answer readiness', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />] },
+  { feature: 'Speed and crawl fixes', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />] },
   { feature: 'Top three on the map and free Google listing', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="yes" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />] },
-  { feature: 'Reports you can actually read', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="no" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />] },
-  { feature: 'You keep all content & links', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="yes" />, <CompareIcon key="diy" kind="yes" />] },
+  { feature: 'Short, readable reports', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="no" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />] },
+  { feature: 'Ownership of content & links', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="yes" />, <CompareIcon key="diy" kind="yes" />] },
 ];
 
 export default function KolkataSeoPage() {
@@ -221,7 +221,7 @@ export default function KolkataSeoPage() {
           headline="The SEO Company in Kolkata That Brings Orders, Not Just Rankings"
           lead="Kolkata sells in three directions at once. Leather, jute, and tea houses ship to buyers in the US, Europe, and Japan. Engineering and pharma units supply the whole of India. Coaching centres, clinics, and shops serve the city. One copy-paste SEO plan fits none of them. FactoryJet matches your SEO to the market you actually sell to, with monthly reports you can read in five minutes."
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
-          trustItems={['Picked up by Google AI answers', 'No long contracts', '500+ sites done']}
+          trustItems={['Ready for Google AI answers', 'No lock-in', '500+ sites done']}
           rightSlot={<HeroBrowserMockup badgeLabel="Top 3 on the map" badgeCity="Kolkata" />}
         />
 
@@ -318,22 +318,22 @@ export default function KolkataSeoPage() {
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Kolkata Businesses Choose FactoryJet for SEO"
-          lead="Kolkata SEO agencies sell 12-month contracts, junior managers, and 40-page reports nobody reads. FactoryJet uses AI plus senior people, is founder-led, works month to month, and is honest about what SEO can and cannot do for your market."
+          lead="Plenty of Kolkata agencies tie clients to 12-month contracts and 40-page reports. FactoryJet pairs AI with senior people, is founder-led, bills monthly, and tells you plainly what SEO can and cannot do in your market."
           pillars={[
-            { icon: '01', title: 'AI plus real people, built for the new Google.', body: 'Kolkata searches more and more show an AI answer before anyone clicks. We get you ready for AI search from day one with clear, well-structured content, whether you sell from Bantala or chase leads from Sector V, while most local agencies are still chasing ten blue links.' },
-            { icon: '02', title: 'No dodgy tricks. Ever.', body: 'No spammy link networks, no bought links, no throwaway pages. The agencies promising rank-in-30-days are the ones who get clients punished by Google. We build SEO that lasts, whether you are an export house or a coaching centre.' },
-            { icon: '03', title: 'Month to month. Reports you read.', body: 'One page a month. The Kolkata searches that moved, the visits that turned into customers, the leads we can trace, and the next three things. No lock-in, no jargon, no vanity numbers.' },
+            { icon: '01', title: 'Built for AI summaries.', body: 'Kolkata searches more often show an AI answer before any click. We structure your content for AI search from the first month, whether you export from Bantala or sell software from Sector V.' },
+            { icon: '02', title: 'No shortcuts.', body: 'No link networks, bought links or throwaway pages. Agencies that promise page one in 30 days are the ones whose clients get penalised. Export house or coaching centre, we build rankings that last.' },
+            { icon: '03', title: 'Monthly plan, short report.', body: 'One page each month listing Kolkata searches that moved, visits that became customers, leads we traced, and three next steps. Cancel in any month.' },
           ]}
         />
 
-        <ServiceJourneyRow eyebrow="OUR SEO PROCESS" headline="How We Run Your Kolkata SEO, Step by Step" lead="We check before we plan. We fix the basics before we add content. And we report from week one." stages={KOL_JOURNEY} closingNote="5 STEPS · AI PLUS REAL PEOPLE · MONTH TO MONTH · NO SPAMMY LINKS · ABROAD + ALL-INDIA + LOCAL" />
+        <ServiceJourneyRow eyebrow="OUR SEO PROCESS" headline="How We Run Your Kolkata SEO, Step by Step" lead="Five steps in a fixed order: audit, plan, repair, publish, report. Reporting starts in week one." stages={KOL_JOURNEY} closingNote="5 STEPS · SENIOR PEOPLE WITH AI · NO LOCK-IN · NO PAID LINKS · EXPORT + ALL-INDIA + CITY" />
 
         <section className="relative overflow-hidden bg-fj-cream py-14 md:py-20">
           <div className="pointer-events-none absolute inset-0 opacity-[0.5]" aria-hidden="true" style={{ backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px)', backgroundSize: '28px 28px' }} />
           <div className="relative mx-auto max-w-3xl px-6 text-center">
             <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>RECENT WORK</p>
             <h2 className="fj-display mt-3 font-semibold text-fj-ink" style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', lineHeight: 1.15, letterSpacing: '-0.02em' }}>Kolkata SEO results are on the way</h2>
-            <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>We are putting together real SEO results, with rankings, visits, and leads, from live FactoryJet work in Kolkata and across India. It all sits on the same work behind 500+ websites we have built, at a 4.9 average Google review rating.</p>
+            <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>Kolkata and wider India SEO case notes, covering rankings, visits and leads from live FactoryJet work, are being prepared. Our team has built 500+ websites and averages a 4.9 Google review rating.</p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <a href="/portfolio" className="inline-flex items-center gap-2 rounded-full border border-fj-ink/15 bg-white px-6 py-3 font-fj-body font-semibold text-fj-ink transition hover:border-[#F05A28] hover:text-[#F05A28]" style={{ fontSize: '0.9375rem' }}>See our website portfolio →</a>
             </div>
@@ -343,11 +343,11 @@ export default function KolkataSeoPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Kolkata Agency vs. Freelancer vs. DIY"
-          lead="There are four ways to do SEO in Kolkata. Here is the honest comparison: contracts, what you actually get, and what you keep at the end."
+          lead="Kolkata businesses have four SEO options. This table compares them on lock-in, scope of work and ownership."
           pullQuote={{ stat: 'No lock-in', caption: 'month-to-month SEO with the abroad, all-India, and AI-answer plan most Kolkata agencies do not run.' }}
           columns={KOL_COMPARISON_COLUMNS}
           rows={KOL_COMPARISON_ROWS}
-          footer="FactoryJet SEO plans run month to month, with 30 days notice to pause or stop."
+          footer="No fixed term: 30 days notice pauses or ends any FactoryJet plan."
         />
 
         <IndustriesGrid variant="cards"
@@ -366,7 +366,7 @@ export default function KolkataSeoPage() {
 
         <TestimonialsSection eyebrow="CLIENT RESULTS" headline="What India's founders say about working with FactoryJet" region="in" />
 
-        <FAQ eyebrow="FREQUENTLY ASKED QUESTIONS" headline="SEO Questions from Kolkata Businesses" lead="The questions we answer on every Kolkata SEO call, here in plain words." categories={KOL_FAQ_CATEGORIES} items={KOL_FAQ_ITEMS} />
+        <FAQ eyebrow="FREQUENTLY ASKED QUESTIONS" headline="SEO Questions from Kolkata Businesses" lead="Straight answers to the questions Kolkata businesses raise on a first call." categories={KOL_FAQ_CATEGORIES} items={KOL_FAQ_ITEMS} />
 
         <FinalCTA
           variant="dark"
@@ -375,13 +375,13 @@ export default function KolkataSeoPage() {
           sub="Your buyers are in New York, London, and Tokyo, in suppliers and resellers across India, and in students choosing a coaching centre, and they all start on Google or AI. Start with a free check, and we will show you exactly where you stand, whether you export from Bantala, build software in Sector V, or run a clinic in South Kolkata."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
-          objectionHandler="No long contracts. You keep everything we build. Reports you'll read in five minutes."
+          objectionHandler="No lock-in. All content and links stay yours. Five-minute monthly reports."
         />
         {/* Hub link-back (silo fix, 31 Jul 2026) */}
         <section className="border-t border-fj-ink/10 bg-fj-cream px-6 py-10 md:px-8">
           <div className="mx-auto max-w-3xl">
             <p className="text-base leading-relaxed text-fj-ink/75">
-              We work well beyond Kolkata. See{' '}
+              Kolkata is one market of many. See{' '}
               <a href="/seo" className="font-semibold text-[#B23E13] underline underline-offset-2">
                 SEO services across India
               </a>{' '}

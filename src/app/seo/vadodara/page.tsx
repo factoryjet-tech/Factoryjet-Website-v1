@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'SEO Company in Vadodara | Best SEO Services | FactoryJet',
     description:
-      'SEO agency in Vadodara for engineering, petrochemical, pharma, and manufacturing firms. Win business across India, win export orders, and get named in Google AI answers. No lock-in. Serving Makarpura, Nandesari, Halol, and Savli.',
+      'SEO agency in Vadodara for engineering, petrochemical, pharma and manufacturing firms. Win business across India, export orders and Google AI answers.',
     url: 'https://factoryjet.com/seo/vadodara',
     images: [{ url: 'https://factoryjet.com/images/services/seo.webp', width: 1200, height: 630, alt: 'FactoryJet SEO Agency in Vadodara' }],
     locale: 'en_IN',
@@ -108,11 +108,11 @@ const speakableSchema = {
 };
 
 const VAD_JOURNEY: ServiceJourneyStage[] = [
-  { number: '01', title: 'Check', description: 'A full check of your Vadodara site: how fast it loads, whether Google can find and read it, the links pointing to you, and where you stand against the engineering, petrochem, or pharma rivals you lose orders to. In plain words. (Week 1)' },
+  { number: '01', title: 'Check', description: 'An audit of load speed, indexing and backlinks on your Vadodara site, measured against the engineering, petrochem or pharma suppliers who win the orders you lose. Plain words, no jargon. (Week 1)' },
   { number: '02', title: 'Plan', description: 'A Vadodara search plan tied to sales. The searches buyers across India use for engineering and chemicals, the simple English searches that win export orders, and the Google AI answers your rivals have not claimed. (Week 1 to 2)' },
-  { number: '03', title: 'Build', description: 'We fix the technical side first: the hidden code that helps Google understand your site, speed, and links between pages. Then we improve the pages that win you customers, plus your free Google listing. (Week 2 to 4)' },
-  { number: '04', title: 'Content & Links', description: 'Content planned with AI and written by a real editor for technical and buying teams, plus real links from genuine Indian and overseas sites. No spammy link tricks, no bought links. (Ongoing)' },
-  { number: '05', title: 'Report', description: 'A one-page monthly report. The searches that moved, visits that turn into customers, the enquiries and quote requests we can trace, and the next three things. (Monthly)' },
+  { number: '03', title: 'Build', description: 'Technical work comes first: product markup, load speed and links between pages. Then we rebuild capability and product pages and set up your free Google listing. (Week 2 to 4)' },
+  { number: '04', title: 'Content & Links', description: 'Spec-led content for technical and buying teams, drafted with AI and edited by a person, plus links earned from real Indian and overseas sites. No paid links or link schemes. (Ongoing)' },
+  { number: '05', title: 'Report', description: 'Each month, one page: searches that moved, enquiries and quote requests traced to Google, and the three next actions. (Monthly)' },
 ];
 
 const VAD_FAQ_CATEGORIES = [
@@ -124,39 +124,39 @@ const VAD_FAQ_CATEGORIES = [
 ];
 
 const VAD_FAQ_ITEMS = [
-  { category: 'pricing', question: 'How much does SEO cost in Vadodara?', answer: 'We do not sell fixed packages. We look at what you need and only charge for work that moves you up Google. The price depends on how competitive your market is and how much work your site needs, so we give you an exact price after a free check. There is no long contract. You pay month to month and can stop with 30 days notice.' },
-  { category: 'pricing', question: 'How long until I see SEO results in Vadodara?', answer: 'Your own brand and basic capability searches usually move in 30 to 60 days. Tough industrial and export searches take four to six months, because you win them with deep, trustworthy content. We show early signs of progress from week one. Vadodara is also a quieter search market than the big metros, so good SEO often ranks faster here.' },
-  { category: 'pricing', question: 'Why is FactoryJet different from other Vadodara SEO agencies?', answer: 'We are a small team that uses AI plus senior people, and we understand selling to other businesses, where most local agencies only know retail. AI does the research and reports at scale; experienced people do the strategy, writing, and technical work that moves rankings. You pay for the work, not the overheads.' },
-  { category: 'pricing', question: 'Do you require a long-term contract?', answer: 'No. SEO runs month to month, with 30 days notice to pause or stop. We keep Vadodara clients by showing real progress, not by tying them to a 12-month deal.' },
-  { category: 'included', question: 'What does a Vadodara SEO plan include?', answer: 'A fast site Google can read, better pages that win customers, and the right search plan for your market, whether that is winning business across India or export orders abroad. Bigger plans add content written by a real editor, real links from trusted sites, and getting picked up by Google AI answers, plus a monthly call and a one-page report.' },
+  { category: 'pricing', question: 'How much does SEO cost in Vadodara?', answer: 'It depends on the work your site needs and how many rivals chase the same buyers. A Makarpura transformer maker selling to power utilities needs a different plan from an Alkapuri clinic. After a free check we send one written monthly price. Plans run month to month and stop with 30 days notice.' },
+  { category: 'pricing', question: 'How long until I see SEO results in Vadodara?', answer: 'Searches for your company name and your map listing usually shift in 30 to 60 days. Engineering and export searches take four to six months because buying teams trust depth, and depth takes time to publish. We report early progress from week one, long before the first quote request.' },
+  { category: 'pricing', question: 'Why is FactoryJet different from other Vadodara SEO agencies?', answer: 'We pair AI with senior people. AI covers research and reporting at scale. Experienced staff handle the strategy, technical work and writing for engineers and buyers. We keep no big office or sales floor, so you pay for output.' },
+  { category: 'pricing', question: 'Do you require a long-term contract?', answer: 'No. It is a monthly plan with 30 days notice to stop. Vadodara firms buy on long cycles, and we earn each renewal with progress, not a 12-month signature.' },
+  { category: 'included', question: 'What does a Vadodara SEO plan include?', answer: 'Technical fixes so Google reads a fast site, better product and capability pages, and a search plan for buyers across India and abroad. Higher plans add content, earned links and Google AI answer work, plus a monthly call and a one-page report.' },
   { category: 'included', question: 'Do you build technical and capability content for industrial buyers?', answer: 'Yes. For engineering, petrochem, and pharma firms we write pages about what you can make, your products, how they are used, your spec sheets, and your certificates, all in the words that buying teams and big project contractors actually use. This is what gets you shortlisted, and it is also what Google AI answers quote.' },
   { category: 'included', question: 'Can you handle product and catalogue SEO for a manufacturer?', answer: 'Yes. We improve your product, grade, and application pages, add the hidden product details Google reads, and go after the supplier and parts searches buyers use. We work on WordPress, Shopify, and custom sites, and connect with IndiaMART-style B2B sourcing where it helps.' },
-  { category: 'included', question: 'Do you write the content?', answer: 'We do. AI builds the first outline; a real editor turns it into writing that holds up for technical and buying teams and answers the buyer question directly. You approve every piece before it goes live.' },
-  { category: 'technical', question: 'Do you help me show up in Google AI answers?', answer: 'Yes. Even buying and engineering teams now start their research in AI search. We lay out content as clear questions and answers, add the hidden code that builds trust, and write facts AI can quote, so Google AI answers, ChatGPT, and Perplexity name your business. It is part of every plan.' },
-  { category: 'technical', question: "What's the difference between technical SEO and on-page SEO?", answer: 'Technical SEO is the plumbing: a fast site Google can find, read, and trust, plus the hidden code that helps Google understand it. On-page SEO is what people see on each page, like headings, words, how deep the content goes, and the links between pages. You need both, so we fix the plumbing first, then improve the pages.' },
-  { category: 'technical', question: 'Will SEO work on my WordPress, Shopify, or custom site?', answer: 'Yes, we work with whatever you have. We know WordPress and Shopify inside out, and can often work directly on modern custom sites too. Our first check finds anything about your setup that needs care, so there are no surprises.' },
-  { category: 'technical', question: 'Do you fix site speed?', answer: 'Yes. A fast site both ranks better and turns more visitors into customers, so it is part of the technical work, never an optional extra. We make your site quick on mobile, since most searches in India happen on a phone, even for business research.' },
+  { category: 'included', question: 'Do you write the content?', answer: 'Yes. AI drafts the structure. An editor who can read a spec sheet then writes for buying teams and engineers. You approve every page before it is live.' },
+  { category: 'technical', question: 'Do you help me show up in Google AI answers?', answer: 'Yes, at no extra charge. Procurement teams more and more ask AI tools for supplier lists. We format pages as questions and answers, add trust markup, and publish specs and facts AI can quote, so Google AI answers, ChatGPT and Perplexity can name your firm.' },
+  { category: 'technical', question: "What's the difference between technical SEO and on-page SEO?", answer: 'Technical SEO makes the site fast and readable for Google, including code that describes products and certifications. On-page SEO is what visitors read: headings, text and links between pages. We fix technical issues first, then rework the pages.' },
+  { category: 'technical', question: 'Will SEO work on my WordPress, Shopify, or custom site?', answer: 'Yes. We work on WordPress and Shopify every week, and most custom industrial sites are workable. The first check spots anything in your setup that needs care.' },
+  { category: 'technical', question: 'Do you fix site speed?', answer: 'Yes. Speed sits inside the technical work on every plan. Plant managers and buyers often check suppliers on a phone between meetings, so we tune mobile load times first. Faster sites rank better and win more quote requests.' },
   { category: 'local', question: 'Can you do SEO for a Vadodara engineering or transformer manufacturer?', answer: 'Yes, and selling to other businesses is where we do our best work. We go after the searches that buying teams, power companies, and big project contractors actually use, write content about what you can make, and add the trust signals that get you on a buyer’s shortlist. These deals take a long time to win, and good content keeps paying off.' },
   { category: 'local', question: 'Do you handle export SEO for engineered goods, rolling stock, or pharma?', answer: 'Yes. For firms exporting machines, rail equipment, and medicines, we go after the simple English searches overseas buyers use, write content about your certificates and what you can make so buyers and regulators trust you, and get you named in Google AI answers. We chase orders from abroad, not "near me" searches.' },
   { category: 'local', question: 'Do you do B2B SEO for chemical and petrochem makers in Nandesari or Koyali?', answer: 'Yes. Chemical and petrochem makers sell to factories across India, so we go after grade, ingredient, and use-case searches all over the country, write the product and spec pages buyers look for, and add the trust signals buying teams want to see.' },
   { category: 'local', question: 'Do you cover Makarpura, Halol, Savli, and the GIDC estates?', answer: 'Yes. We match your SEO to your area, whether that is the Makarpura engineering belt, the Nandesari and Koyali petrochem cluster, the Halol pharma zone, or the Savli industrial area, with local targeting and your free Google listing where it helps.' },
-  { category: 'reporting', question: 'What does your monthly report look like?', answer: 'One page, a five-minute read. The searches that moved and why, visits that turn into customers, the enquiries and quote requests we can trace to Google, and the exact three things we are doing next month.' },
-  { category: 'reporting', question: 'Do I own the content and links you build?', answer: 'Yes, all of it. Every page, plan, and piece lives on your own website and is yours to keep. If you stop working with us, you keep everything. There is no special software you must keep paying for to hold your rankings.' },
-  { category: 'reporting', question: 'How do you measure success?', answer: 'By enquiries, quote requests, and sales, not rankings for their own sake. We agree the searches that matter and what counts as a lead up front, set up Google’s free tools properly, and report on the numbers that map to your sales.' },
-  { category: 'reporting', question: 'Who works on my Vadodara account?', answer: 'A small, senior team. FactoryJet is founder-led, so you talk to the people doing the strategy and the technical work, not a junior who got your account on day two.' },
+  { category: 'reporting', question: 'What does your monthly report look like?', answer: 'A one-page summary, five minutes to read: searches that moved, visits that became enquiries or quote requests, leads traced to Google, and the three actions for next month.' },
+  { category: 'reporting', question: 'Do I own the content and links you build?', answer: 'Yes. Every page, plan and link sits on your website and stays with you if we part ways. There is no paid tool of ours you must keep to hold rankings.' },
+  { category: 'reporting', question: 'How do you measure success?', answer: 'By enquiries, quote requests and orders. Up front we agree the searches that matter and what counts as a lead, configure Google’s free tools, and report the figures your sales team cares about.' },
+  { category: 'reporting', question: 'Who works on my Vadodara account?', answer: 'A small team of senior people. FactoryJet is founder-led, so your calls are with the people doing the strategy and technical work, and nobody junior inherits your account.' },
 
   // Money-query coverage, added 2026-06-11
   {
     category: 'pricing',
     question: 'Who is the best SEO agency in Vadodara?',
     answer:
-      'For small and mid-size businesses, FactoryJet makes a strong case as the best SEO company in Vadodara: the same engineers who build fast websites run the SEO services in Vadodara clients pay for, with a clear monthly report and no long contract. The best SEO services in Vadodara pass three checks: a plan in simple words, results with real numbers, and the price in writing. We also run local SEO services in Vadodara, the best local SEO services in Vadodara manage your Google Business Profile every week, not once a quarter.',
+      'For small and mid-size firms, FactoryJet stands up well as the best SEO company in Vadodara. One team builds fast websites and runs the SEO services in Vadodara clients pay for, with a monthly report and no long contract. Measure any provider of the best SEO services in Vadodara on a plan in plain words, results with real numbers and a written price. We run local SEO services in Vadodara too, and the best local SEO services in Vadodara keep your Google Business Profile updated every week, not once a quarter.',
   },
   {
     category: 'pricing',
     question: 'Should I hire SEO expert in Vadodara or work with an agency?',
     answer:
-      'Both can work. If you hire SEO expert in Vadodara alone, you get one set of skills, and SEO needs technical work, writing, and links together. A small senior team gives you all three for a similar monthly cost. Whichever way you go, ask for one example with real numbers before you pay.',
+      'Both options can work. Hire SEO expert in Vadodara as one person and you get a single skill set, though SEO needs technical work, writing and links together. A small senior team handles all three at a similar monthly cost. Ask for one example with real numbers before you pay.',
   },
 ];
 
@@ -178,13 +178,13 @@ const VAD_COMPARISON_COLUMNS = [
 ] as const;
 
 const VAD_COMPARISON_ROWS = [
-  { feature: 'Long contracts', values: ['None, monthly', '6 to 12 months typical', 'Varies', 'N/A'] },
+  { feature: 'Commitment', values: ['Monthly only', 'Typically 6 to 12 months', 'Varies', 'N/A'] },
   { feature: 'Plan for India and export', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />] },
-  { feature: 'Gets you into Google AI answers', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />] },
-  { feature: 'Fast site Google can read', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />] },
-  { feature: 'Real links, no spammy tricks', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />] },
-  { feature: 'Reports you can actually read', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="no" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />] },
-  { feature: 'You keep all content & links', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="yes" />, <CompareIcon key="diy" kind="yes" />] },
+  { feature: 'Shows up in AI answers', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />] },
+  { feature: 'Fast, readable site', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />] },
+  { feature: 'No paid or spam links', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="diy" kind="no" />] },
+  { feature: 'Reports your team can read', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="no" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="diy" kind="no" />] },
+  { feature: 'All work stays with you', values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="ag" kind="partial" />, <CompareIcon key="fr" kind="yes" />, <CompareIcon key="diy" kind="yes" />] },
 ];
 
 export default function VadodaraSeoPage() {
@@ -220,7 +220,7 @@ export default function VadodaraSeoPage() {
           headline="The SEO Agency in Vadodara Built for Engineering, Industry, and Export"
           lead="Vadodara is one of India's big factory cities. About a third of the country's power equipment is built here, the IOCL refinery at Koyali sits at the heart of a huge petrochemical cluster, and firms like L&T, ABB, Alstom, and Alembic sell to power companies, big project contractors, and buyers around the world. These are slow, careful business deals, not quick buys. FactoryJet does SEO for those buyers and exporters, with monthly reports you can actually read."
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
-          trustItems={['Picked up by Google AI answers', 'No long contracts', '500+ sites done']}
+          trustItems={['Picked up by Google AI answers', 'Month-to-month plans', '500+ sites done']}
           rightSlot={<HeroBrowserMockup badgeLabel="B2B + export" badgeCity="Vadodara" />}
         />
 
@@ -321,19 +321,19 @@ export default function VadodaraSeoPage() {
           lead="Most Vadodara SEO agencies are set up for retail and sell 12-month contracts. FactoryJet uses AI plus senior people, is founder-led, works month to month, and understands selling to other businesses, where the buyer is a buying team, not a walk-in customer."
           pillars={[
             { icon: '01', title: 'Built for selling to businesses.', body: 'We go after the searches that buying teams and big project contractors use, and write the content that gets you shortlisted. Most local agencies only know retail and miss this completely.' },
-            { icon: '02', title: 'No dodgy tricks. Ever.', body: 'No spammy link tricks, no bought links, no throwaway pages. For an engineering or pharma exporter, a Google punishment is a trust problem with overseas buyers and regulators. We build SEO that lasts.' },
-            { icon: '03', title: 'Month to month. Reports you read.', body: 'One page a month. The searches that moved, the visits that turned into customers, the enquiries and quote requests we can trace, and the next three things. No lock-in, no jargon, no vanity numbers.' },
+            { icon: '02', title: 'Penalty-proof links.', body: 'We avoid link schemes, paid links and filler pages. If Google penalised an engineering or pharma exporter, overseas buyers and regulators would notice. We build rankings meant to last.' },
+            { icon: '03', title: 'Monthly terms, readable reports.', body: 'A single page each month: searches that moved, visits that became enquiries and quote requests, and the next three actions. No lock-in, no jargon.' },
           ]}
         />
 
-        <ServiceJourneyRow eyebrow="OUR SEO PROCESS" headline="How We Run Your Vadodara SEO, Step by Step" lead="We check before we plan. We fix the basics before we add content. And we report from week one." stages={VAD_JOURNEY} closingNote="5 STEPS · AI PLUS REAL PEOPLE · MONTH TO MONTH · NO SPAMMY LINKS · INDIA + EXPORT + AI ANSWERS" />
+        <ServiceJourneyRow eyebrow="OUR SEO PROCESS" headline="How We Run Your Vadodara SEO, Step by Step" lead="Every Vadodara plan follows the same order: audit, plan, technical repair, content, then a report from week one." stages={VAD_JOURNEY} closingNote="5 STEPS · AI + SENIOR ENGINEERS · MONTHLY · NO PAID LINKS · ALL-INDIA + EXPORT" />
 
         <section className="relative overflow-hidden bg-fj-cream py-14 md:py-20">
           <div className="pointer-events-none absolute inset-0 opacity-[0.5]" aria-hidden="true" style={{ backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px)', backgroundSize: '28px 28px' }} />
           <div className="relative mx-auto max-w-3xl px-6 text-center">
             <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>RECENT WORK</p>
             <h2 className="fj-display mt-3 font-semibold text-fj-ink" style={{ fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', lineHeight: 1.15, letterSpacing: '-0.02em' }}>Vadodara SEO results are on the way</h2>
-            <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>We are putting together real SEO results, with rankings, visits, and enquiries, from live FactoryJet work in Gujarat and across India. It all sits on the same work behind 500+ websites we have built, at a 4.9 average Google review rating, including business engineering and consulting clients.</p>
+            <p className="mx-auto mt-4 max-w-2xl font-fj-body text-fj-neutral-600" style={{ fontSize: '1.0625rem', lineHeight: 1.6 }}>We are documenting SEO results for manufacturers in Gujarat and elsewhere in India: rankings, visits and quote requests from live FactoryJet work. The team behind them has built 500+ websites with a 4.9 average Google review rating.</p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <a href="/portfolio" className="inline-flex items-center gap-2 rounded-full border border-fj-ink/15 bg-white px-6 py-3 font-fj-body font-semibold text-fj-ink transition hover:border-[#F05A28] hover:text-[#F05A28]" style={{ fontSize: '0.9375rem' }}>See our website portfolio →</a>
             </div>
@@ -343,11 +343,11 @@ export default function VadodaraSeoPage() {
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
           headline="FactoryJet vs. Vadodara Agency vs. Freelancer vs. DIY"
-          lead="There are four ways to do SEO in Vadodara. Here is the honest comparison: contracts, what you actually get, and what you keep at the end."
+          lead="Vadodara firms can hire an agency or a freelancer, do it in-house, or work with us. Here is how each compares on terms, scope and ownership."
           pullQuote={{ stat: 'No lock-in', caption: 'month-to-month SEO with the business and export plan most Vadodara agencies do not run.' }}
           columns={VAD_COMPARISON_COLUMNS}
           rows={VAD_COMPARISON_ROWS}
-          footer="FactoryJet SEO plans run month to month, with 30 days notice to pause or stop."
+          footer="FactoryJet plans renew monthly and end on 30 days notice."
         />
 
         <IndustriesGrid variant="cards"
@@ -366,7 +366,7 @@ export default function VadodaraSeoPage() {
 
         <TestimonialsSection eyebrow="CLIENT RESULTS" headline="What India's founders say about working with FactoryJet" region="in" />
 
-        <FAQ eyebrow="FREQUENTLY ASKED QUESTIONS" headline="SEO Questions from Vadodara Businesses" lead="The questions we answer on every Vadodara SEO call, here in plain words." categories={VAD_FAQ_CATEGORIES} items={VAD_FAQ_ITEMS} />
+        <FAQ eyebrow="FREQUENTLY ASKED QUESTIONS" headline="SEO Questions from Vadodara Businesses" lead="The questions Vadodara manufacturers ask before signing up, answered in plain words." categories={VAD_FAQ_CATEGORIES} items={VAD_FAQ_ITEMS} />
 
         <FinalCTA
           variant="dark"
@@ -375,13 +375,13 @@ export default function VadodaraSeoPage() {
           sub="Your buyers are buying teams, power companies, big project contractors, and overseas importers, and they check out suppliers on Google and AI before a quote request ever lands. Far fewer Vadodara firms compete on Google than in the big metros, so the window to own your category is open now. Start with a free check, and we will show you exactly where you stand."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Work', href: '/portfolio' }}
-          objectionHandler="No long contracts. You keep everything we build. Reports you'll read in five minutes."
+          objectionHandler="Month-to-month plans. You own all the work. Reports that take five minutes."
         />
         {/* Hub link-back (silo fix, 31 Jul 2026) */}
         <section className="border-t border-fj-ink/10 bg-fj-cream px-6 py-10 md:px-8">
           <div className="mx-auto max-w-3xl">
             <p className="text-base leading-relaxed text-fj-ink/75">
-              We work well beyond Vadodara. See{' '}
+              Vadodara firms rarely sell only in Vadodara. See{' '}
               <a href="/seo" className="font-semibold text-[#B23E13] underline underline-offset-2">
                 SEO services across India
               </a>{' '}
