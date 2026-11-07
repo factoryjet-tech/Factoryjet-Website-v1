@@ -29,13 +29,12 @@ import WebDesignCityLinksIN from '@/components/v2/WebDesignCityLinksIN';
 export const metadata: Metadata = {
   title: 'Web Design Company in Ahmedabad | FactoryJet',
   description:
-    'Web design company in Ahmedabad for textile exporters & trading firms. Fast, custom websites with 7-day delivery. Serving SG Highway, Vastrapur & GIFT City.',
+    'Web design company in Ahmedabad for textile, chemical and pharma exporters. Custom Next.js sites, fixed quote, 7-day delivery. Your code, your GitHub.',
   keywords: [
     'web design company in Ahmedabad',
     'website design Ahmedabad',
     'web development company Ahmedabad',
     'website design company Ahmedabad',
-    'affordable web design Ahmedabad',
     'professional website design Ahmedabad',
     'web design SG Highway',
     'web design GIFT City',
@@ -49,14 +48,14 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Web Design Company in Ahmedabad | FactoryJet',
     description:
-      'Professional website design company in Ahmedabad: Next.js, SEO, and GA4 included. 7-day delivery. Serving SG Highway, Vastrapur, Bodakdev, GIFT City.',
+      'Web design company in Ahmedabad for exporters, GIFT City firms and retail brands. Figma design, Next.js build, GA4 and SEO set up, 7-day delivery.',
     url: 'https://factoryjet.com/web-design/ahmedabad',
     images: [
       {
         url: 'https://factoryjet.com/images/services/web-design.webp',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet Web Design Services in Ahmedabad',
+        alt: 'Web design for Ahmedabad exporters and businesses by FactoryJet',
       },
     ],
     locale: 'en_IN',
@@ -65,7 +64,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web Design Company in Ahmedabad | FactoryJet',
     description:
-      'Website design company in Ahmedabad. 7-day delivery. Next.js, SEO, GA4 included.',
+      'Web design in Ahmedabad: export-ready Next.js sites, 7-day delivery.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
@@ -92,7 +91,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-10-21';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -112,33 +111,33 @@ const localBusinessSchema = { '@context': 'https://schema.org', '@type': 'Organi
 const AMD_JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery & Strategy',
+    title: 'Buyer map and sitemap',
     description:
-      "We map your ideal customer profile against Ahmedabad's market, whether that's an international buyer sourcing textiles or chemicals, a GIFT City financial services firm, or a local retail consumer. We audit your top competitors and agree the sitemap and content plan.: Days 1–2",
+      "First we decide who the site must convince. A cotton fabric buyer in Europe, a pharma procurement head, a GIFT City client and a Prahlad Nagar shopper all read a site differently. We study three or four Ahmedabad rivals and lock the page list.: Days 1–2",
   },
   {
     number: '02',
-    title: 'Design & Prototyping',
+    title: 'Mobile layouts in Figma',
     description:
-      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts.: Days 3–4',
+      'Layouts start at phone width and scale up to wide desktop. Enquiry buttons, catalogue grids and certificate blocks are placed before any code exists. Nothing moves to build until you sign off the design.: Days 3–4',
   },
   {
     number: '03',
-    title: 'Development',
+    title: 'Code and integrations',
     description:
-      'Built in Next.js deployed to Cloudflare CDN: sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, product catalog systems, and any third-party APIs your business uses. Performance budgets enforced from the first commit.: Days 5–6',
+      'The approved design becomes a Next.js site on Cloudflare. We connect your WhatsApp number, enquiry forms, catalogue data and any tools you already run, and we check page weight as we go.: Days 5–6',
   },
   {
     number: '04',
-    title: 'Content & SEO',
+    title: 'Copy, schema and search setup',
     description:
-      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Ahmedabad-specific local SEO targeting built in.: Day 6–7',
+      'Page copy is tightened, images go out as WebP, and schema for your business and FAQs is added. The sitemap reaches Google Search Console with Ahmedabad search terms mapped to pages.: Day 6–7',
   },
   {
     number: '05',
-    title: 'Launch & Handover',
+    title: 'Go-live and handover',
     description:
-      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included.: Day 7+',
+      'Domain pointed to Cloudflare, GA4 and Tag Manager live, Search Console verified. You get a recorded walkthrough of how to edit the site, and 30 days of post-launch fixes.: Day 7+',
   },
 ];
 
@@ -146,7 +145,7 @@ const AMD_FAQ_CATEGORIES = [
   { key: 'pricing',   label: 'Pricing & Timeline' },
   { key: 'included',  label: "What's Included" },
   { key: 'technical', label: 'Technical & SEO' },
-  { key: 'local',     label: 'Ahmedabad Local' },
+  { key: 'local',     label: 'Ahmedabad Questions' },
   { key: 'support',   label: 'Support & Ownership' },
 ];
 
@@ -155,131 +154,131 @@ const AMD_FAQ_ITEMS = [
   /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How much does a website cost for a business in Ahmedabad?',
+    question: 'What will a website cost my Ahmedabad business?',
     answer:
-      "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
+      "It depends on scope. A ten-page exporter site with a product catalogue costs less than a store with payments or a dealer login. After a free call we send one fixed figure for the agreed pages and features, and the code you pay for stays yours.",
   },
   {
     category: 'pricing',
-    question: 'How long does it take to build a website?',
+    question: 'How many days does a build take?',
     answer:
-      'A standard FactoryJet build delivers in 7 days from kickoff to launch. Discovery and design take the first two days, development days three through six, and content, SEO, and launch on day seven. The 7-day clock starts when your brand assets and content are in our shared workspace.',
+      'Seven days from kickoff, once your logo, photos and basic content are shared with us. Days one and two cover planning and layout, three to six cover design approval and code, and day seven is launch.',
   },
   {
     category: 'pricing',
-    question: 'What makes FactoryJet better value than a Ahmedabad web agency?',
+    question: 'Why would I pick FactoryJet over a firm on SG Highway?',
     answer:
-      "We are a specialised web engineering team, not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch, at 60–70% lower cost. You pay for the build, not our admin structure.",
+      "We run a small engineering team without a large sales layer. You talk to the people who design and code your site, the scope is written down, and the quote stays fixed. Your money goes into the build itself.",
   },
   {
     category: 'pricing',
-    question: 'What does 7-day delivery include?',
+    question: 'What sits inside the 7-day delivery promise?',
     answer:
-      'The 7-day timeline covers the development phase we control, design, build, content, and launch. We have delivered on time on 97% of all projects.',
+      'The seven days cover the work in our hands: design, code, copy polish and launch. Delays caused by missing content pause the clock. Across all our projects, 97% shipped on time.',
   },
 
   /* ── What's Included ── */
   {
     category: 'included',
-    question: "What's included in a web design project?",
+    question: "What do I get at the end of a project?",
     answer:
-      'Every FactoryJet project includes strategy, Figma design, Next.js development, basic copywriting, technical SEO setup (schema, meta, sitemap), GA4 analytics, and a 30-day post-launch support window. You receive the full codebase in your GitHub on launch day.',
+      'Planning, Figma design, a Next.js build, starter copy, schema and sitemap setup, GA4, and 30 days of fixes after launch. The full source code is pushed to a GitHub account in your name on launch day.',
   },
   {
     category: 'included',
-    question: 'Do you write the content for my website?',
+    question: 'Will you write the text for my pages?',
     answer:
-      'Basic copywriting for headings, hero text, and service descriptions is included. Full SEO content is available as an add-on. We send a content brief before development starts so you know exactly what to provide.',
+      'We write headlines, hero lines and short service blurbs as part of the build. Long-form SEO articles cost extra. Before code starts you get a short brief listing exactly what we need from you, such as certificates or product specs.',
   },
   {
     category: 'included',
-    question: 'Do you provide website hosting?',
+    question: 'Who hosts the site?',
     answer:
-      "We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account, we configure it for you. No monthly hosting fee to us.",
+      "Your site runs on Cloudflare Pages under an account you own. For most business sites the hosting tier is free. We set it up and you pay us nothing monthly for hosting.",
   },
   {
     category: 'included',
-    question: 'Can I update the website myself after launch?',
+    question: 'Can my staff edit pages without a developer?',
     answer:
-      'Yes. Every Growth and Custom tier project includes a headless CMS integration (Sanity or Contentful) so your team can update content without touching code.',
+      'Yes. Growth and Custom tier builds come with a headless CMS, Sanity or Contentful, so your team can change text, products and photos from a browser.',
   },
 
   /* ── Technical & SEO ── */
   {
     category: 'technical',
-    question: 'Will my website rank on Google India?',
+    question: 'Can my Ahmedabad site show up on Google?',
     answer:
-      'Technical SEO is built into every project: JSON-LD schema markup, optimised title and meta templates, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images. Branded searches typically rank within 1–2 weeks.',
+      'Each build ships with schema markup, clean title and meta tags, passing Core Web Vitals on mobile, an XML sitemap filed in Search Console, and compressed images. Searches for your company name usually start showing it within one to two weeks. Ranking for competitive service terms takes longer and needs content.',
   },
   {
     category: 'technical',
-    question: 'What tech stack do you build on?',
+    question: 'Which technology do you use?',
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Ahmedabad businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings.",
+      "Next.js pages served from Cloudflare's network. Static pages load far faster on Indian 4G than a typical plugin-heavy WordPress install, and page speed is part of how Google scores sites competing for the same Ahmedabad searches.",
   },
   {
     category: 'technical',
-    question: 'How does the site perform on mobile?',
+    question: 'Will buyers on phones get a good experience?',
     answer:
-      'Mobile-first is the default. Every build targets Lighthouse 90+ and green Core Web Vitals on mobile before launch. We design at 375px before desktop, serve WebP images via Cloudflare CDN with lazy loading.',
+      'We design the phone layout first. Before launch every build must score Lighthouse 90+ on mobile with green Core Web Vitals. Images are lazy-loaded WebP files served from the nearest Cloudflare location.',
   },
   {
     category: 'technical',
-    question: 'Do you set up Google Analytics and Search Console?',
+    question: 'Will I see where my enquiries come from?',
     answer:
-      'Yes, GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, product enquiry clicks) are configured from day one. Search Console verified and sitemap submitted.',
+      'Yes. GA4 and Tag Manager go live before launch, tracking form sends, WhatsApp taps and catalogue enquiry clicks as events. Search Console is verified and the sitemap is submitted the same day.',
   },
 
   /* ── Ahmedabad Local ── */
   {
     category: 'local',
-    question: 'Do you build websites for textile exporters and trading companies in Ahmedabad?',
+    question: 'Do you build sites for Ahmedabad textile and yarn exporters?',
     answer:
-      "Yes, textile exporters, trading companies, and MSME manufacturers are a core client profile for us in Ahmedabad. We build websites optimised for international B2B buyer research: export credentials display, product catalog with inquiry forms, and technical SEO targeting English-language searches from buyers in the US, EU, Middle East, and Southeast Asia.",
+      "Yes. Fabric mills, garment exporters, yarn traders and MSME manufacturers make up much of the Ahmedabad work we take on. Their sites need a clear product range, mill or factory photos, export certifications, a sample request form, and English pages written for buyers searching from Europe, the US and the Gulf.",
   },
   {
     category: 'local',
-    question: 'Can you build websites for GIFT City financial services firms?',
+    question: 'Can you build a website for a GIFT City IFSC firm?',
     answer:
-      "Yes. GIFT City, India's first International Financial Services Centre, has unique requirements: compliance-aware content, regulatory credential display, and international client acquisition architecture. We build GIFT City financial services websites with proper schema, clear regulatory framework display, and lead flows designed for institutional buyers.",
+      "Yes. Firms in the IFSC at GIFT City usually need careful wording about licences, a clear list of regulated activities, team credentials and a contact flow for institutional clients. We build those pages with matching schema and keep claims inside what your licence allows.",
   },
   {
     category: 'local',
-    question: "Do you know Ahmedabad's business districts well enough to write relevant copy?",
+    question: "Will the copy reflect Ahmedabad's business areas?",
     answer:
-      "Yes. We research Ahmedabad's business geography as part of discovery, from SG Highway's corporate corridor and Vastrapur's premium retail to the Textile Market in Saraspur, GIDC Vatva's industrial estate, and GIFT City's IFSC zone. Local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches.",
+      "We check where your buyers and rivals sit during planning. Naroda and Vatva for chemicals and engineering, the old city markets for cloth trade, SG Highway and Prahlad Nagar for offices, Gandhinagar for GIFT City. Area names go into copy and schema only where they match how buyers search.",
   },
   {
     category: 'local',
-    question: 'How does FactoryJet compare to Ahmedabad web agencies?',
+    question: 'How is FactoryJet different from a typical Ahmedabad web agency?',
     answer:
-      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
+      "Many local agencies quote only after several meetings and plan builds over weeks. We send a fixed quote first, write the 7-day delivery date into the agreement, and build in Next.js. You leave with a faster site and the full code.",
   },
 
   /* ── Support & Ownership ── */
   {
     category: 'support',
-    question: 'Do I own the website after it is built?',
+    question: 'Who owns the finished site?',
     answer:
-      'Yes, 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
+      'You do. The Next.js source lands in your GitHub repository on launch day, along with the Figma files and every login. There is no retainer to keep the site alive and no locked platform.',
   },
   {
     category: 'support',
-    question: 'What support do you provide after launch?',
+    question: 'What help do I get once the site is live?',
     answer:
-      'Every project includes a 30-day post-launch support window covering bug fixes and minor adjustments at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans covering development changes, priority same-day bug response, and a dedicated engineer who knows your codebase.',
+      'For 30 days after launch we fix bugs and make small changes free. After that you can take a monthly plan for new work, same-day bug response and an engineer who already knows your code.',
   },
   {
     category: 'support',
-    question: 'What happens if something breaks after launch?',
+    question: 'What if the site breaks after launch?',
     answer:
-      'Within the 30-day support window, any bugs are fixed at no cost and typically within 24 hours. Because your site is on Cloudflare Pages (static files, global CDN), common causes of downtime simply do not apply.',
+      'Bugs reported within the first 30 days are fixed free, usually inside 24 hours. Because pages are static files on Cloudflare\'s network, there is no server or plugin stack to crash.',
   },
   {
     category: 'support',
-    question: 'Do you offer ongoing retainer services for Ahmedabad businesses?',
+    question: 'Can we keep FactoryJet on a monthly plan in Ahmedabad?',
     answer:
-      'Yes. Monthly retainers cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
+      'Yes. A monthly plan covers new pages, campaign landing pages ahead of trade fairs, SEO fixes, content edits and upkeep. Plan clients get first place in our schedule and one named engineer.',
   },
 
   // Money-query coverage, added 2026-06-11
@@ -287,13 +286,13 @@ const AMD_FAQ_ITEMS = [
     category: 'pricing',
     question: 'Who is the best web design agency in Ahmedabad?',
     answer:
-      'For small businesses, FactoryJet makes a strong case as the best web design company in Ahmedabad: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Ahmedabad you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Ahmedabad.',
+      'Judge any Ahmedabad agency, us included, on three things. Live sites you can open on your own phone. Speed scores you can test yourself in PageSpeed Insights. A written price that does not change mid-build. FactoryJet offers custom sites in 7 days at a fixed price, and we are happy to be tested on all three.',
   },
   {
     category: 'pricing',
-    question: 'Should I hire web designer in Ahmedabad or use an agency?',
+    question: 'Should I hire web designer in Ahmedabad as a freelancer or go with a team?',
     answer:
-      'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Ahmedabad directly, agree the scope and price in writing first.',
+      'For a single landing page a freelancer can work well. A business site with a catalogue, enquiry tracking and SEO needs design, code and support from people who stay reachable. If you hire web designer in Ahmedabad on your own, get the page list and price signed before work starts.',
   },
 ];
 
@@ -309,18 +308,18 @@ const faqSchema = {
 
 const AMD_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
-  { label: 'Ahmedabad Agency' },
+  { label: 'Ahmedabad agency' },
   { label: 'Freelancer' },
-  { label: 'Template (Wix/Squarespace)' },
+  { label: 'DIY builder (Wix/Squarespace)' },
 ] as const;
 
 const AMD_COMPARISON_ROWS = [
   {
-    feature: 'Delivery timeline',
+    feature: 'Time to launch',
     values: ['7 days', '6–16 weeks', '3–12 weeks (unreliable)', '1–2 weeks (you build it)'],
   },
   {
-    feature: 'Custom Figma design',
+    feature: 'Design made in Figma for you',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="aa" kind="yes" />,
@@ -329,7 +328,7 @@ const AMD_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Next.js (not WordPress)',
+    feature: 'Built in Next.js',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="aa" kind="partial" />,
@@ -338,7 +337,7 @@ const AMD_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Technical SEO built in',
+    feature: 'Schema, sitemap and meta done',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="aa" kind="partial" />,
@@ -347,7 +346,7 @@ const AMD_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Lighthouse 90+ on mobile',
+    feature: 'Mobile Lighthouse score 90+',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="aa" kind="partial" />,
@@ -356,7 +355,7 @@ const AMD_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'GA4 + GTM wired up',
+    feature: 'GA4 and Tag Manager live',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="aa" kind="partial" />,
@@ -365,7 +364,7 @@ const AMD_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Transparent, fixed pricing',
+    feature: 'Price fixed before work starts',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="aa" kind="no" />,
@@ -374,7 +373,7 @@ const AMD_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Full codebase to your GitHub',
+    feature: 'Source code in your GitHub',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="aa" kind="partial" />,
@@ -383,7 +382,7 @@ const AMD_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '7-day delivery',
+    feature: 'Launch inside 7 days',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="aa" kind="no" />,
@@ -397,39 +396,39 @@ const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
   '@id': `https://factoryjet.com/web-design/ahmedabad#howto`,
-  name: `How FactoryJet builds your Ahmedabad website in 7 days`,
-  description: `Our 7-day process for delivering a professional, AI-powered website for Ahmedabad businesses.`,
+  name: `How an Ahmedabad business website gets built in 7 days`,
+  description: `FactoryJet's seven-day plan for an Ahmedabad exporter, firm or retail brand website.`,
   totalTime: 'P7D',
   step: [
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 | Discovery Call',
-      text: `We learn your business, your Ahmedabad market, your goals, and what you need the website to do.`,
+      name: 'Day 1: Kickoff call',
+      text: `We cover what you sell, who buys it, and which enquiries the Ahmedabad site must bring in.`,
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 | Strategy & Structure',
-      text: `We map your site architecture, research your Ahmedabad competitors, identify your top keywords, and write the first draft of your page copy.`,
+      name: 'Day 2: Page plan and keywords',
+      text: `We fix the page list, check the Ahmedabad firms you compete with, pick target search terms and draft first copy.`,
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 | Design',
-      text: 'Your bespoke design is created, homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
+      name: 'Days 3–4: Visual design',
+      text: 'Homepage and inner page designs are shared on a preview link. Your comments are worked in within a day.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 | Development & SEO',
-      text: `Your approved design is built in code, fast, mobile-first, and SEO-optimised. Ahmedabad local schema markup added. Google Analytics and Search Console connected.`,
+      name: 'Days 5–6: Build and search setup',
+      text: `The signed-off design is coded mobile-first, with Ahmedabad business schema, GA4 and Search Console in place.`,
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 | Launch',
-      text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.',
+      name: 'Day 7: Go live',
+      text: 'We test on five devices, launch, and hand over written notes plus a 30-minute training call.',
     },
   ],
 };
@@ -495,8 +494,8 @@ export default function AhmedabadWebDesignPage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="web_design_ahmedabad_hero" />}
           eyebrow="WEB DESIGN · AHMEDABAD"
-          headline="Website Design in Ahmedabad for Textile Exporters, Trading Firms, and Growing Businesses"
-          lead="Ahmedabad is India's textile capital, Gujarat's commercial hub, and home to GIFT City, India's first International Financial Services Centre. From the Textile Market and GIDC Vatva to SG Highway's corporate corridor and GIFT City's IFSC zone, Ahmedabad businesses compete globally. FactoryJet builds Figma-designed, Next.js-built websites with 7-day delivery, your codebase delivered in full."
+          headline="Website Design in Ahmedabad for Exporters, Manufacturers and Growing Brands"
+          lead="Ahmedabad sells cloth, chemicals and medicines to the world, and GIFT City is adding finance firms next door in Gandhinagar. Your buyers check your website before they call. FactoryJet designs it in Figma, builds it in Next.js and launches it in 7 days, and the code is yours."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery',
@@ -506,40 +505,40 @@ export default function AhmedabadWebDesignPage() {
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
-        <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
+        <LogoBar tagline="500+ businesses in India, the US, the UK and the UAE run on sites we built" />
 
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ websites built. 12 years of web engineering. 7-day delivery."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+          description="Our builds include Shopify stores, B2B catalogues and DTC brand sites for clients in India, the US, the UK and the UAE. Each one had a fixed quote, a 7-day delivery date and full code handover."
         />
 
         {/* ── 4. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="AHMEDABAD MARKET"
-          headline="Why Your Ahmedabad Web Presence Is a Business Asset"
+          headline="Why Ahmedabad Buyers Judge You by Your Website"
           leadParagraphs={[
-            "Ahmedabad is India's textile and trading capital: Gujarat contributes 18% of India's total exports, with textiles, chemicals, pharmaceuticals, and engineering goods leading. The city's business ecosystem spans the Textile Market and Raipur Mills in the old city, GIDC Vatva and Naroda's industrial estates, SG Highway's growing corporate corridor, and GIFT City, India's first International Financial Services Centre, just 12km away in Gandhinagar. Ahmedabad's MSME sector is one of the most vibrant in India, with thousands of trading and manufacturing businesses competing for both domestic and international buyers.",
-            "This creates a web design opportunity unique to Ahmedabad: a textile exporter in the Textile Market needs a completely different site architecture from a pharma manufacturer in GIDC Vatva or a wealth management firm in GIFT City. B2B buyers from the US, EU, and Middle East research Indian vendors for weeks before making contact. A consumer retail business on SG Highway needs mobile-first speed and Razorpay checkout. FactoryJet builds for all of them, because we start every project with the buyer journey in mind, not the template.",
-            "Ahmedabad's business community has historically been conservative about digital investment, which means the gap between businesses with a high-performing website and those without is widening. The businesses that act now capture the search rankings, the buyer first impressions, and the digital credibility that their slower competitors are conceding every week.",
+            "Ahmedabad built its name on textile mills and still trades cloth, yarn and garments at scale. Around that sit dyes and chemicals in Vatva and Naroda, a large pharma base, engineering units, and diamond and commodity traders. Gujarat sends a large share of India's exports abroad, and Ahmedabad is where much of that trade is run. GIFT City in Gandhinagar now adds banks, funds and fintech firms to the mix.",
+            "Each of these buyers wants different proof. A yarn importer wants counts, certifications and sample terms. A pharma buyer wants GMP and product data. A GIFT City client wants licences and leadership. A shopper in Bodakdev wants fast pages and UPI checkout. One template cannot answer all four, so we plan each site around its own buyer.",
+            "Plenty of Ahmedabad firms still run on a ten-year-old site or a single catalogue PDF. Overseas buyers read that as a risk. A fast, clear site with real product data is often the cheapest way to win a meeting against a rival who has not updated.",
           ]}
           stats={[
             {
               value: '18%',
-              label: "Gujarat's share of India's total exports: Ahmedabad is the state's commercial engine",
+              label: "Gujarat's share of India's total exports, much of it traded through Ahmedabad",
               sourceUrl: 'https://commerce.gov.in/',
               sourceLabel: 'Ministry of Commerce & Industry',
             },
             {
               value: 'GIFT City',
-              label: "India's first International Financial Services Centre, 12km from Ahmedabad in Gandhinagar",
+              label: "India's first International Financial Services Centre, in Gandhinagar, 12km from Ahmedabad",
               sourceUrl: 'https://www.giftgujarat.in/',
               sourceLabel: 'GIFT City',
             },
             {
               value: '₹3.5L Cr',
-              label: "Ahmedabad's estimated GDP: Gujarat's largest city economy",
+              label: "Estimated size of Ahmedabad's economy, the largest of any Gujarat city",
               sourceUrl: 'https://mospi.gov.in/',
               sourceLabel: 'MoSPI',
             },
@@ -548,35 +547,25 @@ export default function AhmedabadWebDesignPage() {
 
         {/* ── 5. SERVICE EXPLANATION ───────────────────────────────────────── */}
         <ServiceExplanation
-          eyebrow="WEB DESIGN · AHMEDABAD"
-          headline="What 'Web Design' Actually Means for an Ahmedabad Business"
-          lead="Ahmedabad's economy runs on two very different buyer behaviours, B2B international buyers doing weeks of vendor research, and domestic consumers and retail buyers deciding quickly on mobile. Both need very different web strategies. FactoryJet builds for both."
+          eyebrow="WEBSITE DESIGN · AHMEDABAD"
+          headline="What a Website Has to Do for an Ahmedabad Company"
+          lead="Ahmedabad firms sell to two kinds of buyer. Overseas and trade buyers compare suppliers slowly and want proof. Local customers decide on a phone in seconds. We design for whichever one pays your bills, or both."
           body={
             <>
               <p>
-                For Ahmedabad&apos;s textile exporters, trading companies, chemical manufacturers,
-                and MSME businesses: the website needs to project export credentials, product
-                range, and manufacturing capability to international B2B buyers in the US, EU,
-                Middle East, and Southeast Asia. These buyers research vendors for weeks before
-                making contact. The site needs to answer their due-diligence questions: certificates,
-                production capacity, past clients, and a frictionless RFQ form. We build these sites
-                with authority-first architecture, product catalog systems, and lead-capture flows
-                designed for B2B sales cycles.
+                
+                Exporters of fabric, yarn, dyes, chemicals and engineered parts need a site that does a sales rep&apos;s first job. It should show what you make, how much you can supply, which certifications you hold and who you already ship to. Then it should make asking for a quote or a sample easy. We build product catalogues, spec sheets and RFQ forms that send enquiries straight to your inbox and WhatsApp.
               </p>
               <p>
-                For GIFT City financial services firms, corporate businesses on SG Highway, and
-                consumer retail brands across Vastrapur and Navrangpura: the challenge is different.
-                GIFT City clients need compliance-aware content and international buyer acquisition
-                architecture. Corporate businesses need authority-first positioning. Consumer retail
-                needs mobile-first speed and conversion-optimised checkout flows.
-                If you sell online, see our{' '}
-                <a href="/services/ecommerce-development/ahmedabad" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">ecommerce development in Ahmedabad</a>{' '}
-                for Shopify stores, GIDC wholesale portals and NRI shipping.
+                
+                GIFT City firms, consultancies around SG Highway and retail brands in Navrangpura and CG Road need something else. Finance firms need licence wording and leadership pages. Service firms need case pages and a booking path. Shops need fast product pages and a short checkout. Selling online?{' '}
+                <a href="/services/ecommerce-development/ahmedabad" className="font-medium text-[#B23E13] underline decoration-1 underline-offset-2 hover:no-underline">Read about ecommerce development in Ahmedabad</a>{' '}
+                
+                for Shopify builds, wholesale ordering for GIDC units and shipping to NRI customers.
               </p>
               <p>
-                Every FactoryJet Ahmedabad project covers discovery, Figma prototyping, Next.js
-                development, SEO, GA4, and a 30-day support window. You leave with a codebase you
-                own, a design system you keep, and a site built to rank and convert.
+                
+                Every Ahmedabad project includes planning, Figma design, a Next.js build, search setup, GA4 and 30 days of fixes. You keep the code, the design files and the logins.
               </p>
             </>
           }
@@ -587,21 +576,22 @@ export default function AhmedabadWebDesignPage() {
                   className="font-fj-mono font-medium uppercase text-fj-neutral-400"
                   style={{ fontSize: '11px', letterSpacing: '0.14em' }}
                 >
-                  Two buyer types. One framework.
+                  
+                  Two kinds of buyer, two site plans.
                 </p>
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
                   {
                     type: 'B2B / Export & Trading',
-                    need: 'Credentials + catalog + RFQ',
-                    area: 'GIDC Vatva · Naroda · SG Highway · GIFT City',
+                    need: 'Product range, certifications, RFQ form',
+                    area: 'Vatva · Naroda · Changodar · GIFT City',
                     colour: '#F05A28',
                   },
                   {
                     type: 'D2C / Consumer & Retail',
-                    need: 'Speed + mobile + instant CTA',
-                    area: 'Vastrapur · Navrangpura · CG Road · Prahlad Nagar',
+                    need: 'Fast pages, phone layout, UPI checkout',
+                    area: 'Bodakdev · Navrangpura · CG Road · Prahlad Nagar',
                     colour: '#0F0F12',
                   },
                 ].map((row) => (
@@ -640,7 +630,8 @@ export default function AhmedabadWebDesignPage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  Same engineering quality. Strategy tailored to your buyer.
+                  
+                  One engineering standard, planned around who buys from you.
                 </p>
               </div>
             </div>
@@ -650,23 +641,23 @@ export default function AhmedabadWebDesignPage() {
         {/* ── 6. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Ahmedabad Businesses Choose FactoryJet Over Local Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
+          headline="What Ahmedabad Firms Get When They Hire FactoryJet"
+          lead="You get a fixed quote before you agree to anything, a launch date written into the contract, and a Next.js site that loads quickly with no plugin bills. The code is handed over in full when the site goes live."
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing.',
-              body: "Ahmedabad's business community moves on results, not schedules. Waiting 12 weeks for a website briefed in April is not acceptable when the export season is already underway. FactoryJet delivers in 7 days, with the delivery date written into the project agreement. We have delivered on time on 97% of all projects.",
+              title: 'Launch date in the contract.',
+              body: "Export orders run to buying seasons and trade fair dates. A site that takes three months can miss the season it was meant for. We commit to 7 days in the agreement, and across all our projects 97% were delivered on time.",
             },
             {
               icon: '🏗️',
-              title: 'Next.js, not WordPress. The performance gap is real.',
-              body: 'WordPress loads server-side PHP and fires 40–60 database queries per page load. Next.js generates static files served from Cloudflare CDN globally. The result: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For businesses competing on Google\'s Core Web Vitals, that gap directly affects rankings.',
+              title: 'Next.js for speed on Indian 4G.',
+              body: 'A WordPress page often runs dozens of database queries and plugin scripts before it shows anything. Next.js serves prebuilt files from Cloudflare\'s edge, so pages appear quickly for a buyer in Surat or Stuttgart alike. Faster pages also score better on Google\'s Core Web Vitals.',
             },
             {
               icon: '📋',
-              title: 'Fixed price. Agreed before we start.',
-              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch.",
+              title: 'One price, written down first.',
+              body: "No paid discovery phase and no open-ended estimate. We agree the scope, write the price into the quote, and that is what you pay. No extra invoice arrives after launch.",
             },
           ]}
         />
@@ -674,22 +665,22 @@ export default function AhmedabadWebDesignPage() {
         {/* ── 7. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="How We Build Your Ahmedabad Website in 7 Days"
-          lead="Buyer strategy agreed before design. Mobile approval before development. SEO and analytics wired before launch."
+          headline="Your Ahmedabad Website, Built in Seven Days"
+          lead="We agree the buyer before design starts, approve the phone layout before code, and switch on search and analytics before launch."
           stages={AMD_JOURNEY_STAGES}
-          closingNote="5 STAGES · 7 DAYS · NEXT.JS + CLOUDFLARE · GA4 STANDARD · ZERO DOWNTIME LAUNCH"
+          closingNote="PLAN · DESIGN · BUILD · SEARCH SETUP · LAUNCH IN 7 DAYS"
         />
 
         {/* ── 8. PORTFOLIO ─────────────────────────────────────────────────── */}
         <PortfolioShowcase
           eyebrow="RECENT WORK"
-          headline="What India's businesses look like after FactoryJet."
+          headline="Two recent builds for Indian B2B firms"
           cards={[
             {
               industry: 'Wholesale Distribution · Commerceflo',
               title: 'Belle Maison | Mumbai',
               description:
-                "Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.",
+                "Mumbai wholesale distributor Belle Maison sells artificial plants and flowers, flower runners, home décor and LED lighting to trade buyers. We built its B2B store on Commerceflo, covering trade price tiers, the path from quote to order, and ordering by account.",
               imageSrc: '/images/portfolio/belle-maison.webp',
               stat1: 'Lighthouse 95+',
               stat2: 'Commerceflo · B2B',
@@ -698,7 +689,7 @@ export default function AhmedabadWebDesignPage() {
               industry: 'MEP / BIM Consulting · SEO',
               title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on WordPress with authority-first architecture designed for B2B project enquiries, credentials display, project portfolio, and technical SEO.',
+                'MEP drafting and BIM consultancy Formative Concepts needed a site that wins project enquiries from other firms. We rebuilt it on WordPress around their credentials, a project portfolio and technical SEO for B2B searches.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
@@ -711,65 +702,65 @@ export default function AhmedabadWebDesignPage() {
         {/* ── 9. COMPARISON TABLE ──────────────────────────────────────────── */}
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. Ahmedabad Agency vs. Freelancer vs. Template Builder"
-          lead="Not all web design options in Ahmedabad deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
+          headline="FactoryJet vs. an Ahmedabad Agency, a Freelancer and a DIY Builder"
+          lead="Four ways an Ahmedabad business can get a website, compared on time to launch, what is built and what you own afterwards."
           pullQuote={{
             stat: '7 days',
             caption:
-              'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+              'from first call to a live site, with Figma design, Next.js code, search setup and a Lighthouse check included.',
           }}
           columns={AMD_COMPARISON_COLUMNS}
           rows={AMD_COMPARISON_ROWS}
-          footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
+          footer="Every FactoryJet scope comes with a fixed-price contract. The quote follows a free call."
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="AHMEDABAD × WEB DESIGN"
-          headline="Web Design for Ahmedabad's Key Industries"
-          lead="From textile exporters and MSME manufacturers to GIFT City financial firms and SG Highway corporates, Ahmedabad's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
+          headline="Websites for Ahmedabad's Main Industries"
+          lead="Cloth, chemicals, medicines, trading, property, startups and professional firms each sell differently. These are the site types we plan for Ahmedabad businesses."
           sectors={[
             {
-              name: 'Textile & Apparel',
+              name: 'Textiles & Garments',
               description:
-                "Ahmedabad is India's textile capital, home to thousands of fabric manufacturers, garment exporters, and apparel brands. Textile exporters need websites that project product range, quality certifications, and manufacturing capacity to international buyers in the US, EU, UAE, and Southeast Asia. Product catalog systems, fabric sample inquiry forms, and B2B lead capture are standard.",
+                "Mills, processors, garment makers and yarn traders sell to buyers who never visit the factory first. The site has to stand in for that visit: fabric and product range, GSM or count details, certifications, capacity and a sample request form, written in plain English for importers.",
               example:
-                'Textile manufacturers and garment exporters in Saraspur, Raipur Mills, and GIDC Vatva targeting international wholesale buyers.',
+                'Fabric mills, garment exporters and yarn traders around Narol, Saraspur and the old city markets.',
             },
             {
-              name: 'Pharmaceuticals & Chemicals',
+              name: 'Pharma & Chemicals',
               description:
-                "Gujarat is India's largest pharmaceutical and chemical producer, and Ahmedabad's GIDC Vatva and Naroda industrial estates house thousands of pharma and speciality chemical companies. These businesses need regulatory-compliant copy, product documentation systems, GMP certification display, and B2B lead flows for institutional procurement.",
+                "Vatva and Naroda hold many dye, intermediate and speciality chemical units, and Gujarat is a major pharma base. Buyers here check compliance first. Sites need product lists with CAS or grade details, GMP and ISO documents, careful regulatory wording and an enquiry path for procurement teams.",
               example:
-                'Pharma manufacturers, API producers, and chemical exporters in GIDC Vatva and Naroda targeting domestic and international buyers.',
+                'Dye and chemical makers, API producers and formulation units in Vatva, Naroda and Changodar.',
             },
             {
-              name: 'Trading & FMCG',
+              name: 'Trading & Distribution',
               description:
-                "Ahmedabad's strong trading community spans FMCG distribution, agro-commodity trading, and wholesale goods. Trading businesses need websites that project scale, reliability, and product breadth. B2B lead capture, bulk inquiry forms, and product range display, optimised for both domestic buyers and international trading partners.",
+                "Ahmedabad's trading houses deal in FMCG, agri commodities and wholesale goods. Their buyers want to see range, brands carried and order capacity at a glance. We build bulk enquiry forms, brand and category pages, and a dealer contact flow.",
               example:
-                'FMCG distributors, commodity traders, and wholesale businesses operating from Ahmedabad and targeting national and international buyers.',
+                'FMCG stockists, commodity traders and wholesale distributors supplying Gujarat and beyond.',
             },
             {
               name: 'Real Estate & Construction',
               description:
-                "Ahmedabad's real estate market is one of Gujarat's most active, from SG Highway's premium residential projects to commercial developments in GIFT City and the Naroda-Vastral corridor. Developers, brokers, and construction firms need websites with project gallery architecture, floor plan downloads, RERA details, and lead-capture forms.",
+                "Projects along SG Highway, Shela, South Bopal and towards Gandhinagar compete hard for site visits. Builders need project pages with galleries, floor plans, RERA numbers, location maps and a short visit booking form that works on a phone.",
               example:
-                'Residential developers, commercial real estate firms, and construction companies operating across Ahmedabad and Gandhinagar.',
+                'Developers, channel partners and contractors working across Ahmedabad and Gandhinagar.',
             },
             {
-              name: 'Startup & Tech',
+              name: 'Startups & Tech',
               description:
-                "Ahmedabad's startup ecosystem is growing fast, supported by IIM Ahmedabad's entrepreneurship ecosystem, GUSEC, and a rising generation of tech founders in SaaS, fintech, agritech, and D2C. Startup websites need product-led architecture, investor credibility signals, demo request flows, and performance designed for rapid iteration.",
+                "IIM Ahmedabad, GUSEC and a growing founder community have produced SaaS, fintech, agritech and D2C startups. Their sites need clear product pages, a demo or waitlist flow, proof for investors and code that is easy to change every week.",
               example:
-                "Tech startups, SaaS companies, and D2C brands emerging from Ahmedabad's entrepreneurship ecosystem.",
+                "SaaS, fintech and D2C founders building out of Ahmedabad and Gandhinagar.",
             },
             {
               name: 'Professional Services',
               description:
-                "Ahmedabad has a strong CA, legal, and consulting community serving Gujarat's large business sector. For these businesses, the website is the first qualification filter, does this firm look credible enough to engage? We build authority-first sites with service capability pages, credential display, and lead-capture flows that convert research into booked consultations.",
+                "CA firms, law chambers and consultancies serve Gujarat's large business base. A prospect usually checks the website before making a call. We build service pages, partner profiles and a consultation booking form that turns that check into a meeting.",
               example:
-                "CA and CS firms, corporate law practices, management consulting firms, and HR companies serving Ahmedabad's business community.",
+                "CA and CS practices, corporate lawyers, consultants and HR firms serving Ahmedabad companies.",
             },
           ]}
         />
@@ -778,14 +769,14 @@ export default function AhmedabadWebDesignPage() {
         {/* ── 12. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What India's founders say after we build their site"
+          headline="Founders we have built sites for, in their own words"
         />
 
         {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Common Questions from Ahmedabad Businesses"
-          lead="The questions we answer on every Ahmedabad discovery call, answered here, without the runaround."
+          headline="Ahmedabad Website Questions, Answered"
+          lead="Price, timing, ownership and local fit. These come up on almost every call with an Ahmedabad business."
           categories={AMD_FAQ_CATEGORIES}
           items={AMD_FAQ_ITEMS}
         />
@@ -794,11 +785,11 @@ export default function AhmedabadWebDesignPage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO START"
-          headline="Ready to Build Your Ahmedabad Website?"
-          sub="Ahmedabad's textile exports, GIFT City financial ecosystem, and MSME manufacturing base mean every serious business is competing for the same international buyer impressions and the same Google rankings. Every week without a high-performing website is ground you are conceding to a competitor who already has one. Start today and have a sitemap ready within 72 hours."
+          headline="Start Your Ahmedabad Website This Week"
+          sub="Your overseas buyers, GIFT City clients and local customers are comparing you with rivals online right now. Send us your brief today. Within 72 hours you will have a sitemap, and seven days after kickoff, a live site."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price. 7-day delivery. Next.js. Your codebase delivered in full on launch day."
+          objectionHandler="One fixed price. Live in 7 days. Built in Next.js. All code handed to you at launch."
         />
 
         {/* India web-design city cross-links (silo fix, 31 Jul 2026) */}

@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Surat | Professional Website Design Services',
-    description: 'Award-winning Web Design Company in Surat. Fast, conversion-focused websites for diamond, textile & trading businesses. 7-day delivery, INR pricing.',
+    title: 'Web Design Company in Surat | FactoryJet',
+    description: 'Web design company in Surat for diamond, textile and trading businesses. Fast, conversion-focused websites. 7-day delivery, INR pricing.',
     url: 'https://factoryjet.com/web-design/surat',
     images: [
       {
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Web Design Company in Surat | FactoryJet',
-    description: 'Award-winning Web Design Company in Surat. Beautiful, conversion-focused websites with modern UI/UX.',
+    description: 'Web design company in Surat. Fast websites for diamond, textile and trading firms. 7-day delivery.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {

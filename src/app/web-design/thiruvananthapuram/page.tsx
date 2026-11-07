@@ -28,7 +28,7 @@ import WebDesignCityLinksIN from '@/components/v2/WebDesignCityLinksIN';
 export const metadata: Metadata = {
   title: 'Web Design Company in Thiruvananthapuram | FactoryJet',
   description:
-    'Web design company in Thiruvananthapuram (Trivandrum) for IT startups, government contractors, ISRO ecosystem firms & tourism businesses. Fast, custom websites with 7-day delivery. Serving Technopark, Kazhakuttam & Pattom.',
+    'Web design company in Thiruvananthapuram (Trivandrum) for Technopark IT firms, government suppliers, Kovalam resorts and Ayurveda centres. 7-day delivery.',
   keywords: [
     'web design company in Thiruvananthapuram',
     'website design Trivandrum',
@@ -36,7 +36,6 @@ export const metadata: Metadata = {
     'website design company Thiruvananthapuram',
     'Trivandrum website designer',
     'Technopark startup website design',
-    'affordable web design Kerala capital',
     'web design Trivandrum',
     'web design for startups Trivandrum',
     'Kerala Startup Mission website design',
@@ -50,14 +49,14 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Web Design Company in Thiruvananthapuram | FactoryJet',
     description:
-      "Professional website design company in Thiruvananthapuram (Trivandrum): Next.js, SEO, and GA4 included. 7-day delivery. Serving Technopark, Kazhakuttam, Pattom & Kerala's capital business district.",
+      "Web design company in Trivandrum building fast Next.js sites for Technopark software teams, public sector suppliers and Kovalam tourism. 7-day delivery.",
     url: 'https://factoryjet.com/web-design/thiruvananthapuram',
     images: [
       {
         url: 'https://factoryjet.com/images/services/web-design.webp',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet Web Design Services in Thiruvananthapuram',
+        alt: 'FactoryJet website design for Thiruvananthapuram businesses',
       },
     ],
     locale: 'en_IN',
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web Design Company in Thiruvananthapuram | FactoryJet',
     description:
-      'Website design company in Thiruvananthapuram (Trivandrum). 7-day delivery. Next.js, SEO, GA4 included.',
+      'Web design company in Thiruvananthapuram. Next.js sites, live in 7 days, SEO and GA4 set up.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
@@ -96,7 +95,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -116,33 +115,33 @@ const localBusinessSchema = { '@context': 'https://schema.org', '@type': 'Organi
 const TVM_JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery & Strategy',
+    title: 'Who buys from you',
     description:
-      "We map your ideal customer profile against Thiruvananthapuram's market, whether that's an enterprise procurement team evaluating a Technopark startup, a government or defence agency contractor, an ISRO ecosystem firm, a Kovalam tourism operator, or an Ayurveda wellness brand targeting international clients. We audit your top competitors and agree the sitemap and content plan.: Days 1–2",
+      "Trivandrum buyers range from a European client vetting a Technopark software vendor to a state department checking a contractor, a VSSC supplier's engineering lead, or a German guest choosing an Ayurveda retreat. We write down what each one needs to see, study the rival sites they compare you with and lock the page list.: Days 1–2",
   },
   {
     number: '02',
-    title: 'Design & Prototyping',
+    title: 'Wireframes',
     description:
-      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts.: Days 3–4',
+      'Each page is sketched for a phone screen, then widened for desktop. We decide where proof sits, where the enquiry or booking button goes and what a buyer reads first. You approve the wireframes before any build work.: Days 3–4',
   },
   {
     number: '03',
-    title: 'Development',
+    title: 'Coding',
     description:
-      "Built in Next.js deployed to Cloudflare CDN: sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, government RFP inquiry flows, booking systems for tourism and Ayurveda businesses, and any third-party APIs your business uses. Thiruvananthapuram's highly educated, internet-literate audience expects fast, modern web experiences, performance budgets enforced from the first commit.: Days 5–6",
+      "We code in Next.js and serve the site from Cloudflare so it opens fast on Kerala mobile data and on overseas connections. Tender and RFP enquiry forms, treatment or room booking requests, WhatsApp chat and the tools you already use get wired in here.: Days 5–6",
   },
   {
     number: '04',
-    title: 'Content & SEO',
+    title: 'Copy and search setup',
     description:
-      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Thiruvananthapuram-specific local SEO targeting built in, including both "Thiruvananthapuram" and "Trivandrum" search intent coverage.: Day 6–7',
+      'Titles, meta descriptions, WebP images, LocalBusiness and FAQ schema, and internal links go in. The sitemap goes to Search Console. Copy and schema carry both city names, Thiruvananthapuram and Trivandrum, so you show up whichever one a searcher types.: Day 6–7',
   },
   {
     number: '05',
-    title: 'Launch & Handover',
+    title: 'Launch',
     description:
-      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included.: Day 7+',
+      'Domain moved to Cloudflare, GA4 and Tag Manager running, Search Console verified. You get a recorded tour of how to manage the site, plus 30 days of free fixes.: Day 7+',
   },
 ];
 
@@ -150,7 +149,7 @@ const TVM_FAQ_CATEGORIES = [
   { key: 'pricing',   label: 'Pricing & Timeline' },
   { key: 'included',  label: "What's Included" },
   { key: 'technical', label: 'Technical & SEO' },
-  { key: 'local',     label: 'Trivandrum Local' },
+  { key: 'local',     label: 'Trivandrum Questions' },
   { key: 'support',   label: 'Support & Ownership' },
 ];
 
@@ -159,149 +158,149 @@ const TVM_FAQ_ITEMS = [
   /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How much does a website cost for a business in Thiruvananthapuram?',
+    question: 'What does a website cost for a Thiruvananthapuram business?',
     answer:
-      "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
+      "It depends on page count, features and how hard your search market is. A Vanchiyoor law practice with six pages costs less than a Kovalam resort with room requests in three currencies. After a free call you get one fixed written price, and the code is yours after launch.",
   },
   {
     category: 'pricing',
-    question: 'How long does it take to build a website?',
+    question: 'How long does a Trivandrum website take?',
     answer:
-      'A standard FactoryJet build delivers in 7 days from kickoff to launch. Discovery and design take the first two days, development days three through six, and content, SEO, and launch on day seven. The 7-day clock starts when your brand assets and content are in our shared workspace.',
+      'Seven days once we have your logo, photos and core text. Research and planning run on days one and two, wireframes on three and four, coding on five and six, and launch on day seven.',
   },
   {
     category: 'pricing',
-    question: 'What makes FactoryJet better value than a Thiruvananthapuram web agency?',
+    question: 'Why choose FactoryJet over a Trivandrum agency with a big team?',
     answer:
-      "We are a specialised web engineering team, not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch, at 60–70% lower cost. You pay for the build, not our admin structure.",
+      "You pay for design and engineering only. There are no account managers or sales layers on the bill. You still get Figma wireframes, a Next.js build and a Lighthouse audit before launch, all under one fixed quote.",
   },
   {
     category: 'pricing',
-    question: 'What does 7-day delivery include?',
+    question: 'What does the 7-day promise cover?',
     answer:
-      'The 7-day timeline covers the development phase we control, design, build, content, and launch. We have delivered on time on 97% of all projects.',
+      'It covers the work we control: design, coding, content placement and launch. Time spent waiting on your approvals or material is outside the count. On our record, 97% of projects have launched on the promised date.',
   },
 
   /* ── What's Included ── */
   {
     category: 'included',
-    question: "What's included in a web design project?",
+    question: "What comes with a Thiruvananthapuram web design project?",
     answer:
-      'Every FactoryJet project includes strategy, Figma design, Next.js development, basic copywriting, technical SEO setup (schema, meta, sitemap), GA4 analytics, and a 30-day post-launch support window. You receive the full codebase in your GitHub on launch day.',
+      'Page planning, Figma wireframes, Next.js code, starter copy, schema, a sitemap, GA4 tracking and 30 days of free fixes. On launch day the full source code moves into a GitHub account you own.',
   },
   {
     category: 'included',
-    question: 'Do you write the content for my website?',
+    question: 'Do you write the website copy?',
     answer:
-      'Basic copywriting for headings, hero text, and service descriptions is included. Full SEO content is available as an add-on. We send a content brief before development starts so you know exactly what to provide.',
+      'We write headlines, the hero section and short service text. Long search articles cost extra. Before coding starts we send a checklist of the facts, photos, licences and certificates we need from you.',
   },
   {
     category: 'included',
-    question: 'Do you provide website hosting?',
+    question: 'Where is the site hosted?',
     answer:
-      "We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account, we configure it for you. No monthly hosting fee to us.",
+      "On Cloudflare Pages, in an account registered to you. Most sites fit the free plan. We handle the setup and charge no monthly hosting fee.",
   },
   {
     category: 'included',
-    question: 'Can I update the website myself after launch?',
+    question: 'Can my team change content later?',
     answer:
-      'Yes. Every Growth and Custom tier project includes a headless CMS integration (Sanity or Contentful) so your team can update content without touching code.',
+      'Yes. Growth and Custom tier builds include a Sanity or Contentful editor. A clinic can add a new therapy page or a startup can post a job without calling a developer.',
   },
 
   /* ── Technical & SEO ── */
   {
     category: 'technical',
-    question: 'Will my website rank on Google India?',
+    question: 'Will the site rank on Google?',
     answer:
-      "Technical SEO is built into every project: JSON-LD schema markup, optimised title and meta templates, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images. Kerala has India's highest internet penetration and literacy rate: your audience is online, informed, and actively searching for services like yours. Branded searches typically rank within 1–2 weeks.",
+      "Search basics ship with every build: schema, clean title and meta templates, passing mobile Core Web Vitals, internal links, a submitted sitemap and WebP images. Searches for your business name usually show the site within one to two weeks. Kerala buyers read a lot before they contact anyone, so useful content on the site keeps paying off.",
   },
   {
     category: 'technical',
-    question: 'What tech stack do you build on?',
+    question: 'What is the tech stack?',
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Thiruvananthapuram businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings.",
+      "Next.js served from Cloudflare's edge network. Pages usually load in under 1.5 seconds on Indian 4G, where a typical WordPress theme takes 4–6 seconds. Google uses that speed as part of Core Web Vitals.",
   },
   {
     category: 'technical',
-    question: 'How does the site perform on mobile?',
+    question: 'How does the site behave on a phone?',
     answer:
-      'Mobile-first is the default. Every build targets Lighthouse 90+ and green Core Web Vitals on mobile before launch. We design at 375px before desktop, serve WebP images via Cloudflare CDN with lazy loading.',
+      'Phones come first. We lay out every page at 375px before desktop, and each build must hit Lighthouse 90+ on mobile with green Core Web Vitals before launch. Images load as WebP from Cloudflare, only when a visitor scrolls to them.',
   },
   {
     category: 'technical',
-    question: 'Do you set up Google Analytics and Search Console?',
+    question: 'Do you set up analytics?',
     answer:
-      'Yes, GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, booking enquiry clicks) are configured from day one. Search Console verified and sitemap submitted.',
+      'Yes. GA4 and Tag Manager go live with the site. Enquiry form sends, WhatsApp taps and booking clicks are tracked as events from launch day, and Search Console is verified with the sitemap submitted.',
   },
 
   /* ── Trivandrum Local ── */
   {
     category: 'local',
-    question: 'Is it "Thiruvananthapuram" or "Trivandrum", which name should I use for SEO?',
+    question: 'Should my site say Thiruvananthapuram or Trivandrum?',
     answer:
-      'Both names matter for SEO and both are searched actively. "Trivandrum" is the historically anglicised name still widely used by locals, NRIs, and older businesses. "Thiruvananthapuram" is the official name used in formal, government, and institutional contexts. FactoryJet targets both names in your page copy, meta tags, and schema markup, so your site captures searchers using either term. You lose traffic if you pick only one.',
+      'Use both. People search with both names. Trivandrum is the older English name that many residents, NRIs and established firms still use. Thiruvananthapuram is the official name used by government and institutions. We place both in your copy, meta tags and schema, so neither group of searchers misses you.',
   },
   {
     category: 'local',
-    question: 'Do you build websites for IT startups at Technopark Trivandrum?',
+    question: 'Do you build websites for Technopark IT companies and KSUM startups?',
     answer:
-      "Yes, IT and software companies at Technopark are a core client profile. Technopark is India's first IT park (established 1990) and houses 450+ companies including Infosys, UST Global, TCS, and IBS Group. We build websites optimised for B2B tech sales: service capability architecture, technology stack credentials, case study display, and lead flows designed for enterprise procurement cycles. Startups supported by Kerala Startup Mission (KSUM), which has its HQ in Thiruvananthapuram, benefit from sites with investor-credibility signals and product-led architecture.",
+      "Yes. Technopark in Kazhakuttam was India's first IT park and is home to 450+ companies. Their clients are mostly abroad and shortlist vendors on the web. We build service pages, case studies, stack and certification sections and contact routes for enterprise buyers. KSUM is headquartered in the city, and its startups get product-led pages with proof an investor will look for.",
   },
   {
     category: 'local',
-    question: 'Can you build websites for government contractors and ISRO ecosystem firms?',
+    question: 'Can you build sites for government suppliers and firms in the VSSC supply chain?',
     answer:
-      "Yes. Thiruvananthapuram hosts the Kerala Secretariat, all major state government departments, and ISRO's Vikram Sarabhai Space Centre (VSSC): one of India's most important space research organisations. Government contractors and ISRO ecosystem firms (systems integrators, engineering consultants, technology suppliers) need authority-first websites: capability credentials, past project portfolio, compliance documentation, and RFP inquiry flows. We build for institutional buyers who research thoroughly before engaging.",
+      "Yes. The city holds the Kerala Secretariat, most state departments and ISRO's Vikram Sarabhai Space Centre. Suppliers to these buyers, such as systems integrators, engineering consultants and component makers, need a site that reads like a capability statement: past projects, certifications, compliance papers and a clear route for tender or RFP enquiries.",
   },
   {
     category: 'local',
-    question: "Do you know Thiruvananthapuram's business districts well enough to write relevant copy?",
+    question: "Do you know Thiruvananthapuram well enough to write local copy?",
     answer:
-      "Yes. We research Thiruvananthapuram's business geography as part of discovery, from Technopark's IT campus at Kazhakuttam and the Pattom government quarter to Kovalam's beach tourism corridor, Vanchiyoor's legal and professional services precinct, and the emerging commercial belt along NH 66. Local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches.",
+      "We map your patch during discovery: Technopark and Kazhakuttam for IT, Pattom and the Secretariat area for government work, Vanchiyoor for lawyers and professional firms, Kovalam and Varkala for tourism, and the NH 66 belt for new commercial space. Those details go into the copy and your LocalBusiness schema.",
   },
   {
     category: 'local',
-    question: 'How does FactoryJet compare to Thiruvananthapuram web agencies?',
+    question: 'How is FactoryJet different from other Trivandrum web agencies?',
     answer:
-      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
+      "Many local agencies quote late and deliver over weeks. We send a fixed quote before you commit, put the 7-day launch date in the agreement and hand you Next.js code that you own outright.",
   },
   {
     category: 'local',
-    question: 'Do you build websites for Ayurveda and wellness brands in Thiruvananthapuram?',
+    question: 'Do you build websites for Ayurveda centres and wellness retreats in Trivandrum?',
     answer:
-      "Yes. Thiruvananthapuram is one of Kerala's most important Ayurveda and wellness hubs, home to internationally recognised hospitals, Ayurvedic resorts, and traditional vaidya practices. Ayurveda businesses targeting international wellness travellers and medical tourists need gallery-rich mobile-first design, online booking systems, international patient UX, and SEO targeting English-language searches from the US, UK, Germany, and the Gulf.",
+      "Yes. The city and its coast have Ayurveda hospitals, traditional vaidya practices and retreats near Kovalam and Varkala that draw guests from Europe, the Gulf and the US. These sites need treatment pages, practitioner credentials, photo-led layouts, booking requests and English copy written for overseas searches.",
   },
 
   /* ── Support & Ownership ── */
   {
     category: 'support',
-    question: 'Do I own the website after it is built?',
+    question: 'Will I own the website?',
     answer:
-      'Yes, 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
+      'Yes, all of it. The Next.js code goes into your GitHub on launch day with the Figma files and every login. No retainer is required and no closed platform holds your site hostage.',
   },
   {
     category: 'support',
-    question: 'What support do you provide after launch?',
+    question: 'What support is there after launch?',
     answer:
-      'Every project includes a 30-day post-launch support window covering bug fixes and minor adjustments at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans covering development changes, priority same-day bug response, and a dedicated engineer who knows your codebase. Maintenance clients also get quarterly performance audits and Core Web Vitals checks.',
+      'Thirty days of free fixes and minor edits come with the build. After that, an optional monthly plan gives you same-day bug response, one engineer who knows your code, and a quarterly speed and Core Web Vitals review.',
   },
   {
     category: 'support',
-    question: 'What happens if something breaks after launch?',
+    question: 'What if something stops working?',
     answer:
-      'Within the 30-day support window, any bugs are fixed at no cost and typically within 24 hours. Because your site is on Cloudflare Pages (static files, global CDN), common causes of downtime simply do not apply.',
+      'Inside the first 30 days we fix it free, usually within a day. Static files on Cloudflare remove the usual causes of outages, such as server overload and plugin clashes.',
   },
   {
     category: 'support',
-    question: 'Do you offer ongoing retainer services for Thiruvananthapuram businesses?',
+    question: 'Can Trivandrum businesses keep FactoryJet on retainer?',
     answer:
-      'Yes. Monthly retainers cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
+      'Yes. A monthly retainer covers new pages, content edits, landing pages for campaigns or tenders, search fixes and upkeep. Retainer work is scheduled first and stays with the same engineer.',
   },
   {
     category: 'support',
-    question: 'Can NRI business owners work with FactoryJet remotely?',
+    question: 'Can I manage the project while living abroad?',
     answer:
-      "Absolutely. Kerala has one of India's largest NRI diaspora communities, and many Thiruvananthapuram businesses are NRI-owned or NRI-funded. Our entire process is remote-first, discovery calls, design previews, approvals, and handover all happen asynchronously or over video. We work across time zones by default.",
+      "Yes. Plenty of Trivandrum firms are owned or funded by Keralites in the Gulf or Europe. Calls, previews, approvals and handover all run over video and shared links, and we plan around your time zone.",
   },
 
   // Money-query coverage, added 2026-06-11
@@ -309,13 +308,13 @@ const TVM_FAQ_ITEMS = [
     category: 'pricing',
     question: 'Who is the best web design agency in Thiruvananthapuram?',
     answer:
-      'For small businesses, FactoryJet makes a strong case as the best web design company in Thiruvananthapuram: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Thiruvananthapuram you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Thiruvananthapuram.',
+      'Judge any agency on evidence. For a small or mid-sized firm, FactoryJet is a sound choice for the best web design company in Thiruvananthapuram: a custom site in 7 days for one written price. Whoever you shortlist, ask for live sites to open, speed scores to test yourself and a quote that stays fixed.',
   },
   {
     category: 'pricing',
-    question: 'Should I hire web designer in Thiruvananthapuram or use an agency?',
+    question: 'Should I hire a freelance web designer in Thiruvananthapuram or an agency?',
     answer:
-      'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Thiruvananthapuram directly, agree the scope and price in writing first.',
+      'A freelancer suits a single page. A business site needs design, coding, search setup and support, which a small team can deliver together at a fixed price. If you hire a freelancer, write down the scope and fee first.',
   },
 ];
 
@@ -331,18 +330,18 @@ const faqSchema = {
 
 const TVM_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
-  { label: 'Trivandrum/Kochi Agency' },
+  { label: 'Kerala Agency' },
   { label: 'Freelancer' },
   { label: 'Template (Wix/Squarespace)' },
 ] as const;
 
 const TVM_COMPARISON_ROWS = [
   {
-    feature: 'Delivery timeline',
+    feature: 'Launch time',
     values: ['7 days', '6–16 weeks', '3–12 weeks (unreliable)', '1–2 weeks (you build it)'],
   },
   {
-    feature: 'Custom Figma design',
+    feature: 'Bespoke Figma layouts',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ta" kind="yes" />,
@@ -351,7 +350,7 @@ const TVM_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Next.js (not WordPress)',
+    feature: 'Next.js build',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ta" kind="partial" />,
@@ -360,7 +359,7 @@ const TVM_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Technical SEO built in',
+    feature: 'Search basics included',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ta" kind="partial" />,
@@ -369,7 +368,7 @@ const TVM_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Lighthouse 90+ on mobile',
+    feature: 'Lighthouse 90+ on phones',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ta" kind="partial" />,
@@ -378,7 +377,7 @@ const TVM_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'GA4 + GTM wired up',
+    feature: 'GA4 and Tag Manager set up',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ta" kind="partial" />,
@@ -387,7 +386,7 @@ const TVM_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Transparent, fixed pricing',
+    feature: 'Price fixed in writing',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ta" kind="no" />,
@@ -396,7 +395,7 @@ const TVM_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Full codebase to your GitHub',
+    feature: 'Source code in your GitHub',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ta" kind="partial" />,
@@ -405,7 +404,7 @@ const TVM_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '7-day delivery',
+    feature: 'Live in 7 days',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ta" kind="no" />,
@@ -419,39 +418,39 @@ const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
   '@id': `https://factoryjet.com/web-design/thiruvananthapuram#howto`,
-  name: `How FactoryJet builds your Thiruvananthapuram website in 7 days`,
-  description: `Our 7-day process for delivering a professional, AI-powered website for Thiruvananthapuram (Trivandrum) businesses.`,
+  name: `Seven days from kickoff to a live Thiruvananthapuram website`,
+  description: `The step-by-step FactoryJet build for Trivandrum IT, public sector, tourism and wellness businesses.`,
   totalTime: 'P7D',
   step: [
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 | Discovery Call',
-      text: `We learn your business, your Thiruvananthapuram market, your goals, and what you need the website to do.`,
+      name: 'Day 1 | First call',
+      text: `We learn what you offer, who decides to buy it and the one action the site must get from them.`,
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 | Strategy & Structure',
-      text: `We map your site architecture, research your Trivandrum competitors, identify your top keywords (covering both "Thiruvananthapuram" and "Trivandrum" search terms), and write the first draft of your page copy.`,
+      name: 'Day 2 | Structure',
+      text: `We set the page list, review Trivandrum competitors, choose keywords under both city names and write first-draft copy.`,
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 | Design',
-      text: 'Your bespoke design is created, homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
+      name: 'Days 3–4 | Wireframes and design',
+      text: 'A preview link shows the home page and inner pages. Changes you ask for come back within 24 hours.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 | Development & SEO',
-      text: `Your approved design is built in code, fast, mobile-first, and SEO-optimised. Thiruvananthapuram local schema markup added. Google Analytics and Search Console connected.`,
+      name: 'Days 5–6 | Code and search basics',
+      text: `Approved designs are coded as a quick, phone-first site. Local schema goes in, and GA4 and Search Console are hooked up.`,
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 | Launch',
-      text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.',
+      name: 'Day 7 | Go live',
+      text: 'We test on five devices, launch, then hand over written notes and a 30-minute training call.',
     },
   ],
 };
@@ -517,8 +516,8 @@ export default function ThiruvananthapuramWebDesignPage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="web_design_thiruvananthapuram_hero" />}
           eyebrow="WEB DESIGN · THIRUVANANTHAPURAM"
-          headline="Website Design in Thiruvananthapuram for IT Startups, Government Contractors, ISRO Ecosystem Firms, and Kerala's Capital City Businesses"
-          lead="Thiruvananthapuram, Kerala's capital and India's startup-first city, is home to Technopark (India's first IT park), Kerala Startup Mission HQ, ISRO's Vikram Sarabhai Space Centre, and the nerve centre of state governance. From Technopark's 450+ companies and 75,000+ IT professionals to Kovalam's tourism economy and Thiruvananthapuram's Ayurveda corridor, this city runs on ambition and academic excellence. Businesses here search both 'Thiruvananthapuram' and 'Trivandrum': FactoryJet targets both.: Figma-designed, Next.js-built, 7-day delivery, your codebase delivered in full."
+          headline="Website Design in Thiruvananthapuram for Technopark Firms, Public Sector Suppliers, Resorts and Ayurveda Centres"
+          lead="Kerala's capital runs on software, government, space research and tourism. Technopark sits in Kazhakuttam, the Secretariat in the city centre, VSSC at Thumba and Kovalam on the coast. Buyers here read closely and search under two names, Thiruvananthapuram and Trivandrum. FactoryJet designs in Figma, builds in Next.js, covers both names and launches in 7 days. The code is yours."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery',
@@ -528,40 +527,40 @@ export default function ThiruvananthapuramWebDesignPage() {
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
-        <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
+        <LogoBar tagline="500+ businesses across India, the US, the UK and the UAE use sites built by FactoryJet" />
 
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ websites built. 12 years of web engineering. 7-day delivery."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+          description="Our sites serve Shopify merchants, B2B suppliers and consumer brands in four countries. Each project runs on a fixed price agreed in advance, ends with full code handover and launches in 7 days."
         />
 
         {/* ── 4. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="THIRUVANANTHAPURAM MARKET"
-          headline="Why Your Thiruvananthapuram Web Presence Is a Business Asset"
+          headline="What Trivandrum Buyers Look For Online"
           leadParagraphs={[
-            "Thiruvananthapuram, known to millions as Trivandrum, is not just Kerala's administrative capital; it is the state's intellectual and startup engine. India's first IT park, Technopark, was established here in 1990, decades before 'startup ecosystem' was a common phrase. Today it houses 450+ companies employing 75,000+ IT professionals, including global names like Infosys, UST Global, TCS, and IBS Group. Kerala Startup Mission (KSUM) has its headquarters here, having supported 4,500+ startups across the state. ISRO's Vikram Sarabhai Space Centre: one of India's most prestigious research institutions, drives a significant space technology and engineering ecosystem in the city. This is not a city of traders; it is a city of engineers, academics, and institution-builders. And that means the quality bar for digital presence is exceptionally high.",
-            "Thiruvananthapuram's economy spans several completely distinct sectors. The IT and software sector at Technopark and the broader Kazhakuttam corridor competes for international enterprise clients. The government and public sector: Kerala Secretariat, KSITIL, and dozens of state agencies, drives a large ecosystem of contractors and consultants. Tourism anchors around Kovalam beach, the Padmanabhaswamy Temple heritage circuit, and the Kerala backwater gateway. And Thiruvananthapuram's Ayurveda and wellness sector, internationally recognised for authentic traditional practice, attracts medical tourists from Europe, the Gulf, and the US. Each of these sectors requires a completely different web architecture, buyer psychology, and SEO strategy.",
-            "A critical nuance for search: the city is searched as both 'Thiruvananthapuram' (official, formal) and 'Trivandrum' (widely used locally, by NRIs, and in colloquial English). Businesses that target only one variant lose a significant share of search traffic. FactoryJet builds sites that capture both, with dual-keyword coverage in meta tags, body copy, and LocalBusiness schema. Every week without a properly optimised web presence is search traffic conceded to a competitor who already has one.",
+            "Thiruvananthapuram is a city of engineers, civil servants and researchers. Technopark opened here as India's first IT park, Kerala Startup Mission runs from the city, and VSSC builds launch vehicles at Thumba. People who work in these places know a fast, well-made site when they see one, and they judge vendors by it.",
+            "The economy splits into distinct buyers. Software firms in Kazhakuttam sell to enterprise clients abroad. The Secretariat and state agencies buy from contractors and consultants. Tourists come for Kovalam, Varkala and the Padmanabhaswamy Temple. Ayurveda hospitals and retreats draw patients from Europe, the Gulf and the US. Each group asks different questions, so each needs a different site plan.",
+            "One search detail matters more here than in most cities. People type both Thiruvananthapuram and Trivandrum. Formal and government searches use the first. Residents, NRIs and travellers often use the second. A site built for one name misses part of its audience, so we write both into titles, copy and schema.",
           ]}
           stats={[
             {
               value: '450+',
-              label: "Companies at Technopark Trivandrum: India's first IT park, employing 75,000+ professionals",
+              label: "Companies at Technopark Trivandrum, India's first IT park, with 75,000+ people employed",
               sourceUrl: 'https://www.technopark.org/',
               sourceLabel: 'Technopark Kerala',
             },
             {
               value: '4,500+',
-              label: "Startups supported by Kerala Startup Mission (KSUM): HQ in Thiruvananthapuram",
+              label: "Startups backed by Kerala Startup Mission (KSUM), headquartered in Thiruvananthapuram",
               sourceUrl: 'https://startupmission.kerala.gov.in/',
               sourceLabel: 'Kerala Startup Mission',
             },
             {
               value: 'VSSC',
-              label: "ISRO's Vikram Sarabhai Space Centre, major employer and space tech ecosystem anchor",
+              label: "ISRO's Vikram Sarabhai Space Centre, a large employer at the centre of the city's space engineering work",
               sourceUrl: 'https://www.vssc.gov.in/',
               sourceLabel: 'ISRO VSSC',
             },
@@ -571,36 +570,21 @@ export default function ThiruvananthapuramWebDesignPage() {
         {/* ── 5. SERVICE EXPLANATION ───────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="WEB DESIGN · THIRUVANANTHAPURAM"
-          headline="What 'Web Design' Actually Means for a Thiruvananthapuram Business"
-          lead="Thiruvananthapuram's economy runs on four very different buyer profiles: IT enterprise procurement, government contracting, international tourism, and Ayurveda medical tourism. Each needs a completely different web strategy. FactoryJet builds for all of them, because we start every project with the buyer journey in mind, not the template."
+          headline="What a Trivandrum Website Needs to Do"
+          lead="Four buyers drive most business here: enterprise IT clients, government departments, overseas tourists and Ayurveda patients. Each one judges a site on different proof. We pick the buyer first and design from there."
           body={
             <>
               <p>
-                For IT and software companies at Technopark: the website needs to project
-                technical capability, team credentials, and past project scope to enterprise
-                procurement teams and international clients. These buyers research for weeks.
-                IT services sites need case study architecture, technology stack display,
-                certifications, and lead flows designed for longer B2B sales cycles. Startups
-                backed by KSUM need investor-credibility signals alongside product-led
-                conversion flows.
+                
+                Technopark software firms sell to clients who rarely meet them before signing. The site has to prove capability with case studies, the stack, certifications and team depth, and then make it easy to start a conversation. KSUM startups need the same clarity plus product pages and the kind of proof an investor checks.
               </p>
               <p>
-                For government contractors, ISRO ecosystem firms, and consultants serving
-                Kerala&apos;s public sector: the website is a capability statement.
-                Institutional buyers evaluate credentials, past project portfolio, compliance
-                documentation, and team expertise before issuing RFPs. We build authority-first
-                sites with credentials display and inquiry flows optimised for government
-                procurement research timelines.
+                
+                Government contractors, VSSC suppliers and consultants to state agencies use the website as a capability statement. Procurement officers look for past projects, compliance documents and named expertise before a tender goes out. We build these sites around credentials and a simple enquiry route for RFPs.
               </p>
               <p>
-                For tourism operators along the Kovalam corridor, Ayurveda wellness centres,
-                and hospitality businesses in Thiruvananthapuram: the website is the booking
-                engine. International travellers from Europe, the Gulf, and the US research
-                experiences on mobile, compare galleries, read reviews, and book entirely
-                online. We build gallery-rich, mobile-first sites with fast booking flows
-                and international buyer UX. Every FactoryJet Thiruvananthapuram project
-                covers discovery, Figma prototyping, Next.js development, SEO targeting
-                both city name variants, GA4, and a 30-day support window.
+                
+                Kovalam and Varkala resorts, Ayurveda centres and city hotels sell to travellers who compare photos and reviews on a phone. We build image-led pages, short booking requests and copy written for guests from Europe, the Gulf and the US. Every Trivandrum project includes discovery, Figma wireframes, the Next.js build, search setup under both city names, GA4 and 30 days of free fixes.
               </p>
             </>
           }
@@ -611,32 +595,33 @@ export default function ThiruvananthapuramWebDesignPage() {
                   className="font-fj-mono font-medium uppercase text-fj-neutral-400"
                   style={{ fontSize: '11px', letterSpacing: '0.14em' }}
                 >
-                  Four buyer types. One framework.
+                  
+                  Four Trivandrum buyers. Four plans.
                 </p>
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
                   {
                     type: 'IT & Software (Technopark)',
-                    need: 'Credentials + case studies + enterprise RFQ',
+                    need: 'Case studies + stack + enterprise contact route',
                     area: 'Technopark · Kazhakuttam · KSUM',
                     colour: '#F05A28',
                   },
                   {
                     type: 'Government & ISRO Ecosystem',
-                    need: 'Capability statement + RFP inquiry flow',
+                    need: 'Capability statement + tender enquiry form',
                     area: 'Secretariat · VSSC · KSITIL · Pattom',
                     colour: '#0F0F12',
                   },
                   {
                     type: 'Tourism & Hospitality',
-                    need: 'Gallery + booking flow + international UX',
+                    need: 'Photos + booking request + review section',
                     area: 'Kovalam · Varkala · Padmanabhaswamy',
                     colour: '#F05A28',
                   },
                   {
                     type: 'Ayurveda & Wellness',
-                    need: 'Medical credibility + booking + international reach',
+                    need: 'Practitioner credentials + treatment booking + overseas reach',
                     area: 'Thiruvananthapuram wellness corridor · NRI & EU travellers',
                     colour: '#0F0F12',
                   },
@@ -676,7 +661,8 @@ export default function ThiruvananthapuramWebDesignPage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  Same engineering quality. Strategy tailored to your buyer.
+                  
+                  One build standard. A plan set by your buyer.
                 </p>
               </div>
             </div>
@@ -686,23 +672,23 @@ export default function ThiruvananthapuramWebDesignPage() {
         {/* ── 6. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Thiruvananthapuram Businesses Choose FactoryJet Over Local Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. Trivandrum's business community, educated, technically literate, and internationally connected, has high standards for digital quality. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
+          headline="What Trivandrum Businesses Get From FactoryJet"
+          lead="Trivandrum buyers are educated, technical and well travelled, and they notice a slow or dated site. Many local agencies take weeks to quote and longer to deliver. We fix the price before you commit, write the 7-day date into the contract and build in Next.js, so pages load fast, plugin bills disappear and the code is yours."
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing.',
-              body: "Thiruvananthapuram's Technopark companies, government contractors, and startup founders move fast. Waiting 14 weeks for a website that should have been live in April is not acceptable when KSUM's demo day is in three weeks. FactoryJet delivers in 7 days, with the delivery date written into the project agreement. We have delivered on time on 97% of all projects.",
+              title: 'Seven days, in the contract.',
+              body: "A Technopark team chasing a client pitch or a startup preparing for an investor meeting cannot wait three months for a site. We launch in 7 days and the date is written into the agreement. Across our projects, 97% have shipped on the agreed date.",
             },
             {
               icon: '🏗️',
-              title: "Next.js, not WordPress. Trivandrum's audience notices.",
-              body: "Thiruvananthapuram has India's most technically literate business population: Technopark engineers, ISRO researchers, and KSUM startup founders know exactly what a fast website feels like versus a slow one. WordPress loads server-side PHP and fires 40–60 database queries per page load. Next.js generates static files served from Cloudflare CDN globally. The result: sub-1.5s load times on 4G versus 4–6s for WordPress. That gap is visible to your audience.",
+              title: "Next.js speed for a technical audience.",
+              body: "Engineers at Technopark and VSSC feel the difference between a quick site and a sluggish one. WordPress builds each page on request with PHP and dozens of database queries. Next.js serves finished files from Cloudflare, usually under 1.5 seconds on 4G against 4–6 seconds for WordPress. Visitors notice that gap, and so does Google.",
             },
             {
               icon: '📋',
-              title: 'Fixed price. Agreed before we start.',
-              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch.",
+              title: 'Price agreed once, before work begins.',
+              body: "The quote is in writing before you commit. There is no discovery fee and no extra invoice after launch. Scope and cost are settled at the start.",
             },
           ]}
         />
@@ -710,22 +696,22 @@ export default function ThiruvananthapuramWebDesignPage() {
         {/* ── 7. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="How We Build Your Thiruvananthapuram Website in 7 Days"
-          lead="Buyer strategy agreed before design. Mobile approval before development. SEO and analytics wired before launch."
+          headline="How Your Trivandrum Website Is Built in 7 Days"
+          lead="The buyer is agreed first, then phone layouts, then code. Analytics and search setup are ready before launch."
           stages={TVM_JOURNEY_STAGES}
-          closingNote="5 STAGES · 7 DAYS · NEXT.JS + CLOUDFLARE · GA4 STANDARD · ZERO DOWNTIME LAUNCH"
+          closingNote="FIVE STEPS · SEVEN DAYS · NEXT.JS ON CLOUDFLARE · GA4 AT LAUNCH · NO DOWNTIME"
         />
 
         {/* ── 8. PORTFOLIO ─────────────────────────────────────────────────── */}
         <PortfolioShowcase
           eyebrow="RECENT WORK"
-          headline="What India's businesses look like after FactoryJet."
+          headline="Two builds for Indian clients."
           cards={[
             {
               industry: 'Wholesale Distribution · Commerceflo',
               title: 'Belle Maison | Mumbai',
               description:
-                "Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.",
+                "A Mumbai wholesale supplier of artificial plants, flowers, flower runners, home décor and LED lighting. FactoryJet set up its B2B quote-to-cash store on Commerceflo, with tiered trade prices, a quote-to-order flow and account-based ordering.",
               imageSrc: '/images/portfolio/belle-maison.webp',
               stat1: 'Lighthouse 95+',
               stat2: 'Commerceflo · B2B',
@@ -734,7 +720,7 @@ export default function ThiruvananthapuramWebDesignPage() {
               industry: 'MEP / BIM Consulting · SEO',
               title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on WordPress with authority-first architecture designed for B2B project enquiries, credentials display, project portfolio, and technical SEO.',
+                'An MEP drafting and BIM consultancy. FactoryJet rebuilt its site on WordPress around B2B project enquiries, adding a credentials section, a project portfolio and technical SEO.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
@@ -747,65 +733,65 @@ export default function ThiruvananthapuramWebDesignPage() {
         {/* ── 9. COMPARISON TABLE ──────────────────────────────────────────── */}
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. Trivandrum/Kochi Agency vs. Freelancer vs. Template Builder"
-          lead="Not all web design options in Thiruvananthapuram deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
+          headline="FactoryJet, a Kerala Agency, a Freelancer or a Template Builder"
+          lead="Trivandrum firms usually weigh four ways to get a website. Compare timeline, build quality, search setup and what you own after launch."
           pullQuote={{
             stat: '7 days',
             caption:
-              'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+              'from first call to launch, with Figma design, Next.js code, search setup and a Lighthouse audit included.',
           }}
           columns={TVM_COMPARISON_COLUMNS}
           rows={TVM_COMPARISON_ROWS}
-          footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
+          footer="A fixed-price contract is available for any scope. We start with a free consultation and then send a written quote."
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="THIRUVANANTHAPURAM × WEB DESIGN"
-          headline="Web Design for Thiruvananthapuram's Key Industries"
-          lead="From IT startups at Technopark and government contractors to Kovalam tourism operators and Ayurveda wellness brands, Thiruvananthapuram's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
+          headline="Websites for the Sectors That Run Trivandrum"
+          lead="Software, government, space engineering, tourism, Ayurveda and education each bring a different buyer to your site. These are the six sectors we plan for most in Thiruvananthapuram."
           sectors={[
             {
-              name: 'IT & Software (Technopark)',
+              name: 'Software & IT (Technopark)',
               description:
-                "Technopark: India's first IT park, established in 1990, houses 450+ companies employing 75,000+ professionals. From global IT giants like Infosys, TCS, and UST Global to ambitious product startups backed by KSUM, Thiruvananthapuram's IT sector is one of India's most established. IT services websites need authority-first architecture: capability pages, technology stack display, case studies, team credentials, and lead flows designed for enterprise procurement cycles. International clients research for weeks before engaging.",
+                "Technopark was India's first IT park and now hosts 450+ companies, from global service firms to KSUM-backed product startups. Their clients sit overseas and research vendors online for weeks. IT sites need capability pages, case studies, the tech stack, team strength and a contact route that suits procurement.",
               example:
-                'Software development companies, ITES firms, SaaS product startups, and digital agencies operating from Technopark campus and the Kazhakuttam corridor.',
+                'Product startups, outsourcing firms, SaaS teams and digital studios on the Technopark campus and along the Kazhakuttam stretch.',
             },
             {
-              name: 'Government & Public Sector',
+              name: 'Government & Public Sector Suppliers',
               description:
-                "Thiruvananthapuram hosts the Kerala Secretariat, all major state government departments, KSITIL (Kerala State IT Infrastructure Ltd), and the headquarters of dozens of public sector undertakings. This creates a large ecosystem of government contractors, systems integrators, engineering consultants, and technology suppliers. These businesses need websites that function as institutional capability statements, past project portfolio, team credentials, compliance documentation, and RFP inquiry flows.",
+                "The Kerala Secretariat, most state departments, KSITIL and many public sector undertakings are based in the city. Around them work contractors, systems integrators and consultants. Their sites act as capability statements: past work, team credentials, compliance records and a route for tender enquiries.",
               example:
-                'Government IT contractors, systems integrators, engineering consultants, and professional services firms serving Kerala public sector organisations.',
+                'IT contractors, systems integrators, engineering consultants and advisory firms that supply Kerala government bodies.',
             },
             {
-              name: 'ISRO & Space Tech Ecosystem',
+              name: 'Space & Precision Engineering',
               description:
-                "ISRO's Vikram Sarabhai Space Centre (VSSC) in Thiruvananthapuram is one of India's most important space research and launch vehicle development centres. VSSC anchors a significant ecosystem of engineering firms, technology suppliers, precision manufacturers, and research institutions. Businesses in this ecosystem need websites that convey technical excellence, certifications, and institutional credibility, not consumer-facing design.",
+                "VSSC at Thumba develops ISRO's launch vehicles. A network of engineering firms, precision machine shops, test labs and research groups supplies it. Their sites must show technical depth, certifications and quality systems in a plain, institutional tone.",
               example:
-                "Engineering firms, precision technology suppliers, testing laboratories, and research organisations serving ISRO and India's space technology sector.",
+                "Engineering firms, precision component makers, test laboratories and research groups working with ISRO and the space sector.",
             },
             {
-              name: 'Tourism & Hospitality',
+              name: 'Beach & Heritage Tourism',
               description:
-                "Thiruvananthapuram is Kerala's tourism gateway, home to Kovalam beach (one of India's most famous international beach destinations), the Padmanabhaswamy Temple heritage circuit, and the southern backwaters near Varkala. Tourism businesses serve a demanding mix of domestic travellers, international leisure tourists, and NRI families visiting from the Gulf and Europe. Tourism sites need gallery-rich mobile-first design, fast booking flows, WhatsApp inquiry integration, and international buyer UX.",
+                "Kovalam's beaches, Varkala's cliffs and the Padmanabhaswamy Temple bring domestic and foreign visitors year round, along with NRI families home from the Gulf and Europe. Resorts and tour firms need photo-led pages, fast booking requests, WhatsApp chat and copy that reassures overseas guests.",
               example:
-                "Beach resorts, heritage homestays, tour operators, and travel agencies operating in and around Kovalam, Varkala, and Thiruvananthapuram's heritage zone.",
+                "Beach resorts, heritage homestays, tour operators and travel agents in Kovalam, Varkala and the old city.",
             },
             {
               name: 'Ayurveda & Wellness',
               description:
-                "Thiruvananthapuram is one of Kerala's most important authentic Ayurveda destinations, home to internationally recognised hospitals, traditional vaidya practices, and wellness retreats attracting medical tourists from Europe, the Gulf, and the US. Ayurveda businesses competing for international clients need gallery-rich design, multi-language consideration, online booking systems, doctor and treatment credentials display, and SEO targeting English-language searches from international travellers.",
+                "Thiruvananthapuram is known for classical Ayurveda, with hospitals, vaidya families and retreats that treat patients from Europe, the Gulf and the US. These sites need treatment and practitioner pages, photo-led design, booking requests and English copy aimed at overseas searches.",
               example:
-                'Ayurvedic hospitals, wellness retreats, traditional vaidya practices, and Panchakarma centres targeting domestic and international medical tourism patients.',
+                'Ayurveda hospitals, Panchakarma centres, wellness retreats and vaidya practices serving local and overseas patients.',
             },
             {
-              name: 'Education & Professional Services',
+              name: 'Education & Professional Firms',
               description:
-                "Thiruvananthapuram hosts the College of Engineering Trivandrum (est. 1939), Kerala University, and dozens of professional colleges. The city's educated workforce supports a strong CA, legal, and consulting ecosystem. Professional services firms need authority-first sites that project credibility to institutional clients, credentials display, service capability pages, team profiles, and lead-capture flows that convert research into booked consultations.",
+                "The College of Engineering Trivandrum, the University of Kerala and many professional colleges keep the city full of graduates. That supports a strong base of chartered accountants, lawyers and consultants. Their sites need credentials, service pages, team profiles and a simple way to book a consultation.",
               example:
-                "CA and CS firms, corporate law practices, management consultants, and HR firms serving Thiruvananthapuram's government, IT, and business community.",
+                "CA and CS firms, law practices, management consultants and HR firms serving government, IT and local business clients.",
             },
           ]}
         />
@@ -814,14 +800,14 @@ export default function ThiruvananthapuramWebDesignPage() {
         {/* ── 12. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What India's founders say after we build their site"
+          headline="Indian founders on working with FactoryJet"
         />
 
         {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Common Questions from Thiruvananthapuram Businesses"
-          lead="The questions we answer on every Trivandrum discovery call, answered here, without the runaround."
+          headline="What Trivandrum Businesses Ask Us"
+          lead="Plain answers to the questions Thiruvananthapuram owners raise on a first call."
           categories={TVM_FAQ_CATEGORIES}
           items={TVM_FAQ_ITEMS}
         />
@@ -830,11 +816,11 @@ export default function ThiruvananthapuramWebDesignPage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO START"
-          headline="Ready to Build Your Thiruvananthapuram Website?"
-          sub="Thiruvananthapuram's IT companies, government contractors, ISRO ecosystem firms, tourism operators, and Ayurveda businesses are all competing for the same Google rankings and the same first impressions from a digitally sophisticated audience. Kerala has India's highest internet penetration and literacy rate: your ideal customer is researching you right now, comparing your site against every competitor in the city. Whether they search 'Thiruvananthapuram' or 'Trivandrum', FactoryJet makes sure they find you. Every week without a high-performing website is ground you are conceding. Start today and have a sitemap ready within 72 hours."
+          headline="Start Your Trivandrum Website This Week"
+          sub="Your next enterprise client, tender officer or overseas guest will check your site before they get in touch. In a city of careful readers, a slow or thin site sends them to a rival. Whether they type Thiruvananthapuram or Trivandrum, we make sure they land on you. Send a brief today and get a page plan within 72 hours."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price. 7-day delivery. Next.js. Your codebase delivered in full on launch day."
+          objectionHandler="Fixed price. Live in 7 days. Next.js build. Your code from day one."
         />
 
         {/* India web-design city cross-links (silo fix, 31 Jul 2026) */}

@@ -28,13 +28,12 @@ import WebDesignCityLinksIN from '@/components/v2/WebDesignCityLinksIN';
 export const metadata: Metadata = {
   title: 'Web Design Company in Gurgaon | FactoryJet',
   description:
-    'Web design company in Gurgaon for Fortune 500 GCCs, BFSI firms, and startups. Fast, custom websites with 7-day delivery. Serving Cyber City, Golf Course Road, MG Road & DLF areas.',
+    'Web design company in Gurgaon for corporate offices, BFSI firms, Udyog Vihar exporters and startups. Custom Next.js websites with 7-day delivery.',
   keywords: [
     'web design company in Gurgaon',
     'website design Gurgaon',
     'web development company Gurgaon',
     'website design company Gurugram',
-    'affordable web design Gurgaon',
     'professional website design Gurgaon',
     'web design Cyber City Gurgaon',
     'web design Golf Course Road',
@@ -48,14 +47,14 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Web Design Company in Gurgaon | FactoryJet',
     description:
-      'Professional website design company in Gurgaon: Next.js, SEO, and GA4 included. 7-day delivery. Serving Cyber City, Cyber Hub, Golf Course Road, MG Road, DLF areas, and Sohna Road.',
+      'Web design company in Gurgaon building Next.js sites with SEO and GA4 set up. 7-day delivery for firms in Cyber City, Udyog Vihar and Sohna Road.',
     url: 'https://factoryjet.com/web-design/gurgaon',
     images: [
       {
         url: 'https://factoryjet.com/images/services/web-design.webp',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet Web Design Services in Gurgaon',
+        alt: 'FactoryJet website design work for Gurgaon businesses',
       },
     ],
     locale: 'en_IN',
@@ -64,7 +63,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web Design Company in Gurgaon | FactoryJet',
     description:
-      'Website design company in Gurgaon. 7-day delivery. Next.js, SEO, GA4 included.',
+      'Web design company in Gurgaon. Next.js build, SEO and GA4 set up, 7-day delivery.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
@@ -90,7 +89,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -110,42 +109,42 @@ const localBusinessSchema = { '@context': 'https://schema.org', '@type': 'Organi
 const GGN_JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery & Strategy',
+    title: 'Buyer mapping',
     description:
-      "We map your ideal customer profile against Gurgaon's corporate market, whether that's a Fortune 500 GCC in Cyber City, a BFSI firm on Golf Course Road, a D2C brand, or a startup in Sohna Road. We audit your top competitors, identify your highest-value search terms, and agree the sitemap and content plan before design begins.: Days 1–2",
+      "Day one and two go on your buyer. A vendor pitching a Cyber City capability centre, a garment unit in Udyog Vihar and a Sohna Road SaaS founder each get read by different people. We list who reads your site, check three rivals they will also open, and lock the page list.: Days 1–2",
   },
   {
     number: '02',
-    title: 'Design & Prototyping',
+    title: 'Screens in Figma',
     description:
-      "Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal, whether that's an enterprise RFQ, a demo request, or a D2C purchase. You approve the design before development starts.: Days 3–4",
+      "We draw the phone layout first at 375px, then widen it to 1440px. Each screen is checked against one action: an RFP request, a demo booking or a sample order. Nothing moves to code until you sign off the screens.: Days 3–4",
   },
   {
     number: '03',
-    title: 'Development',
+    title: 'Build and integrations',
     description:
-      'Built in Next.js deployed to Cloudflare CDN: sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, CRM connectors (Salesforce, HubSpot, Zoho), and enterprise APIs wired in from day one. Performance budgets enforced from the first commit.: Days 5–6',
+      'Pages are coded in Next.js and served from the Cloudflare CDN, so they open in under 1.5s on Indian 4G. Forms, WhatsApp buttons and CRM hooks for Salesforce, HubSpot or Zoho go in during the build, with a page-weight budget checked on every commit.: Days 5–6',
   },
   {
     number: '04',
-    title: 'Content & SEO',
+    title: 'Search setup',
     description:
-      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Gurgaon-specific local SEO targeting built in: Cyber City, Golf Course Road, MG Road, and DLF district searches.: Day 6–7',
+      'Copy is tightened, images go to WebP, and every page gets meta tags, LocalBusiness and FAQPage schema and internal links. We submit the sitemap and target the area searches your buyers type, such as Cyber City, Golf Course Road or Udyog Vihar.: Day 6–7',
   },
   {
     number: '05',
-    title: 'Launch & Handover',
+    title: 'Go live',
     description:
-      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included.: Day 7+',
+      'We move DNS to Cloudflare, connect GA4 and GTM and verify Search Console. You get a recorded walkthrough of the admin and a 30-day window for fixes after launch.: Day 7+',
   },
 ];
 
 const GGN_FAQ_CATEGORIES = [
-  { key: 'pricing',   label: 'Pricing & Timeline' },
-  { key: 'included',  label: "What's Included" },
-  { key: 'technical', label: 'Technical & SEO' },
-  { key: 'local',     label: 'Gurgaon Local' },
-  { key: 'support',   label: 'Support & Ownership' },
+  { key: 'pricing',   label: 'Cost and timing' },
+  { key: 'included',  label: "Scope of work" },
+  { key: 'technical', label: 'Speed, code and search' },
+  { key: 'local',     label: 'Gurugram specifics' },
+  { key: 'support',   label: 'Ownership and aftercare' },
 ];
 
 const GGN_FAQ_ITEMS = [
@@ -153,131 +152,131 @@ const GGN_FAQ_ITEMS = [
   /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How much does a website cost for a business in Gurgaon?',
+    question: 'What will a website cost my Gurgaon company?',
     answer:
-      "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
+      "It depends on page count, how crowded your search terms are, and add-ons such as a store, a booking flow or an AI assistant. After a free call we send one fixed figure in writing. You keep the code when the project ends.",
   },
   {
     category: 'pricing',
-    question: 'How long does it take to build a website?',
+    question: 'How many days does a build take?',
     answer:
-      'A standard FactoryJet build delivers in 7 days from kickoff to launch. Discovery and design take the first two days, development days three through six, and content, SEO, and launch on day seven. The 7-day clock starts when your brand assets and content are in our shared workspace.',
+      'Seven, counted from kickoff. Days one and two cover buyer mapping and screens, days three to six cover the build, and day seven is search setup and launch. The count starts once your logo, photos and text sit in the shared folder.',
   },
   {
     category: 'pricing',
-    question: 'What makes FactoryJet better value than a Gurgaon web agency?',
+    question: 'Why pick FactoryJet over a large Gurgaon agency?',
     answer:
-      'We are a specialised web engineering team, not a full-service agency with large Cyber City or Golf Course Road overheads. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch, at 60–70% lower cost. You pay for the build, not our real estate.',
+      'A small engineering team works on your project from start to finish. There are no account managers in between and no glass-tower rent in the fee. You get Figma design, Next.js code and a Lighthouse check before launch, priced for the work itself.',
   },
   {
     category: 'pricing',
-    question: 'What does 7-day delivery include?',
+    question: 'What is covered in the 7-day delivery?',
     answer:
-      'The 7-day timeline covers the development phase we control, design, build, content, and launch. We have delivered on time on 97% of all projects.',
+      'The seven days cover the part we control: screens, code, copy and launch. Across all projects we have hit the agreed date 97% of the time.',
   },
 
   /* ── What's Included ── */
   {
     category: 'included',
-    question: "What's included in a web design project?",
+    question: "Which parts of the project do you handle?",
     answer:
-      "Every FactoryJet project includes strategy, Figma design, Next.js development, basic copywriting, technical SEO setup (schema, meta, sitemap), GA4 analytics, and a 30-day post-launch support window. You receive the full codebase in your GitHub on launch day.",
+      "Buyer mapping, Figma screens, Next.js code, starter copy, schema and sitemap setup, GA4, and 30 days of fixes after launch. On launch day the full code moves into a GitHub account you control.",
   },
   {
     category: 'included',
-    question: 'Do you write the content for my website?',
+    question: 'Will you write the words on the site?',
     answer:
-      'Basic copywriting for headings, hero text, and service descriptions is included. Full SEO content is available as an add-on. We send a content brief before development starts so you know exactly what to provide.',
+      'Starter copy is part of the job: headlines, the hero block and service summaries. Longer SEO articles cost extra. Before the build we send a short brief listing what we need from you.',
   },
   {
     category: 'included',
-    question: 'Do you provide website hosting?',
+    question: 'Is hosting part of the deal?',
     answer:
-      'We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account, we configure it for you. No monthly hosting fee to us.',
+      'Sites run on Cloudflare Pages, which costs nothing for most business sites. The Cloudflare account sits in your name and we set it up. We charge no monthly hosting fee.',
   },
   {
     category: 'included',
-    question: 'Can I update the website myself after launch?',
+    question: 'Can my marketing team edit pages later?',
     answer:
-      'Yes. Every Growth and Custom tier project includes a headless CMS integration (Sanity or Contentful) so your team can update content without touching code. Ideal for Gurgaon corporate teams with dedicated marketing managers.',
+      'Yes. Growth and Custom tier builds come with a headless CMS, Sanity or Contentful, so a marketing manager can change text and images without a developer. Gurgaon corporate teams usually hand this to one owner.',
   },
 
   /* ── Technical & SEO ── */
   {
     category: 'technical',
-    question: 'Will my website rank on Google India?',
+    question: 'Can a Gurgaon business site rank on Google India?',
     answer:
-      'Technical SEO is built into every project: JSON-LD schema markup, optimised title and meta templates, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images. Branded searches typically rank within 1–2 weeks.',
+      'Ranking basics ship with every build: JSON-LD schema, title and meta templates, green Core Web Vitals on phones, internal links, WebP images and a submitted XML sitemap. Searches for your brand name usually show the site within 1–2 weeks.',
   },
   {
     category: 'technical',
-    question: 'What tech stack do you build on?',
+    question: 'What do you build the site with?',
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Gurgaon businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings and first-impression credibility with enterprise buyers.",
+      "Next.js on Cloudflare's CDN. Pages load in under 1.5s on Indian 4G, where a typical WordPress site takes 4–6s. When a procurement analyst opens your site on a phone between meetings, that gap shapes their first view of your firm.",
   },
   {
     category: 'technical',
-    question: 'How does the site perform on mobile?',
+    question: 'Will it work well on phones?',
     answer:
-      'Mobile-first is the default. Every build targets Lighthouse 90+ and green Core Web Vitals on mobile before launch. We design at 375px before desktop, serve WebP images via Cloudflare CDN with lazy loading.',
+      'Phones come first. We lay out each screen at 375px before desktop, compress images to WebP, lazy-load them through Cloudflare, and aim for Lighthouse 90+ with green Core Web Vitals on mobile before launch.',
   },
   {
     category: 'technical',
-    question: 'Do you set up Google Analytics and Search Console?',
+    question: 'Will I see which pages bring enquiries?',
     answer:
-      'Yes, GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, demo request clicks) are configured from day one. Search Console verified and sitemap submitted.',
+      'Yes. GA4 and Google Tag Manager are live before launch. Form sends, WhatsApp taps and demo-request clicks are tracked as events from the first day, and Search Console is verified with the sitemap in place.',
   },
 
   /* ── Gurgaon Local ── */
   {
     category: 'local',
-    question: 'Do you build websites for GCCs and enterprise companies in Gurgaon?',
+    question: 'Can you build for capability centres and enterprise vendors in Cyber City?',
     answer:
-      'Yes: Global Capability Centres, BFSI firms, IT/ITES companies, and enterprise businesses in Cyber City and Golf Course Road are a core client profile for us in Gurgaon. We build websites with authority-first architecture, corporate credibility signals, compliance-aware content, and enterprise-grade performance to pass procurement reviews.',
+      'Yes. IT and ITES firms, BFSI companies and vendors selling into the capability centres around Cyber City and Golf Course Road need sites that survive a procurement check. We put certifications, service pages, case studies and a clear RFP path where a reviewer expects to find them.',
   },
   {
     category: 'local',
-    question: 'Can you build websites for Gurgaon startups and D2C brands?',
+    question: 'Do you work with Gurgaon startups and D2C brands?',
     answer:
-      "Yes. Gurgaon's startup ecosystem, centred around Sector 29, Sohna Road, and co-working clusters across the city, produces a high volume of funded startups and D2C brands. Startup websites need product-led architecture, investor credibility signals, demo request flows, and performance designed for rapid iteration. We build for all of them.",
+      "Yes. Founders along Sohna Road, in Sector 29 and in the DLF co-working spaces need a site that explains the product in one screen and books demos. D2C brands need fast product pages and a checkout that works on a cheap Android phone. We scope each of these differently.",
   },
   {
     category: 'local',
-    question: "Do you know Gurgaon's business districts well enough to write relevant copy?",
+    question: "Will the copy reflect Gurgaon's business areas?",
     answer:
-      "Yes. We research Gurgaon's business geography as part of discovery, from Cyber City's Fortune 500 GCC cluster and Cyber Hub's tech-and-lifestyle corridor to Golf Course Road's premium commercial stretch, MG Road's retail and hospitality strip, DLF Phase 1–5's mixed commercial zones, and Sohna Road's rapidly growing startup belt. Local specificity in copy and LocalBusiness schema improves relevance for area-level searches.",
+      "Yes. Discovery includes the parts of the city your buyers know: Cyber City and Cyber Hub offices, Golf Course Road towers, MG Road retail, Udyog Vihar factories and export units, and the newer Sohna Road belt. Naming the right area in copy and LocalBusiness schema helps area-level searches.",
   },
   {
     category: 'local',
-    question: 'How does FactoryJet compare to Gurgaon web agencies?',
+    question: 'How is FactoryJet different from other Gurgaon web firms?',
     answer:
-      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
+      "Many local firms quote after weeks of meetings and run to months of build time. We send a fixed price before you commit, write the 7-day date into the agreement and code in Next.js. You end up with a faster site sooner, and the code is yours.",
   },
 
   /* ── Support & Ownership ── */
   {
     category: 'support',
-    question: 'Do I own the website after it is built?',
+    question: 'Who owns the site once it is live?',
     answer:
-      'Yes, 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
+      'You do, fully. The Next.js code lands in your GitHub on launch day, along with the Figma files and every API key. No retainer is required and nothing ties you to our platform.',
   },
   {
     category: 'support',
-    question: 'What support do you provide after launch?',
+    question: 'What help do I get after launch?',
     answer:
-      'Every project includes a 30-day post-launch support window covering bug fixes and minor adjustments at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans covering development changes, priority same-day bug response, and a dedicated engineer who knows your codebase. Maintenance clients also get quarterly performance audits and Core Web Vitals checks.',
+      'The first 30 days of bug fixes and small changes are free. After that you can take a monthly plan with development hours, same-day priority on bugs and one engineer who already knows your code. Plan clients also get a quarterly speed and Core Web Vitals check.',
   },
   {
     category: 'support',
-    question: 'What happens if something breaks after launch?',
+    question: 'What if the site breaks after launch?',
     answer:
-      'Within the 30-day support window, any bugs are fixed at no cost and typically within 24 hours. Because your site is on Cloudflare Pages (static files, global CDN), common causes of downtime simply do not apply.',
+      'Inside the 30-day window we fix bugs free, usually within 24 hours. The site runs as static files on Cloudflare Pages, so server crashes and plugin conflicts are off the table.',
   },
   {
     category: 'support',
-    question: 'Do you offer ongoing retainer services for Gurgaon businesses?',
+    question: 'Can we keep you on a monthly plan in Gurgaon?',
     answer:
-      'Yes. Monthly retainers cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer, important for Gurgaon corporate teams who need rapid turnaround.',
+      'Yes. A monthly plan covers new landing pages, content edits, SEO work and upkeep. Plan clients jump the queue and work with a named engineer, which suits corporate teams with tight review cycles.',
   },
 
   // Money-query coverage, added 2026-06-11
@@ -285,13 +284,13 @@ const GGN_FAQ_ITEMS = [
     category: 'pricing',
     question: 'Who is the best web design agency in Gurgaon?',
     answer:
-      'For small businesses, FactoryJet makes a strong case as the best web design company in Gurgaon: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Gurgaon you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Gurgaon.',
+      'The best web design company in Gurgaon for you is the one that passes three tests. Can you open live sites they built? Can you check their speed scores yourself? Will the price stay fixed once work starts? FactoryJet offers custom websites in 7 days at a written fixed price, and we invite that test.',
   },
   {
     category: 'pricing',
     question: 'Should I hire web designer in Gurgaon or use an agency?',
     answer:
-      'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Gurgaon directly, agree the scope and price in writing first.',
+      'For a single landing page, a freelancer is often enough. A company site needs design, code, SEO and aftercare, and a small senior team covers all four at one fixed price. If you hire web designer in Gurgaon on your own, put the scope and fee in writing before work begins.',
   },
 ];
 
@@ -307,18 +306,18 @@ const faqSchema = {
 
 const GGN_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
-  { label: 'Gurgaon Premium Agency' },
+  { label: 'Large Gurgaon agency' },
   { label: 'Freelancer' },
   { label: 'Template (Wix/Squarespace)' },
 ] as const;
 
 const GGN_COMPARISON_ROWS = [
   {
-    feature: 'Delivery timeline',
+    feature: 'Time to launch',
     values: ['7 days', '8–20 weeks', '4–16 weeks (unreliable)', '1–2 weeks (you build it)'],
   },
   {
-    feature: 'Custom Figma design',
+    feature: 'Designed from scratch in Figma',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ga" kind="yes" />,
@@ -327,7 +326,7 @@ const GGN_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Next.js (not WordPress)',
+    feature: 'Built in Next.js',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ga" kind="partial" />,
@@ -336,7 +335,7 @@ const GGN_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Technical SEO built in',
+    feature: 'Schema and sitemap set up',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ga" kind="partial" />,
@@ -345,7 +344,7 @@ const GGN_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Lighthouse 90+ on mobile',
+    feature: 'Mobile Lighthouse score 90+',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ga" kind="partial" />,
@@ -354,7 +353,7 @@ const GGN_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'GA4 + GTM wired up',
+    feature: 'Analytics events tracked',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ga" kind="partial" />,
@@ -363,7 +362,7 @@ const GGN_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Transparent, fixed pricing',
+    feature: 'Price fixed before work',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ga" kind="no" />,
@@ -372,7 +371,7 @@ const GGN_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Full codebase to your GitHub',
+    feature: 'Code handed to you',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ga" kind="partial" />,
@@ -381,7 +380,7 @@ const GGN_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '7-day delivery',
+    feature: 'Launch in 7 days',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ga" kind="no" />,
@@ -395,39 +394,39 @@ const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
   '@id': `https://factoryjet.com/web-design/gurgaon#howto`,
-  name: `How FactoryJet builds your Gurgaon website in 7 days`,
-  description: `Our 7-day process for delivering a professional, high-performance website for Gurgaon businesses.`,
+  name: `Seven days from kickoff to a live Gurgaon website`,
+  description: `The day-by-day plan FactoryJet follows to launch a fast website for a Gurgaon business.`,
   totalTime: 'P7D',
   step: [
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 | Discovery Call',
-      text: `We learn your business, your Gurgaon market, your goals, and what you need the website to do, whether that's GCC credibility, startup lead gen, or D2C conversions.`,
+      name: 'Day 1 | Kickoff call',
+      text: `We hear what the site must achieve: getting onto a vendor panel, booking demos, or selling products online.`,
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 | Strategy & Structure',
-      text: `We map your site architecture, research your Gurgaon competitors, identify your top keywords, and write the first draft of your page copy.`,
+      name: 'Day 2 | Page plan',
+      text: `We study the Gurgaon firms you compete with, pick the search terms worth owning, and draft the page list and first copy.`,
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 | Design',
-      text: 'Your bespoke design is created, homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
+      name: 'Days 3–4 | Screens',
+      text: 'Home and inner screens are drawn in Figma and shared as a preview link. Your comments go back into the screens within a day.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 | Development & SEO',
-      text: `Your approved design is built in code, fast, mobile-first, and SEO-optimised. Gurgaon local schema markup added. Google Analytics and Search Console connected.`,
+      name: 'Days 5–6 | Code and search',
+      text: `Signed-off screens become Next.js pages. Local schema for Gurgaon goes in, and GA4 plus Search Console are connected.`,
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 | Launch',
-      text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.',
+      name: 'Day 7 | Live',
+      text: 'We test on five devices, launch, and hand over written notes plus a 30-minute training call.',
     },
   ],
 };
@@ -493,8 +492,8 @@ export default function GurgaonWebDesignPage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="web_design_gurgaon_hero" />}
           eyebrow="WEB DESIGN · GURGAON"
-          headline="Website Design in Gurgaon for GCCs, BFSI Firms, Startups, and High-Value B2B Businesses"
-          lead="Gurgaon is India's corporate capital, home to 250+ Fortune 500 Global Capability Centres, India's largest BFSI corridor, and the fastest-growing startup ecosystem in North India. From Cyber City's GCC cluster to Golf Course Road's premium commercial stretch and Sohna Road's emerging startup belt, Gurgaon businesses demand quality and know how to evaluate it. FactoryJet builds Figma-designed, Next.js-built websites with 7-day delivery, your codebase delivered in full."
+          headline="Web Design in Gurgaon for Corporate Vendors, BFSI Firms, Exporters and Startups"
+          lead="Gurgaon buyers judge a firm by its website before they take a meeting. Procurement teams in Cyber City, investors on Golf Course Road and garment buyers sourcing from Udyog Vihar all check you online first. FactoryJet designs in Figma, codes in Next.js and launches in 7 days, and the full code is handed to you."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery',
@@ -504,40 +503,40 @@ export default function GurgaonWebDesignPage() {
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
-        <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
+        <LogoBar tagline="500+ businesses in India, the US, the UK and the UAE run on sites we built" />
 
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ websites built. 12 years of web engineering. 7-day delivery."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+          description="Shopify stores, B2B firms and DTC brands across India, the US, the UK and the UAE. Each one got a price fixed before work began, a launch inside seven days, and the full source code."
         />
 
         {/* ── 4. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
-          eyebrow="GURGAON MARKET"
-          headline="Why Your Gurgaon Web Presence Is a Competitive Necessity"
+          eyebrow="GURUGRAM BUYERS"
+          headline="Who Checks a Gurgaon Company's Website, and What They Look For"
           leadParagraphs={[
-            "Gurgaon (Gurugram) is India's corporate powerhouse: the country's single largest concentration of Fortune 500 Global Capability Centres, housing operations for Google, Microsoft, Deloitte, American Express, McKinsey, and hundreds more. The city's Cyber City precinct alone employs over 200,000 knowledge workers. Golf Course Road and the DLF phases form one of India's most valuable commercial real estate corridors. MG Road anchors retail and hospitality. And Sohna Road has emerged as North India's fastest-growing startup and tech corridor, attracting Sequoia, SoftBank, and Tiger Global-backed founders at pace.",
-            "This corporate density creates a web design challenge unique to Gurgaon: the bar for credibility is higher here than almost anywhere else in India. A BFSI firm on Golf Course Road is being evaluated by procurement teams at global banks. A startup in Sector 29 is pitching to Series A investors who spend 15 minutes researching the founder's digital presence before taking the call. A GCC vendor trying to get on a panel is competing against multinationals with ₹5 crore design budgets. In Gurgaon, a weak website is not just a missed opportunity, it is an active disqualifier.",
-            "Gurgaon's startup ecosystem is India's second-largest destination for startup investment by capital deployed, surpassing Pune, Hyderabad, and Chennai. D2C brands, SaaS companies, fintech startups, and HR tech platforms emerging from Gurgaon need websites that look funded, convert fast, and perform under traffic spikes. FactoryJet builds for the full spectrum, from the 5-page credibility site for a boutique consulting firm to the custom Next.js platform for a funded D2C brand scaling to ₹10 crore ARR.",
+            "Gurgaon packs very different businesses into a small area. Cyber City and Cyber Hub hold the offices and capability centres of large multinational firms. Golf Course Road and the DLF phases carry banks, insurers and consulting firms. Udyog Vihar mixes BPO floors with garment export units, and the Manesar side of the district is a major hub for car and two-wheeler parts. Sohna Road and Sector 29 are where many younger startups sit.",
+            "Each group has a different reader. A procurement analyst wants certifications and a vendor contact. An overseas apparel buyer wants factory photos, compliance details and a sample request form. An investor wants to see what the product does in ten seconds. A site built for one of these readers will fail the other two, so we decide the reader before we draw a single screen.",
+            "The city also moves fast. Funded D2C brands, SaaS firms and fintech startups launch campaigns that send sudden traffic, and a slow page loses that spend. We scope everything from a five-page site for a boutique consultancy to a larger Next.js build for a brand running paid campaigns across NCR.",
           ]}
           stats={[
             {
               value: '250+',
-              label: 'Fortune 500 GCCs headquartered in Gurgaon: the highest concentration in India',
+              label: 'Fortune 500 capability centres in Gurgaon, per NASSCOM',
               sourceUrl: 'https://nasscom.in/',
               sourceLabel: 'NASSCOM',
             },
             {
               value: '#2',
-              label: "India's second-largest startup investment hub by capital deployed, after Bengaluru",
+              label: "Gurgaon's rank among Indian cities for startup capital raised, behind Bengaluru",
               sourceUrl: 'https://www.startupindia.gov.in/',
               sourceLabel: 'Startup India',
             },
             {
               value: '₹4.5L Cr',
-              label: "Gurgaon's estimated GDP, Haryana's largest city economy and NCR's corporate engine",
+              label: "Estimated size of Gurgaon's economy, the largest city economy in Haryana",
               sourceUrl: 'https://mospi.gov.in/',
               sourceLabel: 'MoSPI',
             },
@@ -546,35 +545,22 @@ export default function GurgaonWebDesignPage() {
 
         {/* ── 5. SERVICE EXPLANATION ───────────────────────────────────────── */}
         <ServiceExplanation
-          eyebrow="WEB DESIGN · GURGAON"
-          headline="What 'Web Design' Actually Means for a Gurgaon Business"
-          lead="Gurgaon's economy runs across three buyer types with completely different web requirements, enterprise procurement teams vetting GCC vendors, professional investors and B2B buyers evaluating BFSI and consulting firms, and performance-focused consumers driving D2C growth. FactoryJet builds for all three."
+          eyebrow="WEBSITE DESIGN · GURUGRAM"
+          headline="What a Gurgaon Website Has to Do"
+          lead="Three kinds of buyer read Gurgaon websites: enterprise procurement teams, investors and B2B clients, and phone-first consumers. We plan the site around whichever one pays your bills."
           body={
             <>
               <p>
-                For Gurgaon&apos;s GCCs, BFSI firms, IT/ITES companies, and enterprise businesses
-                in Cyber City and Golf Course Road: the website is a procurement filter. Global
-                procurement teams, enterprise buyers, and institutional clients research vendors for
-                weeks before making contact. The site needs to answer their due-diligence questions:
-                credentials, service capability, client roster, compliance posture, and a frictionless
-                RFP or demo-request flow. We build these sites with authority-first architecture, case
-                study systems, and lead flows designed for enterprise sales cycles.
+                
+                Vendors to capability centres, BFSI firms and IT services companies around Cyber City face a procurement desk. That desk asks for proof: certifications, service scope, named sectors served and a way to send an RFP. We place each item where a reviewer looks for it and write case study pages that answer the follow-up questions before they are asked.
               </p>
               <p>
-                For Gurgaon&apos;s startup corridor: Sector 29, Sohna Road, and the co-working
-                clusters across the DLF phases: the challenge is different. Investors, strategic
-                partners, and enterprise clients are evaluating your digital presence before the first
-                Zoom call. A startup website needs to look funded before you are funded: product-led
-                architecture, conversion-optimised demo flows, and performance capable of handling
-                press spike traffic without breaking.
+                
+                Startups in Sector 29, on Sohna Road and in DLF co-working spaces face investors and early enterprise clients. Both groups open the site before the first call. The homepage must explain the product fast, show who uses it and offer a demo slot, and it must stay quick when a news story sends a traffic spike.
               </p>
               <p>
-                For the D2C brands, retail businesses, and HR and consulting firms operating across
-                MG Road, Sector 14, and the broader NCR consumer belt: the priority is mobile-first
-                speed, conversion-optimised landing pages, and analytics that surface exactly which
-                campaigns are driving qualified leads. Every FactoryJet Gurgaon project covers
-                discovery, Figma prototyping, Next.js development, SEO, GA4, and a 30-day support
-                window. You leave with a codebase you own and a site built to rank and convert.
+                
+                Consumer brands, clinics, restaurants and consultancies around MG Road and Sector 14 need phone-first pages, short forms and analytics that show which ad drove which lead. Every Gurgaon build includes discovery, Figma screens, Next.js code, SEO, GA4 and 30 days of fixes, and you own the code at the end.
               </p>
             </>
           }
@@ -585,27 +571,28 @@ export default function GurgaonWebDesignPage() {
                   className="font-fj-mono font-medium uppercase text-fj-neutral-400"
                   style={{ fontSize: '11px', letterSpacing: '0.14em' }}
                 >
-                  Three buyer types. One framework.
+                  
+                  Who reads your site
                 </p>
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
                   {
                     type: 'Enterprise & GCC',
-                    need: 'Credentials + procurement credibility',
-                    area: 'Cyber City · Golf Course Road · DLF Phase 1–5',
+                    need: 'Certifications, scope, RFP form',
+                    area: 'Cyber City · Golf Course Road · Udyog Vihar',
                     colour: '#F05A28',
                   },
                   {
                     type: 'Startup & BFSI',
-                    need: 'Authority + demo flows + investor signals',
+                    need: 'Product demo, proof of traction',
                     area: 'Sector 29 · Sohna Road · Cyber Hub',
                     colour: '#0F0F12',
                   },
                   {
                     type: 'D2C & Retail',
-                    need: 'Speed + mobile + conversion',
-                    area: 'MG Road · Sector 14 · South Gurgaon',
+                    need: 'Fast pages, short forms, ad tracking',
+                    area: 'MG Road · Sector 14 · South City',
                     colour: '#888880',
                   },
                 ].map((row) => (
@@ -644,7 +631,8 @@ export default function GurgaonWebDesignPage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  Same engineering quality. Strategy tailored to your buyer.
+                  
+                  One build standard. The plan changes with the reader.
                 </p>
               </div>
             </div>
@@ -654,46 +642,46 @@ export default function GurgaonWebDesignPage() {
         {/* ── 6. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Gurgaon Businesses Choose FactoryJet Over Local Premium Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
+          headline="What Gurgaon Firms Get from FactoryJet"
+          lead="Gurgaon agencies with big offices often need months and quote only after several meetings. We send a fixed price first, write the 7-day launch date into the agreement and build in Next.js, so pages load faster, there are no plugin bills each month and the code belongs to you."
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing.',
-              body: "Gurgaon's corporate culture runs on deadlines. Waiting 16 weeks for a website briefed in Q1 while your competitor has already launched is not an option when procurement reviews and investor diligence cycles move fast. FactoryJet delivers in 7 days, with the delivery date written into the project agreement. We have delivered on time on 97% of all projects.",
+              title: 'Launch date written into the contract',
+              body: "A vendor panel review or a funding round will not wait sixteen weeks for a website. We launch in seven days and put that date in the project agreement. Across all projects we have met the agreed date 97% of the time.",
             },
             {
               icon: '🏗️',
-              title: 'Next.js, not WordPress. The performance gap is real.',
-              body: "WordPress loads server-side PHP and fires 40–60 database queries per page load. Next.js generates static files served from Cloudflare CDN globally. The result: sub-1.5s load times versus 4–6s for a typical WordPress site. For Gurgaon businesses being evaluated by global procurement teams and investors, a slow website signals an under-resourced operation.",
+              title: 'Static Next.js pages load faster than WordPress',
+              body: "A WordPress page runs PHP and 40–60 database queries each time it opens. A Next.js page is prebuilt and served from Cloudflare's CDN, so it loads in under 1.5s where WordPress often takes 4–6s. A reviewer at a global bank reads a slow site as a small, stretched team.",
             },
             {
               icon: '📋',
-              title: 'Fixed price. Agreed before we start.',
-              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes, no scope creep invoices. Fixed price, fixed scope, agreed upfront. The kind of contract transparency that Gurgaon's procurement teams actually appreciate.",
+              title: 'One price, agreed up front',
+              body: "You get a single fixed quote before any work starts. There is no paid discovery phase and no surprise invoice for extra scope. Gurgaon procurement teams can file it exactly as written.",
             },
           ]}
         />
 
         {/* ── 7. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
-          eyebrow="OUR PROCESS"
-          headline="How We Build Your Gurgaon Website in 7 Days"
-          lead="Buyer strategy agreed before design. Mobile approval before development. SEO and analytics wired before launch."
+          eyebrow="THE SEVEN DAYS"
+          headline="Your Gurgaon Website, Day by Day"
+          lead="We agree the buyer first, sign off phone screens second, and wire SEO and tracking before the site goes live."
           stages={GGN_JOURNEY_STAGES}
-          closingNote="5 STAGES · 7 DAYS · NEXT.JS + CLOUDFLARE · GA4 STANDARD · ZERO DOWNTIME LAUNCH"
+          closingNote="BUYER MAP · FIGMA · NEXT.JS · SEARCH SETUP · LAUNCH ON DAY 7"
         />
 
         {/* ── 8. PORTFOLIO ─────────────────────────────────────────────────── */}
         <PortfolioShowcase
           eyebrow="RECENT WORK"
-          headline="What India's businesses look like after FactoryJet."
+          headline="Two recent builds for Indian B2B firms"
           cards={[
             {
               industry: 'Wholesale Distribution · Commerceflo',
               title: 'Belle Maison | Mumbai',
               description:
-                "Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.",
+                "Belle Maison sells artificial plants, flowers, flower runners, home décor and LED lighting wholesale from Mumbai. We built its B2B store on Commerceflo, covering trade price tiers, quotes that turn into orders, and ordering through customer accounts.",
               imageSrc: '/images/portfolio/belle-maison.webp',
               stat1: 'Lighthouse 95+',
               stat2: 'Commerceflo · B2B',
@@ -702,7 +690,7 @@ export default function GurgaonWebDesignPage() {
               industry: 'MEP / BIM Consulting · SEO',
               title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on WordPress with authority-first architecture designed for B2B project enquiries, credentials display, project portfolio, and technical SEO.',
+                'Formative Concepts does MEP drafting and BIM consulting. We rebuilt its site on WordPress around B2B project enquiries, with a credentials section, a project portfolio and technical SEO.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
@@ -714,66 +702,66 @@ export default function GurgaonWebDesignPage() {
 
         {/* ── 9. COMPARISON TABLE ──────────────────────────────────────────── */}
         <ComparisonTable
-          eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. Gurgaon Premium Agency vs. Freelancer vs. Template Builder"
-          lead="Not all web design options in Gurgaon deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
+          eyebrow="SIDE BY SIDE"
+          headline="FactoryJet Compared with a Large Gurgaon Agency, a Freelancer and Wix"
+          lead="Four ways to get a website in Gurgaon, compared on time to launch, build quality, price certainty and who owns the result."
           pullQuote={{
             stat: '7 days',
             caption:
-              'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+              'to go from kickoff to a live site, with the same Figma screens, Next.js code, schema setup and Lighthouse check a large agency would charge months for.',
           }}
           columns={GGN_COMPARISON_COLUMNS}
           rows={GGN_COMPARISON_ROWS}
-          footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
+          footer="Every scope can be quoted at a fixed price. You get the figure after a free call, before you commit."
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
-          eyebrow="GURGAON × WEB DESIGN"
-          headline="Web Design for Gurgaon's Key Industries"
-          lead="From Fortune 500 GCCs and BFSI firms to funded startups, real estate developers, and luxury retail brands, Gurgaon's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
+          eyebrow="GURGAON SECTORS"
+          headline="Website Design for the Sectors That Run Gurgaon"
+          lead="Banks and fintechs, IT vendors, developers, auto parts makers, garment exporters and consumer startups all buy websites in Gurgaon, and each needs a different first screen."
           sectors={[
             {
-              name: 'BFSI & Fintech',
+              name: 'Banking, Insurance and Fintech',
               description:
-                "Gurgaon is India's largest BFSI corridor, home to Paytm, PolicyBazaar, the Indian arms of American Express, HSBC, Citi, and dozens of fintech unicorns. BFSI websites need compliance-aware content, regulatory credential display, enterprise credibility signals, and B2B lead flows designed for institutional procurement. Every design decision signals trustworthiness to buyers who can detect cutting corners.",
+                "Golf Course Road and Cyber City hold many banks, insurers and fintech companies. Their sites need careful wording, visible registrations and licences, and enquiry forms that route to the right desk. Small design slips here make a cautious buyer close the tab.",
               example:
-                'Fintech startups, banking service providers, insurance firms, and wealth management companies operating from Cyber City and Golf Course Road.',
+                'Fintech startups, insurance brokers, NBFCs and wealth managers with offices in Cyber City and on Golf Course Road.',
             },
             {
-              name: 'IT/ITES & GCCs',
+              name: 'IT Services and Capability Centre Vendors',
               description:
-                "Gurgaon houses 250+ Fortune 500 Global Capability Centres: Google, Microsoft, Deloitte, Accenture, and hundreds more. IT/ITES vendors, service providers, and staffing firms trying to get on GCC vendor panels need websites that pass procurement review: capability pages, case studies, credential display, ISO/SOC certifications, and enterprise-grade performance.",
+                "Firms selling into the capability centres of global companies must pass vendor onboarding. The site has to show service lines, ISO or SOC certifications, delivery models and case studies in a form a procurement reviewer can scan in minutes.",
               example:
-                'IT services vendors, staffing firms, BPO and KPO providers, and technology consultancies targeting GCC procurement teams in Cyber City.',
+                'IT services firms, staffing agencies, BPO and KPO providers and tech consultancies pitching to procurement teams in Cyber City and Udyog Vihar.',
             },
             {
-              name: 'Real Estate & Construction',
+              name: 'Real Estate',
               description:
-                "Gurgaon's real estate market is one of the most active in India: Golf Course Road, Golf Course Extension, Sohna Road, and the DLF phases together form a ₹50,000+ crore residential and commercial market. Developers, brokers, and construction firms need websites with project gallery architecture, floor plan downloads, RERA details, virtual tour embeds, and lead-capture forms designed for high-value buyer journeys.",
+                "Golf Course Extension Road, Dwarka Expressway, Sohna Road and the DLF phases see constant new launches. Developer and broker sites need project galleries, floor plan downloads, RERA numbers, location maps and a call-back form that reaches sales the same day.",
               example:
-                'Residential developers, commercial real estate firms, brokers, and construction companies operating across Gurgaon and the broader NCR.',
+                'Developers, channel partners, brokers and construction firms selling projects across Gurgaon and NCR.',
             },
             {
-              name: 'Retail & Luxury',
+              name: 'Auto Components and Manufacturing',
               description:
-                "MG Road, Cyber Hub, and the DLF Mall of India corridor make Gurgaon one of India's premium retail destinations. Luxury brands, premium retailers, and F&B businesses need websites that project aspirational quality, high-resolution imagery, immersive product showcase, mobile-first conversion flows, and direct booking or purchase capabilities. The digital experience must match the in-store one.",
+                "The Gurgaon and Manesar belt supplies parts to large car and two-wheeler makers. Component makers need sites that list capabilities, machines, quality certifications and OEM-ready processes, with an RFQ form that accepts drawings. Export buyers check these pages before any plant visit.",
               example:
-                'Premium retail brands, luxury boutiques, F&B businesses, and lifestyle companies targeting Gurgaon and NCR consumers.',
+                'Auto parts makers, tool rooms, sheet metal and plastics units in Manesar, IMT and Udyog Vihar.',
             },
             {
-              name: 'Startups & D2C',
+              name: 'Startups and D2C Brands',
               description:
-                "Gurgaon is India's second-largest startup investment destination, home to funded companies in SaaS, edtech, healthtech, agritech, fintech, and D2C. Startups need websites that look credible before Series A, convert demo requests, and perform under press-spike traffic. D2C brands need mobile-first speed, Razorpay checkout integration, and analytics wired from day one.",
+                "SaaS, fintech, healthtech and D2C founders in Gurgaon need a site that explains the product quickly and books demos. D2C brands need fast product pages, Razorpay checkout and tracking on every add-to-cart from launch day.",
               example:
-                'Seed and Series A startups, D2C brands, SaaS companies, and founder-led businesses emerging from Sohna Road, Sector 29, and co-working clusters across Gurgaon.',
+                'Seed and Series A startups and D2C brands working out of Sohna Road, Sector 29 and DLF co-working spaces.',
             },
             {
-              name: 'HR & Consulting',
+              name: 'Garment Exports and Consulting',
               description:
-                "Gurgaon's strong consulting and HR ecosystem, from boutique strategy firms to large staffing companies and management consultancies, needs authority-first websites that convert executive-level buyers. These buyers expect impeccable design, clear service capability pages, thought leadership content, and a friction-free consultation booking flow. First impressions here are everything.",
+                "Udyog Vihar is known for apparel export units that sell to overseas brands, and the city also hosts many consulting and staffing firms. Exporters need compliance details, factory photos and sample request forms. Consultancies need service pages, partner profiles and an easy way to book a first meeting.",
               example:
-                'Management consulting firms, HR and staffing companies, executive search firms, and corporate training providers serving Gurgaon and NCR enterprises.',
+                'Apparel exporters in Udyog Vihar, management consultants, HR and staffing firms and executive search practices in Gurgaon.',
             },
           ]}
         />
@@ -782,14 +770,14 @@ export default function GurgaonWebDesignPage() {
         {/* ── 12. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What India's founders say after we build their site"
+          headline="Founders on how their new FactoryJet site performs"
         />
 
         {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
-          eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Common Questions from Gurgaon Businesses"
-          lead="The questions we answer on every Gurgaon discovery call, answered here, without the runaround."
+          eyebrow="GURGAON FAQ"
+          headline="Gurgaon Website Questions, Answered"
+          lead="What Gurgaon founders and marketing heads ask us before they sign, with straight answers."
           categories={GGN_FAQ_CATEGORIES}
           items={GGN_FAQ_ITEMS}
         />
@@ -798,11 +786,11 @@ export default function GurgaonWebDesignPage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO START"
-          headline="Ready to Build Your Gurgaon Website?"
-          sub="Gurgaon's Fortune 500 GCC density, BFSI corridor, and North India's most active startup ecosystem mean every serious business is competing for the same procurement approvals, the same investor first impressions, and the same Google rankings. Every week without a high-performing website is ground you are conceding to a competitor who already has one. Start today and have a sitemap ready within 72 hours."
+          headline="Start Your Gurgaon Website This Week"
+          sub="Your next vendor review, investor call or overseas buyer will open your website before they reply. Book a call, and within 72 hours you will have a page plan and a fixed price for a site that goes live seven days after kickoff."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price. 7-day delivery. Next.js. Your codebase delivered in full on launch day."
+          objectionHandler="One fixed price. Live in 7 days. Built in Next.js. All code handed over at launch."
         />
 
         {/* India web-design city cross-links (silo fix, 31 Jul 2026) */}

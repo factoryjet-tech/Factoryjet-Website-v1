@@ -29,7 +29,7 @@ import WebDesignCityLinksIN from '@/components/v2/WebDesignCityLinksIN';
 export const metadata: Metadata = {
   title: 'Web Design Company in Visakhapatnam | FactoryJet',
   description:
-    'Web design company in Visakhapatnam for IT firms, petrochemical companies & businesses. Fast, custom websites with 7-day delivery. Serving Rushikonda IT SEZ, Madhurawada & MVP Colony.',
+    'Web design company in Visakhapatnam for Rushikonda IT firms, port, steel and pharma suppliers, and Vizag hotels. Custom Next.js sites, 7-day delivery.',
   keywords: [
     'web design company in Visakhapatnam',
     'website design Visakhapatnam',
@@ -37,7 +37,6 @@ export const metadata: Metadata = {
     'website design Vizag',
     'web development company Visakhapatnam',
     'website design company Visakhapatnam',
-    'affordable web design Vizag',
     'professional website design Visakhapatnam',
     'web design Rushikonda IT SEZ',
     'web design Madhurawada',
@@ -51,14 +50,14 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Web Design Company in Visakhapatnam | FactoryJet',
     description:
-      'Professional website design company in Visakhapatnam: Next.js, SEO, and GA4 included. 7-day delivery. Serving Rushikonda IT SEZ, MVP Colony, Madhurawada, Beach Road.',
+      'Web design company in Visakhapatnam building Next.js sites with SEO and GA4 set up. 7-day delivery for Vizag IT, industrial and tourism businesses.',
     url: 'https://factoryjet.com/web-design/visakhapatnam',
     images: [
       {
         url: 'https://factoryjet.com/images/services/web-design.webp',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet Web Design Services in Visakhapatnam',
+        alt: 'FactoryJet website design work for Visakhapatnam businesses',
       },
     ],
     locale: 'en_IN',
@@ -67,7 +66,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web Design Company in Visakhapatnam | FactoryJet',
     description:
-      'Website design company in Visakhapatnam (Vizag). 7-day delivery. Next.js, SEO, GA4 included.',
+      'Web design company in Visakhapatnam (Vizag). Next.js build, SEO and GA4 set up, 7-day delivery.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
@@ -94,7 +93,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -114,33 +113,33 @@ const localBusinessSchema = { '@context': 'https://schema.org', '@type': 'Organi
 const VIZAG_JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery & Strategy',
+    title: 'Pinning down the buyer',
     description:
-      "We map your ideal customer profile against Visakhapatnam's market, whether that's a port logistics company in the harbour area, an IT startup in Rushikonda SEZ, a pharma manufacturer in Gajuwaka, or a tourism operator on Beach Road. We audit your top competitors and agree the sitemap and content plan.: Days 1–2",
+      "We work out who decides whether to contact you. In Vizag that might be a shipping line checking a port agent, a steel plant buyer reviewing a supplier, a pharma importer vetting a Parawada maker, an overseas client sizing up a Rushikonda IT firm, or a family booking a beach stay. We study the rivals they will compare and settle the page list and copy plan.: Days 1–2",
   },
   {
     number: '02',
-    title: 'Design & Prototyping',
+    title: 'Layouts for small screens first',
     description:
-      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts.: Days 3–4',
+      'Figma layouts start at phone width and scale up to desktop. You review every form, button and block against the goal of the page and approve the design before coding starts.: Days 3–4',
   },
   {
     number: '03',
-    title: 'Development',
+    title: 'Engineering the pages',
     description:
-      'Built in Next.js deployed to Cloudflare CDN: sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, product catalog systems, and any third-party APIs your business uses. Performance budgets enforced from the first commit.: Days 5–6',
+      'We code in Next.js and serve the site through Cloudflare, so it opens in under 1.5 seconds on Indian 4G. Enquiry forms, WhatsApp, catalogues or booking tools and your existing software are connected at this stage, with page weight tested as we go.: Days 5–6',
   },
   {
     number: '04',
-    title: 'Content & SEO',
+    title: 'Copy, images and search basics',
     description:
-      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Visakhapatnam-specific local SEO targeting built in.: Day 6–7',
+      'Copy is edited, photos become WebP, and every page gets a title, meta text, schema and internal links. We submit the sitemap to Search Console and use Vizag and Visakhapatnam place names where people actually search with them.: Day 6–7',
   },
   {
     number: '05',
-    title: 'Launch & Handover',
+    title: 'Going live',
     description:
-      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included.: Day 7+',
+      'Your domain points to Cloudflare, GA4 and Tag Manager start recording, and Search Console is verified. A recorded walkthrough lets your staff manage the site, and thirty days of fixes after launch are included.: Day 7+',
   },
 ];
 
@@ -157,137 +156,137 @@ const VIZAG_FAQ_ITEMS = [
   /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How much does a website cost for a business in Visakhapatnam?',
+    question: 'What does a website cost for a Visakhapatnam business?',
     answer:
-      "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
+      "Each quote is built for the job. Number of pages, competition for your search terms, and extras such as payments, bookings or AI tools shape the figure. After a free call you get one fixed written quote, and you own the code once it is paid.",
   },
   {
     category: 'pricing',
-    question: 'How long does it take to build a website?',
+    question: 'How soon can my site be live?',
     answer:
-      'A standard FactoryJet build delivers in 7 days from kickoff to launch. Discovery and design take the first two days, development days three through six, and content, SEO, and launch on day seven. The 7-day clock starts when your brand assets and content are in our shared workspace.',
+      'Seven days after kickoff. We research and plan on days one and two, design and code on days three to six, and finish copy, search setup and launch on day seven. Timing starts when your logo, photos and text reach us.',
   },
   {
     category: 'pricing',
-    question: 'What makes FactoryJet better value than a Visakhapatnam web agency?',
+    question: 'Why hire FactoryJet instead of a Vizag web agency?',
     answer:
-      "We are a specialised web engineering team, not a full-service agency with large overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch, at 60–70% lower cost. You pay for the build, not our admin structure.",
+      "You speak directly with the designers and engineers on your project. Every site gets a Figma design, Next.js code and a Lighthouse test before launch. The fee is fixed in writing at the start and does not creep up.",
   },
   {
     category: 'pricing',
-    question: 'What does 7-day delivery include?',
+    question: 'What does the 7-day delivery promise cover?',
     answer:
-      'The 7-day timeline covers the development phase we control, design, build, content, and launch. We have delivered on time on 97% of all projects.',
+      'The parts we control: design, build, copy and launch. Days spent waiting for your material or approval are not counted. We have launched 97% of all our projects on time.',
   },
 
   /* ── What's Included ── */
   {
     category: 'included',
-    question: "What's included in a web design project?",
+    question: "What is in a standard build?",
     answer:
-      'Every FactoryJet project includes strategy, Figma design, Next.js development, basic copywriting, technical SEO setup (schema, meta, sitemap), GA4 analytics, and a 30-day post-launch support window. You receive the full codebase in your GitHub on launch day.',
+      'Research, a Figma design, Next.js code, core copy, search setup with schema and sitemap, GA4 tracking and thirty days of post-launch support. The complete codebase goes into your own GitHub account at launch.',
   },
   {
     category: 'included',
-    question: 'Do you write the content for my website?',
+    question: 'Will you write the words on my site?',
     answer:
-      'Basic copywriting for headings, hero text, and service descriptions is included. Full SEO content is available as an add-on. We send a content brief before development starts so you know exactly what to provide.',
+      'We write the main copy: headlines, the hero section and service descriptions. In-depth SEO articles cost extra. A content brief reaches you before coding so you know what to supply.',
   },
   {
     category: 'included',
-    question: 'Do you provide website hosting?',
+    question: 'Do you host the site?',
     answer:
-      "We deploy to Cloudflare Pages, which is free for most projects. You own your own Cloudflare account, we configure it for you. No monthly hosting fee to us.",
+      "We publish to Cloudflare Pages, free for most business sites. You hold the Cloudflare account and we set it up for you. There is no monthly hosting charge from us.",
   },
   {
     category: 'included',
-    question: 'Can I update the website myself after launch?',
+    question: 'Can I edit the website myself?',
     answer:
-      'Yes. Every Growth and Custom tier project includes a headless CMS integration (Sanity or Contentful) so your team can update content without touching code.',
+      'Yes. Growth and Custom projects include a headless CMS, Sanity or Contentful, so staff can change text and images with no code.',
   },
 
   /* ── Technical & SEO ── */
   {
     category: 'technical',
-    question: 'Will my website rank on Google India?',
+    question: 'Will my site appear on Google for Vizag searches?',
     answer:
-      'Technical SEO is built into every project: JSON-LD schema markup, optimised title and meta templates, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images. Branded searches typically rank within 1–2 weeks.',
+      'Every build ships with schema, page titles and meta text, green Core Web Vitals on mobile, internal links, a submitted sitemap and WebP images. Searches for your company name usually return the site within one to two weeks.',
   },
   {
     category: 'technical',
-    question: 'What tech stack do you build on?',
+    question: 'Which stack do you use?',
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Visakhapatnam businesses competing on Google's Core Web Vitals, that performance gap directly affects rankings.",
+      "Next.js on Cloudflare's worldwide CDN. Pages open in under 1.5 seconds on Indian 4G, where typical WordPress sites need 4–6 seconds. Google measures this through Core Web Vitals, and faster pages gain in rankings.",
   },
   {
     category: 'technical',
-    question: 'How does the site perform on mobile?',
+    question: 'Is the site built for mobile visitors?',
     answer:
-      'Mobile-first is the default. Every build targets Lighthouse 90+ and green Core Web Vitals on mobile before launch. We design at 375px before desktop, serve WebP images via Cloudflare CDN with lazy loading.',
+      'Yes. We design at 375px wide first, and no build launches without Lighthouse 90+ and green Core Web Vitals on mobile. Images are served as WebP from Cloudflare and load as the visitor scrolls.',
   },
   {
     category: 'technical',
-    question: 'Do you set up Google Analytics and Search Console?',
+    question: 'Do you connect GA4 and Search Console?',
     answer:
-      'Yes, GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, product enquiry clicks) are configured from day one. Search Console verified and sitemap submitted.',
+      'Yes. GA4 and Tag Manager go live before launch and record form sends, WhatsApp taps and enquiry clicks from day one. Search Console is verified and the sitemap submitted.',
   },
 
   /* ── Visakhapatnam Local ── */
   {
     category: 'local',
-    question: 'Do you build websites for IT and tech companies in Visakhapatnam?',
+    question: 'Do you build websites for IT firms in Rushikonda and Madhurawada?',
     answer:
-      "Yes: IT companies, software firms, and tech startups in Rushikonda IT SEZ and Madhurawada are a core client profile for us in Vizag. With Google's AI City investment accelerating tech workforce growth in the region, businesses that establish a strong web presence now will own the search rankings when Vizag's digital economy fully activates.",
+      "Yes. Rushikonda's IT parks and the Madhurawada area hold most of Vizag's software, BPO and startup firms. Google's announced AI investment has put more attention on the city, so these firms need sites with clear services, case studies and a contact route that works for buyers in other cities and countries.",
   },
   {
     category: 'local',
-    question: 'Can you build websites for petrochemical and industrial companies in Vizag?',
+    question: 'Can you build sites for refinery, steel and industrial suppliers in Vizag?',
     answer:
-      "Yes. Visakhapatnam's industrial corridor: HPCL refinery, ONGC operations, RINL Vizag Steel, and the Gajuwaka industrial estate, houses some of Andhra Pradesh's largest companies. Industrial and B2B businesses need websites that project technical capability, safety credentials, and procurement contact architecture for institutional buyers.",
+      "Yes. HPCL's Visakh refinery, RINL's Vizag Steel Plant and the industrial estates around Gajuwaka and Autonagar buy from a large supplier base. Those suppliers need pages for products, approvals, safety records and certificates, plus a simple RFQ form a purchase officer can use.",
   },
   {
     category: 'local',
-    question: "Do you know Visakhapatnam's business districts well enough to write relevant copy?",
+    question: "Do you know Vizag's business areas well enough to write about them?",
     answer:
-      "Yes. We research Vizag's business geography as part of discovery, from Rushikonda IT SEZ's tech corridor and Madhurawada's emerging commercial zone to Gajuwaka's industrial belt, the Steel Plant township, MVP Colony's commercial hub, and Beach Road's tourism and hospitality strip. Local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches.",
+      "Local research is part of every project. In Vizag that covers the IT parks at Rushikonda, growth in Madhurawada, industry around Gajuwaka and the steel plant, shops and offices in Dwaraka Nagar and MVP Colony, and hotels along Beach Road. Using the right area names in copy and schema helps pages match local searches.",
   },
   {
     category: 'local',
-    question: 'How does FactoryJet compare to Vizag web agencies?',
+    question: 'How do you compare with Vizag web agencies?',
     answer:
-      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
+      "Agencies often quote long timelines and keep prices private. We send a fixed quote before you commit, write the 7-day launch date into the agreement and build on Next.js instead of WordPress. You get a faster site, launched sooner, with code you own.",
   },
 
   /* ── Support & Ownership ── */
   {
     category: 'support',
-    question: 'Do I own the website after it is built?',
+    question: 'Do I own the site once it is built?',
     answer:
-      'Yes, 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
+      'Fully. The Next.js code moves to your GitHub on launch day, with every Figma file and login. You sign no retainer and depend on no closed platform.',
   },
   {
     category: 'support',
-    question: 'What support do you provide after launch?',
+    question: 'What help is there after launch?',
     answer:
-      'Every project includes a 30-day post-launch support window covering bug fixes and minor adjustments at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans covering development changes, priority same-day bug response, and a dedicated engineer who knows your codebase.',
+      'Bug fixes and small edits are free for thirty days. Beyond that, a monthly plan is available with code changes, same-day replies on bugs and one engineer assigned to your site.',
   },
   {
     category: 'support',
-    question: 'What happens if something breaks after launch?',
+    question: 'What happens if the site has a problem?',
     answer:
-      'Within the 30-day support window, any bugs are fixed at no cost and typically within 24 hours. Because your site is on Cloudflare Pages (static files, global CDN), common causes of downtime simply do not apply.',
+      'Bugs found in the first thirty days are fixed free, usually within 24 hours. The site runs as static files on Cloudflare, so typical server outages do not touch it.',
   },
   {
     category: 'support',
-    question: 'Do you offer ongoing retainer services for Visakhapatnam businesses?',
+    question: 'Can Vizag businesses keep you on retainer?',
     answer:
-      'Yes. Monthly retainers cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
+      'Yes. A retainer pays for code work, text changes, new landing pages, search work and upkeep each month. Retainer clients go to the front of the queue and keep the same engineer.',
   },
   {
     category: 'support',
-    question: 'Can FactoryJet help Vizag businesses prepare for the AI City digital influx?',
+    question: 'How should Vizag businesses respond to the AI investment news?',
     answer:
-      "Absolutely. As Google's ₹85,000 Cr AI City investment brings thousands of high-income tech workers to Visakhapatnam, businesses across tourism, hospitality, retail, and professional services will compete for a digitally-savvy audience that discovers everything online first. We build the websites and SEO foundations that will capture that audience: the businesses acting now own the rankings when the workforce arrives.",
+      "Google's announced AI investment, shown in the figure above from the state government, is drawing attention to the city. Hotels, restaurants, clinics, schools and service firms that want to reach newcomers should make sure they can be found and booked online. We build sites that load fast, rank for local searches and turn visits into calls or bookings.",
   },
 
   // Money-query coverage, added 2026-06-11
@@ -295,13 +294,13 @@ const VIZAG_FAQ_ITEMS = [
     category: 'pricing',
     question: 'Who is the best web design agency in Visakhapatnam?',
     answer:
-      'For small businesses, FactoryJet makes a strong case as the best web design company in Visakhapatnam: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Visakhapatnam you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Visakhapatnam.',
+      'Put every Vizag agency on your list, FactoryJet included, through three checks. Open live sites they built. Run the speed tests yourself. Get a written price that cannot rise halfway through. We build custom sites in 7 days at a fixed price and are happy to be checked that way.',
   },
   {
     category: 'pricing',
     question: 'Should I hire web designer in Visakhapatnam or use an agency?',
     answer:
-      'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Visakhapatnam directly, agree the scope and price in writing first.',
+      'A freelancer suits a one-page site. A business site with forms, tracking, search setup and future support needs a few different skills, and a small team covers them at a fixed price. If you hire web designer in Visakhapatnam as a freelancer, write down the scope and fee before work starts.',
   },
 ];
 
@@ -324,11 +323,11 @@ const VIZAG_COMPARISON_COLUMNS = [
 
 const VIZAG_COMPARISON_ROWS = [
   {
-    feature: 'Delivery timeline',
+    feature: 'Time to launch',
     values: ['7 days', '6–14 weeks', '3–12 weeks (unreliable)', '1–2 weeks (you build it)'],
   },
   {
-    feature: 'Custom Figma design',
+    feature: 'Bespoke Figma design',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="aa" kind="yes" />,
@@ -337,7 +336,7 @@ const VIZAG_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Next.js (not WordPress)',
+    feature: 'Built in Next.js',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="aa" kind="partial" />,
@@ -346,7 +345,7 @@ const VIZAG_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Technical SEO built in',
+    feature: 'Search setup included',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="aa" kind="partial" />,
@@ -364,7 +363,7 @@ const VIZAG_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'GA4 + GTM wired up',
+    feature: 'GA4 and Tag Manager configured',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="aa" kind="partial" />,
@@ -373,7 +372,7 @@ const VIZAG_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Transparent, fixed pricing',
+    feature: 'Fixed written price',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="aa" kind="no" />,
@@ -382,7 +381,7 @@ const VIZAG_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Full codebase to your GitHub',
+    feature: 'Codebase in your GitHub',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="aa" kind="partial" />,
@@ -391,7 +390,7 @@ const VIZAG_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '7-day delivery',
+    feature: 'Launch in 7 days',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="aa" kind="no" />,
@@ -405,39 +404,39 @@ const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
   '@id': `https://factoryjet.com/web-design/visakhapatnam#howto`,
-  name: `How FactoryJet builds your Visakhapatnam website in 7 days`,
-  description: `Our 7-day process for delivering a professional, AI-powered website for Visakhapatnam businesses.`,
+  name: `How FactoryJet launches a Visakhapatnam website in 7 days`,
+  description: `Our seven-day sequence for designing, coding and launching a website for a Vizag business.`,
   totalTime: 'P7D',
   step: [
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 | Discovery Call',
-      text: `We learn your business, your Visakhapatnam market, your goals, and what you need the website to do.`,
+      name: 'Day 1 | Intro call',
+      text: `We learn how you sell, who your buyers are in Vizag and beyond, and what the site needs to achieve.`,
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 | Strategy & Structure',
-      text: `We map your site architecture, research your Vizag competitors, identify your top keywords, and write the first draft of your page copy.`,
+      name: 'Day 2 | Sitemap and search terms',
+      text: `We plan the pages, review the Vizag competitors your buyers will see, pick target keywords and draft first copy.`,
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 | Design',
-      text: 'Your bespoke design is created, homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
+      name: 'Days 3–4 | Designs',
+      text: 'Homepage and inner page designs reach you on a preview link. We apply your changes within a day.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 | Development & SEO',
-      text: `Your approved design is built in code, fast, mobile-first, and SEO-optimised. Visakhapatnam local schema markup added. Google Analytics and Search Console connected.`,
+      name: 'Days 5–6 | Code and search setup',
+      text: `Approved designs become fast, phone-first code. Visakhapatnam schema is added and Analytics and Search Console are connected.`,
     },
     {
       '@type': 'HowToStep',
       position: 5,
-      name: 'Day 7 | Launch',
-      text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.',
+      name: 'Day 7 | Live',
+      text: 'We test on five devices and launch, then send handover notes and run a 30-minute training call.',
     },
   ],
 };
@@ -503,8 +502,8 @@ export default function VisakhapatnamWebDesignPage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="web_design_visakhapatnam_hero" />}
           eyebrow="WEB DESIGN · VISAKHAPATNAM"
-          headline="Website Design in Visakhapatnam for Businesses at the Edge of India's AI City Boom"
-          lead="Visakhapatnam is India's next major tech hub: Google's ₹85,000 Cr AI City investment, 50%+ IT hiring growth, and Andhra Pradesh's industrial powerhouse. From Rushikonda IT SEZ and Madhurawada to Gajuwaka's petrochemical belt and Beach Road's tourism strip, Vizag businesses are competing in a market that is about to accelerate dramatically. FactoryJet builds Figma-designed, Next.js-built websites with 7-day delivery, your codebase delivered in full."
+          headline="Website Design in Visakhapatnam for IT Firms, Port and Industrial Suppliers, and Coastal Tourism"
+          lead="Vizag earns its money from the sea, the steel plant, the refinery and a growing IT belt. The port moves cargo for Andhra Pradesh and beyond. Rushikonda's IT parks sell services worldwide. Beach Road and Araku bring in tourists, and Google's announced AI investment has put the city in the news. FactoryJet designs in Figma, builds in Next.js and launches in 7 days, with the code handed over to you."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery',
@@ -514,40 +513,40 @@ export default function VisakhapatnamWebDesignPage() {
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
-        <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
+        <LogoBar tagline="500+ businesses across India, the US, the UK and the UAE use a FactoryJet site" />
 
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ websites built. 12 years of web engineering. 7-day delivery."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+          description="Shopify stores, B2B suppliers and DTC brands in India, the US, the UK and the UAE run on sites we built. Each project gets a fixed price, a 7-day delivery date and full code handover."
         />
 
         {/* ── 4. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="VISAKHAPATNAM MARKET"
-          headline="Why Your Vizag Web Presence Is the Investment That Will Compound"
+          headline="What Vizag Buyers Check Before They Get in Touch"
           leadParagraphs={[
-            "Visakhapatnam is undergoing the most significant economic transformation of any Indian city right now. Google's ₹85,000 Cr ($10 billion) AI City investment, announced as part of Andhra Pradesh's landmark infrastructure deal, is set to bring thousands of highly-skilled technology workers, research facilities, and global tech companies to the city. This is not future speculation; Andhra Pradesh has committed land, infrastructure, and policy support at a scale that will reshape Vizag's economy over the next decade.",
-            "Visakhapatnam already has substantial industrial depth: HPCL's refinery and ONGC's eastern operations anchor the petrochemical sector; RINL Vizag Steel is one of India's largest integrated steel plants; the port is one of India's busiest by cargo tonnage; and Rushikonda IT SEZ plus Madhurawada are already home to major IT and BPO operations. The city's IT workforce is growing at over 50% year-on-year, and Andhra Pradesh's government has been aggressive in attracting global tech investment.",
-            "The opportunity for Vizag businesses is clear and time-sensitive: the businesses that build a strong digital presence now will own the Google rankings when this workforce arrives. A tourism operator on Beach Road, a co-working space in Madhurawada, a restaurant near the Steel Plant township, or an IT services firm in Rushikonda SEZ: all of them benefit from being indexed, ranked, and converting traffic before competition intensifies. FactoryJet builds websites designed to rank and convert from day one.",
+            "Visakhapatnam is Andhra Pradesh's largest city and its main industrial centre. Google has announced a large AI investment in the city, which the state government values at the ₹85,000 Cr figure shown below. Big announcements take years to play out, but they bring new companies, staff and visitors who search online before they buy.",
+            "The base is already wide. HPCL's Visakh refinery, RINL's Vizag Steel Plant, Hindustan Shipyard and the Eastern Naval Command all sit here, and the pharma cluster at Parawada makes medicines for export. The port ranks among India's major cargo ports. Rushikonda and Madhurawada hold the city's IT and BPO firms, and NASSCOM tracks fast growth in tech hiring.",
+            "So Vizag firms face very different buyers. A port agent needs shipping lines to trust it. A steel plant supplier must pass a purchase department review. A Rushikonda software firm competes with Hyderabad and Bengaluru vendors. A Beach Road hotel needs bookings from a phone. We plan each site around the buyer who decides.",
           ]}
           stats={[
             {
               value: '₹85,000 Cr',
-              label: "Google's AI City investment in Visakhapatnam: one of India's largest single tech infrastructure commitments",
+              label: "Google AI investment announced for Visakhapatnam, as reported by the state government",
               sourceUrl: 'https://www.ap.gov.in/',
               sourceLabel: 'Government of Andhra Pradesh',
             },
             {
               value: '50%+',
-              label: 'IT hiring growth rate in Visakhapatnam, among the fastest-growing tech talent markets in India',
+              label: 'Growth in Visakhapatnam IT hiring, one of India\'s quicker-growing tech job markets',
               sourceUrl: 'https://www.nasscom.in/',
               sourceLabel: 'NASSCOM',
             },
             {
               value: 'Top 5',
-              label: "Visakhapatnam Port's ranking among India's major ports by cargo tonnage: the gateway to AP's industrial economy",
+              label: "Where Visakhapatnam Port sits among India's major ports by cargo handled",
               sourceUrl: 'https://www.vpa.gov.in/',
               sourceLabel: 'Visakhapatnam Port Authority',
             },
@@ -557,32 +556,21 @@ export default function VisakhapatnamWebDesignPage() {
         {/* ── 5. SERVICE EXPLANATION ───────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="WEB DESIGN · VISAKHAPATNAM"
-          headline="What 'Web Design' Actually Means for a Vizag Business in 2026"
-          lead="Visakhapatnam's economy spans industrial B2B businesses, fast-growing IT companies, port and logistics operators, and a tourism sector that is about to see a significant influx of high-income tech workers. Each of these sectors has very different web requirements, and very different windows of opportunity."
+          headline="What a Visakhapatnam Business Needs From Its Website"
+          lead="Vizag firms sell to industrial buyers, IT clients, shipping lines and tourists. Each group asks different questions before it calls, so each needs a different site plan."
           body={
             <>
               <p>
-                For Visakhapatnam&apos;s industrial businesses, petrochemical companies, steel
-                sector suppliers, port logistics operators, and pharma manufacturers: the website
-                is a B2B credibility tool. Procurement managers at large corporations and
-                institutional buyers research vendors extensively before making contact. The site
-                needs to project technical capability, safety compliance, certifications, and a
-                frictionless RFQ flow. We build these sites with authority-first architecture and
-                lead-capture flows designed for B2B procurement cycles.
+                
+                Refinery and steel plant suppliers, port service firms, Parawada pharma makers and engineering units sell to purchase teams who check vendors carefully. Those buyers look for capability, safety records, approvals, certificates and a clear way to request a quote. We build these sites around product or service pages, a credentials section and an RFQ form.
               </p>
               <p>
-                For IT companies, software firms, and tech startups in Rushikonda SEZ and
-                Madhurawada: the priority is positioning as a credible technology partner before
-                the AI City growth wave arrives and competition intensifies. Product-led
-                architecture, case study display, and conversion flows designed for enterprise
-                sales. For consumer-facing businesses, hospitality, tourism, retail, restaurants,
-                and professional services, mobile-first speed and conversion-optimised design are
-                non-negotiable for a digitally-native audience.
+                
+                IT and software firms in Rushikonda and Madhurawada compete with vendors in larger cities, so their sites must show services, case studies and delivery strength from the first screen. Hotels, restaurants, clinics, shops and professional firms serve local customers and visitors, and they need quick mobile pages with booking, ordering or call buttons that work on any phone.
               </p>
               <p>
-                Every FactoryJet Visakhapatnam project covers discovery, Figma prototyping, Next.js
-                development, SEO, GA4, and a 30-day support window. You leave with a codebase you
-                own, a design system you keep, and a site built to rank and convert from launch day.
+                
+                Each Vizag project includes research, Figma design, Next.js code, search setup, GA4 and thirty days of support. You keep the code, the design files and every account.
               </p>
             </>
           }
@@ -593,26 +581,27 @@ export default function VisakhapatnamWebDesignPage() {
                   className="font-fj-mono font-medium uppercase text-fj-neutral-400"
                   style={{ fontSize: '11px', letterSpacing: '0.14em' }}
                 >
-                  Three buyer types. One framework.
+                  
+                  Three buyer groups. Three site plans.
                 </p>
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
                   {
                     type: 'Industrial & B2B',
-                    need: 'Credentials + RFQ + compliance',
+                    need: 'Approvals + RFQ form + safety records',
                     area: 'Gajuwaka · Steel Plant · Port Area · Pharma',
                     colour: '#F05A28',
                   },
                   {
                     type: 'IT & Tech Companies',
-                    need: 'Product-led + case studies + enterprise CTA',
+                    need: 'Case studies + service pages + contact route',
                     area: 'Rushikonda IT SEZ · Madhurawada · Vizag Tech Park',
                     colour: '#0F0F12',
                   },
                   {
                     type: 'Consumer & Hospitality',
-                    need: 'Speed + mobile + instant booking',
+                    need: 'Fast mobile + photos + booking button',
                     area: 'Beach Road · MVP Colony · Tourism Strip',
                     colour: '#6B6B6B',
                   },
@@ -652,7 +641,8 @@ export default function VisakhapatnamWebDesignPage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  Same engineering quality. Strategy tailored to your buyer.
+                  
+                  One build standard. Plan fitted to the buyer.
                 </p>
               </div>
             </div>
@@ -662,23 +652,23 @@ export default function VisakhapatnamWebDesignPage() {
         {/* ── 6. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Visakhapatnam Businesses Choose FactoryJet Over Local Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
+          headline="Why Visakhapatnam Businesses Pick FactoryJet"
+          lead="Agencies often quote long schedules and keep prices private. We send a fixed quote before you commit, write the 7-day launch into the agreement and build on Next.js. You get faster pages, no monthly plugin costs and code that belongs to you."
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing.',
-              body: "Vizag's business opportunity is accelerating: the AI City growth wave is already underway. Waiting 14 weeks for a website that should have been live in Q1 is not a strategy. FactoryJet delivers in 7 days, with the delivery date written into the project agreement. We have delivered on time on 97% of all projects.",
+              title: 'A launch date we sign',
+              body: "Suppliers need a site before a vendor registration, hotels before the winter tourist season, and IT firms before the next client pitch. A fourteen-week build misses those windows. We put the 7-day launch date in writing, and 97% of our projects have launched on time.",
             },
             {
               icon: '🏗️',
-              title: 'Next.js, not WordPress. The performance gap is real.',
-              body: 'WordPress loads server-side PHP and fires 40–60 database queries per page load. Next.js generates static files served from Cloudflare CDN globally. The result: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Vizag businesses competing on Google\'s Core Web Vitals as the AI City workforce arrives, that gap directly affects rankings.',
+              title: 'Pre-built pages on Next.js',
+              body: 'WordPress runs PHP and 40–60 database queries each time a page opens. Next.js serves finished files from Cloudflare\'s network. That means under 1.5 seconds on Indian 4G versus 4–6 seconds for a typical WordPress site, and Google scores the difference in Core Web Vitals.',
             },
             {
               icon: '📋',
-              title: 'Fixed price. Agreed before we start.',
-              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch.",
+              title: 'Your price, fixed up front',
+              body: "We quote a fixed price before you sign. No discovery fee, no loose estimate. Scope and cost are written down, and no extra invoice appears after launch.",
             },
           ]}
         />
@@ -686,22 +676,22 @@ export default function VisakhapatnamWebDesignPage() {
         {/* ── 7. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="How We Build Your Visakhapatnam Website in 7 Days"
-          lead="Buyer strategy agreed before design. Mobile approval before development. SEO and analytics wired before launch."
+          headline="Your Vizag Website in Seven Days"
+          lead="Buyer first, phone layout second, code third. Search setup and analytics are live before launch day."
           stages={VIZAG_JOURNEY_STAGES}
-          closingNote="5 STAGES · 7 DAYS · NEXT.JS + CLOUDFLARE · GA4 STANDARD · ZERO DOWNTIME LAUNCH"
+          closingNote="5 STEPS · 7 DAYS · NEXT.JS ON CLOUDFLARE · GA4 AT LAUNCH · CUTOVER WITH NO DOWNTIME"
         />
 
         {/* ── 8. PORTFOLIO ─────────────────────────────────────────────────── */}
         <PortfolioShowcase
           eyebrow="RECENT WORK"
-          headline="What India's businesses look like after FactoryJet."
+          headline="Two builds from our recent projects."
           cards={[
             {
               industry: 'Wholesale Distribution · Commerceflo',
               title: 'Belle Maison | Mumbai',
               description:
-                "Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.",
+                "Mumbai trade distributor of artificial plants and flowers, flower runners, home décor and LED lighting. We delivered a B2B quote-to-cash store on Commerceflo with tiered trade pricing, quotes that turn into orders and ordering by account.",
               imageSrc: '/images/portfolio/belle-maison.webp',
               stat1: 'Lighthouse 95+',
               stat2: 'Commerceflo · B2B',
@@ -710,7 +700,7 @@ export default function VisakhapatnamWebDesignPage() {
               industry: 'MEP / BIM Consulting · SEO',
               title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on WordPress with authority-first architecture designed for B2B project enquiries, credentials display, project portfolio, and technical SEO.',
+                'MEP drafting and BIM consultancy. We rebuilt their site on WordPress so clients can check credentials, browse the project portfolio and send an enquiry, backed by technical SEO aimed at B2B project leads.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
@@ -723,65 +713,65 @@ export default function VisakhapatnamWebDesignPage() {
         {/* ── 9. COMPARISON TABLE ──────────────────────────────────────────── */}
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. Hyderabad/Vizag Agency vs. Freelancer vs. Template Builder"
-          lead="Not all web design options in Visakhapatnam deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
+          headline="FactoryJet Next to a Hyderabad or Vizag Agency, a Freelancer and a DIY Builder"
+          lead="Visakhapatnam businesses usually pick one of four routes to a new site. The table compares launch time, cost, quality checks and what you keep at the end."
           pullQuote={{
             stat: '7 days',
             caption:
-              'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+              'from kickoff to a live site, with Figma design, Next.js code, search setup and a Lighthouse test included.',
           }}
           columns={VIZAG_COMPARISON_COLUMNS}
           rows={VIZAG_COMPARISON_ROWS}
-          footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
+          footer="Every FactoryJet scope can be priced as a fixed contract. Start with a free call and receive a written quote."
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="VISAKHAPATNAM × WEB DESIGN"
-          headline="Web Design for Visakhapatnam's Key Industries"
-          lead="From IT and AI companies in Rushikonda SEZ to petrochemical giants in Gajuwaka, port logistics operators, pharma manufacturers, tourism operators, and defence-adjacent businesses, Vizag's economy is one of India's most diverse. FactoryJet builds for each of them."
+          headline="Websites for Visakhapatnam's Main Industries"
+          lead="Rushikonda IT firms, refinery and steel plant suppliers, port agents, Parawada pharma makers, shipyard and naval suppliers, and Beach Road hotels all sell to different buyers. Each sector gets its own site plan."
           sectors={[
             {
               name: 'IT & AI Tech Companies',
               description:
-                "Rushikonda IT SEZ and Madhurawada are Visakhapatnam's growing technology corridor, hosting major IT services companies, BPO operations, and a rapidly expanding startup ecosystem. With Google's AI City investment accelerating tech workforce growth, IT companies need websites that position them as credible technology partners before competition intensifies. Product-led architecture, service capability pages, case study systems, and lead flows for enterprise sales cycles.",
+                "Rushikonda's IT parks and the Madhurawada belt hold Vizag's software firms, BPO centres and startups. Google's announced AI investment has drawn more attention to the city's tech sector. Firms here need service pages, case studies, delivery models and a contact path suited to long B2B deals with clients in other cities and abroad.",
               example:
-                'IT services firms, software companies, BPO operations, and tech startups in Rushikonda IT SEZ and Madhurawada targeting enterprise and government clients.',
+                'IT service firms, software companies, BPO units and startups in Rushikonda and Madhurawada selling to companies and government buyers.',
             },
             {
               name: 'Petrochemicals & Refining',
               description:
-                "Visakhapatnam is home to HPCL's Vizag refinery, ONGC's eastern operations, and dozens of downstream petrochemical and specialty chemical businesses. These companies need websites that project technical capability, safety compliance certifications, and environmental credentials to institutional B2B buyers. Product specification sheets, procurement contact flows, and regulatory document systems are standard.",
+                "HPCL's Visakh refinery anchors a cluster of fuel, petrochemical and specialty chemical businesses in the Gajuwaka and Malkapuram area. Their buyers ask for specification sheets, safety and environmental approvals and certifications. We build product catalogues with downloadable documents and a direct procurement contact form.",
               example:
-                'Petrochemical manufacturers, refinery supply chain companies, and specialty chemical businesses in the Gajuwaka industrial corridor.',
+                'Petrochemical makers, refinery contractors and specialty chemical firms around Gajuwaka and Malkapuram.',
             },
             {
               name: 'Steel & Manufacturing',
               description:
-                "RINL Vizag Steel: one of India's largest integrated steel plants, anchors an entire ecosystem of steel sector suppliers, equipment manufacturers, and logistics companies in the Steel Plant township and surrounding areas. Supplier websites in this sector need to project manufacturing scale, quality certifications, and supply reliability to procurement teams at RINL and its global customers.",
+                "RINL's Vizag Steel Plant supports a wide circle of suppliers, fabricators, equipment makers and transport firms around the steel plant township and Autonagar. Purchase teams want to see capacity, quality certificates and supply history before shortlisting a vendor, so these sites lead with exactly that.",
               example:
-                'Steel sector suppliers, equipment manufacturers, and raw material traders serving RINL Vizag Steel and the broader manufacturing ecosystem.',
+                'Suppliers, fabricators, equipment makers and raw material traders working with Vizag Steel and other plants in the region.',
             },
             {
               name: 'Port & Shipping Logistics',
               description:
-                "Visakhapatnam Port is one of India's busiest ports by cargo tonnage, handling container, bulk, and liquid cargo for Andhra Pradesh's industrial economy and beyond. Logistics companies, shipping agents, freight forwarders, and port services businesses need websites that project operational capability, service range, and reliability credentials to cargo owners and shipping lines globally.",
+                "Visakhapatnam Port handles container, bulk and liquid cargo for Andhra Pradesh and states inland, and the nearby Gangavaram port adds more capacity. Shipping agents, forwarders, customs brokers and stevedores need pages listing services, cargo types, licences and a quick quote form for cargo owners and shipping lines.",
               example:
-                'Shipping agents, freight forwarders, port logistics companies, and customs brokers operating in and around Visakhapatnam Port.',
+                'Shipping agents, freight forwarders, customs brokers and port service firms working at the Visakhapatnam and Gangavaram ports.',
             },
             {
               name: 'Pharmaceuticals & Life Sciences',
               description:
-                "Visakhapatnam has a growing pharmaceutical and life sciences cluster, benefiting from Andhra Pradesh's overall pharma strength. Pharma manufacturers, API producers, and contract research organisations need regulatory-compliant copy, GMP certification display, product documentation systems, and B2B lead flows for institutional procurement from domestic and international buyers.",
+                "The pharma city at Parawada hosts many drug and API makers, part of Andhra Pradesh's wider pharma strength. Buyers in India and abroad want GMP and regulatory approvals, product lists and documents before they send an enquiry. We build compliant product pages, document libraries and B2B enquiry routes.",
               example:
-                'Pharmaceutical manufacturers, API producers, and contract research organisations in the Vizag pharma cluster targeting domestic and international institutional buyers.',
+                'Drug makers, API producers and contract research firms in and around the Parawada pharma cluster selling to Indian and overseas buyers.',
             },
             {
               name: 'Tourism & Hospitality',
               description:
-                "Visakhapatnam has one of India's most scenic coastlines: Beach Road, Ramakrishna Beach, and the surrounding hill stations are established tourism assets. As the AI City investment brings thousands of high-income tech workers to Vizag, the tourism, hospitality, and food & beverage sector will see a significant demand increase. Hotels, resorts, restaurants, and tourism operators need mobile-first websites with booking systems and local SEO to capture this audience.",
+                "RK Beach, Rushikonda beach, Kailasagiri and the road up to Araku Valley make Vizag a busy coastal destination. Hotels, resorts, restaurants and tour operators need mobile pages, strong photos, room or package details, a booking form and pages for the trips visitors search for.",
               example:
-                'Hotels, beach resorts, restaurants, tourism operators, and hospitality businesses targeting the Beach Road corridor and the incoming AI City workforce.',
+                'Hotels, beach resorts, restaurants, Araku tour operators and hospitality firms along Beach Road and the Rushikonda coast.',
             },
           ]}
         />
@@ -790,14 +780,14 @@ export default function VisakhapatnamWebDesignPage() {
         {/* ── 12. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What India's founders say after we build their site"
+          headline="Founders on what changed after launch"
         />
 
         {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Common Questions from Visakhapatnam Businesses"
-          lead="The questions we answer on every Vizag discovery call, answered here, without the runaround."
+          headline="Questions Vizag Owners Ask Us"
+          lead="Plain answers to what Visakhapatnam businesses ask on our first call."
           categories={VIZAG_FAQ_CATEGORIES}
           items={VIZAG_FAQ_ITEMS}
         />
@@ -806,11 +796,11 @@ export default function VisakhapatnamWebDesignPage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO START"
-          headline="Ready to Build Your Visakhapatnam Website?"
-          sub="Visakhapatnam is on the edge of India's biggest AI City transformation: Google's ₹85,000 Cr investment, 50%+ IT hiring growth, and one of India's most diverse industrial economies. The businesses that get their digital presence sorted now will own the search rankings when the tech workforce arrives. Every week without a high-performing website is ground you are conceding to a competitor who already has one. Start today and have a sitemap ready within 72 hours."
+          headline="Start Your Visakhapatnam Website This Week"
+          sub="Vizag's IT firms, plant suppliers, port agents and hotels all compete for the same buyer searches, and the city's profile is rising. An outdated site sends those buyers elsewhere. Book a call today and get a page plan within 72 hours."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price. 7-day delivery. Next.js. Your codebase delivered in full on launch day."
+          objectionHandler="Fixed price. 7-day delivery. Next.js build. Every file handed to you at launch."
         />
 
         {/* India web-design city cross-links (silo fix, 31 Jul 2026) */}

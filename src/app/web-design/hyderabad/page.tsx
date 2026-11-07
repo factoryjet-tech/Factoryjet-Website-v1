@@ -29,13 +29,12 @@ import WebDesignCityLinksIN from '@/components/v2/WebDesignCityLinksIN';
 export const metadata: Metadata = {
   title: 'Web Design Company in Hyderabad | FactoryJet',
   description:
-    'Web design company in Hyderabad for IT firms, pharma companies & businesses. Fast, custom websites with 7-day delivery. Serving HITEC City, Gachibowli & Madhapur.',
+    'Web design company in Hyderabad for IT services firms, pharma and biotech makers, and city retailers. Next.js websites, live in 7 days.',
   keywords: [
     'web design company in Hyderabad',
     'website design Hyderabad',
     'web development company Hyderabad',
     'website design company Hyderabad',
-    'affordable web design Hyderabad',
     'professional website design Hyderabad',
     'web design HITEC City',
     'web design Gachibowli',
@@ -49,14 +48,14 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Web Design Company in Hyderabad | FactoryJet',
     description:
-      'Professional website design company in Hyderabad: Next.js, SEO, and GA4 included. 7-day delivery. Serving HITEC City, Gachibowli, Madhapur, Jubilee Hills.',
+      'Web design company in Hyderabad building Next.js sites for HITEC City IT firms and Genome Valley pharma. SEO and GA4 set up, 7-day delivery.',
     url: 'https://factoryjet.com/web-design/hyderabad',
     images: [
       {
         url: 'https://factoryjet.com/images/services/web-design.webp',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet Web Design Services in Hyderabad',
+        alt: 'FactoryJet website design for Hyderabad IT, pharma and retail firms',
       },
     ],
     locale: 'en_IN',
@@ -65,7 +64,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Web Design Company in Hyderabad | FactoryJet',
     description:
-      'Website design company in Hyderabad. 7-day delivery. Next.js, SEO, GA4 included.',
+      'Web design company in Hyderabad. Next.js sites for IT and pharma firms, live in 7 days.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
@@ -92,7 +91,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -112,42 +111,42 @@ const localBusinessSchema = { '@context': 'https://schema.org', '@type': 'Organi
 const HYD_JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery & Strategy',
+    title: 'Reader and rival check',
     description:
-      "We map your ideal customer profile against Hyderabad's market, whether that's an enterprise IT buyer evaluating vendors in HITEC City, a pharma procurement team in Genome Valley, or a consumer browsing on mobile in Jubilee Hills. We audit your top competitors and agree the sitemap.: Days 1–2",
+      "We start with the person who will judge your site. That might be a vendor manager in New Jersey shortlisting HITEC City partners, a quality head checking a Genome Valley supplier, or a shopper in Banjara Hills on a phone. We open the sites they will compare you with and settle the page list.: Days 1–2",
   },
   {
     number: '02',
-    title: 'Design & Prototyping',
+    title: 'Figma layouts',
     description:
-      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts.: Days 3–4',
+      'Layouts start on a 375px phone frame and grow to 1440px. Each block is tested against the action you need, such as an RFP, a dossier request or a table booking. Code waits until you approve the layouts.: Days 3–4',
   },
   {
     number: '03',
-    title: 'Development',
+    title: 'Engineering',
     description:
-      'Built in Next.js deployed to Cloudflare CDN: sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, booking flows, and any third-party APIs your business uses. Performance budgets enforced from the first commit.: Days 5–6',
+      'We write the site in Next.js and serve it through Cloudflare, so pages open in under 1.5s on Indian 4G. Forms, WhatsApp, booking flows and the third-party tools you already pay for are connected now, and page weight is checked on every commit.: Days 5–6',
   },
   {
     number: '04',
-    title: 'Content & SEO',
+    title: 'Copy and search',
     description:
-      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Hyderabad-specific local SEO targeting built in.: Day 6–7',
+      'Copy is edited, images go to WebP, and pages receive meta tags, LocalBusiness and FAQPage schema and internal links. The sitemap goes to Search Console, and we target the Hyderabad searches your buyers make.: Day 6–7',
   },
   {
     number: '05',
-    title: 'Launch & Handover',
+    title: 'Handover',
     description:
-      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included.: Day 7+',
+      'We point DNS at Cloudflare, switch on GA4 and GTM and verify Search Console. You receive a recorded admin walkthrough and 30 days of free fixes.: Day 7+',
   },
 ];
 
 const HYD_FAQ_CATEGORIES = [
-  { key: 'pricing',   label: 'Pricing & Timeline' },
-  { key: 'included',  label: "What's Included" },
-  { key: 'technical', label: 'Technical & SEO' },
-  { key: 'local',     label: 'Hyderabad Local' },
-  { key: 'support',   label: 'Support & Ownership' },
+  { key: 'pricing',   label: 'Price and schedule' },
+  { key: 'included',  label: "Deliverables" },
+  { key: 'technical', label: 'Code, speed, SEO' },
+  { key: 'local',     label: 'Hyderabad and Cyberabad' },
+  { key: 'support',   label: 'Ownership and care' },
 ];
 
 const HYD_FAQ_ITEMS = [
@@ -155,131 +154,131 @@ const HYD_FAQ_ITEMS = [
   /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How much does a website cost for a business in Hyderabad?',
+    question: 'What does a business website cost in Hyderabad?',
     answer:
-      "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
+      "We price each job on its own: number of pages, how hard your search terms are, and add-ons such as a store, booking or an AI assistant. A free call ends with one fixed figure in writing. The code stays with you.",
   },
   {
     category: 'pricing',
-    question: 'How long does it take to build a website?',
+    question: 'How long until the site is live?',
     answer:
-      'A standard FactoryJet build delivers in 7 days from kickoff to launch. Discovery and design take the first two days, development days three through six, and content, SEO, and launch on day seven. The 7-day clock starts when your brand assets and content are in our shared workspace.',
+      'Seven days from kickoff. Days one and two cover research and layouts, days three to six cover engineering, and day seven covers search setup and launch. The clock begins once your logo, photos and content reach the shared folder.',
   },
   {
     category: 'pricing',
-    question: 'What makes FactoryJet better value than a Hyderabad web agency?',
+    question: 'Why use FactoryJet instead of a Hyderabad agency?',
     answer:
-      "We are a specialised web engineering team, not a full-service agency with multiple layers of overhead. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch, at 60–70% lower cost. You pay for the build, not our admin structure.",
+      "You deal with a small engineering team that does the work itself. There are no layers of account staff to pay for. Figma layouts, Next.js code and a Lighthouse audit before launch are all included, priced for the build.",
   },
   {
     category: 'pricing',
-    question: 'What does 7-day delivery include?',
+    question: 'What sits inside the 7-day delivery?',
     answer:
-      'The 7-day timeline covers the development phase we control, design, build, content, and launch. We have delivered on time on 97% of all projects.',
+      'The seven days cover what we control: layouts, code, copy and launch. Our record across all projects is 97% delivered on the agreed date.',
   },
 
   /* ── What's Included ── */
   {
     category: 'included',
-    question: "What's included in a web design project?",
+    question: "What does a project include?",
     answer:
-      'Every FactoryJet project includes strategy, Figma design, Next.js development, basic copywriting, technical SEO setup (schema, meta, sitemap), GA4 analytics, and a 30-day post-launch support window. You receive the full codebase in your GitHub on launch day.',
+      'Research, Figma layouts, Next.js code, starter copy, schema and sitemap, GA4 and 30 days of fixes after launch. The full code is moved to your GitHub when the site goes live.',
   },
   {
     category: 'included',
-    question: 'Do you write the content for my website?',
+    question: 'Do you write the website copy?',
     answer:
-      'Basic copywriting for headings, hero text, and service descriptions is included. Full SEO content is available as an add-on. We send a content brief before development starts.',
+      'Starter copy is included for headlines, the top section and service summaries. Long-form SEO content is an add-on. You get a brief before the build listing what we need from you.',
   },
   {
     category: 'included',
-    question: 'Do you provide website hosting?',
+    question: 'Is hosting included?',
     answer:
-      "We deploy to Cloudflare Pages, which is free for most projects (static Next.js builds). You own your own Cloudflare account, we configure it for you. No monthly hosting fee to us.",
+      "The site runs on Cloudflare Pages, free for most static Next.js builds. We set up the account in your name, and there is no monthly hosting charge from us.",
   },
   {
     category: 'included',
-    question: 'Can I update the website myself after launch?',
+    question: 'Can my team update the site?',
     answer:
-      'Yes. Every Growth and Custom tier project includes a headless CMS integration (Sanity or Contentful) so your team can add blog posts, update team pages, and change service descriptions without touching code.',
+      'Yes. Growth and Custom tier builds include a headless CMS, Sanity or Contentful, so your team can post blogs, change the people page and edit services without a developer.',
   },
 
   /* ── Technical & SEO ── */
   {
     category: 'technical',
-    question: 'Will my website rank on Google India?',
+    question: 'Will my site show up on Google India?',
     answer:
-      'Technical SEO is built into every project: JSON-LD schema markup, optimised title and meta templates, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images with descriptive alt text. Branded searches typically rank within 1–2 weeks. Service + location queries take 3–6 months for a new domain.',
+      'Every build includes JSON-LD schema, title and meta templates, green Core Web Vitals on phones, internal links, WebP images with alt text and a submitted XML sitemap. Brand searches usually find the site in 1–2 weeks. Service plus location terms take 3–6 months on a new domain.',
   },
   {
     category: 'technical',
-    question: 'What tech stack do you build on?',
+    question: 'What stack do you use?',
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN. Next.js generates static pages that load under 1.5 seconds on Indian 4G networks, significantly faster than WordPress. For Hyderabad businesses competing on Google's Core Web Vitals signals, that performance gap directly affects rankings.",
+      "Next.js served from Cloudflare's CDN. Static pages open in under 1.5 seconds on Indian 4G, well ahead of a typical WordPress build. Google reads Core Web Vitals as a ranking signal, so that speed helps a Hyderabad firm in search.",
   },
   {
     category: 'technical',
-    question: 'How does the site perform on mobile for Indian users?',
+    question: 'How fast is the site for visitors on Indian phones?',
     answer:
-      'Mobile-first is the default. Every build targets Lighthouse 90+ and green Core Web Vitals on mobile before launch. We design at 375px before desktop, serve WebP images via Cloudflare CDN with lazy loading, and build thumb-friendly tap targets throughout.',
+      'Phones come first. Layouts start at 375px, images are WebP and lazy-loaded through Cloudflare, and buttons are sized for thumbs. Each build aims for Lighthouse 90+ and green Core Web Vitals on mobile before launch.',
   },
   {
     category: 'technical',
-    question: 'Do you set up Google Analytics and Search Console?',
+    question: 'Can I track enquiries from the site?',
     answer:
-      'Yes, GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, phone clicks) are configured from day one. Search Console is verified and the sitemap submitted.',
+      'Yes. GA4 and Google Tag Manager go live before launch, tracking form sends, WhatsApp taps and phone clicks from the first day. Search Console is verified and the sitemap submitted.',
   },
 
   /* ── Hyderabad Local ── */
   {
     category: 'local',
-    question: 'Do you build websites for pharma and biotech companies in Hyderabad?',
+    question: 'Do you build websites for Hyderabad pharma and biotech companies?',
     answer:
-      "Yes, pharma, biotech, and life sciences are a core client profile for us in Hyderabad. We build websites with regulatory-aware copy, product documentation systems for API and bulk drug exports, and B2B lead flows for institutional procurement. We serve clients in Genome Valley, Patancheru, IDA Nacharam, and Mallapur.",
+      "Yes. Hyderabad is widely called India's bulk drug capital, and Genome Valley is its life sciences cluster. We write careful, regulation-aware copy, set up product and dossier sections for API and formulation exports, and build enquiry paths for institutional buyers. We work with firms in Genome Valley, Patancheru, IDA Nacharam and Mallapur.",
   },
   {
     category: 'local',
-    question: 'Can you build websites for IT and tech companies in HITEC City?',
+    question: 'Can you build for IT firms in HITEC City and Gachibowli?',
     answer:
-      "Yes. HITEC City and Gachibowli house thousands of IT services firms, product companies, and GCCs. These businesses need websites that project technical capability, client credentials, and delivery track record. We build with authority-first architecture, capability pages, and lead-capture flows designed for enterprise B2B sales cycles.",
+      "Yes. HITEC City, Madhapur, Gachibowli and the Financial District hold a large share of the city's IT services firms, product companies and capability centres. These firms need capability pages, engagement models, case studies and an RFP path that an overseas vendor manager can scan quickly.",
   },
   {
     category: 'local',
-    question: "Do you know Hyderabad's business districts well enough to write relevant copy?",
+    question: "Will the copy use the Hyderabad areas my buyers know?",
     answer:
-      "Yes. We research Hyderabad's business geography as part of discovery, from HITEC City's IT corridor and Gachibowli's startup cluster to Genome Valley's pharma hub, Jubilee Hills' premium retail, and the Secunderabad business district. Local specificity improves relevance for neighbourhood-level and district-level searches.",
+      "Yes. Discovery covers the areas tied to your trade: HITEC City and the Financial District for tech, Genome Valley and Patancheru for pharma, Banjara Hills and Jubilee Hills for premium retail, Begum Bazaar for wholesale, and Secunderabad for older trading firms. Named areas help local searches.",
   },
   {
     category: 'local',
-    question: 'How does FactoryJet compare to Hyderabad web agencies?',
+    question: 'How does FactoryJet differ from other Hyderabad web firms?',
     answer:
-      "Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress. You get a faster website, a shorter timeline, and a codebase you own outright.",
+      "Many firms here quote after several meetings and take months to build. We send a fixed price first, write the 7-day launch date into the agreement and code in Next.js. The result is a faster site, delivered sooner, with code that belongs to you.",
   },
 
   /* ── Support & Ownership ── */
   {
     category: 'support',
-    question: 'Do I own the website after it is built?',
+    question: 'Do I own the finished website?',
     answer:
-      'Yes, 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. No retainer required. No proprietary platform lock-in.',
+      'Yes, completely. The Next.js code lands in your GitHub on launch day with every Figma file and API key. No retainer is required and you are not tied to any platform of ours.',
   },
   {
     category: 'support',
-    question: 'What support do you provide after launch?',
+    question: 'What support comes after launch?',
     answer:
-      'Every project includes a 30-day post-launch support window covering bug fixes, minor adjustments, and launch questions at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans covering development changes, priority same-day bug response, and a dedicated engineer who knows your codebase.',
+      'The first 30 days of bug fixes, small changes and launch questions are free. After that, a monthly plan gives you development hours, same-day priority on bugs and an engineer who already knows your code.',
   },
   {
     category: 'support',
-    question: 'What happens if something breaks after launch?',
+    question: 'What if the site goes down?',
     answer:
-      'Within the 30-day support window, any bugs are fixed at no cost and typically within 24 hours. Because your site is on Cloudflare Pages, the most common causes of downtime, server crashes, plugin conflicts, database failures, simply do not apply.',
+      'In the 30-day window we fix bugs free, usually within 24 hours. The site is static files on Cloudflare Pages, so the usual causes of outages, such as server crashes, plugin clashes and database failures, do not apply.',
   },
   {
     category: 'support',
-    question: 'Do you offer ongoing retainer services for Hyderabad businesses?',
+    question: 'Do you offer a monthly plan for Hyderabad firms?',
     answer:
-      'Yes. Monthly retainers cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling and a dedicated engineer.',
+      'Yes. Monthly plans cover new landing pages, content edits, SEO work and upkeep. Plan clients get priority in the queue and the same engineer each month.',
   },
 
   // Money-query coverage, added 2026-06-11
@@ -287,13 +286,13 @@ const HYD_FAQ_ITEMS = [
     category: 'pricing',
     question: 'Who is the best web design agency in Hyderabad?',
     answer:
-      'For small businesses, FactoryJet makes a strong case as the best web design company in Hyderabad: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Hyderabad you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Hyderabad.',
+      'The best web design company in Hyderabad is one you can verify. Ask for live sites to open, test their speed yourself, and insist the price stays fixed through the build. FactoryJet builds custom websites in 7 days at a written fixed price and is happy to be judged that way.',
   },
   {
     category: 'pricing',
     question: 'Should I hire web designer in Hyderabad or use an agency?',
     answer:
-      'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Hyderabad directly, agree the scope and price in writing first.',
+      'A freelancer can manage a single page. A company website needs design, code, SEO and aftercare, and a small senior team gives you all four for one fixed price. If you hire web designer in Hyderabad yourself, write down the scope and fee before work starts.',
   },
 ];
 
@@ -309,18 +308,18 @@ const faqSchema = {
 
 const HYD_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
-  { label: 'Hyderabad Agency' },
+  { label: 'Typical Hyderabad agency' },
   { label: 'Freelancer' },
   { label: 'Template (Wix/Squarespace)' },
 ] as const;
 
 const HYD_COMPARISON_ROWS = [
   {
-    feature: 'Delivery timeline',
+    feature: 'Weeks to launch',
     values: ['7 days', '8–16 weeks', '4–16 weeks (unreliable)', '1–2 weeks (you build it)'],
   },
   {
-    feature: 'Custom Figma design',
+    feature: 'Bespoke Figma layouts',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ha" kind="yes" />,
@@ -329,7 +328,7 @@ const HYD_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Next.js (not WordPress)',
+    feature: 'Next.js codebase',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ha" kind="partial" />,
@@ -338,7 +337,7 @@ const HYD_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Technical SEO built in',
+    feature: 'Schema and sitemap included',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ha" kind="partial" />,
@@ -347,7 +346,7 @@ const HYD_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Lighthouse 90+ on mobile',
+    feature: 'Phone Lighthouse 90 or above',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ha" kind="partial" />,
@@ -356,7 +355,7 @@ const HYD_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'GA4 + GTM wired up',
+    feature: 'GA4 and GTM events',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ha" kind="partial" />,
@@ -365,7 +364,7 @@ const HYD_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Transparent, fixed pricing',
+    feature: 'Price agreed up front',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ha" kind="no" />,
@@ -374,7 +373,7 @@ const HYD_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: 'Full codebase to your GitHub',
+    feature: 'Code delivered to your GitHub',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ha" kind="partial" />,
@@ -383,7 +382,7 @@ const HYD_COMPARISON_ROWS = [
     ],
   },
   {
-    feature: '7-day delivery',
+    feature: 'Seven-day launch',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ha" kind="no" />,
@@ -397,39 +396,39 @@ const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
   '@id': `https://factoryjet.com/web-design/hyderabad#howto`,
-  name: `How FactoryJet builds your Hyderabad website in 7 days`,
-  description: `Our 7-day process for delivering a professional, AI-powered website for Hyderabad businesses.`,
+  name: `Seven days to a live Hyderabad website`,
+  description: `How FactoryJet plans, designs and launches a fast website for a Hyderabad business in one week.`,
   totalTime: 'P7D',
   step: [
     {
       '@type': 'HowToStep',
       position: 1,
-      name: 'Day 1 | Discovery Call',
-      text: `We learn your business, your Hyderabad market, your goals, and what you need the website to do.`,
+      name: 'Day 1 | Intro call',
+      text: `We learn what you sell in Hyderabad, who buys it, and what the website has to win.`,
     },
     {
       '@type': 'HowToStep',
       position: 2,
-      name: 'Day 2 | Strategy & Structure',
-      text: `We map your site architecture, research your Hyderabad competitors, identify your top keywords, and write the first draft of your page copy.`,
+      name: 'Day 2 | Page map',
+      text: `We review the Hyderabad firms you compete with, pick search terms and draft the page list and first copy.`,
     },
     {
       '@type': 'HowToStep',
       position: 3,
-      name: 'Days 3–4 | Design',
-      text: 'Your bespoke design is created, homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.',
+      name: 'Days 3–4 | Layouts',
+      text: 'Homepage and inner layouts are made in Figma and shared by link. Your notes are applied within a day.',
     },
     {
       '@type': 'HowToStep',
       position: 4,
-      name: 'Days 5–6 | Development & SEO',
-      text: `Your approved design is built in code, fast, mobile-first, and SEO-optimised. Hyderabad local schema markup added. Google Analytics and Search Console connected.`,
+      name: 'Days 5–6 | Code and SEO',
+      text: `Approved layouts become fast Next.js pages. Hyderabad local schema is added and GA4 plus Search Console are linked.`,
     },
     {
       '@type': 'HowToStep',
       position: 5,
       name: 'Day 7 | Launch',
-      text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.',
+      text: 'We test on five devices, go live, and hand over written notes with a 30-minute training call.',
     },
   ],
 };
@@ -495,8 +494,8 @@ export default function HyderabadWebDesignPage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="web_design_hyderabad_hero" />}
           eyebrow="WEB DESIGN · HYDERABAD"
-          headline="Website Design in Hyderabad Built for IT Companies, Pharma Firms, and Growing Businesses"
-          lead="Hyderabad is India's second-largest IT exporter, home to 8,000+ IT and ITES companies in HITEC City and Gachibowli, India's largest pharma cluster in Genome Valley, and a rapidly growing startup and retail economy. FactoryJet builds Figma-designed, Next.js-built websites with 7-day delivery, your codebase delivered in full."
+          headline="Website Design in Hyderabad for IT Services Firms, Pharma Makers and City Retailers"
+          lead="Hyderabad exports two things at scale: software and medicines. 8,000+ IT and ITES firms work out of HITEC City and Gachibowli, and Genome Valley anchors the life sciences trade. FactoryJet designs in Figma, codes in Next.js and launches your site in 7 days, with every line of code handed to you."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
           trustItems={[
             '7-day delivery',
@@ -506,40 +505,40 @@ export default function HyderabadWebDesignPage() {
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
-        <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
+        <LogoBar tagline="500+ businesses in India, the US, the UK and the UAE run on sites we built" />
 
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ websites built. 12 years of web engineering. 7-day delivery."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+          description="Shopify stores, B2B firms and DTC brands across India, the US, the UK and the UAE. Each got a fixed price before work started, a seven-day launch and the complete code."
         />
 
         {/* ── 4. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
-          eyebrow="HYDERABAD MARKET"
-          headline="Why Your Hyderabad Web Presence Is a Competitive Advantage"
+          eyebrow="HYDERABAD BUYERS"
+          headline="Who Judges a Hyderabad Company Online"
           leadParagraphs={[
-            "Hyderabad has emerged as India's second Silicon Valley, home to HITEC City and Gachibowli, which house the India offices of Microsoft, Google, Amazon, Facebook, and Apple alongside thousands of mid-size IT services and product companies. The city's $20B+ IT sector is complemented by one of India's largest pharmaceutical and biotechnology clusters, Genome Valley in Shamirpet hosts over 200 pharma and biotech companies, making Hyderabad the Pharma City of India. The Cyberabad corridor connecting HITEC City to Kondapur has become a dense startup ecosystem.",
-            "This creates a web design opportunity unique to Hyderabad: a pharma bulk drug exporter in Patancheru needs a completely different site architecture from a SaaS startup in Koramangala or a retail brand in Jubilee Hills. IT services firms need to project global delivery capability; pharma companies need regulatory credibility and B2B procurement lead flows; consumer businesses need mobile-first speed and Instagram integration. FactoryJet builds for all three, because we start every project with the buyer journey in mind.",
-            "The businesses winning in Hyderabad's competitive market are those with a faster, better-structured web presence than their competitors. A properly structured credibility page indexed by Google can double inbound enquiry volume for an IT firm. A 1-second load improvement increases consumer conversions by 7%. These outcomes are engineered into every FactoryJet project from day one.",
+            "Two industries shape Hyderabad's business web. HITEC City, Madhapur, Gachibowli and the Financial District hold the India offices of many global tech firms and a long tail of mid-size IT services and product companies. Genome Valley and the older industrial belts at Patancheru and IDA Nacharam host drug makers, bulk drug producers and biotech labs. T-Hub in the Knowledge City area supports a busy startup scene.",
+            "Around them sits an older trading city. Begum Bazaar handles wholesale goods, the lanes near Charminar are known for pearls and bangles, and Banjara Hills and Jubilee Hills carry premium shops, clinics and restaurants. Each of these businesses has a different buyer, and each buyer looks for different proof on a website.",
+            "So we plan the site around one reader. An IT firm's site is read by an overseas vendor manager who wants delivery models and case studies. A pharma maker's site is read by a quality or sourcing head who wants certificates. A Jubilee Hills restaurant's site is read on a phone by someone deciding where to eat tonight.",
           ]}
           stats={[
             {
               value: '8,000+',
-              label: "IT and ITES companies in Hyderabad's Cyberabad corridor: India's second-largest IT cluster",
+              label: "IT and ITES companies across the Cyberabad corridor, per NASSCOM",
               sourceUrl: 'https://nasscom.in/',
               sourceLabel: 'NASSCOM',
             },
             {
               value: '200+',
-              label: 'Pharma and biotech companies in Genome Valley: the largest pharma cluster in India',
+              label: 'Pharma and biotech companies in Genome Valley, per the Telangana government',
               sourceUrl: 'https://www.telangana.gov.in/',
               sourceLabel: 'Government of Telangana',
             },
             {
               value: '₹12L Cr+',
-              label: "Hyderabad's estimated GDP: one of India's fastest-growing major city economies",
+              label: "Estimated size of Hyderabad's economy, among the fastest growing large city economies",
               sourceUrl: 'https://mospi.gov.in/',
               sourceLabel: 'MoSPI',
             },
@@ -548,33 +547,22 @@ export default function HyderabadWebDesignPage() {
 
         {/* ── 5. SERVICE EXPLANATION ───────────────────────────────────────── */}
         <ServiceExplanation
-          eyebrow="WEB DESIGN · HYDERABAD"
-          headline="What 'Web Design' Actually Means for a Hyderabad Business"
-          lead="Hyderabad's economy spans B2B enterprise buyers doing months of vendor research, pharma procurement teams with strict compliance requirements, and consumer markets that decide in under 10 seconds on mobile. FactoryJet builds for all three."
+          eyebrow="WEBSITE DESIGN · CYBERABAD"
+          headline="What a Hyderabad Website Has to Do"
+          lead="Hyderabad sites face three readers: overseas tech buyers who research for months, pharma procurement teams with strict checks, and phone users who decide in seconds. We build for the reader who pays you."
           body={
             <>
               <p>
-                For Hyderabad&apos;s IT services firms, product companies, and GCCs in HITEC City
-                and Gachibowli: a website needs to project technical credibility, delivery
-                capability, and client track record. US, EU, and APAC enterprise procurement
-                teams research vendors for months before making contact. The site needs to answer
-                their evaluation questions clearly: technology stack, engagement models, case
-                studies, certifications, and a frictionless RFQ flow. We build these sites with
-                authority-first architecture, capability pages, and lead-capture systems designed
-                for longer B2B sales cycles.
+                
+                IT services firms, product companies and capability centres in HITEC City and Gachibowli sell to procurement teams in the US, Europe and Asia-Pacific. Those teams want the tech stack, engagement models, delivery locations, certifications and case studies with real scope. We set out capability pages so a vendor manager can tick boxes quickly, and we keep the RFP form short.
               </p>
               <p>
-                For pharma and biotech companies in Genome Valley and IDA Nacharam: the challenge
-                is regulatory credibility and B2B institutional procurement. International buyers
-                and domestic hospital procurement teams need to verify GMP certifications, WHO
-                compliance, product dossiers, and manufacturing capacity before issuing a PO. We
-                build these sites with structured documentation systems, regulatory credential
-                display, and lead-capture flows designed for the pharma procurement cycle.
+                
+                Pharma and biotech firms in Genome Valley and IDA Nacharam face a buyer who must verify before ordering. Hospital buyers and overseas importers check GMP status, WHO-GMP or other approvals, product lists and capacity. We build product and document sections that answer those checks and route enquiries to the right person.
               </p>
               <p>
-                Every FactoryJet Hyderabad project covers discovery, Figma prototyping, Next.js
-                development, SEO, GA4, and a 30-day support window. You leave with a codebase you
-                own, a design system you keep, and a site built to rank and convert.
+                
+                Every Hyderabad build covers discovery, Figma layouts, Next.js code, SEO, GA4 and 30 days of fixes. You keep the code and the design files at the end.
               </p>
             </>
           }
@@ -585,21 +573,22 @@ export default function HyderabadWebDesignPage() {
                   className="font-fj-mono font-medium uppercase text-fj-neutral-400"
                   style={{ fontSize: '11px', letterSpacing: '0.14em' }}
                 >
-                  Three buyer types. One framework.
+                  
+                  Two buyers, two site plans
                 </p>
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
                   {
                     type: 'IT & Enterprise',
-                    need: 'Credibility + capability + RFP flow',
-                    area: 'HITEC City · Gachibowli · Madhapur',
+                    need: 'Capability pages, case studies, RFP',
+                    area: 'HITEC City · Gachibowli · Financial District',
                     colour: '#F05A28',
                   },
                   {
                     type: 'Pharma & Biotech',
-                    need: 'Compliance + documentation + B2B leads',
-                    area: 'Genome Valley · Patancheru · Nacharam',
+                    need: 'Certificates, product lists, enquiry routing',
+                    area: 'Genome Valley · Patancheru · IDA Nacharam',
                     colour: '#0F0F12',
                   },
                 ].map((row) => (
@@ -638,7 +627,8 @@ export default function HyderabadWebDesignPage() {
                   className="fj-display font-semibold text-fj-ink"
                   style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
                 >
-                  Same engineering quality. Strategy tailored to your buyer.
+                  
+                  One build standard. The plan follows the buyer.
                 </p>
               </div>
             </div>
@@ -648,46 +638,46 @@ export default function HyderabadWebDesignPage() {
         {/* ── 6. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Hyderabad Businesses Choose FactoryJet Over Local Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright. Pricing is fixed and agreed upfront, no surprises."
+          headline="What Hyderabad Firms Get from FactoryJet"
+          lead="Hyderabad agencies often take months and share prices only after meetings. We give you a fixed price first, write the 7-day launch date into the agreement and code in Next.js, so pages load faster, there are no monthly plugin costs and the code is yours."
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing.',
-              body: "Hyderabad's market moves fast, in IT, pharma, and retail. Waiting 12 weeks for a website briefed in April is not a growth strategy. FactoryJet delivers in 7 days, with the delivery date written into the project agreement. We have delivered on time on 97% of all projects.",
+              title: 'Launch date written down',
+              body: "A vendor review or a product launch does not wait three months for a website. We launch in seven days and put the date in the agreement. Across all projects we have hit the agreed date 97% of the time.",
             },
             {
               icon: '🏗️',
-              title: 'Next.js, not WordPress. The performance gap is real.',
-              body: 'WordPress loads server-side PHP and fires 40–60 database queries per page load. Next.js generates static files served from Cloudflare CDN globally. The result: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Hyderabad businesses competing on Google\'s Core Web Vitals signals, that gap directly affects rankings.',
+              title: 'Prebuilt pages beat WordPress on speed',
+              body: 'WordPress runs PHP and 40–60 database queries per page view. Next.js pages are built ahead and served from Cloudflare\'s CDN, loading in under 1.5s on Indian 4G against 4–6s for typical WordPress. Google counts Core Web Vitals in ranking, so speed shows up in search.',
             },
             {
               icon: '📋',
-              title: 'Fixed price. Agreed before we start.',
-              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch.",
+              title: 'Fixed quote before work',
+              body: "One fixed quote arrives before we start. There is no paid discovery phase and no surprise bill after launch for the agreed scope.",
             },
           ]}
         />
 
         {/* ── 7. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
-          eyebrow="OUR PROCESS"
-          headline="How We Build Your Hyderabad Website in 7 Days"
-          lead="Buyer strategy agreed before design. Mobile approval before development. SEO and analytics wired before launch."
+          eyebrow="THE SEVEN DAYS"
+          headline="Your Hyderabad Website, Day by Day"
+          lead="Reader agreed first, phone layouts approved second, search and tracking live before launch."
           stages={HYD_JOURNEY_STAGES}
-          closingNote="5 STAGES · 7 DAYS · NEXT.JS + CLOUDFLARE · GA4 STANDARD · ZERO DOWNTIME LAUNCH"
+          closingNote="READER · LAYOUTS · NEXT.JS · SEARCH · LIVE ON DAY 7"
         />
 
         {/* ── 8. PORTFOLIO ─────────────────────────────────────────────────── */}
         <PortfolioShowcase
           eyebrow="RECENT WORK"
-          headline="What India's businesses look like after FactoryJet."
+          headline="Two recent builds for Indian B2B companies"
           cards={[
             {
               industry: 'Wholesale Distribution · Commerceflo',
               title: 'Belle Maison | Mumbai',
               description:
-                "Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.",
+                "Belle Maison wholesales artificial plants, flowers, flower runners, home décor and LED lighting from Mumbai. We built its B2B ordering store on Commerceflo with trade price tiers, quote-to-order conversion and buyer accounts.",
               imageSrc: '/images/portfolio/belle-maison.webp',
               stat1: 'Lighthouse 95+',
               stat2: 'Commerceflo · B2B',
@@ -696,7 +686,7 @@ export default function HyderabadWebDesignPage() {
               industry: 'MEP / BIM Consulting · SEO',
               title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their website on WordPress with an authority-first architecture designed for B2B project enquiries, credentials display, project portfolio, and technical SEO.',
+                'Formative Concepts provides MEP drafting and BIM consulting. We rebuilt its site on WordPress to bring in B2B project enquiries, with a credentials section, a project portfolio and technical SEO.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
@@ -708,66 +698,66 @@ export default function HyderabadWebDesignPage() {
 
         {/* ── 9. COMPARISON TABLE ──────────────────────────────────────────── */}
         <ComparisonTable
-          eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. Hyderabad Agency vs. Freelancer vs. Template Builder"
-          lead="Not all web design options in Hyderabad deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
+          eyebrow="SIDE BY SIDE"
+          headline="FactoryJet Compared with a Hyderabad Agency, a Freelancer and a DIY Builder"
+          lead="Four ways to get a website in Hyderabad, set side by side on launch time, build quality, price certainty and code ownership."
           pullQuote={{
             stat: '7 days',
             caption:
-              'from kickoff to launch, same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+              'to move from kickoff to a live site, including Figma layouts, Next.js code, schema setup and a Lighthouse audit that larger agencies stretch across months.',
           }}
           columns={HYD_COMPARISON_COLUMNS}
           rows={HYD_COMPARISON_ROWS}
-          footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
+          footer="Any scope can be quoted at a fixed price. You get the number after a free call and before you commit."
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
-          eyebrow="HYDERABAD × WEB DESIGN"
-          headline="Web Design for Hyderabad's Key Industries"
-          lead="From HITEC City IT firms to Genome Valley pharma companies to Jubilee Hills retail brands, Hyderabad's economy spans industries with very different digital requirements. FactoryJet has built for each of them."
+          eyebrow="HYDERABAD SECTORS"
+          headline="Website Design for Hyderabad's Main Sectors"
+          lead="IT services, pharma, public sector suppliers, property, retail and professional firms each sell to a different buyer in Hyderabad, so each needs a different first screen."
           sectors={[
             {
-              name: 'IT & ITES',
+              name: 'IT Services and Product Firms',
               description:
-                "Hyderabad is India's second-largest IT hub, home to Microsoft India headquarters, Amazon's largest campus outside the US, and thousands of mid-size IT services and ITES companies. These businesses compete for global enterprise contracts. Their websites need to project technical credibility, delivery capability, client case studies, and compliance certifications for US and EU procurement teams.",
+                "Hyderabad hosts large campuses of global tech companies and thousands of mid-size IT services and product firms. These firms chase overseas contracts. Their sites need delivery models, case studies, security and quality certifications, and a short RFP form for US and European buyers.",
               example:
-                'IT services firms, GCCs, and product companies in HITEC City, Gachibowli, Madhapur, and Kondapur targeting enterprise clients globally.',
+                'IT services firms, capability centres and product companies in HITEC City, Gachibowli, Madhapur, Kondapur and the Financial District.',
             },
             {
-              name: 'Pharma & Biotech',
+              name: 'Pharma and Life Sciences',
               description:
-                "Hyderabad is India's Pharma City, home to Dr. Reddy's, Aurobindo, Hetero, and over 200 companies in Genome Valley. Pharma websites need GMP compliance display, WHO certification credentials, product dossier documentation systems, and B2B institutional procurement lead flows. International buyers require structured regulatory information before any procurement decision.",
+                "Many of India's large drug makers are headquartered in Hyderabad, and Genome Valley hosts biotech and research firms. Sites need GMP and other approval details, product lists, dossier request flows and enquiry routing for overseas importers and hospital buyers.",
               example:
-                'Pharma manufacturers, API producers, and biotech companies in Genome Valley, Patancheru, IDA Nacharam, and Mallapur.',
+                'Drug makers, API producers and biotech labs in Genome Valley, Patancheru, IDA Nacharam and Mallapur.',
             },
             {
-              name: 'Government & PSU',
+              name: 'Government Suppliers',
               description:
-                "As India's dual capital (Hyderabad serves both Telangana and Andhra Pradesh), the city hosts significant government and PSU activity. Government contractors, infrastructure firms, and PSU vendors need websites projecting credibility, past project credentials, and compliance documentation to win public sector tenders and empanelment.",
+                "As capital of Telangana, Hyderabad has many state departments and public sector units. Contractors, infrastructure consultants and PSU vendors need sites that list past projects, empanelments and compliance papers in a form a tender committee can check.",
               example:
-                'Government contractors, infrastructure consultants, and PSU vendors operating in Hyderabad and the surrounding region.',
+                'Government contractors, infrastructure consultants and PSU vendors working across Telangana.',
             },
             {
-              name: 'Real Estate & Construction',
+              name: 'Property and Construction',
               description:
-                "Hyderabad's real estate market has seen sustained growth driven by IT sector demand. Developers, brokers, and construction firms need websites with project gallery architecture, floor plan downloads, RERA details, and lead-capture forms. Local SEO targeting micro-markets like Gachibowli, Kukatpally, and Miyapur is built in.",
+                "Housing demand follows the tech offices, from Gachibowli and Kokapet to Kukatpally and Miyapur. Developers and brokers need project galleries, floor plans, RERA numbers and call-back forms, with local search pages for each micro-market.",
               example:
-                'Residential developers, commercial real estate brokers, and construction firms operating across Hyderabad and Cyberabad.',
+                'Developers, brokers and construction firms working across Hyderabad and Cyberabad.',
             },
             {
-              name: 'Retail & D2C',
+              name: 'Retail, Food and D2C',
               description:
-                "Jubilee Hills, Banjara Hills, and the growing retail corridors around Kukatpally and Madhapur are home to premium retail, F&B, and D2C brands. Consumer-facing websites need to convert mobile visitors in under 10 seconds: sub-1.5s load times, above-the-fold product display, Razorpay checkout, and Instagram integration.",
+                "Banjara Hills and Jubilee Hills hold premium stores and restaurants, and the Charminar area is known for pearls and bangles. Consumer sites must load in under 1.5s on a phone, show the product straight away, take Razorpay payments and link to Instagram.",
               example:
-                'Retail brands, D2C consumer products, and F&B businesses serving Hyderabad\'s growing consumer market.',
+                'Fashion and jewellery stores, pearl sellers, restaurants and D2C brands selling to Hyderabad shoppers.',
             },
             {
-              name: 'Professional Services',
+              name: 'Professional Firms',
               description:
-                "Hyderabad's growth has created a large professional services ecosystem: CA firms, law firms, HR companies, and management consulting practices. For these businesses, the website is the first qualification filter. We build authority-first sites with credential display, service capability pages, and lead-capture flows that convert research into booked consultations.",
+                "CA practices, law firms, HR companies and consultants serve the city's growing company base. A prospect reads their site before calling. We build pages that show credentials and services clearly and make booking a first consultation simple.",
               example:
-                "CA and CS firms, corporate law practices, management consulting, and HR companies serving Hyderabad's growing business community.",
+                "CA and CS firms, corporate lawyers, consultants and HR companies serving Hyderabad businesses.",
             },
           ]}
         />
@@ -776,14 +766,14 @@ export default function HyderabadWebDesignPage() {
         {/* ── 12. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What India's founders say after we build their site"
+          headline="Founders on their new FactoryJet websites"
         />
 
         {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
-          eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Common Questions from Hyderabad Businesses"
-          lead="The questions we answer on every Hyderabad discovery call, answered here, without the runaround."
+          eyebrow="HYDERABAD FAQ"
+          headline="Hyderabad Website Questions, Answered"
+          lead="What Hyderabad founders, plant heads and marketing teams ask before signing, answered plainly."
           categories={HYD_FAQ_CATEGORIES}
           items={HYD_FAQ_ITEMS}
         />
@@ -792,11 +782,11 @@ export default function HyderabadWebDesignPage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO START"
-          headline="Ready to Build Your Hyderabad Website?"
-          sub="Hyderabad's 8,000+ IT companies, 200+ pharma firms, and growing retail economy means every serious business is competing for the same Google rankings and the same first impression with buyers. Every week without a high-performing website is market share you are handing to a competitor who already has one. Start today and have a sitemap ready within 72 hours."
+          headline="Start Your Hyderabad Website This Week"
+          sub="A vendor manager abroad, a hospital buyer or a Jubilee Hills diner will look you up before they get in touch. Book a call, and within 72 hours you will have a page plan and a fixed price for a site that goes live seven days after kickoff."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price. 7-day delivery. Next.js. Your codebase delivered in full on launch day."
+          objectionHandler="One fixed price. Live in 7 days. Built in Next.js. All code yours at launch."
         />
 
         {/* India web-design city cross-links (silo fix, 31 Jul 2026) */}

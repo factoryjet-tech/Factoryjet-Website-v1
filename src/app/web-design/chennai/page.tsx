@@ -23,13 +23,13 @@ import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
 import WebDesignCityLinksIN from '@/components/v2/WebDesignCityLinksIN';
 
 export const metadata: Metadata = {
-  title: 'Expert Web Design Company in Chennai | FactoryJet',
+  title: 'Web Design Company in Chennai | FactoryJet',
   description: 'Web design company in Chennai for auto, IT & manufacturing businesses. Fast, conversion-focused websites across OMR, Anna Nagar & Guindy. 7-day delivery.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Web Design Company in Chennai | Professional Website Design Services',
-    description: 'Award-winning Web Design Company in Chennai. Fast, conversion-focused websites for auto, IT & healthcare businesses. 7-day delivery, INR pricing.',
+    title: 'Web Design Company in Chennai | FactoryJet',
+    description: 'Web design company in Chennai for auto, IT and healthcare businesses. Fast, conversion-focused websites. 7-day delivery, INR pricing.',
     url: 'https://factoryjet.com/web-design/chennai',
     images: [
       {
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Web Design Company in Chennai | FactoryJet',
-    description: 'Award-winning Web Design Company in Chennai. Beautiful, conversion-focused websites with modern UI/UX.',
+    description: 'Web design company in Chennai. Fast websites for auto, IT and healthcare firms. 7-day delivery.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
@@ -458,7 +458,7 @@ const CHN_FAQ_ITEMS = [
         <CityContextSection {...cityContextProps} />
         <ServiceExplanation
             headline="Two Chennai Markets, One Design Partner"
-            lead="Chennai's business landscape splits cleanly into industrial/B2B and IT/consumer segments: each needing a completely different web strategy. We design for both."
+            lead="Chennai's business base splits cleanly into industrial/B2B and IT/consumer segments: each needing a completely different web strategy. We design for both."
             rightSlot={
               <div className="w-full space-y-4 rounded-2xl border border-black/10 bg-white p-6 shadow-sm lg:p-8">
                 <p className="font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>

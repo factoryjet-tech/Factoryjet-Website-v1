@@ -29,7 +29,7 @@ import WebDesignCityLinksIN from '@/components/v2/WebDesignCityLinksIN';
 export const metadata: Metadata = {
   title: 'Web Design Company in Pune | FactoryJet',
   description:
-    'Web design company in Pune for IT, auto-tier suppliers, education & D2C brands. Fast, custom websites with 7-day delivery. Serving Hinjewadi, Koregaon Park & Baner.',
+    'Web design company in Pune for IT firms, auto suppliers, institutes and D2C brands. Next.js sites in 7 days with a fixed quote and your code at launch.',
   keywords: [
     'web design company in pune',
     'website development company in pune',
@@ -46,14 +46,14 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     title: 'Web Design Company in Pune | FactoryJet',
     description:
-      'Professional website design company in Pune: Next.js, SEO, and GA4 included. 7-day delivery. Serving Hinjewadi, Koregaon Park, Baner & PCMC.',
+      'Web design company in Pune for Hinjewadi, Kharadi, Chakan and Baner businesses. Next.js build, SEO and GA4 set up, 7-day delivery.',
     url: 'https://factoryjet.com/web-design/pune',
     images: [
       {
         url: 'https://factoryjet.com/images/services/web-design.webp',
         width: 1200,
         height: 630,
-        alt: 'FactoryJet Web Design Services in Pune',
+        alt: 'Pune website design by FactoryJet',
       },
     ],
     locale: 'en_IN',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Web Design Company in Pune | FactoryJet',
-    description: 'Website design company in Pune. 7-day delivery. Next.js, SEO, GA4 included.',
+    description: 'Pune website design: fixed quote, 7-day delivery, Next.js build and code you own.',
     images: ['https://factoryjet.com/images/services/web-design.webp'],
   },
   alternates: {
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-08-04';
+const PAGE_MODIFIED = '2026-11-07';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -104,10 +104,10 @@ const localBusinessSchema = {
   '@type': 'ProfessionalService',
   parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
   '@id': 'https://factoryjet.com/web-design/pune#localbusiness',
-  name: 'FactoryJet | Web Design in Pune',
+  name: 'FactoryJet | Website Design for Pune Businesses',
   image: 'https://factoryjet.com/images/services/web-design.webp',
   description:
-    'Web design company in Pune building fast, SEO-optimised websites for IT services, auto-tier suppliers, education, and D2C businesses. 7-day delivery.',
+    'Website design for Pune software houses, Chakan and PCMC component makers, coaching institutes and consumer brands. Next.js builds delivered in 7 days.',
   url: 'https://factoryjet.com/web-design/pune',
   email: 'connect@factoryjet.com',
   areaServed: [
@@ -132,15 +132,15 @@ const howToSchema = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
   '@id': 'https://factoryjet.com/web-design/pune#howto',
-  name: 'How FactoryJet builds your Pune website in 7 days',
-  description: 'Our 7-day process for delivering a professional, AI-powered website for Pune businesses.',
+  name: 'Pune website project: the seven-day build sequence',
+  description: 'Each day of a FactoryJet website build for a Pune company, from first call to a live site.',
   totalTime: 'P7D',
   step: [
-    { '@type': 'HowToStep', position: 1, name: 'Day 1 | Discovery Call', text: 'We learn your business, your Pune market, your goals, and what you need the website to do.' },
-    { '@type': 'HowToStep', position: 2, name: 'Day 2 | Strategy & Structure', text: 'We map your site architecture, research your Pune competitors, identify your top keywords, and write the first draft of your page copy.' },
-    { '@type': 'HowToStep', position: 3, name: 'Days 3–4 | Design', text: 'Your bespoke design is created | homepage and inner pages. You get a design preview link. Feedback incorporated within 24 hours.' },
-    { '@type': 'HowToStep', position: 4, name: 'Days 5–6 | Development & SEO', text: 'Your approved design is built in code | fast, mobile-first, and SEO-optimised. Pune local schema markup added. Google Analytics and Search Console connected.' },
-    { '@type': 'HowToStep', position: 5, name: 'Day 7 | Launch', text: 'Final review, testing across 5 devices, and go-live. You receive full handover documentation and a 30-minute training session.' },
+    { '@type': 'HowToStep', position: 1, name: 'Day 1 | First call', text: 'We hear how you sell, who signs off on purchases in your Pune market, and what the site has to make visitors do.' },
+    { '@type': 'HowToStep', position: 2, name: 'Day 2 | Sitemap and search terms', text: 'We set the page list, look at the Pune rivals your buyers compare you with, pick target keywords and write draft copy.' },
+    { '@type': 'HowToStep', position: 3, name: 'Days 3–4 | Screens', text: 'Figma screens for the home page and inner pages go to you as a preview link. Comments are folded in by the next day.' },
+    { '@type': 'HowToStep', position: 4, name: 'Days 5–6 | Code and tracking', text: 'Approved screens become a mobile-first Next.js build. Pune area schema goes in, and GA4 and Search Console are connected.' },
+    { '@type': 'HowToStep', position: 5, name: 'Day 7 | Live', text: 'Checks on five devices, launch, written handover notes and a 30-minute training call for your team.' },
   ],
 };
 
@@ -159,33 +159,33 @@ const speakableSchema = {
 const PUNE_JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery & Strategy',
+    title: 'Who buys, and what they check',
     description:
-      "We map your ideal customer against Pune's market, whether that's an OEM procurement lead sourcing from Chakan, a global IT buyer evaluating a Hinjewadi firm, or a parent researching a coaching institute. We audit your top three competitors and agree the sitemap and content plan.: Days 1–2",
+      "A purchase engineer at a Chakan plant, a US client shortlisting a Kharadi software vendor and a parent comparing coaching classes in Kothrud all read a site for different reasons. We pick the one that matters most to you, review three rival sites and fix the page list.: Days 1–2",
   },
   {
     number: '02',
-    title: 'Design & Prototyping',
+    title: 'Clickable Figma layouts',
     description:
-      'Figma wireframes at 375px (mobile-first) through to 1440px desktop. Every tap target, form field, and section reviewed against your conversion goal before a line of code is written. You approve the design before development starts.: Days 3–4',
+      'We draw the 375px phone view before tablet and desktop. You test the prototype, mark changes on each screen and approve it. Development waits for that approval.: Days 3–4',
   },
   {
     number: '03',
-    title: 'Development',
+    title: 'Next.js development',
     description:
-      'Built in Next.js deployed to Cloudflare CDN: sub-1.5s load times on Indian 4G networks. Contact forms, WhatsApp integration, dealer portals, booking flows, and any third-party APIs your business uses. Performance budgets enforced from the first commit.: Days 5–6',
+      'Pages are pre-built in Next.js and served from Cloudflare, so they open in under 1.5 seconds on Indian 4G. This is where dealer logins, enquiry forms, WhatsApp, admission or booking tools and outside APIs get connected.: Days 5–6',
   },
   {
     number: '04',
-    title: 'Content & SEO',
+    title: 'Search groundwork',
     description:
-      'Optimised copy, WebP imagery, meta tags, JSON-LD schema (LocalBusiness + FAQPage), and internal links. Sitemap submitted to Google Search Console. Pune-specific local SEO targeting built in, not sold as an add-on.: Day 6–7',
+      'Copy is edited for search, images move to WebP, and every page gets its own title and meta. LocalBusiness and FAQPage schema, internal links and a submitted sitemap follow. Pune location targeting comes with the base build.: Day 6–7',
   },
   {
     number: '05',
-    title: 'Launch & Handover',
+    title: 'Launch and handover',
     description:
-      'DNS transfer to Cloudflare, GA4 and GTM configured, Search Console verified. Recorded handover walkthrough so your team is fully self-sufficient. 30-day post-launch support window included.: Day 7+',
+      'DNS points to Cloudflare, GA4 and Tag Manager are live and Search Console is verified. Your team gets a recorded walkthrough, and the next 30 days of fixes are covered.: Day 7+',
   },
 ];
 
@@ -201,141 +201,141 @@ const PUNE_FAQ_ITEMS = [
   /* ── Pricing & Timeline ── */
   {
     category: 'pricing',
-    question: 'How much does a website cost for a small business in Pune?',
+    question: 'What should a Pune business budget for a website?',
     answer:
-      "We don't sell fixed packages. The price depends on how many pages you need, how competitive your market is, and whether you want extras like e-commerce, booking systems, or AI features. You get a clear, fixed quote up front after a free consultation, and the codebase is yours to keep.",
+      "We quote each job on its own. The number depends on page count, how hard your search terms are, and add-ons such as a dealer portal, online fees, a store or an AI chat assistant. A free call comes first, then a fixed written quote. You keep the code.",
   },
   {
     category: 'pricing',
-    question: 'How long does it take to build a website?',
+    question: 'How many days until my Pune site is live?',
     answer:
-      'A standard FactoryJet build delivers in 7 days from kickoff to launch. Discovery and design take the first two days, development days three through six, and content, SEO, and launch on day seven. The 7-day clock starts when your brand assets and content are in our shared workspace, not from the first conversation.',
+      'Seven days from kickoff for a standard build. Research and structure fill days one and two, design and code fill days three to six, and day seven covers copy checks, SEO and launch. The count begins once your logo, images and text are in the shared folder.',
   },
   {
     category: 'pricing',
-    question: 'What makes FactoryJet better value than a Pune web agency?',
+    question: 'Why not hire a large Pune agency instead?',
     answer:
-      'We are a specialised web engineering team, not a full-service agency with account managers, strategy teams, and office overheads in Baner or Koregaon Park. The same Figma-first design process, the same Next.js engineering, the same Lighthouse audit before launch, at a fraction of the cost. We have been building websites. You pay for the build, not our admin structure.',
+      'Large agencies in Baner or Koregaon Park pay for account managers, planners and office space, and the quote carries that cost. FactoryJet is a small engineering team that does the design and code itself. You get Figma screens, a Next.js build and a pre-launch Lighthouse audit, and you pay for the work done.',
   },
   {
     category: 'pricing',
-    question: 'What does 7-day delivery include?',
+    question: 'What falls inside the 7-day delivery window?',
     answer:
-      'The 7-day timeline covers the development phase we control, design, build, content, and launch. If your internal approvals take longer, we agree a revised schedule upfront and the 7-day timeline applies to the rescheduled date. We have delivered on time on 97% of all projects.',
+      'It covers the part we control: design, development, content setup and launch. When approvals on your side run long, we agree a new start date in advance and count seven days from that date. We have delivered on time on 97% of all projects.',
   },
   /* ── What's Included ── */
   {
     category: 'included',
-    question: "What's included in a web design project?",
+    question: 'What will I receive when the project ends?',
     answer:
-      'Every FactoryJet project includes strategy, Figma design, Next.js development, basic copywriting, technical SEO setup (schema, meta, sitemap), GA4 analytics, and a 30-day post-launch support window. You receive the full codebase in your GitHub on launch day, the Figma design files, and a recorded handover walkthrough.',
+      'A sitemap and plan, Figma screens, the Next.js site, first-draft copy, schema, meta and sitemap setup, GA4, and 30 days of support. The repository is moved to your GitHub at launch together with the design file and a recorded handover video.',
   },
   {
     category: 'included',
-    question: 'Do you write the content for my website?',
+    question: 'Is copywriting part of the job?',
     answer:
-      'Basic copywriting for headings, hero text, and service descriptions is included. Full SEO content, detailed service pages, blog posts, and city landing pages, is available as an add-on. We send a content brief before development starts so you know exactly what to provide and what we will write.',
+      'Headlines, the hero section and short service text are part of every build. In-depth service pages, blogs and area pages cost extra. A content brief arrives before coding starts, so you know which material to send and which pages we draft.',
   },
   {
     category: 'included',
-    question: 'Do you provide website hosting?',
+    question: 'Do I need to buy hosting?',
     answer:
-      "We deploy to Cloudflare Pages, which is free for most projects (static Next.js builds). You set up and own your own Cloudflare account, we configure it for you. This means you are never on a shared hosting server that slows down under traffic spikes. There is no monthly hosting fee to us.",
+      "No separate plan is needed for most sites. We publish to Cloudflare Pages, which is free for typical static Next.js builds, using a Cloudflare account registered to you. Your site is not sharing a slow server with hundreds of others, and we take no monthly hosting fee.",
   },
   {
     category: 'included',
-    question: 'Can I update the website myself after launch?',
+    question: 'Can my team change content later?',
     answer:
-      'Yes. Every Growth and Custom tier project includes a headless CMS integration (Sanity or Contentful) so your team can add blog posts, update pages, and change service descriptions without touching code. We configure the CMS and walk you through it in the handover session. Starter tier uses a lightweight approach you can manage simply, or we can set up on request.',
+      'Yes. Growth and Custom builds include Sanity or Contentful, a headless CMS where your team edits text, adds posts and updates pages from a browser. We set it up and train you at handover. On Starter builds edits are simple file changes, and a CMS can be added if you ask.',
   },
   /* ── Technical & SEO ── */
   {
     category: 'technical',
-    question: 'Will my website rank on Google India?',
+    question: 'Can a new site rank for Pune searches?',
     answer:
-      'Technical SEO is built into every project: JSON-LD schema markup, optimised title and meta templates, Core Web Vitals green on mobile, internal linking, XML sitemap submitted to Google Search Console, and WebP images with descriptive alt text. Branded searches typically rank within 1–2 weeks. Service + location queries like "web design company in Pune" take 3–6 months for a new domain. The work that compresses that timeline is in every FactoryJet project by default.',
+      'The build includes schema, page-level titles and metas, Core Web Vitals passing on mobile, internal links, a sitemap sent to Search Console and WebP images with alt text. Your brand name usually ranks within 1–2 weeks. A term such as "web design company in Pune" usually needs 3–6 months on a new domain, and the setup to get there is already done.',
   },
   {
     category: 'technical',
-    question: 'What tech stack do you build on, and why does it matter?',
+    question: 'Which technology do you use, and does it matter for SEO?',
     answer:
-      "We build on Next.js deployed to Cloudflare's global CDN. Next.js generates static pages that load under 1.5 seconds on Indian 4G networks, significantly faster than WordPress, which renders server-side and is loaded with plugins. For Pune businesses competing on local search and Google's Core Web Vitals ranking signals, that performance gap over a WordPress competitor is real and measurable.",
+      "We use Next.js on Cloudflare. Pages are generated ahead of time, so they arrive in under 1.5 seconds on Indian 4G with no server code running per visit. WordPress sites with many plugins build each page on request and run slower. Google scores that difference in Core Web Vitals.",
   },
   {
     category: 'technical',
-    question: 'How does the site perform on mobile for Indian users?',
+    question: 'Will students and customers on phones get a good experience?',
     answer:
-      'Mobile-first is the default. Every build targets Lighthouse 90+ and green Core Web Vitals on mobile before launch. We design at 375px before desktop, serve WebP images via Cloudflare CDN with lazy loading, and build thumb-friendly tap targets throughout. Given that 70%+ of Indian web traffic is mobile, often on 4G with variable speeds, mobile performance is non-negotiable and tested before delivery.',
+      'Yes. Design starts at 375px, and each build must reach Lighthouse 90+ with passing Core Web Vitals on mobile before we hand it over. Images are WebP and lazy-loaded, and tap targets are large. Most enquiries in Pune come from phones on mixed 4G, so that is where we test.',
   },
   {
     category: 'technical',
-    question: 'Do you set up Google Analytics and Search Console?',
+    question: 'Do you install GA4 and Search Console?',
     answer:
-      'Yes, GA4 and Google Tag Manager are wired up before launch on every project. Key conversion events (form submissions, WhatsApp clicks, phone clicks) are configured from day one so you are tracking revenue-relevant actions, not just page views. Search Console is verified and the sitemap submitted. We walk you through both in the handover.',
+      'Yes. GA4 and Tag Manager are installed before launch, with form sends, WhatsApp taps and calls tracked as conversions from day one. Search Console is verified, the sitemap is submitted and we show you both during handover.',
   },
   /* ── Pune Local ── */
   {
     category: 'local',
-    question: 'Do you build websites for IT companies in Hinjewadi and Kharadi?',
+    question: 'Do you build sites for software firms in Hinjewadi and Kharadi?',
     answer:
-      "Yes. We build authority-first websites for IT services firms, SaaS products, and tech startups across Hinjewadi (Phases 1–3), Kharadi, and Wakad. Pune IT firms compete with Bangalore for global tenders, so we build sites that project capability and depth to international B2B buyers, clear service capabilities, case studies, and client logos.",
+      "Yes. Software and SaaS firms in Hinjewadi, Kharadi and Wakad often sell to clients in the US and Europe who judge them on the website first. We build pages around service lines, case studies, delivery process and client logos, so an overseas buyer can shortlist you without a call.",
   },
   {
     category: 'local',
-    question: 'Can you build websites for auto manufacturers in Chakan and PCMC?',
+    question: 'Can you build for component makers in Chakan, Talegaon and Pimpri-Chinchwad?',
     answer:
-      'Absolutely. We design B2B supplier portals, capability websites, and product catalogues for tier-1 and tier-2 automotive component manufacturers in Chakan, Talegaon, and Pimpri-Chinchwad. Datasheet downloads, RFQ inquiry systems, and technical SEO that surfaces your capability to OEM procurement teams: all standard.',
+      'Yes. Tier-1 and tier-2 suppliers need to show OEM buyers their processes, machines, approvals and part range. We build capability sites, product catalogues with datasheet downloads, RFQ forms and supplier portals, with technical SEO aimed at procurement searches.',
   },
   {
     category: 'local',
-    question: 'Do you work with coaching institutes and colleges in Pune?',
+    question: 'Do you design for coaching classes, colleges and edtech in Pune?',
     answer:
-      "Yes. Pune is the Oxford of the East, with 200+ engineering and management colleges and a dense coaching ecosystem. We build lead-generating websites for JEE/NEET coaching, MBA prep, colleges, and ed-tech platforms, optimised to capture enquiries and convert them into admissions.",
+      "Yes. Pune is called the Oxford of the East for its colleges and coaching classes. We build sites for JEE and NEET coaching, MBA prep, colleges and edtech platforms, with course pages, fee and batch details, and enquiry forms that feed admissions follow-up.",
   },
   {
     category: 'local',
-    question: "Do you know Pune's business districts well enough to write relevant copy?",
+    question: 'Will the copy name the Pune areas my customers search from?',
     answer:
-      "Yes. We research Pune's business geography as part of discovery, from the Hinjewadi and Kharadi IT corridors to the Chakan and PCMC auto belt, and the premium D2C and hospitality scene in Koregaon Park, Kalyani Nagar, Baner, and Aundh. Local specificity in copy and LocalBusiness schema improves relevance for neighbourhood-level searches, where many Pune B2B and professional services businesses win.",
+      "Yes. During discovery we list the areas that matter for you: Hinjewadi, Kharadi and Magarpatta for software, Chakan and PCMC for manufacturing, and Koregaon Park, Kalyani Nagar, Baner and Aundh for retail and hospitality. Those names go into page copy and LocalBusiness schema, which helps searches that mention a locality.",
   },
   /* ── Support & Ownership ── */
   {
     category: 'support',
-    question: 'Do I own the website after it is built?',
+    question: 'Is the finished website fully mine?',
     answer:
-      'Yes, 100%. The full Next.js codebase is delivered to your GitHub repository on launch day. You own every file, every Figma design asset, and all API credentials. You can take it to any developer or hosting provider at any time. No FactoryJet retainer required to keep your site running. No proprietary platform lock-in.',
+      'Yes, all of it. The Next.js repository is transferred to your GitHub on launch day, with the Figma designs and every API key. You can move to another developer or host whenever you like. The site needs no FactoryJet contract to stay online.',
   },
   {
     category: 'support',
-    question: 'What support do you provide after launch?',
+    question: 'What happens in the weeks after launch?',
     answer:
-      'Every project includes a 30-day post-launch support window covering bug fixes, minor adjustments, and launch questions at no extra cost. Beyond that, FactoryJet offers monthly maintenance plans covering development changes, priority same-day bug response, and a dedicated engineer who knows your codebase. Maintenance clients also get quarterly performance audits and Core Web Vitals checks.',
+      'For 30 days after launch we fix bugs, make small changes and answer questions at no cost. After that, a monthly maintenance plan adds same-day priority on bugs, an engineer who knows your code and a quarterly speed and Core Web Vitals audit.',
   },
   {
     category: 'support',
-    question: 'What happens if something breaks after launch?',
+    question: 'How are post-launch problems handled?',
     answer:
-      'Within the 30-day support window, any bugs are fixed at no cost and typically within 24 hours. After the support window, a maintenance retainer covers priority response. Because your site is on Cloudflare Pages (static files, global CDN), the most common causes of downtime, server crashes, plugin conflicts, database failures, simply do not apply.',
+      'In the first 30 days, bugs are fixed free and usually within 24 hours. Later, a maintenance plan gives priority response. The site runs as static files on Cloudflare Pages, so server crashes, plugin conflicts and database errors are off the list of risks.',
   },
   {
     category: 'support',
-    question: 'Do you offer ongoing retainer services for Pune businesses?',
+    question: 'Is there a monthly plan for Pune clients?',
     answer:
-      'Yes. Monthly retainers cover ongoing development work, content updates, new landing pages, SEO improvements, and technical maintenance. Retainer clients get priority scheduling, a dedicated engineer, and quarterly website health reports. Many of our Pune clients start with a project and move to a retainer once the site is live and generating leads.',
+      'Yes. A monthly plan covers new pages, content changes, SEO work, feature requests and upkeep. Plan clients are scheduled first, work with a named engineer and receive a quarterly report on site health.',
   },
 
   // Money-query coverage, added 2026-06-11
   {
     category: 'pricing',
-    question: 'Who is the best web design agency in Pune?',
+    question: 'How can I find the best web design agency in Pune?',
     answer:
-      'For small businesses, FactoryJet makes a strong case as the best web design company in Pune: custom websites in 7 days, 100/100 Google speed scores, and a fixed written price. Any website design company in Pune you compare should pass three checks: live websites you can test, speed scores you can verify, and a price that does not grow mid-project. That is the honest way to pick the best website design company in Pune.',
+      'Test every website design company in Pune you shortlist the same way. Use two or three of their live sites on your own phone. Run those sites through PageSpeed Insights yourself. Ask for a fixed price in writing that will not rise halfway. FactoryJet builds custom sites in 7 days on a fixed price and is open to the same test.',
   },
   {
     category: 'pricing',
-    question: 'Should I hire web designer in Pune or use an agency?',
+    question: 'Should I hire web designer in Pune directly or work with a team?',
     answer:
-      'A freelancer can be right for a tiny one-page job. For a business website, a small senior team is usually faster and safer: design, code, SEO, and support in one place, at a fixed price. If you do hire web designer in Pune directly, agree the scope and price in writing first.',
+      'A freelancer suits a one-page job. A business site needs design, development, SEO and support, which a small senior team covers for one fixed price. If you hire web designer in Pune yourself, agree the scope, dates and fee in writing first.',
   },
 ];
 
@@ -357,37 +357,37 @@ const PUNE_COMPARISON_COLUMNS = [
 ] as const;
 
 const PUNE_COMPARISON_ROWS = [
-  { feature: 'Delivery timeline', values: ['7 days', '6–16 weeks', '3–8 weeks (unreliable)', '1–2 weeks (you build it)'] },
+  { feature: 'Time from brief to launch', values: ['7 days', '6–16 weeks', '3–8 weeks (unreliable)', '1–2 weeks (you build it)'] },
   {
-    feature: 'Custom Figma design',
+    feature: 'Figma design made for you',
     values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="pa" kind="yes" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="tp" kind="no" />],
   },
   {
-    feature: 'Next.js (not WordPress)',
+    feature: 'Next.js codebase',
     values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="pa" kind="partial" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="tp" kind="no" />],
   },
   {
-    feature: 'Technical SEO built in',
+    feature: 'Schema and metadata done',
     values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="pa" kind="partial" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="tp" kind="no" />],
   },
   {
-    feature: 'Lighthouse 90+ on mobile',
+    feature: 'Lighthouse 90+ on a phone',
     values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="pa" kind="partial" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="tp" kind="no" />],
   },
   {
-    feature: 'GA4 + GTM wired up',
+    feature: 'GA4 and Tag Manager live',
     values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="pa" kind="partial" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="tp" kind="no" />],
   },
   {
-    feature: 'Transparent, fixed pricing',
+    feature: 'Written price up front',
     values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="pa" kind="no" />, <CompareIcon key="fr" kind="partial" />, <CompareIcon key="tp" kind="yes" />],
   },
   {
-    feature: 'Full codebase to your GitHub',
+    feature: 'Repository moved to you',
     values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="pa" kind="partial" />, <CompareIcon key="fr" kind="yes" />, <CompareIcon key="tp" kind="no" />],
   },
   {
-    feature: '7-day delivery',
+    feature: 'Live within seven days',
     values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="pa" kind="no" />, <CompareIcon key="fr" kind="no" />, <CompareIcon key="tp" kind="no" />],
   },
 ];
@@ -428,48 +428,48 @@ export default function PuneWebDesignPage() {
         <Hero
         formSlot={<HeroInlineForm region="in" source="web_design_pune_hero" />}
           eyebrow="WEB DESIGN · PUNE"
-          headline="Website Design in Pune That Wins B2B Tenders, Not Just Page Views"
-          lead="Pune is India's #2 IT export hub, the auto OEM and tier-1 supplier capital, and the Oxford of the East with 200+ engineering and management colleges. IT firms in Hinjewadi compete with Bangalore for global tenders, auto suppliers in Chakan compete on capability, and D2C brands in Koregaon Park compete with Mumbai. FactoryJet builds Figma-designed, Next.js-built websites with 7-day delivery, your codebase delivered in full."
+          headline="Website Design in Pune for Software Firms, Auto Suppliers and Institutes"
+          lead="Pune sells software to the world, makes parts for carmakers in Chakan and Pimpri-Chinchwad, and teaches students from across India. Each of those buyers checks a website for something different. FactoryJet designs in Figma, builds on Next.js, launches in 7 days and hands over the full code."
           secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
-          trustItems={['Figma-designed websites', '7-day delivery', '500+ businesses built']}
+          trustItems={['Designed in Figma', '7-day delivery', '500+ businesses built']}
           rightSlot={<HeroBrowserMockup badgeCity="Pune" />}
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
-        <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
+        <LogoBar tagline="500+ companies in India, the US, the UK and the UAE run sites we built" />
 
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
           headline="500+ websites built. 12 years of web engineering. 7-day delivery."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+          description="Our builds range from Pune engineering firms to UK service brands and US Shopify stores. Every project gets a fixed price, a 7-day delivery date and a handover where the code moves into the client's own GitHub."
         />
 
         {/* ── 4. CITY CONTEXT ──────────────────────────────────────────────── */}
         <CityContextSection
           eyebrow="PUNE MARKET"
-          headline="The Oxford of the East, Now a Premier Tech & Auto Hub"
+          headline="Software, Car Parts and Classrooms: Pune's Three Engines"
           leadParagraphs={[
-            "Pune has transformed from a pensioner's paradise into one of India's most dynamic business cities. With thousands of technology companies in the Hinjewadi and Kharadi IT corridors, a massive automotive cluster in Chakan and Pimpri-Chinchwad, and 200+ engineering and management colleges, Pune sits at a rare intersection of talent, manufacturing, and innovation.",
-            "This diversity creates a web design challenge unique to Pune: an OEM tier-1 supplier in Chakan needs a completely different site from a SaaS startup in Hinjewadi, different trust signals, different buyer journeys, different conversion flows. A coaching institute needs a different mobile experience from a premium D2C brand in Koregaon Park. FactoryJet builds for all of them, because we start every project with the buyer in mind, not the template.",
-            "In a city where competition is intense across every sector, your website is often the first, and sometimes only, impression you make on a client, partner, or hire. A slow, outdated site costs you business. A fast, well-structured one builds authority before a single call is made.",
+            "Pune runs on three industries. Software firms fill the Rajiv Gandhi Infotech Park at Hinjewadi and the parks at Kharadi and Magarpatta. Carmakers, two-wheeler makers and their suppliers work out of Chakan, Talegaon, Bhosari and Pimpri-Chinchwad. Colleges, universities and coaching classes earned the city its Oxford of the East name.",
+            "These buyers want different things from a website. An OEM purchase team wants machine lists, quality approvals and a part range. A client abroad hiring a software vendor wants case studies and delivery process. A student wants batch timings and fees on a phone screen. We decide which of these the site serves before drawing a single screen.",
+            "Pune buyers often meet you on the website before anyone speaks to you. A slow or dated site loses that buyer quietly. A quick site that answers their questions gets the call.",
           ]}
           stats={[
             {
               value: '#2',
-              label: "India's IT export hub by revenue, after Bangalore",
+              label: "Pune's rank among India's IT export cities, behind Bangalore",
               sourceUrl: 'https://stpi.in/',
               sourceLabel: 'STPI',
             },
             {
               value: '200+',
-              label: 'Engineering & management colleges in and around Pune',
+              label: 'Engineering and management colleges in the Pune area',
               sourceUrl: 'https://www.aicte-india.org/',
               sourceLabel: 'AICTE',
             },
             {
               value: '₹5.5L Cr',
-              label: 'Pune metro GDP: one of India\'s largest urban economies',
+              label: "Estimated output of the Pune metro economy",
               sourceUrl: 'https://mospi.gov.in/',
               sourceLabel: 'MoSPI',
             },
@@ -479,29 +479,29 @@ export default function PuneWebDesignPage() {
         {/* ── 5. SERVICE EXPLANATION (two buyer types) ─────────────────────── */}
         <ServiceExplanation
           eyebrow="WEB DESIGN · PUNE"
-          headline="Pune Has Two Speeds, We Design for Both"
-          lead="Pune's economy spans enterprise IT services, fast-moving startups, industrial manufacturers, and a thriving education sector. Each evaluates and converts differently, so each needs a tailored web strategy. FactoryJet builds for both speeds."
+          headline="Long Sales Cycles and Quick Decisions in the Same City"
+          lead="Some Pune buyers take months and involve a committee. Others pick a class or a café on a phone in seconds. We plan the site around the buyer you sell to."
           body={
             <>
               <p>
-                For Pune&apos;s IT, auto, and manufacturing firms, in Hinjewadi, Kharadi, Chakan, and PCMC,
-                a website needs to project capability, technical depth, and credibility. Enterprise buyers
-                and OEM procurement teams research vendors with scrutiny before a call. The site must answer
-                their due-diligence questions clearly: capabilities, certifications, case studies, client
-                logos, and a frictionless RFQ or enquiry form. We build these with authority-first
-                architecture, product and datasheet systems, and lead flows designed for longer B2B cycles.
+                Software companies in Hinjewadi and Kharadi and component makers in Chakan and PCMC
+                sell to careful buyers. A client in Germany or an OEM vendor-development team
+                will check certifications, process maturity, case studies and client names before
+                replying to you. We build these sites around evidence: capability pages,
+                datasheet downloads, quality approvals and an RFQ form that collects what your
+                sales engineer needs to quote.
               </p>
               <p>
-                For Pune&apos;s D2C brands, coaching institutes, and consumer businesses in Koregaon Park,
-                Baner, Aundh, and Kalyani Nagar, the challenge is the opposite. Consumers and students arrive
-                on mobile and decide in seconds. The site needs to load under 1.5 seconds on 4G, present the
-                product, programme, or service above the fold, and make the next step obvious. We build these
-                mobile-first, at 375px before 1440px, with Lighthouse 90+ performance before launch.
+                Coaching classes, cafés, boutiques and consumer brands in Koregaon Park, Baner,
+                Aundh and Kalyani Nagar meet people who decide fast. A student or shopper lands
+                from Instagram or Maps, and the page has to open in under 1.5 seconds on 4G,
+                show the course or product at once and put the enquiry button under the thumb.
+                We design at 375px first and hold every build to Lighthouse 90+ before launch.
               </p>
               <p>
-                Every FactoryJet Pune project covers discovery, Figma prototyping, Next.js development, SEO,
-                GA4, and a 30-day support window. You leave with a codebase you own, a design system you keep,
-                and a site built to rank, not just to look good in a mockup.
+                Both kinds of Pune project include discovery, Figma screens, Next.js code, SEO,
+                GA4 and 30 days of support. Code, design files and accounts all stay in your
+                name after launch.
               </p>
             </>
           }
@@ -509,13 +509,13 @@ export default function PuneWebDesignPage() {
             <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
               <div className="border-b border-fj-neutral-100 px-7 py-4">
                 <p className="font-fj-mono font-medium uppercase text-fj-neutral-400" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
-                  Two buyer types. One framework.
+                  Pune buyer groups
                 </p>
               </div>
               <div className="divide-y divide-fj-neutral-100">
                 {[
-                  { type: 'IT / Auto / B2B', need: 'Authority + capability + RFQ', area: 'Hinjewadi · Kharadi · Chakan · PCMC', colour: '#F05A28' },
-                  { type: 'D2C / Education / Consumer', need: 'Speed + mobile + instant CTA', area: 'Koregaon Park · Baner · Aundh', colour: '#0F0F12' },
+                  { type: 'Software / Auto / B2B', need: 'Evidence, specs and an RFQ', area: 'Hinjewadi · Kharadi · Chakan · PCMC', colour: '#F05A28' },
+                  { type: 'Students / Shoppers', need: 'Quick load, phone screens, one button', area: 'Koregaon Park · Baner · Aundh', colour: '#0F0F12' },
                 ].map((row) => (
                   <div key={row.type} className="px-7 py-5">
                     <div className="flex items-center gap-2 mb-2">
@@ -530,7 +530,7 @@ export default function PuneWebDesignPage() {
               <div className="border-t border-fj-neutral-100 bg-fj-neutral-50 px-7 py-5">
                 <div className="mb-2 h-[3px] w-8 rounded-full bg-[#F05A28]" aria-hidden="true" />
                 <p className="fj-display font-semibold text-fj-ink" style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}>
-                  Same engineering quality. Strategy tailored to your buyer.
+                  One code standard, planned around the buyer.
                 </p>
               </div>
             </div>
@@ -540,23 +540,23 @@ export default function PuneWebDesignPage() {
         {/* ── 6. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
-          headline="Why Pune Businesses Choose FactoryJet Over Local Agencies"
-          lead="Local web agencies often take much longer to deliver and don't publish their rates upfront. FactoryJet gives you a fixed-price quote before you commit, puts 7-day delivery in writing, and builds in Next.js rather than WordPress, faster load times, no monthly plugin overhead, a codebase you own outright."
+          headline="What Pune Clients Get From FactoryJet"
+          lead="A fixed quote comes before any commitment. The launch date is written into the agreement. The site is built on Next.js, so there are no plugins to update, and the code belongs to you from day one."
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing.',
-              body: "Pune moves fast, talent, startups, and tenders do not wait. Waiting 16 weeks for an agency to deliver a website you briefed in spring is not a plan, it is a liability. FactoryJet delivers in 7 days, with the delivery date written into the project agreement. We have delivered on time on 97% of all projects.",
+              title: 'Seven days, agreed in writing',
+              body: "Admission seasons, trade shows and client pitches all run on fixed dates. A site that takes four months misses them. We commit to 7 days in the agreement. We have delivered on time on 97% of all projects.",
             },
             {
               icon: '🏗️',
-              title: 'Next.js, not WordPress. The performance gap is real.',
-              body: 'WordPress loads server-side PHP and fires 40–60 database queries per page load. Next.js generates static files served from Cloudflare CDN nodes near Pune and worldwide. The result: sub-1.5s load times on Indian 4G versus 4–6s for a typical WordPress site. For Pune businesses competing on Google Core Web Vitals signals, that gap directly affects rankings.',
+              title: 'Pre-built pages, quick on 4G',
+              body: 'WordPress normally runs PHP and dozens of database queries for each page view. Next.js prepares pages in advance and Cloudflare serves them as static files. On Indian 4G that is under 1.5 seconds compared with the 4–6 seconds typical of WordPress, and Core Web Vitals reward the faster site.',
             },
             {
               icon: '📋',
-              title: 'Fixed price. Agreed before we start.',
-              body: "We give you a fixed-price quote before you commit. No discovery fees, no 'it depends' quotes that take three weeks to arrive. Fixed price, fixed scope, agreed upfront. No surprise invoices after launch. No retainer required to keep your site running.",
+              title: 'A price that holds',
+              body: "You see the full price before you sign, and it only changes if the scope changes. No paid discovery stage, no extra bill after launch and no retainer needed to keep the site live.",
             },
           ]}
         />
@@ -564,22 +564,22 @@ export default function PuneWebDesignPage() {
         {/* ── 7. OUR PROCESS ───────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="How We Build Your Pune Website in 7 Days"
-          lead="Buyer strategy agreed before design. Mobile approval before development. SEO and analytics wired before launch."
+          headline="From Brief to a Live Pune Site in Seven Days"
+          lead="Buyer and page plan first, phone screens approved second, search and tracking set before launch."
           stages={PUNE_JOURNEY_STAGES}
-          closingNote="5 STAGES · 7 DAYS · NEXT.JS + CLOUDFLARE · GA4 STANDARD · ZERO DOWNTIME LAUNCH"
+          closingNote="PLAN · DESIGN · CODE · SEARCH SETUP · GO LIVE · SEVEN DAYS"
         />
 
         {/* ── 8. PORTFOLIO ─────────────────────────────────────────────────── */}
         <PortfolioShowcase
           eyebrow="RECENT WORK"
-          headline="What India's businesses look like after FactoryJet."
+          headline="Recent builds for Indian B2B companies"
           cards={[
             {
               industry: 'MEP / BIM Consulting · Pune',
               title: 'Formative Concepts | Pune',
               description:
-                'Formative Concepts is an MEP drafting and BIM consulting firm in Pune. FactoryJet rebuilt their website on WordPress with an authority-first architecture for B2B project enquiries, credentials display, project portfolio, and technical SEO targeting high-value engineering queries.',
+                'Formative Concepts is a Pune firm doing MEP drafting and BIM consulting. We rebuilt its website on WordPress around B2B project enquiries, with credentials up front, a project portfolio and technical SEO for engineering searches.',
               imageSrc: '/images/portfolio/formative-concepts.webp',
               stat1: 'B2B authority site',
               stat2: 'SEO + Next.js',
@@ -588,7 +588,7 @@ export default function PuneWebDesignPage() {
               industry: 'Wholesale Distribution · Commerceflo',
               title: 'Belle Maison | Mumbai',
               description:
-                'Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.',
+                'Belle Maison is a Mumbai wholesaler of artificial plants, flowers, flower runners, home décor and LED lighting. We built its Commerceflo B2B store: trade price tiers per buyer, quotes that convert into orders, and ordering from a customer account.',
               imageSrc: '/images/portfolio/belle-maison.webp',
               stat1: 'Lighthouse 95+',
               stat2: 'Commerceflo · B2B',
@@ -601,65 +601,65 @@ export default function PuneWebDesignPage() {
         {/* ── 9. COMPARISON TABLE ──────────────────────────────────────────── */}
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. Pune Agency vs. Freelancer vs. Template Builder"
-          lead="Not all web design options in Pune deliver the same output. Here is the honest comparison, scope, price, timeline, and what you own after launch."
+          headline="Pune Agency, Freelancer, Template or FactoryJet"
+          lead="The four common routes to a website in Pune, compared on speed, scope and what you keep once the site is live."
           pullQuote={{
             stat: '7 days',
-            caption: 'from kickoff to launch: the same Figma-first design, Next.js engineering, technical SEO, and Lighthouse audit as a big-agency project.',
+            caption: 'is our brief-to-launch time, and it still includes Figma screens, Next.js code, schema and a Lighthouse audit.',
           }}
           columns={PUNE_COMPARISON_COLUMNS}
           rows={PUNE_COMPARISON_ROWS}
-          footer="FactoryJet fixed-price contracts available for every scope. You get a clear quote up front after a free consultation."
+          footer="Every scope is priced as a fixed amount. One free call, then the written quote."
         />
 
         {/* ── 10. INDUSTRIES ───────────────────────────────────────────────── */}
         <IndustriesGrid variant="cards"
           eyebrow="PUNE × WEB DESIGN"
-          headline="Web Design for Pune's Key Industries"
-          lead="From Hinjewadi IT firms to Chakan auto suppliers to Koregaon Park D2C brands, Pune's economy spans industries with very different digital requirements. FactoryJet has built for each."
+          headline="Pune Industries We Build Websites For"
+          lead="Software houses, component makers, institutes, MSMEs, restaurants and advisers each need a different kind of site in Pune."
           sectors={[
             {
-              name: 'IT & Software',
-              description: 'Modern, authority-first websites for IT services companies, SaaS products, and tech startups in Hinjewadi, Kharadi, and Wakad, built to win global B2B tenders.',
-              example: 'IT services firms and SaaS startups across the Hinjewadi and Kharadi corridors competing for global mandates.',
+              name: 'Software & SaaS',
+              description: 'Sites for service companies and product teams in Hinjewadi, Kharadi and Wakad that show service lines, case studies and delivery process to overseas buyers.',
+              example: 'Software exporters and SaaS startups bidding for work from US and European clients.',
             },
             {
-              name: 'Automotive & Engineering',
-              description: 'B2B supplier portals, capability sites, and product catalogues for auto OEM suppliers and engineering firms in Chakan, Talegaon, and PCMC.',
-              example: 'Tier-1 and tier-2 automotive component manufacturers and engineering firms across the Chakan–PCMC belt.',
+              name: 'Auto Components & Engineering',
+              description: 'Capability sites, product catalogues and supplier portals for component makers in Chakan, Talegaon and PCMC who sell to vehicle makers.',
+              example: 'Tier-1 and tier-2 part suppliers and machine shops between Bhosari and Chakan.',
             },
             {
-              name: 'Education & EdTech',
-              description: 'Lead-generating websites for coaching institutes, colleges, and ed-tech platforms targeting Pune and Maharashtra, built to convert enquiries into admissions.',
-              example: 'JEE/NEET coaching, MBA prep, colleges, and ed-tech platforms across Pune, the Oxford of the East.',
+              name: 'Coaching, Colleges & EdTech',
+              description: 'Course pages, batch and fee details, and enquiry forms for institutes that recruit students from Pune and across Maharashtra.',
+              example: 'JEE and NEET coaching, MBA prep classes, private colleges and online learning platforms.',
             },
             {
-              name: 'Manufacturing & MSME',
-              description: 'Credibility-first websites for PCMC manufacturers, MSME exporters, and industrial suppliers, with technical SEO that surfaces capability to procurement buyers.',
-              example: 'Industrial suppliers and MSME exporters across Pimpri-Chinchwad and the wider Pune industrial belt.',
+              name: 'MSME Manufacturing',
+              description: 'Straightforward sites for PCMC workshops and small exporters, with product ranges, certifications and search pages that procurement buyers can find.',
+              example: 'Fabricators, tooling units and small exporters across Pimpri-Chinchwad and the Pune MIDC estates.',
             },
             {
-              name: 'D2C & Premium Retail',
-              description: 'Conversion-focused, mobile-first websites for D2C brands, hospitality, and lifestyle businesses in Koregaon Park, Kalyani Nagar, and Viman Nagar.',
-              example: 'Premium D2C, lifestyle, and hospitality brands across Pune\'s upmarket eastern neighbourhoods.',
+              name: 'Cafés, Lifestyle & D2C',
+              description: 'Phone-first sites for restaurants, boutiques and direct-to-consumer brands in Koregaon Park, Kalyani Nagar and Viman Nagar.',
+              example: 'Restaurants, fashion labels and wellness brands in Pune\'s eastern suburbs.',
             },
             {
-              name: 'Professional Services',
-              description: 'Clean, trust-building websites for CA firms, law practices, HR consultancies, and management advisory businesses serving Pune\'s corporate ecosystem.',
-              example: 'CA and CS firms, corporate law practices, consulting firms, and HR companies across Pune.',
+              name: 'CA, Legal & Advisory',
+              description: 'Clear practice pages, partner profiles and booking forms for chartered accountants, lawyers, HR consultants and advisers working with Pune companies.',
+              example: 'CA and CS practices, company law firms, management consultants and HR agencies.',
             },
           ]}
         />
 
         <GetFreeQuoteCTA />
         {/* ── 12. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
-        <TestimonialsSection eyebrow="CLIENT RESULTS" headline="What India's founders say after we build their site" region="in" />
+        <TestimonialsSection eyebrow="CLIENT RESULTS" headline="Clients on their FactoryJet build" region="in" />
 
         {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Common Questions from Pune Businesses"
-          lead="The questions we answer on every Pune discovery call, answered here, without the runaround."
+          headline="Questions Pune Clients Ask Before Starting"
+          lead="Cost, timing, hosting, code ownership and Pune-specific questions, answered in plain terms."
           categories={PUNE_FAQ_CATEGORIES}
           items={PUNE_FAQ_ITEMS}
         />
@@ -668,11 +668,11 @@ export default function PuneWebDesignPage() {
         <FinalCTA
           variant="dark"
           eyebrow="READY TO START"
-          headline="Ready to Build a Website Pune Is Proud Of?"
-          sub="Pune's IT, auto, and education economy is home to some of India's most competitive businesses, and every one of them is competing for the same Google rankings, the same buyer first impression, and the same digital real estate. Every week without a high-performing website is ground you are giving to a competitor who showed up with a better one. Start today and have a sitemap ready within 72 hours."
+          headline="Get Your Pune Website Started"
+          sub="Share your brief and we will send a page plan within 72 hours, then a fixed quote. Seven days after kickoff the site can be live, quick on a phone and ready for Google to crawl."
           primaryCta={{ label: 'Book a Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price. 7-day delivery. Next.js. Your codebase delivered in full on launch day."
+          objectionHandler="Fixed quote, 7-day delivery, Next.js, and the full code in your GitHub at launch."
         />
 
         {/* India web-design city cross-links (silo fix, 31 Jul 2026) */}
