@@ -30,7 +30,7 @@ const PAGE_URL =
   'https://factoryjet.com/services/ai-agent-development/manufacturing-operations-agent';
 
 export const metadata: Metadata = {
-  title: 'Manufacturing Operations AI Agent for Plant Questions | FactoryJet',
+  title: 'Manufacturing Operations AI Agent for Plants | FactoryJet',
   description:
     'A read-only AI agent for plant managers. It answers floor questions, drafts shift handovers and rolls up downtime from your ERP, CMMS and historian data.',
   keywords: [
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Manufacturing Operations AI Agent for Plant Questions | FactoryJet',
+    title: 'Manufacturing Operations AI Agent for Plants | FactoryJet',
     description:
       'AI agents that read ERP, CMMS, historian and SOP data to answer floor questions, draft shift handovers and route issues. Read-only by design.',
     url: PAGE_URL,
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Manufacturing Operations AI Agent for Plant Questions | FactoryJet',
+    title: 'Manufacturing Operations AI Agent for Plants | FactoryJet',
     description:
       'Agents that answer floor questions from ERP, CMMS and historian data. Information layer only, never machine control.',
     images: ['https://factoryjet.com/og-default.png'],

@@ -26,7 +26,7 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 export const metadata: Metadata = {
   title: 'AI Integration Services: Connect AI to Tools | FactoryJet',
   description:
-    'AI integration services for US businesses: connect Claude, GPT and Gemini to your CRM, ERP, help desk and store through APIs or custom MCP servers. Get a fixed quote.',
+    'AI integration services: connect Claude, GPT and Gemini to your CRM, ERP, help desk and store through APIs or custom MCP servers. Get a fixed quote.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
@@ -154,7 +154,7 @@ const howToSchema = {
       '@type': 'HowToStep',
       position: 4,
       name: 'Stage 4 | Testing & Optimization',
-      text: 'We run comprehensive testing across edge cases, optimize for accuracy and latency, and add monitoring and alerting.',
+      text: 'We run full testing across edge cases, optimize for accuracy and latency, and add monitoring and alerting.',
     },
     {
       '@type': 'HowToStep',

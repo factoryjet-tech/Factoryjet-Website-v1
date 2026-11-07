@@ -23,9 +23,9 @@ import MidPageCTA from '@/components/v2/MidPageCTA';
 
 const PAGE_URL = 'https://factoryjet.com/services/shopify-development/korean-beauty-brands';
 const PAGE_MODIFIED = '2026-10-18';
-const TITLE = 'Shopify Agency for Korean Beauty Brands Launching in the US | FactoryJet';
+const TITLE = 'Shopify Agency for Korean Beauty Brands | FactoryJet';
 const DESCRIPTION =
-  'Shopify agency for Korean skincare and K-beauty brands entering the US: MoCRA-ready product data, US payments without Shopify Payments, sales tax, duties, Cafe24 to Shopify migration and English copy for US shoppers.';
+  'Shopify agency for K-beauty brands entering the US: MoCRA-ready product data, US payments without Shopify Payments, sales tax, duties, Cafe24 migration.';
 
 export const metadata: Metadata = {
   title: TITLE,

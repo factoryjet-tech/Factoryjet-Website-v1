@@ -244,7 +244,7 @@ export default function EcommerceForManufacturersPage() {
                   <p>
                     That makes it a different build from a consumer store. The catalog is technical rather than promotional.
                     Buyers search by exact specification rather than browsing. Pricing is negotiated per account rather than
-                    public. Crucially, the storefront connects directly to your ERP for part numbers, tier pricing, and live inventory.
+                    public. The storefront also connects directly to your ERP for part numbers, tier pricing, and live inventory.
                   </p>
                   <p>
                     Distributor e-commerce solves the same problem from the other side of the channel. It handles a broad catalog

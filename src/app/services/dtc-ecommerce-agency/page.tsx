@@ -13,7 +13,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/dtc-ecommerce-agency';
-const PAGE_TITLE = 'DTC Ecommerce Agency: Migration, Headless & Scale | FactoryJet';
+const PAGE_TITLE = 'DTC Ecommerce Agency: Migration & Headless | FactoryJet';
 const PAGE_DESC =
   'Ecommerce development partner for scaling DTC brands. Platform migration, headless builds, international expansion, and subscription commerce. Get a free audit.';
 const PAGE_MODIFIED = '2026-09-20';

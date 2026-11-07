@@ -34,7 +34,7 @@ import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 const CANONICAL_URL = 'https://factoryjet.com/services/ai-quoting-software';
 const PAGE_TITLE = 'AI Quoting Software or a Custom Quoting Agent | FactoryJet';
 const PAGE_DESC =
-  'AI quoting software compared with a custom quoting agent built on your own price list. Salesforce, HubSpot, DealHub and Paperless Parts pricing as published, and when a custom agent is the better fit.';
+  'AI quoting software compared with a custom quoting agent built on your price list, with Salesforce, HubSpot, DealHub and Paperless Parts pricing as published.';
 const PAGE_PUBLISHED = '2026-10-17';
 const PAGE_MODIFIED = '2026-10-17';
 const CHECKED_ON = '17 October 2026';

@@ -443,7 +443,7 @@ const SCHEDULING_FAQ_ITEMS = [
   {
     category: "process",
     question: "How do you test and evaluate scheduling agent performance before go-live?",
-    answer: "We run evaluation harness tests before launch. We test concurrent bookings and timezone shifts. We verify error recovery on network drops. Human in the loop reviews ensure system reliability."
+    answer: "We run evaluation tests before launch. We test concurrent bookings and timezone shifts. We verify error recovery on network drops. Human in the loop reviews ensure system reliability."
   },
   {
     category: "pricing",

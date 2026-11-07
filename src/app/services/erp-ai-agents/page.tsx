@@ -73,7 +73,7 @@ import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CANONICAL_URL = 'https://factoryjet.com/services/erp-ai-agents';
-const PAGE_TITLE = 'AI Agents for ERP: Odoo, NetSuite, SAP Business One | FactoryJet';
+const PAGE_TITLE = 'ERP AI Agents: Odoo, NetSuite, SAP Business One | FactoryJet';
 const PAGE_DESC =
   'We design, build and support AI agents inside Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs. They draft quotes, orders and bookkeeping for approval.';
 const PAGE_PUBLISHED = '2026-10-09';

@@ -382,7 +382,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'Will my SEO rankings survive a Magento migration?',
-    answer: `Yes, your rankings can survive intact with proper planning. We implement comprehensive 301 redirects for every legacy URL. We preserve URL paths and migrate all metadata and schema markup. We also submit clean XML sitemaps after launch. Careful planning protects your organic traffic.`,
+    answer: `Yes, your rankings can survive intact with proper planning. We implement 301 redirects for every legacy URL. We preserve URL paths and migrate all metadata and schema markup. We also submit clean XML sitemaps after launch. Careful planning protects your organic traffic.`,
     category: 'migration',
   },
   {

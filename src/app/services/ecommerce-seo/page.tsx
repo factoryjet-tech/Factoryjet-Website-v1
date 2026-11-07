@@ -184,13 +184,13 @@ const FAQ_GROUPS: ReadonlyArray<FaqGroup> = [
 const FAQ_FLAT = FAQ_GROUPS.flatMap((g) => g.items);
 
 export const metadata: Metadata = {
-  title: 'Best Ecommerce SEO Agency in USA: Rank Products & Collections | FactoryJet',
+  title: 'Ecommerce SEO Agency for Products & Collections | FactoryJet',
   description:
-    'FactoryJet is a US-focused ecommerce SEO agency. We optimize your Shopify, WooCommerce, and Magento collection and product pages so your store ranks, wins rich results, and grows revenue. Founder-led, month-to-month.',
+    'Ecommerce SEO agency for US Shopify, WooCommerce and Magento stores: collection and product pages that rank and win rich results. Founder-led, month-to-month.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Best Ecommerce SEO Agency in USA: Rank Products & Collections | FactoryJet',
+    title: 'Ecommerce SEO Agency for Products & Collections | FactoryJet',
     description:
       'A US-focused ecommerce SEO company and Shopify SEO agency. Collection and product page SEO, schema and rich results, technical ecommerce SEO. Reported in revenue. Founder-led, month-to-month.',
     url: 'https://factoryjet.com/services/ecommerce-seo',
@@ -199,7 +199,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Ecommerce SEO Agency in USA: Rank Products & Collections | FactoryJet',
+    title: 'Ecommerce SEO Agency for Products & Collections | FactoryJet',
     description:
       'A US-focused ecommerce SEO agency for Shopify, WooCommerce, and Magento. Collections, products, schema, technical. Reported in revenue.',
     images: ['https://factoryjet.com/og-default.png'],

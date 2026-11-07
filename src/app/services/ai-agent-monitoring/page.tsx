@@ -22,7 +22,7 @@ const PAGE_MODIFIED = '2026-10-31';
 const CANONICAL_URL = 'https://factoryjet.com/services/ai-agent-monitoring';
 const PAGE_TITLE = 'AI Agent Monitoring, Support & Maintenance | FactoryJet';
 const PAGE_DESCRIPTION =
-  'AI agent monitoring and support after launch: traces, evaluations, drift checks, model upgrades and fixes. What it includes, plan hours and first response times.';
+  'AI agent monitoring and support after launch: traces, evaluations, drift checks, model upgrades and fixes. What it covers, plan hours and first response times.';
 
 interface SupportPlan {
   name: string;

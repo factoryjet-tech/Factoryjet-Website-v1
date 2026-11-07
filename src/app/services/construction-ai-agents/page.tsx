@@ -64,7 +64,7 @@ import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CANONICAL_URL = 'https://factoryjet.com/services/construction-ai-agents';
-const PAGE_TITLE = 'AI for Construction: Custom Agents for Contractors | FactoryJet';
+const PAGE_TITLE = 'AI for Construction: Custom Contractor Agents | FactoryJet';
 const PAGE_DESC =
   'We design, build and support AI agents for US contractors: quotes from your price book, bid intake, submittals, phone answering and purchase orders.';
 const PAGE_PUBLISHED = '2026-10-11';

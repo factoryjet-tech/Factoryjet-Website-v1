@@ -185,7 +185,7 @@ const SPRINT_ROADMAP = [
   {
     phase: 'Phase 1: UX/UI Design & Design System Tokenization.',
     timeline: 'Weeks 1 - 2.',
-    desc: 'We translate your Figma or Adobe XD brand designs into a comprehensive e-commerce design system, defining responsive typographic scales, color tokens, and interactive component states.',
+    desc: 'We translate your Figma or Adobe XD brand designs into a complete e-commerce design system, defining responsive typographic scales, color tokens, and interactive component states.',
     deliverables: [
       'Complete desktop and mobile UX/UI wireframe and prototype sign-off.',
       'Design token dictionary (colors, typography, spacing, border radii, shadows).',
@@ -242,7 +242,7 @@ const SPRINT_ROADMAP = [
     timeline: 'Week 10.',
     desc: 'We perform deep speed profiling using Chrome DevTools and automated Lighthouse CI, verifying 95+ mobile performance scores across real iOS and Android devices.',
     deliverables: [
-      'Comprehensive cross-browser and cross-device automated regression testing.',
+      'Full cross-browser and cross-device automated regression testing.',
       'Core Web Vitals validation (LCP < 1.2s, CLS = 0.00, INP < 50ms on mobile).',
       'WCAG 2.1 AA accessibility compliance audit and keyboard navigation verification.',
       'Technical SEO schema verification (Product, AggregateOffer, BreadcrumbList, FAQPage).',
@@ -840,7 +840,7 @@ export default function ShopifyThemeDevelopmentPage() {
           </div>
         </section>
 
-        {/* COMPREHENSIVE 20+ PAA FAQS */}
+        {/* FULL 20+ PAA FAQS */}
         <section className="pp-section">
           <div className="pp-container" style={{ maxWidth: '900px' }}>
             <FAQ

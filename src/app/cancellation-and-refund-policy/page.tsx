@@ -7,7 +7,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 export const metadata: Metadata = {
   title: 'Cancellation & Refund Policy | FactoryJet Private Limited',
   description:
-    'Official Cancellation and Refund Policy of FactoryJet Private Limited. Governed by Indian Corporate Law, detailing subscription cancellation, 30-day AMC terms, 90-day custom build notice, and refund guidelines.',
+    'FactoryJet Private Limited cancellation and refund policy under Indian Corporate Law: subscription cancellation, 30-day AMC terms, 90-day build notice, refunds.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',

@@ -100,7 +100,7 @@ const FAQ_ITEMS = [
     category: 'basics',
     question: 'Can you migrate us onto Shopify Plus from another platform?',
     answer:
-      'Yes. We migrate stores from Adobe Commerce, Salesforce Commerce Cloud, BigCommerce, WooCommerce, and custom backends. Products, customers, order history, and SEO URLs transfer with comprehensive 301 redirect mapping. We focus on B2B contract pricing and account hierarchies. We reconcile every customer record before go-live.',
+      'Yes. We migrate stores from Adobe Commerce, Salesforce Commerce Cloud, BigCommerce, WooCommerce, and custom backends. Products, customers, order history, and SEO URLs transfer with full 301 redirect mapping. We focus on B2B contract pricing and account hierarchies. We reconcile every customer record before go-live.',
   },
   {
     category: 'basics',
@@ -214,7 +214,7 @@ const FAQ_ITEMS = [
     category: 'working',
     question: 'What happens after launch?',
     answer:
-      'We provide dedicated monthly engineering retainers post-launch. Retainers cover continuous checkout optimization, new Shopify Functions, ERP integration monitoring, and international expansion. If your team manages operations in-house, we provide comprehensive technical documentation and sprint-based support.',
+      'We provide dedicated monthly engineering retainers post-launch. Retainers cover continuous checkout optimization, new Shopify Functions, ERP integration monitoring, and international expansion. If your team manages operations in-house, we provide full technical documentation and sprint-based support.',
   },
   {
     category: 'engagement',

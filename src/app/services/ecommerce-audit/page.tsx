@@ -43,7 +43,7 @@ import { twinAlternates } from '@/data/hreflangMap';
 const CANONICAL_URL = 'https://factoryjet.com/services/ecommerce-audit';
 const PAGE_TITLE = 'Free Ecommerce Audit for US Online Stores | FactoryJet';
 const PAGE_DESC =
-  'Get a free ecommerce audit of your online store from FactoryJet. This free commerce audit checks page speed, checkout flow, mobile experience, and platform fit, then hands you a plain-English report you keep either way.';
+  'Get a free ecommerce audit of your online store. We check page speed, checkout flow, mobile experience and platform fit, then hand you a plain-English report.';
 const PAGE_MODIFIED = '2026-09-20';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 

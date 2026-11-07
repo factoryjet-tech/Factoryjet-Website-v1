@@ -21,7 +21,7 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
    HomeFaqs.ts feeds both the visible accordion and the FAQPage schema below.
 ───────────────────────────────────────────────────────────────────────────── */
 
-const TITLE = 'Ecommerce Development Company for DTC & B2B Brands | FactoryJet';
+const TITLE = 'Ecommerce Development Company for DTC & B2B | FactoryJet';
 const DESCRIPTION =
   'Ecommerce development company for DTC & B2B brands: stores, B2B portals, and the AI agents that keep them running. Plus AI SEO and web design. Get an audit.';
 

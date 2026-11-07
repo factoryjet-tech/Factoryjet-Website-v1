@@ -179,7 +179,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'telematics',
     question: 'Can the agent distinguish between an ISOBUS wiring fault and a genuine sensor failure during diagnosis?',
     answer:
-      'Yes. The agent matches SPN and FMI codes against harness patterns. It checks pin resistance ranges. It evaluates sensor fault signatures from OEM manuals. It directs technicians to check wiring or replace sensors. This cuts diagnostic guesswork during harvest.',
+      'Yes. The agent matches SPN and FMI codes against wiring patterns. It checks pin resistance ranges. It evaluates sensor fault signatures from OEM manuals. It directs technicians to check wiring or replace sensors. This cuts diagnostic guesswork during harvest.',
   },
   {
     category: 'precision',

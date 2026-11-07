@@ -14,9 +14,9 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/ai-call-center-agents';
-const PAGE_TITLE = 'AI Call Center Agents: Custom Voice AI for Contact Centers | FactoryJet';
+const PAGE_TITLE = 'AI Call Center Agents: Custom Voice AI | FactoryJet';
 const PAGE_DESC =
-  "FactoryJet builds and supports custom AI voice agents on your call center's own phone system and CRM: service calls, overflow, after-hours, reminders and warm transfer to a person.";
+  "FactoryJet builds custom AI voice agents on your call center's phone system and CRM: service calls, overflow, after-hours, reminders and warm transfers.";
 const PAGE_MODIFIED = '2026-10-11';
 const OG_IMAGE = 'https://factoryjet.com/images/us/ai-call-center-agents/hero-contact-center-team-og.jpg';
 

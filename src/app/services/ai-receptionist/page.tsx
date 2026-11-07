@@ -13,9 +13,9 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/ai-receptionist';
-const PAGE_TITLE = 'AI Receptionist | Custom 24/7 AI Phone Answering | FactoryJet';
+const PAGE_TITLE = 'AI Receptionist | Custom 24/7 Phone Answering | FactoryJet';
 const PAGE_DESC =
-  'A custom AI receptionist that answers every call 24/7, qualifies the caller, and books the job straight into your CRM or scheduling software. Built for your business, not a template. Get a free call audit.';
+  'A custom AI receptionist that answers every call 24/7, qualifies the caller and books the job into your CRM or scheduling software. Get a free call audit.';
 const PAGE_MODIFIED = '2026-10-11';
 
 // Single source of truth for the breadcrumb trail. Feeds both the visible
@@ -1390,7 +1390,7 @@ export default function AiReceptionistPage() {
                 <div>
                   <h3 className="text-lg font-bold text-[#14110F] mb-2">Parallel Testing &amp; Zero-Downtime Cutover.</h3>
                   <p className="text-sm text-[#46403B] leading-relaxed">
-                    We run the agent through a call-scenario evaluation harness with your own front-line team before it ever touches a real caller. Background noise handling gets calibrated on real recordings. Your phone number stays live the entire time, since we route after-hours or overflow lines first and cut over fully once every scenario passes.
+                    We run the agent through a call-scenario evaluation suite with your own front-line team before it ever touches a real caller. Background noise handling gets calibrated on real recordings. Your phone number stays live the entire time, since we route after-hours or overflow lines first and cut over fully once every scenario passes.
                   </p>
                 </div>
               </li>

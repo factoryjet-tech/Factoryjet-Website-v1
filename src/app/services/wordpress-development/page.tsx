@@ -370,7 +370,7 @@ const FAQ_ITEMS = [
     category: 'what-is-wp',
     question: 'Is WordPress still the best choice for a small business website?',
     answer:
-      'WordPress is still the most flexible CMS available for small businesses in 2025. It powers 43% of all websites and has the most robust plugin ecosystem, the strongest SEO support, and the most extensive community of developers. The choice isn\'t between WordPress and something better, it\'s between WordPress built correctly (custom theme, minimal plugins, good hosting) and WordPress built incorrectly (page builders, bloated themes, shared hosting). A properly built custom WordPress site outperforms most SaaS website builders on performance, SEO, and flexibility. The businesses that have bad experiences with WordPress almost always have bad experiences with their implementation, not with the platform itself.',
+      'WordPress is still the most flexible CMS available for small businesses in 2025. It powers 43% of all websites and has the largest plugin ecosystem, the strongest SEO support, and the most extensive community of developers. The choice isn\'t between WordPress and something better, it\'s between WordPress built correctly (custom theme, minimal plugins, good hosting) and WordPress built incorrectly (page builders, bloated themes, shared hosting). A properly built custom WordPress site outperforms most SaaS website builders on performance, SEO, and flexibility. The businesses that have bad experiences with WordPress almost always have bad experiences with their implementation, not with the platform itself.',
   },
   {
     category: 'what-is-wp',

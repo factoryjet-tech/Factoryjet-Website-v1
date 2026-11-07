@@ -41,7 +41,7 @@ import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 const CANONICAL_URL = 'https://factoryjet.com/services/ai-automation';
 const PAGE_TITLE = 'AI Automation Agency in the USA | FactoryJet';
 const PAGE_DESC =
-  'AI automation for operations teams: orders, invoices, leads and reports that move between your tools without retyping. Built in n8n, Make or Zapier. Fixed price in writing, and you own every workflow.';
+  'AI automation for operations teams: orders, invoices, leads and reports moved between tools without retyping. Built in n8n, Make or Zapier at a fixed price.';
 const PAGE_MODIFIED = '2026-10-31';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const LAYER3_URL = 'https://www.layer3labs.io/roi/ai-automation-agency-cost';

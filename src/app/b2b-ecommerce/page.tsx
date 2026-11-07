@@ -30,13 +30,13 @@ const HOUSE_TERMS = [
 ] as const;
 
 export const metadata: Metadata = {
-  title: 'B2B Ecommerce Website Development for DTC + B2B Brands | FactoryJet',
+  title: 'B2B Ecommerce Website Development Agency | FactoryJet',
   description:
-    'B2B ecommerce website development for brands running DTC and B2B on one system: tiered pricing, net terms, account hierarchies, EDI, punchout, and ERP integration. Free consultation.',
+    'B2B ecommerce website development for brands running DTC and B2B on one system: tiered pricing, net terms, EDI, punchout and ERP integration. Free consultation.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'B2B Ecommerce Website Development for DTC + B2B Brands | FactoryJet',
+    title: 'B2B Ecommerce Website Development Agency | FactoryJet',
     description: 'B2B ecommerce website development for brands running DTC and B2B on one system, with tiered pricing, net terms, EDI, punchout, and ERP integration.',
     url: 'https://factoryjet.com/b2b-ecommerce',
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet, B2B e-commerce development agency' }],
@@ -404,7 +404,7 @@ export default function B2BEcommercePage() {
                 keyTakeaways={[
                   'Matrix SKU entry grids allow entering multi-variant quantities simultaneously',
                   'Replaces manual email/PDF order processing with instant digital order capture',
-                  'Empowers sales reps to focus on strategic business development instead of typing orders',
+                  'Frees sales reps to focus on business development instead of typing orders',
                 ]}
                 citationSource="FactoryJet Digital Commerce Benchmark (2026)"
               />

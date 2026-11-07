@@ -13,6 +13,12 @@ type Props = {
   params: Promise<{ slug: string }>
 }
 
+// Meta descriptions kept to 160 characters; the full bio stays on the page and in schema.
+const META_DESCRIPTIONS: Record<string, string> = {
+  'bhavesh-barot':
+    'Bhavesh Barot is Founder & CEO of FactoryJet, which has served 500+ businesses with online stores, B2B portals, AI agents and AI search.',
+}
+
 export async function generateStaticParams() {
   return getAllAuthors().map((author) => ({
     slug: author.slug,
@@ -31,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `${author.name} | ${author.jobTitle}, FactoryJet Web Design`,
-    description: author.bio,
+    description: META_DESCRIPTIONS[author.slug] ?? author.bio,
     authors: [{ name: author.name }],
     robots: {
       index: true,
@@ -48,7 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'profile',
       siteName: 'FactoryJet',
       title: `${author.name} - ${author.jobTitle}`,
-      description: author.bio,
+      description: META_DESCRIPTIONS[author.slug] ?? author.bio,
       url: `https://factoryjet.com/author/${resolvedParams.slug}`,
       images: [
         {

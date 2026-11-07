@@ -15,7 +15,7 @@ import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 const CANONICAL_URL = 'https://factoryjet.com/services/property-management-ai-agents';
 const PAGE_TITLE = 'AI Leasing Agents for Property Management | FactoryJet';
 const PAGE_DESC =
-  'Custom AI leasing agents for property management companies. Answer prospect calls, texts, and web chats 24/7, qualify leads, and sync live with AppFolio, Yardi, and RealPage. Get an audit.';
+  'Custom AI leasing agents for property managers. They answer prospect calls, texts and web chats 24/7, qualify leads and sync with AppFolio, Yardi and RealPage.';
 const PAGE_MODIFIED = '2026-10-11';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
