@@ -29,6 +29,29 @@ import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
    assistant runs are answered first in the FAQ. FactoryJet had no construction
    page.
 
+   Strengthened 2026-11-08 after the 8 Nov industry demand research
+   (docs/reports/2026-11-08-industry-demand.md): "ai for construction" 2,400
+   ($29 CPC), "construction ai software" 720 ($76), "ai construction
+   estimating" 210 ($48). AI answers to "which companies build custom AI
+   agents for construction" and "what AI tools help GCs with estimating, bids
+   and RFIs" named software (Togal, Procore, Autodesk, Trunk Tools, Beam AI,
+   STACK) plus RTS Labs. Added: RFIs as a job, the "works with the software
+   you already use" section (Procore REST API and Autodesk Forma APIs, read
+   8 Nov), four FAQ items, and the link to the construction buyer's guide.
+   Search Console before the change: 4 impressions in 90 days, so the title
+   change risks nothing that ranks.
+
+   Re-check of 2026-11-08: every vendor page in SRC was re-read except Intuit's
+   developer reference (developer.intuit.com would not render that day; the
+   Estimate, PurchaseOrder and Web Connector lines rest on the 11 Oct reading).
+   Procore's developer docs moved from procore.github.io (now 404) to
+   developers.procore.com, read in a browser. Procore's "Bid Analyzer" agent is
+   now named "Bid Analyst Agent". Autodesk's AI page no longer says in words
+   that Autodesk Construction Cloud is part of Autodesk Forma, so the page now
+   says only what it shows. Census figure moved to the September 2026 release.
+   Search-result findings (Google SERPs, People Also Ask) are still from
+   11 Oct and are dated SEARCHED_ON.
+
    Truth rules for anyone editing this file:
    - Every fact about another company (feature names, limits, prices, numbers)
      was read on that company's own page on 2026-10-11 and links to it through
@@ -64,12 +87,15 @@ import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CANONICAL_URL = 'https://factoryjet.com/services/construction-ai-agents';
-const PAGE_TITLE = 'AI for Construction: Custom Contractor Agents | FactoryJet';
+const PAGE_TITLE = 'AI for Construction: Estimating, Bids & RFIs | FactoryJet';
 const PAGE_DESC =
-  'We design, build and support AI agents for US contractors: quotes from your price book, bid intake, submittals, phone answering and purchase orders.';
+  'Custom AI agents for US contractors: AI construction estimating from your price book, bid summaries, RFIs and submittals, connected to Procore or Autodesk.';
 const PAGE_PUBLISHED = '2026-10-11';
-const PAGE_MODIFIED = '2026-10-11';
-const CHECKED_ON = '11 Oct 2026';
+const PAGE_MODIFIED = '2026-11-08';
+const CHECKED_ON = '8 Nov 2026';
+/** Date of the ten US Google searches and People Also Ask pulls. Not re-run on 8 Nov. */
+const SEARCHED_ON = '11 Oct 2026';
+const BUYERS_GUIDE = '/blog/ai-agents-real-estate-construction-buyers-guide-2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const IMG = '/images/us/construction-ai-agents';
@@ -79,7 +105,11 @@ export const metadata: Metadata = {
   description: PAGE_DESC,
   keywords: [
     'ai for construction',
+    'construction ai software',
     'ai agents for construction',
+    'ai agents in construction',
+    'ai in construction',
+    'ai for construction project management',
     'ai for contractors',
     'ai estimating software',
     'ai construction estimating software',
@@ -167,19 +197,21 @@ const serviceSchema = {
   '@id': `${CANONICAL_URL}#service`,
   name: 'AI Agent Development for Construction Companies and Contractors',
   serviceType:
-    'AI agents for construction companies, estimating and quoting automation, bid and RFP intake, submittal and document handling, AI voice agents for contractor phone lines, purchase order automation, vendor bill matching and job cost coding',
+    'AI agents for construction companies, AI construction estimating and quoting, bid and RFP intake, RFI drafting, submittal and document handling, AI voice agents for contractor phone lines, purchase order automation, vendor bill matching and job cost coding',
   provider: ORG_REF,
   areaServed: { '@type': 'Country', name: 'United States' },
   description:
-    'FactoryJet designs, builds, tests and supports AI agents for US general contractors, specialty contractors, home builders and building suppliers. An agent reads what arrives, such as a request for a quote, an invitation to bid, a submittal, a supplier invoice or a phone call, looks up the price book and job records, and saves a draft for a person to approve. Work covers checking what the contractor already owns, building with read-only access first, a period of running beside the team, launch and support after launch.',
+    'FactoryJet designs, builds, tests and supports AI agents for US general contractors, specialty contractors, home builders and building suppliers. The agents work alongside the construction software a contractor already uses, such as Procore, Autodesk Forma, Sage or QuickBooks, through each vendor\'s published API. An agent reads what arrives, such as a request for a quote, an invitation to bid, a question from the field that needs an RFI, a submittal, a supplier invoice or a phone call, looks up the price book and job records, and saves a draft for a person to approve. Work covers checking what the contractor already owns, building with read-only access first, a period of running beside the team, launch and support after launch.',
   url: CANONICAL_URL,
 };
 
 /* ── Sources. One map, used by every inline source link (the `short` label) AND
    by the visible "Sources" list near the foot of the page (the full `label`).
    Each URL was opened on 2026-10-11 and the supporting sentence read before the
-   claim was written. The ledger with the quoted words is in the build notes. ── */
-const PROCORE_DOCS = 'https://procore.github.io/documentation';
+   claim was written. All were re-read on 2026-11-08 except the three Intuit
+   developer pages, which would not render that day. ── */
+const PROCORE_DOCS = 'https://developers.procore.com/documentation';
+const PROCORE_REST = 'https://developers.procore.com/reference/rest';
 const INTUIT_API = 'https://developer.intuit.com/app/developer/qbo/docs/api/accounting/all-entities';
 
 const SRC = {
@@ -218,10 +250,25 @@ const SRC = {
     label: 'Procore developer documentation: How Webhooks Work',
     url: `${PROCORE_DOCS}/webhooks`,
   },
+  procoreRfiApi: {
+    short: 'Procore API: RFIs',
+    label: 'Procore REST API reference: RFIs (List RFIs, Create RFI; read in a browser)',
+    url: `${PROCORE_REST}/rfis?version=latest`,
+  },
+  procoreSubmittalApi: {
+    short: 'Procore API: Submittals',
+    label: 'Procore REST API reference: Submittals (create, show, update, delete; read in a browser)',
+    url: `${PROCORE_REST}/submittals?version=latest`,
+  },
   autodeskAi: {
     short: 'Autodesk: AI for construction',
     label: 'Autodesk: AI for Construction, Autodesk Forma',
     url: 'https://construction.autodesk.com/workflows/artificial-intelligence-construction/',
+  },
+  autodeskApi: {
+    short: 'Autodesk: Forma APIs',
+    label: 'Autodesk Platform Services: Forma APIs introduction (RFIs API, Submittals API; read in a browser)',
+    url: 'https://aps.autodesk.com/en/docs/acc/v1/overview/introduction/',
   },
   sageConstruction: {
     short: 'Sage: Sage for Construction',
@@ -325,7 +372,7 @@ const SRC = {
   },
   census: {
     short: 'US Census Bureau: construction spending',
-    label: 'US Census Bureau: Monthly Construction Spending, August 2026 (release CB26-158, 1 Oct 2026)',
+    label: 'US Census Bureau: Monthly Construction Spending, September 2026 (release CB26-176, 2 Nov 2026)',
     url: 'https://www.census.gov/construction/c30/current/index.html',
   },
   productCrafters: {
@@ -363,7 +410,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'jobs',
     question: 'Which vendors offer pay-as-you-go pricing for AI voice agents suited for seasonal construction spikes?',
     answer:
-      "Retell AI, Bland and Vapi bill by the minute with no monthly minimum on their entry plans, per their pricing pages on 11 Oct 2026. For a seasonal spike, compare how many calls each runs at once. Retell AI lists 20 free concurrent calls, Bland's Start plan 10 with a cap of 100 calls a day, and Vapi 4 on its usage plan. Goodcall bills per caller served and Smith.ai per call. All five are products you set up yourself. For a custom voice agent, FactoryJet quotes the build, and any support you choose, as fixed prices in writing.",
+      "Retell AI, Bland and Vapi bill by the minute with no monthly minimum on their entry plans, per their pricing pages on 8 Nov 2026. For a seasonal spike, compare how many calls each runs at once. Retell AI lists 20 free concurrent calls, Bland's Start plan 10 with a cap of 100 calls a day, and Vapi 4 on its usage plan. Goodcall bills per caller served and Smith.ai per call. All five are products you set up yourself. For a custom voice agent, FactoryJet quotes the build, and any support you choose, as fixed prices in writing.",
   },
   {
     category: 'jobs',
@@ -375,7 +422,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'jobs',
     question: 'How is AI being used in construction?',
     answer:
-      "Mostly for paperwork. Takeoff tools measure drawings. Procore's agent library, which listed 20 pre-built agents when we counted on 11 Oct 2026, drafts RFIs (requests for information), checks submittals against specs and turns field photos and voice notes into daily logs. Autodesk generates submittal logs and fills a bid board from forwarded bids. Custom agents cover work that crosses systems, such as quotes from your price book, phone answering and purchase orders.",
+      "Mostly for paperwork. Takeoff tools measure drawings. Procore's agent library, which listed 20 pre-built agents when we counted on 8 Nov 2026, drafts RFIs (requests for information), checks submittals against specs and turns field photos and voice notes into daily logs. Autodesk generates submittal logs and fills a bid board from forwarded bids. Custom agents cover work that crosses systems, such as quotes from your price book, phone answering and purchase orders.",
   },
   {
     category: 'jobs',
@@ -393,7 +440,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'jobs',
     question: 'What is the best AI-based construction management software?',
     answer:
-      'We build agents and do not sell or rank management software. Two platforms publish what their AI does. Procore lists pre-built agents for RFIs, submittals, daily logs and bid leveling, and puts Agent Studio, for configuring your own, in its Enterprise tier. Autodesk Forma, the new name for Autodesk Construction Cloud, includes Autodesk Assistant and automatic submittal logs. Choose by where your project records already live.',
+      'We build agents and do not sell or rank management software. Two platforms publish what their AI does. Procore lists pre-built agents for RFIs, submittals, daily logs and bid leveling, and puts Agent Studio, for configuring your own, in its Enterprise tier. Autodesk now sells its construction tools under the Autodesk Forma name, and its AI page describes Autodesk Assistant and automatic submittal logs. Choose by where your project records already live.',
   },
   {
     category: 'jobs',
@@ -407,12 +454,30 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     answer:
       'Parts of them. A submittal is the product data, shop drawings or samples sent for approval before material is ordered. An agent can list what each spec section requires, match manufacturer cut sheets to it, flag a mismatch and keep the log current. Review and approval stay with your project engineer and the design team. If you run Procore, its Submittal Review Agent already cross-checks submittals against specs and contracts.',
   },
+  {
+    category: 'jobs',
+    question: 'Can AI write RFIs?',
+    answer:
+      "It can draft them. An RFI (request for information) is a formal question to the design team when the drawings or specs are unclear or conflict. An agent can turn a superintendent's photo, voice note or email into a draft RFI with the sheet number, the spec section and the question written plainly, then check the log for an RFI that already asks the same thing. A person reviews and sends it. Procore's RFI Agent drafts RFIs for review inside Procore, and Procore's API lets a custom app create RFIs as well.",
+  },
+  {
+    category: 'jobs',
+    question: 'What is construction AI software?',
+    answer:
+      'It is any construction product that uses AI to do part of the work. It falls into three groups. Takeoff and estimating tools such as Togal, Kreo, Beam AI and STACK measure drawings. Project platforms such as Procore and Autodesk Forma ship assistants and agents for RFIs, submittals and daily logs. Accounting systems such as Sage and QuickBooks add AI for estimates, bills and month-end close. A custom agent is a fourth option, built when the job uses your own prices and rules or crosses two of these systems.',
+  },
   // ── Estimating and takeoff ───────────────────────────────────────
+  {
+    category: 'estimating',
+    question: 'What is AI construction estimating?',
+    answer:
+      'It is software doing the counting, reading and first pricing of an estimate. A takeoff tool measures quantities from the drawings. An agent reads the request and the spec, prices each line from your own item list, flags the lines it cannot match and saves a draft estimate in your estimating or accounting system. Your estimator reviews every line and keeps the judgment calls on scope, exclusions and margin.',
+  },
   {
     category: 'estimating',
     question: 'Can ChatGPT do construction takeoffs?',
     answer:
-      'In our view a general chat assistant is the wrong tool for it, and we would not price a job from its count. Measuring to scale is what takeoff tools are made for, and they publish their accuracy. Togal states up to 98% on floor plans. Kreo says its Auto Measure 3.0 lands within 94% of the real geometry on busy plans. This question appeared on five of the ten Google searches we ran on 11 Oct 2026.',
+      'In our view a general chat assistant is the wrong tool for it, and we would not price a job from its count. Measuring to scale is what takeoff tools are made for, and they publish their accuracy. Togal states up to 98% on floor plans. Kreo says its Auto Measure 3.0 lands within 94% of the real geometry on busy plans. This question appeared on five of the ten US Google searches we ran on 11 Oct 2026.',
   },
   {
     category: 'estimating',
@@ -455,13 +520,25 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'software',
     question: 'Does Procore have AI agents?',
     answer:
-      "Yes. Procore's agent library listed 20 pre-built agents when we counted on 11 Oct 2026, including a Submittal Review Agent, an RFI Agent, a Bid Leveling Agent and a Daily Log Agent. Procore says more than 150 built-in actions let agents create or update records, that its AI follows your existing role-based permissions, and that agents never take action without sign-off. Agent Studio, for configuring your own agents, is listed in the Enterprise tier.",
+      "Yes. Procore's agent library listed 20 pre-built agents when we counted on 8 Nov 2026, including a Submittal Review Agent, an RFI Agent, a Bid Leveling Agent and a Daily Log Agent. Procore says more than 150 built-in actions let agents create or update records, that its AI follows your existing role-based permissions, and that agents never take action without sign-off. Agent Studio, for configuring your own agents, is listed in the Enterprise tier.",
   },
   {
     category: 'software',
     question: 'Can a custom AI agent work with Procore?',
     answer:
-      "Yes. Procore's developer documentation describes REST APIs secured with OAuth 2.0, a standard sign-in method for software, for creating, reading, updating and deleting records. It says a custom app can be installed privately for one company, and a company administrator chooses which projects the app can reach. Plan for two rate limits, one hourly and one over 10 seconds. Procore also says its Agentic APIs are in a Design Partner pilot.",
+      "Yes. Procore's developer documentation describes REST APIs secured with OAuth 2.0, a standard sign-in method for software, for creating, reading, updating and deleting records. Its API reference lists Create RFI and Create Submittal among them. A custom app can be installed privately for one company, and a company administrator chooses which projects the app can reach. Plan for two rate limits, one hourly and one over 10 seconds. Procore says its Agentic APIs are in a Design Partner pilot.",
+  },
+  {
+    category: 'software',
+    question: 'Does a custom AI agent replace Procore or our estimating software?',
+    answer:
+      'No. It works alongside them. Your project records stay in Procore or Autodesk Forma, your quantities in your takeoff tool and your costs in Sage or QuickBooks. The agent signs in to each through the API the vendor publishes, with its own login and only the permissions the job needs, and writes its drafts back where your team already works. If you change software later, the agent is reconnected and your records do not move.',
+  },
+  {
+    category: 'software',
+    question: 'Can a custom AI agent work with Autodesk Construction Cloud or Autodesk Forma?',
+    answer:
+      "Yes, through the Forma APIs on Autodesk Platform Services. Autodesk's developer documentation says the RFIs API can create, track and update RFIs, including responses and official responses, and that the Submittals API can create submittal items and read submittal data. Some of its APIs are read-only, such as Transmittals, so we check what each one allows before scoping a job.",
   },
   {
     category: 'software',
@@ -511,7 +588,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'How much should an AI receptionist cost?',
     answer:
-      "For ready-made products, the vendors' own pages showed this on 11 Oct 2026. Goodcall lists plans at $79, $129 and $299 a month, billed by the number of different callers served. Smith.ai's AI Receptionist lists a free tier of 25 calls a month and plans at $150 and $500 a month, billed per call. A custom voice agent is a build. FactoryJet quotes that build and the ongoing support as fixed prices in writing.",
+      "For ready-made products, the vendors' own pages showed this on 8 Nov 2026. Goodcall lists plans at $79, $129 and $299 a month, billed by the number of different callers served. Smith.ai's AI Receptionist lists a free tier of 25 calls a month and plans at $150 and $500 a month, billed per call. A custom voice agent is a build. FactoryJet quotes that build and the ongoing support as fixed prices in writing.",
   },
   {
     category: 'working',
@@ -592,9 +669,9 @@ const SHIPS: ReadonlyArray<{
   },
   {
     name: 'Autodesk Forma',
-    kind: 'Formerly Autodesk Construction Cloud',
-    says: "Autodesk's page says Autodesk Construction Cloud is now part of Autodesk Forma. It describes Autodesk Assistant for asking questions of project data, submittal logs generated automatically with suggested missing submittals, and bids forwarded from any source onto a bid board. On whether a person still reviews the work, Autodesk says the expert stays in control.",
-    sources: ['autodeskAi'],
+    kind: 'Autodesk Construction Cloud (ACC)',
+    says: "Autodesk's AI for construction page now uses the Autodesk Forma name, and its FAQ still names Autodesk Construction Cloud products. It describes Autodesk Assistant for asking questions of project data, submittal logs generated automatically with suggested missing submittals, and bids forwarded from any source onto a bid board. On whether a person still reviews the work, Autodesk says the expert stays in control.",
+    sources: ['autodeskAi', 'autodeskApi'],
     span: 'lg:col-span-5',
   },
   {
@@ -642,10 +719,48 @@ const DECIDE_STEPS: ReadonlyArray<{ n: string; t: string; b: string }> = [
   },
 ];
 
-/* ── Six jobs. One card each. Bullets are deliberately uneven. The jobs are the
+/* ── How a custom agent sits beside the software a contractor already runs.
+   Each row restates what that vendor's own developer documentation says its
+   API allows, as read on 2026-11-08 (Intuit: 2026-10-11, see header). This is
+   "connects to via its published API", never a partner claim. ── */
+const CONNECTS: ReadonlyArray<{ system: string; holds: string; api: string; sources: ReadonlyArray<SrcKey> }> = [
+  {
+    system: 'Procore',
+    holds: 'Projects, RFIs, submittals, daily logs',
+    api: "Procore's REST API, signed in with OAuth 2.0, creates, reads, updates and deletes records. Its reference lists Create RFI and Create Submittal. A company administrator picks which projects the app can reach.",
+    sources: ['procoreApi', 'procoreRfiApi', 'procoreSubmittalApi', 'procoreDmsa'],
+  },
+  {
+    system: 'Autodesk Forma (ACC)',
+    holds: 'Projects, RFIs, submittals, issues, cost',
+    api: 'Autodesk says its RFIs API can create, track and update RFIs, and its Submittals API can create submittal items and read submittal data. Its Transmittals API is read-only.',
+    sources: ['autodeskApi'],
+  },
+  {
+    system: 'Sage Intacct',
+    holds: 'Job cost, payables, the ledger',
+    api: 'Sage Intacct recommends its REST API for client applications and says all new objects and features will be released there.',
+    sources: ['sageDev'],
+  },
+  {
+    system: 'QuickBooks Online',
+    holds: 'Estimates, purchase orders, bills',
+    api: "Intuit's API reference lists create, read, update and send for the Estimate and PurchaseOrder objects. QuickBooks Desktop connects only through Intuit's Web Connector.",
+    sources: ['qbEstimateApi', 'qbPoApi', 'qbWebConnector'],
+  },
+  {
+    system: 'Your takeoff tool',
+    holds: 'Measured quantities',
+    api: 'The agent starts from the quantities your takeoff tool exports, such as Togal, Kreo, Beam AI or STACK. Measuring the drawings stays with that tool.',
+    sources: ['togal', 'kreo', 'beam', 'stack'],
+  },
+];
+
+/* ── Seven jobs. One card each. Bullets are deliberately uneven. The jobs are the
    ones Bhavesh confirmed FactoryJet builds (quoting from an ERP, voice agents,
    document work, purchase and sales orders, daily bookkeeping), applied to
-   construction. No construction client is claimed. ── */
+   construction, plus RFI drafting (added 2026-11-08, same document pattern).
+   No construction client is claimed. ── */
 type Job = {
   n: string;
   title: string;
@@ -687,6 +802,19 @@ const JOBS: ReadonlyArray<Job> = [
   },
   {
     n: '03',
+    title: 'RFIs',
+    body: 'A question comes up on site that the drawings do not answer. The agent drafts the RFI (request for information) for the design team, and your project engineer or superintendent sends it.',
+    items: [
+      "Turns a superintendent's photo, voice note or email into a plain question with the sheet number, detail and spec section",
+      'Checks the RFI log for an open or answered RFI that already asks the same thing',
+      'Creates the draft in your project system and tracks the due date and who holds the ball',
+    ],
+    note: "Procore's RFI Agent drafts RFIs for review inside Procore, so start there if your RFIs live in it. Procore's API reference lists Create RFI, and Autodesk says its Forma RFIs API can create, track and update RFIs, so a custom agent can write the draft into either platform. That fits when the question starts outside it, in a text thread or an email from the field.",
+    sources: ['procoreAgents', 'procoreRfiApi', 'autodeskApi'],
+    span: 'lg:col-span-5',
+  },
+  {
+    n: '04',
     title: 'Submittals and document handling',
     body: 'A submittal is the product data, shop drawings or samples a contractor sends for the design team to approve before material is ordered. The agent assembles and checks the paperwork, and your project engineer signs it off.',
     items: [
@@ -696,10 +824,10 @@ const JOBS: ReadonlyArray<Job> = [
     ],
     note: "Procore defines a submittal as written or physical information provided by a responsible contractor to the general contractor, submitted to the design team for approval before items are fabricated and delivered. Procore and Autodesk both ship AI for the reviewing side. Procore lists a Submittal Review Agent, and Autodesk generates submittal logs with suggested missing items. A custom agent earns its place on the subcontractor's side, assembling the package, or where your documents sit outside those two platforms.",
     sources: ['procoreSubmittal', 'procoreAgents', 'autodeskAi'],
-    span: 'lg:col-span-5',
+    span: 'lg:col-span-7',
   },
   {
-    n: '04',
+    n: '05',
     title: 'Phone and lead intake',
     body: 'Calls come in while the crew is on a roof and the office is closed. A voice agent answers, asks what the job is and books the next step.',
     items: [
@@ -713,7 +841,7 @@ const JOBS: ReadonlyArray<Job> = [
     span: 'lg:col-span-7',
   },
   {
-    n: '05',
+    n: '06',
     title: 'Purchase orders',
     body: 'When a job is won or stock runs low, the agent drafts the purchase orders for a buyer or project manager to approve.',
     items: [
@@ -724,10 +852,10 @@ const JOBS: ReadonlyArray<Job> = [
     ],
     note: "Intuit's developer reference calls a QuickBooks Online purchase order a non-posting transaction, a request to purchase goods or services from a third party. Sage lists job costing with purchase orders on its construction page. Some suppliers and large buyers trade by EDI (electronic data interchange, a standard format for sending orders between companies) or through punchout catalogs, where a buyer shops a supplier's catalog from inside its own purchasing system. We build those connections too.",
     sources: ['qbPoApi', 'sageConstruction'],
-    span: 'lg:col-span-7',
+    span: 'lg:col-span-5',
   },
   {
-    n: '06',
+    n: '07',
     title: 'Supplier invoices and job cost coding',
     body: 'Supplier invoices arrive by email as PDFs. The agent matches each one to its purchase order and suggests the job and cost code.',
     items: [
@@ -737,7 +865,7 @@ const JOBS: ReadonlyArray<Job> = [
     ],
     note: 'The agent prepares the batch, and your bookkeeper or controller approves it. Check what your accounting system already does before anyone builds. Intuit says its AI offers ways to fix anomalies while you decide the next move, and Sage says Sage Copilot helps track and manage month-end close across payables, receivables, the ledger and cash.',
     sources: ['qbAi', 'sageCopilot'],
-    span: 'lg:col-span-5',
+    span: 'lg:col-span-12',
   },
 ];
 
@@ -1068,6 +1196,7 @@ const othersSchema = {
 };
 
 const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
+  { href: BUYERS_GUIDE, t: 'AI agents for real estate and construction: 2026 guide', b: 'A vendor-neutral guide to what AI agents do in construction and how to evaluate a vendor or tool.' },
   { href: '/services/ai-agent-development/rfq-bidding-agent', t: 'RFQ automation agent', b: 'The quoting job in depth: reading requests, matching items and drafting quotes for approval.' },
   { href: '/services/ai-receptionist', t: 'AI receptionist', b: 'A custom voice agent that answers, qualifies and books.' },
   { href: '/services/erp-ai-agents', t: 'AI agents for ERP systems', b: 'Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs on one page.' },
@@ -1131,12 +1260,13 @@ export default function ConstructionAiAgentsPage() {
                 </div>
 
                 <h1 className="font-fj-display text-4xl font-bold leading-[1.08] tracking-[-0.02em] text-fj-ink sm:text-5xl lg:text-[3.2rem]">
-                  AI agents for construction that draft the quotes, bid summaries and purchase orders your team approves.
+                  AI for construction: agents that draft your estimates, bid summaries and RFIs for your team to approve.
                 </h1>
 
                 <p className={`${styles.heroLead} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}>
-                  We design, build and support AI agents for general contractors, specialty contractors and building
-                  suppliers.
+                  FactoryJet builds custom AI agents for US contractors that draft estimates from your price book,
+                  summarize bid invitations, draft RFIs and check submittals, working inside the Procore, Autodesk,
+                  Sage or QuickBooks account you already use through each vendor&rsquo;s published API.
                 </p>
 
                 <div className={`${styles.heroForm} mt-6`}>
@@ -1220,9 +1350,10 @@ export default function ConstructionAiAgentsPage() {
               </div>
               <p className="font-fj-body text-base leading-relaxed text-fj-ink sm:text-lg">
                 An AI agent for a construction company is software that does one office task. It reads what arrives,
-                such as a request for a quote, an invitation to bid, a supplier&rsquo;s paperwork or a phone call,
-                looks up your price book and job records, and drafts the quote, summary or purchase order for a person
-                to approve.
+                such as a request for a quote, an invitation to bid, a question from the field, a supplier&rsquo;s
+                paperwork or a phone call, looks up your price book and job records, and drafts the quote, bid summary,
+                RFI or purchase order for a person to approve. It works alongside your construction software rather
+                than replacing it, reading and writing through the API each vendor publishes.
               </p>
               <p className="mt-4 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">
                 Software you may already own covers part of this. Procore&rsquo;s agent library listed 20 pre-built
@@ -1266,7 +1397,7 @@ export default function ConstructionAiAgentsPage() {
 
             <div className="mt-8 rounded-2xl border-2 border-[#F05A28]/25 bg-white p-6 sm:p-8">
               <div className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13]">
-                What we found on {CHECKED_ON}
+                What we found on {SEARCHED_ON}
               </div>
               <h3 className="mt-3 font-fj-display text-xl font-semibold text-fj-ink">
                 Four things we measured before writing this page.
@@ -1289,12 +1420,62 @@ export default function ConstructionAiAgentsPage() {
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span aria-hidden="true" className="mt-[9px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#F05A28]" />
-                  Procore&rsquo;s agent library listed 20 pre-built agents. Two of them, Bid Analyzer and Bid Leveling,
-                  review bids that come in. None of the 20 descriptions mentions drafting your own quote from a price
-                  book.
+                  Procore&rsquo;s agent library listed 20 pre-built agents. Two of them, now named Bid Analyst and Bid
+                  Leveling, review bids that come in. None of the 20 descriptions mentions drafting your own quote from
+                  a price book, and that was still true when we re-counted on {CHECKED_ON}.
                 </li>
               </ul>
               <SourceLinks ids={['procoreAgents', 'togal']} />
+            </div>
+          </div>
+        </section>
+
+        {/* 3b. WORKS WITH THE SOFTWARE YOU ALREADY USE */}
+        <section className="border-b border-fj-neutral-200 bg-white py-16 md:py-20">
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
+              <div className="lg:col-span-4">
+                <p className="fj-eyebrow">Works with what you run</p>
+                <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
+                  A custom agent works beside the construction AI software you already pay for.
+                </h2>
+                <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
+                  Your records stay where they are. The agent gets its own login to each system, with only the
+                  permissions its job needs, and reads and writes through the API the vendor publishes. Drafts land
+                  in the tool your team already opens every morning.
+                </p>
+                <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-ink">
+                  FactoryJet is not a reseller or listed partner of any vendor here. Each row says what that
+                  vendor&rsquo;s own developer documentation allows, as read on {CHECKED_ON}.
+                </p>
+                <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
+                  New to the topic? Our{' '}
+                  <Link href={BUYERS_GUIDE} className="font-semibold text-fj-ink underline underline-offset-4">
+                    guide to AI agents for real estate and construction
+                  </Link>{' '}
+                  covers what agents do on a project and how to judge a vendor.
+                </p>
+              </div>
+
+              <ul className="grid gap-3 lg:col-span-8">
+                {CONNECTS.map((c) => (
+                  <li
+                    key={c.system}
+                    className="grid grid-cols-1 gap-2 rounded-2xl border border-fj-neutral-200 bg-fj-cream px-5 py-4 sm:grid-cols-[190px_1fr] sm:gap-5"
+                  >
+                    <div>
+                      <div className="font-fj-display text-base font-semibold text-fj-ink">{c.system}</div>
+                      <div className="mt-1 font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600">
+                        {c.holds}
+                      </div>
+                    </div>
+                    <div>
+                      <p className="font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{c.api}</p>
+                      <SourceLinks ids={c.sources} />
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>
@@ -1349,9 +1530,9 @@ export default function ConstructionAiAgentsPage() {
         {/* 6. SIX JOBS */}
         <section className="border-y border-fj-neutral-200 bg-white py-16 md:py-20">
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <p className="fj-eyebrow">Six jobs</p>
+            <p className="fj-eyebrow">Seven jobs</p>
             <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
-              Six construction office jobs an AI agent can draft for your team.
+              Seven construction office jobs an AI agent can draft for your team.
             </h2>
             <p className="mt-4 max-w-3xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
               Each card says what the agent does, what your software or a ready-made product already covers, and where
@@ -1390,9 +1571,10 @@ export default function ConstructionAiAgentsPage() {
               ))}
             </div>
             <p className="mt-6 max-w-3xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
-              These are the jobs contractors search for. In US search data we pulled on {CHECKED_ON}, &ldquo;ai for
-              construction&rdquo; drew about 2,400 searches a month, and six estimating and takeoff searches added
-              about 1,440 more. The same pattern fits every card above: read what arrives, look it up, draft, approve.
+              These are the jobs contractors search for. In US search data we pulled on 8 Nov 2026, &ldquo;ai for
+              construction&rdquo; drew about 2,400 searches a month, &ldquo;construction ai software&rdquo; about 720
+              and &ldquo;ai construction estimating&rdquo; about 210. The same pattern fits every card above: read
+              what arrives, look it up, draft, approve.
             </p>
             <p className="mt-3 font-fj-body text-sm leading-relaxed text-fj-neutral-600">
               Vendor notes are as listed on {CHECKED_ON}.
@@ -1524,7 +1706,7 @@ export default function ConstructionAiAgentsPage() {
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                   The Census Bureau estimated US construction spending at a seasonally adjusted annual rate of
-                  $2,203.1 billion in August 2026. The office work behind it looks much the same in every trade.
+                  $2,186.1 billion in September 2026. The office work behind it looks much the same in every trade.
                   Something arrives, someone looks it up, someone types it in.
                 </p>
                 <SourceLinks ids={['census']} />
@@ -1623,7 +1805,7 @@ export default function ConstructionAiAgentsPage() {
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                   We wrote this list and we sell none of these products. They came up in the US searches we ran on{' '}
-                  {CHECKED_ON}, or in AI assistants&rsquo; answers to contractors&rsquo; questions. Six measure
+                  {SEARCHED_ON}, or in AI assistants&rsquo; answers to contractors&rsquo; questions. Six measure
                   drawings and two answer phones. Each line restates the vendor&rsquo;s own page, and the accuracy
                   figures are the vendors&rsquo; own claims.
                 </p>
@@ -1687,14 +1869,15 @@ export default function ConstructionAiAgentsPage() {
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                   Every product name, feature, limit, price and number about another company on this page was read on
-                  that company&rsquo;s own pages on that day. Sage&rsquo;s and Intuit&rsquo;s pages refused a plain
-                  web request and were read in a browser. Procore&rsquo;s developer documentation was read on its
-                  public documentation site. Vendors change these pages, so check the linked page before you act on
-                  one.
+                  that company&rsquo;s own pages on that day, first on 11 Oct 2026 and again on {CHECKED_ON}. Sage&rsquo;s
+                  and Intuit&rsquo;s pages, Procore&rsquo;s developer documentation and Autodesk&rsquo;s developer
+                  documentation were read in a browser. Intuit&rsquo;s developer reference would not load on{' '}
+                  {CHECKED_ON}, so the QuickBooks API lines rest on the 11 Oct reading. Vendors change these pages, so
+                  check the linked page before you act on one.
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
-                  Search figures are US monthly searches from DataForSEO, pulled the same day. The ten Google searches
-                  are US desktop results pulled through the same service. Accuracy figures for takeoff products are
+                  Search figures are US monthly searches from DataForSEO, pulled on 8 Nov 2026. The ten Google
+                  searches are US desktop results pulled through the same service on {SEARCHED_ON}. Accuracy figures for takeoff products are
                   each vendor&rsquo;s own claim. Buildertrend&rsquo;s website did not open for us that day, so it
                   appears here only where QuickBooks&rsquo; page names it.
                 </p>
