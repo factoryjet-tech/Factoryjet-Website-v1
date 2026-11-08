@@ -239,5 +239,27 @@ export const AI_AGENT_FAQS = [
     "question": "Does an AI agent need to comply with the EU AI Act?",
     "answer": "If it talks to people in the EU, the transparency rules apply to it. Article 50(1) of the EU AI Act says an AI system that interacts directly with people must tell them they are dealing with AI, unless that is obvious, and Article 50(5) says the notice must come at the first interaction at the latest. Article 50 applies from 2 August 2026, the Act's general application date under Article 113. The European Commission's AI Act page, which we read on 29 October 2026, says the transparency rules took effect in August 2026. It lists the AI Omnibus as moving the high-risk deadlines, with no change to the transparency date. Agents used for hiring or credit decisions carry heavier duties. This is general information. Ask your own lawyer about your case.",
     "link": { "href": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai", "label": "European Commission: AI Act regulatory framework." }
+  },
+  // Q35 to Q37 added 2026-11-08 for "ai agents for business" (US 3,600/mo,
+  // DataForSEO 2026-11-08). Google's AI Overview for the term answers by
+  // department; page one is tool lists and small-business guides.
+  {
+    "id": "Q35",
+    "category": "faq-definitions",
+    "question": "What are AI agents for business?",
+    "answer": "AI agents for business are software that takes one repeat job, works out the steps and finishes them inside the company's own systems, such as an ERP, CRM or help desk, stopping for a person where a wrong decision would cost money. Common examples are answering order tickets, qualifying inbound leads, keying customer POs in as sales orders, matching vendor invoices to purchase orders and drafting quotes from RFQs. FactoryJet builds custom AI agents for business that work this way, and the client owns the code."
+  },
+  {
+    "id": "Q36",
+    "category": "faq-support",
+    "question": "How should a business start with AI agents?",
+    "answer": "Start with one job that repeats every week and follows rules your team could write down. Count how often it happens, who does it and which systems it touches. Check whether a tool you already pay for, such as Zendesk, Intercom, Gorgias or HubSpot, has an AI feature that covers it, and switch that on first if it does. If the job depends on your own data, price rules or approvals, ask any developer to show the agent working on a sample of your own documents before you sign, then run a pilot where a person approves every draft."
+  },
+  {
+    "id": "Q37",
+    "category": "faq-vendor",
+    "question": "What is the best AI agent for a business?",
+    "answer": "There is no single best one, because the right agent depends on the job. Ready-made agents such as Intercom Fin, Zendesk AI or Microsoft Copilot Studio suit standard work that looks the same in every company. A custom agent fits when the job depends on your own ERP data, price lists or approval steps. Judge any option on a sample of your own work, and ask what it is allowed to do without a person.",
+    "link": { "href": "/blog/ai-agent-build-vs-buy-2026", "label": "Read our build or buy guide." }
   }
 ] as const;

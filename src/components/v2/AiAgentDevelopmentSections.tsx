@@ -171,7 +171,8 @@ function AgentDirectory() {
    "What can an AI agent do for my business?" is a live Google People Also Ask,
    and "how much does an ai agent cost" is the most-asked AI assistant question
    in this cluster (DataForSEO AI keyword data, US). Cost figures are the
-   ProductCrafters market range, re-fetched 2026-10-05 and labelled as a market
+   ProductCrafters market range, re-fetched 2026-10-05 and again 2026-11-08
+   (headline range $5K to $180K+, page dated 24 Feb 2026), labelled as a market
    reference, never as a FactoryJet price. Timeline wording matches
    /blog/what-is-an-ai-agent-cost-2026. Keep one client name off this block:
    the Washington Law Group case has its own section lower on the page. */
@@ -214,7 +215,7 @@ function ShortAnswers() {
       <div className="wrap">
         <div className="section-head">
           <div className="eyebrow">Answer First</div>
-          <h2>AI Agent Development: The Short Answers</h2>
+          <h2>AI Agent Development: Short Answers on Cost, Timeline and Ownership</h2>
           <p style={{ marginTop: 18, color: 'var(--body)', fontSize: 16, lineHeight: 1.75 }}>The six things buyers ask us first, answered before the sales part of the page.</p>
         </div>
         <div className="ventries">
@@ -226,6 +227,71 @@ function ShortAnswers() {
             </div>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+/* "AI agents for business" block (added 2026-11-08). US demand measured by
+   DataForSEO on 2026-11-08: "ai agents for business" 3,600/mo at $71 CPC,
+   weakest page-one site 35 referring domains. Page one and the AI Overview
+   answer it by department (support, sales, marketing, admin, operations and
+   finance), with examples and how to start. Rows name only jobs we build and
+   link only to pages that exist. No running-cost numbers here, by rule. */
+const BY_DEPARTMENT: { dept: string; job: string; systems: string; person: string; href: string; link: string }[] = [
+  { dept: 'Customer support', job: 'Answers order, return and account tickets from live data and drafts the reply.', systems: 'Zendesk, Gorgias, Intercom, Shopify', person: 'Refunds and credits above your limit', href: '/services/ai-customer-support-agents', link: 'Support agents' },
+  { dept: 'Sales', job: 'Reads each inbound lead, scores it against your rules, writes it into the CRM and offers a meeting.', systems: 'HubSpot, Salesforce', person: 'Any lead the rules cannot place', href: '/services/ai-sdr', link: 'AI SDR agents' },
+  { dept: 'Marketing', job: 'Drafts email, SMS and CRM campaigns in your brand voice from your own product and customer data.', systems: 'HubSpot, Klaviyo, Mailchimp', person: 'Every send, with one-click approval', href: '/services/ai-agent-development/ai-marketing-agent', link: 'Marketing agent' },
+  { dept: 'Finance and accounting', job: 'Reads vendor invoices, matches them to the purchase order and receipt, and drafts the bill.', systems: 'NetSuite, QuickBooks, Xero', person: 'Mismatches and anything over your approval limit', href: '/services/accounts-payable-automation', link: 'Accounts payable agents' },
+  { dept: 'Order entry', job: 'Keys emailed customer POs in as sales orders, checking price lists, stock and credit.', systems: 'NetSuite, SAP Business One, Odoo', person: 'Price, stock or credit exceptions', href: '/services/sales-order-automation-ai-agents', link: 'Sales order agents' },
+  { dept: 'Purchasing', job: 'Reads RFQs and drafts quotes, and chases suppliers for open PO acknowledgements.', systems: 'NetSuite, SAP, Odoo, email', person: 'Every quote before it goes out', href: '/services/ai-agent-development/rfq-bidding-agent', link: 'RFQ agent' },
+  { dept: 'Front desk and scheduling', job: 'Answers calls, books and moves appointments, and sends confirmations.', systems: 'Phone, your calendar or booking system', person: 'Callers who ask for a person', href: '/services/ai-receptionist', link: 'AI receptionist' },
+];
+
+const START_STEPS = [
+  'Pick one job that repeats every week and follows rules your team could write down, such as order entry or ticket replies.',
+  'Count it: how many a week, who does it today, and which systems it touches.',
+  'Check the tools you already pay for. If Zendesk, Intercom, Gorgias or HubSpot already has an AI feature that covers the job, switch that on first.',
+  'If the job depends on your own ERP data, price rules or approvals, see a custom agent run on a sample of your own documents before you sign.',
+  'Run a pilot with a person approving every draft, then widen it once the numbers hold.',
+];
+
+function BusinessByDepartment() {
+  return (
+    <section className="section facts" id="by-department">
+      <div className="wrap">
+        <div className="section-head">
+          <div className="eyebrow">AI Agents for Business</div>
+          <h2>AI Agents for Business, by Department</h2>
+        </div>
+        <p style={BODY_STYLE}>An AI agent for business is software that takes a goal, works out the steps, and uses your own systems to finish them, stopping for a person where a wrong decision would cost money. A chatbot answers a question. An agent also does the follow-up work: it updates the order, drafts the quote or books the meeting. These are the jobs we build agents for most often, by department.</p>
+        <div className="tablewrap" style={{ marginTop: 28 }}>
+          <table>
+            <thead>
+              <tr>
+                <th>Department</th>
+                <th>What the agent does</th>
+                <th>Systems it works in</th>
+                <th>Where a person decides</th>
+              </tr>
+            </thead>
+            <tbody>
+              {BY_DEPARTMENT.map((row) => (
+                <tr key={row.dept}>
+                  <th>{row.dept}<br /><a className="mono tableSubLabel tableSubLabelAccent" href={row.href}>{row.link}</a></th>
+                  <td>{row.job}</td>
+                  <td>{row.systems}</td>
+                  <td>{row.person}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <h3 style={{ marginTop: 40 }}>How a Business Should Start With AI Agents</h3>
+        <ol style={LIST_STYLE}>
+          {START_STEPS.map((step) => <li key={step}>{step}</li>)}
+        </ol>
+        <p style={BODY_STYLE}>Ready-made agents, such as Intercom Fin, Zendesk AI or Microsoft Copilot Studio, suit standard jobs that look the same in every company. A custom agent earns its cost when the job depends on your own data, price rules and approval steps. Our guide to <a href="/blog/ai-agent-build-vs-buy-2026" style={INLINE_LINK}>building or buying an AI agent</a> walks through that choice, and <a href="/blog/enterprise-ai-agents-mid-sized-companies-buy-or-build-2026" style={INLINE_LINK}>enterprise AI agents for mid-sized companies</a> covers what to buy and what to build at larger scale. Industry pages are in the <a href="#all-agents" style={INLINE_LINK}>agent directory</a> further down.</p>
       </div>
     </section>
   );
@@ -451,11 +517,11 @@ export default function AiAgentDevelopmentSections() {
           <div className="wrap hero-grid">
             <div className="hero-copy">
               <div className="eyebrow">Service Specification</div>
-              <h1>AI Agent Development for <span className="hero-emphasis">RFQ-to-Quote, Order Entry and ERP Work</span> in NetSuite and SAP</h1>
-              <p className="lead">FactoryJet is an agentic AI development company. We design, build, integrate and support custom AI agents that follow your business rules and finish multi-step work inside the systems you already run: NetSuite, SAP, Odoo, Salesforce, HubSpot, Zendesk and Shopify. The jobs are specific: reading an emailed RFQ and drafting the quote, keying a customer PO in as a sales order, matching a vendor invoice to its purchase order. A person approves anything that matters. You own the code.</p>
+              <h1>AI Agents for Business: <span className="hero-emphasis">Custom AI Agent Development</span> for Your ERP, CRM and Help Desk</h1>
+              <p className="lead">FactoryJet is an AI agent development company that builds custom AI agents for business: each agent takes one repeat job, such as drafting a quote from an emailed RFQ, answering an order ticket or qualifying a new lead, and finishes it inside NetSuite, SAP, Odoo, Salesforce, HubSpot, Zendesk or Shopify, with a person approving anything that matters. We design, build, integrate and support each agent, and you own the code.</p>
               <div className="actions">
                 <a className="btn btn-primary" href="#tell-us">See a demo on my data</a>
-                <a className="btn btn-ghost" href="#short-answers">Cost, timeline, ownership</a>
+                <a className="btn btn-ghost" href="#by-department">Jobs by department</a>
               </div>
               <p style={{ marginTop: 14, color: 'var(--body)', fontSize: 14, lineHeight: 1.6 }}>Have a brief or RFP? Attach it at step 2. We scope, price and sign each phase on its own.</p>
             </div>
@@ -535,6 +601,7 @@ export default function AiAgentDevelopmentSections() {
             </div>
           </div>
         </div>
+        <BusinessByDepartment />
         <ShortAnswers />
         <section className="section facts" id="facts">
           <div className="wrap">
@@ -880,6 +947,7 @@ export default function AiAgentDevelopmentSections() {
             <div className="refs">
               <a href="/blog/what-is-an-ai-agent-cost-2026">AI agent development cost in 2026: build, run or rent</a>
               <a href="/blog/ai-agent-build-vs-buy-2026">Build or buy an AI agent? An honest decision guide</a>
+              <a href="/blog/enterprise-ai-agents-mid-sized-companies-buy-or-build-2026">Enterprise AI agents for mid-sized companies: what to buy, what to build</a>
               <a href="/blog/ai-customer-support-agent-architecture-guide">AI customer support agent architecture: Zendesk, Intercom and Gorgias</a>
               <a href="/blog/ai-agents-erp-netsuite-odoo-sap-business-one-2026">AI agents inside NetSuite, Odoo and SAP Business One</a>
               <a href="/blog/best-ai-agents-for-ecommerce-2026">Best AI agents for ecommerce, and when a custom agent wins</a>

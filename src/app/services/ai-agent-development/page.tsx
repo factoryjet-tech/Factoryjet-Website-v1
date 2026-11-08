@@ -12,8 +12,12 @@ const url = 'https://factoryjet.com/services/ai-agent-development';
 // Title and description follow US demand measured 2026-10-05 (DataForSEO):
 // "ai agent development company" 720/mo, "ai agent development" 590,
 // "ai agent development services" 480, "custom ai agent development" 110.
-const title = 'Custom AI Agent Development Company & Services | FactoryJet';
-const description = 'AI agent development company for US businesses. Custom AI agents built into your ERP, CRM, help desk and Shopify store. See cost, timeline and what you own.';
+// 2026-11-08: led with "ai agents for business" (US 3,600/mo, $71 CPC, weakest
+// page-one site 35 referring domains). Search Console 8 Aug to 6 Nov 2026 showed
+// 185 impressions and 0 clicks, top non-brand queries "custom ai agent development
+// services" and "ai agent development company in the usa", so both phrases stay.
+const title = 'AI Agents for Business | AI Agent Development Company';
+const description = 'Custom AI agents for business, built into your ERP, CRM, help desk and Shopify store by an AI agent development company. Jobs by department, cost and timeline.';
 const socialImage = 'https://factoryjet.com/images/us/services/ai-agent-definition-workbench.webp';
 
 export const metadata: Metadata = {
@@ -35,7 +39,7 @@ const faqSchema = {
 };
 
 // Freshness signal. Bump only when the page content actually changes.
-const PAGE_MODIFIED = '2026-10-29';
+const PAGE_MODIFIED = '2026-11-08';
 
 const webPageSchema = {
   '@context': 'https://schema.org',
@@ -56,6 +60,7 @@ const serviceSchema = {
   '@id': `${url}#service`,
   name: 'Custom AI Agent Development',
   serviceType: 'AI agent development',
+  alternateName: 'AI agents for business',
   description:
     'FactoryJet designs, builds, integrates and supports custom AI agents that work inside NetSuite, SAP, Odoo, Salesforce, HubSpot, Zendesk, Gorgias and Shopify, with human approval on decisions that matter. The client owns the code.',
   provider: { '@id': ORG_ID },
