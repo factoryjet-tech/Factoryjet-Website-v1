@@ -51,8 +51,9 @@ import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
      200 to a plain request that day.
    - Vendors are named in the systems list only where their own public
      developer pages describe an API. McLeod's API page returned 403 and
-     DAT's developer portal needs a login, so neither is named. MercuryGate
-     and Descartes publish no public API reference we could find.
+     DAT's developer portal needs a login. McLeod, MercuryGate, Turvo and DAT
+     appear once, in the Works-with sentence that says we check what access
+     the account has, with no API, integration or partner claim.
    - No partner claim and no "not a partner" line. Say "through the API the
      vendor publishes" or "the access your account already has".
    - No logistics client is named or claimed and no result is claimed.
@@ -310,129 +311,99 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'jobs',
     question: 'Which companies build AI agents for logistics and 3PL companies?',
     answer:
-      'Three kinds of provider. Platforms you may already run ship AI of their own: FourKites names six agents, and Blue Yonder says agents on its platform monitor your network. Specialist products such as HappyRobot, Augment, Vooma, Pallet, DispatchMVP and Numeo sell agents for set jobs. FactoryJet builds custom agents for work that spans your own TMS, WMS, inbox and carrier portals and follows your rules.',
+      "Three kinds, and no single one is best for every job. Platforms such as FourKites and Blue Yonder ship their own AI for tracking and alerts. Specialist products such as HappyRobot, Augment, Vooma, Pallet, DispatchMVP and Numeo sell agents for set jobs. FactoryJet builds custom agents for work that crosses your own TMS, WMS, inbox and carrier portals.",
   },
   {
     category: 'jobs',
     question: 'What is an AI agent for logistics?',
     answer:
-      'It is software that does one operations task and stops at a draft. It reads what arrives, such as a load tender, a rate request, a carrier status email or a proof of delivery, looks it up in your TMS or WMS, and saves the quote, update or invoice match for a person to approve. Unlike a chatbot, it starts work when the email or document arrives, with no one typing a prompt.',
+      'It is software that does one operations task and stops at a draft. It reads a tender, rate request, status email or POD, looks it up in your TMS or WMS, and saves the quote, update or invoice match for a person to approve. It starts when the document arrives, with no one typing a prompt.',
   },
   {
     category: 'jobs',
     question: 'What does 3PL AI look like day to day?',
     answer:
-      'For most AI for logistics companies such as a 3PL, it looks like fewer emails typed by hand. A customer sends an order change, a carrier asks for a dock slot, a POD comes back. The agent reads each one, checks it against the WMS or TMS and drafts the reply or the update. Your team approves the drafts in the tools it already uses.',
+      'For a 3PL, it mostly looks like fewer emails typed by hand. An order change, a dock slot request or a POD comes in. The agent checks each one against the WMS or TMS and drafts the reply or update for your team to approve in the tools it already uses.',
   },
   {
     category: 'jobs',
-    question: 'How is AI used in logistics?',
+    question: 'What is dispatch AI, and can it book loads?',
     answer:
-      'Mostly for the reading and typing between systems. Visibility platforms such as FourKites track shipments and flag delays. Specialist products answer carrier calls and quote loads. Custom agents read tenders and rate requests from email, chase check calls and PODs, match freight invoices to the load and draft accessorial claims. In each case a person approves what leaves the building.',
+      'Dispatch AI helps assign loads to drivers and keep everyone updated. DispatchMVP says its agent can auto-import loads from load boards, emails, PDFs or screenshots. A custom agent reads the tender or rate confirmation, builds the load in your TMS and drafts the driver message. A dispatcher still confirms the booking, the rate and the driver.',
   },
   {
     category: 'jobs',
-    question: 'What is the best AI for logistics?',
+    question: 'Is there AI for freight brokers that can quote and book loads?',
     answer:
-      'There is no single best one, because each tool does a different job. For shipment visibility, look at the platform your shippers already use, such as FourKites or project44. For carrier calls and quoting in a brokerage, look at specialist products such as HappyRobot, Augment or Vooma. For work that crosses your own TMS, WMS, inbox and accounting with your own rules, have an agent built.',
-  },
-  {
-    category: 'jobs',
-    question: 'Can AI automate dispatch and load booking?',
-    answer:
-      'Much of the typing, yes. DispatchMVP says its agent can auto-import loads from load boards, emails, PDFs or screenshots, and Numeo calls itself AI dispatch software for trucking carriers. A custom agent reads the tender or rate confirmation, builds the load in your TMS and drafts the driver message. A dispatcher still confirms the booking, the rate and the driver.',
-  },
-  {
-    category: 'jobs',
-    question: 'What is dispatch AI?',
-    answer:
-      'Dispatch AI is software that helps assign loads to drivers and keep everyone updated. Ready-made dispatch AI software, such as DispatchMVP or Numeo, works through its own screens. A dispatch AI agent built for you works inside your TMS and your ELD account, reading load details and driver hours, and drafts the assignment and the driver message for your dispatcher to send.',
-  },
-  {
-    category: 'jobs',
-    question: 'Is there AI for freight brokers?',
-    answer:
-      'Yes. Augment says its agent, Augie, runs quoting, booking and updates for brokerages. Vooma says it helps brokers quote and build loads, schedule, cover and track. HappyRobot lists carrier sales and track and trace for logistics. People search for an AI freight broker, but in practice each product handles set parts of the work, such as quoting or tracking, alongside your brokers. A custom agent fits a brokerage whose rules, customer portals and TMS setup do not match what those products expect.',
+      'Yes. Augment says its agent, Augie, runs quoting, booking and updates for brokerages. Vooma says it helps brokers quote and build loads, schedule, cover and track. Each product handles set parts of the work beside your brokers. A custom agent fits a brokerage whose rules, portals and TMS setup do not match what those products expect.',
   },
   {
     category: 'jobs',
     question: 'Is there AI for trucking companies?',
     answer:
-      'Yes. Trucking AI today works in the office more than the cab. Your ELD vendor may already offer some: Samsara documents an MCP connection for AI assistants and agents. Dispatch products such as DispatchMVP and Numeo help small carriers find and book loads. A custom agent fits a fleet that wants dispatch messages, POD collection and detention claims run from its own TMS and rules.',
+      'Yes, and today it works in the office more than the cab. Samsara documents an MCP connection for AI assistants and agents. DispatchMVP and Numeo help small carriers find and book loads. A custom agent fits a fleet that wants dispatch messages, POD chases and detention claims run from its own TMS and rules.',
   },
   {
     category: 'jobs',
     question: 'How is AI used in warehouses?',
     answer:
-      'Warehouse AI comes in two kinds. Physical automation, such as robots and vision, is bought from equipment and WMS vendors. Office work around the warehouse, such as order exceptions, inbound appointment requests, short-ship notices and customer emails, is where an agent helps. It reads the email or the exception, checks the WMS and drafts the reply or the change for a supervisor to approve.',
+      'Warehouse AI comes in two kinds. Robots and vision systems come from equipment and WMS vendors. The office work, such as order exceptions, appointment requests, short-ship notices and customer emails, is where an agent helps. It checks each one against the WMS and drafts the reply or change for a supervisor to approve.',
   },
   {
     category: 'jobs',
     question: 'What is the best AI for warehouse management?',
     answer:
-      'Start with the AI your WMS vendor ships, because it already holds your inventory and orders. We build agents and do not rank WMS products. Where the work starts outside the WMS, in a customer email, a carrier portal or a spreadsheet, a custom agent can read it and write a draft back into the WMS through the API it publishes.',
+      'Start with the AI your WMS vendor ships, because it already holds your inventory and orders. We do not rank WMS products. Where the work starts outside the WMS, such as in a customer email or a spreadsheet, a custom agent can read it and write a draft back through the API the WMS publishes.',
   },
   {
     category: 'jobs',
     question: 'Can AI do route optimization?',
     answer:
-      'Route optimization is a software category in its own right, sold by routing and TMS vendors, and we do not build it. An agent can work with it. Samsara says its routes API lets a company integrate route creation, assignment and progress tracking with its TMS, so an agent can pass a planned route along and draft the driver message.',
+      'Route optimization is its own kind of software, sold by routing and TMS vendors, and we do not build it. Samsara says its routes API lets a company integrate route creation, assignment and progress tracking with its TMS, so an agent can pass a route along and draft the driver message.',
   },
   {
     category: 'jobs',
-    question: 'Will logistics get taken over by AI?',
+    question: 'Will an AI agent replace our dispatchers or brokers?',
     answer:
-      'Not the decisions. Agents are good at reading tenders, status emails and PODs and typing the result into the right system. Choosing a carrier for a hard lane, settling a claim with a customer and deciding what to do about a late load stay with people. Every agent we build stops at a draft that a named person approves.',
+      'No. Agents read tenders, status emails and PODs and type the result into the right system. Choosing a carrier for a hard lane, settling a claim and deciding what to do about a late load stay with your people. Every agent we build stops at a draft that a named person approves.',
   },
   // ── TMS, WMS, ELD and load boards ────────────────────────────────
   {
     category: 'systems',
     question: 'Will an AI agent replace our TMS?',
     answer:
-      'No. It works alongside your TMS and WMS. Your loads, rates and orders stay where they are. The agent signs in to each system with its own login and only the permissions its job needs, through the API the vendor publishes or the access your account already has, and writes its drafts back where your team already works. If you change TMS later, the agent is reconnected.',
-  },
-  {
-    category: 'systems',
-    question: 'Can an AI agent work with Samsara or Motive?',
-    answer:
-      "Yes, through each vendor's published API. Samsara's developer docs describe API tokens and OAuth 2.0, webhooks, a Messages API that sends messages to drivers on behalf of a fleet admin, and a Documents API for forms drivers fill out. Motive's developer page lists API categories for vehicles, HOS logs, locations, messaging and webhooks.",
-  },
-  {
-    category: 'systems',
-    question: 'Can an AI agent use our visibility platform, such as project44?',
-    answer:
-      "Yes. project44's API reference lists shipment tracking, truckload and LTL tracking and a truckload webhook, and says all its API endpoints require authentication. An agent can read a shipment's status from it and draft the customer update, so your team does not copy positions from one screen into an email.",
+      'No. It works beside your TMS and WMS, and your loads, rates and orders stay where they are. The agent signs in with its own login and writes its drafts back where your team already works. If you change TMS later, the agent is reconnected to the new one.',
   },
   {
     category: 'systems',
     question: 'Can an AI agent work with a load board?',
     answer:
-      "Where the load board publishes an API. Truckstop's developer site says its Load Management API helps manage the life cycle of loads on the load board, and its Carrier Monitoring API returns a carrier's details by DOT number. An agent can draft a load posting or pull a carrier's details for a person to check before booking.",
+      "Where the load board publishes an API. Truckstop's developer site says its Load Management API helps manage the life cycle of loads on the load board, and its carrier monitoring endpoint returns a carrier's details by DOT number. An agent can draft a load posting or pull a carrier's details for a person to check before booking.",
   },
   {
     category: 'systems',
     question: 'Our TMS has no open API. Can an agent still help?',
     answer:
-      'Often, yes. Many TMS and WMS products exchange data by EDI (electronic data interchange, a standard format for sending tenders and status between companies), by file export or through a reporting database. An agent can also start from the email inbox, where tenders and PODs arrive anyway. We check what access your account already has before promising anything.',
+      'Often, yes. Many TMS and WMS products exchange EDI messages, such as the 204 load tender, the 214 status update and the 210 freight invoice, or offer file exports or a reporting database. An agent can also start from the inbox, where tenders and PODs arrive. We check what access your account already has before promising anything.',
   },
   {
     category: 'systems',
     question: 'Can an agent read PODs and bills of lading?',
     answer:
-      'Yes. A proof of delivery (POD) and a bill of lading (BOL) arrive as photos, scans or PDFs. The agent reads the signature, date, pieces and any exception notes, matches the document to the load and flags a short, an overage or damage. A person reviews flagged documents before an invoice goes out.',
+      'Yes. A POD and a BOL arrive as photos, scans or PDFs. The agent reads the signature, date, pieces and any exception notes, matches the document to the load and flags a short, an overage or damage. A person reviews flagged documents before an invoice goes out.',
   },
   // ── Control and rules ────────────────────────────────────────────
   {
     category: 'control',
     question: 'Will the agent book a load or pay a carrier without approval?',
     answer:
-      'No. Every quote, booking, carrier payment and claim is saved as a draft, and a named person on your team approves it before it goes anywhere. The agent can do the reading, the lookups and the typing. Money, rates and commitments to customers and carriers stay with your people.',
+      'No. Every quote, booking, carrier payment and claim is saved as a draft, and a named person on your team approves it before it goes anywhere. The agent does the reading and typing. Money, rates and commitments to customers and carriers stay with your people.',
   },
   {
     category: 'control',
     question: 'Is it legal to use an AI voice agent for check calls?',
     answer:
-      "Ask your lawyer about your own case. On 8 February 2024 the FCC ruled that calls made with AI-generated voices are 'artificial' under the Telephone Consumer Protection Act, and its rules require telemarketers to obtain prior express written consent before robocalling consumers. A status call to a carrier you have booked is a different case from a cold call, but we still set the rules with you before launch. This is not legal advice.",
+      "Ask your lawyer about your case. On 8 February 2024 the FCC ruled that AI-generated voices in calls are 'artificial' under the Telephone Consumer Protection Act. A status call to a carrier you booked differs from a cold sales call, but we still agree the calling rules with you before launch.",
   },
   {
     category: 'control',
@@ -445,19 +416,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'How much does it cost to build a custom AI agent for a logistics company?',
     answer:
-      "Market estimates from three development firms' 2026 guides: Biz4Group puts logistics and supply chain agents at $35,000 to $55,000. RapidDev lists $13,000 to $25,000 for a standard agency build of a logistics agent, up to $35,000 for multi-system or voice work, and sells such builds itself. SparkoutTech lists $25,000 to $60,000 for an MVP agent and $60,000 to $150,000 for a business process agent. These are not FactoryJet prices. We quote a fixed price per phase in writing after a short scoping call.",
+      "RapidDev's 2026 logistics guide lists $13,000 to $25,000 for a standard agency build, up to $35,000 for multi-system builds with voice and compliance work, and RapidDev sells such builds itself. The cost section above gives two more firms' ranges, all market estimates rather than FactoryJet prices.",
   },
   {
     category: 'working',
     question: 'How long does it take to build an AI agent for a 3PL or brokerage?',
     answer:
-      'A pilot on one focused job, such as reading load tenders from one inbox, usually takes two to four weeks. A production build with permissions, logging, approvals and monitoring usually takes six to twelve weeks. Access to your TMS is the biggest variable. It goes fastest when you can hand over a test login and a month of past tenders or PODs at the start.',
-  },
-  {
-    category: 'working',
-    question: 'Can we see it working before we sign?',
-    answer:
-      'Yes. Before a contract, we show working software on your own data. For a logistics company that usually means a set of real tenders, rate requests or PODs you have already handled, run through a first version of the agent so you can compare its drafts with what your team did.',
+      'A pilot on one focused job, such as reading load tenders from one inbox, usually takes two to four weeks. A production build with permissions, logging, approvals and monitoring usually takes six to twelve weeks. Access to your TMS is the biggest variable.',
   },
   {
     category: 'working',
@@ -469,7 +434,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'Who owns the agent and its code?',
     answer:
-      'You do. The agent is built for you and the code is yours, along with the notes that explain how it works. We can still look after it day to day: the servers, the AI models, the API connections and the updates. If you later move the work in-house or to another firm, the code and its notes go with you.',
+      'You do. The agent is built for you, and the code and the notes that explain it are yours. We can still look after the servers, the AI models, the API connections and the updates. If you later move the work in-house or to another firm, the code goes with you.',
   },
 ];
 
@@ -519,21 +484,21 @@ const SHIPS: ReadonlyArray<{
   {
     name: 'FourKites',
     kind: 'Visibility · agents built in',
-    says: 'FourKites describes itself as the AI execution platform for supply chain and says its agents act rather than only alert. Its home page names six agents: Tracy, Sam, Alan, Cassie, Polly and Sophie. If your shippers already track loads in FourKites, look at what those agents cover before anyone builds.',
+    says: 'FourKites describes itself as the AI execution platform for supply chain and says its agents act rather than only alert. Its home page names six agents: Tracy, Sam, Alan, Cassie, Polly and Sophie. If your shippers already use FourKites, check those agents before anyone builds.',
     sources: ['fourkites'],
     span: 'lg:col-span-7',
   },
   {
     name: 'Blue Yonder',
     kind: 'Supply chain platform',
-    says: 'Blue Yonder says AI agents on its platform continuously monitor your end-to-end network, and describes agentic AI that recommends, decides and acts so teams focus on exceptions. Its home page does not describe agents for warehouse or transportation work in particular.',
+    says: 'Blue Yonder says AI agents on its platform continuously monitor your end-to-end network, so teams focus on exceptions. Its home page does not describe agents for warehouse or transportation work in particular.',
     sources: ['blueYonder'],
     span: 'lg:col-span-5',
   },
   {
     name: 'Samsara',
     kind: 'ELD and telematics',
-    says: "Samsara's developer documentation describes an MCP connection to connect AI assistants and agents directly to your Samsara data. It also documents a routes API to integrate route creation, assignment and progress tracking with your TMS, a Messages API for driver messages and a Documents API for forms drivers fill out.",
+    says: "Samsara's developer documentation describes an MCP connection to connect AI assistants and agents directly to your Samsara data. MCP (Model Context Protocol) is a standard way to plug AI assistants into other software. Samsara also documents a routes API to integrate route creation, assignment and progress tracking with your TMS. An API is a way for other software to read and write a system's records.",
     sources: ['samsaraDocs', 'samsaraRest'],
     span: 'lg:col-span-12',
   },
@@ -544,27 +509,27 @@ const DECIDE_STEPS: ReadonlyArray<{ n: string; t: string; b: string }> = [
   {
     n: '01',
     t: 'Does the job live inside one platform you already pay for?',
-    b: 'If the work is tracking loads that already sit in FourKites or project44, or messaging drivers inside your ELD, try that platform first. FourKites names six agents of its own.',
+    b: 'If the work is tracking loads that already sit in FourKites or project44, or messaging drivers inside your ELD, try that platform first.',
   },
   {
     n: '02',
     t: 'Is the job one a specialist product already sells?',
-    b: 'Carrier sales calls, broker quoting and small-fleet dispatch each have products: HappyRobot, Augment, Vooma, DispatchMVP and Numeo among them. All are listed further down with a link to each vendor.',
+    b: 'Carrier sales calls, broker quoting and small-fleet dispatch each have products: HappyRobot, Augment, Vooma, DispatchMVP and Numeo among them.',
   },
   {
     n: '03',
     t: 'Does it span your TMS, WMS, inbox, carrier portals and accounting?',
-    b: 'That is where a custom agent fits. Examples are a tender read from email and built in your TMS, a POD matched to the load and the carrier invoice, and a detention claim built from ELD timestamps and your customer terms.',
+    b: 'That is where a custom agent fits. Examples are a tender read from email and built in your TMS, or a detention claim built from ELD timestamps and your customer terms.',
   },
   {
     n: '04',
     t: 'Can the rules be written down?',
-    b: 'If your team can explain the work as rules, such as which customer, which lane, which accessorial and which free time, an agent can follow them. Where it rests on judgment about a carrier or a customer, the agent prepares the facts and a person decides.',
+    b: 'If your team can explain the work as rules, such as which customer, which lane, which accessorial (an extra charge such as detention, waiting past the free time at a dock) and how much free time, an agent can follow them. Where it rests on judgment about a carrier or a customer, the agent prepares the facts and a person decides.',
   },
   {
     n: '05',
     t: 'Who approves the result?',
-    b: 'Name one person for each kind of draft before anything is built: bookings, customer updates, invoices, claims. An agent with no named approver has nowhere to send its drafts.',
+    b: 'Name one person for each kind of draft before anything is built: bookings, customer updates, invoices and claims.',
   },
 ];
 
@@ -575,32 +540,32 @@ const DECIDE_STEPS: ReadonlyArray<{ n: string; t: string; b: string }> = [
 const CONNECTS: ReadonlyArray<{ system: string; holds: string; api: string; sources: ReadonlyArray<SrcKey> }> = [
   {
     system: 'Samsara',
-    holds: 'ELD, HOS, locations, routes, driver messages',
-    api: 'Samsara documents API tokens and OAuth 2.0 for sign-in, webhooks that notify you when an event occurs in your account, a Messages API that sends messages to drivers on behalf of a fleet admin, and a Documents API that captures what drivers submit.',
+    holds: 'ELD, driver hours, locations, routes, driver messages',
+    api: 'Samsara documents API tokens and OAuth 2.0 (standard ways for one app to sign in to another), webhooks for account events, a Messages API that sends messages to drivers on behalf of a fleet admin, and a Documents API that captures what drivers submit.',
     sources: ['samsaraDocs', 'samsaraRest'],
   },
   {
     system: 'Motive',
-    holds: 'ELD, HOS logs, locations, messaging',
-    api: 'Motive describes an open API to integrate Motive with your existing platforms, with categories for vehicles, HOS logs, locations, messaging, inspection reports and webhooks, and a free developer account.',
+    holds: 'ELD, driver hours logs, locations, messaging',
+    api: 'Motive describes an open API to integrate Motive with your existing platforms, with categories for vehicles, HOS (hours of service) logs, locations, messaging and webhooks.',
     sources: ['motive'],
   },
   {
     system: 'project44',
     holds: 'Shipment tracking and status',
-    api: "project44's API reference lists shipment tracking, truckload and LTL tracking, a truckload webhook and push tracking, with OAuth 2.0 client applications and token generation. It says all the API endpoints require authentication.",
+    api: "project44's API reference lists shipment tracking, truckload and LTL (less-than-truckload) tracking, and a truckload webhook, with OAuth 2.0 sign-in. It says all the API endpoints require authentication.",
     sources: ['p44', 'p44Ref'],
   },
   {
     system: 'Truckstop',
     holds: 'Load board, rates, carrier checks',
-    api: 'Truckstop says its Load Management API helps manage the life cycle of loads on the load board, and its Carrier Monitoring API returns a carrier\'s details by DOT number. Its REST APIs sign in with tokens.',
+    api: 'Truckstop says its Load Management API helps manage the life cycle of loads on the load board, and its carrier monitoring endpoint returns a carrier\'s details by DOT number (the carrier\'s US Department of Transportation ID).',
     sources: ['truckstop'],
   },
   {
     system: 'Your TMS and WMS',
     holds: 'Loads, rates, orders, inventory',
-    api: 'The agent connects through the API the vendor publishes, or the access your account already has, such as EDI, file exports or a reporting database. We check which one before scoping a job.',
+    api: 'The agent connects through the API the vendor publishes, or the access your account already has, such as file exports, a reporting database or EDI (electronic data interchange, the fixed-format messages shippers and carriers exchange). Common EDI messages are the 204 load tender, the 214 status update and the 210 freight invoice.',
     sources: [],
   },
 ];
@@ -663,10 +628,10 @@ const JOBS: ReadonlyArray<Job> = [
   {
     n: '04',
     title: 'POD and freight invoice matching',
-    body: 'PODs, BOLs and carrier invoices arrive as photos and PDFs. The agent matches them to the load before billing.',
+    body: 'PODs, BOLs (bills of lading, the shipping paper that travels with the freight) and carrier invoices arrive as photos and PDFs. The agent matches them to the load before billing.',
     items: [
       'Reads the signature, date, piece count and exception notes on the POD',
-      'Matches the carrier invoice to the rate confirmation and flags any line that differs',
+      'Matches the carrier invoice to the rate confirmation (the sheet broker and carrier sign to agree the rate) and flags any line that differs',
       'Builds the customer invoice packet with the POD attached',
       'Chases a missing POD from the carrier',
     ],
@@ -677,7 +642,7 @@ const JOBS: ReadonlyArray<Job> = [
   {
     n: '05',
     title: 'Accessorial and detention claims',
-    body: 'Detention, layover and lumper charges are lost when nobody has time to write them up. The agent drafts each claim with its evidence.',
+    body: 'Detention, layover and lumper charges (fees for the workers who unload a truck) are lost when nobody has time to write them up. The agent drafts each claim with its evidence.',
     items: [
       'Reads arrival and departure times from ELD data or check-in records',
       'Applies the free time and rates in each customer contract',
@@ -728,7 +693,7 @@ const GUARDS: ReadonlyArray<{ rule: string; keeper: Keeper; note: string }> = [
   {
     rule: 'A login it cannot exceed',
     keeper: 'software',
-    note: 'The agent signs in with its own credentials. Samsara documents API tokens and OAuth 2.0, and project44 says all its API endpoints require authentication.',
+    note: 'The agent signs in with its own credentials, the way each vendor’s API requires, so the software itself limits what it can reach.',
   },
   {
     rule: 'Only the data its job needs',
@@ -738,7 +703,7 @@ const GUARDS: ReadonlyArray<{ rule: string; keeper: Keeper; note: string }> = [
   {
     rule: 'One rate source',
     keeper: 'build',
-    note: 'The agent prices from your contract rates and rate rules and nowhere else. Where a rate is missing it asks a person. It does not make one up.',
+    note: 'The agent prices from your contract rates and rate rules only. Where a rate is missing it asks a person.',
   },
   {
     rule: 'Read-only first',
@@ -748,7 +713,7 @@ const GUARDS: ReadonlyArray<{ rule: string; keeper: Keeper; note: string }> = [
   {
     rule: 'A log of every draft',
     keeper: 'build',
-    note: 'Each draft is logged with the email or document it came from and the lookups behind it, so a reviewer can see why a number is there.',
+    note: 'Each draft is logged with the document it came from and the lookups behind it.',
   },
   {
     rule: 'Approval before anything goes out',
@@ -767,17 +732,17 @@ const GUARDS: ReadonlyArray<{ rule: string; keeper: Keeper; note: string }> = [
 const BREAKS: ReadonlyArray<{ t: string; b: string; sources: ReadonlyArray<SrcKey> }> = [
   {
     t: 'Contract rates nobody has loaded',
-    b: 'An agent quotes from the rates it is given. If half your customer rates live in an account manager’s spreadsheet, load them before the build starts.',
+    b: 'An agent quotes from the rates it is given. Load rates that live in someone’s spreadsheet before the build starts.',
     sources: [],
   },
   {
     t: 'Accessorial rules nobody wrote down',
-    b: 'Free time, detention rates and lumper rules differ by customer. If they sit in people’s heads, the agent cannot apply them. Write them down first.',
+    b: 'Free time, detention rates and lumper rules differ by customer. If they sit in people’s heads, write them down first.',
     sources: [],
   },
   {
     t: 'Expecting an agent to plan routes',
-    b: 'Route optimization is its own kind of software. Samsara documents a routes API for passing routes between its system and your TMS, so an agent can work with routes. It should not invent them.',
+    b: 'Route optimization is its own kind of software. An agent can pass routes along through a routes API such as Samsara’s. It should not invent them.',
     sources: ['samsaraDocs'],
   },
   {
@@ -786,18 +751,13 @@ const BREAKS: ReadonlyArray<{ t: string; b: string; sources: ReadonlyArray<SrcKe
     sources: ['fcc'],
   },
   {
-    t: 'One inbox for everything',
-    b: 'When tenders, PODs, invoices and spam share one inbox with no rules, the agent spends its effort sorting. A few forwarding rules on day one make every later step simpler.',
-    sources: [],
-  },
-  {
-    t: 'No named approver',
-    b: 'A booking or a claim with no named owner sits in a queue. Name one person for each kind of draft before the build.',
+    t: 'Assigning a load before the carrier is checked',
+    b: 'Fraud and double brokering, where a carrier quietly hands your load to someone else, start with a carrier nobody checked. A person checks the carrier’s identity and operating authority before any load is assigned. The agent flags a mismatch, such as a new phone number or email domain.',
     sources: [],
   },
 ];
 
-/* ── Our experience, stated plainly. No logistics client is named or claimed
+/* ── Our experience. No logistics client is named or claimed
    and no result is claimed. Wording follows /services/construction-ai-agents,
    which Bhavesh approved. ── */
 const EXPERIENCE: ReadonlyArray<{ t: string; kind: string; what: string; href: string; cta: string; span: string }> = [
@@ -812,26 +772,10 @@ const EXPERIENCE: ReadonlyArray<{ t: string; kind: string; what: string; href: s
   {
     t: 'What you see before you sign',
     kind: 'A demo on your own data',
-    what: 'Before a contract, we show working software on your own data. For a logistics company that means real tenders, rate requests or PODs you have already handled, run through a first version so you can lay its drafts beside what your team did.',
+    what: 'Before a contract, we show working software on your own data. For a logistics company, that means tenders, rate requests or PODs you already handled, run through a first version so you can compare its drafts with your team’s work.',
     href: '/contact',
     cta: 'Ask for a demo on your data',
     span: 'lg:col-span-5',
-  },
-  {
-    t: 'How we are rated',
-    kind: '500+ businesses · 97% on time · 4.9 / 5',
-    what: 'FactoryJet has served more than 500 businesses, with 97% on-time delivery and a 4.9 / 5 average Google review rating.',
-    href: '/about',
-    cta: 'Read about FactoryJet',
-    span: 'lg:col-span-5',
-  },
-  {
-    t: 'How we price and stay on',
-    kind: 'Fixed price per phase',
-    what: 'You get a fixed price per phase in writing, defect cover after launch and no monthly minimum. You own the code. After launch we can keep managing the servers, the AI models and the API connections, so your team does not have to.',
-    href: '/services/ai-agent-monitoring',
-    cta: 'See monitoring and support',
-    span: 'lg:col-span-7',
   },
 ];
 
@@ -843,25 +787,25 @@ const INDUSTRIES: ReadonlyArray<{ img: string; alt: string; t: string; b: string
     img: `${IMG}/warehouse-scanner-aisle.webp`,
     alt: 'A woman in an orange safety vest and grey t-shirt scans a cardboard carton with a black handheld scanner in a warehouse aisle lined with blue and orange pallet racking',
     t: '3PLs and warehouses',
-    b: 'Order exceptions, appointment requests and customer emails pile up beside the WMS. The agent reads them against your inventory and drafts the fix for a supervisor.',
+    b: 'The agent reads order exceptions, appointment requests and customer emails against your WMS and drafts the fix for a supervisor.',
   },
   {
     img: `${IMG}/broker-paperwork-desk.webp`,
     alt: 'A woman with a black bob and a burgundy blouse reads a printed document with a pen in hand at a wooden desk beside a black desk phone and an orange folder',
     t: 'Freight brokers',
-    b: 'Rate requests, tenders and carrier updates arrive all day. The agent builds the quote or load in your TMS and chases status, and your brokers keep the rates and relationships.',
+    b: 'The agent turns rate requests and tenders into quotes and loads in your TMS, while your brokers keep the rates and relationships.',
   },
   {
     img: `${IMG}/driver-cab-yard.webp`,
     alt: 'A bearded man in an olive work shirt and jeans stands on the step of a plain white truck cab and looks at a phone, with white trailers parked behind him',
     t: 'Carriers and trucking fleets',
-    b: 'Dispatch messages, PODs and detention claims eat the office day. The agent drafts them from your TMS and ELD data for your dispatcher and billing team.',
+    b: 'The agent drafts dispatch messages, POD chases and detention claims from your TMS and ELD data for your dispatcher and billing team.',
   },
   {
     img: `${IMG}/loading-dock-trailer.webp`,
     alt: 'A man in a grey knit cap, navy jacket and work gloves pulls a red pallet jack loaded with shrink wrapped boxes out of a white trailer at a loading dock',
     t: 'Shippers’ logistics teams',
-    b: 'Carrier updates, freight invoices and claims land with a small team. The agent matches invoices to loads and drafts the updates your customers expect.',
+    b: 'The agent matches freight invoices to loads and drafts the carrier and customer updates a small team struggles to keep up with.',
   },
 ];
 
@@ -870,32 +814,32 @@ const PROCESS: ReadonlyArray<{ n: string; t: string; b: string }> = [
   {
     n: '01',
     t: 'List the systems and the paperwork',
-    b: 'Which TMS, WMS, ELD and accounting systems you run, and which emails and documents arrive each day. Whether each system has an API, which is a way for other software to read and write its records, decides what an agent can do.',
+    b: 'Which TMS, WMS, ELD and accounting systems you run, and which emails and documents arrive each day. Whether each system has an API decides what an agent can do.',
   },
   {
     n: '02',
     t: 'Check what you already own',
-    b: 'If your visibility platform, your ELD or a specialist product already does the job, we say so, even when it means there is no work for us.',
+    b: 'If your visibility platform, your ELD or a specialist product already does the job, we say so.',
   },
   {
     n: '03',
     t: 'Pick one job and write down its rules',
-    b: 'One task, such as tenders from one customer inbox or POD matching. The rules a person follows today go on paper, along with who approves the result.',
+    b: 'One task, such as tenders from one customer inbox or POD matching. The rules a person follows today go on paper.',
   },
   {
     n: '04',
     t: 'Show it on your own data',
-    b: 'Before a contract, we run a set of your real documents through a first version, so you see drafts you can judge against what your team did.',
+    b: 'Before a contract, a first version runs on a set of your real documents.',
   },
   {
     n: '05',
     t: 'Build with read-only access first',
-    b: 'The agent gets a login of its own with only the permissions the job needs. It reads before it writes, and write access is added one record type at a time.',
+    b: 'Its own login, only the permissions the job needs, and write access added one record type at a time.',
   },
   {
     n: '06',
     t: 'Run it beside your team, then stay on',
-    b: 'For an agreed period the agent drafts while a person does the same work, and the rules are fixed where the two differ. After launch the same team reads the logs, re-tests when your software or the AI model changes, and fixes what breaks.',
+    b: 'For an agreed period the agent drafts beside a person doing the same work, and rules are fixed where the two differ. After launch we read the logs, re-test after changes and fix what breaks.',
   },
 ];
 
@@ -960,25 +904,25 @@ const OTHERS: ReadonlyArray<{ name: string; focus: string; says: string; source:
   {
     name: 'HappyRobot',
     focus: 'Agent platform · carrier sales, track and trace',
-    says: 'Says it lets you build and orchestrate agents that automate communication-heavy work at enterprise scale. Its logistics card lists carrier sales and track and trace.',
+    says: 'Says it lets you build agents that automate communication-heavy work. Its logistics card lists carrier sales and track and trace.',
     source: 'happyrobot',
   },
   {
     name: 'Augment',
     focus: 'Freight brokerages and 3PLs',
-    says: 'Says its agent, Augie, runs quoting, booking, updates and more, so a brokerage team stays focused on revenue and retention.',
+    says: 'Says its agent, Augie, runs quoting, booking, updates and more for brokerage teams.',
     source: 'augment',
   },
   {
     name: 'Vooma',
     focus: 'Brokers and carriers',
-    says: 'Says it is built for brokers to help quote and build loads, schedule, cover and track, and helps carriers build and schedule loads and keep brokers updated.',
+    says: 'Says it is built for brokers to help quote and build loads, schedule, cover and track, and also serves carriers.',
     source: 'vooma',
   },
   {
     name: 'Pallet',
     focus: 'Logistics operations agents',
-    says: 'Describes its agents product as a way to run your operations end-to-end with AI. A customer example on its home page covers warehousing, freight forwarding and transportation tasks.',
+    says: 'Describes its agents product as a way to run your operations end-to-end with AI, with a customer example covering warehousing, freight forwarding and transportation.',
     source: 'pallet',
   },
   {
@@ -990,7 +934,7 @@ const OTHERS: ReadonlyArray<{ name: string; focus: string; says: string; source:
   {
     name: 'Numeo',
     focus: 'Dispatch for carriers',
-    says: 'Calls itself AI dispatch software for trucking carriers that helps dispatchers find loads faster, contact brokers sooner and negotiate with AI.',
+    says: 'Calls itself AI dispatch software for trucking carriers that helps dispatchers find loads faster and negotiate with AI.',
     source: 'numeo',
   },
 ];
@@ -1019,7 +963,7 @@ const COSTS: ReadonlyArray<{ firm: string; range: string; scope: string; source:
   {
     firm: 'RapidDev',
     range: '$13,000 to $25,000',
-    scope: 'A standard agency build of a logistics agent, up to $35,000 for multi-system, voice or compliance-heavy work. RapidDev sells these builds itself.',
+    scope: 'A standard agency build of a logistics agent, up to $35,000 for multi-system builds with voice and compliance work. RapidDev sells these builds itself.',
     source: 'rapiddev',
   },
   {
@@ -1030,13 +974,13 @@ const COSTS: ReadonlyArray<{ firm: string; range: string; scope: string; source:
   },
 ];
 
-const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
-  { href: '/services/document-intake-ai-agents', t: 'Document intake AI agents', b: 'Reading PDFs, scans and photos into your systems, the core of POD and invoice work.' },
-  { href: '/services/ai-agent-development/procurement-supply-chain-agent', t: 'Procurement and supply chain agent', b: 'The buying side: purchase orders, supplier confirmations and delay notices.' },
-  { href: '/services/ai-receptionist', t: 'AI receptionist', b: 'A custom voice agent that answers, qualifies and routes calls.' },
-  { href: '/services/erp-ai-agents', t: 'AI agents for ERP systems', b: 'Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs on one page.' },
-  { href: '/services/ai-agent-development', t: 'AI agent development', b: 'Custom agents for support, sales and operations, beyond logistics.' },
-  { href: '/services/ai-agent-monitoring', t: 'AI agent monitoring and support', b: 'Watching, re-testing and fixing an agent after launch.' },
+const RELATED: ReadonlyArray<{ href: string; t: string }> = [
+  { href: '/services/document-intake-ai-agents', t: 'Document intake AI agents' },
+  { href: '/services/ai-agent-development/procurement-supply-chain-agent', t: 'Procurement and supply chain agent' },
+  { href: '/services/ai-receptionist', t: 'AI receptionist' },
+  { href: '/services/erp-ai-agents', t: 'AI agents for ERP systems' },
+  { href: '/services/ai-agent-development', t: 'AI agent development' },
+  { href: '/services/ai-agent-monitoring', t: 'AI agent monitoring and support' },
 ];
 
 /** Small inline source links. Same visual pattern as /services/construction-ai-agents.
@@ -1096,9 +1040,11 @@ export default function LogisticsAiAgentsPage() {
                 </h1>
 
                 <p className={`${styles.heroLead} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}>
-                  FactoryJet builds custom AI agents for US 3PLs, freight brokers, carriers and warehouses that read load
-                  tenders and rate requests from email, chase check calls and proofs of delivery, match freight invoices
-                  and draft shipment updates, working inside the TMS, WMS and ELD accounts you already use.
+                  FactoryJet builds custom AI agents for US 3PLs (third-party logistics providers), freight brokers,
+                  carriers and warehouses. The agents read load tenders (a shipper&rsquo;s offer of a load to a carrier or
+                  broker) and rate requests from email. They chase check calls (status checks with the carrier during a
+                  load) and proofs of delivery (PODs). They also match freight invoices and draft shipment updates in the
+                  TMS (transportation management system) and WMS (warehouse management system) you already use.
                 </p>
 
                 <div className={`${styles.heroForm} mt-6`}>
@@ -1112,10 +1058,9 @@ export default function LogisticsAiAgentsPage() {
                 </div>
 
                 <p className={`${styles.heroDetails} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}>
-                  Some jobs need nothing built, because your visibility platform, your ELD or a specialist product
-                  already does them. Where the work spans your own TMS (transportation management system), WMS
-                  (warehouse management system), email inbox, carrier portals and accounting, and follows your rules,
-                  we build the agent, connect it and stay on after launch. You get a fixed price per phase in writing
+                  Some jobs need nothing built, because your visibility platform, your ELD (electronic logging device,
+                  the box that records driver hours and location) or a specialist product already does them. Where the
+                  work spans your own systems and follows your rules, we build the agent and stay on after launch. You get a fixed price per phase in writing
                   before work starts.
                 </p>
 
@@ -1184,16 +1129,10 @@ export default function LogisticsAiAgentsPage() {
               </div>
               <p className="font-fj-body text-base leading-relaxed text-fj-ink sm:text-lg">
                 An AI agent for logistics is software that does one operations task. It reads what arrives, such as a
-                load tender, a rate request, a carrier status email or a proof of delivery, looks it up in your TMS or
-                WMS, and drafts the quote, load, customer update or invoice match for a person to approve.
+                load tender, rate request, status email or proof of delivery, looks it up in your TMS or WMS, and
+                drafts the quote, load, update or invoice match for a person to approve. It works beside your TMS and
+                leaves the records there.
               </p>
-              <p className="mt-4 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">
-                It works alongside your TMS rather than replacing it, and software you may already own covers part of
-                this. FourKites names six agents of its own, and Samsara
-                documents a way to connect AI agents to fleet data. Specialist products answer carrier calls and quote
-                loads. A custom agent covers work that crosses your own systems and follows your own rules.
-              </p>
-              <SourceLinks ids={['fourkites', 'samsaraDocs']} />
             </div>
           </div>
         </section>
@@ -1203,11 +1142,11 @@ export default function LogisticsAiAgentsPage() {
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
             <p className="fj-eyebrow">What you already own</p>
             <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
-              What logistics platforms already ship for AI.
+              Which logistics platforms already have AI agents built in?
             </h2>
             <p className="mt-4 max-w-3xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
-              Start here. Each card restates the vendor&rsquo;s own pages, as read on {CHECKED_ON}. If one of these
-              already does your job, you do not need a build, and we will tell you so.
+              Each card restates the vendor&rsquo;s own pages, as read on {CHECKED_ON}. If one already does your job,
+              you do not need a build.
             </p>
             <ul className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-12">
               {SHIPS.map((c) => (
@@ -1222,36 +1161,6 @@ export default function LogisticsAiAgentsPage() {
               ))}
             </ul>
 
-            <div className="mt-8 rounded-2xl border-2 border-[#F05A28]/25 bg-white p-6 sm:p-8">
-              <div className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13]">
-                What we found on {SEARCHED_ON}
-              </div>
-              <h3 className="mt-3 font-fj-display text-xl font-semibold text-fj-ink">
-                Four things we measured before writing this page.
-              </h3>
-              <ul className="mt-4 grid max-w-3xl gap-3 font-fj-body text-[15px] leading-relaxed text-fj-ink">
-                <li className="flex items-start gap-2.5">
-                  <span aria-hidden="true" className="mt-[9px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#F05A28]" />
-                  We ran six US Google searches, including &ldquo;ai for logistics&rdquo;, &ldquo;dispatch ai&rdquo;
-                  and &ldquo;ai for freight brokers&rdquo;. All six showed an AI Overview at the top.
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span aria-hidden="true" className="mt-[9px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#F05A28]" />
-                  We asked six AI assistants &ldquo;Who builds AI agents for logistics and 3PL companies?&rdquo;. Most
-                  names in the answers were ready-made products, such as FourKites, Blue Yonder, HappyRobot and Pallet.
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span aria-hidden="true" className="mt-[9px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#F05A28]" />
-                  Asked which software automates dispatch and load booking for a trucking company, four of the six
-                  answers named DispatchMVP.
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span aria-hidden="true" className="mt-[9px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#F05A28]" />
-                  Asked what a custom logistics agent costs to build, the answers cited development firms&rsquo; cost
-                  guides. The ranges from three of them are in the cost section below.
-                </li>
-              </ul>
-            </div>
           </div>
         </section>
 
@@ -1262,16 +1171,15 @@ export default function LogisticsAiAgentsPage() {
               <div className="lg:col-span-4">
                 <p className="fj-eyebrow">Works with what you run</p>
                 <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
-                  A custom agent works beside your TMS, WMS, ELD and load board.
+                  Which systems can a logistics AI agent connect to?
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
-                  Your records stay where they are. The agent gets its own login to each system, with only the
-                  permissions its job needs, and connects through the API the vendor publishes or the access your
-                  account already has. Drafts land in the tool your team already opens every morning.
+                  Your records stay where they are. The agent gets its own login to each system and connects through
+                  the API the vendor publishes or the access your account already has.
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-ink">
-                  Most AI for fleet management starts from ELD data, so the ELD comes first. Each row says what that
-                  vendor&rsquo;s own developer pages describe, as read on {CHECKED_ON}.
+                  Your TMS (McLeod, MercuryGate, Turvo and others) and load boards such as DAT: we check what access
+                  your account has before scoping. Each row below restates that vendor&rsquo;s developer pages.
                 </p>
               </div>
 
@@ -1305,11 +1213,11 @@ export default function LogisticsAiAgentsPage() {
               <div className="lg:col-span-4">
                 <p className="fj-eyebrow">Switch on, buy or build</p>
                 <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
-                  Five questions that decide whether to switch on, buy or build.
+                  Should you switch on, buy or build AI for logistics?
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
-                  Ask them in this order. The first two often end the conversation, because the answer is a feature
-                  you already pay for or a product you can subscribe to this week.
+                  Ask these five questions in order. The first two often end the conversation, because the answer is a
+                  feature you already pay for.
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-ink">
                   Where we come in is question three onward: logistics automation that depends on your own rates, your
@@ -1337,8 +1245,8 @@ export default function LogisticsAiAgentsPage() {
         {/* 5. COMPARISON: three kinds of provider */}
         <ComparisonTable
           eyebrow="Three kinds of provider"
-          headline="AI inside your TMS or platform, a specialist product, or an agent built for you."
-          lead="Logistics AI solutions come in three kinds, and each is the right one for somebody. On the scoping call we say which we would choose for you and why, even when it means there is no work for us."
+          headline="Which kind of logistics AI provider fits your job?"
+          lead="AI inside your TMS or platform, a specialist product, or an agent built for you: each is the right one for somebody."
           columns={COMPARE_COLUMNS}
           rows={COMPARE_ROWS}
           footer={`Vendor facts are from each vendor's own pages as read on ${CHECKED_ON}.`}
@@ -1350,16 +1258,14 @@ export default function LogisticsAiAgentsPage() {
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
             <p className="fj-eyebrow">Seven jobs</p>
             <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
-              Seven logistics office jobs an AI agent can draft for your team.
+              Which jobs can AI agents for logistics do for a 3PL or freight broker?
             </h2>
             <p className="mt-4 max-w-3xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
-              Each card says what the agent does and what stays with a person. Every job ends the same way, with a
-              draft a person approves. AI in logistics and supply chain work splits in two: moving goods, covered
-              here, and buying them. For the paperwork side, see{' '}
+              Each card says what the agent does and what stays with a person. For the paperwork side, see{' '}
               <Link href="/services/document-intake-ai-agents" className="font-semibold text-fj-ink underline underline-offset-4">
                 document intake AI agents
               </Link>
-              . Buying from suppliers is a different job, covered by our{' '}
+              . Buying from suppliers is covered by our{' '}
               <Link
                 href="/services/ai-agent-development/procurement-supply-chain-agent"
                 className="font-semibold text-fj-ink underline underline-offset-4"
@@ -1392,19 +1298,12 @@ export default function LogisticsAiAgentsPage() {
                 </div>
               ))}
             </div>
-            <p className="mt-6 max-w-3xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
-              These are the jobs logistics companies search for. In US search data we pulled on 8 Nov 2026,
-              &ldquo;warehouse ai&rdquo; drew about 3,600 searches a month, &ldquo;ai for logistics&rdquo; about 1,300,
-              &ldquo;ai in transportation&rdquo; about 720, &ldquo;dispatch ai&rdquo; about 390 and &ldquo;ai for
-              trucking&rdquo; about 140. The same pattern fits every card
-              above: read what arrives, look it up, draft, approve.
-            </p>
           </div>
         </section>
 
         <MidPageCTA
           headline="Tell us the job. We will say if your software already does it."
-          sub="Send one task that fills your team's day: tenders, check calls, PODs, invoices, claims or dock requests. We reply with what your current software or a specialist product covers, what we would build, and a fixed price per phase if there is work for us."
+          sub="Send one task that fills your team's day, such as tenders, PODs or claims. We reply with what your current software covers, what we would build, and a written quote if there is work for us."
           label="Scope my agent"
         />
 
@@ -1415,7 +1314,7 @@ export default function LogisticsAiAgentsPage() {
               <div className="lg:col-span-4">
                 <p className="fj-eyebrow">Keeping control</p>
                 <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
-                  Its own login, one rate source and a named approver keep an agent safe.
+                  How do you keep a logistics AI agent safe?
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                   To your software, an agent is a user. It can do what its login allows and nothing more.
@@ -1423,7 +1322,6 @@ export default function LogisticsAiAgentsPage() {
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-ink">
                   Seven controls follow. Your software enforces two, we set up three and your team keeps two.
                 </p>
-                <SourceLinks ids={['samsaraDocs', 'p44Ref']} />
               </div>
 
               <ul className="grid gap-3 lg:col-span-8">
@@ -1459,17 +1357,16 @@ export default function LogisticsAiAgentsPage() {
               <div className="lg:col-span-5">
                 <p className="fj-eyebrow">Cost</p>
                 <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
-                  What a custom logistics AI agent costs to build: market estimates.
+                  What does a custom logistics AI agent cost?
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
-                  These ranges come from three development firms&rsquo; published 2026 cost guides, read on{' '}
-                  {CHECKED_ON}. They are market estimates, not FactoryJet prices, and each firm defines its tiers
-                  differently.
+                  These ranges come from three development firms&rsquo; 2026 cost guides. They are market estimates,
+                  not FactoryJet prices, and each firm defines its tiers differently.
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-ink">
                   What moves the number most is how many systems the agent reads, whether it writes to them, and
-                  whether it handles voice. FactoryJet quotes a fixed price per phase in writing after a short scoping
-                  call, with no monthly minimum.
+                  whether it handles voice. FactoryJet quotes each phase in writing after a short scoping call, with
+                  no monthly minimum.
                 </p>
               </div>
               <ul className="grid gap-4 lg:col-span-7">
@@ -1493,10 +1390,10 @@ export default function LogisticsAiAgentsPage() {
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
             <p className="fj-eyebrow">The traps</p>
             <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
-              Six places a logistics AI project breaks.
+              Where do logistics AI projects go wrong?
             </h2>
             <p className="mt-4 max-w-2xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
-              Knowing these early saves a rebuild. Two come from the linked vendor and regulator pages. The four
+              Two of these five come from the linked vendor and regulator pages. The three
               without a link are our own advice.
             </p>
             <ul className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -1516,11 +1413,10 @@ export default function LogisticsAiAgentsPage() {
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
             <p className="fj-eyebrow">Our experience</p>
             <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
-              What we bring to a logistics operations team, stated plainly.
+              What experience does FactoryJet bring to logistics work?
             </h2>
             <p className="mt-4 max-w-3xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
-              FactoryJet has served more than 500 businesses. Client projects with public
-              write-ups are in our{' '}
+              Client projects with public write-ups are in our{' '}
               <Link href="/case-studies" className="font-semibold text-fj-ink underline underline-offset-4">
                 case studies
               </Link>
@@ -1556,12 +1452,8 @@ export default function LogisticsAiAgentsPage() {
               <div className="lg:col-span-4">
                 <p className="fj-eyebrow">Who this is for</p>
                 <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
-                  Built for the offices that keep freight moving.
+                  Who is a logistics AI agent built for?
                 </h2>
-                <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
-                  The office work looks much the same at a 3PL, a brokerage, a carrier and a shipper. Something
-                  arrives, someone looks it up, someone types it into another system.
-                </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                   For quoting and order work in a plant, see{' '}
                   <Link
@@ -1604,11 +1496,10 @@ export default function LogisticsAiAgentsPage() {
               <div className="lg:col-span-4">
                 <p className="fj-eyebrow">Process</p>
                 <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
-                  How we design, build and support an agent for a logistics company.
+                  How is a logistics AI agent built and supported?
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
-                  What you already own is checked first. Then one job is agreed, shown on your own data and built with
-                  read-only access. After launch,{' '}
+                  After launch,{' '}
                   <Link
                     href="/services/ai-agent-monitoring"
                     className="font-semibold text-fj-ink underline underline-offset-4"
@@ -1623,10 +1514,6 @@ export default function LogisticsAiAgentsPage() {
                     AI receptionist
                   </Link>{' '}
                   page.
-                </p>
-                <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
-                  A pilot on one focused job usually takes two to four weeks. A production build with permissions,
-                  logging, approvals and monitoring usually takes six to twelve.
                 </p>
               </div>
               <ol className="grid gap-4 lg:col-span-8">
@@ -1653,15 +1540,12 @@ export default function LogisticsAiAgentsPage() {
               <div className="lg:col-span-4">
                 <p className="fj-eyebrow">Ready-made options</p>
                 <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
-                  Six specialist freight AI and dispatch products, and what each says it does.
+                  Which ready-made AI products serve freight brokers and trucking dispatch?
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
-                  These are ready-made AI tools for logistics. We wrote this list and we sell none of them. AI assistants named them when we asked
-                  logistics buyers&rsquo; questions on {SEARCHED_ON}. Each line restates the vendor&rsquo;s own page.
-                </p>
-                <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
-                  They are listed in no order of merit. If your process matches what one of them expects, it may be
-                  all you need.
+                  We sell none of these six. AI assistants named them when we asked logistics buyers&rsquo; questions on{' '}
+                  {SEARCHED_ON}. Each line restates the vendor&rsquo;s own page, in no order of merit. If your process
+                  matches what one expects, it may be all you need.
                 </p>
               </div>
               <ol className="grid gap-4 lg:col-span-8">
@@ -1690,7 +1574,7 @@ export default function LogisticsAiAgentsPage() {
           <div className="mx-auto max-w-[1120px] px-6 md:px-8">
             <p className="fj-eyebrow">Next to this page</p>
             <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
-              Related AI agent services.
+              Which related AI agent services should you look at?
             </h2>
             <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12">
               {RELATED.map((r, i) => (
@@ -1700,7 +1584,6 @@ export default function LogisticsAiAgentsPage() {
                     className="block h-full rounded-2xl border border-fj-neutral-200 bg-white p-6 transition-colors hover:border-[#F05A28]"
                   >
                     <span className="font-fj-display text-lg font-semibold text-fj-ink">{r.t}</span>
-                    <span className="mt-1.5 block font-fj-body text-sm leading-relaxed text-fj-neutral-600">{r.b}</span>
                   </Link>
                 </li>
               ))}
@@ -1715,18 +1598,17 @@ export default function LogisticsAiAgentsPage() {
               <div className="lg:col-span-4">
                 <p className="fj-eyebrow">Method</p>
                 <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
-                  Sources, checked on {CHECKED_ON}.
+                  Where do the facts on this page come from?
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                   Every product name, feature and number about another company on this page was read on that
-                  company&rsquo;s own pages on {CHECKED_ON}. Vendors are named in the systems list only where their
-                  own public developer pages describe an API. Vendors change these pages, so check the linked page
+                  company&rsquo;s own pages on {CHECKED_ON}. Vendors change these pages, so check the linked page
                   before you act on one.
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
-                  Search figures are US monthly searches from DataForSEO, pulled on {SEARCHED_ON}. The six Google
-                  searches and the AI assistant answers were collected through the same service on that day, one run
-                  each, so treat single-answer differences as noise. Cost ranges are each firm&rsquo;s own published
+                  The AI assistant answers were collected through DataForSEO, one run each, so treat single-answer
+                  differences as noise. Asked which software automates dispatch and load booking for a trucking
+                  company, four of six answers named DispatchMVP. Cost ranges are each firm&rsquo;s own published
                   estimate.
                 </p>
                 <p className="mt-6 font-fj-mono text-xs leading-relaxed text-fj-neutral-600">
@@ -1758,8 +1640,8 @@ export default function LogisticsAiAgentsPage() {
         {/* 16. FAQ */}
         <FAQ
           eyebrow="AI for logistics FAQ"
-          headline="AI for logistics questions, answered plainly."
-          lead={`What 3PL, brokerage, carrier and warehouse teams ask before adding an agent. Vendor answers are from each vendor's own pages as read on ${CHECKED_ON}.`}
+          headline="What do logistics teams ask about AI agents?"
+          lead={`What 3PL, brokerage, carrier and warehouse teams ask before adding an agent.`}
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-fj-cream"
