@@ -418,7 +418,7 @@ export const post: BlogPost = {
         software on your own data before you sign.
       </p>
       <p>
-        See <a href="/services/ai-agent-development">AI agent development</a>,{' '}
+        See <a href="/services/ai-agent-development">AI agents for business</a>,{' '}
         <a href="/services/ai-consulting">AI consulting</a>,{' '}
         <a href="/services/erp-ai-agents">AI agents for ERP systems</a> and{' '}
         <a href="/services/ai-customer-support-agents">AI customer support agents</a>, or our broader{' '}

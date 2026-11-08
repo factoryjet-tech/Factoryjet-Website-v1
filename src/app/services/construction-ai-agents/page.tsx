@@ -1445,7 +1445,7 @@ export default function ConstructionAiAgentsPage() {
                   in the tool your team already opens every morning.
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-ink">
-                  FactoryJet is not a reseller or listed partner of any vendor here. Each row says what that
+                  Each row says what that
                   vendor&rsquo;s own developer documentation allows, as read on {CHECKED_ON}.
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">

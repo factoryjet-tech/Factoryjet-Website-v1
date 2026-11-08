@@ -163,7 +163,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'pms',
     question: 'Which property management systems do you integrate with?',
     answer:
-      'We work with the platforms most property management companies already run, including AppFolio, Yardi, RealPage, Buildium, and Entrata, through the access each vendor publishes. Buildium publishes an Open API on its Premium plan. AppFolio, Yardi, RealPage, and Entrata grant API access through their own partner programs, and FactoryJet is not a listed partner of any of them. In scoping we check which access your account already has: an API your plan includes, a partner integration you already use, or the scheduled reports and exports your system produces. We tell you in writing what the agent can read and write before you sign.',
+      'We work with the platforms most property management companies already run, including AppFolio, Yardi, RealPage, Buildium, and Entrata, through the access each vendor publishes. Buildium publishes an Open API on its Premium plan. AppFolio, Yardi, RealPage, and Entrata grant API access through their own partner programs. In scoping we check which access your account already has: an API your plan includes, a partner integration you already use, or the scheduled reports and exports your system produces. We tell you in writing what the agent can read and write before you sign.',
   },
   {
     category: 'pms',
@@ -644,7 +644,7 @@ export default function PropertyManagementAiAgentsPage() {
                   Built to your rules on top of the system you already run, using the APIs and exports that system publishes. It fits when you run more than one system, need rules a packaged product does not support, want one agent across several brands or portfolios, or want to own the workflow and code.
                 </p>
                 <p className="text-xs text-[#6E655F] leading-relaxed">
-                  FactoryJet is not a partner of AppFolio, Yardi, RealPage, Buildium, or Entrata. Vendor product names checked against vendor announcements and company profiles on 8 Nov 2026.
+                  Vendor product names checked against vendor announcements and company profiles on 8 Nov 2026.
                 </p>
               </div>
             </div>
@@ -950,7 +950,7 @@ export default function PropertyManagementAiAgentsPage() {
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">How the Agent Works With Your Property Management System.</h2>
               <p className="text-lg text-[#46403B]">
-                Each PMS vendor controls API access its own way. Here is what each one publishes about access, checked on 8 Nov 2026; terms change, so we confirm them again for your account. FactoryJet is not a listed partner of any of them, so in scoping we confirm which access your account already has and put it in writing.
+                Each PMS vendor controls API access its own way. Here is what each one publishes about access, checked on 8 Nov 2026; terms change, so we confirm them again for your account. In scoping we confirm which access your account already has and put it in writing.
               </p>
             </div>
 

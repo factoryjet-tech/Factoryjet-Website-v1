@@ -374,7 +374,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'jobs',
     question: 'Which companies build custom AI agents for insurance agencies?',
     answer:
-      'FactoryJet designs, builds and supports custom AI agents for independent insurance agencies, MGAs and small carriers in the United States. When we put this question to six AI tools on 8 Nov 2026, the answers also named development firms such as Folio3, Intellias and LeewayHertz, and ready-made products such as Sonant and Gail. Products sell a set agent on a subscription. A custom build follows your own script and systems. Ask any builder to show a working agent on your own calls or files before you sign.',
+      'FactoryJet designs, builds and supports custom AI agents for independent insurance agencies, MGAs and small carriers in the United States. Ready-made products such as Sonant and Gail sell a set agent on a subscription. A custom build follows your own script and systems. Ask any builder to show a working agent on your own calls or files before you sign.',
   },
   {
     category: 'jobs',

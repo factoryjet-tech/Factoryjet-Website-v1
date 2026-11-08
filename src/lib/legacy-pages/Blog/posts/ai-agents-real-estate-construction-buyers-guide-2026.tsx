@@ -253,6 +253,13 @@ export const post: BlogPost = {
         </a>
         , which lays out exactly what this looks like built out for a brokerage or team.
       </p>
+      <p className="mb-6 text-gray-700 leading-relaxed">
+        For contractors, see{' '}
+        <a href="/services/construction-ai-agents" className="text-[#F05A28] font-semibold hover:underline">
+          AI agents for construction companies
+        </a>
+        , which covers estimating, bid summaries, RFIs and submittals built to work alongside Procore or Autodesk.
+      </p>
 
       {/* Section 5: What it does in construction (original, thorough) */}
       <h2 className="text-2xl md:text-3xl font-display font-bold text-gray-900 mt-12 mb-4">
