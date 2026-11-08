@@ -57,7 +57,7 @@ import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
      vendor publishes" or "the access your account already has".
    - No logistics client is named or claimed and no result is claimed.
      FactoryJet claims on this page: 500+ businesses, 97% on-time delivery,
-     4.9 / 5 average Google review rating, founded 2014.
+     4.9 / 5 average Google review rating.
    - No FactoryJet prices. No figure for what an agent costs to run. The only
      dollar figures are the three labelled market estimates for a BUILD
      (Biz4Group, RapidDev, SparkoutTech), in the cost section and one FAQ.
@@ -820,7 +820,7 @@ const EXPERIENCE: ReadonlyArray<{ t: string; kind: string; what: string; href: s
   {
     t: 'How we are rated',
     kind: '500+ businesses · 97% on time · 4.9 / 5',
-    what: 'FactoryJet was founded in 2014 and has served more than 500 businesses, with 97% on-time delivery and a 4.9 / 5 average Google review rating.',
+    what: 'FactoryJet has served more than 500 businesses, with 97% on-time delivery and a 4.9 / 5 average Google review rating.',
     href: '/about',
     cta: 'Read about FactoryJet',
     span: 'lg:col-span-5',
@@ -1519,7 +1519,7 @@ export default function LogisticsAiAgentsPage() {
               What we bring to a logistics operations team, stated plainly.
             </h2>
             <p className="mt-4 max-w-3xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
-              FactoryJet was founded in 2014 and has served more than 500 businesses. Client projects with public
+              FactoryJet has served more than 500 businesses. Client projects with public
               write-ups are in our{' '}
               <Link href="/case-studies" className="font-semibold text-fj-ink underline underline-offset-4">
                 case studies
