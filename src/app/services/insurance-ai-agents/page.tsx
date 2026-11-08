@@ -49,6 +49,19 @@ import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
    * Mirrors /services/construction-ai-agents for components, props and schema.
      The sentences are this page's own.
 
+   Strengthened 2026-11-08: title, H1, description and short answer now lead
+   with "ai for insurance agencies" (US 110/mo, $51 CPC, KD 7 on 8 Nov 2026)
+   and answer "who builds custom AI agents for insurance agencies" first, the
+   question on which ChatGPT, Claude and Perplexity named this page in 3 of 6
+   answers that day. Added the insurance verification section (Search Console
+   showed "ai agent for insurance verification"). All 31 source URLs were
+   fetched again on 2026-11-08 and every vendor sentence re-read: Applied's two
+   pages moved to /platform/applied-epic/ and were rewritten around Epic
+   Conductor, Vertafore's eight Velocity agents are now all marked Live, and
+   HawkSoft's two-way partner count fell from 26 to 25. CHECKED_ON covers the
+   vendor pages; SEARCHED_ON covers the 11 Oct Google result pages, which were
+   not run again.
+
    Schema: WebPage + Service + FAQPage + ItemList + BreadcrumbList.
    Organization is rendered once sitewide by src/app/layout.tsx and referenced
    here by @id. The FAQPage mainEntity is generated from the exact FAQ_ITEMS
@@ -56,12 +69,13 @@ import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CANONICAL_URL = 'https://factoryjet.com/services/insurance-ai-agents';
-const PAGE_TITLE = 'AI for Insurance: Custom AI Agents for Agencies | FactoryJet';
+const PAGE_TITLE = 'AI for Insurance Agencies: Custom AI Agents | FactoryJet';
 const PAGE_DESC =
-  'Custom AI agents for US insurance agencies, MGAs and carriers. We design, build and support agents for claim calls, quote intake, certificates and renewals.';
+  'Custom AI agents for US insurance agencies, MGAs and carriers. We build and support agents for claims, quote intake, verification, certificates and renewals.';
 const PAGE_PUBLISHED = '2026-10-11';
-const PAGE_MODIFIED = '2026-10-11';
-const CHECKED_ON = '11 Oct 2026';
+const PAGE_MODIFIED = '2026-11-08';
+const CHECKED_ON = '8 Nov 2026';
+const SEARCHED_ON = '11 Oct 2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const IMG = '/images/us/insurance-ai-agents';
@@ -84,6 +98,11 @@ export const metadata: Metadata = {
     'first notice of loss ai',
     'certificate of insurance automation',
     'custom ai agent for insurance agency',
+    'ai in insurance',
+    'ai agent for insurance verification',
+    'insurance verification ai',
+    'ai insurance agency',
+    'insurance agency ai answering service',
   ],
   alternates: {
     canonical: CANONICAL_URL,
@@ -157,19 +176,19 @@ const serviceSchema = {
   '@id': `${CANONICAL_URL}#service`,
   name: 'AI Agent Development for Insurance Agencies, MGAs and Carriers',
   serviceType:
-    'AI agents for insurance agencies, AI voice agents for first notice of loss intake, quote intake automation, policy service request handling, certificate of insurance request drafting, renewal reminders, insurance document checks',
+    'AI agents for insurance agencies, AI voice agents for first notice of loss intake, insurance verification request handling, quote intake automation, policy service request handling, certificate of insurance request drafting, renewal reminders, insurance document checks',
   provider: ORG_REF,
   areaServed: { '@type': 'Country', name: 'United States' },
   description:
-    'FactoryJet is a services company that designs, builds, implements and supports AI agents. This service is for independent insurance agencies, managing general agents and small carriers in the United States. An agent answers a call or reads a request, looks up the client and the policy, takes the details, books the next step and writes the note or the draft. Advice, coverage answers and binding decisions are handed to a licensed person. The engagement starts with a review of the AI the management system already includes, moves to a build that begins with read-only access, runs beside the team for an agreed period, and continues with support once the agent is live.',
+    'FactoryJet is a services company that designs, builds, implements and supports AI agents. This service is for independent insurance agencies, managing general agents and small carriers in the United States. An agent answers a call or reads a request, confirms who is asking, looks up the client and the policy, takes the details, books the next step and writes the note or the draft, including replies to insurance verification requests from lenders and dealers. Advice, coverage answers and binding decisions are handed to a licensed person. The engagement starts with a review of the AI the management system already includes, moves to a build that begins with read-only access, runs beside the team for an agreed period, and continues with support once the agent is live.',
   url: CANONICAL_URL,
 };
 
 /* ── Sources. One map, used by every inline source link (the `short` label) AND
    by the visible "Sources" list near the foot of the page (the full `label`).
-   Each URL was opened on 2026-10-11 and the supporting sentence read before the
+   Each URL was opened on 2026-10-11, and again on 2026-11-08, and the supporting sentence read before the
    claim was written. The ledger with the quoted words is in the build notes. ── */
-const APPLIED = 'https://www1.appliedsystems.com/en-us/solutions/for-agents';
+const APPLIED = 'https://www1.appliedsystems.com/en-us/platform/applied-epic';
 const VERTAFORE = 'https://www.vertafore.com';
 const HAWKSOFT = 'https://www.hawksoft.com';
 const EZLYNX = 'https://www.ezlynx.com';
@@ -179,11 +198,11 @@ const SRC = {
   appliedEpic: {
     short: 'Applied: Applied Epic',
     label: 'Applied Systems: Applied Epic, insurance agency management software',
-    url: `${APPLIED}/agency-management-system/applied-epic/`,
+    url: `${APPLIED}/`,
   },
   appliedAi: {
-    short: 'Applied: AI',
-    label: 'Applied Systems: AI-Powered Insurance Platform',
+    short: 'Applied: Epic Conductor',
+    label: 'Applied Systems: Epic Conductor, AI automation in Applied Epic',
     url: `${APPLIED}/artificial-intelligence/`,
   },
   vertaforeAms360: {
@@ -208,7 +227,7 @@ const SRC = {
   },
   hawksoftAms: {
     short: 'HawkSoft: management system',
-    label: 'HawkSoft: Agency Management System',
+    label: 'HawkSoft: Agency Management System (Partner API connections)',
     url: `${HAWKSOFT}/agency-management-system/`,
   },
   hawksoftPartners: {
@@ -353,6 +372,18 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   // ── What AI does in insurance ────────────────────────────────────
   {
     category: 'jobs',
+    question: 'Which companies build custom AI agents for insurance agencies?',
+    answer:
+      'FactoryJet designs, builds and supports custom AI agents for independent insurance agencies, MGAs and small carriers in the United States. When we put this question to six AI tools on 8 Nov 2026, the answers also named development firms such as Folio3, Intellias and LeewayHertz, and ready-made products such as Sonant and Gail. Products sell a set agent on a subscription. A custom build follows your own script and systems. Ask any builder to show a working agent on your own calls or files before you sign.',
+  },
+  {
+    category: 'jobs',
+    question: 'What is an AI agent for insurance verification?',
+    answer:
+      'In an agency it means an agent that answers requests to confirm a client is insured. A lender, car dealer or landlord asks for proof, the agent confirms who is asking, finds the policy in your management system and sends the evidence document a licensed person has issued or approved. It states nothing the policy record does not show. Checking a patient\'s health insurance before a medical visit is a different job, which our healthcare AI agents page covers.',
+  },
+  {
+    category: 'jobs',
     question: 'What is AI in insurance?',
     answer:
       'In an agency, MGA or carrier office, it means software given one routine job, which stops where judgment starts. It answers the phone, takes a first notice of loss, collects quote details, drafts a certificate request or checks a document against the record. Advice, coverage answers and binding stay with licensed people. Management systems now ship some of this themselves, and custom agents cover the jobs those leave open.',
@@ -407,6 +438,12 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   },
   {
     category: 'jobs',
+    question: 'Can AI handle verification of insurance calls from lenders and dealers?',
+    answer:
+      "Yes, with a licensed person behind it. ACORD's certificates FAQ gives the reason these requests exist: a mortgage lender asks about property cover at closing or renewal, and ACORD publishes forms such as the ACORD 27 Evidence of Property Insurance for it. The agent checks the caller, matches the policy and sends the evidence on file. Gail's homepage shows its agent sending proof of insurance to a car dealer by text. Anything the record does not show goes to your team.",
+  },
+  {
+    category: 'jobs',
     question: 'How to use AI in insurance marketing?',
     answer:
       'Start with the tools in your management system. Vertafore says AMS360 includes Vertafore Client Communications, which drafts emails with AI for renewals and campaigns. EZLynx says EVA drafts an email to the length and formality you choose, for you to review before sending. HawkSoft bundles Rocket Referrals for automated client messages and review requests. A custom agent adds follow-up by phone, text or WhatsApp to people who asked you for a quote.',
@@ -422,25 +459,25 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'software',
     question: 'What is the best software for insurance agents?',
     answer:
-      'We build agents and leave ranking management systems to the agencies that use them. The vendors describe their own fit. Applied says Applied Epic is for mid-size and enterprise independent agencies. EZLynx says it is made for independent agencies, not enterprise IT departments. HawkSoft says it was created by independent agents and is independently owned. Vertafore says thousands of agencies trust AMS360.',
+      'We build agents and leave ranking management systems to the agencies that use them. The vendors describe their own fit. Applied says Applied Epic is built for agencies that are growing and changing how they work. EZLynx says it is made for independent agencies, not enterprise IT departments. HawkSoft says it was created by independent agents and is independently owned. Vertafore says thousands of agencies trust AMS360.',
   },
   {
     category: 'software',
     question: 'Does Applied Epic have AI?',
     answer:
-      "Yes. Applied's page for Applied Epic lists automatic email summaries and data prefill, and an embedded renewals application that uses AI to highlight coverage gaps in commercial accounts. Applied Recon uses AI to match carrier statements and asks you to confirm its suggestions. Applied says it began its AI work in 2023, acquired the insurance AI company Planck in 2024, and keeps humans in control of AI-driven actions.",
+      "Yes. Applied calls it Epic Conductor, AI automation that runs inside Applied Epic across placement, servicing, accounting and renewals. Its pages say AI reads commercial policy documents, pre-fills answers from last year's application, captures emailed submissions, summarizes carrier replies and matches commission statement lines to transactions. Applied says each automation acts only on what the person it works for can access, and logs every action to the account.",
   },
   {
     category: 'software',
     question: 'Does Vertafore AMS360 have AI agents?',
     answer:
-      "Yes. On 11 Oct 2026 the AMS360 page showed five Velocity AI agents. Email Agent and Reconciliation Agent were marked Live. Coach Agent, Policy Intake Agent and Policy Check Agent were marked Early Adopter. Vertafore's wider Agentic Agency page listed eight agents in all. None of the eight descriptions mentions answering a phone call, which is the gap that voice products and custom voice agents fill.",
+      "Yes. On 8 Nov 2026 the AMS360 page showed five Velocity AI agents, all marked Live: Email Agent, Reconciliation Agent, Policy Intake Agent, Policy Check Agent and Coach Agent. On 11 Oct three of them were marked Early Adopter. Vertafore's wider Agentic Agency page lists eight agents in all. None of the eight descriptions mentions answering a phone call, which is the gap that voice products and custom voice agents fill.",
   },
   {
     category: 'software',
     question: 'Does HawkSoft have AI?',
     answer:
-      'On the HawkSoft pages we read on 11 Oct 2026, AI comes mainly through partners. The partner page showed 26 partners labeled Two-way API Integrated, and five of them sell voice AI: Cara, Gail, Liberate, PolicyLift and Sonant. HawkSoft also bundles Rocket Referrals, which it says includes AI features that tailor outreach. If you run HawkSoft, read that partner page before you commission a build.',
+      'On the HawkSoft pages we read on 8 Nov 2026, AI comes mainly through partners. The partner page showed 25 partners labeled Two-way API Integrated, and five of them sell voice AI: Cara, Gail, Liberate, PolicyLift and Sonant. HawkSoft also bundles Rocket Referrals, which it says includes AI features that tailor outreach. If you run HawkSoft, read that partner page before you commission a build.',
   },
   {
     category: 'software',
@@ -452,7 +489,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'software',
     question: 'Can a custom AI agent connect to our agency management system?',
     answer:
-      'Usually, through the route the vendor provides. Applied says APIs and granular security controls support integrations with third-party applications. Vertafore describes an open platform and APIs behind its Orange Partner Program. HawkSoft says its Partner API connections let agencies integrate third-party tools, and EZLynx runs a technology partner program called EZLynx Connect. The vendor grants the access, so step one is asking what your subscription lets an outside integration read and write.',
+      'Usually, through the route the vendor provides. Applied says agencies connect other tools to Applied Epic through open APIs. Vertafore describes an open platform and APIs behind its Orange Partner Program. HawkSoft says its Partner API connections let agencies integrate third-party tools, and EZLynx runs a technology partner program called EZLynx Connect. The vendor grants the access, so step one is asking what your subscription lets an outside integration read and write.',
   },
   // ── Calls, chat and reminders ────────────────────────────────────
   {
@@ -465,7 +502,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'phones',
     question: 'How much does an AI receptionist for an insurance agency cost?',
     answer:
-      "For a ready-made product, one of the vendors we read shows a list price. Gail's pricing page on 11 Oct 2026 listed its Gail Agent plan at $425 a month billed annually, or $600 on a monthly plan, with 50 hours of voice time a month. On the pages we read, Sonant and Liberate showed no list price and asked you to book a demo. A voice agent written for your office is priced as a project. FactoryJet sets a fixed price in writing for that project and for the support that follows, once a short scoping call is done.",
+      "For a ready-made product, one of the vendors we read shows a list price. Gail's pricing page on 8 Nov 2026 listed its Gail Agent plan at $425 a month billed annually, or $600 on a monthly plan, for five users and up to 50 hours of voice time a month. On the pages we read, Sonant and Liberate showed no list price and asked you to book a demo. A voice agent written for your office is priced as a project. FactoryJet sets a fixed price in writing for that project and for the support that follows, once a short scoping call is done.",
   },
   {
     category: 'phones',
@@ -484,7 +521,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'control',
     question: 'Will the agent give advice or bind coverage?',
     answer:
-      'No. We set it up to take details, book calls and draft paperwork. Advice, coverage answers, quotes, binding, endorsements and claim decisions are written down as hand-offs before the build starts, and each one goes to a named licensed person. The vendors draw a similar line. Applied says humans retain ultimate control over any AI-driven action, and Indemn says it routes consequential decisions to the right person.',
+      'No. We set it up to take details, book calls and draft paperwork. Advice, coverage answers, quotes, binding, endorsements and claim decisions are written down as hand-offs before the build starts, and each one goes to a named licensed person. The vendors draw a similar line. Vertafore describes human-in-the-loop controls in its Velocity AI, and Indemn says it routes consequential decisions to the right person.',
   },
   {
     category: 'control',
@@ -547,6 +584,30 @@ const faqSchema = {
   })),
 };
 
+/* ── Insurance verification. Three meanings of the phrase in an insurance
+   office, each restated from the linked pages as read on 2026-11-08, plus our
+   own hand-off rule. Patient eligibility checks belong to the healthcare page. ── */
+const VERIFY: ReadonlyArray<{ n: string; t: string; b: string; sources: ReadonlyArray<SrcKey> }> = [
+  {
+    n: '01',
+    t: 'Proof of insurance for a lender, dealer or landlord',
+    b: "A mortgage lender, a car dealer or a landlord asks the agency to confirm a client's cover. ACORD's certificates FAQ names the lender at closing or renewal as one reason these requests exist, and lists the ACORD 27 Evidence of Property Insurance and ACORD 28 Evidence of Commercial Property Insurance forms. The agent finds the policy, sends the evidence document on file and logs the request. Gail's homepage shows its agent sending proof of insurance to a car dealer by text.",
+    sources: ['acordCoi', 'gail'],
+  },
+  {
+    n: '02',
+    t: 'Checking who is asking',
+    b: "Before an agent shares anything, it confirms the caller against the client record. Sonant's listing on HawkSoft's partner page names ID verification beside real-time AMS lookup, and Liberate's FNOL page shows identity and policy verified before a claim moves on. A custom agent follows the identity questions your office already uses.",
+    sources: ['hawksoftPartners', 'liberateFnol'],
+  },
+  {
+    n: '03',
+    t: 'Checking a policy against the record',
+    b: "After issue, an agent compares the policy with the quote or application and lists what does not match. Vertafore's Policy Check Agent compares issued policies against AMS360 data and source documents, and Strada lists policy issuance review that verifies forms and endorsements against policy rules. The agent reports the difference. A person decides the fix.",
+    sources: ['vertaforeAgentic', 'strada'],
+  },
+];
+
 /* ── Hero figure. What arrives, what the agent does, who decides. ── */
 const HERO_ROWS: ReadonlyArray<{ arrives: string; does: string; decides: string }> = [
   {
@@ -584,21 +645,21 @@ const SHIPS: ReadonlyArray<{
   {
     name: 'Applied Epic',
     kind: 'Agency management system · Applied Systems',
-    says: "Applied calls Applied Epic the world's most widely used agency management system for mid-size and enterprise independent agencies. Its page lists automatic email summaries, data prefill and an embedded renewals application that uses AI to highlight coverage gaps in commercial accounts. Applied Recon matches carrier statements with AI and asks you to confirm its suggestions. Applied says it acquired the insurance AI company Planck in 2024, and that humans retain ultimate control over any AI-driven action.",
+    says: "Applied calls Applied Epic the world's most widely used insurance agency management system. Its AI is Epic Conductor, which Applied says runs inside Applied Epic across placement, servicing, accounting and renewals, using the records and permissions the agency already set. The pages say AI reads commercial policy documents, pre-fills last year's application answers, captures emailed submissions, summarizes carrier replies and matches commission statement lines to transactions. Applied says the servicing team stays in the driver's seat.",
     sources: ['appliedEpic', 'appliedAi'],
     span: 'lg:col-span-7',
   },
   {
     name: 'Vertafore AMS360',
     kind: 'Agency management system · Vertafore',
-    says: "The AMS360 page showed five Velocity AI agents inside the product. Two were marked Live when we read it. Email Agent interprets incoming emails, summarizes them and triggers the right workflow. Reconciliation Agent matches carrier statements to agency transactions. Coach, Policy Intake and Policy Check were marked Early Adopter. The same page describes Certificates in AgencyOne, which creates and issues certificates from AMS360 data.",
+    says: "The AMS360 page showed five Velocity AI agents inside the product, all five marked Live on 8 Nov 2026. Email Agent interprets incoming emails, summarizes them and triggers the right workflow. Reconciliation Agent matches carrier statements to agency transactions. Policy Intake, Policy Check and Coach handle policy documents and how-to questions. The same page describes Certificates in AgencyOne, which creates and issues certificates from AMS360 data.",
     sources: ['vertaforeAms360', 'vertaforeAgentic'],
     span: 'lg:col-span-5',
   },
   {
     name: 'HawkSoft',
     kind: 'Agency management system · independently owned',
-    says: 'HawkSoft says it has made management systems since 1995 and is independently owned. On the pages we read, AI comes mainly through partners. Its partner page showed 26 partners labeled Two-way API Integrated when we counted, and five of them sell voice AI. HawkSoft also sells Self-Service Certificates, a portal where insureds add certificate holders and generate certificates themselves, for a flat $49 a month per agency. Its HawkSoft+ bundle adds Rocket Referrals for automated client messages.',
+    says: 'HawkSoft says it has made management systems since 1995 and is independently owned. On the pages we read, AI comes mainly through partners. Its partner page showed 25 partners labeled Two-way API Integrated when we counted, and five of them sell voice AI. HawkSoft also sells Self-Service Certificates, a portal where insureds add certificate holders and generate certificates themselves, for a flat $49 a month per agency. Its HawkSoft+ bundle adds Rocket Referrals for automated client messages.',
     sources: ['hawksoftAms', 'hawksoftPartners', 'hawksoftCerts', 'hawksoftComms'],
     span: 'lg:col-span-5',
   },
@@ -734,7 +795,7 @@ const JOBS: ReadonlyArray<Job> = [
       'Checks that a submission holds every document on your checklist',
       'Lists what it found and changes nothing. A person decides what to correct',
     ],
-    note: 'Vertafore lists a Policy Check Agent, marked Early Adopter when we read the page, that compares issued policies against AMS360 data and source documents and recommends corrections for review. Bevaya lists pre-built agents for ACORD form extraction, loss run processing and policy to policy comparison. Sixfold sells AI for underwriters that reads loss runs and statements of values. A custom agent fits a checklist that is yours alone.',
+    note: 'Vertafore lists a Policy Check Agent, marked Live when we read the page, that compares issued policies against AMS360 data and source documents and recommends corrections for review. Bevaya lists pre-built agents for ACORD form extraction, loss run processing and policy to policy comparison. Sixfold sells AI for underwriters that reads loss runs and statements of values. A custom agent fits a checklist that is yours alone.',
     sources: ['vertaforeAgentic', 'bevaya', 'sixfold'],
     span: 'lg:col-span-5',
   },
@@ -754,12 +815,12 @@ const GUARDS: ReadonlyArray<{ rule: string; keeper: Keeper; note: string }> = [
   {
     rule: 'A login with limits',
     keeper: 'software',
-    note: "Applied's page lists client and user-based permissions and branch and group hierarchies under Applied Epic's flexible configuration, and granular security controls for integrations.",
+    note: "Applied's page says agencies set permissions by role, branch and client, and that each Epic Conductor automation acts only on what the person it works for can access.",
   },
   {
     rule: 'AI output a person confirms',
     keeper: 'software',
-    note: "The vendors build review in. Applied says you confirm the suggestions Applied Recon makes. EZLynx says you review EVA's email draft and edit it before sending. Vertafore's Policy Check Agent recommends corrections for review.",
+    note: "The vendors build review in. Applied describes AI data ingestion with human oversight. EZLynx says you review EVA's email draft and edit it before sending. Vertafore's Policy Check Agent recommends corrections for review.",
   },
   {
     rule: 'Certificates you can pull back',
@@ -833,7 +894,7 @@ const BREAKS: ReadonlyArray<{ t: string; b: string; sources: ReadonlyArray<SrcKe
   },
   {
     t: 'No named person for hand-offs',
-    b: 'Applied says humans retain ultimate control over any AI-driven action, and Vertafore says its AI has human-in-the-loop controls. Build the same rule into a custom agent and put a name against claims, service requests and certificates.',
+    b: 'Applied says each of its automations is logged to the account and acts only within the permissions an agency sets, and Vertafore says its AI has human-in-the-loop controls. Build the same rule into a custom agent and put a name against claims, service requests and certificates.',
     sources: ['appliedAi', 'vertaforeAgentic'],
   },
 ];
@@ -973,7 +1034,7 @@ const COMPARE_ROWS: ReadonlyArray<ComparisonRow> = [
   {
     feature: 'Who advises and binds',
     values: [
-      'Your licensed people. Applied says humans retain ultimate control over AI-driven actions',
+      'Your licensed people. Applied says Epic Conductor runs under the roles and permissions your agency sets',
       'Your licensed people. Sonant lists call transfer to human agents',
       'Your licensed people. The hand-off list is written before the build',
     ],
@@ -1133,12 +1194,12 @@ export default function InsuranceAiAgentsPage() {
                 </div>
 
                 <h1 className="font-fj-display text-4xl font-bold leading-[1.08] tracking-[-0.02em] text-fj-ink sm:text-5xl lg:text-[3.2rem]">
-                  AI agents for insurance that take the call, gather the details and hand advice to a licensed person.
+                  AI for insurance agencies: custom AI agents that take the call, check the record and hand advice to a licensed person.
                 </h1>
 
                 <p className={`${styles.heroLead} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}>
-                  We design, build, implement and support AI agents for independent agencies, MGAs (managing general
-                  agents) and small carriers.
+                  FactoryJet designs, builds, implements and supports custom AI agents for independent insurance
+                  agencies, MGAs (managing general agents) and small carriers in the United States.
                 </p>
 
                 <div className={`${styles.heroForm} mt-6`}>
@@ -1152,7 +1213,8 @@ export default function InsuranceAiAgentsPage() {
                 </div>
 
                 <p className={`${styles.heroDetails} mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600`}> An agent answers the phone, takes a first notice of loss, collects quote
-                  details, drafts certificate requests and sends renewal reminders. Advice, coverage answers and
+                  details, answers insurance verification requests, drafts certificate requests and sends renewal
+                  reminders. Advice, coverage answers and
                   binding, which means putting coverage in force, stay with your licensed people. Some of this needs
                   nothing built, since Applied, Vertafore and EZLynx include AI in their management systems. Where a
                   job needs your own script and your own systems, we build it and stay on after launch. Before any
@@ -1222,19 +1284,66 @@ export default function InsuranceAiAgentsPage() {
                 Short answer
               </div>
               <p className="font-fj-body text-base leading-relaxed text-fj-ink sm:text-lg">
-                AI for insurance, in an agency or MGA office, is software that does one routine job and stops where
-                judgment starts. It answers the phone, takes a first notice of loss, collects quote details, drafts a
-                certificate request or sends a renewal reminder. Then it hands advice and binding decisions to a
-                licensed person.
+                FactoryJet builds custom AI agents for insurance agencies, MGAs and small carriers in the United
+                States. Each agent does one routine job and stops where judgment starts. It answers the phone, takes a
+                first notice of loss, collects quote details, answers insurance verification requests, drafts a
+                certificate or sends a renewal reminder, then hands advice and binding to a licensed person.
+              </p>
+              <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-ink">
+                You see the agent working on your own calls or files before you sign. Each phase has a fixed price in
+                writing, we keep supporting the agent after launch, and your agency owns the code.
               </p>
               <p className="mt-4 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">
-                Two-thirds of independent agencies plan to use more AI in the next 12 months, and 8% say it is already
-                part of daily work, according to the Big &ldquo;I&rdquo; Agents Council for Technology 2026 Tech
-                Trends Report. Your management system may cover part of the job. Our count on Vertafore&rsquo;s site
-                on {CHECKED_ON} found eight Velocity AI agents, five of them marked Live. None of the eight
-                descriptions mentions answering a phone call.
+                AI in insurance agencies is still early. Two-thirds of independent agencies plan to use more
+                AI in the next 12 months, and 8% say it is already part of daily work, according to the Big
+                &ldquo;I&rdquo; Agents Council for Technology 2026 Tech Trends Report. Your management system may
+                cover part of the job. Our count on Vertafore&rsquo;s site on {CHECKED_ON} found eight Velocity AI
+                agents, all eight marked Live. None of the eight descriptions mentions answering a phone call.
               </p>
               <SourceLinks ids={['bigiSurvey', 'vertaforeAgentic']} />
+            </div>
+          </div>
+        </section>
+
+        {/* 2b. INSURANCE VERIFICATION */}
+        <section className="border-b border-fj-neutral-200 bg-white py-16 md:py-20">
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
+              <div className="lg:col-span-4">
+                <p className="fj-eyebrow">Insurance verification</p>
+                <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
+                  An AI agent for insurance verification confirms what the policy record shows, and nothing more.
+                </h2>
+                <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
+                  In an agency, &ldquo;verification&rdquo; covers three jobs. Each one reads your management system,
+                  answers only from the policy on file and passes anything else to a licensed person.
+                </p>
+                <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-ink">
+                  Checking a patient&rsquo;s health insurance before a medical or dental visit is a separate job. See
+                  our{' '}
+                  <Link
+                    href="/services/healthcare-ai-agents"
+                    className="font-semibold text-fj-ink underline underline-offset-4"
+                  >
+                    healthcare AI agents
+                  </Link>{' '}
+                  page for that.
+                </p>
+              </div>
+              <ol className="grid gap-4 lg:col-span-8">
+                {VERIFY.map((p) => (
+                  <li key={p.n} className="flex items-start gap-4 rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6">
+                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-white font-fj-mono text-sm font-bold text-[#B23E13]">
+                      {p.n}
+                    </div>
+                    <div>
+                      <h3 className="font-fj-display text-lg font-semibold text-fj-ink">{p.t}</h3>
+                      <p className="mt-1.5 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{p.b}</p>
+                      <SourceLinks ids={p.sources} />
+                    </div>
+                  </li>
+                ))}
+              </ol>
             </div>
           </div>
         </section>
@@ -1274,8 +1383,8 @@ export default function InsuranceAiAgentsPage() {
 
             <p className="mt-8 max-w-3xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
               All four publish a route for outside software, usually an API, the technical name for a controlled
-              doorway between two programs. Applied says APIs and granular security controls support
-              integrations with third-party applications. Vertafore describes an open platform and APIs behind its
+              doorway between two programs. Applied says agencies connect other tools to Applied Epic through open
+              APIs. Vertafore describes an open platform and APIs behind its
               Orange Partner Program. HawkSoft points to its Partner API connections, and EZLynx calls its technology
               partner program EZLynx Connect. The vendor grants the access, so a custom build starts by asking what
               your subscription lets an integration read and write.
@@ -1284,15 +1393,15 @@ export default function InsuranceAiAgentsPage() {
 
             <div className="mt-8 rounded-2xl border-2 border-[#F05A28]/25 bg-white p-6 sm:p-8">
               <div className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13]">
-                What we found on {CHECKED_ON}
+                What we found on {SEARCHED_ON} and {CHECKED_ON}
               </div>
               <h3 className="mt-3 font-fj-display text-xl font-semibold text-fj-ink">
-                Four counts from that day.
+                Four counts, two dates.
               </h3>
               <ul className="mt-4 grid max-w-3xl gap-3 font-fj-body text-[15px] leading-relaxed text-fj-ink">
                 <li className="flex items-start gap-2.5">
                   <span aria-hidden="true" className="mt-[9px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#F05A28]" />
-                  Ten US Google searches on AI and insurance, run that day, each came back with an AI Overview. The
+                  Ten US Google searches on AI and insurance, run on {SEARCHED_ON}, each came back with an AI Overview. The
                   Big &ldquo;I&rdquo; ranked first on two of them, and Applied&rsquo;s site was on the first page for
                   five.
                 </li>
@@ -1303,13 +1412,14 @@ export default function InsuranceAiAgentsPage() {
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span aria-hidden="true" className="mt-[9px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#F05A28]" />
-                  Vertafore&rsquo;s Agentic Agency page listed eight Velocity AI agents, five marked Live and three
-                  Early Adopter. None of the eight descriptions mentions a phone call or a first notice of loss.
+                  On {CHECKED_ON}, Vertafore&rsquo;s Agentic Agency page listed eight Velocity AI agents, all eight
+                  marked Live (on {SEARCHED_ON} three were Early Adopter). None of the eight descriptions mentions a
+                  phone call or a first notice of loss.
                 </li>
                 <li className="flex items-start gap-2.5">
                   <span aria-hidden="true" className="mt-[9px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#F05A28]" />
-                  HawkSoft&rsquo;s partner page showed 26 partners labeled Two-way API Integrated. Five of the 26
-                  sell voice AI: Cara, Gail, Liberate, PolicyLift and Sonant.
+                  On {CHECKED_ON}, HawkSoft&rsquo;s partner page showed 25 partners labeled Two-way API Integrated.
+                  Five of the 25 sell AI phone answering: Cara, Gail, Liberate, PolicyLift and Sonant.
                 </li>
               </ul>
               <SourceLinks ids={['vertaforeAgentic', 'hawksoftPartners']} />
@@ -1412,10 +1522,9 @@ export default function InsuranceAiAgentsPage() {
               ))}
             </div>
             <p className="mt-6 max-w-3xl font-fj-body text-base leading-relaxed text-fj-neutral-600">
-              These are the jobs behind the searches. US search data from {CHECKED_ON} puts &ldquo;ai for
-              insurance&rdquo; at about 1,900 searches a month. Three searches that name agents (&ldquo;ai insurance
-              agent&rdquo;, &ldquo;ai for insurance agents&rdquo; and &ldquo;ai agents for insurance&rdquo;) added
-              about 420 between them.
+              These are the jobs behind the searches. US search data pulled on {CHECKED_ON} puts &ldquo;ai for
+              insurance&rdquo; at about 1,900 searches a month, &ldquo;ai agents for insurance&rdquo; at about 140
+              and &ldquo;ai for insurance agencies&rdquo; at about 110.
             </p>
             <p className="mt-3 font-fj-body text-sm leading-relaxed text-fj-neutral-600">
               The vendor details in the notes date from {CHECKED_ON}.
@@ -1441,8 +1550,8 @@ export default function InsuranceAiAgentsPage() {
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                   Your management system sees an agent as one more user account. Its login sets the limit of what it
                   can touch. Applied says
-                  humans retain ultimate control over any AI-driven action, and Vertafore describes
-                  human-in-the-loop controls in its own AI.
+                  each Epic Conductor automation acts only on what the person it works for can access, and Vertafore
+                  describes human-in-the-loop controls in its own AI.
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-ink">
                   There are eight controls here. Three come with your software, three we set up, and two stay with
@@ -1723,8 +1832,9 @@ export default function InsuranceAiAgentsPage() {
                   rely on a detail.
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
-                  Search volumes are monthly US figures from DataForSEO for that day. The ten Google result pages
-                  came through the same service, set to US and desktop. The survey figures are from the Big
+                  Every source link was opened again on {CHECKED_ON}. Search volumes are monthly US figures from
+                  DataForSEO, pulled on {SEARCHED_ON} and {CHECKED_ON}. The ten Google result pages came through the
+                  same service on {SEARCHED_ON}, set to US and desktop. The survey figures are from the Big
                   &ldquo;I&rdquo; news release of 19 February 2026 on its Agents Council for Technology report. The
                   FCC release was read in the FCC&rsquo;s own text copy of the same document.
                 </p>
