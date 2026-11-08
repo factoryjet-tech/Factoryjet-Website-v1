@@ -1159,6 +1159,7 @@ const othersSchema = {
 const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
   { href: '/services/accounts-payable-automation', t: 'Accounts payable automation', b: 'Vendor invoices read, matched to the order and the receipt, coded and routed.' },
   { href: '/services/legal-ai-agents', t: 'AI for law firms', b: 'Client intake and document work built for a law firm.' },
+  { href: '/services/logistics-ai-agents', t: 'POD and freight invoice matching', b: 'Proofs of delivery and carrier invoices checked against the load for 3PLs and freight brokers.' },
   { href: '/services/erp-ai-agents', t: 'AI agents for ERP systems', b: 'Quotes, orders and bookkeeping drafted inside Odoo, NetSuite, SAP Business One and ERPNext.' },
   { href: '/services/sales-order-automation-ai-agents', t: 'Sales order automation agents', b: 'Customer purchase orders turned into draft sales orders in your ERP.' },
   { href: '/services/insurance-ai-agents', t: 'AI agents for insurance', b: 'Claim calls, quote details and certificate requests for agencies, MGAs and small carriers.' },

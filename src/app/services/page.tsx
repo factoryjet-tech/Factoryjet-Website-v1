@@ -151,6 +151,7 @@ const SERVICE_GROUPS: { label: string; items: { title: string; href: string }[] 
     items: [
       { title: 'Manufacturing AI Agents', href: '/services/manufacturing-ai-agents' },
       { title: 'AI Agents for Construction', href: '/services/construction-ai-agents' },
+      { title: 'AI Agents for Logistics, 3PL and Freight', href: '/services/logistics-ai-agents' },
       { title: 'AI Agents for Insurance', href: '/services/insurance-ai-agents' },
       { title: 'Legal AI Agents', href: '/services/legal-ai-agents' },
       { title: 'Property Management AI Agents', href: '/services/property-management-ai-agents' },

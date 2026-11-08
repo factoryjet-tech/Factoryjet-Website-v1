@@ -951,6 +951,7 @@ const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
   { href: '/services/ai-agent-development', t: 'AI agent development', b: 'Custom agents for support, sales and operations, beyond the ERP.' },
   { href: '/services/manufacturing-ai-agents', t: 'Manufacturing AI agents', b: 'Quoting and ERP work for US manufacturers.' },
   { href: '/services/construction-ai-agents', t: 'AI agents for construction', b: 'Quotes, bid summaries and purchase orders for contractors and building suppliers.' },
+  { href: '/services/logistics-ai-agents', t: 'AI agents for logistics and freight', b: 'Load tenders, check calls, PODs and freight invoices for 3PLs, brokers and fleets.' },
   { href: '/blog/best-ai-agent-development-companies-for-manufacturers-2026', t: 'AI manufacturing companies compared by what you buy', b: '14 firms grouped as plant-floor AI, quote and order software, and custom agent builders.' },
   { href: '/services/shopify-quickbooks-integration', t: 'Shopify QuickBooks integration', b: 'Stock, prices and books kept in step with the store.' },
   { href: '/services/ecommerce-erp-integration', t: 'Ecommerce ERP integration', b: 'The link between your online store and your ERP.' },

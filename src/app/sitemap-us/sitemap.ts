@@ -247,6 +247,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/services/ai-inventory-management-agents',       source: 'src/app/services/ai-inventory-management-agents/page.tsx' },
   { path: '/services/ecommerce-ai-agents',                  source: 'src/app/services/ecommerce-ai-agents/page.tsx' },
   { path: '/services/construction-ai-agents',               source: 'src/app/services/construction-ai-agents/page.tsx' },
+  { path: '/services/logistics-ai-agents',                  source: 'src/app/services/logistics-ai-agents/page.tsx' },
   { path: '/services/insurance-ai-agents',                  source: 'src/app/services/insurance-ai-agents/page.tsx' },
   { path: '/services/manufacturing-ai-agents',              source: 'src/app/services/manufacturing-ai-agents/page.tsx' },
   { path: '/services/restaurant-ai-voice-agents',           source: 'src/app/services/restaurant-ai-voice-agents/page.tsx' },
