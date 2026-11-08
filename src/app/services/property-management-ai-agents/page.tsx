@@ -13,10 +13,10 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/property-management-ai-agents';
-const PAGE_TITLE = 'AI Leasing Agents for Property Management | FactoryJet';
+const PAGE_TITLE = 'AI for Property Management: AI Leasing Agents | FactoryJet';
 const PAGE_DESC =
-  'Custom AI leasing agents for property managers. They answer prospect calls, texts and web chats 24/7, qualify leads and sync with AppFolio, Yardi and RealPage.';
-const PAGE_MODIFIED = '2026-10-11';
+  'AI agents for property management companies: leasing inquiries, maintenance requests, tenant questions, renewals and owner reports, built around your PMS.';
+const PAGE_MODIFIED = '2026-11-08';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
@@ -24,17 +24,23 @@ const PAGE_MODIFIED = '2026-10-11';
 const BREADCRUMB_ITEMS: BreadcrumbItem[] = [
   { name: 'Home', url: 'https://factoryjet.com' },
   { name: 'Services', url: 'https://factoryjet.com/services' },
-  { name: 'Property Management AI Agents', url: CANONICAL_URL },
+  { name: 'AI for Property Management', url: CANONICAL_URL },
 ];
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
   description: PAGE_DESC,
   keywords: [
+    'ai for property management',
+    'ai for property management companies',
+    'ai agents for property management',
+    'ai agent for property management',
+    'property management ai',
+    'ai in property management',
     'ai leasing agent',
     'leasing ai',
     'ai for property managers',
-    'ai agents for property management',
+    'ai maintenance request handling',
     'ai property management chatbot',
     'fair housing compliant ai leasing agent',
     'ai apartment leasing assistant',
@@ -73,6 +79,7 @@ export const metadata: Metadata = {
 };
 
 const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
+  { key: 'overview', label: 'AI for Property Management' },
   { key: 'fair-housing', label: 'Fair Housing & Compliance' },
   { key: 'pms', label: 'PMS & System Integration' },
   { key: 'leasing-ops', label: 'Leasing Operations' },
@@ -80,6 +87,36 @@ const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
 ];
 
 const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
+  {
+    category: 'overview',
+    question: 'What is AI for property management?',
+    answer:
+      'AI for property management means software agents that do the repetitive front-office work of a property management company: answering leasing inquiries, taking maintenance requests, replying to routine tenant questions, sending renewal reminders, and drafting owner reports from the data in your property management system. A person on your team still decides anything that involves money, policy exceptions, legal questions, or a judgment call.',
+  },
+  {
+    category: 'overview',
+    question: 'Which companies build AI agents for property management companies?',
+    answer:
+      'There are three groups. Property management platforms now ship their own agents: AppFolio announced Realm-X Performers for leasing and maintenance, Yardi launched Virtuoso AI agents, and RealPage markets its Lumina AI agents. Specialist vendors such as EliseAI and Haven AI sell leasing, resident, and maintenance agents as subscription products. Custom development firms such as FactoryJet build agents to your own rules that work with the system you already run, and you own the code.',
+  },
+  {
+    category: 'overview',
+    question: 'Should we use the AI built into our PMS or a custom agent?',
+    answer:
+      'Start with what your PMS already includes. If its built-in AI covers your workflow, it is usually the quickest route. A custom agent makes sense when you run more than one system (for example a PMS plus a separate phone system, CRM, or maintenance tool), when you need rules the packaged product does not support, when you want one agent across several brands or portfolios, or when you want to own the workflow and code instead of renting it.',
+  },
+  {
+    category: 'overview',
+    question: 'Can AI handle maintenance requests for a property management company?',
+    answer:
+      'Yes, for intake and routing. The agent takes the request by phone, text, chat, or email, asks the follow-up questions your team would ask (which unit, what is wrong, since when, can you send a photo), sorts it as an emergency or routine using the rules you set, and creates the work order in your system where its API allows. Emergencies such as active leaks, no heat, or gas smells go straight to your on-call person. The agent does not diagnose repairs or approve spending.',
+  },
+  {
+    category: 'overview',
+    question: 'Can AI write owner reports?',
+    answer:
+      'It can draft them. The agent pulls the month\'s figures your PMS already reports (rent collected, vacancies, open and closed work orders, upcoming lease expirations), writes a plain-language summary for each owner, and puts it in front of a property manager to check and send. Owner reports carry financial figures, so a person reviews every one before it goes out.',
+  },
   {
     category: 'fair-housing',
     question: 'Can an AI leasing agent legally answer questions from prospective tenants?',
@@ -90,7 +127,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'fair-housing',
     question: 'How do you stop the AI from making a Fair Housing violation, like steering a caller toward or away from a unit?',
     answer:
-      'The agent never improvises an answer about who lives in a community, what a neighborhood is "like," or which building might "suit" a caller. Those are the exact patterns the Department of Justice flags as unlawful steering. Every response comes from a fixed, reviewed answer set covering price, availability, floor plan, pet policy, and amenities. There is no open-ended model generating opinions about location or demographics.',
+      'The agent never improvises an answer about who lives in a community, what a neighborhood is "like," or which building might "suit" a caller. Comments like these are how steering happens, and the Department of Justice names steering homeseekers to certain areas as unlawful discrimination. Every response comes from a fixed, reviewed answer set covering price, availability, floor plan, pet policy, and amenities. There is no open-ended model generating opinions about location or demographics.',
   },
   {
     category: 'fair-housing',
@@ -126,13 +163,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'pms',
     question: 'Which property management systems do you integrate with?',
     answer:
-      'We build direct, two-way connectors for the platforms most property management companies already run: AppFolio, Yardi (Voyager and Breeze), RealPage, Buildium, and Entrata. That covers reading live unit availability and pricing, and writing back completed tours, qualified leads, and applicant details. Running a smaller or regional PMS? We scope a custom connector against its published API, or work from its scheduled export files if it does not have one.',
+      'We work with the platforms most property management companies already run, including AppFolio, Yardi, RealPage, Buildium, and Entrata, through the access each vendor publishes. Buildium publishes an Open API on its Premium plan. AppFolio, Yardi, RealPage, and Entrata grant API access through their own partner programs, and FactoryJet is not a listed partner of any of them. In scoping we check which access your account already has: an API your plan includes, a partner integration you already use, or the scheduled reports and exports your system produces. We tell you in writing what the agent can read and write before you sign.',
   },
   {
     category: 'pms',
     question: 'Can the AI check real-time unit availability and pricing before quoting a prospect?',
     answer:
-      'Yes. Instead of quoting from a static rent roll that goes stale within a day, the agent reads live availability and current pricing straight from your PMS API. That means it never offers a unit that already has an application on it, and it never quotes last week\'s rent.',
+      'Yes, where your PMS gives API access to availability and pricing. Instead of quoting from a static rent roll that goes stale within a day, the agent reads live availability and current pricing straight from your PMS. That means it never offers a unit that already has an application on it, and it never quotes last week\'s rent.',
   },
   {
     category: 'pms',
@@ -150,7 +187,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'pms',
     question: 'What if our portfolio uses a property management system that is not on your list?',
     answer:
-      'We still take the project. Most PMS platforms publish a developer API, and we scope a custom connector against it the same way we do for AppFolio or Yardi. For older or smaller systems without an API, we build against the scheduled export and import files the platform already supports.',
+      'We still take the project. Many PMS platforms publish a developer API, and we scope a custom connector against whatever access your account has. For older or smaller systems without an API, we build against the scheduled export and import files the platform already supports.',
   },
   {
     category: 'pms',
@@ -198,7 +235,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'leasing-ops',
     question: 'Can it handle lease renewal conversations, or only new prospect leads?',
     answer:
-      'The core build focuses on new-prospect leasing calls, since that is where after-hours volume and missed calls hurt the most. We also build renewal reminder and reactivation call flows on request, for practices that want automated outreach ahead of a resident\'s renewal date, using the same PMS connection.',
+      'Both. Many companies start with new-prospect leasing, since that is where after-hours volume and missed calls hurt the most, then add renewals on the same PMS connection. The renewal agent reads upcoming lease end dates, sends reminders by text and email on the schedule you set, answers routine questions about the renewal process, records whether the resident plans to stay, and hands anything about rent changes or lease terms to a property manager. It never sets or negotiates renewal pricing on its own.',
   },
   {
     category: 'leasing-ops',
@@ -210,13 +247,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'leasing-ops',
     question: 'What happens when a caller asks something outside the agent\'s scope, like a maintenance emergency or a legal dispute?',
     answer:
-      'The agent recognizes when a request is not a leasing inquiry and routes it correctly instead of guessing. A maintenance emergency gets the same escalation path your maintenance team already uses. A legal, fair housing, or resident-dispute question gets routed straight to a property manager, with no attempt by the AI to resolve it itself.',
+      'The agent recognizes when a request is outside what it is set up to handle and routes it instead of guessing. A maintenance emergency gets the same escalation path your maintenance team already uses, straight to the on-call person. A legal, fair housing, or resident-dispute question gets routed straight to a property manager, with no attempt by the AI to resolve it itself.',
   },
   {
     category: 'deployment',
     question: 'How long does it take to build and deploy a custom AI leasing agent?',
     answer:
-      'A standard single-property or small-portfolio deployment takes three to five weeks, from scoping to a live pilot. That covers PMS API authentication, fair housing guardrail configuration, tour-calendar integration, and staff escalation workflows. Larger portfolios on enterprise systems like Yardi Voyager or RealPage sometimes need extra time for API credentialing on the platform side, which we cannot speed up even when our own build work is ready.',
+      'A standard single-property or small-portfolio deployment takes three to five weeks, from scoping to a live pilot. That covers PMS access setup, fair housing guardrail configuration, tour-calendar integration, and staff escalation workflows. Systems that gate API access through a partner program, such as Yardi or RealPage, can need extra time on the platform side, which we cannot speed up even when our own build work is ready. Maintenance, renewal, and owner-report agents are scoped as separate phases, each at a fixed price.',
   },
   {
     category: 'deployment',
@@ -280,10 +317,10 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   '@id': `${CANONICAL_URL}#service`,
-  name: 'AI Leasing Agent & Property Management AI Development',
+  name: 'AI for Property Management: Custom AI Agent Development',
   serviceType: 'Property Management AI Agent Development',
   description:
-    'Custom AI leasing agents for property management companies, integrated with AppFolio, Yardi, RealPage, Buildium, and Entrata, with deterministic Fair Housing Act guardrails.',
+    'Custom AI agents for property management companies that handle leasing inquiries, maintenance requests, tenant questions, renewal outreach and owner report drafts, working with the property management system the company already runs, with deterministic Fair Housing Act guardrails on every leasing answer.',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: {
     '@type': 'Country',
@@ -319,6 +356,20 @@ const serviceSchema = {
         itemOffered: {
           '@type': 'Service',
           name: 'Affordable & Workforce Housing Fair-Housing-Compliant AI Leasing Agent',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Maintenance Request Intake and Triage Agent',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Tenant Question, Renewal Outreach and Owner Report Agents',
         },
       },
     ],
@@ -408,16 +459,16 @@ export default function PropertyManagementAiAgentsPage() {
               <div className="lg:col-span-7">
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#FFF8F5] border border-[#F05A28]/30 mb-6">
                   <span className="font-mono text-xs text-[#F05A28] font-bold tracking-wide">
-                    // AI LEASING AGENTS FOR PROPERTY MANAGEMENT
+                    // AI AGENTS FOR PROPERTY MANAGEMENT COMPANIES
                   </span>
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#14110F] font-heading leading-tight mb-6">
-                  Custom AI Leasing Agents with Live PMS Integration.
+                  AI for Property Management: Agents for Leasing, Maintenance and Renewals.
                 </h1>
 
                 <p className="text-lg sm:text-xl text-[#46403B] font-normal leading-relaxed mb-8 max-w-2xl">
-                  We build private AI leasing agents for property management companies, multifamily owners, and build-to-rent portfolios. The agent answers calls, texts, and web chat inquiries around the clock, qualifies prospects on budget, move-in date, pets, and unit type, and books tours directly into your calendar. It reads and writes live to AppFolio, Yardi, RealPage, Buildium, and Entrata, and every response runs inside deterministic Fair Housing Act guardrails.
+                  FactoryJet builds custom AI agents for property management companies that answer leasing inquiries, take maintenance requests, reply to tenant questions, run renewal outreach, and draft owner reports, working with the property management system you already run. Leasing is where most companies start: the AI leasing agent answers calls, texts, and web chat around the clock, qualifies prospects on budget, move-in date, pets, and unit type, books tours, and runs every answer inside deterministic Fair Housing Act guardrails. You see a demo on your own data before you sign, and you own the code.
                 </p>
 
                 <div className="mb-8">
@@ -436,11 +487,11 @@ export default function PropertyManagementAiAgentsPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#10B981]" />
-                    <span>Live PMS-Synced Availability</span>
+                    <span>Works With Your PMS</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#10B981]" />
-                    <span>Phone, SMS & Web Chat Coverage.</span>
+                    <span>Leasing, Maintenance & Renewals.</span>
                   </div>
                 </div>
               </div>
@@ -461,11 +512,11 @@ export default function PropertyManagementAiAgentsPage() {
                   </div>
                   <div className="p-4 bg-white rounded-xl border border-[#E7DED6] mt-3">
                     <div className="flex items-center justify-between text-xs font-mono text-[#6E655F] mb-1">
-                      <span>LIVE LEASING INTAKE.</span>
-                      <span className="text-[#10B981] font-bold">24/7 ACTIVE</span>
+                      <span>LEASING, MAINTENANCE, TENANT QUESTIONS.</span>
+                      <span className="text-[#10B981] font-bold">24/7</span>
                     </div>
                     <div className="text-sm font-bold text-[#14110F]">
-                      AppFolio + RealPage Availability Sync Active.
+                      Reads and writes through the access your PMS publishes.
                     </div>
                   </div>
                 </div>
@@ -479,11 +530,123 @@ export default function PropertyManagementAiAgentsPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <div className="p-6 sm:p-8 rounded-2xl bg-white border-2 border-[#F05A28]/30 shadow-sm">
               <div className="font-mono text-xs uppercase tracking-wider text-[#F05A28] font-bold mb-3">
+                // Definition: What is AI for property management?
+              </div>
+              <p className="text-base sm:text-lg text-[#14110F] leading-relaxed font-medium mb-6">
+                AI for property management is software that handles the repetitive front-office work of a property management company on its own: leasing inquiries, maintenance requests, routine tenant questions, renewal reminders, and owner report drafts. A custom agent works with the property management system you already run, such as AppFolio, Buildium, Yardi, RealPage, or Entrata, through the access that system publishes, and hands anything involving money, policy exceptions, or legal questions to a person on your team.
+              </p>
+              <div className="font-mono text-xs uppercase tracking-wider text-[#F05A28] font-bold mb-3">
                 // Definition: What is an AI Leasing Agent?
               </div>
               <p className="text-base sm:text-lg text-[#14110F] leading-relaxed font-medium">
-                An AI leasing agent is custom software that answers a property&apos;s incoming calls, texts, and web chat inquiries on its own. It qualifies prospective tenants on budget, move-in date, pets, and unit type, books tours directly into the leasing calendar, and answers factual questions about availability, pricing, and amenities. It reads and writes live to the property management system. It runs on a deterministic, rule-based script so every caller gets the same factual information, which keeps it inside the guardrails of the Fair Housing Act. Anything outside its scope, like a legal dispute or a maintenance emergency, gets routed straight to a human on the leasing team.
+                An AI leasing agent is custom software that answers a property&apos;s incoming calls, texts, and web chat inquiries on its own. It qualifies prospective tenants on budget, move-in date, pets, and unit type, books tours directly into the leasing calendar, and answers factual questions about availability, pricing, and amenities. It reads and writes to the property management system wherever that system&apos;s API allows. It runs on a deterministic, rule-based script so every caller gets the same factual information, which keeps it inside the guardrails of the Fair Housing Act. Anything outside its scope, like a legal dispute or a maintenance emergency, gets routed straight to a human on the leasing team.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* WHAT AI AGENTS DO FOR A PROPERTY MANAGEMENT COMPANY */}
+        <section className="py-20 bg-white border-b border-[#E7DED6]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mb-12">
+              <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
+                {'// FIVE JOBS AI AGENTS TAKE ON'}
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">What AI Agents Do for a Property Management Company.</h2>
+              <p className="text-lg text-[#46403B]">
+                Each job below is a separate agent or phase, scoped and priced on its own. Most companies start with one, usually leasing or maintenance intake, and add the next once the first is running.
+              </p>
+            </div>
+
+            <ol className="grid grid-cols-1 md:grid-cols-2 gap-8 list-none">
+              <li className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">01 // LEASING</div>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Answer prospects and book tours.</h3>
+                <p className="text-sm text-[#46403B] leading-relaxed">
+                  Answers prospect calls, texts, and web chat at any hour, gives the same factual answers on price, availability, and policy to everyone, qualifies on budget, move-in date, pets, and unit type, books the tour, and writes the guest card to your PMS.
+                </p>
+              </li>
+
+              <li className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">02 // MAINTENANCE REQUESTS</div>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Take the request, sort it, open the work order.</h3>
+                <p className="text-sm text-[#46403B] leading-relaxed">
+                  Asks which unit, what is wrong, and for a photo, sorts the request as emergency or routine by your rules, creates the work order where your system&apos;s API allows, and sends emergencies straight to your on-call person. It does not diagnose repairs or approve spending.
+                </p>
+              </li>
+
+              <li className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">03 // TENANT QUESTIONS</div>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Answer the routine questions from your own policies.</h3>
+                <p className="text-sm text-[#46403B] leading-relaxed">
+                  Rent due dates, how to pay, parking, trash days, guest and pet rules, move-out steps: answered from the policies and documents you approve. Balance disputes, complaints, and anything legal go to a person with the full conversation attached.
+                </p>
+              </li>
+
+              <li className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">04 // RENEWALS</div>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Start renewal conversations on time.</h3>
+                <p className="text-sm text-[#46403B] leading-relaxed">
+                  Reads lease end dates, sends reminders on the schedule you set, answers process questions, and records whether each resident plans to stay or leave, so your team sees likely move-outs early. Rent changes and lease terms stay with your property manager.
+                </p>
+              </li>
+
+              <li className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">05 // OWNER REPORTING</div>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Draft the monthly owner summary.</h3>
+                <p className="text-sm text-[#46403B] leading-relaxed">
+                  Pulls the figures your PMS already reports (collections, vacancies, work orders, upcoming expirations) and writes a plain-language summary per owner. A property manager checks every draft before it is sent.
+                </p>
+              </li>
+
+              <li className="p-8 rounded-2xl bg-[#FFF8F5] border border-[#F05A28]/30">
+                <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">HOW WE WORK</div>
+                <h3 className="text-lg font-bold text-[#14110F] mb-2">Demo first, fixed price per phase.</h3>
+                <p className="text-sm text-[#46403B] leading-relaxed">
+                  You see the agent working on your own data before you sign. Each phase has a fixed price, defect cover after launch, no monthly minimum, and you own the code.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        {/* PMS BUILT-IN AI vs SPECIALIST VENDORS vs CUSTOM */}
+        <section className="py-20 bg-[#FAFAF7] border-b border-[#E7DED6]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl mb-12">
+              <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
+                {'// WHO BUILDS AI FOR PROPERTY MANAGEMENT'}
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">Your PMS&apos;s Built-In AI, a Specialist Vendor, or a Custom Agent.</h2>
+              <p className="text-lg text-[#46403B]">
+                Ask an AI assistant who builds AI agents for property management and you get three kinds of answer. Here is how they differ, so you can pick the one that fits.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+              <div className="lg:col-span-4 p-8 rounded-2xl bg-white border border-[#E7DED6]">
+                <h3 className="text-lg font-bold text-[#14110F] mb-3">AI inside your PMS.</h3>
+                <p className="text-sm text-[#46403B] leading-relaxed">
+                  The big platforms now ship their own agents. AppFolio announced Realm-X Performers for leasing and maintenance, Yardi launched Virtuoso AI agents, and RealPage markets its Lumina AI agents. If one covers your workflow and you run only that system, start there.
+                </p>
+              </div>
+
+              <div className="lg:col-span-3 p-8 rounded-2xl bg-white border border-[#E7DED6]">
+                <h3 className="text-lg font-bold text-[#14110F] mb-3">Specialist products.</h3>
+                <p className="text-sm text-[#46403B] leading-relaxed">
+                  EliseAI and Haven AI sell leasing, resident, and maintenance agents as subscription products. You configure their product rather than owning the code.
+                </p>
+              </div>
+
+              <div className="lg:col-span-5 p-8 rounded-2xl bg-white border-2 border-[#F05A28]/30">
+                <h3 className="text-lg font-bold text-[#14110F] mb-3">A custom agent (what FactoryJet builds).</h3>
+                <p className="text-sm text-[#46403B] leading-relaxed mb-4">
+                  Built to your rules on top of the system you already run, using the APIs and exports that system publishes. It fits when you run more than one system, need rules a packaged product does not support, want one agent across several brands or portfolios, or want to own the workflow and code.
+                </p>
+                <p className="text-xs text-[#6E655F] leading-relaxed">
+                  FactoryJet is not a partner of AppFolio, Yardi, RealPage, Buildium, or Entrata. Vendor product names checked against vendor announcements and company profiles on 8 Nov 2026.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -507,7 +670,7 @@ export default function PropertyManagementAiAgentsPage() {
                   Callers Who Reach Voicemail and Hang Up.
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  Data cited by the National Apartment Association shows about 87% of prospective renters who reach a leasing office&apos;s voicemail will not leave a message, and most never call back. Every one of those is a lead the property never gets a second chance at.
+                  LeaseHawk data cited by the National Apartment Association shows about 87% of prospective renters who reach a leasing office&apos;s voicemail will not leave a message, and most never call back. Every one of those is a lead the property never gets a second chance at.
                 </p>
                 <a
                   href="https://naahq.org/news-publications/apartment-industry-embraces-automated-leasing"
@@ -515,7 +678,7 @@ export default function PropertyManagementAiAgentsPage() {
                   rel="noopener noreferrer"
                   className="text-xs font-mono text-[#F05A28] hover:underline"
                 >
-                  Source: National Apartment Association &rarr;.
+                  Source: National Apartment Association, checked 8 Nov 2026 &rarr;
                 </a>
               </div>
 
@@ -527,7 +690,7 @@ export default function PropertyManagementAiAgentsPage() {
                   Prospect Inquiries That Happen By Phone.
                 </div>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  The same National Apartment Association coverage reports that more than half of leasing prospect inquiries still happen over the phone, not just through online listing forms. A leasing office that cannot answer that volume is losing tours before a prospect ever sees a unit.
+                  In the same National Apartment Association article, LeaseHawk&apos;s chief revenue officer says more than half of leasing prospect inquiries still happen over the phone, alongside online listing forms. A leasing office that cannot answer that volume is losing tours before a prospect ever sees a unit.
                 </p>
                 <a
                   href="https://naahq.org/news-publications/apartment-industry-embraces-automated-leasing"
@@ -535,7 +698,7 @@ export default function PropertyManagementAiAgentsPage() {
                   rel="noopener noreferrer"
                   className="text-xs font-mono text-[#F05A28] hover:underline"
                 >
-                  Source: National Apartment Association &rarr;.
+                  Source: National Apartment Association, checked 8 Nov 2026 &rarr;
                 </a>
               </div>
 
@@ -595,7 +758,7 @@ export default function PropertyManagementAiAgentsPage() {
                 </div>
                 <h3 className="text-xl font-bold text-[#14110F] mb-3">Bi-Directional Live PMS Sync.</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed mb-4">
-                  Connects directly to AppFolio, Yardi, RealPage, Buildium, and Entrata. Reads live unit availability and current pricing, then writes completed tours and qualified guest cards straight back.
+                  Works with AppFolio, Yardi, RealPage, Buildium, or Entrata through the access each publishes. Where your plan includes API access, it reads live unit availability and current pricing, then writes completed tours and qualified guest cards straight back.
                 </p>
                 <ul className="space-y-2 text-xs font-mono text-[#6E655F]">
                   <li className="flex items-center gap-2">
@@ -717,10 +880,10 @@ export default function PropertyManagementAiAgentsPage() {
                 </div>
                 <h3 className="text-xl sm:text-2xl font-extrabold text-[#14110F] mb-4">High-Volume Call Handling for Stabilized Apartment Portfolios.</h3>
                 <p className="text-sm sm:text-base text-[#46403B] leading-relaxed mb-6">
-                  Large communities and multi-site portfolios field the heaviest call and text volume in property management, especially on weekends and evenings. The agent connects to Yardi, RealPage, or Entrata, answers floor-plan and pricing questions per building, and books tours across multiple leasing offices without double-booking a unit.
+                  Large communities and multi-site portfolios field the heaviest call and text volume in property management, especially on weekends and evenings. The agent works with Yardi, RealPage, or Entrata data, answers floor-plan and pricing questions per building, and books tours across multiple leasing offices without double-booking a unit.
                 </p>
                 <ul className="grid grid-cols-2 gap-4 text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6] list-none">
-                  <li>&bull; Yardi / RealPage / Entrata Sync.</li>
+                  <li>&bull; Works With Yardi / RealPage / Entrata.</li>
                   <li>&bull; Multi-Site Tour Routing.</li>
                   <li>&bull; Weekend & Evening Coverage.</li>
                   <li>&bull; Portfolio-Wide Reporting.</li>
@@ -733,10 +896,10 @@ export default function PropertyManagementAiAgentsPage() {
                 </div>
                 <h3 className="text-xl sm:text-2xl font-extrabold text-[#14110F] mb-4">Scattered-Site Coverage Without a Centralized Front Desk.</h3>
                 <p className="text-sm sm:text-base text-[#46403B] leading-relaxed mb-6">
-                  Single-family rental and build-to-rent operators manage homes spread across many addresses, with no on-site leasing office to answer a call. Our agent connects to AppFolio or Buildium, gives address-specific answers for each listing, and coordinates self-guided tour access with smart-lock or lockbox codes.
+                  Single-family rental and build-to-rent operators manage homes spread across many addresses, with no on-site leasing office to answer a call. Our agent works with AppFolio or Buildium, gives address-specific answers for each listing, and coordinates self-guided tour access with smart-lock or lockbox codes.
                 </p>
                 <ul className="grid grid-cols-2 gap-4 text-xs font-mono text-[#6E655F] pt-4 border-t border-[#E7DED6] list-none">
-                  <li>&bull; AppFolio / Buildium Sync.</li>
+                  <li>&bull; Works With AppFolio / Buildium.</li>
                   <li>&bull; Address-Level Listing Detail.</li>
                   <li>&bull; Self-Guided Tour Coordination.</li>
                   <li>&bull; Scattered-Site Lead Routing.</li>
@@ -785,30 +948,29 @@ export default function PropertyManagementAiAgentsPage() {
               <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
                 // SYSTEM COVERAGE
               </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">Which Property Management Systems We Connect To.</h2>
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#14110F] font-heading mb-4">How the Agent Works With Your Property Management System.</h2>
               <p className="text-lg text-[#46403B]">
-                Every portfolio runs different leasing software. Here is exactly what we connect to today, and what each connection actually does.
+                Each PMS vendor controls API access its own way. Here is what each one publishes about access, checked on 8 Nov 2026; terms change, so we confirm them again for your account. FactoryJet is not a listed partner of any of them, so in scoping we confirm which access your account already has and put it in writing.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
-                <h3 className="text-lg font-bold text-[#14110F] mb-4">Enterprise & Multifamily PMS.</h3>
+                <h3 className="text-lg font-bold text-[#14110F] mb-4">Open API on your plan.</h3>
                 <ul className="space-y-3 text-sm text-[#46403B] leading-relaxed list-none">
-                  <li><span className="font-bold text-[#14110F]">Yardi</span> (Voyager and Breeze): live unit availability, pricing, and guest card creation.</li>
-                  <li><span className="font-bold text-[#14110F]">RealPage</span>: availability sync and lead routing through its leasing API.</li>
-                  <li><span className="font-bold text-[#14110F]">Entrata</span>: floor-plan pricing, tour scheduling, and prospect data sync.</li>
+                  <li><span className="font-bold text-[#14110F]">Buildium</span>: its pricing page lists Open API on the Premium plan, with developer docs at developer.buildium.com. With your API key, the agent can read and write the records your key allows.</li>
                 </ul>
               </div>
 
               <div className="p-8 rounded-2xl bg-[#FAFAF7] border border-[#E7DED6]">
-                <h3 className="text-lg font-bold text-[#14110F] mb-4">Mid-Market & Small Portfolio PMS.</h3>
+                <h3 className="text-lg font-bold text-[#14110F] mb-4">API through a partner program.</h3>
                 <ul className="space-y-3 text-sm text-[#46403B] leading-relaxed list-none">
-                  <li><span className="font-bold text-[#14110F]">AppFolio</span>: availability, pricing, and guest card sync built for growing portfolios.</li>
-                  <li><span className="font-bold text-[#14110F]">Buildium</span>: tenant inquiry routing and applicant data sync for smaller portfolios.</li>
+                  <li><span className="font-bold text-[#14110F]">AppFolio</span>: offers its API to approved software partners through an application and security review.</li>
+                  <li><span className="font-bold text-[#14110F]">Yardi</span>: runs an interface partnership program for vendors.</li>
+                  <li><span className="font-bold text-[#14110F]">RealPage</span> and <span className="font-bold text-[#14110F]">Entrata</span>: route third-party integrations through their own registration and partner programs.</li>
                 </ul>
                 <p className="mt-6 text-sm text-[#6E655F] leading-relaxed border-t border-[#E7DED6] pt-4">
-                  Both platforms cover single-family, build-to-rent, and smaller multifamily portfolios well.
+                  Here we work through the access your account already has: an API your plan includes, a partner integration you already use, or scheduled reports and exports.
                 </p>
               </div>
 
@@ -823,8 +985,8 @@ export default function PropertyManagementAiAgentsPage() {
         </section>
 
         <MidPageCTA
-          headline="Not sure which calls a leasing agent should handle?"
-          sub="Tell us your unit count and PMS platform. We'll map exactly what the agent answers, books, and escalates to your leasing team."
+          headline="Not sure which jobs an AI agent should take first?"
+          sub="Tell us your unit count and PMS platform. We'll map what the agent answers, books, logs, and escalates to your team, across leasing, maintenance, and renewals."
           label="Get a property management AI audit"
         />
 
@@ -1009,7 +1171,7 @@ export default function PropertyManagementAiAgentsPage() {
                   <tr>
                     <td className="p-4 sm:p-6 font-bold text-[#14110F]">Live PMS Availability & Pricing Sync.</td>
                     <td className="p-4 sm:p-6 font-bold text-[#F05A28] bg-[#FFF8F5]">
-                      Bi-directional (AppFolio, Yardi, RealPage)
+                      Reads and writes through the access your PMS publishes
                     </td>
                     <td className="p-4 sm:p-6 text-[#6E655F]">Static forms or basic webhook.</td>
                     <td className="p-4 sm:p-6 text-[#6E655F]">Manual message taking.</td>
@@ -1062,7 +1224,7 @@ export default function PropertyManagementAiAgentsPage() {
                 >
                   steering homeseekers to certain areas
                 </a>{' '}
-                as a form of unlawful discrimination. Here is what that means for how we build the agent. None of this is legal advice; your fair housing counsel makes the final call.
+                as a form of unlawful discrimination (DOJ page checked 8 Nov 2026). Here is what that means for how we build the agent. None of this is legal advice; your fair housing counsel makes the final call.
               </p>
             </div>
 
@@ -1079,7 +1241,7 @@ export default function PropertyManagementAiAgentsPage() {
                 <div className="font-mono text-xs text-[#F05A28] font-bold mb-2">GUARDRAIL 02</div>
                 <h3 className="text-lg font-bold text-[#14110F] mb-2">No commentary on neighborhood demographics or "who lives here."</h3>
                 <p className="text-sm text-[#46403B] leading-relaxed">
-                  The agent cannot generate an opinion about a community&apos;s residents, safety by association, or "fit." Those are the exact themes the DOJ names as unlawful steering, so they are excluded from the answer set entirely, not filtered after the fact.
+                  The agent cannot generate an opinion about a community&apos;s residents, safety by association, or "fit." Comments like these are how steering happens, so they are excluded from the answer set entirely, not filtered after the fact.
                 </p>
               </li>
 
@@ -1198,8 +1360,8 @@ export default function PropertyManagementAiAgentsPage() {
         {/* STRUCTURED FAQ SECTION */}
         <FAQ
           eyebrow="// PROPERTY MANAGEMENT AI QUESTIONS & ANSWERS"
-          headline="Frequently Asked Questions on AI Leasing Agents."
-          lead="Everything property managers, regional directors, and portfolio owners need to know about Fair Housing compliance, PMS integration, and leasing operations."
+          headline="Questions About AI for Property Management."
+          lead="What property managers, regional directors, and portfolio owners ask about AI agents for leasing, maintenance, and renewals, Fair Housing compliance, and PMS integration."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-white"
@@ -1215,7 +1377,7 @@ export default function PropertyManagementAiAgentsPage() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#14110F] font-heading mb-6">
-              Ready to Upgrade Your Portfolio with Custom Leasing AI?
+              Put AI to Work on Your Leasing, Maintenance and Renewals.
             </h2>
 
             <p className="text-lg text-[#46403B] max-w-2xl mx-auto mb-10 leading-relaxed">
