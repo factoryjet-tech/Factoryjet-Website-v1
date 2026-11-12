@@ -18,13 +18,13 @@ const CANONICAL = 'https://factoryjet.com/services/shopify-migration-agency';
 
 export const metadata: Metadata = {
   title: 'Shopify Migration Agency | Zero-Downtime | FactoryJet.',
-  description: 'Shopify migration agency. Zero-downtime database ETL replatforming from Magento, WooCommerce, and BigCommerce to Shopify Plus with 100% SEO retention.',
+  description: 'Shopify migration agency. Zero-downtime replatforming from Magento, WooCommerce and BigCommerce to Shopify Plus, with every old URL redirected and checked.',
   alternates: { canonical: CANONICAL, languages: twinAlternates['shopify-migration'] },
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
     title: 'Shopify Migration Agency | Zero-Downtime Replatforming | FactoryJet.',
-    description: 'Shopify migration agency. Zero-downtime database ETL replatforming from Magento, WooCommerce, and BigCommerce to Shopify Plus with 100% SEO retention.',
+    description: 'Shopify migration agency. Zero-downtime replatforming from Magento, WooCommerce and BigCommerce to Shopify Plus, with every old URL redirected and checked.',
     url: CANONICAL,
     images: [
       {
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Shopify Migration Agency | Zero-Downtime Replatforming | FactoryJet.',
-    description: 'Shopify migration agency. Zero-downtime database ETL replatforming from Magento, WooCommerce, and BigCommerce to Shopify Plus with 100% SEO retention.',
+    description: 'Shopify migration agency. Zero-downtime replatforming from Magento, WooCommerce and BigCommerce to Shopify Plus, with every old URL redirected and checked.',
     images: ['https://factoryjet.com/images/us/shopify-migration/hero-migration-engineer-progress-bars.webp'],
   },
 };
@@ -260,7 +260,7 @@ const MIGRATION_ROADMAP = [
 const FAQS = [
   {
     question: "Will our organic Google search traffic drop after migrating to Shopify Plus?",
-    answer: "No. Traffic remains stable when technical steps are followed. We map legacy URLs to exact Shopify targets. 1:1 301 redirects keep traffic steady. We preserve meta tags, headers, and structured schema. Real-time Google Search Console monitoring protects your rankings.",
+    answer: "Rankings can move for a few weeks after any platform change, and Google says so in its own site-move guidance. We keep that dip small and short. We map every legacy URL to its exact Shopify target with a 301 redirect, carry over titles, meta descriptions, headings and structured data, and watch Google Search Console daily after launch so we can fix any page that drops.",
   },
   {
     question: "How do you prevent 404 errors during migration?",
@@ -348,7 +348,7 @@ const migrationPageSchema = {
       '@id': `${CANONICAL}#service`,
       name: 'Enterprise Shopify Migration & Replatforming Services',
       description:
-        'Enterprise Shopify Plus migration agency specializing in zero-downtime database ETL replatforming from Magento, WooCommerce, BigCommerce, and Salesforce to Shopify Plus with 100% SEO preservation.',
+        'Enterprise Shopify Plus migration agency specializing in zero-downtime database ETL replatforming from Magento, WooCommerce, BigCommerce, and Salesforce to Shopify Plus, with every historical URL mapped to a 301 redirect.',
       provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
       serviceType: 'E-Commerce Development',
       areaServed: [
@@ -362,7 +362,7 @@ const migrationPageSchema = {
       '@id': CANONICAL,
       url: CANONICAL,
       name: 'Shopify Migration Agency | Zero-Downtime Replatforming | FactoryJet',
-      description: 'Shopify migration agency. Zero-downtime database ETL replatforming from Magento, WooCommerce, and BigCommerce to Shopify Plus with 100% SEO retention.',
+      description: 'Shopify migration agency. Zero-downtime replatforming from Magento, WooCommerce and BigCommerce to Shopify Plus, with every old URL redirected and checked.',
       datePublished: '2026-01-15',
       dateModified: PAGE_MODIFIED,
       inLanguage: 'en-US',
@@ -408,7 +408,7 @@ export default function ShopifyMigrationPage() {
             ENTERPRISE REPLATFORMING &amp; DATA MIGRATION
           </div>
           <h1 className="pp-hero-title">
-            Enterprise Shopify Migration Agency: Zero Downtime. Zero SEO Loss.
+            Enterprise Shopify Migration Agency: Zero Downtime. Every Old URL Redirected.
           </h1>
           <p className="pp-hero-sub">
             Migrate your store from Magento, WooCommerce, BigCommerce, or Salesforce to Shopify Plus. We run automated database ETL. We move customer accounts and map 301 redirects. ERPs sync with zero downtime and full data integrity.
