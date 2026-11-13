@@ -616,7 +616,7 @@ export default function AustinEcommerceDevelopmentPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/shared/factoryjet-audit-call.webp"
-                  alt="FactoryJet senior ecommerce engineers building custom Shopify solutions in Austin"
+                  alt="A man in a blue shirt talking to the camera at a white desk, beside a laptop showing a dashboard with orange and green bar charts"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
@@ -862,7 +862,7 @@ export default function AustinEcommerceDevelopmentPage() {
               <div style={{ marginTop: '24px', background: '#F9F9FC', border: '1px solid #E6E6EC', borderLeft: '4px solid #FF5622', borderRadius: '12px', padding: '20px 22px', maxWidth: '72ch' }}>
                 <p style={{ margin: '0 0 8px', fontFamily: 'var(--font-geist-mono), monospace', fontSize: '12px', letterSpacing: '0.08em', textTransform: 'uppercase', color: '#B23E13' }}>Client: European Garden (Exaco)</p>
                 <p style={{ fontSize: '15px', color: '#26252B', lineHeight: 1.6, margin: 0 }}>
-                  Exaco, a garden products company in Pflugerville, Texas, chose us to build the new Shopify store for its European Garden brand and to connect it to QuickBooks Enterprise. Before they signed, we built a draft theme inside their own Shopify store. The store is in build now.
+                  Exaco, a garden products company in Pflugerville, Texas, chose us to build the new Shopify store for its European Garden brand and to connect it to QuickBooks Enterprise. Before they signed, we built a draft theme inside their own Shopify store. The Shopify store is live now.
                 </p>
               </div>
               <div style={{ marginTop: '28px' }}>

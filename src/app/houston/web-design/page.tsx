@@ -612,7 +612,7 @@ export default function HoustonWebDesignPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/houston-web-design/process.webp"
-                  alt="FactoryJet senior UI UX designers collaborating on custom Houston web design sprint"
+                  alt="Three people sketching page layouts on large sheets of paper at a table, with a product page open on a laptop"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

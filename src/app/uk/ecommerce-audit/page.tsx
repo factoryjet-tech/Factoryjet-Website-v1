@@ -260,7 +260,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     locale: 'en_GB',
     type: 'website',
-    images: [{ url: '/images/services/ecommerce-audit-hero.webp', width: 1600, height: 1067, alt: 'A merchant reviewing an online store checkout and order dashboard on a laptop during an ecommerce audit' }],
+    images: [{ url: '/images/services/ecommerce-audit-hero.webp', width: 1600, height: 1067, alt: 'Hands typing on a laptop open to a store theme editor showing a skincare storefront' }],
   },
   robots: { index: true, follow: true },
 };

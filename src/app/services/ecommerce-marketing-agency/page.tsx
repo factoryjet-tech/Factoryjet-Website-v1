@@ -675,7 +675,7 @@ export default function EcommerceMarketingAgencyPage() {
               <div className="overflow-hidden rounded-[20px] border border-[#EAEAE3] shadow-[0_30px_60px_-34px_rgba(20,20,30,0.5)]">
                 <img
                   src="/images/us/shared/factoryjet-audit-call.webp"
-                  alt="A FactoryJet marketing specialist reviewing ecommerce ad account performance with a client"
+                  alt="A man in a blue shirt talking to the camera at a white desk, beside a laptop showing a dashboard with orange and green bar charts"
                   width={1536}
                   height={1024}
                   className="block h-full w-full object-cover"
@@ -1137,7 +1137,7 @@ export default function EcommerceMarketingAgencyPage() {
             <div className="min-h-[250px] overflow-hidden rounded-2xl border border-[#EAEAE3] shadow-[0_26px_54px_-40px_rgba(20,20,30,0.5)]">
               <img
                 src="/images/us/services/service-team.webp"
-                alt="The FactoryJet marketing team reviewing campaign performance"
+                alt="Four people working with laptops at a shared table while one of them sketches page wireframes on a whiteboard"
                 width={1200}
                 height={800}
                 className="h-full min-h-[250px] w-full object-cover"

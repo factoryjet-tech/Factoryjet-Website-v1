@@ -1210,7 +1210,7 @@ export default function SeoConsultingPage() {
             <div className="relative mx-auto w-full max-w-[420px]">
               <img
                 src="/images/us/services/seo/team-cutout.webp"
-                alt="Bhavesh Barot and the FactoryJet SEO consulting team"
+                alt="Five people standing together and smiling, cut out against a white background"
                 width={1300}
                 height={895}
                 loading="lazy"

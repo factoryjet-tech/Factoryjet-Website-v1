@@ -587,7 +587,7 @@ export default function RaleighEcommerceDevelopmentPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/b2b-website-design/sales-enablement.webp"
-                  alt="FactoryJet senior ecommerce engineers building custom Raleigh Shopify Plus storefront"
+                  alt="A woman holding a tablet with a handbag photo talks to a man taking notes at his desk, with the same bag on his monitor"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

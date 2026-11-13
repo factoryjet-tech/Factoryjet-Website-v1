@@ -367,7 +367,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     locale: 'en_GB',
     type: 'website',
-    images: [{ url: `${IMG}/ai-development-og.webp`, width: 1200, height: 630, alt: 'A FactoryJet developer and a business owner reviewing an internal AI tool on a large monitor' }],
+    images: [{ url: `${IMG}/ai-development-og.webp`, width: 1200, height: 630, alt: 'A man at a keyboard and a woman in a cream blazer reviewing an internal AI tool on a large monitor' }],
   },
   twitter: {
     card: 'summary_large_image',

@@ -692,7 +692,7 @@ export default function AiReceptionistAUPage() {
               <VisualSlot page={PAGE_KEY} slot="process" src="/images/au/visual-pass-2026-10-03/ai-receptionist/process-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-receptionist/process-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-receptionist/process-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-receptionist/process-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="A FactoryJet engineer and a clinic practice manager listening to real incoming calls together while she takes notes"
                 caption="Step one is listening. We go through a sample of your real calls with you, then map every type of call, what should happen, and where a person takes over. That call map is what you sign off.">
-                <img src="/images/au/ai-receptionist/ai-receptionist-listening.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet engineer and an Adelaide vet clinic practice manager share earbuds to listen to real incoming calls while she takes notes" />
+                <img src="/images/au/ai-receptionist/ai-receptionist-listening.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A man holding a coffee and an Adelaide vet clinic practice manager wearing an earbud listen to incoming calls at a laptop while she takes notes" />
               </VisualSlot>
             </div>
             <div className="timeline timeline-4">

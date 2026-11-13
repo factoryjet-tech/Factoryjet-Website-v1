@@ -581,7 +581,7 @@ export default function SaltLakeCityEcommercePage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/b2b-website-design/buying-committee.webp"
-                  alt="FactoryJet senior ecommerce engineers building headless Shopify Plus storefronts for Utah brands"
+                  alt="Six people around a meeting table reviewing printed product pages"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

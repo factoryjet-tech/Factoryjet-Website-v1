@@ -581,7 +581,7 @@ export default function SanDiegoWebDesignPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/san-diego-web-design/process-table.webp"
-                  alt="FactoryJet senior UI UX designers collaborating on custom San Diego web design sprint"
+                  alt="Three people at a table covered in wireframe printouts and sticky notes while one points at a product page on a laptop"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

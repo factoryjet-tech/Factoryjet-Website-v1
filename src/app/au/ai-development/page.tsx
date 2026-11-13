@@ -304,7 +304,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     locale: 'en_AU',
     type: 'website',
-    images: [{ url: '/images/au/ai-development/ai-development-og.webp', width: 1200, height: 630, alt: 'AI development company Australia: a FactoryJet developer and a Sydney business owner reviewing a custom internal AI tool' }],
+    images: [{ url: '/images/au/ai-development/ai-development-og.webp', width: 1200, height: 630, alt: 'AI development company Australia: a man and a Sydney business owner reviewing a custom internal AI tool' }],
   },
   robots: { index: true, follow: true },
 };
@@ -563,7 +563,7 @@ export default function AiDevelopmentAUPage() {
               </div>
               <VisualSlot page={PAGE_KEY} slot="facts" src="/images/au/visual-pass-2026-10-03/ai-development/facts-1440.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-development/facts-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-development/facts-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-development/facts-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 40vw, 480px" kind="photo" ratio="3:2" className="factphoto"
                 subject="A FactoryJet developer and a business owner reviewing a custom internal AI tool on a monitor">
-                <img src="/images/au/ai-development/ai-development-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="A FactoryJet developer and a Sydney business owner reviewing a custom internal AI tool on a monitor, with the harbour through the window" />
+                <img src="/images/au/ai-development/ai-development-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="A man in a navy T-shirt and a Sydney business owner reviewing a custom internal AI tool on a monitor, with the harbour through the window" />
               </VisualSlot>
             </div>
           </div>
@@ -642,7 +642,7 @@ export default function AiDevelopmentAUPage() {
               </div>
               <VisualSlot page={PAGE_KEY} slot="facts-2" src="/images/au/visual-pass-2026-10-03/ai-development/facts-2-1440.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-development/facts-2-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-development/facts-2-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-development/facts-2-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 40vw, 480px" kind="photo" ratio="3:2" className="factphoto"
                 subject="An AI engineer working on two monitors showing a diagram of connected system blocks">
-                <img src="/images/au/ai-development/ai-development-engineer.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet AI engineer in a Melbourne office working on two monitors showing a diagram of connected system blocks" />
+                <img src="/images/au/ai-development/ai-development-engineer.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A woman in a Melbourne office working on two monitors showing a diagram of connected system blocks" />
               </VisualSlot>
             </div>
             <div className="tablewrap span-all" tabIndex={0} role="region" aria-label="Scrollable system integration table">
@@ -1069,7 +1069,7 @@ export default function AiDevelopmentAUPage() {
               </div>
               <VisualSlot page={PAGE_KEY} slot="facts-5" src="/images/au/visual-pass-2026-10-03/ai-development/facts-5-1440.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-development/facts-5-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-development/facts-5-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-development/facts-5-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 40vw, 480px" kind="photo" ratio="3:2" className="factphoto"
                 subject="A FactoryJet engineer and the owner of a homewares wholesaler reviewing an internal tool on a laptop at a showroom counter">
-                <img src="/images/au/ai-development/ai-development-commerce.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a FactoryJet engineer and the owner of a Melbourne homewares wholesaler reviewing an internal tool on a laptop at the showroom counter" />
+                <img src="/images/au/ai-development/ai-development-commerce.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a man in a linen shirt and the owner of a Melbourne homewares wholesaler reviewing an internal tool on a laptop at the showroom counter" />
               </VisualSlot>
             </div>
           </div>

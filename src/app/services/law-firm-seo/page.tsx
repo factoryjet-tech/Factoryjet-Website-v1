@@ -1258,7 +1258,7 @@ export default function LawFirmSEOPage() {
 
                 <Image
                   src="/images/us/services/law-firm-seo/team.webp"
-                  alt="FactoryJet SEO team"
+                  alt="Four people working with laptops at a shared table while one of them sketches page wireframes on a whiteboard"
                   className="team-img reveal reveal-delay-4"
                   width={600}
                   height={500}

@@ -941,7 +941,7 @@ export default function WebsitesForTradiesAUPage() {
                 sizes="(max-width: 820px) calc(100vw - 32px), 520px" ratio="3:2" captionClassName="figcap"
                 subject="A FactoryJet web designer and an electrician reviewing paper sketches of his mobile website on a workbench"
                 caption="We plan the site around the jobs you want more of. You sign off the page plan before anything is designed.">
-                <img src="/images/au/websites-for-tradies/tradie-website-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet web designer and a Sydney electrician review paper sketches of his mobile website on a workbench in his workshop" />
+                <img src="/images/au/websites-for-tradies/tradie-website-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A man in a blue shirt and a Sydney electrician review paper sketches of his mobile website on a workbench in his workshop" />
               </VisualSlot>
             </div>
             <div className="timeline timeline-4 tradie-build-timeline">

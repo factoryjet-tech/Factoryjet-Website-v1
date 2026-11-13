@@ -306,7 +306,7 @@ export const metadata: Metadata = {
         url: '/images/uk/shopify-development/shopify-development-og.webp',
         width: 1200,
         height: 630,
-        alt: 'A FactoryJet Shopify developer reviewing a product page with a UK brand owner',
+        alt: 'A man in a grey jumper and a woman reviewing a product page on a large monitor',
       },
     ],
   },
@@ -439,7 +439,7 @@ export default function ShopifyDevelopmentPage() {
         <div style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--n200)' }}>
           <img width="1400" height="933" fetchPriority="high" decoding="async"
             src="/images/uk/shopify-development/shopify-development-hero.webp"
-            alt="A FactoryJet Shopify developer reviewing a new product page with the owner of a UK homeware brand"
+            alt="A man in a grey jumper and a woman reviewing a vase product page on a large monitor"
             style={{ width: '100%', height: 'auto', display: 'block' }} />
         </div>
         <ul className="spec-list" style={{ marginTop: '16px' }}>
@@ -487,7 +487,7 @@ export default function ShopifyDevelopmentPage() {
         <div style={{ borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--n200)' }}>
           <img width="1200" height="800" loading="lazy" decoding="async"
             src="/images/uk/shopify-development/shopify-development-team.webp"
-            alt="FactoryJet Shopify designers walking through a product page wireframe before any code is written"
+            alt="A woman presenting a product page wireframe on a wall screen to a man holding a notebook"
             style={{ width: '100%', height: 'auto', display: 'block' }} />
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginTop: '16px' }}>

@@ -686,7 +686,7 @@ export default function B2BEcommercePage() {
               <div style={{ borderRadius: '20px', overflow: 'hidden', border: '1px solid var(--pp-line)', boxShadow: '0 24px 48px -28px rgba(20,17,15,0.28)' }}>
                 <Image
                   src="/images/us/b2b/b2b-scoping-call.webp"
-                  alt="Founder on a video scoping call mapping out a client's B2B ecommerce platform requirements"
+                  alt="A man in glasses taking notes at a desk during a video call with three people shown on his laptop"
                   width={600}
                   height={480}
                   style={{ width: '100%', height: 'auto', display: 'block' }}

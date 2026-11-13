@@ -253,7 +253,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     locale: 'en_GB',
     type: 'website',
-    images: [{ url: '/images/uk/ai-development/ai-development-og.webp', width: 1200, height: 630, alt: 'AI development company UK: a FactoryJet developer and a business owner reviewing an internal AI tool on a large monitor' }],
+    images: [{ url: '/images/uk/ai-development/ai-development-og.webp', width: 1200, height: 630, alt: 'AI development company UK: a man at a keyboard and a woman in a cream blazer reviewing an internal AI tool on a large monitor' }],
   },
   robots: { index: true, follow: true },
 };
@@ -302,7 +302,7 @@ export default function AiDevelopmentUKPage() {
               </div>
 
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/uk/ai-development/ai-development-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="A FactoryJet developer and a UK business owner reviewing a custom internal AI tool on a large monitor in a bright office" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/uk/ai-development/ai-development-hero.webp" width={1400} height={933} fetchPriority="high" decoding="async" alt="A man at a keyboard and a woman in a cream blazer reviewing a custom internal AI tool on a large monitor in a bright office" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">What you get</span>
                   <div className="scorecard-row">
@@ -452,7 +452,7 @@ export default function AiDevelopmentUKPage() {
                 </div>
               </div>
               <div className="card" style={{ padding: 8 }}>
-                <img src="/images/uk/ai-development/ai-development-engineer.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet AI engineer at a desk with two monitors showing the connected building blocks of a custom AI system" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
+                <img src="/images/uk/ai-development/ai-development-engineer.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A woman at a desk with two monitors showing the connected building blocks of a custom AI system" style={{ width: '100%', height: 'auto', borderRadius: 12, display: 'block' }} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <span className="eyebrow">Inside a typical build</span>
                   <div className="scorecard-row"><div><div className="scorecard-metric">Your documents and records</div><div className="scorecard-note">shared drives, CRM, ERP, shop, helpdesk</div></div><div className="scorecard-val" style={{ fontSize: 14 }}>Source</div></div>

@@ -587,7 +587,7 @@ export default function SeattleWebDesignPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/seattle-web-design/process.webp"
-                  alt="FactoryJet senior UI UX designers collaborating on custom Seattle web design sprint"
+                  alt="Three people at a whiteboard covered in page wireframes and flow arrows in a brick-walled office"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

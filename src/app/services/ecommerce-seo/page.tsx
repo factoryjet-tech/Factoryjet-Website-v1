@@ -712,7 +712,7 @@ export default function EcommerceSeoServicePage() {
           <div className="wrap team-grid">
             <div className="team-vis" data-reveal>
               <div className="photo">
-                <Image src="/images/us/services/seo/team-cutout.webp" alt="The FactoryJet ecommerce SEO team" fill loading="lazy" sizes="(max-width: 880px) 90vw, 460px" style={{ objectFit: 'cover' }} />
+                <Image src="/images/us/services/seo/team-cutout.webp" alt="Five people standing together and smiling, cut out against a white background" fill loading="lazy" sizes="(max-width: 880px) 90vw, 460px" style={{ objectFit: 'cover' }} />
               </div>
               <div className="ec e1">A senior team</div>
               <div className="ec e2"><span className="star">&#9733;</span> 4.9/5 &middot; average Google review rating</div>

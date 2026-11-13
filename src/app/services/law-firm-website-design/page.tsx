@@ -744,7 +744,7 @@ export default function LawFirmWebsiteDesignPage() {
               <div style={{ marginTop: '28px', borderRadius: '16px', overflow: 'hidden', border: '1px solid #E5E5E0', maxWidth: 860 }}>
                 <Image
                   src="/images/us/shared/factoryjet-audit-call.webp"
-                  alt="FactoryJet lead designer conducting a live legal website UX audit and technical SEO review"
+                  alt="A man in a blue shirt talking to the camera at a white desk, beside a laptop showing a dashboard with orange and green bar charts"
                   width={860}
                   height={480}
                   loading="lazy"

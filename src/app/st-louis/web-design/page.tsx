@@ -580,7 +580,7 @@ export default function StLouisWebDesignPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/st-louis-web-design/process-review-desk.webp"
-                  alt="FactoryJet senior UI UX designers collaborating on custom St. Louis web design sprint"
+                  alt="Two people talking across a desk, with a laptop showing a handbag product page"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

@@ -1320,7 +1320,7 @@ export default function DentalSEOPage() {
           <div className="team-img-wrap img-wrap" data-reveal>
             <Image
               src="/images/us/services/dental-seo/team.webp"
-              alt="FactoryJet dental SEO team"
+              alt="Four people working with laptops at a shared table while one of them sketches page wireframes on a whiteboard"
               width={600}
               height={500}
               loading="lazy"

@@ -770,7 +770,7 @@ export default function SeoAuditServicePage() {
             <div style={{ marginTop: '36px', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--line)', maxWidth: 860 }}>
               <Image
                 src="/images/us/shared/factoryjet-audit-call.webp"
-                alt="FactoryJet senior engineer conducting a comprehensive technical SEO website audit and review"
+                alt="A man in a blue shirt talking to the camera at a white desk, beside a laptop showing a dashboard with orange and green bar charts"
                 width={860}
                 height={480}
                 loading="lazy"
@@ -1074,7 +1074,7 @@ export default function SeoAuditServicePage() {
           <div className="wrap team-grid">
             <div className="team-vis" data-reveal>
               <div className="photo">
-                <Image src="/images/us/services/seo/team-cutout.webp" alt="The FactoryJet technical SEO and audit team" width={460} height={520} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <Image src="/images/us/services/seo/team-cutout.webp" alt="Five people standing together and smiling, cut out against a white background" width={460} height={520} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div className="ec e1">A senior team</div>
               <div className="ec e2"><span className="star">&#9733;</span> 4.9/5 &middot; average Google review rating</div>

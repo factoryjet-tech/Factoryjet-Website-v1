@@ -426,7 +426,7 @@ export default function BigCommerceDevelopmentPage() {
                 then hand it over. You own and run it, with us on call to support and scale.
               </p>
             </div>
-            <Image src={`${IMG}/founder-advisory.webp`} alt="FactoryJet's founder reviewing a BigCommerce store build with a client team around a laptop" width={1448} height={1086} sizes="(max-width:760px) 100vw, 50vw" style={imgStyle} />
+            <Image src={`${IMG}/founder-advisory.webp`} alt="A small team reviewing an online storefront together around a laptop" width={1448} height={1086} sizes="(max-width:760px) 100vw, 50vw" style={imgStyle} />
           </div>
         </section>
 

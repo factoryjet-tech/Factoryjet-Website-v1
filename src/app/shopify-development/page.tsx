@@ -1018,7 +1018,7 @@ export default function ShopifyDevelopmentPage() {
               >
                 <Image
                   src="/images/services/card-ecommerce.webp"
-                  alt="FactoryJet team launching a custom Shopify store for an Indian D2C brand"
+                  alt="A monitor and a phone on a dark desk, both showing an online checkout with shipping and payment steps"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 380px"

@@ -945,7 +945,7 @@ export default function SmallBusinessSeoServicePage() {
             <div style={{ marginTop: '36px', borderRadius: '16px', overflow: 'hidden', border: '1px solid var(--ls-line)', maxWidth: 860 }}>
               <Image
                 src="/images/us/shared/factoryjet-audit-call.webp"
-                alt="FactoryJet strategist conducting a live small business SEO audit and Google Search Console review"
+                alt="A man in a blue shirt talking to the camera at a white desk, beside a laptop showing a dashboard with orange and green bar charts"
                 width={860}
                 height={480}
                 loading="lazy"
@@ -1064,7 +1064,7 @@ export default function SmallBusinessSeoServicePage() {
               <div className="photo">
                 <Image
                   src="/images/us/services/seo/team-cutout.webp"
-                  alt="The FactoryJet small business SEO team"
+                  alt="Five people standing together and smiling, cut out against a white background"
                   width={460}
                   height={520}
                   loading="lazy"

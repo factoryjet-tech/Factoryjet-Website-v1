@@ -855,7 +855,7 @@ export default function EcommerceSeoAUPage() {
               <VisualSlot page={PAGE_KEY} slot="facts-2" src="/images/au/visual-pass-2026-10-03/ecommerce-seo/migration-review-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ecommerce-seo/migration-review-640.webp 640w, /images/au/visual-pass-2026-10-03/ecommerce-seo/migration-review-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ecommerce-seo/migration-review-1920.webp 1920w" sizes="(max-width: 820px) calc(100vw - 32px), 560px" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="An engineer reviewing a redirect map that links old store pages to new ones across two monitors"
                 caption="Every old URL with traffic or links gets one new home, tested on a copy of the store before launch.">
-                <img src="/images/au/ecommerce-seo/ecommerce-seo-migration.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a FactoryJet engineer in a Sydney office reviewing a redirect map that links old store pages to new ones across two monitors" />
+                <img src="/images/au/ecommerce-seo/ecommerce-seo-migration.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a woman in a Sydney office reviewing a redirect map that links old store pages to new ones across two monitors" />
               </VisualSlot>
             </div>
           </div>

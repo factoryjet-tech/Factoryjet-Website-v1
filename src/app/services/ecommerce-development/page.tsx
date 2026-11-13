@@ -1123,7 +1123,7 @@ export default function EcommerceDevelopmentPage() {
               >
                 <Image
                   src="/images/services/web-design-stats-photo.webp"
-                  alt="FactoryJet team reviewing a newly launched e-commerce store with a client"
+                  alt="Two people smiling at a laptop in a shared office while one points at a website homepage on the screen"
                   width={640}
                   height={384}
                   className="object-cover object-center w-full h-full"
