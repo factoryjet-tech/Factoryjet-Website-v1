@@ -572,7 +572,7 @@ export default function ReplatformingHubPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/replatforming/replatforming-team-review.webp"
-                  alt="FactoryJet senior migration engineers auditing catalog data models and ERP integrations"
+                  alt="A woman at a desk studying code on two monitors in a quiet office"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

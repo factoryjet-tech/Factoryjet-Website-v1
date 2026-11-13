@@ -592,7 +592,7 @@ export default function PhoenixWebDesignPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/phoenix-web-design/valley-planning.webp"
-                  alt="FactoryJet senior UI UX designers collaborating on custom Phoenix web design sprint"
+                  alt="Two people sketching a site map on a glass wall, with desert plants outside the window"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

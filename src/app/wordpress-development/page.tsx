@@ -973,7 +973,7 @@ export default function WordPressDevelopmentPage() {
               >
                 <Image
                   src="/images/services/card-web-design.webp"
-                  alt="FactoryJet team building a custom WordPress site for an Indian SMB"
+                  alt="A laptop on a white desk showing the homepage of a design studio website"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 380px"

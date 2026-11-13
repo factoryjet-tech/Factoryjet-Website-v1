@@ -743,7 +743,7 @@ export default function AiCustomerServiceAUPage() {
               <VisualSlot page={PAGE_KEY} slot="process" src="/images/au/visual-pass-2026-10-03/ai-customer-service/process-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-customer-service/process-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-customer-service/process-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-customer-service/process-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="A FactoryJet engineer and a customer service manager sorting ticket cards into piles at a meeting table"
                 caption="Step one is sorting real tickets into types with the person who runs your support. That ticket map, with a rule for each type, is what you sign off before we build.">
-                <img src="/images/au/ai-customer-service/ai-customer-service-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet engineer and the customer service manager of an Adelaide online retailer sorting cards into four piles at a meeting table, mapping ticket types" />
+                <img src="/images/au/ai-customer-service/ai-customer-service-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A woman in a blue shirt and a man in a grey jumper sorting cards into four piles at a meeting table, mapping ticket types" />
               </VisualSlot>
             </div>
             <div className="timeline timeline-4">

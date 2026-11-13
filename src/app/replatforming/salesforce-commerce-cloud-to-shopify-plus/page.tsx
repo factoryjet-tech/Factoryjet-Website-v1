@@ -508,7 +508,7 @@ export default function SFCCToShopifyPlusPage() {
               <div className="rv-curved-frame-1">
                 <Image
                   src="/images/us/shared/factoryjet-senior-engineer.webp"
-                  alt="FactoryJet senior commerce architect analyzing enterprise migration pipelines"
+                  alt="A man at a desk with three monitors showing code, a search performance chart and a schema validation result"
                   width={640}
                   height={640}
                   priority
@@ -553,7 +553,7 @@ export default function SFCCToShopifyPlusPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/shared/factoryjet-audit-call.webp"
-                  alt="FactoryJet engineering leadership conducting enterprise architecture audit"
+                  alt="A man in a blue shirt talking to the camera at a white desk, beside a laptop showing a dashboard with orange and green bar charts"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

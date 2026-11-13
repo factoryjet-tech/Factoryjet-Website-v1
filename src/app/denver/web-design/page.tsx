@@ -605,7 +605,7 @@ export default function DenverWebDesignPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/denver/tech-office.webp"
-                  alt="FactoryJet senior UI UX designers collaborating on custom Denver web design sprint"
+                  alt="An open-plan office with people working at laptops and the Denver skyline through tall windows"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

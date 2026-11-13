@@ -766,7 +766,7 @@ export default function AiConsultingAUPage() {
           <div>
             <VisualSlot page={PAGE_KEY} slot="definition" src="/images/au/visual-pass-2026-10-03/ai-consulting/definition-1280.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-consulting/definition-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-consulting/definition-1280.webp 1280w" sizes="(max-width: 820px) 100vw, 560px" kind="photo" ratio="3:2" className="definition-image"
               subject="A FactoryJet engineer and a distribution business owner reviewing a tablet together on a warehouse floor">
-              <img src="/images/au/ai-consulting/ai-consulting-build.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a FactoryJet engineer and a distribution business owner in a hi-vis vest reviewing a tablet together in a bright Brisbane warehouse" />
+              <img src="/images/au/ai-consulting/ai-consulting-build.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a man in a blue shirt and a distribution business owner in a hi-vis vest reviewing a tablet together in a bright Brisbane warehouse" />
             </VisualSlot>
             <p className="figcap">
               The engineer who helped write your plan is on the warehouse floor when it goes live. That is the

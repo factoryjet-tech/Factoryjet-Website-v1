@@ -613,7 +613,7 @@ export default function CharlotteEcommerceDevelopmentPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/b2b/b2b-erp-integration.webp"
-                  alt="FactoryJet senior ecommerce engineers building custom Shopify solutions in Charlotte"
+                  alt="A man standing at a desk in front of three monitors showing sales and stock charts"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

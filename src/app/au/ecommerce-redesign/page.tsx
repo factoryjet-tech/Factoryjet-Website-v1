@@ -195,7 +195,7 @@ const TERMS: { t: string; d: string }[] = [
        client). Facts limited to src/app/services/shopify-development and
        src/app/austin/ecommerce-development, naming approved 2026-10-29. ── */
 const WORK: { client: string; where: string; what: string; href: string; cta: string }[] = [
-  { client: 'European Garden (Exaco)', where: 'Shopify, Texas, United States', what: 'Before Exaco signed, we built a draft theme inside its own Shopify store. It then chose us to build the new store for its European Garden brand and connect it to QuickBooks Enterprise. The store is in build now.', href: '/austin/ecommerce-development', cta: 'Read about the project' },
+  { client: 'European Garden (Exaco)', where: 'Shopify, Texas, United States', what: 'Before Exaco signed, we built a draft theme inside its own Shopify store. It then chose us to build the new store for its European Garden brand and connect it to QuickBooks Enterprise. The Shopify store is live now.', href: '/austin/ecommerce-development', cta: 'Read about the project' },
   { client: 'Shopholistico', where: 'Shopify, United States', what: 'A custom Shopify theme for a brand selling whole-food vitamin D and calcium, with Subscribe & Save and a bundle offer on the product pages.', href: '/case-studies/shopholistico-shopify-store', cta: 'Read the case study' },
   { client: 'DTF Virginia', where: 'Shopify, Virginia, United States', what: 'A custom Shopify theme for a print shop where buyers build their own gang sheets at each transfer size and resellers sign up for an account.', href: 'https://dtfvirginia.com/', cta: 'See the live store' },
 ];

@@ -568,7 +568,7 @@ export default function ChicagoWebDesignPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/shared/factoryjet-senior-engineer.webp"
-                  alt="FactoryJet senior frontend engineers building custom Next.js web solutions in Chicago"
+                  alt="A man at a desk with three monitors showing code, a search performance chart and a schema validation result"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

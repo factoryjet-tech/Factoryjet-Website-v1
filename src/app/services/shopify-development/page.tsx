@@ -1161,7 +1161,7 @@ export default function ShopifyPage() {
               >
                 <Image
                   src="/images/services/web-design-stats-photo.webp"
-                  alt="FactoryJet team reviewing a newly launched Shopify store with a client"
+                  alt="Two people smiling at a laptop in a shared office while one points at a website homepage on the screen"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 380px"

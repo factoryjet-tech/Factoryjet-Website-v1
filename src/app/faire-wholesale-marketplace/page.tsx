@@ -365,11 +365,13 @@ const USECASES = [
     t: 'Direct Shopify Plus & ERP Wholesale Synchronization',
     d: 'How we connect your main ecommerce catalog to Faire’s brand portal with stock buffers, custom case packs and automatic order intake.',
     img: 'faire-brand-portal-catalog.webp',
+    alt: 'A man at a desk studying a monitor that shows wholesale pricing tiers, discounts and inventory sync status',
   },
   {
     t: 'Boutique Acquisition & 0% Commission Faire Direct Funnels',
     d: 'Your sales team gets Faire Direct links, so qualified orders from the retailers they bring in carry 0% commission.',
     img: 'faire-wholesale-boutique-sync.webp',
+    alt: 'A woman and a man in a showroom looking at a price list on a tablet',
   },
 ];
 
@@ -598,7 +600,7 @@ export default function FaireWholesaleMarketplacePage() {
                 {idx % 2 !== 0 && (
                   <Image
                     src={`${IMG}/${uc.img}`}
-                    alt={uc.t}
+                    alt={uc.alt}
                     width={1280}
                     height={800}
                     style={{ width: '100%', height: 'auto', borderRadius: '18px', border: '1px solid var(--pp-line)', display: 'block', objectFit: 'cover' }}
@@ -615,7 +617,7 @@ export default function FaireWholesaleMarketplacePage() {
                 {idx % 2 === 0 && (
                   <Image
                     src={`${IMG}/${uc.img}`}
-                    alt={uc.t}
+                    alt={uc.alt}
                     width={1280}
                     height={800}
                     style={{ width: '100%', height: 'auto', borderRadius: '18px', border: '1px solid var(--pp-line)', display: 'block', objectFit: 'cover' }}

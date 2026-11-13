@@ -349,7 +349,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     locale: 'en_AU',
     type: 'website',
-    images: [{ url: '/images/au/hub/au-hub-og.webp', width: 1200, height: 630, alt: 'A Sydney homewares shop owner and a FactoryJet engineer reviewing her online store product grid on a monitor, with an AI chat on the phone beside it' }],
+    images: [{ url: '/images/au/hub/au-hub-og.webp', width: 1200, height: 630, alt: 'A Sydney homewares shop owner and a man in a blue shirt reviewing her online store product grid on a monitor, with an AI chat on the phone beside it' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -397,7 +397,7 @@ function HeroProofCard({ imageSrc, system = false }: { imageSrc: string; system?
           <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width={1400} height={933} fetchPriority="high" decoding="async" alt="A tactile map of Australia connecting an online store, an AI voice agent and local search locations" style={imgStyle} />
         </picture>
       ) : (
-        <img src={imageSrc} width={1400} height={933} fetchPriority="high" decoding="async" alt="Over-the-shoulder view of a Sydney homewares shop owner and a FactoryJet engineer reviewing her online store on a monitor in the shop, with an AI chat open on a phone beside it and the Harbour Bridge through the window" style={imgStyle} />
+        <img src={imageSrc} width={1400} height={933} fetchPriority="high" decoding="async" alt="Over-the-shoulder view of a Sydney homewares shop owner and a man in a blue shirt reviewing her online store on a monitor in the shop, with an AI chat open on a phone beside it and the Harbour Bridge through the window" style={imgStyle} />
       )}
       <div style={{ padding: '14px 12px 8px' }}>
         <span className="eyebrow">What you get, whichever service</span>
@@ -902,7 +902,7 @@ export function AustraliaHubContent({ reviewConcept }: { reviewConcept?: Austral
           <div className="wrap">
             <div className="col-4060 hub-flip">
               <div className="card hub-sticky" style={{ padding: 8 }}>
-                <img src="/images/au/hub/au-hub-how-we-work.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a Perth business owner on an early-morning video call with the FactoryJet team from his home office" style={imgStyle} />
+                <img src="/images/au/hub/au-hub-how-we-work.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over-the-shoulder view of a Perth business owner on an early-morning video call with two people from his home office" style={imgStyle} />
                 <div style={{ padding: '14px 12px 8px' }}>
                   <p style={{ fontSize: 14 }}>
                     Most of our Australian clients are busy running the business. So updates come in writing, decisions

@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         url: 'https://factoryjet.com/images/services/digital-marketing/hyderabad/team.webp',
         width: 1216,
         height: 832,
-        alt: 'FactoryJet digital marketing team for Hyderabad businesses',
+        alt: 'Four people gathered around a laptop in an office with sticky notes on the wall',
       },
     ],
     locale: 'en_IN',
@@ -876,7 +876,7 @@ export default function HyderabadDigitalMarketingPage() {
               <div aria-hidden className="absolute -bottom-4 -right-4 h-28 w-28 rounded-2xl bg-[#F05A28]/10" />
               <img
                 src="/images/services/digital-marketing/hyderabad/team.webp"
-                alt="FactoryJet digital marketing team collaborating in a Hyderabad office"
+                alt="Four people gathered around a laptop in an office with sticky notes on the wall"
                 width={1216}
                 height={832}
                 loading="lazy"

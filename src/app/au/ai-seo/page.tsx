@@ -851,7 +851,7 @@ export default function AiSeoAUPage() {
               <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="A web engineer checking a product page on his laptop beside the owner of a linen brand holding a folded sheet"
                 caption="Product facts an assistant can repeat start on the product page: clear names, sizes, materials, stock and delivery details, written as text and marked up with structured data.">
-                <img src="/images/au/ai-seo/ai-seo-warehouse.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet web engineer checking a product page on his laptop while the owner of a Melbourne linen brand stands beside him holding a folded sheet" />
+                <img src="/images/au/ai-seo/ai-seo-warehouse.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A man checking a product page on his laptop while the owner of a Melbourne linen brand stands beside him holding a folded sheet" />
               </VisualSlot>
             </div>
             <ul className="agentdir-grid span-all">
@@ -948,9 +948,9 @@ export default function AiSeoAUPage() {
                   <li><a href="/au/canberra">Canberra</a></li>
                 </ul>
                 <VisualSlot page={PAGE_KEY} slot="platforms" kind="photo" ratio="3:2" className="au-split-photo" captionClassName="figcap"
-                  subject="A business owner on a video call with the FactoryJet team, reviewing a shared AI visibility report on his laptop"
+                  subject="A business owner on a video call with two people, reviewing a shared AI visibility report on his laptop"
                   caption="Perth, Hobart or Parramatta: the monthly review is a video call over the same shared report, in your business hours.">
-                  <img src="/images/au/ai-seo/ai-seo-remote.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Perth business owner on a video call with the FactoryJet team, reviewing a shared AI visibility report on his laptop, with the Swan River outside his office window" />
+                  <img src="/images/au/ai-seo/ai-seo-remote.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Perth business owner on a video call with two people, reviewing a shared AI visibility report on his laptop, with the Swan River outside his office window" />
                 </VisualSlot>
               </div>
               <div className="demand">

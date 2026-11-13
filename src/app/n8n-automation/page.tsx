@@ -985,7 +985,7 @@ export default function N8nAutomationPage() {
               >
                 <Image
                   src="/images/services/card-automation.webp"
-                  alt="FactoryJet team building n8n automation workflows for Indian businesses"
+                  alt="A laptop on a dark desk showing a glowing diagram of connected workflow steps"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 380px"

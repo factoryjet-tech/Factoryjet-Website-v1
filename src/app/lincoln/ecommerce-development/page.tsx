@@ -588,7 +588,7 @@ export default function LincolnEcommerceDevelopmentPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/manufacturing-website-design/shop-floor.webp"
-                  alt="FactoryJet senior ecommerce engineers building custom Lincoln Shopify Plus storefront"
+                  alt="A machinist holding a metal part beside a CNC machine, with the same part shown on a mounted tablet"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

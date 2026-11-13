@@ -77,7 +77,7 @@ export const metadata: Metadata = {
         url: 'https://factoryjet.com/images/services/ecommerce-audit-hero.webp',
         width: 1600,
         height: 1067,
-        alt: 'A merchant reviewing their online store on a laptop, representing a free ecommerce audit of an existing site',
+        alt: 'Hands typing on a laptop open to a store theme editor showing a skincare storefront',
       },
     ],
     locale: 'en_US',
@@ -570,7 +570,7 @@ export default function EcommerceAuditPage() {
                 <div className="overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
                   <Image
                     src="/images/services/ecommerce-audit-hero.webp"
-                    alt="A merchant reviewing their online store's checkout and dashboard on a laptop during an ecommerce audit"
+                    alt="Hands typing on a laptop open to a store theme editor showing a skincare storefront"
                     width={1600}
                     height={1067}
                     priority

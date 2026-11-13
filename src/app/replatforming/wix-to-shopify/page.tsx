@@ -562,7 +562,7 @@ export default function WixToShopifyPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/replatforming/wix-team-devs.webp"
-                  alt="FactoryJet migration engineers reviewing product inventory and multi-channel sync"
+                  alt="A woman checking a tablet beside a shelf of packaged products"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}

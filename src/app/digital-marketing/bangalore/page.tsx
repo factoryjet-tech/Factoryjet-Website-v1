@@ -891,7 +891,7 @@ export default function BangaloreDigitalMarketingPage() {
               <div aria-hidden className="absolute -bottom-4 -right-4 h-28 w-28 rounded-2xl bg-[#F05A28]/10" />
               <img
                 src="/images/services/digital-marketing/bangalore/team.webp"
-                alt="FactoryJet digital marketing team collaborating in a Bangalore office"
+                alt="Four people smiling around a laptop at a meeting table in a bright office"
                 width={1216}
                 height={832}
                 loading="lazy"

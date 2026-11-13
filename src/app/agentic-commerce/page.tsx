@@ -472,7 +472,7 @@ export default function AgenticCommercePage() {
             <div className="agc-teamframe" style={{ position: 'relative', borderRadius: '16px', overflow: 'hidden', minHeight: '300px' }}>
               <Image
                 src="/images/us/services/service-team.webp"
-                alt="The FactoryJet senior engineering team at work"
+                alt="Four people working with laptops at a shared table while one of them sketches page wireframes on a whiteboard"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"
                 style={{ objectFit: 'cover' }}

@@ -495,7 +495,7 @@ export default function AmazonAgencyPage() {
               </div>
             </div>
             <div className="amz-teamframe">
-              <img src="/images/us/services/service-team.webp" alt="The FactoryJet team at work" width={800} height={600} loading="lazy" decoding="async" />
+              <img src="/images/us/services/service-team.webp" alt="Four people working with laptops at a shared table while one of them sketches page wireframes on a whiteboard" width={800} height={600} loading="lazy" decoding="async" />
             </div>
           </div>
         </section>

@@ -1102,7 +1102,7 @@ export default function WebDesignServicePage() {
               >
                 <Image
                   src="/images/web-design-stats-photo.webp"
-                  alt="FactoryJet team reviewing a newly launched website with an Indian client"
+                  alt="A man at a desk facing a large monitor that shows a website layout, with plants by the window"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 380px"

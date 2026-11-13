@@ -731,7 +731,7 @@ export default function AiAgentsAUPage() {
               <VisualSlot page={PAGE_KEY} slot="process" src="/images/au/visual-pass-2026-10-03/ai-agents/process-1440.webp" srcSet="/images/au/visual-pass-2026-10-03/ai-agents/process-640.webp 640w, /images/au/visual-pass-2026-10-03/ai-agents/process-1280.webp 1280w, /images/au/visual-pass-2026-10-03/ai-agents/process-1440.webp 1440w" sizes="(max-width: 820px) calc(100vw - 40px), (max-width: 1080px) 40vw, 480px" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="A FactoryJet engineer and a physiotherapy clinic owner mapping her booking process with sticky notes on a large sheet of paper"
                 caption="Step one is always paper, not code. We lay out the process with the people who do it, and the right first agent usually becomes obvious within the hour.">
-                <img src="/images/au/ai-agents/ai-agents-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet engineer and a Brisbane physiotherapy clinic owner map her booking process with sticky notes and arrows on a large sheet of paper" />
+                <img src="/images/au/ai-agents/ai-agents-workshop.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A man in a white shirt and a Brisbane physiotherapy clinic owner map her booking process with sticky notes and arrows on a large sheet of paper" />
               </VisualSlot>
             </div>
             <div className="timeline timeline-4">

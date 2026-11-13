@@ -1055,6 +1055,20 @@ export const CASE_STUDIES: CaseStudy[] = [
     techStack: ['Commerceflo by FactoryJet', 'Next.js', 'Account-based pricing engine', 'Quote-to-order workflow'],
     solution:
       'GPSUK trade customers log in to a catalogue priced for their account. Where an order needs quoting first, the quote carries through to the order rather than being retyped. The catalogue is structured so buyers can find products the way they describe them, which matters in a category with a very wide range and a lot of near-identical items.',
+    screenshots: [
+      {
+        src: '/clients/screens/gpsuk.webp',
+        alt: 'GPSUK storefront home page on Commerceflo, with a product hero, a volume pricing card and a Get a Quote button',
+        caption: 'The GPSUK storefront home page, live at app.commerceflo.ai/store/gpsuk. Captured 13 November 2026.',
+        device: 'desktop',
+      },
+      {
+        src: '/clients/screens/gpsuk-product.webp',
+        alt: 'GPSUK product page for an RPET tote bag with colour swatches, decoration methods and a volume pricing table in pounds excluding VAT',
+        caption: 'A product page with price breaks by order quantity.',
+        device: 'desktop',
+      },
+    ],
     results:
       'GPSUK has a Commerceflo trade storefront with account-based pricing and quote-to-order workflows. FactoryJet also provides ongoing SEO and AI search work. This case describes the delivered commerce functionality without attributing a measured revenue or traffic uplift.',
     imageUrl: '/images/case-studies/gpsuk-promotional-products-hero.jpg',
@@ -1243,7 +1257,7 @@ export const CLIENT_ENGAGEMENTS = [
   { client: 'Sow Easy', status: 'Build in progress', scope: 'Website development, ongoing SEO and AI search', caseSlug: 'sow-easy-distributor-portal' },
   { client: 'GPSUK', status: 'Website built', scope: 'B2B commerce, ongoing SEO and AI search', url: 'https://app.commerceflo.ai/store/gpsuk', caseSlug: 'gpsuk-promotional-products' },
   { client: 'Holistico', status: 'Build in progress', scope: 'Website development, ongoing SEO and AI search' },
-  { client: 'DTF Virginia', status: 'Build in progress', scope: 'Website development, ongoing SEO and AI search', url: 'https://dtfvirginia.com/' },
+  { client: 'DTF Virginia', status: 'Store launched', scope: 'Website development, ongoing SEO and AI search', url: 'https://dtfvirginia.com/' },
   { client: 'Commerceflo by FactoryJet', status: 'Website built', scope: 'Website, ongoing SEO and AI search', url: 'https://commerceflo.ai/' },
   { client: 'Alertmi Technologies', status: 'Website built', scope: 'Website, ongoing SEO and AI search', url: 'https://alertmi.com/' },
   { client: 'Akanksha Barot', status: 'Website built', scope: 'Personal-profile website, ongoing SEO and AI search', url: 'https://akankshabarot.com/' },

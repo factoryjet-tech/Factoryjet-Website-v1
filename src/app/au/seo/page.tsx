@@ -415,7 +415,7 @@ export default function AuSeoPage() {
               </div>
               <VisualSlot page={PAGE_KEY} slot="facts" kind="photo" ratio="3:2" className="factphoto"
                 subject="A Sydney business owner and an SEO consultant reviewing a rising search performance chart on a laptop">
-                <img src="/images/au/seo/seo-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="A Sydney business owner and a FactoryJet SEO consultant sit side by side reviewing a rising search performance chart on a laptop, with printed charts on the table" />
+                <img src="/images/au/seo/seo-hero.webp" width={1400} height={933} loading="lazy" decoding="async" alt="A Sydney business owner and a woman sit side by side reviewing a rising search performance chart on a laptop, with printed charts on the table" />
               </VisualSlot>
             </div>
           </div>
@@ -505,7 +505,7 @@ export default function AuSeoPage() {
               <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="An engineer's two monitors: a crawl map of a website's pages as connected circles, and a page load waterfall"
                 caption="The left screen is a crawl map: every page on the site and the links between them. Pages floating on their own, with nothing linking in, are the first thing we look for. The right screen shows what loads, in what order, and what slows the page down.">
-                <img src="/images/au/seo/seo-technical.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a FactoryJet engineer in a Melbourne studio, one monitor showing a map of a website's pages as connected circles and the other a page load waterfall of coloured bars" />
+                <img src="/images/au/seo/seo-technical.webp" width={1200} height={800} loading="lazy" decoding="async" alt="Over the shoulder of a woman in a Melbourne studio, one monitor showing a map of a website's pages as connected circles and the other a page load waterfall of coloured bars" />
               </VisualSlot>
             </div>
             <div className="platlist span-all" role="list">
@@ -650,7 +650,7 @@ export default function AuSeoPage() {
               <VisualSlot page={PAGE_KEY} slot="facts-4" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="An SEO strategist drawing three clusters of search terms on a whiteboard for a business owner and her coordinator"
                 caption="Before a quote, we group your search terms into clusters, one page per cluster, and check the real volume behind each one. Some clusters turn out to be empty. We say so.">
-                <img src="/images/au/seo/seo-audit.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A FactoryJet SEO strategist in a Perth meeting room draws three clusters of search terms on a whiteboard while a business owner and her marketing coordinator watch" />
+                <img src="/images/au/seo/seo-audit.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A man in a Perth meeting room draws three clusters of search terms on a whiteboard while a business owner and her marketing coordinator watch" />
               </VisualSlot>
             </div>
             <div className="span-all">
@@ -871,7 +871,7 @@ export default function AuSeoPage() {
               <VisualSlot page={PAGE_KEY} slot="process" kind="photo" ratio="3:2" captionClassName="figcap"
                 subject="An accountant marking up printed drafts of her service pages while a content writer listens"
                 caption="Stage five in practice: we write the draft, the person who knows the work corrects it. That review is what makes a page accurate enough for Google and AI assistants to trust.">
-                <img src="/images/au/seo/seo-content.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Canberra accountant marks up printed drafts of her new service pages with a pen while a FactoryJet content writer sits beside her and listens" />
+                <img src="/images/au/seo/seo-content.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Canberra accountant marks up printed drafts of her new service pages with a pen while a young man sits beside her and listens" />
               </VisualSlot>
             </div>
             <div className="timeline timeline-4 timeline-3">

@@ -245,7 +245,7 @@ export const metadata: Metadata = {
     siteName: 'FactoryJet',
     locale: 'en_GB',
     type: 'website',
-    images: [{ url: '/images/uk/ecommerce-consultant/ecommerce-consultant-og.webp', width: 1200, height: 630, alt: 'Ecommerce consultant UK: a FactoryJet consultant reviewing an online store with a UK brand owner' }],
+    images: [{ url: '/images/uk/ecommerce-consultant/ecommerce-consultant-og.webp', width: 1200, height: 630, alt: 'Ecommerce consultant UK: a man and a woman reviewing an online store product grid on a laptop' }],
   },
   robots: { index: true, follow: true },
 };

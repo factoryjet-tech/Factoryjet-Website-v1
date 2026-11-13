@@ -791,7 +791,7 @@ export default function WebsiteMaintenanceAUPage() {
               <VisualSlot page={PAGE_KEY} slot="facts-2" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
                 subject="A physiotherapy clinic owner passing a folder of website logins and notes to a FactoryJet web engineer at the start of a site takeover"
                 caption="A takeover starts with a handover of whatever you have: logins, invoices from your host, emails from the old developer. We turn it into a clean, documented list.">
-                <img src="/images/au/website-maintenance/website-maintenance-takeover.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Brisbane physiotherapy clinic owner passes a folder of website logins and notes across the table to a FactoryJet web engineer at the start of a site takeover" />
+                <img src="/images/au/website-maintenance/website-maintenance-takeover.webp" width={1200} height={800} loading="lazy" decoding="async" alt="A Brisbane physiotherapy clinic owner passes a folder of website logins and notes across the table to a woman in a blue shirt" />
               </VisualSlot>
             </div>
           </div>

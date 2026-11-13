@@ -587,7 +587,7 @@ export default function DetroitWebDesignPage() {
               <div className="rv-curved-frame-2">
                 <Image
                   src="/images/us/detroit-web-design/detroit-process-review.webp"
-                  alt="FactoryJet senior UI UX designers collaborating on custom Detroit web design sprint"
+                  alt="Two people comparing handbag page designs on a tablet and a laptop at a standing desk"
                   width={640}
                   height={640}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
