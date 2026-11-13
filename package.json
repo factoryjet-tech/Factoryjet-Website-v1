@@ -8,7 +8,7 @@
     "dev": "next dev",
     "validate": "node scripts/validate-build.mjs",
     "test:geo": "node scripts/test-geo-redirect.mjs && node scripts/test-gone-redirects.mjs",
-    "prebuild": "node scripts/ensure-git-history.mjs && node scripts/check-tracked-imports.mjs && node scripts/check-watermarks.mjs && node scripts/validate-build.mjs && node scripts/test-geo-redirect.mjs && node scripts/test-gone-redirects.mjs",
+    "prebuild": "node scripts/ensure-git-history.mjs && node scripts/sync-client-logos.mjs && node scripts/check-tracked-imports.mjs && node scripts/check-watermarks.mjs && node scripts/validate-build.mjs && node scripts/test-geo-redirect.mjs && node scripts/test-gone-redirects.mjs",
     "build": "next build --webpack",
     "postbuild": "node scripts/set-html-lang.mjs",
     "start": "next start",

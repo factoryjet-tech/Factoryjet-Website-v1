@@ -141,7 +141,7 @@ export const UK_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
   },
 ];
 
-/** Same four headings and six links per column as US_FOOTER_FEATURED_COLUMNS. */
+/** Same five headings as US_FOOTER_FEATURED_COLUMNS. */
 export const UK_FOOTER_FEATURED_COLUMNS: ReadonlyArray<SiteFooterColumn> = pickFooterLinks(UK_FOOTER_COLUMNS, [
   ['Commerce', [
     '/uk/ecommerce-development', '/uk/ecommerce-consultant', '/uk/b2b-ecommerce',
@@ -155,5 +155,7 @@ export const UK_FOOTER_FEATURED_COLUMNS: ReadonlyArray<SiteFooterColumn> = pickF
     '/uk/web-design', '/uk/website-maintenance', '/uk/seo',
     '/uk/ecommerce-seo', '/uk/ai-seo', '/uk/local-seo',
   ]],
-  ['Company', ['/about', '/case-studies', '/portfolio', '/blog', '/faq', '/contact']],
+  // Work and Insights mirror the header menus (Wave 2, 13 Nov 2026).
+  ['Work', ['/case-studies', '/portfolio', '/commerceflo', '/about', '/contact']],
+  ['Insights', ['/blog', '/ai-citation-study', '/ai-visibility-checker', '/glossary', '/faq']],
 ]);
