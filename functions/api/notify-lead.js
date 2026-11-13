@@ -86,6 +86,11 @@ async function writeLeadToFirestore(env, lead) {
       // Two-letter country of the visitor's network, from Cloudflare. A country
       // code only: the IP address itself is never stored.
       ipCountry:  s(lead.ipCountry),
+      // Qualifying answers (cleanQualifierFields). Written only when the form
+      // sent them, so a lead from an older form is stored exactly as before.
+      ...(lead.intent ? { intent: s(lead.intent) } : {}),
+      ...(lead.website ? { website: s(lead.website), websiteValid: s(websiteHref(lead.website) ? 'yes' : 'no') } : {}),
+      ...(lead.noWebsite ? { noWebsite: s('yes') } : {}),
       status:     s('new'),
       capturedBy: s('server'),
       createdAt:  { timestampValue: new Date().toISOString() },
@@ -196,7 +201,7 @@ async function writeLeadToERPNext(env, lead) {
   const leadType = LEAD_TYPES.includes(lead.leadType) ? lead.leadType : leadTypeOf(lead);
   // "Lead type" is the first line on purpose: the note is shared by the new-Lead
   // path and the returning-lead comment, so both open with the label.
-  const noteText = `Lead type: ${leadType}\nService: ${category}${lead.serviceInferred === 'yes' ? ' (guessed from the page, the form had no service picker)' : ''}\n${lead.service ? `Service picked on form: ${serviceLabel(lead.service)}\n` : ''}Came from: ${channelLabel(lead)}\n${lead.aiAssistant ? `AI assistant: yes (${lead.aiAssistant})\n` : ''}${attributionLines(lead)}Form: ${lead.source || 'Website'}\nForm page: ${isSafeSitePath(lead.page) ? `https://factoryjet.com${lead.page}` : (lead.page || 'N/A')}\nWebsite region: ${lead.region ? String(lead.region).toUpperCase() : 'Not specified'}\nVisitor country (from network): ${lead.ipCountry || 'unknown'}\n${lead.turnstileVerdict === 'failed' ? `Bot check: failed (${lead.turnstileDetail || 'no reason given'}). Usually an expired token, not a bot.\n` : ''}Message: ${lead.message || 'N/A'}\nFirebase Doc ID: ${lead.docId || 'N/A'}`;
+  const noteText = `Lead type: ${leadType}\nService: ${category}${lead.serviceInferred === 'yes' ? ' (guessed from the page, the form had no service picker)' : ''}\n${lead.service ? `Service picked on form: ${serviceLabel(lead.service)}\n` : ''}${qualifierLines(lead)}Came from: ${channelLabel(lead)}\n${lead.aiAssistant ? `AI assistant: yes (${lead.aiAssistant})\n` : ''}${attributionLines(lead)}Form: ${lead.source || 'Website'}\nForm page: ${isSafeSitePath(lead.page) ? `https://factoryjet.com${lead.page}` : (lead.page || 'N/A')}\nWebsite region: ${lead.region ? String(lead.region).toUpperCase() : 'Not specified'}\nVisitor country (from network): ${lead.ipCountry || 'unknown'}\n${lead.turnstileVerdict === 'failed' ? `Bot check: failed (${lead.turnstileDetail || 'no reason given'}). Usually an expired token, not a bot.\n` : ''}Message: ${lead.message || 'N/A'}\nFirebase Doc ID: ${lead.docId || 'N/A'}`;
   // The phone prefix wins because the visitor typed it. The network country is
   // the fallback for the many leads that leave no phone.
   const country = countryFromPhone(lead.phone) || countryFromNetwork(lead.ipCountry);
@@ -340,9 +345,11 @@ async function writeLeadToERPNext(env, lead) {
     }
   }
 
-  // 3. Create high-priority follow-up ToDo task assigned to bhavesh@factoryjet.com
+  // 3. Create high-priority follow-up ToDo task assigned to bhavesh@factoryjet.com.
+  // Not for a self-declared vendor: the Lead is still created and labelled
+  // "Vendor pitch", but it is not a sales follow-up (founder, 13 Nov 2026).
   let todoId = null;
-  if (leadId) {
+  if (leadId && lead.intent !== 'vendor') {
     try {
       const serviceName = category;
       const todoPayload = {
@@ -535,6 +542,61 @@ export function clipLeadFields(body) {
   return out;
 }
 
+/*
+ * Qualifying answers (founder decision, 13 Nov 2026). 12 of 21 form leads from
+ * 26 Oct to 13 Nov were vendors pitching FactoryJet, so the hero, modal and
+ * inline forms now ask "What brings you here?" and for a company website.
+ * A form that does not send these (calculators, exit intent, old cached
+ * bundles) gets empty values and behaves exactly as before.
+ *   intent   'hire' | 'vendor' | ''  (anything else becomes '')
+ *   website  what the visitor typed, trimmed, markup stripped, 200 characters
+ *   noWebsite  true when the visitor ticked "No website yet"
+ * Never rejected for these: required is enforced in the browser only.
+ */
+export const LEAD_INTENTS = ['hire', 'vendor'];
+export const LEAD_INTENT_LABELS = { hire: 'I want to hire FactoryJet', vendor: 'I offer a product or service' };
+const WEBSITE_SHAPE = /^(https?:\/\/)?[^\s/@]+\.[^\s/@]{2,}(\/\S*)?$/i;
+
+/** The website as an https link when it reads like a real address, else ''. */
+export function websiteHref(website) {
+  const w = String(website || '').trim();
+  if (!WEBSITE_SHAPE.test(w)) return '';
+  try {
+    const u = new URL(/^https?:\/\//i.test(w) ? w : `https://${w}`);
+    return (u.protocol === 'https:' || u.protocol === 'http:') && u.hostname.includes('.') ? u.href : '';
+  } catch {
+    return '';
+  }
+}
+
+export function cleanQualifierFields(body) {
+  const b = body || {};
+  const intent = LEAD_INTENTS.includes(b.intent) ? b.intent : '';
+  const noWebsite = b.noWebsite === true || b.noWebsite === 'yes';
+  const website = noWebsite ? '' : clipText(b.website, 200).replace(/[<>"'`\s]/g, '');
+  return { intent, website, noWebsite };
+}
+
+/**
+ * Inbox for self-declared vendors ("I offer a product or service"). Set
+ * VENDOR_NOTIFY_TO in Cloudflare Pages to change it; a value that is not a
+ * plain email address falls back to the default.
+ */
+export const VENDOR_NOTIFY_TO_DEFAULT = 'bhavesh.b@factoryjet.com';
+export function vendorNotifyTo(env) {
+  const v = env && typeof env.VENDOR_NOTIFY_TO === 'string' ? env.VENDOR_NOTIFY_TO.trim() : '';
+  return isStrictEmail(v) ? v : VENDOR_NOTIFY_TO_DEFAULT;
+}
+
+/** CRM note lines for the qualifying answers. Empty when the form sent none. */
+function qualifierLines(lead) {
+  let out = '';
+  if (lead.intent) out += `What brings you here: ${LEAD_INTENT_LABELS[lead.intent]}\n`;
+  if (lead.noWebsite) out += 'Company website: no website yet\n';
+  else if (lead.website) out += `Company website: ${lead.website}\n`;
+  return out;
+}
+
 /**
  * The CRM health check is open only to a caller holding HEALTH_CHECK_KEY, sent
  * as the X-Health-Key header or ?key=. Both sides are hashed first so the
@@ -612,8 +674,11 @@ function attributionLines(lead) {
  * value only becomes a link when it passes isStrictEmail or isSafeSitePath, so a
  * lead cannot plant its own buttons or links in the alert.
  */
-export function buildHtml({ name, email, phone, company, service, serviceCategory, serviceInferred, message, region, page, turnstileVerdict, turnstileDetail, trapFilled, erpLeadId, erpReturning, attribution }) {
+export function buildHtml({ name, email, phone, company, service, serviceCategory, serviceInferred, message, region, page, turnstileVerdict, turnstileDetail, trapFilled, erpLeadId, erpReturning, attribution, intent, website, noWebsite }) {
   const a = attribution || {};
+  // The visitor's site becomes a link only when websiteHref accepts it (http or
+  // https, a dotted host). Anything else is shown as escaped text.
+  const siteHref = websiteHref(website);
   const mailOk = isStrictEmail(email);
   const firstName = name ? String(name).trim().split(/\s+/)[0] : '';
   const sitePath = (p, style) => (isSafeSitePath(p)
@@ -656,10 +721,12 @@ export function buildHtml({ name, email, phone, company, service, serviceCategor
                 ${row('Email',   !email ? '—' : mailOk ? `<a href="mailto:${escapeHtml(email)}" style="color:#F05A28;text-decoration:none;">${escapeHtml(email)}</a>` : escapeHtml(email))}
                 ${row('Phone',   escapeHtml(phone   || '—'))}
                 ${row('Company', escapeHtml(company || '—'))}
+                ${intent ? row('Here to', escapeHtml(LEAD_INTENT_LABELS[intent] || intent)) : ''}
+                ${noWebsite ? row('Website', 'No website yet') : website ? row('Website', siteHref ? `<a href="${escapeHtml(siteHref)}" style="color:#F05A28;text-decoration:none;">${escapeHtml(website)}</a>` : escapeHtml(website)) : ''}
                 ${row('Service', `<span style="display:inline-block;background:#FFF1EB;color:#B23E13;padding:3px 10px;border-radius:20px;font-weight:600;font-size:13px;">${escapeHtml(serviceCategory || serviceLabel(service))}</span>${serviceInferred === 'yes' ? ' <span style="color:#6B7280;font-size:12px;">(guessed from the page)</span>' : (service ? ` <span style="color:#6B7280;font-size:12px;">${escapeHtml(serviceLabel(service))}</span>` : '')}`)}
                 ${row('Region',  escapeHtml(String(region || '').toUpperCase() || '—'))}
                 ${message ? row('Message', `<span style="color:#374151;">${escapeHtml(message).replace(/\r?\n/g, '<br>')}</span>`) : ''}
-                ${erpLeadId ? row('CRM Lead', `<a href="https://erp.factoryjet.com/app/lead/${encodeURIComponent(erpLeadId)}" style="color:#F05A28;font-weight:600;text-decoration:none;">${escapeHtml(erpLeadId)} ${erpReturning ? '(returning lead, new inquiry added)' : '(Assigned to Bhavesh)'}</a>`) : ''}
+                ${erpLeadId ? row('CRM Lead', `<a href="https://erp.factoryjet.com/app/lead/${encodeURIComponent(erpLeadId)}" style="color:#F05A28;font-weight:600;text-decoration:none;">${escapeHtml(erpLeadId)} ${erpReturning ? '(returning lead, new inquiry added)' : intent === 'vendor' ? '(vendor, no follow-up task)' : '(Assigned to Bhavesh)'}</a>`) : ''}
                 ${row('Came from', `<strong>${escapeHtml(channelLabel(a))}</strong>${a.aiAssistant ? ' <span style="color:#B23E13;font-size:12px;font-weight:600;">AI assistant</span>' : ''}`)}
                 ${a.landingPage ? row('Landing page', sitePath(a.landingPage, 'color:#6B7280;font-size:12px;')) : ''}
                 ${a.utmCampaign ? row('Campaign', escapeHtml(a.utmCampaign)) : ''}
@@ -771,10 +838,12 @@ export function isVendorPitch({ email, company, message }) {
  * disagree. First match wins:
  *   Test          name starts with "FactoryJet Test Lead" (our own checks)
  *   Likely spam   hidden trap field filled
- *   Vendor pitch  reads like someone selling to us (isVendorPitch)
+ *   Vendor pitch  picked "I offer a product or service" (intent 'vendor'),
+ *                 or reads like someone selling to us (isVendorPitch)
  *   Buyer         everything else
- * It labels and never blocks: every type is saved, emailed and sent to the CRM
- * the same way. "Buyer" means nothing says otherwise. It does not mean qualified.
+ * It labels and never blocks: every type is saved, emailed and sent to the CRM.
+ * One exception (13 Nov 2026): a self-declared vendor (intent 'vendor') is
+ * emailed to the vendor inbox (vendorNotifyTo) and gets no High-priority ToDo. "Buyer" means nothing says otherwise. It does not mean qualified.
  *
  * A failed Turnstile check no longer makes a lead "Likely spam". Checked on
  * 2026-10-28: all 9 leads ever saved with turnstileVerdict 'failed' (16 to 26 Oct)
@@ -784,9 +853,11 @@ export function isVendorPitch({ email, company, message }) {
  * siteverify's reason are still saved and shown in the note and the email.
  */
 export const LEAD_TYPES = ['Buyer', 'Vendor pitch', 'Likely spam', 'Test'];
-export function leadTypeOf({ name, email, company, message, trapFilled, turnstileVerdict }) {
+export function leadTypeOf({ name, email, company, message, trapFilled, turnstileVerdict, intent }) {
   if (/^\s*factoryjet test lead/i.test(String(name || ''))) return 'Test';
   if (trapFilled) return 'Likely spam';
+  // Self-declared on the form ("I offer a product or service"), 13 Nov 2026.
+  if (intent === 'vendor') return 'Vendor pitch';
   if (isVendorPitch({ email, company, message })) return 'Vendor pitch';
   return 'Buyer';
 }
@@ -902,6 +973,9 @@ export const ENRICH_TIMELINES = ['As soon as possible', 'Within 3 months', '3 to
 export const ENRICH_COMPANY_SIZES = ['1-10', '11-50', '51-200', '201-500', '501-1000', '1000+'];
 export const ENRICH_BUDGETS = ['Under $10,000', '$10,000 to $25,000', '$25,000 to $50,000', '$50,000 to $100,000', 'Over $100,000', 'Not sure yet'];
 export const ENRICH_ROLES = ['Founder or owner', 'C-level or VP', 'Director or head of a team', 'Manager', 'Engineer or IT', 'Other'];
+// "How did you find us?" (founder, 13 Nov 2026). Asked in step 2, not step 1,
+// so the hero form stays short on a phone.
+export const ENRICH_FOUND_VIA = ['ChatGPT or another AI assistant', 'Google search', 'LinkedIn', 'Referral', 'Clutch', 'Other'];
 export const MAX_BRIEF_BYTES = 5 * 1024 * 1024;
 
 export function cleanEnrichInput(body) {
@@ -918,6 +992,7 @@ export function cleanEnrichInput(body) {
     companySize: pick(b.companySize, ENRICH_COMPANY_SIZES),
     budget: pick(b.budget, ENRICH_BUDGETS),
     role: pick(b.role, ENRICH_ROLES),
+    foundVia: pick(b.foundVia, ENRICH_FOUND_VIA),
   };
 }
 
@@ -968,7 +1043,7 @@ export function buildEnrichFirestoreRequest(env, docId, fields, source, nowIso =
   const apiKey  = (env && (env.FIREBASE_API_KEY || env.NEXT_PUBLIC_FIREBASE_API_KEY)) || FB_API_KEY;
   const s = (v) => ({ stringValue: v == null ? '' : String(v) });
   const out = { leadDocId: s(docId) };
-  for (const k of ['phone', 'company', 'message', 'projectType', 'systems', 'timeline', 'companySize', 'budget', 'role', 'briefName']) if (fields[k]) out[k] = s(fields[k]);
+  for (const k of ['phone', 'company', 'message', 'projectType', 'systems', 'timeline', 'companySize', 'budget', 'role', 'foundVia', 'briefName']) if (fields[k]) out[k] = s(fields[k]);
   // Present only when these details raise a flag (see handleEnrich). The lead doc
   // keeps the label it got at step 1 and cannot be updated.
   if (leadType && leadType !== 'Buyer') out.leadType = s(leadType);
@@ -1045,6 +1120,7 @@ export async function enrichLeadInERPNext(env, lead, sleep = (ms) => new Promise
     lead.companySize && `Company size: ${lead.companySize} employees`,
     lead.budget && `Budget: ${lead.budget}`,
     lead.role && `Role: ${lead.role}`,
+    lead.foundVia && `Found us via: ${lead.foundVia}`,
     lead.brief && `Brief attached: ${lead.brief.name}`,
     lead.phone && `Phone: ${lead.phone}`,
     lead.company && `Company: ${lead.company}`,
@@ -1127,7 +1203,7 @@ export async function enrichLeadInERPNext(env, lead, sleep = (ms) => new Promise
   return { saved: commented, leadId, returning };
 }
 
-function buildEnrichHtml({ name, email, phone, company, message, projectType, systems, timeline, companySize, budget, role, briefName, erpLeadId, returning }) {
+function buildEnrichHtml({ name, email, phone, company, message, projectType, systems, timeline, companySize, budget, role, foundVia, briefName, erpLeadId, returning }) {
   const erpLink = erpLeadId
     ? `<a href="${DEFAULT_ERPNEXT_URL}/app/lead/${encodeURIComponent(erpLeadId)}">${escapeHtml(erpLeadId)}</a>${returning ? ' (returning lead)' : ''}`
     : 'Updating in the background';
@@ -1146,6 +1222,7 @@ function buildEnrichHtml({ name, email, phone, company, message, projectType, sy
       ${row('Company size', escapeHtml(companySize ? `${companySize} employees` : 'Not given'))}
       ${row('Budget', escapeHtml(budget || 'Not given'))}
       ${row('Role', escapeHtml(role || 'Not given'))}
+      ${row('Found us via', escapeHtml(foundVia || 'Not given'))}
       ${row('Brief', briefName ? `${escapeHtml(briefName)} (attached)` : 'None')}
       ${row('Phone', escapeHtml(phone || 'Not given'))}
       ${row('Company', escapeHtml(company || 'Not given'))}
@@ -1280,6 +1357,9 @@ export async function onRequestPost(context) {
   // Trimmed and capped once here (clipLeadFields), before Firestore, ERPNext or
   // the email sees them, so one request cannot write a megabyte of text.
   const { docId, collection, name, email, phone, company, service, message, region, source, page } = clipLeadFields(body);
+  // "What brings you here?" and the company website. Empty for forms that do not ask.
+  const { intent, website, noWebsite } = cleanQualifierFields(body);
+  const qualifiers = { intent, website, noWebsite };
 
   // Where the visitor came from (src/utils/leadAttribution.ts). Untrusted input:
   // trimmed here, escaped in the email, and paths must start with "/".
@@ -1325,7 +1405,7 @@ export async function onRequestPost(context) {
   const trapFilled = Boolean(body.honeypot && String(body.honeypot).trim());
   // One label for this lead (Buyer, Vendor pitch, Likely spam or Test), worked out
   // here once and handed to Firestore, the CRM and the email subject.
-  const leadType = leadTypeOf({ name, email, company, message, trapFilled, turnstileVerdict });
+  const leadType = leadTypeOf({ name, email, company, message, trapFilled, turnstileVerdict, intent });
   // Country of the visitor's network, per Cloudflare. A two-letter code only.
   const ipCountry = networkCountryCode(request);
 
@@ -1337,6 +1417,7 @@ export async function onRequestPost(context) {
     turnstileToken: body.turnstileToken, turnstileVerdict, turnstileDetail,
     honeypot: trapFilled ? 'filled' : '',
     leadType, ipCountry,
+    ...qualifiers,
   });
 
   // ── (1b) Push lead to ERPNext CRM without ever blocking the visitor ────────
@@ -1347,6 +1428,7 @@ export async function onRequestPost(context) {
     name, email, phone, company, service, serviceCategory, serviceInferred, message, region, source, page,
     ...attribution,
     leadType, ipCountry, turnstileVerdict, turnstileDetail,
+    ...qualifiers,
   }).then((result) => {
     if (!result.saved) console.error('ERPNext lead sync did not save:', result.error || result.status || 'unknown');
     return result;
@@ -1383,11 +1465,13 @@ export async function onRequestPost(context) {
         headers: { Authorization: `Bearer ${apiKey}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({
           from: NOTIFY_FROM,
-          to: [NOTIFY_TO],
+          // A self-declared vendor goes to the vendor inbox, not the sales inbox.
+          to: [intent === 'vendor' ? vendorNotifyTo(env) : NOTIFY_TO],
           subject,
           html: buildHtml({
             name, email, phone, company, service, serviceCategory, serviceInferred, message, region, page,
             turnstileVerdict, turnstileDetail, trapFilled, erpLeadId: erpResult.leadId, erpReturning: Boolean(erpResult.returning), attribution,
+            ...qualifiers,
           }),
           ...(isStrictEmail(email) ? { reply_to: email } : {}),
         }),

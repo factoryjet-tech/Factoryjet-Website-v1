@@ -1,6 +1,6 @@
 /**
  * enrichLead — sends the step-2 modal details (project type, systems, timeline,
- * company size, budget, role, brief file, message, company, phone) to
+ * company size, budget, role, how they found us, brief file, message, company, phone) to
  * /api/notify-lead in `enrich` mode so they attach to the lead step 1 created.
  * Bounded like submitLead: 8s, then one 6s retry. Never throws.
  */
@@ -18,6 +18,8 @@ export interface EnrichInput {
   timeline: string;
   budget: string;
   role: string;
+  /** "How did you find us?", one of FOUND_VIA in LeadEnrichModal, or ''. */
+  foundVia?: string;
   /** base64 file from the modal, or null */
   brief: { name: string; data: string } | null;
   source: string;

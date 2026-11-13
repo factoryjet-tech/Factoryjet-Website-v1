@@ -3,7 +3,7 @@
 /**
  * LeadEnrichModal — step 2 of the inline lead forms. Opens after name + email are
  * saved and asks what the project is (type, systems, timeline), a free-text
- * brief, an optional brief file, company, budget, role and phone. Company size was
+ * brief, an optional brief file, company, budget, role, how they found us and phone. Company size was
  * dropped on 2026-10-29 (Bhavesh: keep the form short); the server still accepts it.
  * Every field is optional; the lead already exists. The option lists must match ENRICH_* in
  * functions/api/notify-lead.js (tests/notify-lead-enrich.test.mjs checks). Spec:
@@ -19,6 +19,8 @@ export const SYSTEMS = ['Shopify', 'WooCommerce', 'BigCommerce', 'Magento', 'Qui
 export const TIMELINES = ['As soon as possible', 'Within 3 months', '3 to 6 months', 'Just researching'];
 export const BUDGETS = ['Under $10,000', '$10,000 to $25,000', '$25,000 to $50,000', '$50,000 to $100,000', 'Over $100,000', 'Not sure yet'];
 export const ROLES = ['Founder or owner', 'C-level or VP', 'Director or head of a team', 'Manager', 'Engineer or IT', 'Other'];
+/** "How did you find us?" (founder, 13 Nov 2026). Here, not in step 1, so the hero stays short on a phone. */
+export const FOUND_VIA = ['ChatGPT or another AI assistant', 'Google search', 'LinkedIn', 'Referral', 'Clutch', 'Other'];
 
 /** Same 5 MB limit as the server (MAX_BRIEF_BYTES). */
 export const MAX_BRIEF_BYTES = 5 * 1024 * 1024;
@@ -38,6 +40,7 @@ export interface EnrichFields {
   timeline: string;
   budget: string;
   role: string;
+  foundVia: string;
   brief: BriefFile | null;
   honeypot: string;
 }
@@ -69,6 +72,7 @@ export default function LeadEnrichModal({ firstName, onSubmit, onSkip }: LeadEnr
   const [timeline, setTimeline] = useState('');
   const [budget, setBudget] = useState('');
   const [role, setRole] = useState('');
+  const [foundVia, setFoundVia] = useState('');
   const [brief, setBrief] = useState<BriefFile | null>(null);
   const [briefError, setBriefError] = useState('');
   const firstChoiceRef = useRef<HTMLInputElement>(null);
@@ -112,7 +116,7 @@ export default function LeadEnrichModal({ firstName, onSubmit, onSkip }: LeadEnr
     if (sendingRef.current) return;
     sendingRef.current = true;
     setSending(true);
-    await onSubmit({ phone, company, message, projectType, systems, timeline, budget, role, brief, honeypot });
+    await onSubmit({ phone, company, message, projectType, systems, timeline, budget, role, foundVia, brief, honeypot });
   };
 
   const toggleSystem = (name: string) =>
@@ -210,6 +214,13 @@ export default function LeadEnrichModal({ firstName, onSubmit, onSkip }: LeadEnr
             <select className="lem-input lem-select" value={role} onChange={(e) => setRole(e.target.value)}>
               <option value="">Choose one</option>
               {ROLES.map((r) => <option key={r} value={r}>{r}</option>)}
+            </select>
+          </label>
+          <label className="lem-field">
+            <span className="lem-label">How did you find us?</span>
+            <select className="lem-input lem-select" value={foundVia} onChange={(e) => setFoundVia(e.target.value)}>
+              <option value="">Choose one</option>
+              {FOUND_VIA.map((f) => <option key={f} value={f}>{f}</option>)}
             </select>
           </label>
           <label className="lem-field">

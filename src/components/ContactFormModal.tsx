@@ -13,6 +13,12 @@
  *     actually needed) and the token is sent if present but never gates submit.
  *   - Honeypot field (`fj_hp_x`, was `company_website` until 2026-10-26) for spam protection.
  *   - All GA4/GTM events preserved (form_start, form_step, form_submit/success/error).
+ *
+ * 13 Nov 2026 (founder): step 2 opens with "What brings you here?" and asks for a
+ * company website (or "No website yet"); both required. A vendor ("I offer a
+ * product or service") is saved and emailed to the vendor inbox through
+ * keepVendorLead and sees an inline confirmation: no form_success, no /thank-you,
+ * so no conversion is counted.
  */
 
 import React, { useState, useEffect, useRef, useId } from 'react';
@@ -29,8 +35,8 @@ import {
   Sparkles,
 } from 'lucide-react';
 import { useContactModal } from '../context/ContactModalContext';
-import { markLeadSubmitted, submitLead } from '../utils/submitLead';
-import { keepTrappedLead } from '../utils/trappedLead';
+import { markLeadSubmitted, submitLead, isWebsiteLike, LEAD_INTENT_OPTIONS, type LeadIntent } from '../utils/submitLead';
+import { keepTrappedLead, keepVendorLead, VENDOR_CONFIRMATION } from '../utils/trappedLead';
 import { useTurnstile } from './lead/useTurnstile';
 import { containDialogFocus } from '../utils/dialogFocus';
 import {
@@ -54,6 +60,9 @@ interface FormData {
   company: string;
   service: ServiceType | '';
   message: string;
+  intent: LeadIntent | '';
+  website: string;
+  noWebsite: boolean;
 }
 
 const defaultServices: {
@@ -122,6 +131,7 @@ const ContactFormModal: React.FC = () => {
   const [step, setStep] = useState<1 | 2>(isSeoFlow ? 2 : 1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [vendorSent, setVendorSent] = useState(false);
   const [error, setError] = useState<string | null>(null);
   // Honeypot — real users never fill this; bots often do.
   const [honeypot, setHoneypot] = useState('');
@@ -146,6 +156,7 @@ const ContactFormModal: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '', email: '', phone: '', company: '',
     service: isSeoFlow ? 'seo' : '', message: '',
+    intent: '', website: '', noWebsite: false,
   });
 
   // ── Body scroll lock ──────────────────────────────────────────────────────
@@ -229,9 +240,24 @@ const ContactFormModal: React.FC = () => {
     }, 350);
   };
 
-  // Only Name + Email are required. Everything else is optional.
+  // Only Name + Email are needed to keep a trapped lead (see handleSubmit).
   const canSubmit = (): boolean =>
     formData.name.trim() !== '' && EMAIL_RE.test(formData.email);
+
+  // Required to send: "What brings you here?", name, email, company website.
+  // Returns the message for the first gap, or null.
+  const missingMessage = (): string | null => {
+    if (!formData.intent) return 'Choose what brings you here.';
+    if (!canSubmit()) return 'Please enter your name and a valid email.';
+    if (!formData.noWebsite && formData.website.trim() === '') return 'Add your company website, or tick No website yet.';
+    if (!formData.noWebsite && !isWebsiteLike(formData.website)) return 'That website looks incomplete. Try something like yourcompany.com.';
+    return null;
+  };
+  const qualifiers = () => ({
+    intent: formData.intent || undefined,
+    website: formData.noWebsite ? undefined : formData.website,
+    noWebsite: formData.noWebsite,
+  });
 
   const handleBack = () => {
     trackButtonClick('back', `form_step_${step}`);
@@ -258,20 +284,44 @@ const ContactFormModal: React.FC = () => {
         source: 'contact_form',
         turnstileToken,
         honeypot,
+        ...qualifiers(),
       });
       setIsSubmitting(false);
       if (kept) setIsSuccess(true);
       else setError('Something went wrong. Please try again.');
       return;
     }
-    if (!canSubmit()) {
-      setError('Please enter your name and a valid email.');
+    const missing = missingMessage();
+    if (missing) {
+      setError(missing);
       return;
     }
     setIsSubmitting(true);
     setError(null);
 
-    trackFormSubmit('contact_form', { service: formData.service });
+    if (formData.intent === 'vendor') {
+      // A vendor: saved and emailed to the vendor inbox, never a conversion.
+      const turnstileToken = await turnstile.freshToken();
+      const kept = await keepVendorLead({
+        name:    formData.name,
+        email:   formData.email,
+        phone:   formData.phone,
+        company: formData.company,
+        service: formData.service,
+        message: formData.message,
+        region,
+        source: 'contact_form',
+        turnstileToken,
+        ...qualifiers(),
+        intent: 'vendor',
+      });
+      setIsSubmitting(false);
+      if (kept) setVendorSent(true);
+      else setError('Something went wrong. Please try again.');
+      return;
+    }
+
+    trackFormSubmit('contact_form', { service: formData.service, lead_intent: 'hire' });
 
     try {
       // Durable, server-first capture (edge function write + email) with a
@@ -287,6 +337,7 @@ const ContactFormModal: React.FC = () => {
         region,
         source: 'contact_form',
         turnstileToken,
+        ...qualifiers(),
       });
 
       trackFormSuccess('contact_form');
@@ -313,15 +364,16 @@ const ContactFormModal: React.FC = () => {
 
   const handleClose = () => {
     trackModalClose('contact_form');
-    trackButtonClick('close_modal', isSuccess ? 'success_screen' : `form_step_${step}`);
+    trackButtonClick('close_modal', isSuccess ? 'success_screen' : vendorSent ? 'vendor_screen' : `form_step_${step}`);
     closeModal();
     setTimeout(() => {
       setStep(isSeoFlow ? 2 : 1);
       setIsSuccess(false);
+      setVendorSent(false);
       setError(null);
       setHoneypot('');
       turnstile.remove();
-      setFormData({ name: '', email: '', phone: '', company: '', service: isSeoFlow ? 'seo' : '', message: '' });
+      setFormData({ name: '', email: '', phone: '', company: '', service: isSeoFlow ? 'seo' : '', message: '', intent: '', website: '', noWebsite: false });
     }, 300);
   };
 
@@ -391,8 +443,30 @@ const ContactFormModal: React.FC = () => {
     <div className="space-y-5 animate-fadeIn">
       <div className="text-center mb-6">
         <h3 className="text-xl font-bold text-[#0A0F1C] mb-2">How can we reach you?</h3>
-        <p className="text-slate-500 text-sm">Just your name and email. The rest is optional.</p>
+        <p className="text-slate-500 text-sm">Fields marked * are required. The rest is optional.</p>
       </div>
+      <fieldset className="min-w-0">
+        <legend className="block text-sm font-medium text-slate-700 mb-1.5">What brings you here? *</legend>
+        <div className="grid grid-cols-2 gap-3">
+          {LEAD_INTENT_OPTIONS.map((o) => {
+            const selected = formData.intent === o.value;
+            return (
+              <label
+                key={o.value}
+                className={`flex min-h-[48px] cursor-pointer items-center justify-center rounded-xl border-2 px-3 py-2 text-center text-sm leading-tight transition-all has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-[#B23E13] ${
+                  selected ? 'border-[#F05A28] bg-orange-50 font-semibold text-[#0A0F1C]' : 'border-slate-200 text-slate-700 hover:border-[#F05A28]/50'
+                }`}
+              >
+                <input
+                  type="radio" name={`${formId}-intent`} value={o.value} className="sr-only" checked={selected}
+                  onChange={() => { setFormData((prev) => ({ ...prev, intent: o.value })); setError(null); }}
+                />
+                {o.label}
+              </label>
+            );
+          })}
+        </div>
+      </fieldset>
       <div className="grid grid-cols-2 gap-4">
         <div className="col-span-2 sm:col-span-1">
           <label htmlFor={`${formId}-name`} className="block text-sm font-medium text-slate-700 mb-1.5">Full Name *</label>
@@ -409,6 +483,24 @@ const ContactFormModal: React.FC = () => {
             placeholder="john@company.com" required autoComplete="email"
             className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-base"
           />
+        </div>
+        <div className="col-span-2">
+          <label htmlFor={`${formId}-website`} className="block text-sm font-medium text-slate-700 mb-1.5">Company website *</label>
+          <div className="flex items-center gap-3">
+            <input
+              type="text" inputMode="url" id={`${formId}-website`} name="website" disabled={formData.noWebsite}
+              value={formData.noWebsite ? '' : formData.website} onChange={handleInputChange}
+              placeholder={formData.noWebsite ? 'No website yet' : 'yourcompany.com'} autoComplete="url"
+              className="min-w-0 flex-1 px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-base disabled:bg-slate-50"
+            />
+            <label className="flex shrink-0 cursor-pointer items-center gap-2 text-sm text-slate-600">
+              <input
+                type="checkbox" checked={formData.noWebsite} className="h-4 w-4 accent-[#B23E13]"
+                onChange={(e) => { const checked = e.target.checked; setFormData((prev) => ({ ...prev, noWebsite: checked })); setError(null); }}
+              />
+              No website yet
+            </label>
+          </div>
         </div>
         <div className="col-span-2 sm:col-span-1">
           <label htmlFor={`${formId}-phone`} className="block text-sm font-medium text-slate-700 mb-1.5">
@@ -469,7 +561,7 @@ const ContactFormModal: React.FC = () => {
         </button>
         <button
           type="submit" disabled={isSubmitting}
-          onClick={() => { if (!canSubmit()) trackFormError('contact_form', 'validation_incomplete'); }}
+          onClick={() => { if (missingMessage()) trackFormError('contact_form', 'validation_incomplete'); }}
           className="flex-1 bg-[#B23E13] text-white py-3 rounded-xl font-bold transition-all hover:bg-[#9A3510] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
         >
           {isSubmitting ? (
@@ -480,6 +572,21 @@ const ContactFormModal: React.FC = () => {
         </button>
       </div>
       <p className="text-center text-xs text-slate-500">We reply within 24 hours. No spam, no obligation.</p>
+    </div>
+  );
+
+  // ── Vendor confirmation (no conversion, no /thank-you) ────────────────────
+  const renderVendorSent = () => (
+    <div className="text-center py-6 animate-fadeIn" role="status">
+      <h3 className="text-xl font-bold text-[#0A0F1C] mb-3">Thanks for reaching out</h3>
+      <p className="text-slate-600 text-sm mb-6 max-w-xs mx-auto">{VENDOR_CONFIRMATION}</p>
+      <button
+        type="button"
+        onClick={handleClose}
+        className="w-full bg-slate-100 text-slate-700 py-3 rounded-xl font-bold transition-all hover:bg-slate-200"
+      >
+        Close
+      </button>
     </div>
   );
 
@@ -567,7 +674,7 @@ const ContactFormModal: React.FC = () => {
 
         {/* Body */}
         <form onSubmit={handleSubmit} className="p-6">
-          {isSuccess ? renderSuccess() : (
+          {vendorSent ? renderVendorSent() : isSuccess ? renderSuccess() : (
             <>
               {renderStepIndicator()}
               {step === 1 && renderStep1()}

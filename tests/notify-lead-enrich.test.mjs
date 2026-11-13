@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {
   signEnrichToken, verifyEnrichToken, sanitizeDocId, cleanEnrichInput, buildEnrichFirestoreRequest,
   cleanBrief, ENRICH_PROJECT_TYPES, ENRICH_SYSTEMS, ENRICH_TIMELINES, MAX_BRIEF_BYTES,
-  ENRICH_COMPANY_SIZES, ENRICH_BUDGETS, ENRICH_ROLES, isLargerAccount, enrichSubject,
+  ENRICH_COMPANY_SIZES, ENRICH_BUDGETS, ENRICH_ROLES, ENRICH_FOUND_VIA, isLargerAccount, enrichSubject,
 } from '../functions/api/notify-lead.js';
 
 const KEY = 'test-secret';
@@ -47,7 +47,7 @@ test('cleanEnrichInput trims and clips', () => {
   assert.equal(out.phone, '+1 555 0100');
   assert.equal(out.company.length, 100);
   assert.equal(out.message.length, 10_000);
-  assert.deepEqual(cleanEnrichInput({}), { phone: '', company: '', message: '', projectType: '', systems: '', timeline: '', companySize: '', budget: '', role: '' });
+  assert.deepEqual(cleanEnrichInput({}), { phone: '', company: '', message: '', projectType: '', systems: '', timeline: '', companySize: '', budget: '', role: '', foundVia: '' });
 });
 
 test('Firestore details go to a create-only sibling doc with only filled fields', () => {
@@ -260,6 +260,7 @@ test('the modal offers exactly the server lists', async () => {
   assert.deepEqual(listOf('TIMELINES'), ENRICH_TIMELINES);
   assert.deepEqual(listOf('BUDGETS'), ENRICH_BUDGETS);
   assert.deepEqual(listOf('ROLES'), ENRICH_ROLES);
+  assert.deepEqual(listOf('FOUND_VIA'), ENRICH_FOUND_VIA);
 });
 
 test('company size, budget and role keep only listed values', () => {

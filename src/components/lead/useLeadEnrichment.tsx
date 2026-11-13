@@ -76,7 +76,7 @@ export function useLeadEnrichment() {
     if (!active) return;
     const { ctx } = active;
     const filled = [
-      ...(['phone', 'company', 'message', 'projectType', 'timeline', 'budget', 'role'] as const).filter((k) => f[k].trim() !== ''),
+      ...(['phone', 'company', 'message', 'projectType', 'timeline', 'budget', 'role', 'foundVia'] as const).filter((k) => f[k].trim() !== ''),
       ...(f.systems.length ? ['systems'] : []),
       ...(f.brief ? ['brief'] : []),
     ];
@@ -85,7 +85,8 @@ export function useLeadEnrichment() {
       finish(ctx);
       return;
     }
-    pushToDataLayer({ event: 'lead_enrich_submitted', form_name: ctx.source, fields_filled: filled.join(',') });
+    // found_via is one of the fixed FOUND_VIA options, never free text, so no personal data.
+    pushToDataLayer({ event: 'lead_enrich_submitted', form_name: ctx.source, fields_filled: filled.join(','), ...(f.foundVia ? { found_via: f.foundVia } : {}) });
     await enrichLead({
       docId: ctx.docId,
       enrichToken: ctx.enrichToken || '',
@@ -99,6 +100,7 @@ export function useLeadEnrichment() {
       timeline: f.timeline,
       budget: f.budget,
       role: f.role,
+      foundVia: f.foundVia,
       brief: f.brief,
       source: ctx.source,
     });

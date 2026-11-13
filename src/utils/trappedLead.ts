@@ -27,3 +27,25 @@ export async function keepTrappedLead(input: LeadInput & { honeypot: string }): 
     return false;
   }
 }
+
+/**
+ * keepVendorLead: what a form does when the visitor answers "I offer a product
+ * or service" (founder decision, 13 Nov 2026). Same pattern as a trapped lead:
+ * the lead is saved and emailed (the server sends it to the vendor inbox and
+ * skips the CRM follow-up task), but it is not a sales lead, so no form_success,
+ * no lead_converted (GA4 generate_lead and the Ads conversion), no step-2 modal
+ * and no /thank-you. The form shows a short inline confirmation instead.
+ * form_vendor_submit is what makes vendor submits countable in GA4.
+ */
+export const VENDOR_CONFIRMATION = 'Thanks, we have your details. Offers from vendors go to a separate inbox, and we reply when there is a fit.';
+
+/** Returns true once the server confirms the lead was kept. Never throws. */
+export async function keepVendorLead(input: LeadInput & { intent: 'vendor' }): Promise<boolean> {
+  pushToDataLayer({ event: 'form_vendor_submit', form_name: input.source });
+  try {
+    await submitLead(input);
+    return true;
+  } catch {
+    return false;
+  }
+}

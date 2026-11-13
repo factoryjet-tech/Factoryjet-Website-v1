@@ -78,6 +78,37 @@ export interface LeadInput {
   /** Value of the form's hidden trap field, if it was filled. The server keeps
    *  the lead and marks it likely spam. Send it through keepTrappedLead. */
   honeypot?: string;
+  /** "What brings you here?" (13 Nov 2026). 'vendor' routes the lead to the
+   *  vendor inbox on the server. Omit it and the lead is handled as before. */
+  intent?: LeadIntent;
+  /** Company website as typed. Required in the forms that ask for it. */
+  website?: string;
+  /** The visitor ticked "No website yet". */
+  noWebsite?: boolean;
+}
+
+/** The two answers to "What brings you here?". Must match LEAD_INTENTS in
+ *  functions/api/notify-lead.js. */
+export type LeadIntent = 'hire' | 'vendor';
+export const LEAD_INTENT_OPTIONS: { value: LeadIntent; label: string }[] = [
+  { value: 'hire', label: 'I want to hire FactoryJet' },
+  { value: 'vendor', label: 'I offer a product or service' },
+];
+
+/** Loose check for the company website field: a dotted host, no spaces.
+ *  "acme.com", "www.acme.co.uk" and "https://acme.com/shop" pass; "none" does not. */
+export function isWebsiteLike(value: string): boolean {
+  const v = value.trim();
+  return v.length <= 200 && /^(https?:\/\/)?[^\s/@]+\.[^\s/@]{2,}(\/\S*)?$/i.test(v);
+}
+
+/** Only the qualifying fields the form actually sent, so older forms post the
+ *  same payload as before. */
+function qualifierPayload(input: LeadInput): Record<string, unknown> {
+  return {
+    ...(input.intent ? { intent: input.intent } : {}),
+    ...(input.noWebsite ? { noWebsite: true } : input.website ? { website: input.website.trim() } : {}),
+  };
 }
 
 export interface LeadResult {
@@ -159,6 +190,7 @@ export async function submitLead(input: LeadInput): Promise<LeadResult> {
     ...attribution,
     turnstileToken: input.turnstileToken || '',
     honeypot: input.honeypot || '',
+    ...qualifierPayload(input),
   };
 
   // (1) Authoritative: server-side write + email. Timeout 8s, then one 6s retry.
@@ -193,6 +225,7 @@ export async function submitLead(input: LeadInput): Promise<LeadResult> {
       serviceInferred,
       ...attribution,
       turnstileToken: input.turnstileToken || '',
+      ...qualifierPayload(input),
     });
   } catch {
     /* ignore: never block on the client SDK */
