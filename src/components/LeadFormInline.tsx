@@ -295,7 +295,7 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
                 onChange={(e) => { setWebsite(e.target.value); clearInvalid('website'); }}
                 placeholder={noWebsite ? 'No website yet' : 'yourcompany.com'} autoComplete="url" aria-invalid={invalid === 'website' || undefined}
                 className={`${inputCls} min-w-0 flex-1 disabled:bg-slate-50 ${invalid === 'website' ? '!border-red-600' : ''}`} />
-              <label className="flex shrink-0 cursor-pointer items-center gap-2 text-sm text-slate-600">
+              <label className="flex min-h-[44px] shrink-0 cursor-pointer items-center gap-2 text-sm text-slate-600">
                 <input type="checkbox" checked={noWebsite} className="h-4 w-4 accent-[#B23E13]"
                   onChange={(e) => { setNoWebsite(e.target.checked); clearInvalid('website'); }} />
                 No website yet

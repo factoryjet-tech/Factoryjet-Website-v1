@@ -1256,7 +1256,7 @@ export const CLIENT_ENGAGEMENTS = [
   { client: 'Impulse Branding Solutions', status: 'Website built', scope: 'Website, ongoing SEO and AI search', url: 'https://impulsebranding.in/', caseSlug: 'impulse-branding-migration' },
   { client: 'Sow Easy', status: 'Build in progress', scope: 'Website development, ongoing SEO and AI search', caseSlug: 'sow-easy-distributor-portal' },
   { client: 'GPSUK', status: 'Website built', scope: 'B2B commerce, ongoing SEO and AI search', url: 'https://app.commerceflo.ai/store/gpsuk', caseSlug: 'gpsuk-promotional-products' },
-  { client: 'Holistico', status: 'Build in progress', scope: 'Website development, ongoing SEO and AI search' },
+  { client: 'Consult Holistico', status: 'Build in progress', scope: 'Website development, ongoing SEO and AI search', url: 'https://www.consultholistico.com/' },
   { client: 'DTF Virginia', status: 'Store launched', scope: 'Website development, ongoing SEO and AI search', url: 'https://dtfvirginia.com/' },
   { client: 'Commerceflo by FactoryJet', status: 'Website built', scope: 'Website, ongoing SEO and AI search', url: 'https://commerceflo.ai/' },
   { client: 'Alertmi Technologies', status: 'Website built', scope: 'Website, ongoing SEO and AI search', url: 'https://alertmi.com/' },

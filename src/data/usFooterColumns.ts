@@ -174,6 +174,7 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
     heading: 'Company',
     links: [
       { label: 'About FactoryJet',   href: '/about' },
+      { label: 'How we work',        href: '/how-we-work' },
       { label: 'Case Studies',       href: '/case-studies' },
       { label: 'Portfolio',          href: '/portfolio' },
       { label: 'Blog',               href: '/blog' },

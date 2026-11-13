@@ -232,6 +232,7 @@ export const SIMPLE_MENUS: SimpleMenu[] = [
       ] },
       { heading: 'About us', kind: 'compact', items: [
         { label: 'About FactoryJet', href: '/about' },
+        { label: 'How we work', href: '/how-we-work' },
         { label: 'Contact', href: '/contact' },
       ] },
     ],

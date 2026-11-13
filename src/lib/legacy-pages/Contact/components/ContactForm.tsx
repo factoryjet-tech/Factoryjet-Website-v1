@@ -21,7 +21,7 @@ const ContactForm: React.FC = () => (
         source="contact_page"
         collectionName="contactpage"
         heading="Get a custom proposal for your project"
-        subheading="Just your name and email to start, we reply within 2 business hours."
+        subheading="Four quick fields to start. We reply within 2 business hours."
       />
     </div>
   </section>

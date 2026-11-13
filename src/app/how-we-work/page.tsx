@@ -278,7 +278,7 @@ export default function HowWeWorkPage() {
                     rel="noopener noreferrer"
                     className="inline-flex min-h-11 items-center gap-2 font-fj-body text-sm font-semibold text-fj-ink hover:opacity-70"
                   >
-                    Talk to the founder
+                    Talk to us
                     <Arrow />
                   </Link>
                 </div>
@@ -355,7 +355,7 @@ export default function HowWeWorkPage() {
         <MidPageCTA
           headline="Send us the job and the systems it touches."
           sub="We reply with what we would build first and whether a ready-made tool already does it. If there is work for us, you get a working draft on your own data and a fixed price in writing."
-          label="Talk to the founder"
+          label="Talk to us"
           note="Bhavesh replies within 24 hours."
         />
 
@@ -453,7 +453,7 @@ export default function HowWeWorkPage() {
           headline="Tell us the job. We will show you it working."
           sub="Send the systems you use and the work you want done. We come back with a working draft on your own data and one fixed price in writing."
           primaryCta={{ label: 'See a demo on my data', modal: true, region: 'us' }}
-          secondaryCta={{ label: 'Talk to the founder', href: '/contact' }}
+          secondaryCta={{ label: 'Talk to us', href: '/contact' }}
         />
       </main>
 

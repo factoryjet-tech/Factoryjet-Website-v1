@@ -112,7 +112,7 @@ const Contact: React.FC = () => {
                           region="in"
                           source="uae_contact"
                           heading="Get a free consultation"
-                          subheading="Just your name and email to start. We reply within 2 hours."
+                          subheading="Four quick fields to start. We reply within 2 hours."
                         />
                     </div>
                 </div>

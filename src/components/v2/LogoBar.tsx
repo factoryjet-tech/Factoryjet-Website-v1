@@ -79,7 +79,7 @@ export default function LogoBar({
             width: max-content;
             animation: logoMarquee 40s linear infinite;
           }
-          .logo-marquee-track:hover { animation-play-state: paused; }
+          .logo-marquee-track:hover, .logo-marquee-track:focus-within { animation-play-state: paused; }
           .fj-clients-band .fj-client__word { font-size: clamp(18px, 2vw, 22px); }
           @media (prefers-reduced-motion: reduce) {
             .logo-marquee-track {

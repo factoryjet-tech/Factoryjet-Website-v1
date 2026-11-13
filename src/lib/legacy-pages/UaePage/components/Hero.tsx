@@ -123,7 +123,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
                         region="in"
                         source="uae_hero"
                         heading="Get a free consultation"
-                        subheading="Custom proposal in 2 hours, just your name and email."
+                        subheading="Custom proposal in 2 hours. Four quick fields to start."
                       />
                     </div>
                 </div>

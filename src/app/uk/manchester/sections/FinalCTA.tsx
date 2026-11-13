@@ -109,7 +109,7 @@ export default function FinalCTA() {
               region="uk"
               source="uk_manchester_final_cta"
               heading="Get your free Manchester quote"
-              subheading="Just your name and email to start, we reply within 4 business hours."
+              subheading="Four quick fields to start. We reply within 4 business hours."
             />
           </div>
 

@@ -239,7 +239,7 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
               className="min-w-0 w-full flex-1 rounded-xl px-3.5 font-fj-body text-[15px] placeholder:text-[#6E635A] outline-none disabled:bg-[#F6F4F1]"
               style={invalid === 'website' ? invalidStyle : inputStyle}
             />
-            <label className="flex shrink-0 cursor-pointer items-center gap-1.5 font-fj-body text-[12.5px]" style={{ color: '#4a5a6b' }}>
+            <label className="flex min-h-[44px] shrink-0 cursor-pointer items-center gap-1.5 font-fj-body text-[12.5px]" style={{ color: '#4a5a6b' }}>
               <input
                 type="checkbox" checked={noWebsite} className="h-4 w-4 accent-[#B23E13]"
                 onChange={(e) => { setNoWebsite(e.target.checked); clearInvalid('website'); }}
