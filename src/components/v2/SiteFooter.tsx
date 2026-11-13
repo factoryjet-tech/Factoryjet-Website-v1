@@ -14,7 +14,8 @@ import UsSiteFooter from './UsSiteFooter';
  * left, then 3 link columns (Services / Company / Locations by default).
  * Bottom row carries copyright + minimal legal links.
  *
- * No newsletter signup, no logo-of-companies wall — kept honest and
+ * No newsletter signup. The US/UK/AU footer opens with the client strip
+ * (ClientLogoStrip, names from src/data/clients.ts), otherwise kept honest and
  * static.
  *
  * Pure server component.
@@ -78,6 +79,9 @@ export interface SiteFooterProps {
   variant?: 'light' | 'dark';
   /** Show the third-party recognition / verified-profiles strip. Default: true. */
   showRecognition?: boolean;
+  /** Client strip at the top of the US/UK/AU footer. Default: true. Ignored by
+   *  the India and UAE footer. */
+  showClients?: boolean;
   className?: string;
 }
 
@@ -201,6 +205,7 @@ export default function SiteFooter({
   bottomRow = DEFAULT_BOTTOM_ROW,
   variant = 'light',
   showRecognition = true,
+  showClients = true,
   className = '',
 }: SiteFooterProps) {
   // Explicit linkColumns prop takes precedence; fall back to locale-based defaults
@@ -249,7 +254,8 @@ export default function SiteFooter({
       bottomLinks={bottomLinks} regions={regions} currentRegion={currentRegion}
       isDark={isDark} showRecognition={showRecognition} className={className}
       {...(compact && { columns: resolvedColumns, featured: compact })}
-      recognitionHeading={locale === 'us' ? 'Recognized on' : 'Recognised on'} />;
+      recognitionHeading={locale === 'us' ? 'Recognized on' : 'Recognised on'}
+      showClients={showClients} />;
   }
 
   return (

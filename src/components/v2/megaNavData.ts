@@ -10,8 +10,8 @@
 
 import {
   Activity, BarChart3, Bot, BookOpen, Building2, Calculator, ClipboardCheck, Code2, Compass, Factory,
-  Gauge, Globe, Layers, LayoutTemplate, Mail, MessageSquare, Plug, RefreshCw, Search, ShoppingBag,
-  ShoppingCart, Sparkles, Star, Store, User, Wrench,
+  Gauge, Globe, Layers, LayoutTemplate, MessageSquare, Plug, RefreshCw, Search, ShoppingBag,
+  ShoppingCart, Sparkles, Store, Wrench,
 } from 'lucide-react';
 import type { ElementType } from 'react';
 
@@ -35,7 +35,11 @@ export interface ServiceHub {
   note: { lead: string; label: string; href: string };
 }
 
-export interface SimpleMenu { key: string; label: string; columns: NavColumn[]; feature: NavFeature }
+/** Keys of the simple (non-service) top menus. Region overrides are typed by this,
+ *  so renaming a menu key is a type error instead of a silently dead override. */
+export type SimpleMenuKey = 'industries' | 'work' | 'insights';
+
+export interface SimpleMenu { key: SimpleMenuKey; label: string; columns: NavColumn[]; feature: NavFeature }
 
 export const SERVICE_HUBS: ServiceHub[] = [
   {
@@ -194,6 +198,8 @@ export const SIMPLE_MENUS: SimpleMenu[] = [
         { label: 'Property Management', href: '/services/property-management-ai-agents' },
         { label: 'Real Estate', href: '/services/ai-agents-for-real-estate' },
         { label: 'Automotive Dealers', href: '/services/automotive-ai-voice-agents' },
+        { label: 'Insurance', href: '/services/insurance-ai-agents' },
+        { label: 'Construction', href: '/services/construction-ai-agents' },
       ] },
       { heading: 'Websites & SEO by industry', kind: 'compact', items: [
         { label: 'Law Firms', href: '/services/law-firm-seo' },
@@ -206,18 +212,43 @@ export const SIMPLE_MENUS: SimpleMenu[] = [
     ],
     feature: { image: '/images/menu/menu-ecommerce.webp', kicker: 'Case studies', title: 'Commerce we have built and launched', body: 'B2B wholesale, DTC plus trade, and AI agent work.', href: '/case-studies', cta: 'See the work' },
   },
+  // Work replaced Company and Insights replaced Resources (Wave 2, 13 Nov 2026):
+  // one door for proof, one for research and tools. Case studies listed here are
+  // only clients on the 13 Nov list in src/data/clients.ts.
   {
-    key: 'resources', label: 'Resources',
+    key: 'work', label: 'Work',
     columns: [
-      { heading: 'Learn', kind: 'rich', items: [
+      { heading: 'Case studies', kind: 'compact', items: [
+        { label: 'All case studies', href: '/case-studies' },
+        { label: 'GPSUK', href: '/case-studies/gpsuk-promotional-products' },
+        { label: 'Sow Easy', href: '/case-studies/sow-easy-distributor-portal' },
+        { label: 'Shop Holistico', href: '/case-studies/shopholistico-shopify-store' },
+        { label: 'Washington Law Group', href: '/case-studies/washington-law-group-accident-detection-agent' },
+        { label: 'Belle Maison', href: '/case-studies/belle-maison-ecommerce-success' },
+      ] },
+      { heading: 'More work', kind: 'compact', items: [
+        { label: 'Portfolio', href: '/portfolio' },
+        { label: 'Commerceflo', href: '/commerceflo', badge: 'Our platform' },
+      ] },
+      { heading: 'About us', kind: 'compact', items: [
+        { label: 'About FactoryJet', href: '/about' },
+        { label: 'Contact', href: '/contact' },
+      ] },
+    ],
+    feature: { image: '/images/menu/menu-ecommerce.webp', kicker: 'Case studies', title: 'Commerce we have built and launched', body: 'B2B wholesale, DTC plus trade, and AI agent work.', href: '/case-studies', cta: 'See the work' },
+  },
+  {
+    key: 'insights', label: 'Insights',
+    columns: [
+      { heading: 'Research & guides', kind: 'rich', items: [
         { icon: BookOpen, label: 'Blog', href: '/blog' },
-        { icon: Star, label: 'Case Studies', href: '/case-studies' },
-        { icon: LayoutTemplate, label: 'Portfolio', href: '/portfolio' },
         { icon: BarChart3, label: 'AI Citation Study', href: '/ai-citation-study' },
+        { icon: Layers, label: 'Best Ecommerce Platforms', href: '/best-ecommerce-platforms' },
       ] },
       { heading: 'Free tools', kind: 'rich', items: [
         { icon: Sparkles, label: 'AI Visibility Checker', href: '/ai-visibility-checker' },
         { icon: Calculator, label: 'AI Agent ROI Calculator', href: '/tools/ai-agent-roi-calculator' },
+        { icon: RefreshCw, label: 'Replatforming Cost Calculator', href: '/tools/replatforming-cost-calculator' },
         { icon: Calculator, label: 'Marketplace Fee Calculator', href: '/marketplace-fee-calculator' },
         { icon: Gauge, label: 'Ecommerce Speed Calculator', href: '/ecommerce-speed-calculator' },
       ] },
@@ -227,17 +258,6 @@ export const SIMPLE_MENUS: SimpleMenu[] = [
       ] },
     ],
     feature: { image: '/images/menu/menu-ai-search-model.webp', kicker: 'Free tool', title: 'Does AI recommend you?', body: 'See which brands AI assistants name in your category.', href: '/ai-visibility-checker', cta: 'Check for free' },
-  },
-  {
-    key: 'company', label: 'Company',
-    columns: [
-      { heading: 'Company', kind: 'rich', items: [
-        { icon: User, label: 'About FactoryJet', href: '/about' },
-        { icon: Star, label: 'Case Studies', href: '/case-studies' },
-        { icon: Mail, label: 'Contact', href: '/contact' },
-      ] },
-    ],
-    feature: { image: '/images/menu/menu-web-design-model.webp', kicker: 'Talk to us', title: 'Talk to the founder', body: 'Bhavesh reads every request and replies within 24 hours on business days.', href: '/contact', cta: 'Start a conversation' },
   },
 ];
 
@@ -262,7 +282,9 @@ interface RegionNav {
   drop: ReadonlySet<string>;
   cities: NavLinkItem[];
   hubs: Record<string, Pick<ServiceHub, 'hub' | 'hubLabel' | 'summary' | 'feature' | 'note'>>;
-  menus: Record<string, NavFeature>;
+  /** Feature-card override per simple menu. Keyed by SimpleMenuKey so a renamed
+   *  menu fails the type check. */
+  menus: Partial<Record<SimpleMenuKey, NavFeature>>;
 }
 
 const US_ONLY = new Set([
@@ -291,8 +313,6 @@ function localize(r: RegionNav): { hubs: ServiceHub[]; menus: SimpleMenu[] } {
     menus: SIMPLE_MENUS.map((m) => ({ ...m, feature: r.menus[m.key] ?? m.feature, columns: localizeColumns(m.columns, r) })),
   };
 }
-
-const TALK_TO_US: NavFeature = { image: '/images/menu/menu-web-design-model.webp', kicker: 'Talk to us', title: 'Talk to the founder', body: 'Bhavesh reads every request and replies within 24 hours on business days.', href: '/contact', cta: 'Start a conversation' };
 
 const UK_NAV = localize({
   swap: {
@@ -353,7 +373,9 @@ const UK_NAV = localize({
       note: { lead: 'Want a second opinion?', label: 'Book an SEO audit', href: '/uk/seo-audit' },
     },
   },
-  menus: { company: TALK_TO_US },
+  // The old Company override (TALK_TO_US) went with the Company menu on 13 Nov
+  // 2026. Work and Insights point at region-neutral pages, so no override.
+  menus: {},
 });
 
 const AU_NAV = localize({
@@ -416,7 +438,9 @@ const AU_NAV = localize({
       note: { lead: 'Want a second opinion?', label: 'See our SEO approach', href: '/au/seo' },
     },
   },
-  menus: { company: TALK_TO_US },
+  // The old Company override (TALK_TO_US) went with the Company menu on 13 Nov
+  // 2026. Work and Insights point at region-neutral pages, so no override.
+  menus: {},
 });
 
 export const UK_SERVICE_HUBS: ServiceHub[] = UK_NAV.hubs;

@@ -1,8 +1,10 @@
 /**
  * LogoBar — v2.0 "trusted by" strip.
  *
- * Self-contained: logos are hardcoded inside the component because they
- * are universal brand assets, not city/service-specific data.
+ * Client names come from src/data/clients.ts (shared with the footer strip,
+ * ClientLogoStrip). Each name renders through ClientMark: a logo image when
+ * public/clients/<slug>.svg|png exists, otherwise a text wordmark.
+ * data-fj-clients="page" tells the footer to hide its own strip on this page.
  *
  * The assembler emits:
  *   <LogoBar tagline="Trusted by 500+ businesses…" />
@@ -20,33 +22,19 @@
  * Pure server component.
  */
 
+import { CLIENTS } from '@/data/clients';
+import { ClientMark } from './ClientLogoStrip';
+
 export interface LogoBarProps {
   /** Tagline displayed as centered eyebrow above the marquee. */
   tagline?: string;
   className?: string;
 }
 
-/**
- * Real client names from the FactoryJet portfolio.
- * 2026-05-26 PR #2 cleanup: dropped 7 fake/unrecognizable text marks
- * (WetStone Labs, CuraShield, MindSource, StegoHunt, VidAML, KD Associates,
- * Baxter & Reed) and kept/added only verified real clients per the
- * project_factoryjet_clients memory. List doubles via CSS marquee so 6
- * entries give 12 visible items per loop — enough to read as a continuous strip.
- */
-// 2026-08-04: added the UK clients (GPSUK, Sow Easy, Buddyburst) confirmed by
-// Bhavesh. Every name here must be a real client. Several pages previously
-// captioned this India-only list as "US founders", which was not true.
-const LOGOS = [
-  'Belle Maison',
-  'Formative Concepts',
-  'Impulse Branding',
-  'GPSUK',
-  'Sow Easy',
-  'Buddyburst',
-  'Shevvaa',
-  'RDB Travels',
-];
+// 13 Nov 2026: the client list moved to src/data/clients.ts, shared with the
+// footer strip (ClientLogoStrip). Formative Concepts, Buddyburst, Shevvaa,
+// Impulse Branding and RDB Travels left this strip because they are not on
+// Bhavesh's 13 Nov list. Edit names there, never here.
 
 export default function LogoBar({
   tagline = 'Trusted by 500+ businesses across the US, UK, and UAE',
@@ -54,8 +42,9 @@ export default function LogoBar({
 }: LogoBarProps) {
   return (
     <section
-      className={`bg-fj-neutral-50 py-14 lg:py-16 overflow-hidden ${className}`.trim()}
+      className={`fj-clients-band bg-fj-neutral-50 py-14 lg:py-16 overflow-hidden ${className}`.trim()}
       aria-label="Trusted by"
+      data-fj-clients="page"
     >
       <div className="mx-auto max-w-[1120px] px-4 lg:px-6">
         {tagline && (
@@ -90,6 +79,8 @@ export default function LogoBar({
             width: max-content;
             animation: logoMarquee 40s linear infinite;
           }
+          .logo-marquee-track:hover { animation-play-state: paused; }
+          .fj-clients-band .fj-client__word { font-size: clamp(18px, 2vw, 22px); }
           @media (prefers-reduced-motion: reduce) {
             .logo-marquee-track {
               animation: none;
@@ -105,38 +96,17 @@ export default function LogoBar({
               loop seamless, and marking it up as list items would pad the
               count with content that is not really there. */}
           <ul className="contents">
-          {LOGOS.map((name) => (
-            <li
-              key={`a-${name}`}
-              className="fj-display shrink-0 font-medium text-fj-ink"
-              style={{
-                fontSize: 'clamp(18px, 2vw, 22px)',
-                lineHeight: 1,
-                opacity: 0.5,
-                letterSpacing: '-0.01em',
-                whiteSpace: 'nowrap',
-              }}
-            >
-              {name}
+          {CLIENTS.map((c) => (
+            <li key={`a-${c.slug}`} className="fj-client">
+              <ClientMark client={c} />
             </li>
           ))}
           </ul>
 
           {/* Duplicate set for seamless loop */}
-          {LOGOS.map((name) => (
-            <span
-              key={`b-${name}`}
-              aria-hidden="true"
-              className="fj-display shrink-0 font-medium text-fj-ink"
-              style={{
-                fontSize: 'clamp(18px, 2vw, 22px)',
-                lineHeight: 1,
-                opacity: 0.5,
-                letterSpacing: '-0.01em',
-                whiteSpace: 'nowrap',
-              }}
-            >
-              {name}
+          {CLIENTS.map((c) => (
+            <span key={`b-${c.slug}`} aria-hidden="true" className="fj-client">
+              <ClientMark client={c} linked={false} />
             </span>
           ))}
         </div>

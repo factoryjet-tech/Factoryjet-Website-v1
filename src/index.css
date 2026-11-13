@@ -229,6 +229,27 @@ body {
 
   /* Contrast-safe Jet Blue for use over the navy/charcoal surfaces. */
   --fj-jet-blue-on-dark: #4A8FFF;
+
+  /* Shell tokens (Wave 2, 13 Nov 2026). Used by the header, mega menu, footer
+   * and client strip only. Page bodies still hard-code their own sizes; adopting
+   * these there is a later page pass, not a side effect of this block. */
+  --fj-shell-ink: #14110F;
+  --fj-shell-body: #46403B;
+  --fj-shell-muted: #6E635A;
+  --fj-shell-line: #E7DED6;
+  --fj-shell-accent: #B23E13;   /* accent text and CTA fill, 5.85:1 on white */
+  --fj-fs-small: 0.875rem;      /* 14px: nav, footer links, captions */
+  --fj-fs-label: 0.75rem;       /* 12px: Geist Mono labels, footer headings */
+  --fj-fs-label-min: 0.6875rem; /* 11px: smallest mono label allowed in the shell */
+  --fj-tracking-label: 0.12em;
+  --fj-container: 1200px;
+  --fj-gutter: 24px;
+  --fj-radius-sm: 6px;
+  --fj-radius-md: 10px;
+  --fj-ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+}
+@media (min-width: 768px) {
+  :root { --fj-gutter: 32px; }
 }
 
 /* Display utility class — Plus Jakarta Sans 700/800 (Sprint 8).

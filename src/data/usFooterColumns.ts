@@ -219,8 +219,13 @@ export const US_FOOTER_FEATURED_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       '/services/technical-seo', '/services/ai-seo', '/services/wordpress-development',
     ]),
   },
+  // Work and Insights mirror the header menus (Wave 2, 13 Nov 2026).
   {
-    heading: 'Company',
-    links: featuredLinks(['/about', '/case-studies', '/portfolio', '/blog', '/faq', '/contact']),
+    heading: 'Work',
+    links: featuredLinks(['/case-studies', '/portfolio', '/commerceflo', '/about', '/contact']),
+  },
+  {
+    heading: 'Insights',
+    links: featuredLinks(['/blog', '/ai-citation-study', '/ai-visibility-checker', '/glossary', '/faq']),
   },
 ];

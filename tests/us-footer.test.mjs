@@ -12,12 +12,15 @@ const { US_FOOTER_COLUMNS, US_FOOTER_FEATURED_COLUMNS } = await import(
   `data:text/javascript;base64,${Buffer.from(dataModule).toString('base64')}`
 );
 
-test('compact US footer features 24 distinct original destinations and labels', () => {
+// Wave 2 (13 Nov 2026): Company became Work + Insights to mirror the header menus,
+// so the compact view is five columns and 28 links (6 + 6 + 6 + 5 + 5).
+test('compact US footer features 28 distinct original destinations and labels', () => {
   const original = US_FOOTER_COLUMNS.flatMap(column => column.links);
   const featured = US_FOOTER_FEATURED_COLUMNS.flatMap(column => column.links);
-  assert.equal(US_FOOTER_FEATURED_COLUMNS.length, 4);
-  assert.equal(featured.length, 24);
-  assert.equal(new Set(featured.map(link => link.href)).size, 24);
+  assert.deepEqual(US_FOOTER_FEATURED_COLUMNS.map(c => c.heading),
+    ['Commerce', 'AI Agents & Automation', 'Services & SEO', 'Work', 'Insights']);
+  assert.equal(featured.length, 28);
+  assert.equal(new Set(featured.map(link => link.href)).size, 28);
   for (const link of featured) assert.ok(original.includes(link), link.href);
 });
 
@@ -80,8 +83,8 @@ for (const [file, cols, featuredName, prefix] of [
     const original = mod[cols].flatMap(column => column.links);
     const featured = mod[featuredName].flatMap(column => column.links);
     assert.deepEqual(mod[featuredName].map(c => c.heading), US_FOOTER_FEATURED_COLUMNS.map(c => c.heading));
-    assert.equal(featured.length, 24);
-    assert.equal(new Set(featured.map(link => link.href)).size, 24);
+    assert.equal(featured.length, 28);
+    assert.equal(new Set(featured.map(link => link.href)).size, 28);
     for (const link of featured) assert.ok(original.includes(link), link.href);
     assert.ok(original.filter(l => l.href.startsWith(prefix)).length > 40, 'mostly regional links');
     assert.ok(!original.some(l => /wa\.me|walmart|target-plus|wayfair/.test(l.href)), 'no US-only or WhatsApp links');

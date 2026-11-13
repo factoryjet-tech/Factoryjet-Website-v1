@@ -1,0 +1,96 @@
+/* Client strip + shared client marks (LogoBar uses .fj-client* too). */
+.fj-clients {
+  border-bottom: 1px solid var(--uf-line, var(--fj-shell-line, #E7DED6)); /* follows the footer's dark variant */
+  color: inherit;
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+.fj-clients__inner {
+  max-width: var(--fj-container, 1200px);
+  margin: 0 auto;
+  padding: 28px var(--fj-gutter, 24px);
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 9fr);
+  gap: 32px;
+  align-items: center;
+}
+.fj-clients .fj-clients__label {
+  margin: 0;
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: var(--fj-fs-label, 0.75rem);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: var(--fj-tracking-label, 0.12em);
+  text-transform: uppercase;
+  color: var(--uf-muted, var(--fj-shell-muted, #6E635A));
+}
+.fj-clients__viewport {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.fj-clients__track {
+  display: flex;
+  width: max-content;
+  animation: fj-clients-drift 80s linear infinite;
+}
+.fj-clients__viewport:hover .fj-clients__track,
+.fj-clients__viewport:focus-within .fj-clients__track { animation-play-state: paused; }
+@keyframes fj-clients-drift { to { transform: translateX(-50%); } }
+
+.fj-clients__list {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  margin: 0;
+  padding: 0 56px 0 0; /* trailing gap so the two copies join without a seam */
+  list-style: none;
+}
+
+/* One client mark: same optical height for images and text wordmarks. */
+.fj-client { display: flex; align-items: center; height: 32px; flex-shrink: 0; }
+.fj-client__link { display: inline-flex; align-items: center; height: 100%; color: inherit; text-decoration: none; border-radius: 4px; }
+.fj-client__link:focus-visible { outline: 2px solid var(--fj-shell-accent, #B23E13); outline-offset: 4px; }
+.fj-client__img {
+  display: block;
+  height: 24px;
+  width: auto;
+  max-width: 140px;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.6;
+  transition: opacity 160ms var(--fj-ease-out, ease-out);
+}
+.fj-client__word {
+  font-family: var(--font-plus-jakarta), system-ui, sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  color: var(--uf-muted, var(--fj-shell-muted, #6E635A)); /* 5.9:1 on white; opacity tricks fell under 4.5:1 */
+  transition: color 160ms var(--fj-ease-out, ease-out);
+}
+.fj-client__link:hover .fj-client__img,
+.fj-client__link:focus-visible .fj-client__img { opacity: 1; }
+.fj-client__link:hover .fj-client__word,
+.fj-client__link:focus-visible .fj-client__word { color: var(--uf-ink, var(--fj-shell-ink, #14110F)); }
+
+@media (max-width: 767px) {
+  .fj-clients__inner { grid-template-columns: minmax(0, 1fr); gap: 14px; padding-block: 24px; }
+  .fj-clients__list { gap: 40px; padding-right: 40px; }
+  .fj-client__word { font-size: 15px; }
+  .fj-client__img { height: 20px; }
+}
+
+/* Reduced motion: a static, wrapped list rather than a frozen marquee. */
+@media (prefers-reduced-motion: reduce) {
+  .fj-clients__viewport { -webkit-mask-image: none; mask-image: none; overflow: visible; }
+  .fj-clients__track { animation: none; width: auto; }
+  .fj-clients__list { flex-wrap: wrap; gap: 12px 32px; padding-right: 0; }
+  .fj-clients__list--dup { display: none; }
+  .fj-client__img, .fj-client__word { transition: none; }
+}
+
+/* A page that already renders LogoBar (data-fj-clients="page") does not also get
+   the footer strip. Browsers without :has() show both; nothing breaks. */
+body:has([data-fj-clients="page"]) [data-fj-clients="footer"] { display: none; }

@@ -19,10 +19,19 @@ export type SiteHeaderLocale = 'us' | 'gb' | 'au' | 'in' | 'uae';
 // Menu content lives in megaNavData.ts. India and UAE render SiteHeaderLegacy,
 // which keeps the full legacy menus and their own config.
 const LOCALE_CONFIG: Record<'us' | 'gb' | 'au', { modalRegion: ModalRegion; defaultCtaLabel: string }> = {
-  us: { modalRegion: 'us', defaultCtaLabel: 'Talk to the Founder' },
-  gb: { modalRegion: 'uk', defaultCtaLabel: 'Talk to the Founder' },
-  au: { modalRegion: 'au', defaultCtaLabel: 'Talk to the Founder' },
+  us: { modalRegion: 'us', defaultCtaLabel: 'Talk to us' },
+  gb: { modalRegion: 'uk', defaultCtaLabel: 'Talk to us' },
+  au: { modalRegion: 'au', defaultCtaLabel: 'Talk to us' },
 };
+
+/** About 108 pages pass cta.label "Talk to the Founder" (any case). Since 13 Nov
+ *  2026 the shell says "Talk to us" for those, without editing the pages. Pages
+ *  that chose a different offer ("Book an Audit", "See a demo on my data") keep it. */
+const RETIRED_CTA_LABEL = /^\s*talk to the founder\s*$/i;
+function ctaLabelFor(cta: CtaItem | undefined, fallback: string): string {
+  if (!cta?.label || RETIRED_CTA_LABEL.test(cta.label)) return fallback;
+  return cta.label;
+}
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -61,6 +70,8 @@ function ModernSiteHeader({
     : locale === 'au' ? { hubs: AU_SERVICE_HUBS, menus: AU_SIMPLE_MENUS } : {};
 
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const sentinelRef = useRef<HTMLDivElement>(null);
   const drawerRef = useRef<HTMLDivElement>(null);
   const menuTriggerRef = useRef<HTMLButtonElement>(null);
 
@@ -73,6 +84,18 @@ function ModernSiteHeader({
     const release = containDialogFocus(drawerRef.current, () => setMobileOpen(false), menuTriggerRef.current);
     return () => { desktop.removeEventListener('change', onResize); release(); };
   }, [mobileOpen]);
+
+  // Header settles on scroll: a hairline shadow once the page has moved 8px.
+  // One IntersectionObserver on an 8px sentinel above the header, no scroll
+  // listener. Starts after first paint, so it cannot touch LCP; only box-shadow
+  // changes, so nothing below the header moves.
+  useEffect(() => {
+    const el = sentinelRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+    const io = new IntersectionObserver(([entry]) => setScrolled(!entry.isIntersecting));
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
   // Prevent body scroll when mobile drawer is open
   useEffect(() => {
@@ -92,9 +115,16 @@ function ModernSiteHeader({
 
   return (
     <>
+      {/* Scroll sentinel: 8px tall, pulled back up by its negative margin, so it
+          takes no space. When it leaves the viewport the header gains its shadow. */}
+      <div ref={sentinelRef} aria-hidden="true" className="pointer-events-none h-2 -mb-2" />
+
       {/* -- Main header bar ------------------------------------------------- */}
+      {/* Wave 2 (13 Nov 2026): solid white with a hairline, no backdrop blur
+          (cheaper to paint on scroll); shadow only after the page scrolls. */}
       <header
-        className={`sticky top-0 z-[9999] bg-fj-cream/95 backdrop-blur-sm border-b border-fj-neutral-200 ${className}`.trim()}
+        data-scrolled={scrolled ? 'true' : undefined}
+        className={`sticky top-0 z-[9999] bg-white border-b border-[#E7DED6] transition-shadow duration-150 ease-out motion-reduce:transition-none data-[scrolled=true]:shadow-[0_8px_24px_-18px_rgba(20,17,15,0.28)] ${className}`.trim()}
       >
         <div className="mx-auto max-w-[1200px] px-6 md:px-8">
           <div className="flex h-16 items-center justify-between md:h-20">
@@ -134,10 +164,9 @@ function ModernSiteHeader({
               <button
                 type="button"
                 onClick={handleCta}
-                className="hidden min-h-11 items-center justify-center rounded-full px-5 py-2.5 font-fj-body text-[14px] font-semibold text-white transition-opacity hover:opacity-90 md:inline-flex"
-                style={{ background: '#C2440F' }}
+                className="hidden min-h-11 items-center justify-center rounded-lg bg-[#B23E13] px-5 py-2.5 font-fj-body text-[14px] font-semibold text-white transition-opacity hover:opacity-90 md:inline-flex"
               >
-                {cta?.label ?? cfg.defaultCtaLabel}
+                {ctaLabelFor(cta, cfg.defaultCtaLabel)}
               </button>
             </div>
 
@@ -207,8 +236,7 @@ function ModernSiteHeader({
               setMobileOpen(false);
               openModal(cfg.modalRegion);
             }}
-            className="flex w-full items-center justify-center rounded-full py-3.5 font-fj-body text-[15px] font-semibold text-white transition-opacity hover:opacity-90"
-            style={{ background: '#C2440F' }}
+            className="flex w-full items-center justify-center rounded-lg bg-[#B23E13] py-3.5 font-fj-body text-[15px] font-semibold text-white transition-opacity hover:opacity-90"
           >
             {cfg.defaultCtaLabel}
           </button>

@@ -5,6 +5,7 @@ import { RECOGNITION_PROFILES } from '@/data/recognitionProfiles';
 import type { SiteFooterColumn, SiteFooterLink } from './SiteFooter';
 import Wordmark from './Wordmark';
 import FooterRegionSwitcher from './FooterRegionSwitcher';
+import ClientLogoStrip from './ClientLogoStrip';
 import './UsSiteFooter.css';
 
 interface UsSiteFooterProps {
@@ -22,6 +23,9 @@ interface UsSiteFooterProps {
   columns?: ReadonlyArray<SiteFooterColumn>;
   featured?: ReadonlyArray<SiteFooterColumn>;
   recognitionHeading?: string;
+  /** Client strip above the footer body. Default: true. Pages that render
+   *  LogoBar hide it automatically through CSS (ClientLogoStrip.css). */
+  showClients?: boolean;
 }
 
 /** Static, progressively disclosed navigation. All original links and labels
@@ -29,9 +33,10 @@ interface UsSiteFooterProps {
 export default function UsSiteFooter({ logoText, tagline, copyright, bottomLinks,
   regions, currentRegion, isDark, showRecognition, className,
   columns = US_FOOTER_COLUMNS, featured = US_FOOTER_FEATURED_COLUMNS,
-  recognitionHeading = 'Recognized on' }: UsSiteFooterProps) {
+  recognitionHeading = 'Recognized on', showClients = true }: UsSiteFooterProps) {
   return (
     <footer className={`us-footer ${isDark ? 'us-footer--dark' : ''} ${className}`.trim()}>
+      {showClients && <ClientLogoStrip />}
       <div className="us-footer__inner">
         <div className="us-footer__brand">
           <div>
