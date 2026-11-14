@@ -54,7 +54,7 @@ export default function MobileStickyBar({ targetId, scrollToId }: MobileStickyBa
     if (!target) return;
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
+    target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: scrollToId ? 'start' : 'center' });
     target.querySelector<HTMLInputElement>('input:not([aria-hidden="true"])')?.focus({ preventScroll: true });
   };
 
