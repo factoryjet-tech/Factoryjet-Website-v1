@@ -493,7 +493,7 @@ const ContactFormModal: React.FC = () => {
               placeholder={formData.noWebsite ? 'No website yet' : 'yourcompany.com'} autoComplete="url"
               className="min-w-0 basis-44 grow px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-base disabled:bg-slate-50"
             />
-            <label className="flex min-h-[44px] shrink-0 cursor-pointer items-center gap-2 text-sm text-slate-600">
+            <label className="flex min-h-[44px] shrink-0 cursor-pointer items-center gap-2 whitespace-nowrap text-sm text-slate-600">
               <input
                 type="checkbox" checked={formData.noWebsite} className="h-4 w-4 accent-[#B23E13]"
                 onChange={(e) => { const checked = e.target.checked; setFormData((prev) => ({ ...prev, noWebsite: checked })); setError(null); }}
