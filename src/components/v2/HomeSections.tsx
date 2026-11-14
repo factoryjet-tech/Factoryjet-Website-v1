@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import HeroInlineForm from '@/components/HeroInlineForm';
+import LeadFormInline from '@/components/LeadFormInline';
 import { HOME_FAQ_CATEGORIES, HOME_FAQS } from './HomeFaqs';
 import MobileStickyBar from './MobileStickyBar';
 import { ProblemTax, UnifiedLayers, StackVsSystem, IntegrationMap } from './HomeCommerceSections';
@@ -93,15 +93,11 @@ export default function HomeSections() {
               <div className="eyebrow">Ecommerce Development · AI Commerce</div>
               <h1>We Build Your Ecommerce. And the <span className="hero-emphasis">AI Agents That Keep It Running.</span></h1>
               <p className="lead">Ecommerce development for DTC and B2B brands on Shopify, Adobe Commerce, BigCommerce, WooCommerce, and Commerceflo, with AI agents that keep channels, stock, and orders in sync.</p>
-              <HeroInlineForm
-                source="us_hero_inline"
-                region="us"
-                submitLabel="Get a commerce audit"
-                formId="home-hero-form"
-                secondaryHref="#comparison"
-                secondaryLabel="Explore Agency Comparison & Case Studies ↓"
-                trustText="🔒 Direct founder response · Zero sales pressure"
-              />
+              <div className="actions" id="home-hero-cta">
+                <a className="btn btn-primary" href="#get-audit">Get a commerce audit</a>
+                <a className="btn btn-ghost" href="#work">See our work</a>
+              </div>
+              <p className="hero-trust">We reply within 24 hours. No sales pressure.</p>
               <aside className="hero-proof" aria-label="Selected FactoryJet clients and track record">
                 <p><strong>500+ businesses served</strong> across web, commerce and AI engagements.</p>
                 <div className="proof-brands" aria-label="Selected clients">
@@ -573,14 +569,20 @@ export default function HomeSections() {
               <h2>Tell Us What You Sell, and Where</h2>
               <p>We'll map your channels, catalog, and B2B into one system, and show you which work the agents can take off your team's plate. You get a fixed proposal before any work starts.</p>
             </div>
-            <div className="ctas">
-              <a className="btn btn-primary" href="#hero">Get a commerce audit</a>
-              <a className="btn btn-ghost" href="/contact">Talk to the founder</a>
+            <div className="finalcta-form" id="get-audit">
+              <LeadFormInline
+                source="us_home_form"
+                region="us"
+                heading="Get a commerce audit"
+                headingAlign="left"
+                subheading="A few details so we can prepare. We reply within 24 hours."
+                requireContactDetails
+              />
             </div>
           </div>
         </section>
       </main>
-      <MobileStickyBar targetId="home-hero-form" />
+      <MobileStickyBar targetId="home-hero-cta" scrollToId="get-audit" />
     </div>
   );
 }

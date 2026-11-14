@@ -40,6 +40,9 @@ declare global {
 }
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+type Field = 'intent' | 'name' | 'email' | 'phone' | 'company' | 'website';
+/** At least 7 digits, so "123" or a stray letter does not pass as a phone number. */
+const phoneLooksReal = (v: string) => v.replace(/\D/g, '').length >= 7;
 const SERVICES = ['Website', 'E-commerce', 'AI Agent', 'SEO', 'Other'];
 
 export interface LeadFormInlineProps {
@@ -51,6 +54,13 @@ export interface LeadFormInlineProps {
   region?: 'us' | 'uk' | 'in';
   heading?: string;
   subheading?: string;
+  /** Heading alignment inside the card. Default 'center'. */
+  headingAlign?: 'center' | 'left';
+  /**
+   * 14 Nov 2026 (founder): the homepage form makes phone and company name
+   * required, and shows them right after name and email.
+   */
+  requireContactDetails?: boolean;
 }
 
 const LeadFormInline: React.FC<LeadFormInlineProps> = ({
@@ -59,6 +69,8 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
   region = 'in',
   heading = "Tell us about your project",
   subheading = "A few details to start. We reply within 24 hours.",
+  headingAlign = 'center',
+  requireContactDetails = false,
 }) => {
   const [intent, setIntent] = useState<LeadIntent | ''>('');
   const [name, setName] = useState('');
@@ -74,13 +86,15 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [invalid, setInvalid] = useState<'intent' | 'name' | 'email' | 'website' | null>(null);
+  const [invalid, setInvalid] = useState<Field | null>(null);
 
   const startedRef = useRef(false);
   const intentRef = useRef<HTMLInputElement>(null);
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const websiteRef = useRef<HTMLInputElement>(null);
+  const phoneRef = useRef<HTMLInputElement>(null);
+  const companyRef = useRef<HTMLInputElement>(null);
   const errorRef = useRef<HTMLDivElement>(null);
   const turnstile = useTurnstile();
 
@@ -95,16 +109,19 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
   const qualifiers = { intent: intent || undefined, website: noWebsite ? undefined : website, noWebsite };
 
   // First missing or bad required field, in screen order, or null.
-  const firstProblem = (): { field: 'intent' | 'name' | 'email' | 'website'; message: string; code: string } | null => {
+  const firstProblem = (): { field: Field; message: string; code: string } | null => {
     if (!intent) return { field: 'intent', message: 'Choose what brings you here, then press Send request again.', code: 'validation_empty_intent' };
     if (name.trim() === '') return { field: 'name', message: 'Add your name and email, then press Send request again.', code: 'validation_empty_name' };
     if (email.trim() === '') return { field: 'email', message: 'Add your email, then press Send request again.', code: 'validation_empty_email' };
     if (!EMAIL_RE.test(email)) return { field: 'email', message: 'That email address looks incomplete. Please check it.', code: 'validation_bad_email' };
+    if (requireContactDetails && phone.trim() === '') return { field: 'phone', message: 'Add your phone number, then press Send request again.', code: 'validation_empty_phone' };
+    if (requireContactDetails && !phoneLooksReal(phone)) return { field: 'phone', message: 'That phone number looks incomplete. Please include the area code.', code: 'validation_bad_phone' };
+    if (requireContactDetails && company.trim() === '') return { field: 'company', message: 'Add your company name, then press Send request again.', code: 'validation_empty_company' };
     if (!noWebsite && website.trim() === '') return { field: 'website', message: 'Add your company website, or tick No website yet.', code: 'validation_empty_website' };
     if (!noWebsite && !isWebsiteLike(website)) return { field: 'website', message: 'That website looks incomplete. Try something like yourcompany.com.', code: 'validation_bad_website' };
     return null;
   };
-  const clearInvalid = (field: 'intent' | 'name' | 'email' | 'website') => {
+  const clearInvalid = (field: Field) => {
     if (invalid === field) { setInvalid(null); setError(null); }
   };
 
@@ -135,7 +152,7 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
       trackFormError(source, problem.code);
       // Focus without the browser's own scroll, then centre the message, which sits
       // just above the field. The default scroll could leave it under the sticky header.
-      const refs = { intent: intentRef, name: nameRef, email: emailRef, website: websiteRef };
+      const refs = { intent: intentRef, name: nameRef, email: emailRef, phone: phoneRef, company: companyRef, website: websiteRef };
       refs[problem.field].current?.focus({ preventScroll: true });
       requestAnimationFrame(() => errorRef.current?.scrollIntoView({ block: 'center' }));
       return;
@@ -187,6 +204,31 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
   const inputCls =
     'w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-sm bg-white';
 
+  const optionalTag = <span className="text-slate-500 font-normal">(optional)</span>;
+  const contactFields = (
+    <>
+      <div>
+        <label htmlFor={`${source}-phone`} className="block text-sm font-medium text-slate-700 mb-1.5">
+          Phone {requireContactDetails ? '*' : optionalTag}
+        </label>
+        <input ref={phoneRef} id={`${source}-phone`} type="tel" name="phone" value={phone}
+          onChange={(e) => { setPhone(e.target.value); clearInvalid('phone'); }}
+          placeholder={region === 'us' ? '(555) 000-0000' : region === 'uk' ? '+44 7700 000000' : 'Your phone number'}
+          required={requireContactDetails} autoComplete="tel" aria-invalid={invalid === 'phone' || undefined}
+          className={`${inputCls} ${invalid === 'phone' ? '!border-red-600' : ''}`} />
+      </div>
+      <div>
+        <label htmlFor={`${source}-company`} className="block text-sm font-medium text-slate-700 mb-1.5">
+          Company name {requireContactDetails ? '*' : optionalTag}
+        </label>
+        <input ref={companyRef} id={`${source}-company`} type="text" name="company" value={company}
+          onChange={(e) => { setCompany(e.target.value); clearInvalid('company'); }}
+          placeholder="Acme Inc." required={requireContactDetails} autoComplete="organization" aria-invalid={invalid === 'company' || undefined}
+          className={`${inputCls} ${invalid === 'company' ? '!border-red-600' : ''}`} />
+      </div>
+    </>
+  );
+
   if (vendorSent) {
     return (
       <div className="bg-white rounded-2xl p-8 md:p-12 text-center shadow-xl border border-slate-100" role="status">
@@ -212,7 +254,7 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
 
   return (
     <div className="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 sm:p-8 md:p-6 lg:p-10">
-      <div className="text-center mb-8">
+      <div className={`${headingAlign === 'left' ? 'text-left' : 'text-center'} mb-8`}>
         <h2 className="font-fj-display text-2xl sm:text-3xl font-bold text-slate-900">{heading}</h2>
         <p className="text-slate-500 mt-2">{subheading}</p>
       </div>
@@ -277,16 +319,17 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
             <label className="block text-sm font-medium text-slate-700 mb-1.5">Full name *</label>
             <input ref={nameRef} type="text" name="name" value={name}
               onChange={(e) => { setName(e.target.value); clearInvalid('name'); }}
-              placeholder="John Doe" required autoComplete="name" aria-invalid={invalid === 'name' || undefined}
+              placeholder="Jane Doe" required autoComplete="name" aria-invalid={invalid === 'name' || undefined}
               className={`${inputCls} ${invalid === 'name' ? '!border-red-600' : ''}`} />
           </div>
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1.5">Email address *</label>
             <input ref={emailRef} type="email" name="email" value={email}
               onChange={(e) => { setEmail(e.target.value); clearInvalid('email'); }}
-              placeholder="john@company.com" required autoComplete="email" aria-invalid={invalid === 'email' || undefined}
+              placeholder="jane@company.com" required autoComplete="email" aria-invalid={invalid === 'email' || undefined}
               className={`${inputCls} ${invalid === 'email' ? '!border-red-600' : ''}`} />
           </div>
+          {requireContactDetails && contactFields}
           <div className="sm:col-span-2">
             <label htmlFor={`${source}-website`} className="block text-sm font-medium text-slate-700 mb-1.5">Company website *</label>
             <div className="flex flex-wrap items-center gap-x-3">
@@ -302,21 +345,7 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
               </label>
             </div>
           </div>
-          <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1.5">
-              Phone <span className="text-slate-500 font-normal">(optional)</span>
-            </label>
-            <input type="tel" name="phone" value={phone} onChange={(e) => setPhone(e.target.value)}
-              placeholder={region === 'us' ? '(555) 000-0000' : region === 'uk' ? '+44 7700 000000' : 'Your phone number'}
-              autoComplete="tel" className={inputCls} />
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1.5">
-              Company <span className="text-slate-500 font-normal">(optional)</span>
-            </label>
-            <input type="text" name="company" value={company} onChange={(e) => setCompany(e.target.value)}
-              placeholder="Acme Inc." autoComplete="organization" className={inputCls} />
-          </div>
+          {!requireContactDetails && contactFields}
         </div>
 
         <div>

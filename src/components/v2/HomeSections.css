@@ -1,6 +1,5 @@
 /* Homepage sections on top of AiAgentDevelopmentSections.css (same design system). */
 .homePage .hero-proof { margin-top: 18px; padding: 14px 0 0; border-top: 1px solid var(--line); }
-.homePage #home-hero-form { margin-top: 18px; }
 .homePage .hero-proof p { color: var(--body); font-size: 12px; line-height: 1.55; }
 .homePage .hero-proof strong { color: var(--ink); font-weight: 700; }
 .homePage .proof-brands { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 8px 14px; margin-top: 11px; }
@@ -134,3 +133,8 @@
   .homePage .agentflow { padding: 16px; gap: 8px; }
   .homePage .agentflow li { font-size: 12.5px; padding: 8px 12px; }
 }
+
+/* 14 Nov 2026: hero form removed; buttons in the hero, full form in the final section. */
+.homePage .hero-trust { margin-top: 12px; color: var(--body); font-size: 12.5px; }
+.homePage .finalcta .wrap { align-items: flex-start; }
+.homePage .finalcta-form { flex: 0 1 560px; scroll-margin-top: 96px; }

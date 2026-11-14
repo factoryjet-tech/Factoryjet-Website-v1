@@ -3,10 +3,13 @@
 import { useEffect, useState } from 'react';
 
 interface MobileStickyBarProps {
+  /** The bar shows once this element has scrolled above the screen. */
   targetId: string;
+  /** Where the button goes. Defaults to targetId. */
+  scrollToId?: string;
 }
 
-export default function MobileStickyBar({ targetId }: MobileStickyBarProps) {
+export default function MobileStickyBar({ targetId, scrollToId }: MobileStickyBarProps) {
   const [isMobile, setIsMobile] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -37,7 +40,7 @@ export default function MobileStickyBar({ targetId }: MobileStickyBarProps) {
   }, [targetId, isMobile]);
 
   const returnToForm = () => {
-    const target = document.getElementById(targetId);
+    const target = document.getElementById(scrollToId ?? targetId);
     if (!target) return;
 
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
