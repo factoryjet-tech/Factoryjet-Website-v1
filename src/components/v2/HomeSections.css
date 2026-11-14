@@ -138,3 +138,7 @@
 .homePage .hero-trust { margin-top: 12px; color: var(--body); font-size: 12.5px; }
 .homePage .finalcta .wrap { align-items: flex-start; }
 .homePage .finalcta-form { flex: 0 1 560px; scroll-margin-top: 96px; }
+/* The section's big h2/p rules (AiAgentDevelopmentSections.css) must not reach the form card. */
+.homePage .finalcta-form { flex-basis: 600px; }
+.homePage .finalcta-form h2 { max-width: none; font-size: 28px; line-height: 1.2; }
+.homePage .finalcta-form p { max-width: none; margin-top: 8px; font-size: 14px; line-height: 1.5; }

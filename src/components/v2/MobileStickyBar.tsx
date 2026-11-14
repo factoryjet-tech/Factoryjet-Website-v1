@@ -28,16 +28,26 @@ export default function MobileStickyBar({ targetId, scrollToId }: MobileStickyBa
       return () => media.removeEventListener('change', updateViewport);
     }
 
-    const observer = new IntersectionObserver(([entry]) => {
-      setIsVisible(!entry.isIntersecting && entry.boundingClientRect.bottom < 0);
+    // Shown once the target has scrolled above the screen, hidden again while
+    // the destination (the form) is on screen so the bar never covers it.
+    const destination = scrollToId ? document.getElementById(scrollToId) : null;
+    let pastTarget = false;
+    let destinationInView = false;
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.target === target) pastTarget = !entry.isIntersecting && entry.boundingClientRect.bottom < 0;
+        if (entry.target === destination) destinationInView = entry.isIntersecting;
+      }
+      setIsVisible(pastTarget && !destinationInView);
     }, { threshold: 0.05 });
 
     observer.observe(target);
+    if (destination) observer.observe(destination);
     return () => {
       observer.disconnect();
       media.removeEventListener('change', updateViewport);
     };
-  }, [targetId, isMobile]);
+  }, [targetId, scrollToId, isMobile]);
 
   const returnToForm = () => {
     const target = document.getElementById(scrollToId ?? targetId);
