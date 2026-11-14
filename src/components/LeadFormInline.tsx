@@ -289,12 +289,12 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
           </div>
           <div className="sm:col-span-2">
             <label htmlFor={`${source}-website`} className="block text-sm font-medium text-slate-700 mb-1.5">Company website *</label>
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-x-3">
               <input ref={websiteRef} id={`${source}-website`} type="text" inputMode="url" name="website" disabled={noWebsite}
                 value={noWebsite ? '' : website}
                 onChange={(e) => { setWebsite(e.target.value); clearInvalid('website'); }}
                 placeholder={noWebsite ? 'No website yet' : 'yourcompany.com'} autoComplete="url" aria-invalid={invalid === 'website' || undefined}
-                className={`${inputCls} min-w-0 flex-1 disabled:bg-slate-50 ${invalid === 'website' ? '!border-red-600' : ''}`} />
+                className={`${inputCls} min-w-0 basis-44 grow disabled:bg-slate-50 ${invalid === 'website' ? '!border-red-600' : ''}`} />
               <label className="flex min-h-[44px] shrink-0 cursor-pointer items-center gap-2 text-sm text-slate-600">
                 <input type="checkbox" checked={noWebsite} className="h-4 w-4 accent-[#B23E13]"
                   onChange={(e) => { setNoWebsite(e.target.checked); clearInvalid('website'); }} />

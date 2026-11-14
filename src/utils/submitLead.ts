@@ -91,8 +91,8 @@ export interface LeadInput {
  *  functions/api/notify-lead.js. */
 export type LeadIntent = 'hire' | 'vendor';
 export const LEAD_INTENT_OPTIONS: { value: LeadIntent; label: string }[] = [
-  { value: 'hire', label: 'I want to hire FactoryJet' },
-  { value: 'vendor', label: 'I offer a product or service' },
+  { value: 'hire', label: 'Hire FactoryJet' },
+  { value: 'vendor', label: 'Offer a service' },
 ];
 
 /** Loose check for the company website field: a dotted host, no spaces.

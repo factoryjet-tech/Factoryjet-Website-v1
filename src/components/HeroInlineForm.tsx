@@ -230,13 +230,13 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
           />
           {/* Website and its "No website yet" box share one row, so the phone layout
               gains one row here, not two. */}
-          <div className="flex min-w-0 items-center gap-2.5">
+          <div className="flex min-w-0 flex-wrap items-center gap-x-2.5">
             <input
               aria-label="Company website" type="text" inputMode="url" autoComplete="url"
               placeholder={noWebsite ? 'No website yet' : 'Company website'}
               ref={websiteRef} aria-invalid={invalid === 'website' || undefined} disabled={noWebsite}
               value={noWebsite ? '' : website} onChange={(e) => { setWebsite(e.target.value); clearInvalid('website'); }}
-              className="min-w-0 w-full flex-1 rounded-xl px-3.5 font-fj-body text-[15px] placeholder:text-[#6E635A] outline-none disabled:bg-[#F6F4F1]"
+              className="min-w-0 basis-44 grow rounded-xl px-3.5 font-fj-body text-[15px] placeholder:text-[#6E635A] outline-none disabled:bg-[#F6F4F1]"
               style={invalid === 'website' ? invalidStyle : inputStyle}
             />
             <label className="flex min-h-[44px] shrink-0 cursor-pointer items-center gap-1.5 font-fj-body text-[12.5px]" style={{ color: '#4a5a6b' }}>

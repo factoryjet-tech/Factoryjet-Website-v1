@@ -486,12 +486,12 @@ const ContactFormModal: React.FC = () => {
         </div>
         <div className="col-span-2">
           <label htmlFor={`${formId}-website`} className="block text-sm font-medium text-slate-700 mb-1.5">Company website *</label>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-x-3">
             <input
               type="text" inputMode="url" id={`${formId}-website`} name="website" disabled={formData.noWebsite}
               value={formData.noWebsite ? '' : formData.website} onChange={handleInputChange}
               placeholder={formData.noWebsite ? 'No website yet' : 'yourcompany.com'} autoComplete="url"
-              className="min-w-0 flex-1 px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-base disabled:bg-slate-50"
+              className="min-w-0 basis-44 grow px-4 py-3 rounded-xl border border-slate-200 focus:border-[#F05A28] focus:ring-2 focus:ring-orange-100 outline-none transition-all text-base disabled:bg-slate-50"
             />
             <label className="flex min-h-[44px] shrink-0 cursor-pointer items-center gap-2 text-sm text-slate-600">
               <input
