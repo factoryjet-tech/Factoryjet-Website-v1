@@ -192,7 +192,7 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
               return (
                 <label
                   key={o.value}
-                  className="flex cursor-pointer items-center justify-center rounded-xl px-2.5 py-1.5 text-center font-fj-body text-[13.5px] leading-tight has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-[#B23E13]"
+                  className="relative flex cursor-pointer items-center justify-center rounded-xl px-2.5 py-1.5 text-center font-fj-body text-[13.5px] leading-tight has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-[#B23E13]"
                   style={{
                     minHeight: 44,
                     border: selected ? '1.5px solid #B23E13' : invalid === 'intent' ? '1.5px solid #b3261e' : '1px solid rgba(15,33,56,0.16)',

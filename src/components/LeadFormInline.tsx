@@ -226,7 +226,7 @@ const LeadFormInline: React.FC<LeadFormInlineProps> = ({
               return (
                 <label
                   key={o.value}
-                  className={`flex min-h-[48px] cursor-pointer items-center justify-center rounded-xl border px-3 py-2 text-center text-sm leading-tight transition-all has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-[#B23E13] ${
+                  className={`relative flex min-h-[48px] cursor-pointer items-center justify-center rounded-xl border px-3 py-2 text-center text-sm leading-tight transition-all has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-[#B23E13] ${
                     selected ? 'border-[#B23E13] bg-orange-50 font-semibold text-slate-900'
                       : invalid === 'intent' ? 'border-red-600 text-slate-700' : 'border-slate-200 text-slate-700 hover:border-[#F05A28]/50'
                   }`}
