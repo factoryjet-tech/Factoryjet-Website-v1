@@ -37,7 +37,7 @@ function HomeFaqAccordion() {
 }
 
 const STORES = [
-  { client: 'Exaco', system: 'Shopify', image: '/clients/screens/european-garden.webp', alt: 'European Garden Shopify store homepage, built for Exaco', href: 'https://europeangarden.com', external: true },
+  { client: 'Exaco', system: 'Shopify + QuickBooks Enterprise', image: '/clients/screens/european-garden.webp', alt: 'European Garden Shopify store homepage, built for Exaco', href: 'https://europeangarden.com', external: true },
   { client: 'GPSUK', system: 'B2B store on Commerceflo', image: '/clients/screens/gpsuk.webp', alt: 'GPSUK promotional products trade store on Commerceflo', href: '/case-studies/gpsuk-promotional-products', external: false },
   { client: 'DTF Virginia', system: 'Shopify', image: '/clients/screens/dtf-virginia.webp', alt: 'DTF Virginia Shopify store homepage', href: 'https://dtfvirginia.com', external: true },
   { client: 'Mannik', system: 'WooCommerce', image: '/clients/screens/mannik.webp', alt: 'Mannik WooCommerce store homepage', href: 'https://mannik.co.uk', external: true },
@@ -49,8 +49,8 @@ const CASES = [
   {
     client: 'Exaco',
     from: 'Shopify', to: 'QuickBooks Enterprise',
-    status: 'STORE LIVE · EUROPEAN GARDEN BRAND',
-    summary: 'Exaco chose us to build a new Shopify store for its European Garden brand and to connect it to QuickBooks Enterprise. Before it signed, we built a draft theme inside its own Shopify store. The store is live.',
+    status: 'LIVE · EUROPEAN GARDEN BRAND',
+    summary: 'A new Shopify store for the European Garden brand, connected to QuickBooks Enterprise. Before Exaco signed, we built a draft theme inside its own Shopify store. The store and the QuickBooks link are both live.',
     href: 'https://europeangarden.com', linkLabel: 'Visit the live store', external: true,
   },
   {
