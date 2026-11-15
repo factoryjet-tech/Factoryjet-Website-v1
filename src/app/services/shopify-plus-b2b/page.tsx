@@ -18,7 +18,7 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-10-31';
+const PAGE_MODIFIED = '2026-11-15';
 
 /* House terms, approved wording (2026-10-16). Same terms as /services/ai-automation. */
 const HOUSE_TERMS = [
@@ -73,6 +73,12 @@ const FAQ_ITEMS = [
     question: 'What is Shopify Plus B2B and how does it replace third-party wholesale apps?',
     answer:
       'Shopify Plus B2B is Shopify’s native wholesale suite. It runs directly in the core platform. This cuts slow third-party wholesale apps. You get native company accounts. You get multi-tier price lists and volume breaks. Net payment terms execute in core checkout. Validation rules run directly with zero delay.',
+  },
+  {
+    category: 'features',
+    question: 'Can you use Shopify for wholesale?',
+    answer:
+      'Yes. Shopify for wholesale runs on its built-in B2B features: company accounts with several buyer locations, a price list per customer, net payment terms, and quantity rules such as minimums and case packs. We build Shopify wholesale stores on Shopify Plus, either as one store that serves retail and trade buyers or as a separate wholesale store, and connect them to your ERP so stock, prices and orders match.',
   },
   {
     category: 'features',

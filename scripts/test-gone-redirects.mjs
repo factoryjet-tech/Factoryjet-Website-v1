@@ -49,6 +49,8 @@ const cases = {
   '/home/': '/',
   '/post/using-data-driven-insights-to-supercharge-your-e-commerce-funnel': '/blog',
   '/india/pricing/': '/pricing',
+  '/industries': '/',
+  '/industries/': '/',
   '/india/7-day-website-delivery/': '/web-design',
   '/wordpress-development/mumbai': '/wordpress-development',
   '/shopify-development/kochi': '/shopify-development',

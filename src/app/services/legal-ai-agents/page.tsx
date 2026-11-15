@@ -15,7 +15,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/legal-ai-agents';
 const PAGE_TITLE = 'AI for Law Firms: Legal AI Agents & AI Intake | FactoryJet';
 const PAGE_DESC =
   'AI for law firms: custom legal AI agents and an AI receptionist for intake, contract redlining and discovery, synced with Clio, MyCase and Filevine.';
-const PAGE_MODIFIED = '2026-10-29';
+const PAGE_MODIFIED = '2026-11-15';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below. So the two
@@ -411,7 +411,7 @@ export default function LegalAiAgentsPage() {
                 </h1>
 
                 <p className="text-lg sm:text-xl text-[#46403B] mb-8 leading-relaxed">
-                  We engineer secure, sovereign AI agents for American law firms and corporate legal departments. They run 24/7 client intake qualification, playbook-driven contract redlining, and multi-thousand page discovery synthesis. Then they sync matters bi-directionally with Clio, MyCase, Filevine, NetDocuments, PracticePanther, Smokeball, and iManage.
+                  We build secure, private AI agents for law firms and corporate legal departments across the US. They run 24/7 client intake qualification, playbook-driven contract redlining, and multi-thousand page discovery synthesis. Then they sync matters bi-directionally with Clio, MyCase, Filevine, NetDocuments, PracticePanther, Smokeball, and iManage.
                 </p>
 
                 <div className="mb-8">

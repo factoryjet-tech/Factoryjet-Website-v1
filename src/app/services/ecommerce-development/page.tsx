@@ -82,7 +82,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-10-29';
+const PAGE_MODIFIED = '2026-11-15';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -574,6 +574,12 @@ const FAQ_ITEMS = [
     question: 'What does a custom ecommerce development company actually do?',
     answer:
       'A custom ecommerce development company designs and builds your store end to end rather than installing a generic template. For FactoryJet, that means custom storefront design, custom theme code, payment configuration, and ERP integrations. It also includes SEO-safe migrations and rigorous QA. You get the full codebase on GitHub at launch, ensuring zero vendor lock-in.',
+  },
+  {
+    category: 'trust',
+    question: 'Should I hire an ecommerce development agency or a freelance developer?',
+    answer:
+      'A freelance developer suits a theme change or a short list of fixes. An ecommerce development agency suits a build that touches several systems at once, such as your ERP, payments, shipping and a B2B portal, because design, development, integration and testing run together and one team answers for all of it. Whoever you hire, ask to see a live store connected to the systems you run, and ask to see working software before you sign.',
   },
   {
     category: 'platform',

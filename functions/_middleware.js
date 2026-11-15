@@ -299,6 +299,9 @@ export const GONE_RULES = [
   [/^\/(?:index\.php|index\.html|home|FactoryJet)$/, '/'],
   // Old Wix blog, pre-2026 site.
   [/^\/post\/.+$/, '/blog'],
+  // No industries hub exists (15 Nov 2026: ~0 US searches for hub phrases); the
+  // header's Industries menu links each industry page. /us/industries hopped here.
+  [/^\/industries$/, '/'],
   [/^\/india\/pricing$/, '/pricing'],
   [/^\/india(?:\/.*)?$/, '/web-design'],
   [new RegExp(`^/wordpress-development/${IN_CITY}$`), '/wordpress-development'],

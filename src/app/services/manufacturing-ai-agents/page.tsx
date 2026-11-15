@@ -15,8 +15,8 @@ import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 const CANONICAL_URL = 'https://factoryjet.com/services/manufacturing-ai-agents';
 const PAGE_TITLE = 'Manufacturing AI Agents for Quoting & ERP | FactoryJet';
 const PAGE_DESC =
-  'AI agents for US manufacturers that read RFQs and drawings, draft quotes, reconcile supplier POs and write approved drafts into NetSuite, SAP or Epicor.';
-const PAGE_MODIFIED = '2026-10-10';
+  'AI for manufacturing: agents that read RFQs and drawings, draft quotes, reconcile supplier POs and stage drafts in NetSuite, SAP or Epicor for approval.';
+const PAGE_MODIFIED = '2026-11-15';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below, so the two
@@ -87,6 +87,12 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'What is a manufacturing AI agent and how does it operate?',
     answer:
       "A manufacturing AI agent is software that connects to your ERP, your email inbox and your document files and does a defined job from start to finish. It reads an incoming RFQ email, pulls the line items and specs off the drawing or PDF, checks them against your inventory and price rules, and drafts a quote or a PO reconciliation. A person approves the draft before anything is sent or posted. The pricing maths runs in ordinary code, so the model never guesses a number.",
+  },
+  {
+    category: 'basics',
+    question: 'How is AI used in manufacturing?',
+    answer:
+      "Most AI for manufacturing falls into two groups. The first is ready-made software for the shop floor, such as predictive maintenance and camera inspection. The second is custom agents for the office work around each order, and that is what we build: an agent that reads an RFQ and its drawing and drafts the quote, one that checks supplier purchase order acknowledgements against your ERP, and a read-only operations agent that answers floor questions from your ERP, CMMS and historian. A person approves every draft before it is sent or posted.",
   },
   {
     category: 'basics',
@@ -385,7 +391,7 @@ export default function ManufacturingAiAgentsPage() {
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#14110F] font-heading leading-tight mb-6">Manufacturing AI Agents for Quoting and ERP Automation.</h1>
                 
                 <p className="text-lg sm:text-xl text-[#46403B] mb-8 leading-relaxed">
-                  We build AI agents for American machine shops, equipment fabricators, and contract manufacturers. The agent reads RFQs and CAD drawings and drafts the quote. It reconciles supplier purchase orders. Then it writes each draft into NetSuite, SAP, Epicor, or Infor for your team to approve.
+                  We build AI agents for manufacturing teams at American machine shops, equipment fabricators, and contract manufacturers. The agent reads RFQs and CAD drawings and drafts the quote. It reconciles supplier purchase orders. Then it writes each draft into NetSuite, SAP, Epicor, or Infor for your team to approve.
                 </p>
 
                 <div className="mb-8">
