@@ -10,7 +10,8 @@ import { HOME_FAQS } from '@/components/v2/HomeFaqs';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   Homepage, rebuilt 2026-09-23 in the AI Agent Development page's design system.
+   Homepage, rebuilt 2026-09-23 in the AI Agent Development page's design system,
+   cut to a short single-offer page on 2026-11-15 (see HomeSections.tsx header).
 
    Entity (title/meta/Service schema): "Ecommerce Development Company" for DTC and
    B2B brands, with AI development, AI search & SEO, and website design as linked
@@ -21,9 +22,9 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
    HomeFaqs.ts feeds both the visible accordion and the FAQPage schema below.
 ───────────────────────────────────────────────────────────────────────────── */
 
-const TITLE = 'Ecommerce Development Company for DTC & B2B | FactoryJet';
+const TITLE = 'Ecommerce Development Company for Shopify & ERP | FactoryJet';
 const DESCRIPTION =
-  'Ecommerce development company for DTC & B2B brands: stores, B2B portals, and the AI agents that keep them running. Plus AI SEO and web design. Get an audit.';
+  'Shopify and WooCommerce stores and B2B portals, connected to QuickBooks, NetSuite or Odoo, with AI agents for repeat work. Demo before you sign.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
 };
 
 // Freshness signal. Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-10-04';
+const PAGE_MODIFIED = '2026-11-15';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -65,7 +66,7 @@ const webPageSchema = {
   dateModified: PAGE_MODIFIED,
   isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
   publisher: { '@id': 'https://factoryjet.com/#organization' },
-  speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.fact p', '.answer', '.ans'] },
+  speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.lead', '.answer', '.ans'] },
 };
 
 const FAQ_SCHEMA = {
@@ -84,9 +85,9 @@ const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   serviceType: 'Ecommerce development',
-  name: 'Ecommerce development and AI commerce agents',
+  name: 'Ecommerce development and ERP integration',
   description:
-    'Ecommerce development for DTC and B2B brands: stores and B2B portals on Shopify, Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, headless, and Commerceflo, integrated with ERP, POS, 3PL, and marketplaces, plus AI agents that list, reprice, and keep inventory in sync.',
+    'Ecommerce development for DTC and B2B brands: Shopify, Shopify Plus and WooCommerce stores and B2B portals, connected to QuickBooks, NetSuite, Odoo and other ERPs, plus AI agents that draft sales orders and quotes from emailed purchase orders and RFQs for a person to approve.',
   provider: { '@id': 'https://factoryjet.com/#organization' },
   areaServed: { '@type': 'Country', name: 'United States' },
   audience: { '@type': 'BusinessAudience', name: 'DTC and B2B brands' },
@@ -95,10 +96,10 @@ const SERVICE_SCHEMA = {
     name: 'FactoryJet services',
     itemListElement: [
       { name: 'Ecommerce development', url: 'https://factoryjet.com/services/ecommerce-development' },
+      { name: 'B2B ecommerce portals', url: 'https://factoryjet.com/b2b-ecommerce' },
+      { name: 'Ecommerce ERP integration', url: 'https://factoryjet.com/services/ecommerce-erp-integration' },
+      { name: 'Shopify QuickBooks integration', url: 'https://factoryjet.com/services/shopify-quickbooks-integration' },
       { name: 'AI agent development', url: 'https://factoryjet.com/services/ai-agent-development' },
-      { name: 'AI integration services', url: 'https://factoryjet.com/services/ai-integration-services' },
-      { name: 'AI SEO services', url: 'https://factoryjet.com/services/ai-seo' },
-      { name: 'Website design and development', url: 'https://factoryjet.com/services/web-design' },
     ].map((s) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: s.name, url: s.url } })),
   },
 };
@@ -112,7 +113,7 @@ export default function USHomePage() {
       <script id="service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <BreadcrumbSchema items={[{ name: 'Home', url: 'https://factoryjet.com' }]} />
 
-      <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
+      <SiteHeader cta={{ label: 'Get a commerce audit', modal: true, region: 'us' }} />
 
       <HomeSections />
 
@@ -120,7 +121,7 @@ export default function USHomePage() {
         region="us"
         source="exit_intent_us_home"
         heading="Get a free commerce audit"
-        subheading="We will map your channels, catalog, and B2B into one system. Just your name and email."
+        subheading="Tell us your store and the systems it should connect to. Just your name and email."
         promo="Free commerce audit, no cost, no obligation"
       />
       <SiteFooter linkColumns={US_FOOTER_COLUMNS} />

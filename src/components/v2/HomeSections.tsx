@@ -1,86 +1,79 @@
-import { Fragment } from 'react';
 import LeadFormInline from '@/components/LeadFormInline';
-import { HOME_FAQ_CATEGORIES, HOME_FAQS } from './HomeFaqs';
+import { HOME_FAQS } from './HomeFaqs';
 import MobileStickyBar from './MobileStickyBar';
-import { ProblemTax, UnifiedLayers, StackVsSystem, IntegrationMap } from './HomeCommerceSections';
-import { AgentRunSection, AgentCatalog, BuildVsBuy, AgentMidCta } from './HomeAgentSections';
-import { CostAnswers, WorkDirectory, AiAnswerMock, AiVisibilityBand } from './HomeAnswerSections';
 import './AiAgentDevelopmentSections.css';
 import './HomeSections.css';
 import './HomeExtraSections.css';
 
 /*
- * Homepage (2026-09-23): the AI Agent Development page's design system applied
- * to the ecommerce + AI commerce positioning. Approved mockup:
- * https://claude.ai/artifact/T9nbSTbX581xUhGkXDzBYh (v3). Keyword/SERP/PAA map:
- * pipeline/research/HOMEPAGE-REDESIGN-KEYWORDS-2026-09-23.md
+ * Homepage. Rebuilt 2026-11-15 as a short page for one buyer (mid-market DTC and
+ * B2B brands, $20K+ store and integration projects) and one offer (commerce audit).
+ * Research: docs/reports/2026-11-15-homepage-competitor-research.md (gitignored).
+ * The 2026-10-04 sections (problem stats, unified commerce, agent catalog, web
+ * design, AI search, city directory) were cut; they live in git history and the
+ * service pages already cover them.
  *
- * Static server component. The only client code is HeroInlineForm (lead capture
- * + step-2 details modal). The hero workflow panel animates with CSS only.
- *
- * 2026-10-04: added the problem, unified layers, integrations, AI agent, cost and
- * directory sections (HomeCommerceSections, HomeAgentSections, HomeAnswerSections).
+ * Static server component. Client code: LeadFormInline and MobileStickyBar.
+ * Claims rule: no metrics next to a client name; GPSUK is Commerceflo, Sow Easy is
+ * WooCommerce + Odoo, Mannik is WooCommerce (never Shopify). Costs are sourced
+ * market ranges only (pipeline/research/MARKET-PRICE-RANGES-2026-09-30.md).
  */
 
 function HomeFaqAccordion() {
   return (
     <div className="faqlist">
-      {HOME_FAQ_CATEGORIES.map((category) => (
-        <Fragment key={category.id}>
-          <div className="faq-category" id={category.id}>{category.label}</div>
-          {HOME_FAQS.filter((faq) => faq.category === category.key).map((faq) => (
-            <details className="faqitem" data-faq-item key={faq.id}>
-              <summary data-faq-question>
-                <span className="qid">{faq.id}</span>
-                <span className="qtext">{faq.question}</span>
-                <span className="chev" aria-hidden="true">+</span>
-              </summary>
-              <p className="ans" data-faq-answer>{faq.answer}</p>
-            </details>
-          ))}
-        </Fragment>
+      {HOME_FAQS.map((faq) => (
+        <details className="faqitem" data-faq-item key={faq.id}>
+          <summary data-faq-question>
+            <span className="qid">{faq.id}</span>
+            <span className="qtext">{faq.question}</span>
+            <span className="chev" aria-hidden="true">+</span>
+          </summary>
+          <p className="ans" data-faq-answer>{faq.answer}</p>
+        </details>
       ))}
     </div>
   );
 }
 
-const WORK = [
+const STORES = [
+  { client: 'Exaco', system: 'Shopify', image: '/clients/screens/european-garden.webp', alt: 'European Garden Shopify store homepage, built for Exaco', href: 'https://europeangarden.com', external: true },
+  { client: 'GPSUK', system: 'B2B store on Commerceflo', image: '/clients/screens/gpsuk.webp', alt: 'GPSUK promotional products trade store on Commerceflo', href: '/case-studies/gpsuk-promotional-products', external: false },
+  { client: 'DTF Virginia', system: 'Shopify', image: '/clients/screens/dtf-virginia.webp', alt: 'DTF Virginia Shopify store homepage', href: 'https://dtfvirginia.com', external: true },
+  { client: 'Mannik', system: 'WooCommerce', image: '/clients/screens/mannik.webp', alt: 'Mannik WooCommerce store homepage', href: 'https://mannik.co.uk', external: true },
+  { client: 'Shop Holistico', system: 'Shopify', image: '/clients/screens/shopholistico.webp', alt: 'Shop Holistico Shopify store homepage', href: '/case-studies/shopholistico-shopify-store', external: false },
+  { client: 'MUE Wholesale', system: 'Wholesale store', image: '/clients/screens/mue-wholesale.webp', alt: 'MUE Wholesale store homepage for MakeUp Eraser', href: 'https://muewholesale.com', external: true },
+] as const;
+
+const CASES = [
   {
-    tag: 'SHOPIFY · US STORE',
-    client: 'Shopholistico',
-    summary: 'A custom Shopify theme for a whole-food supplement brand selling across the US, with subscribe-and-save plans, bundles and two landing pages built for Meta ads.',
-    image: '/images/work/shopholistico-desktop.webp',
-    alt: 'Shopholistico homepage on desktop, a Shopify store for whole-food supplements',
-    site: 'https://shopholistico.com/',
-    caseStudy: '/case-studies/shopholistico-shopify-store',
+    client: 'Exaco',
+    from: 'Shopify', to: 'QuickBooks Enterprise',
+    status: 'STORE LIVE · EUROPEAN GARDEN BRAND',
+    summary: 'Exaco chose us to build a new Shopify store for its European Garden brand and to connect it to QuickBooks Enterprise. Before it signed, we built a draft theme inside its own Shopify store. The store is live.',
+    href: 'https://europeangarden.com', linkLabel: 'Visit the live store', external: true,
   },
   {
-    tag: 'AI AGENT · US LAW FIRM',
-    client: 'Washington Law Group',
-    summary: 'An AI agent that finds serious crashes involving commercial vehicles in published news and police sources, checks the facts, and alerts the firm by email. Live, running every two hours.',
-    image: '',
-    alt: '',
-    site: '',
-    caseStudy: '/case-studies/washington-law-group-accident-detection-agent',
+    client: 'Sow Easy',
+    from: 'WooCommerce', to: 'Odoo',
+    status: 'BUILD IN PROGRESS · STAGING',
+    summary: 'A trade store for a B2B distributor that reads stock, pricing and SKUs from Odoo, so a change made in Odoo shows on the site without anyone retyping it. Being tested on staging before launch.',
+    href: '/case-studies/sow-easy-distributor-portal', linkLabel: 'Read the case study', external: false,
   },
   {
-    tag: 'BUSINESS WEBSITE · 75+ PAGES',
-    client: 'Impulse Branding',
-    summary: 'A large business website for a signage and fit-out company, with service, case study and insight pages built so search engines and AI answers can read them.',
-    image: '/images/work/impulse-branding-desktop.webp',
-    alt: 'Impulse Branding website homepage on desktop',
-    site: 'https://www.impulsebranding.in',
-    caseStudy: '/case-studies/impulse-branding-migration',
+    client: 'GPSUK',
+    from: 'Quote', to: 'Order',
+    status: 'LIVE · B2B STOREFRONT',
+    summary: 'A trade storefront where business buyers log in, see their own account prices, and move from quote to order without retyping.',
+    href: '/case-studies/gpsuk-promotional-products', linkLabel: 'Read the case study', external: false,
   },
-  {
-    tag: 'INDUSTRIAL WEBSITE · SEO',
-    client: 'Yadav Entrance Automation',
-    summary: 'A website built from scratch for an entrance automation manufacturer, covering 16 product lines, with SEO and AI search work that continues after launch.',
-    image: '/images/work/yadav-entrance-automation-desktop.webp',
-    alt: 'Yadav Entrance Automation website homepage on desktop',
-    site: 'https://yadaventranceautomation.com',
-    caseStudy: '/case-studies/yadav-entrance-automation-website-seo',
-  },
+] as const;
+
+const COSTS = [
+  { what: 'Store with custom design and integrations', note: 'Small to mid-sized business', range: '$5,000 to $25,000', source: 'BigCommerce, ecommerce cost guide', href: '/blog/ecommerce-website-cost-2026', label: 'Ecommerce website cost' },
+  { what: 'Custom build with advanced integrations', note: 'Mid-market and enterprise, advanced integrations', range: '$25,000 to $250,000+', source: 'BigCommerce, ecommerce cost guide', href: '/blog/ecommerce-website-cost-2026', label: 'Ecommerce website cost' },
+  { what: 'Website redesign by an agency', note: 'Agency range; freelancers charge less', range: '$5,000 to $75,000', source: 'WebFX, website redesign pricing (May 2026)', href: '/services/website-redesign', label: 'Website redesign' },
+  { what: 'Custom AI agent', note: 'One agent, built for your systems', range: '$5,000 to $180,000+', source: 'ProductCrafters, 2026 pricing breakdown', href: '/blog/what-is-an-ai-agent-cost-2026', label: 'AI agent cost' },
 ] as const;
 
 export default function HomeSections() {
@@ -90,9 +83,9 @@ export default function HomeSections() {
         <section className="hero" id="hero">
           <div className="wrap hero-grid">
             <div className="hero-copy">
-              <div className="eyebrow">Ecommerce Development · AI Commerce</div>
-              <h1>We Build Your Ecommerce. And the <span className="hero-emphasis">AI Agents That Keep It Running.</span></h1>
-              <p className="lead">Ecommerce development for DTC and B2B brands on Shopify, Adobe Commerce, BigCommerce, WooCommerce, and Commerceflo, with AI agents that keep channels, stock, and orders in sync.</p>
+              <div className="eyebrow">Ecommerce Development · AI Agents</div>
+              <h1>Ecommerce Development <span className="hero-emphasis">Connected to Your ERP and Accounting.</span></h1>
+              <p className="lead">We build Shopify and WooCommerce stores and B2B portals for DTC and B2B brands, connect them to QuickBooks, NetSuite or Odoo, and add AI agents for the repeat work, such as turning emailed purchase orders into sales orders.</p>
               <div className="actions" id="home-hero-cta">
                 <a className="btn btn-primary" href="#get-audit">Get a commerce audit</a>
                 <a className="btn btn-ghost" href="#work">See our work</a>
@@ -101,10 +94,10 @@ export default function HomeSections() {
               <aside className="hero-proof" aria-label="Selected FactoryJet clients and track record">
                 <p><strong>500+ businesses served</strong> across web, commerce and AI engagements.</p>
                 <div className="proof-brands" aria-label="Selected clients">
-                  <span>Belle Maison</span>
-                  <span>Shopholistico</span>
-                  <span>Impulse Branding</span>
-                  <span>Yadav Entrance Automation</span>
+                  <span><b>Exaco</b>Shopify + QuickBooks</span>
+                  <span><b>Sow Easy</b>WooCommerce + Odoo</span>
+                  <span><b>GPSUK</b>B2B on Commerceflo</span>
+                  <span><b>DTF Virginia</b>Shopify store</span>
                 </div>
               </aside>
             </div>
@@ -182,383 +175,161 @@ export default function HomeSections() {
           </div>
         </div>
 
-        <section className="section facts" id="facts">
+        <section className="section stores" id="stores">
           <div className="wrap">
             <div className="section-head">
-              <div className="eyebrow">§ In Plain Terms</div>
-              <h2>What FactoryJet Is, and What Matters Before You Hire an Ecommerce Development Company</h2>
+              <div className="eyebrow">Client Stores</div>
+              <h2>Client Stores You Can Visit Today</h2>
+              <p>Each one is live. Open it, then judge the work yourself.</p>
             </div>
-            <div className="factswrap">
-              <div className="factlist">
-                <div className="fact"><div className="sec">§01</div><p>FactoryJet is an ecommerce development company for DTC and B2B brands in the United States, and an AI development company that builds the agents on top. We design, build, implement, and support stores, B2B portals, AI agents, and the websites and search presence around them. You own and run everything we build.</p></div>
-                <div className="fact"><div className="sec">§02</div><p>Most multichannel problems are data problems. When your store, Amazon, Walmart, TikTok Shop, and B2B portal each keep their own copy of stock, you oversell. We build one catalog, one live inventory, and one order queue under every channel.</p></div>
-                <div className="fact"><div className="sec">§03</div><p><span className="stat">About 70% of online carts are abandoned before checkout.</span> The store you sell from has to load fast and be easy to buy from, or the traffic you paid for leaks out. <a href="https://baymard.com/lists/cart-abandonment-rate" target="_blank" rel="noopener nofollow">Baymard Institute ↗</a></p></div>
-                <div className="fact"><div className="sec">§04</div><p><span className="stat">16.9% of US retail sales now happen online</span>, and visits to US retail sites from AI tools like ChatGPT rose 1,200% between July 2024 and February 2025. Buyers now ask an assistant what to buy. <a href="https://www.census.gov/retail/ecommerce.html" target="_blank" rel="noopener nofollow">US Census ↗</a> <a href="https://blog.adobe.com/en/publish/2025/03/17/adobe-analytics-traffic-to-us-retail-websites-from-generative-ai-sources-jumps-1200-percent" target="_blank" rel="noopener nofollow">Adobe Analytics ↗</a></p></div>
-                <div className="fact"><div className="sec">§05</div><p>The AI agents we build are task agents, not chatbots. They list new products in each marketplace's format, fix suppressed listings, reprice, and reconcile feeds on your live data, then hand the exceptions to your team.</p></div>
-              </div>
-              <div className="factphoto">
-                <img width="1000" height="667" src="/images/home/home-packing-review.webp" alt="AI-generated photo of a person approving a product on a tablet at a packing desk" loading="lazy" decoding="async" />
-                <div className="cap">FIELD REFERENCE · CATALOG CHECK BEFORE SHIP</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <ProblemTax />
-
-        <section className="definition" id="definition">
-          <div className="definition-image">
-            <img className="kenburns" width="1400" height="933" src="/images/home/home-unified-commerce-model.webp" alt="AI-generated model of one commerce hub connected to a storefront, a shopping cart, warehouse shelving, and wholesale pallets" loading="lazy" decoding="async" />
-          </div>
-          <div className="definition-copy">
-            <div className="eyebrow">Term</div>
-            <h2 className="term">Unified Commerce</h2>
-            <p>The architecture under omnichannel selling. One catalog, one live inventory, and one order engine that your store, marketplaces, point of sale, and B2B portal all read from, instead of each keeping its own copy. Omnichannel describes what the customer sees. Unified commerce is what keeps it true: a unit sold on Amazon is gone from Shopify and the wholesale portal moments later, and nobody re-keys a product five times. If a vendor's "omnichannel" setup still needs a nightly spreadsheet to reconcile, it isn't unified.</p>
-          </div>
-        </section>
-
-        <UnifiedLayers />
-
-        <section className="section comparison" id="comparison">
-          <div className="wrap">
-            <div className="section-head">
-              <div className="eyebrow">Compare</div>
-              <h2>How to Choose an Ecommerce Development Agency</h2>
-            </div>
-            <StackVsSystem />
-            <div className="tablewrap">
-              <table>
-                <thead><tr><th>Option</th><th>What you get</th><th>Best for</th><th>Trade‑off</th></tr></thead>
-                <tbody>
-                  <tr><th>A stack of apps<br /><span className="mono tableSubLabel">sync app, listing tool, repricer</span></th><td>Tools you wire together and babysit yourself</td><td>One store, one channel, a simple catalog</td><td>Each tool keeps its own count, so you oversell. Six tools, four logins, all on you</td></tr>
-                  <tr><th>Build‑and‑launch shops<br /><span className="mono tableSubLabel">theme agencies, freelancers</span></th><td>A new storefront, then a handoff</td><td>A fresh DTC store on one platform</td><td>Integrations and B2B rules often sit outside scope, and support ends at launch</td></tr>
-                  <tr className="us"><th>Commerce partner<br /><span className="mono tableSubLabel tableSubLabelAccent">FactoryJet</span></th><td>One system across store, marketplaces, and B2B, built and implemented on your platform, with agents on top</td><td>DTC and B2B brands selling in more than one place</td><td>Scoped on a call with a fixed proposal, so there's no instant price on the page</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        <section className="section capabilities" id="capabilities">
-          <div className="wrap">
-            <div className="section-head">
-              <div className="eyebrow">Capabilities</div>
-              <h2>Ecommerce Development Services</h2>
-            </div>
-            <div className="capgrid">
-              <a className="cap cap-1" href="/services/ecommerce-development">
-                <div className="caphead"><span className="capid">CAP‑01</span>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C94A1A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 9h16l-1 11H5L4 9Z"/><path d="M8 9V7a4 4 0 0 1 8 0v2"/></svg></div>
-                <div className="cap-diagram" aria-hidden="true"><svg viewBox="0 0 440 160" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <rect className="diagram-surface" x="40" y="20" width="360" height="120" rx="10"/><path className="diagram-faint" d="M40 44h360"/><circle cx="56" cy="32" r="3"/><circle cx="68" cy="32" r="3"/>
-                  <rect className="diagram-surface" x="60" y="58" width="90" height="62" rx="6"/><rect className="diagram-surface" x="175" y="58" width="90" height="62" rx="6"/><rect className="diagram-core" x="290" y="58" width="90" height="62" rx="6"/>
-                  <path d="M75 106h40M190 106h40"/><path className="diagram-wire" d="M305 106h40"/><path d="m326 82 7 7 13-15"/></svg></div>
-                <h3>Ecommerce Development</h3>
-                <p>Stores designed and built for speed and checkout, on the platform that fits your catalog and budget. We recommend the fit, not the platform we happen to prefer.</p>
-                <div className="systags"><span>Shopify Plus</span><span>Adobe Commerce</span><span>BigCommerce</span><span>WooCommerce</span><span>Headless</span></div>
-              </a>
-              <a className="cap cap-2" href="/b2b-ecommerce">
-                <div className="caphead"><span className="capid">CAP‑02</span>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C94A1A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div>
-                <div className="cap-diagram" aria-hidden="true"><svg viewBox="0 0 440 160" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path className="diagram-wire" d="M105 80h52m125 0h52"/>
-                  <g><rect className="diagram-surface" x="35" y="35" width="100" height="90" rx="10"/><circle cx="85" cy="62" r="11"/><path d="M65 99c0-24 40-24 40 0M57 112h56"/></g>
-                  <g><rect className="diagram-surface" x="170" y="35" width="100" height="90" rx="10"/><circle cx="220" cy="62" r="11"/><path d="M200 99c0-24 40-24 40 0M192 112h56"/></g>
-                  <g><rect className="diagram-core" x="305" y="35" width="100" height="90" rx="10"/><circle cx="355" cy="62" r="11"/><path d="M335 99c0-24 40-24 40 0M327 112h56"/></g></svg></div>
-                <h3>B2B Ecommerce Portals</h3>
-                <p>Trade buyers get their own login with tiered or contract pricing, net terms, quote approvals, and fast reordering, on the same catalog as your DTC store.</p>
-                <div className="systags"><span>Price tiers</span><span>Net terms</span><span>ERP</span></div>
-              </a>
-              <a className="cap cap-3" href="/services/ai-agent-development">
-                <div className="caphead"><span className="capid">CAP‑03</span>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C94A1A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="5" y="7" width="14" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg></div>
-                <div className="cap-diagram" aria-hidden="true"><svg viewBox="0 0 440 160" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path className="diagram-wire" d="M134 50h43q15 0 15 15v30q0 15 15 15h44m55 0h30V50h40"/>
-                  <rect className="diagram-surface" x="30" y="22" width="104" height="58" rx="10"/><path d="M48 41h68M48 55h42"/>
-                  <rect className="diagram-surface" x="54" y="97" width="80" height="40" rx="8"/><path d="M69 116h48"/>
-                  <rect className="diagram-core" x="251" y="82" width="55" height="55" rx="12"/><path d="m267 110 8 8 15-18"/>
-                  <rect className="diagram-surface" x="366" y="28" width="44" height="44" rx="8"/><path d="M379 50h18m-9-9v18"/></svg></div>
-                <h3>AI Commerce Agents</h3>
-                <p>Agents that list, reprice to hold the Buy Box, fix suppressed listings, and reconcile feeds. Built into your system, owned by you, exceptions routed to your team.</p>
-                <div className="systags"><span>Listings</span><span>Repricing</span><span>Feeds</span></div>
-              </a>
-              <a className="cap cap-4" href="/services/ai-integration-services">
-                <div className="caphead"><span className="capid">CAP‑04</span>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C94A1A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><circle cx="18" cy="6" r="2.5"/><path d="M8.2 6h7.6"/><path d="M18 8.5V15.5"/></svg></div>
-                <div className="cap-diagram" aria-hidden="true"><svg viewBox="0 0 440 160" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path className="diagram-wire" d="M90 40h58q20 0 20 20v20h104V60q0-20 20-20h58M90 120h58q20 0 20-20V80m104 0v20q0 20 20 20h58"/>
-                  <rect className="diagram-surface" x="46" y="24" width="44" height="32" rx="6"/><rect className="diagram-surface" x="350" y="24" width="44" height="32" rx="6"/>
-                  <rect className="diagram-surface" x="46" y="104" width="44" height="32" rx="6"/><rect className="diagram-surface" x="350" y="104" width="44" height="32" rx="6"/>
-                  <rect className="diagram-core" x="193" y="53" width="54" height="54" rx="12"/><path d="m214 69-9 11 9 11m12-22 9 11-9 11"/></svg></div>
-                <h3>Marketplace, ERP &amp; POS Integration</h3>
-                <p>Your ERP, POS, 3PL, and marketplaces tied into one order and inventory layer, so every system reads the same live number instead of its own copy.</p>
-                <div className="systags"><span>Amazon</span><span>Walmart</span><span>TikTok Shop</span><span>NetSuite</span><span>3PL</span></div>
-              </a>
-              <a className="cap cap-5" href="/services/ecommerce-seo">
-                <div className="caphead"><span className="capid">CAP‑05</span>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C94A1A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 17 9 11 13 15 21 6"/><path d="M15 6h6v6"/></svg></div>
-                <div className="cap-diagram" aria-hidden="true"><svg viewBox="0 0 440 160" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <rect className="diagram-surface" x="45" y="24" width="350" height="112" rx="10"/>
-                  <path className="diagram-faint" d="M65 52h310M65 80h310M65 108h310M105 40v80m76-80v80m76-80v80m76-80v80"/>
-                  <path className="diagram-wire" d="M65 101h38l13-31 19 42 25-63 22 35h38l15-19 18 32 24-41 17 26h61l20-18"/>
-                  <circle className="diagram-core" cx="375" cy="64" r="7"/></svg></div>
-                <h3>Commerce SEO &amp; AI Visibility</h3>
-                <p>Category and product pages that rank, and a brand that ChatGPT, Perplexity, and Gemini name when buyers ask what to buy.</p>
-                <div className="systags"><span>Google</span><span>ChatGPT</span><span>Perplexity</span></div>
-              </a>
-              <a className="cap cap-6" href="/services/magento-development">
-                <div className="caphead"><span className="capid">CAP‑06</span>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C94A1A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M4 7h11l-3-3M20 17H9l3 3"/></svg></div>
-                <div className="cap-diagram" aria-hidden="true"><svg viewBox="0 0 440 160" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <g><rect className="diagram-surface" x="40" y="30" width="110" height="100" rx="10"/><path d="M60 55h70M60 75h70M60 95h40"/></g>
-                  <path className="diagram-wire" d="M150 80h140"/><path className="diagram-wire" d="m276 68 14 12-14 12"/>
-                  <rect className="diagram-surface" x="190" y="60" width="60" height="40" rx="6"/><path d="M204 80h32"/>
-                  <g><rect className="diagram-core" x="290" y="30" width="110" height="100" rx="10"/><path d="M310 55h70M310 75h70"/><path d="m323 97 8 8 15-18"/></g></svg></div>
-                <h3>Replatforming &amp; Migration</h3>
-                <p>Off Magento or an aging stack without losing rankings: products, customers, orders, and B2B pricing moved, with a full 301 map and a cutover plan.</p>
-                <div className="systags"><span>Data migration</span><span>301 map</span><span>Cutover</span></div>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section className="section platforms" id="platforms">
-          <div className="wrap">
-            <div className="section-head plat-head">
-              <div>
-                <div className="eyebrow">Platforms</div>
-                <h2>Ecommerce Platforms We Build On</h2>
-              </div>
-              <p>We recommend the platform that fits your catalog, your B2B rules, and your budget, not the one we happen to prefer. Here is where each one fits, and what we build on it.</p>
-            </div>
-            <div className="platlist" role="list">
-              <a className="plat plat-own" role="listitem" href="/commerceflo">
-                <span className="capid">PLT‑01</span>
-                <div className="plat-name"><h3>Commerceflo</h3><span className="plat-flag">OUR PLATFORM · EARLY ACCESS</span></div>
-                <div className="plat-fit"><span className="k">Best for</span>Brands selling DTC, B2B, on marketplaces, and in retail who want one data model under all of it</div>
-                <p className="plat-build">Commerceflo by FactoryJet is our own AI commerce operator. Store, B2B portals, marketplace listings, and point of sale run on one data model, with eight named AI agents that propose fixes to inventory, pricing, and content.</p>
-                <span className="plat-go" aria-hidden="true">↗</span>
-              </a>
-              <a className="plat" role="listitem" href="/services/shopify-development">
-                <span className="capid">PLT‑02</span>
-                <div className="plat-name"><h3>Shopify</h3></div>
-                <div className="plat-fit"><span className="k">Best for</span>DTC brands that want a fast launch and a deep app ecosystem</div>
-                <p className="plat-build">Custom Shopify themes, new store builds, migrations onto Shopify, app and ERP integrations, and ongoing Shopify maintenance.</p>
-                <span className="plat-go" aria-hidden="true">↗</span>
-              </a>
-              <a className="plat" role="listitem" href="/services/shopify-plus-agency">
-                <span className="capid">PLT‑03</span>
-                <div className="plat-name"><h3>Shopify Plus</h3></div>
-                <div className="plat-fit"><span className="k">Best for</span>High-volume brands running DTC and B2B on one store</div>
-                <p className="plat-build">Shopify Plus B2B with company accounts, price lists, and payment terms, checkout extensions, multi-store setups, and workflow automation.</p>
-                <span className="plat-go" aria-hidden="true">↗</span>
-              </a>
-              <a className="plat" role="listitem" href="/services/magento-development">
-                <span className="capid">PLT‑04</span>
-                <div className="plat-name"><h3>Adobe Commerce (Magento)</h3></div>
-                <div className="plat-fit"><span className="k">Best for</span>Very large catalogs and deep, native B2B rules</div>
-                <p className="plat-build">Magento 2 builds, upgrades, speed work, and B2B modules, plus migrations off Magento when it no longer fits.</p>
-                <span className="plat-go" aria-hidden="true">↗</span>
-              </a>
-              <a className="plat" role="listitem" href="/bigcommerce-development">
-                <span className="capid">PLT‑05</span>
-                <div className="plat-name"><h3>BigCommerce</h3></div>
-                <div className="plat-fit"><span className="k">Best for</span>Mid-market B2B brands that want strong B2B features without enterprise cost</div>
-                <p className="plat-build">BigCommerce and B2B Edition builds, multi-storefront setups, and catalog and ERP integration.</p>
-                <span className="plat-go" aria-hidden="true">↗</span>
-              </a>
-              <a className="plat" role="listitem" href="/services/woocommerce-development">
-                <span className="capid">PLT‑06</span>
-                <div className="plat-name"><h3>WooCommerce</h3></div>
-                <div className="plat-fit"><span className="k">Best for</span>Brands already on WordPress who want full control and no platform license fee</div>
-                <p className="plat-build">Custom WooCommerce stores, plugin development, subscriptions, and speed and security hardening.</p>
-                <span className="plat-go" aria-hidden="true">↗</span>
-              </a>
-              <a className="plat" role="listitem" href="/headless-commerce">
-                <span className="capid">PLT‑07</span>
-                <div className="plat-name"><h3>Headless &amp; Custom Builds</h3></div>
-                <div className="plat-fit"><span className="k">Best for</span>Product configurators, unusual checkouts, or speed targets a theme can't reach</div>
-                <p className="plat-build">Headless storefronts on Next.js over Shopify or BigCommerce, and fully custom ecommerce builds when no platform fits.</p>
-                <span className="plat-go" aria-hidden="true">↗</span>
-              </a>
-            </div>
-            <div className="plat-foot">
-              <span>Not sure which fits? We'll tell you on a scoping call, including when your current platform is fine.</span>
-              <a href="/best-ecommerce-platforms">Compare the best ecommerce platforms ↗</a>
-            </div>
-          </div>
-        </section>
-
-        <IntegrationMap />
-
-        <AgentRunSection />
-
-        <AgentCatalog />
-
-        <BuildVsBuy />
-
-        <AgentMidCta />
-
-        <section className="section services" id="services">
-          <div className="wrap">
-            <div className="section-head">
-              <div className="eyebrow">More From the Same Team</div>
-              <h2>AI Search &amp; SEO and Website Design</h2>
-              <p>The same team that builds your store and your agents also gets brands cited in AI answers and designs websites for B2B and service businesses. One set of standards, and you own everything we ship.</p>
-            </div>
-            <div className="svclist">
-              <article className="svc" id="svc-ai-search">
-                <div>
-                  <div className="svc-top"><span className="svc-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5M8.5 11h5M11 8.5v5"/></svg></span><span className="capid">SVC‑01</span></div>
-                  <h3>AI Search &amp; SEO</h3>
-                  <div className="aka">AI SEO services · Generative engine optimization · AEO · Ecommerce SEO</div>
-                  <p className="def">AI search optimization gets your brand named and cited when buyers ask ChatGPT, Claude, Gemini, Perplexity, or Google AI Overviews what to buy, while your pages still rank in classic Google results. It's also called generative engine optimization (GEO) or answer engine optimization (AEO). Start with a free check of who AI assistants recommend in your category today.</p>
-                  <div className="svc-links"><a className="btn btn-primary" href="/services/ai-seo">AI SEO services</a><a className="btn btn-ghost" href="/ai-visibility-checker">Free AI visibility check</a></div>
-                </div>
-                <div>
-                <AiAnswerMock />
-                <ul>
-                  <li><span><b>AI visibility audit</b> across ChatGPT, Perplexity, and AI Overviews</span></li>
-                  <li><span><b>Generative engine optimization</b> for answer-first, citable pages</span></li>
-                  <li><span><b>Ecommerce SEO</b> for category and product pages</span></li>
-                  <li><span><b>Technical SEO &amp; schema</b> that search engines and LLMs can parse</span></li>
-                  <li><span><b>AI crawler access</b>, robots.txt, and llms.txt set up correctly</span></li>
-                  <li><span><b>Local &amp; B2B SEO</b> for service areas and trade buyers</span></li>
-                </ul>
-                <div className="systags"><span>Google</span><span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Perplexity</span></div>
-                </div>
-              </article>
-              <article className="svc" id="svc-web-design">
-                <div>
-                  <div className="svc-top"><span className="svc-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8M12 18v3"/></svg></span><span className="capid">SVC‑02</span></div>
-                  <h3>Website Design &amp; Development</h3>
-                  <div className="aka">Web design company · Website redesign · Web development services</div>
-                  <p className="def">Custom website design and development for B2B and service businesses: planned around what your buyers need to see, built to load fast, and structured so Google and AI assistants can read it from day one. New builds and redesigns, on WordPress, Webflow, or a custom Next.js stack.</p>
-                  <div className="svc-links"><a className="btn btn-primary" href="/services/web-design">Website design services</a><a className="btn btn-ghost" href="/services/website-redesign">Website redesign</a></div>
-                </div>
-                <div>
-                <ul>
-                  <li><span><b>Custom website design</b> with no templates bolted on</span></li>
-                  <li><span><b>Website redesign</b> with 301 mapping that keeps your rankings</span></li>
-                  <li><span><b>B2B website design</b> for long sales cycles and RFQs</span></li>
-                  <li><span><b>Web development services</b> and web applications</span></li>
-                  <li><span><b>Core Web Vitals</b> speed work for mobile buyers</span></li>
-                  <li><span><b>Industry websites</b> for manufacturing, SaaS, legal, and healthcare</span></li>
-                </ul>
-                <div className="systags"><span>WordPress</span><span>Webflow</span><span>Next.js</span><span>Headless</span></div>
-                </div>
-              </article>
-            </div>
-            <AiVisibilityBand />
-          </div>
-        </section>
-
-        <CostAnswers />
-
-        <section className="photobreak" id="photobreak">
-          <img className="kenburns" width="1536" height="540" src="/images/home/home-order-flow-panorama.webp" alt="AI-generated model of an order moving from intake through routing, inventory, a check gate, and packed shipments" loading="lazy" decoding="async" />
-          <div className="caption"><span className="dot"></span>FIELD REFERENCE · ORDER TO SHIPPED</div>
-        </section>
-
-        <section className="section process" id="build">
-          <div className="wrap">
-            <div className="section-head">
-              <div className="eyebrow">Process</div>
-              <h2>How We Build</h2>
-            </div>
-            <div className="timeline">
-              <div className="tnode"><div className="idx">01</div><h3>Audit</h3><p>What you sell, where you sell it, and what breaks between channels today.</p></div>
-              <div className="tnode"><div className="idx">02</div><h3>Architect</h3><p>Platform, catalog model, and every integration mapped before any code.</p></div>
-              <div className="tnode"><div className="idx">03</div><h3>Build</h3><p>Store, portal, and agents built against your real data on a short cycle.</p></div>
-              <div className="tnode"><div className="idx">04</div><h3>Migrate</h3><p>Data moved with a 301 map, so rankings and order history survive cutover.</p></div>
-              <div className="tnode"><div className="idx">05</div><h3>Support</h3><p>We stay after launch: monitoring, fixes, and the next channel you add.</p></div>
-            </div>
-            <div className="taxbridge">
-              <p><b>Before you sign, you see it work.</b> For a store, we build a draft theme in your own store. For an AI agent, we build a demo that runs on your sample files and rules.</p>
-              <a href="#hero">Ask for a demo ↑</a>
-            </div>
-            <div className="timelineAction"><a className="btn btn-primary" href="#hero">Get a commerce audit</a></div>
+            <ul className="storegrid">
+              {STORES.map((s) => (
+                <li className="storecard" key={s.client}>
+                  <a href={s.href} target={s.external ? '_blank' : undefined} rel={s.external ? 'noopener' : undefined}>
+                    <span className="storeshot"><img width="1440" height="900" src={s.image} alt={s.alt} loading="lazy" decoding="async" /></span>
+                    <span className="storemeta"><b>{s.client}</b><span>{s.system}</span></span>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
         <section className="section work" id="work">
           <div className="wrap">
             <div className="section-head">
-              <div className="eyebrow">Recent Work</div>
-              <h2>Live Projects You Can Check Yourself</h2>
-              <p>Real clients, real sites, all live today. Open any of them, then read how we built it.</p>
+              <div className="eyebrow">Case Studies</div>
+              <h2>Stores and the Systems Behind Them</h2>
+              <p>Three projects, each with the platform and what it connects to. Where a build is still in progress, we say so.</p>
             </div>
-            <div className="workgrid">
-              {WORK.map((w) => (
-                <article className="workcard" key={w.client}>
-                  <div className={w.image ? 'workshot' : 'workshot workshot-steps'}>
-                    {w.image ? (
-                      // The section says "Open any of them", so the screenshot opens the live site.
-                      // Every card with a screenshot has a live site; the one without (WLG) shows steps.
-                      <a className="workshot-link" href={w.site} target="_blank" rel="noopener">
-                        <img width="1200" height="750" src={w.image} alt={w.alt} loading="lazy" decoding="async" />
-                      </a>
-                    ) : (
-                      <ol className="agentflow" aria-label="How the Washington Law Group agent works">
-                        <li><span>01</span>Reads licensed news, police and highway patrol feeds every two hours</li>
-                        <li><span>02</span>Keeps only serious crashes that involve a commercial vehicle</li>
-                        <li><span>03</span>Checks every name against the source article</li>
-                        <li><span>04</span>Emails the firm one clear alert per crash</li>
-                      </ol>
-                    )}
+            <div className="casegrid">
+              {CASES.map((c) => (
+                <article className="casecard" key={c.client}>
+                  <div className="casesys" aria-label={`${c.from} to ${c.to}`}>
+                    <span>{c.from}</span><span className="casewire" aria-hidden="true"></span><span>{c.to}</span>
                   </div>
-                  <div className="workbody">
-                    <span className="vtag">{w.tag}</span>
-                    <h3>{w.client}</h3>
-                    <p>{w.summary}</p>
-                    <div className="worklinks">
-                      <a href={w.caseStudy}>Read the case study <span aria-hidden="true">→</span></a>
-                      {w.site && <a href={w.site} target="_blank" rel="noopener">Visit live site <span aria-hidden="true">↗</span></a>}
-                    </div>
-                  </div>
+                  <span className="vtag">{c.status}</span>
+                  <h3>{c.client}</h3>
+                  <p>{c.summary}</p>
+                  <a className="caselink" href={c.href} target={c.external ? '_blank' : undefined} rel={c.external ? 'noopener' : undefined}>{c.linkLabel} <span aria-hidden="true">{c.external ? '↗' : '→'}</span></a>
                 </article>
               ))}
             </div>
-            <p className="workmore">
-              More work: <a href="/case-studies/flying-pixel-agency">Flying Pixel</a> (drone survey company), <a href="/case-studies/rdb-travels-cab-booking-website">RDB Travels</a> (cab hire), <a href="/case-studies/belle-maison-ecommerce-success">Belle Maison</a> (retail and trade store). <a href="/case-studies">See all case studies <span aria-hidden="true">→</span></a>
-            </p>
+            <p className="workmore"><a href="/case-studies">See all case studies <span aria-hidden="true">→</span></a></p>
           </div>
         </section>
 
-        <WorkDirectory />
+        <section className="section build" id="build">
+          <div className="wrap">
+            <div className="section-head">
+              <div className="eyebrow">What We Build</div>
+              <h2>Ecommerce Development Services</h2>
+              <p>Three kinds of project we build. AI agents and AI search sit on top once the store and its data are right.</p>
+            </div>
+            <div className="buildgrid">
+              <a className="buildcard" href="/services/ecommerce-development">
+                <span className="capid">01</span>
+                <h3>New Store or Redesign</h3>
+                <p>Shopify, Shopify Plus and WooCommerce stores built for speed and checkout, including migrations from another platform with a full redirect map.</p>
+                <div className="systags"><span>Shopify</span><span>Shopify Plus</span><span>WooCommerce</span><span>Migration</span></div>
+              </a>
+              <a className="buildcard" href="/b2b-ecommerce">
+                <span className="capid">02</span>
+                <h3>B2B Ordering Portal</h3>
+                <p>Trade buyers log in to see their own prices and terms, request quotes and reorder, on the same catalog as your retail store.</p>
+                <div className="systags"><span>Account pricing</span><span>Net terms</span><span>Quotes</span></div>
+              </a>
+              <a className="buildcard buildcard-key" href="/services/ecommerce-erp-integration">
+                <span className="capid">03</span>
+                <h3>Store to ERP and Accounting</h3>
+                <p>Orders, stock, customers and invoices kept in step between your store and QuickBooks, NetSuite or Odoo, so nobody retypes an order.</p>
+                <div className="systags"><span>QuickBooks</span><span>NetSuite</span><span>Odoo</span><span>HubSpot</span></div>
+              </a>
+            </div>
+            <div className="buildaddons">
+              <p><b>On top:</b> <a href="/services/ai-agent-development">AI agents</a> that turn emailed purchase orders and RFQs into draft orders and quotes for your team to approve, and <a href="/services/ai-seo">AI search work</a> so ChatGPT and Google can read your catalog.</p>
+              <nav className="buildlinks" aria-label="Integration and AI agent pages">
+                <a href="/services/shopify-quickbooks-integration">Shopify + QuickBooks</a>
+                <a href="/services/wordpress-shopify-integration">WordPress + Shopify</a>
+                <a href="/services/shopify-hubspot-integration">Shopify + HubSpot</a>
+                <a href="/services/shopify-edi-integration">Shopify EDI</a>
+                <a href="/services/netsuite-ai-agents">NetSuite AI agents</a>
+                <a href="/services/odoo-ai-agents">Odoo AI agents</a>
+                <a href="/services/erp-ai-agents">ERP AI agents</a>
+              </nav>
+            </div>
+          </div>
+        </section>
+
+        <section className="section terms" id="how-we-work">
+          <div className="wrap">
+            <div className="section-head">
+              <div className="eyebrow">How a Project Runs</div>
+              <h2>You See It Work Before You Sign</h2>
+            </div>
+            <div className="termgrid">
+              <div className="term"><span className="idx">01</span><h3>Demo before you sign</h3><p>For a store, we set up a draft theme in your own store. For an AI agent, we build a demo that runs on your sample files, so you can check it against a job you have already done by hand.</p></div>
+              <div className="term"><span className="idx">02</span><h3>Fixed price per phase</h3><p>Each phase is scoped, priced and signed on its own. You never sign one large open-ended contract.</p></div>
+              <div className="term"><span className="idx">03</span><h3>Defect cover</h3><p>Defects are fixed inside the build price for a cover period agreed before work starts.</p></div>
+              <div className="term"><span className="idx">04</span><h3>You own it</h3><p>On Shopify and WooCommerce builds, the code, the repository and the store sit in your name from day one. There is no FactoryJet subscription. Support after launch is optional, and each change is quoted and approved.</p></div>
+            </div>
+            <div className="midband">
+              <div>
+                <h3>Start With a Commerce Audit</h3>
+                <p>Send your store and the systems it should talk to. The founder replies within 24 hours.</p>
+              </div>
+              <a className="btn btn-primary" href="#get-audit">Get a commerce audit</a>
+            </div>
+          </div>
+        </section>
+
+        <section className="section founder" id="founder">
+          <div className="wrap founderwrap">
+            <img className="founderphoto" width="1024" height="1536" src="/images/team/bhavesh-barot.webp" alt="Bhavesh Barot, founder of FactoryJet" loading="lazy" decoding="async" />
+            <div>
+              <div className="eyebrow">Who You Work With</div>
+              <h2>Bhavesh Barot, Founder</h2>
+              <p>FactoryJet has built websites, stores and software since 2014, for more than 500 businesses. Every enquiry goes to Bhavesh, who reads the brief and replies within 24 hours.</p>
+              <a className="founderlink" href="https://www.linkedin.com/in/bhavesh-ai-gtm-expert/" target="_blank" rel="noopener">Bhavesh on LinkedIn <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </section>
+
+        <section className="section costsec" id="cost">
+          <div className="wrap">
+            <div className="section-head">
+              <div className="eyebrow">Cost</div>
+              <h2>What Projects Like These Cost: US Market Ranges</h2>
+              <p className="answer">These ranges come from the sources named in each row. They are not FactoryJet prices. Your number depends on scope, so you get a fixed proposal for each phase after a short scoping call.</p>
+            </div>
+            <div className="tablewrap">
+              <table>
+                <thead><tr><th>What you are buying</th><th>US market range</th><th>Published by</th><th>Guide</th></tr></thead>
+                <tbody>
+                  {COSTS.map((c) => (
+                    <tr key={c.what}>
+                      <th>{c.what}<br /><span className="mono tableSubLabel">{c.note}</span></th>
+                      <td className="range">{c.range}<small>one-time</small></td>
+                      <td>{c.source}</td>
+                      <td><a href={c.href}>{c.label}</a></td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="srcline costnote">Ranges checked against each source on 30 September 2026. Vendors and agencies publish these figures, so treat them as a starting point for a budget, not a quote.</p>
+          </div>
+        </section>
 
         <section className="section faq" id="faq">
           <div className="wrap">
             <div className="faqwrap">
               <div className="faqintro">
                 <div className="eyebrow">FAQ</div>
-                <h2 className="faqHeading">Questions Buyers Ask Before Hiring an Ecommerce Agency</h2>
-                <p>Real questions, direct answers. If yours isn't here, send a short brief.</p>
-                <nav className="faq-catnav" aria-label="FAQ categories">
-                  {HOME_FAQ_CATEGORIES.map((c) => <a key={c.id} href={`#${c.id}`}>{c.label}</a>)}
-                </nav>
+                <h2 className="faqHeading">Questions Buyers Ask Before Hiring an Ecommerce Development Company</h2>
+                <p>Direct answers. If yours isn't here, send a short brief.</p>
               </div>
               <HomeFaqAccordion />
-            </div>
-          </div>
-        </section>
-
-        <section className="section referencesSection references" id="references">
-          <div className="wrap">
-            <div className="eyebrow">Related</div>
-            <div className="refs">
-              <a href="/services/ecommerce-development">Ecommerce development services</a>
-              <a href="/services/shopify-development">Shopify development</a>
-              <a href="/b2b-ecommerce">B2B ecommerce portals</a>
-              <a href="/services/ai-agent-development">AI agent development</a>
-              <a href="/services/ai-seo">AI SEO services</a>
-              <a href="/services/web-design">Website design</a>
-              <a href="/blog/ecommerce-website-cost-2026">Ecommerce website cost guide</a>
-              <a href="/agentic-commerce">What is agentic commerce?</a>
-              <a href="/services/ai-automation">AI automation services</a>
-              <a href="/services/shopify-plus-b2b">Shopify Plus B2B</a>
-              <a href="/marketplace-management">Marketplace management</a>
-              <a href="/website-cost">Website cost guide</a>
             </div>
           </div>
         </section>
@@ -566,8 +337,8 @@ export default function HomeSections() {
         <section className="finalcta" id="finalcta">
           <div className="wrap">
             <div>
-              <h2>Tell Us What You Sell, and Where</h2>
-              <p>We'll map your channels, catalog, and B2B into one system, and show you which work the agents can take off your team's plate. You get a fixed proposal before any work starts.</p>
+              <h2>Tell Us What You Sell, and What It Should Connect To</h2>
+              <p>Send your store and your systems. The founder replies within 24 hours, and you get a fixed proposal for each phase before any work starts.</p>
             </div>
             <div className="finalcta-form" id="get-audit">
               <LeadFormInline
