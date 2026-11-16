@@ -317,6 +317,13 @@ const SERVICE_RULES: ServiceRule[] = [
     weight: 3,
   },
   {
+    href: '/services/shopify-netsuite-integration',
+    label: 'Shopify NetSuite Integration',
+    blurb: 'Connect Shopify or Shopify Plus to NetSuite with a connector, an iPaaS or custom middleware.',
+    keywords: ['shopify netsuite', 'netsuite integration', 'shopify erp', 'erp integration'],
+    weight: 5,
+  },
+  {
     href: '/services/shopify-hubspot-integration',
     label: 'Shopify HubSpot Integration',
     blurb: 'Sync Shopify customers, orders and B2B companies into HubSpot.',
@@ -785,6 +792,7 @@ const SERVICE_FAMILY: Record<string, ServiceFamily> = {
   '/b2b-ecommerce': 'ecommerce',
   '/b2b-ecommerce/punchout-catalog': 'ecommerce',
   '/services/shopify-hubspot-integration': 'ecommerce',
+  '/services/shopify-netsuite-integration': 'ecommerce',
   '/ecommerce-for-manufacturers': 'ecommerce',
   '/services/ecommerce-growth-agency': 'ecommerce',
   '/uk/ecommerce-development': 'ecommerce',

@@ -182,6 +182,8 @@ import { post as enterpriseAiAgentCost2026Post } from './posts/enterprise-ai-age
 import { post as aiAutomationAgencyCost2026Post } from './posts/ai-automation-agency-cost-2026';
 import { post as privateAiForBusinessOwnData2026Post } from './posts/private-ai-for-business-own-data-2026';
 import { post as bestAiVoiceAgentDevelopmentCompanies2026Post } from './posts/best-ai-voice-agent-development-companies-2026';
+import { post as shopifyErpIntegrationCost2026Post } from './posts/shopify-erp-integration-cost-2026';
+import { post as woocommerceB2bStoreCost2026Post } from './posts/woocommerce-b2b-store-cost-2026';
 
 export const POSTS: BlogPost[] = [
   // --- DIRECT-ANSWER GUIDES (2026-10-24): AI agent implementation timeline, Shopify Plus returns agents ---
@@ -4828,4 +4830,6 @@ export const POSTS: BlogPost[] = [
   whatIsAgenticAiPost,
   howToSellOnAmazon2026Post,
   howToSellOnWalmartMarketplace2026Post,
+  shopifyErpIntegrationCost2026Post,
+  woocommerceB2bStoreCost2026Post,
 ];

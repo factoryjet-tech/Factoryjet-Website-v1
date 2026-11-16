@@ -192,6 +192,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/faire-alternatives',                           source: 'src/app/faire-alternatives/page.tsx' },
   { path: '/services/shopify-checkout-customization',      source: 'src/app/services/shopify-checkout-customization/page.tsx' },
   { path: '/services/shopify-quickbooks-integration',      source: 'src/app/services/shopify-quickbooks-integration/page.tsx' },
+  { path: '/services/shopify-netsuite-integration',       source: 'src/app/services/shopify-netsuite-integration/page.tsx' },
   { path: '/services/shopify-hubspot-integration',         source: 'src/app/services/shopify-hubspot-integration/page.tsx' },
   { path: '/services/wordpress-shopify-integration',       source: 'src/app/services/wordpress-shopify-integration/page.tsx' },
   { path: '/services/ecommerce-erp-integration',           source: 'src/app/services/ecommerce-erp-integration/page.tsx' },
