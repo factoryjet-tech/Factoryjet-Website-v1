@@ -11,18 +11,25 @@ import '@/components/v2/PlatformPage.css';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const IMG = '/images/us/marketplace';
 const PAGE_URL = 'https://factoryjet.com/target-plus-marketplace';
+
+// Target's own pages. All read on 16 Nov 2026 unless the label says otherwise.
+const TP_HOME = 'https://plus.target.com/';
 const TP_APPLY = 'https://plus.target.com/apply';
+const TP_PROVIDERS = 'https://plus.target.com/service-providers';
 const TP_GROWTH = 'https://corporate.target.com/news-features/article/2026/07/target-plus-growth';
 const TP_SHOPIFY =
   'https://corporate.target.com/press/release/2024/06/target-and-shopify-partner-to-help-consumers-discover-and-shop-an-expanded-assortment-on-target-com';
+const TGT_SUPPLIERS =
+  'https://corporate.target.com/sustainability-governance/people-thriving-team-communities/responsible-supply-chains/suppliers';
+const READ = 'read 16 Nov 2026';
 const LINK = { color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' } as const;
 
-const PAGE_TITLE = 'Target Plus Agency: Target DVS and EDI Setup | FactoryJet';
+const PAGE_TITLE = 'Target Plus Marketplace Requirements & Setup | FactoryJet';
 const PAGE_DESCRIPTION =
-  'Target DVS means you ship Target.com orders from your own warehouse. We set up Target Plus listings, EDI 850, 856 and 810 links, and order feeds.';
+  'Target Plus is Target’s invite-only marketplace. Target’s seller requirements, the 70-day onboarding, the integration routes it allows, and how we help.';
 
 // Freshness signal. Bump only when the page content actually changes.
-const PAGE_MODIFIED = '2026-10-22';
+const PAGE_MODIFIED = '2026-11-16';
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -30,17 +37,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Target Plus Agency: Target DVS and EDI Setup | FactoryJet',
+    title: PAGE_TITLE,
     description:
-      'Target DVS and Target Plus explained, with Target’s published partner requirements and the EDI 850, 856 and 810 documents vendors use.',
+      'Target Plus requirements, acceptance, the 70-day onboarding and the integration routes Target approves, with every fact sourced from Target.',
     url: PAGE_URL,
-    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet Target Plus Marketplace Agency' }],
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Target Plus marketplace requirements and setup' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Target Plus Agency: Target DVS and EDI Setup | FactoryJet',
-    description: 'Target DVS and Target Plus explained, with Target’s published partner requirements and EDI basics.',
+    title: PAGE_TITLE,
+    description: 'Target Plus requirements, acceptance, onboarding and integration routes, sourced from Target.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: { canonical: PAGE_URL },
@@ -48,166 +55,172 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────
-   FAQ DATA
+   FAQ DATA (the FAQPage schema is built from this same array)
 ───────────────────────────────────────────── */
 const FAQ_CATEGORIES = [
-  { key: 'approval', label: 'Approval & Fit' },
-  { key: 'dvs', label: 'DVS & EDI Tech' },
-  { key: 'operations', label: 'Logistics & Returns' },
-  { key: 'commercials', label: 'Terms & Pricing' },
+  { key: 'approval', label: 'Joining Target Plus' },
+  { key: 'tech', label: 'Integration & EDI' },
+  { key: 'operations', label: 'Shipping & Returns' },
+  { key: 'commercials', label: 'Fees & Working With Us' },
 ];
 
 const FAQ_ITEMS = [
-  // Approval & Fit
+  // Joining Target Plus
   {
     category: 'approval',
-    question: 'What is Target DVS?',
+    question: 'What is the Target Plus marketplace?',
     answer:
-      'Target DVS stands for direct vendor ship. When a guest orders on Target.com, the order goes to the vendor, and the vendor ships it from its own warehouse or 3PL straight to the guest. Target does not hold that stock. Target’s 1P vendors on DVS trade purchase orders, ship notices and invoices with Target over EDI. Target Plus partners also ship their own orders, but Target Plus is a separate marketplace program.',
+      'Target Plus is Target’s invite-only third-party marketplace on Target.com. Brands and authorized resellers list their own products, Target runs the checkout, and the partner ships each order from the US. Target’s seller site says each SKU has one dedicated seller, so you do not compete with other sellers on the same item, and you keep control of pricing, promotions and how your brand is shown.',
   },
   {
     category: 'approval',
-    question: 'What is Target Plus?',
+    question: 'Is Target a marketplace now?',
     answer:
-      'Target Plus is Target’s invite-only third-party marketplace on Target.com. Target picks who joins and says it looks for direct brand and authorized reseller partnerships. Partners list their products on Target.com, Target runs the checkout, and the partner ships each order from the US. In a July 2026 article, Target said it added dozens of new, hand-picked brands to Target Plus that summer.',
+      'Partly. Most of what Target.com sells is still Target’s own stock. Target Plus, launched in 2019, adds third-party sellers on top. In a July 2026 article Target said it added dozens of new, hand-picked brands that summer, naming Forever 21, JanSport and JLab, and that Target Plus brands now make up more than half of its K-beauty assortment.',
   },
   {
     category: 'approval',
-    question: 'What is the difference between Target and Target Plus?',
+    question: 'What is the difference between Target and Target Plus items?',
     answer:
-      'Target sells products it buys from vendors. It stocks and ships them itself, or has vendors ship them directly through DVS. Target Plus is the marketplace side. Partner brands list their own products on Target.com, hold their own stock and ship orders to the guest. The shopper sees one Target.com checkout either way. The contracts, fees and systems behind the two are different.',
+      'Target items are bought, stocked and shipped by Target, or shipped for Target by a vendor. Target Plus items belong to a partner brand, which holds the stock and ships the order itself. The shopper uses one Target.com checkout either way. Behind the scenes the contracts, fees and systems are different.',
   },
   {
     category: 'approval',
-    question: 'What is a Target Plus partner?',
+    question: 'How do I get invited to sell on Target Plus?',
     answer:
-      'A Target Plus partner is a brand or authorized reseller that Target has invited to sell on Target.com through its marketplace. The partner owns the inventory, builds listings to Target’s content rules, ships orders inside Target’s lead time and receives returns. Target runs checkout and the guest relationship. Commission and other terms are set in Target’s partner agreement.',
-  },
-  {
-    category: 'approval',
-    question: 'How do brands get invited or approved for Target Plus?',
-    answer:
-      'Target Plus is invite-only. Brands can apply on Target’s Target Plus apply page, and Target decides who joins. Before you apply, check yourself against the published prerequisites: a US-registered business with a US address, a W-9, an EIN and a DUNS number, US-only shipping with UPS, USPS or FedEx, a 24-hour lead time and GS1 barcodes on every product. We help you check each item before you submit.',
+      'You apply on Target’s partner application form at plus.target.com/apply, and Target decides who joins. The form asks six yes-or-no prerequisite questions first: US registration and tax IDs, shipping, returns, GS1 barcodes, item-type rules and onboarding. Target says it is looking for new assortment through direct brand and authorized reseller partnerships. A product range Target.com does not already carry is the strongest thing you can bring.',
   },
   {
     category: 'approval',
     question: 'What are the Target Plus seller requirements?',
     answer:
-      'Target’s apply page lists them. You need a US-registered business with a US address, a W-9, an EIN (SSNs are not accepted) and a DUNS number. You ship with UPS, USPS or FedEx, fulfill only from the US, ship within 24 hours and deliver in 2 to 5 business days. You also need GS1 barcodes, grid size charts for wearables and UL WERCSmart registration for hazmat items.',
+      'From Target’s apply page: a US-registered business with a US address, a W-9, an EIN (SSNs are not accepted) and a DUNS number. You ship with UPS, USPS or FedEx, only from the US, with a 24-hour lead time and delivery in 2 to 5 business days after shipping, and you cannot use competitor fulfillment services. You also need GS1 barcodes, grid size charts for wearables, UL WERCSmart registration for hazmat items and the ability to receive pallet returns.',
+  },
+  {
+    category: 'approval',
+    question: 'What does Target look for in a Target Plus brand?',
+    answer:
+      'Target’s application says it wants new assortment for its guests through direct brands and authorized resellers. In its July 2026 article, Target said it focuses on brands that add something meaningful for guests and match its point of view on style, design and value. In practice, show Target the gap your products fill on Target.com, not just your sales on other marketplaces.',
   },
   {
     category: 'approval',
     question: 'Can Shopify brands sell on Target Plus?',
     answer:
-      'Yes, if Target accepts them. In June 2024, Target and Shopify announced a partnership that lets Shopify merchants apply to Target Plus through Shopify’s Marketplace Connect app. Acceptance is still Target’s decision. Once accepted, Marketplace Connect can sync listings, stock and orders. Brands that run stock in an ERP or a custom catalog often need a direct integration instead.',
+      'Yes, if Target accepts them. Target and Shopify announced a partnership in June 2024, and Shopify Marketplace Connect is one of the channel partners Target lists on its service provider page. It syncs listings, orders and stock from Shopify. Acceptance is still Target’s decision, and brands that run stock in an ERP often pick a different integrator.',
   },
   {
     category: 'approval',
-    question: 'Does selling on Target Plus lead to Target store shelf space?',
+    question: 'Does selling on Target Plus get my products into Target stores?',
     answer:
-      'Target does not publish any rule that links Target Plus sales to store placement. Store buying runs through Target’s merchant teams as a separate process. Treat Target Plus as an online channel on its own merits. If your products sell well there, you will have sales and review data to show a buyer later, but nobody can promise you shelf space.',
+      'Target does not publish any rule that links Target Plus sales to shelf space. Store buying runs through Target’s merchant teams as a separate process. Target’s July 2026 article describes the opposite use: Target Plus lets stores focus on what guests want to shop in person while the marketplace widens choice online. Treat it as an online channel on its own merits.',
   },
 
-  // DVS & EDI Tech
+  // Integration & EDI
   {
-    category: 'dvs',
-    question: 'What are the Target EDI requirements?',
+    category: 'tech',
+    question: 'How do I connect my store or ERP to Target Plus?',
     answer:
-      'Target’s 1P vendors, including DVS vendors, trade business documents with Target over EDI. The usual X12 set covers purchase orders, ship notices and invoices. Target gives each vendor the exact documents, versions and test steps during setup, in its vendor guides on Partners Online. We do not guess at those rules. We read your Target guide and build to it. Target Plus partners usually connect through Target’s API or a connector instead.',
+      'Target gives you two routes. Most brands use one of the channel partners on Target’s service provider page, such as Shopify Marketplace Connect, Acenda, ChannelEngine, Rithum, Zentail or Feedonomics. The other route is a direct API integration, which Target allows only for brands with their own in-house US technical team. Your ERP, store and 3PL then connect to whichever route you choose.',
   },
   {
-    category: 'dvs',
-    question: 'What is a Target 850?',
+    category: 'tech',
+    question: 'Can an agency build our Target Plus API integration for us?',
     answer:
-      'An 850 is the standard X12 EDI purchase order. When people say Target 850, they mean the purchase order Target sends to a vendor. It lists the items, quantities, prices and ship-to details. For a DVS vendor, an 850 can carry a guest order to ship. Your system reads the 850, creates the order and starts the pick.',
+      'Not as a direct API integration. Target’s service provider page says the direct route needs a dedicated US-based in-house team, that contract or temporary developers do not qualify, and that API credentials must stay with internal employees. So an outside firm, FactoryJet included, should not hold your Target Plus API keys. What we do is connect your ERP, Shopify store and 3PL to a Target-approved channel partner, and get your product data ready for it.',
   },
   {
-    category: 'dvs',
-    question: 'What are the 856 and 810 EDI documents?',
+    category: 'tech',
+    question: 'Which Target Plus integrators does Target approve?',
     answer:
-      'The 856 is the X12 advance ship notice. It tells the buyer what shipped, in which carton and with which tracking number. The 810 is the X12 invoice, which the vendor sends to get paid. With the 850 purchase order, these three documents make up the basic order to payment loop that most vendors run with large US retailers, Target included.',
+      'On 16 Nov 2026 Target’s service provider page listed 12 channel partners: Acenda, Akeneo, Base.com, ChannelEngine, Feedonomics, Goflow, Mirakl Connect, Rithum, Rokt Catalog, Shopify Marketplace Connect, StoreAutomator and Zentail. Target says every partner is vetted. The list changes, so check Target’s page before you sign with one.',
   },
   {
-    category: 'dvs',
-    question: 'What is EDI and why do retailers use it?',
+    category: 'tech',
+    question: 'How do you connect NetSuite, Business Central or another ERP to Target Plus?',
     answer:
-      'EDI stands for electronic data interchange. It is a standard format for business documents like purchase orders and invoices, sent from one system to another instead of by email or typed into a portal. Large retailers use it because it handles high order volume with fewer typing errors. Most US retailers use the ANSI X12 standard, which gives each document a number, such as 850 for a purchase order.',
+      'Through the channel partner. Your ERP sends products, prices and stock to the integrator, and the integrator sends Target Plus orders back into the ERP. FactoryJet has worked on NetSuite, Odoo, SAP Business One, ERPNext and custom ERPs, and has connected a live store to QuickBooks Enterprise. For Microsoft Dynamics 365 Business Central, Microsoft publishes a Shopify connector, so Business Central to Shopify to Marketplace Connect is one route. We confirm the route on your own systems before any build.',
   },
   {
-    category: 'dvs',
-    question: 'Is Target Plus EDI-only?',
+    category: 'tech',
+    question: 'Is Target Plus EDI-based?',
     answer:
-      'No. Target Plus is a marketplace, so partners connect through Target’s own API or a connector such as Shopify Marketplace Connect. EDI is how Target’s 1P vendors, including DVS vendors, trade orders and invoices. Some brands do both: they sell to Target as a vendor over EDI and list other products on Target Plus. We work out which setup you need before any build starts.',
+      'No. Target Plus partners connect through Target’s APIs, usually by way of a channel partner. EDI is how Target’s own vendors trade documents: Target’s supplier standards list the ability to use EDI to receive purchase orders. Some brands do both, selling to Target as a vendor over EDI and listing other products on Target Plus. We work out which you need before any build starts.',
   },
   {
-    category: 'dvs',
-    question: 'How does FactoryJet connect Shopify, Business Central or another ERP to Target?',
+    category: 'tech',
+    question: 'What are the Target EDI requirements for vendors?',
     answer:
-      'Think of it as teaching two systems to talk. Your store or ERP (Shopify, Microsoft Business Central, NetSuite, SAP Business One, Odoo or another one) knows your products, prices and stock. Target needs that same list in its own format, and it sends orders back. We start with the setup papers Target gave you, then build the link: Marketplace Connect, Target’s API, or an EDI connection through your EDI provider. When an order comes in, it lands in your system without retyping, and your stock count updates on Target. Before you sign, we show it working on your own products.',
+      'Target’s supplier standards include the ability to use EDI to receive purchase orders. The usual X12 set is the 850 purchase order, the 856 advance ship notice and the 810 invoice. Target gives each vendor the exact documents, versions and test steps during setup. We build to that guide rather than guess, and our Shopify EDI integration page covers the EDI providers we work with.',
   },
   {
-    category: 'dvs',
+    category: 'tech',
+    question: 'What is Target DVS?',
+    answer:
+      'DVS stands for direct vendor ship. A guest orders on Target.com, the order goes to the vendor, and the vendor ships it from its own warehouse or 3PL. Target does not hold that stock. DVS is part of Target’s vendor program and runs on EDI. Target Plus partners also ship their own orders, but Target Plus is a separate marketplace program with its own contract.',
+  },
+  {
+    category: 'tech',
     question: 'Why does Target Plus require GS1 barcodes?',
     answer:
-      'Target’s apply page says every product needs a GS1 barcode: a 12-digit UPC or a 13-digit EAN. Codes with 11 or 14 digits are not valid. A GS1 barcode ties each product to your company prefix, so Target can match the item to the right brand. We check your full barcode list against these rules before you apply.',
-  },
-  {
-    category: 'dvs',
-    question: 'How do inventory buffers stop cancelled orders?',
-    answer:
-      'A buffer holds back a few units from the stock count you send to Target. If your warehouse sells the last units on another channel before the next sync, Target still shows zero instead of taking an order you cannot ship. We set buffers per product, based on how fast each item sells, and sync stock often enough that the buffer stays small.',
+      'Target’s apply page says every product needs a GS1 barcode on the product itself. A valid UPC has 12 digits, passes the checksum and starts with 0, 1, 6, 7, 8 or 9. A valid EAN has 13 digits, passes the checksum and starts with 1 to 9. Codes with 11 or 14 digits are invalid. We run your whole barcode list against these rules before you apply.',
   },
 
-  // Logistics & Returns
+  // Shipping & Returns
   {
     category: 'operations',
     question: 'What are the shipping rules on Target Plus?',
     answer:
-      'Target’s apply page lists small-parcel, direct-to-consumer shipping with a 24-hour lead time, and delivery within 2 to 5 business days after shipping. You ship with UPS, USPS or FedEx, from the US only, with no international shipping. You also cannot use a competitor’s fulfillment service, so stock held in another retailer’s fulfillment program cannot fill these orders.',
+      'Target’s apply page lists small-parcel, direct-to-consumer shipping with a 24-hour lead time and delivery within 2 to 5 business days after shipping. You ship with UPS, USPS or FedEx, from the US only, with no international shipping. You cannot use a competitor’s fulfillment service, so stock held in another retailer’s fulfillment program cannot fill these orders.',
   },
   {
     category: 'operations',
     question: 'Can we use our existing 3PL for Target Plus orders?',
     answer:
-      'Usually yes, if the 3PL meets Target’s rules. It must ship from the US with UPS, USPS or FedEx inside the 24-hour lead time, and it cannot be a competitor’s fulfillment service. It also needs to receive returns, including palletized returns from a semi-truck. We connect the 3PL’s warehouse system so orders and tracking numbers move without manual entry.',
+      'Usually yes, if the 3PL meets Target’s rules: US shipping with UPS, USPS or FedEx inside 24 hours, no competitor fulfillment service, and the ability to receive returns, including pallets from a semi-truck. We connect the 3PL’s warehouse system to your integrator so orders and tracking numbers move without manual entry.',
   },
   {
     category: 'operations',
     question: 'How are returns handled for Target Plus orders?',
     answer:
-      'Target’s apply page says partners must be able to receive returns at a business location, both single parcels and palletized returns delivered by semi-truck. That means you need a dock, or a 3PL that can take pallets. Ask Target about its current guest return options for marketplace items, because those terms sit in the partner agreement, not on a public page.',
+      'Target’s apply page says partners must receive individual and palletized returns from a semi-truck at a business location. That means a loading dock, or a 3PL that can take pallets. Guest-facing return terms for marketplace items sit in the partner agreement, so ask Target for them in writing during onboarding.',
   },
   {
     category: 'operations',
     question: 'How long does Target Plus onboarding take?',
     answer:
-      'Target’s apply page gives a 70-day onboarding timeline. Inventory must be in place and trainings done by day 45. Target’s partner support calls run 8am to 5pm Central time, in English. Our integration work fits inside that window, so get your product data, barcodes and warehouse setup ready before Target starts the clock.',
+      'Target’s apply page gives a 70-day onboarding timeline: purchasable assortment live, inventory in place by day 45, and all trainings completed. Onboarding and support calls run 8am to 5pm Central time, in English. On the integration side, Target says direct API teams typically build their feeds within 30 days, and Acenda says on Target’s page that most of its brands onboard within 30 days.',
   },
 
-  // Terms & Pricing
+  // Fees & Working With Us
   {
     category: 'commercials',
-    question: 'What commission does Target Plus charge?',
+    question: 'What does Target Plus charge sellers?',
     answer:
-      'Target does not publish Target Plus commission rates. They are set in the partner agreement Target sends to accepted brands. Be careful with any fixed percentage you read online. Ask Target for the current terms in writing, then compare them with Amazon and Walmart fees on your own products before you decide.',
+      'Target does not publish Target Plus commission or fees on its seller site. They come in the partner agreement Target sends to accepted brands, so treat any fixed percentage you read online with care. The costs Target does name: you pay for UL WERCSmart registration on hazmat items, and you pay your channel partner, whose pricing varies. Target’s directory describes Acenda as flat-rate and Feedonomics as flat monthly pricing.',
   },
   {
     category: 'commercials',
     question: 'Is Target Plus worth it compared with Amazon and Walmart?',
     answer:
-      'It depends on your margin and your operations. Amazon and Walmart are open to most sellers and publish their fees. Target Plus is invite-only, with commission set in a private agreement and strict shipping and returns rules. Brands with a clean catalog, US stock and next-day shipping are the best fit. Compare all three on your own numbers first.',
+      'It depends on your margin and operations. Amazon and Walmart are open to most sellers and publish their fees. Target Plus is invite-only, with terms in a private agreement, one seller per SKU and strict shipping and returns rules. Brands with a clean catalog, US stock and same-day dispatch fit best. Compare all three on your own numbers before you decide.',
   },
   {
     category: 'commercials',
-    question: 'What is FactoryJet’s pricing model for Target Plus work?',
+    question: 'What does FactoryJet do for Target Plus brands?',
+    answer:
+      'We get you ready and connected. Before you apply, we check your business against every prerequisite on Target’s form and fix product data and barcodes. After acceptance, we help you pick a Target-approved integrator, connect your ERP, Shopify store and 3PL to it, set stock buffers and run test orders inside Target’s 70-day window. You keep your Target Plus account and credentials.',
+  },
+  {
+    category: 'commercials',
+    question: 'How does FactoryJet price Target Plus work?',
     answer:
       'We quote a fixed price per phase in writing after scoping, for example readiness, then integration, then launch. Before you sign, we show working software on your own data. Each build includes defect cover for a stated period, and there is no monthly minimum. We never take a percentage of your sales.',
   },
   {
     category: 'commercials',
-    question: 'How long does a Target integration build take?',
+    question: 'How do inventory buffers stop cancelled orders?',
     answer:
-      'It depends on your systems. A Shopify store using Marketplace Connect is mostly setup and product data work. A custom link from an ERP, or an EDI connection, takes longer because it needs field mapping and test orders. We give you a written timeline after scoping that fits inside Target’s 70-day onboarding window.',
+      'A buffer holds back a few units from the stock count you send to Target. If your warehouse sells the last units on another channel before the next sync, Target still shows zero instead of taking an order you cannot ship. We set buffers per product, based on how fast each item sells, and sync often enough that the buffer stays small.',
   },
 ];
 
@@ -239,38 +252,38 @@ const WEBPAGE_SCHEMA = {
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  serviceType: 'Target Plus Marketplace Agency & DVS Integration',
-  name: 'Target Plus Marketplace Management & Growth',
+  serviceType: 'Target Plus marketplace readiness and integration',
+  name: 'Target Plus Marketplace Setup and Integration',
   description:
-    'Target Plus readiness checks, listing setup, Target DVS and EDI integration, and order and stock feeds for US brands.',
+    'Target Plus readiness checks against Target’s published prerequisites, product data and GS1 barcode fixes, and ERP, Shopify and 3PL connections to a Target-approved channel partner.',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: { '@type': 'Country', name: 'United States' },
-  audience: { '@type': 'BusinessAudience', name: 'US DTC and Wholesale Brands Expanding to Target' },
+  audience: { '@type': 'BusinessAudience', name: 'US brands and authorized resellers applying to or selling on Target Plus' },
 };
 
 const HOW_STEPS = [
   {
-    stage: 'Stage 1',
-    name: 'Readiness Check & Application',
-    text: 'We check your business against every prerequisite on Target’s apply page: W-9, EIN, DUNS, US shipping, carriers, GS1 barcodes, size charts and hazmat registration. Then we help you prepare the application.',
+    stage: 'Before you apply',
+    name: 'Readiness check and application',
+    text: 'We test your business against all six prerequisite questions on Target’s form: tax IDs, carriers, 24-hour shipping, pallet returns, GS1 barcodes, size charts and hazmat registration. We fix what fails, then you apply.',
   },
   {
-    stage: 'Stage 2',
-    name: 'Listings, Stock & Order Integration',
-    text: 'We connect Shopify or your ERP to Target through Marketplace Connect, Target’s API or an EDI link for 850, 856 and 810 documents, depending on your program.',
+    stage: 'Days 1 to 30',
+    name: 'Integrator choice and system links',
+    text: 'You pick a Target-approved channel partner with our help. We connect your ERP, Shopify store and 3PL to it, map product attributes to Target’s rules, and set per-product stock buffers.',
   },
   {
-    stage: 'Stage 3',
-    name: 'Test Orders & Launch',
-    text: 'We run test orders, confirm tracking numbers flow back, set stock buffers and check returns handling, so you are ready inside Target’s 70-day onboarding window.',
+    stage: 'Days 30 to 70',
+    name: 'Test orders and launch',
+    text: 'We run test orders end to end, confirm tracking numbers reach Target, and check the returns flow, so your assortment is live and inventory is in place by Target’s day-45 mark.',
   },
 ];
 
 const HOWTO_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'HowTo',
-  name: 'How FactoryJet Integrates & Launches Brands on Target Plus',
-  description: 'Our 3-stage plan for getting a brand ready for Target Plus and Target DVS.',
+  name: 'How to get ready for and launch on Target Plus',
+  description: 'Readiness, integration and launch steps that fit inside Target’s 70-day Target Plus onboarding timeline.',
   step: HOW_STEPS.map((s, i) => ({ '@type': 'HowToStep', position: i + 1, name: s.name, text: s.text })),
 };
 
@@ -286,57 +299,102 @@ const BREADCRUMB_SCHEMA = {
   ],
 };
 
-// All four figures are from Target's apply page, read 22 Oct 2026.
+// All four come from plus.target.com (home and apply pages), read 16 Nov 2026.
 const STATS = [
-  { b: 'Invite-only', s: 'how Target Plus admits partners' },
+  { b: 'Invite-only', s: 'Target picks who joins' },
+  { b: '1 seller', s: 'per SKU, no SKU-level competition' },
   { b: '70 days', s: 'Target onboarding timeline' },
-  { b: 'Day 45', s: 'inventory in place, trainings done' },
-  { b: '2 to 5 days', s: 'delivery after shipping' },
+  { b: '24 hours', s: 'shipping lead time' },
 ];
 
 const SOURCED = [
   {
-    v: '70 days',
-    d: 'is the onboarding timeline Target gives new Target Plus partners, with inventory in place and trainings done by day 45.',
-    src: 'plus.target.com/apply (read 22 Oct 2026)',
+    v: '12',
+    d: 'channel partners on Target’s own service provider page, from Shopify Marketplace Connect to Acenda, ChannelEngine and Rithum. Each is vetted by Target.',
+    src: `plus.target.com/service-providers (${READ})`,
+    href: TP_PROVIDERS,
+  },
+  {
+    v: 'Day 45',
+    d: 'is when Target expects inventory in place, inside a 70-day onboarding that also needs your assortment live and trainings done.',
+    src: `plus.target.com/apply (${READ})`,
     href: TP_APPLY,
   },
   {
-    v: '24 hours',
-    d: 'is the shipping lead time Target lists for small-parcel orders, with delivery 2 to 5 business days after shipping.',
-    src: 'plus.target.com/apply (read 22 Oct 2026)',
-    href: TP_APPLY,
-  },
-  {
-    v: 'Dozens',
-    d: 'of new, hand-picked brands joined Target Plus in summer 2026, according to Target. The marketplace stays invite-only.',
-    src: 'Target, 1 July 2026 (read 22 Oct 2026)',
+    v: 'Over half',
+    d: 'of Target’s K-beauty assortment now comes from Target Plus brands, Target said in July 2026, after adding dozens of hand-picked brands that summer.',
+    src: `Target, 1 July 2026 (${READ})`,
     href: TP_GROWTH,
   },
 ];
 
-// Verbatim prerequisites from plus.target.com/apply, read 22 Oct 2026.
+// Prerequisites from plus.target.com/apply, read 16 Nov 2026.
 const REQUIREMENTS = [
   'A US-registered business with a US business address',
-  'A W-9, an EIN (SSNs are not accepted) and a DUNS number',
+  'A W-9, an EIN (social security numbers are not accepted) and a DUNS number',
   'Ship with UPS, USPS or FedEx',
   'Fulfill all orders from the US, with no international shipping',
   'Small-parcel direct-to-consumer shipping with a 24-hour lead time, delivered within 2 to 5 business days after shipping',
   'No use of competitor fulfillment services',
   'Able to receive individual and palletized returns from a semi-truck at a business location',
-  'GS1 barcodes on every product: UPC with 12 digits or EAN with 13 digits (11 or 14 digits are invalid)',
-  'Size charts in grid format for wearable products',
+  'GS1 barcodes on the product itself: a 12-digit UPC starting 0, 1, 6, 7, 8 or 9, or a 13-digit EAN starting 1 to 9, both passing the checksum (11 or 14 digits are invalid)',
+  'Size charts in grid (not image) format for wearable products',
   'Hazmat items registered with UL WERCSmart, at the seller’s cost',
-  'Support calls with Target from 8am to 5pm CST, in English',
+  'Meet the 70-day onboarding: assortment live, inventory in place by day 45, trainings completed',
+  'Onboarding and support calls from 8am to 5pm CST, in English',
+];
+
+const ACCEPTANCE_STEPS = [
+  {
+    t: 'Check the six prerequisites',
+    d: 'Target’s form opens with six yes-or-no questions. A single “no” is worth fixing before you submit, not after.',
+  },
+  {
+    t: 'Submit the partner application',
+    d: 'Apply at plus.target.com/apply. Target says it wants new assortment through direct brand and authorized reseller partnerships.',
+  },
+  {
+    t: 'Wait for Target’s decision',
+    d: 'Target Plus is invite-only and Target decides who joins. It does not publish a response time or acceptance rate.',
+  },
+  {
+    t: 'Talk to your Acquisition Partner',
+    d: 'Target’s service provider page tells accepted brands to tell their Acquisition Partner how they plan to integrate.',
+  },
+  {
+    t: 'Start the 70-day onboarding',
+    d: 'Assortment live, inventory in place by day 45, trainings done. Your integration needs to be ready inside this window.',
+  },
+];
+
+const ROUTES = [
+  {
+    name: 'Shopify Marketplace Connect',
+    who: 'Brands whose catalog and stock live in Shopify',
+    how: 'Shopify’s own app syncs listings, orders and inventory to Target Plus and other marketplaces.',
+    us: 'We clean product data and attributes in Shopify, connect your ERP or 3PL to Shopify, and set buffers.',
+  },
+  {
+    name: 'Another Target channel partner',
+    who: 'Brands running stock in an ERP, a PIM or several warehouses',
+    how: 'Acenda, ChannelEngine, Rithum, Zentail, Feedonomics and the other listed partners carry your feed and orders.',
+    us: 'We connect NetSuite, Odoo, SAP Business One, ERPNext, QuickBooks or your custom system to the partner and test orders end to end.',
+  },
+  {
+    name: 'Direct API integration',
+    who: 'Brands with a dedicated in-house US engineering team',
+    how: 'Your own staff build and run the API feeds, typically within 30 days, using Target’s staging environment.',
+    us: 'Target says contract developers do not qualify, so we do not build this route. We can still prepare your product data and ERP side.',
+  },
 ];
 
 const BENEFITS = [
-  { i: '◈', t: 'Target DVS & EDI Order Flow', d: 'Read Target 850 purchase orders into your system, and send 856 ship notices and 810 invoices back, built to your Target vendor guide.' },
-  { i: '◇', t: 'Target Plus Readiness Check', d: 'We test your business against each prerequisite on Target’s apply page before you submit, from DUNS number to GS1 barcodes.' },
-  { i: '↯', t: 'Shipping Inside 24 Hours', d: 'Orders reach your warehouse or 3PL as soon as they land, and tracking numbers flow back to Target without manual entry.' },
-  { i: '▤', t: 'Listing & Product Data Setup', d: 'Product titles, attributes, valid UPC or EAN codes and grid size charts for wearables, mapped to Target’s content rules.' },
-  { i: '⛓', t: 'Shopify & ERP Connectors', d: 'We link your store or ERP (Shopify, Business Central, NetSuite, SAP Business One, Odoo) to Target, so orders arrive without retyping and stock stays in sync.' },
-  { i: '⤢', t: 'Stock Buffers & Returns Plan', d: 'Per-product stock buffers so you never take an order you cannot ship, plus a plan for parcel and pallet returns.' },
+  { i: '◇', t: 'Readiness check before you apply', d: 'Every prerequisite on Target’s form tested against your business, from DUNS number and carriers to pallet returns.' },
+  { i: '▤', t: 'Barcode and product data fixes', d: 'UPC and EAN checksums and starting digits validated, attributes mapped, grid size charts built for wearables.' },
+  { i: '⛓', t: 'ERP and 3PL links to your integrator', d: 'Products, prices and stock flow out from your system of record; Target Plus orders flow back in without retyping.' },
+  { i: '↯', t: 'Shipping inside 24 hours', d: 'Orders reach your warehouse or 3PL as they land, and tracking numbers flow back to Target automatically.' },
+  { i: '⤢', t: 'Stock buffers and returns plan', d: 'Per-product buffers so you never take an order you cannot ship, plus a plan for parcel and pallet returns.' },
+  { i: '◈', t: 'Target vendor EDI, if you need it', d: 'If you also sell to Target as a vendor, we build the 850, 856 and 810 flow to the guide Target gives you.' },
 ];
 
 export default function TargetPlusMarketplacePage() {
@@ -357,23 +415,24 @@ export default function TargetPlusMarketplacePage() {
           <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
               <div>
-                <p className="pp-eyebrow">Target Plus Marketplace Agency</p>
-                <h1 style={{ margin: '14px 0 12px', maxWidth: '18ch' }}>
-                  Scale retail on <span className="pp-grad">Target.com.</span>
+                <p className="pp-eyebrow">Target Plus marketplace</p>
+                <h1 style={{ margin: '14px 0 12px', maxWidth: '20ch' }}>
+                  Get on the Target Plus marketplace, connected and shipping.
                 </h1>
-                <p className="pp-lead" style={{ maxWidth: '48ch' }}>
-                  Target DVS (direct vendor ship) means you ship Target.com orders from your own warehouse or 3PL
-                  straight to the guest. Target Plus partners ship their own orders too, through Target’s invite-only
-                  marketplace. FactoryJet builds the order, stock and EDI links, and checks you against Target’s
-                  published partner requirements.
+                <p className="pp-lead" style={{ maxWidth: '50ch' }}>
+                  Target Plus is Target’s invite-only marketplace. Approved brands and authorized resellers list
+                  products on Target.com, Target runs checkout, and the partner ships each order from the US within 24
+                  hours. FactoryJet gets you ready: we check your business against Target’s published requirements, fix
+                  product data and GS1 barcodes, and connect your Shopify store, ERP and 3PL to a Target-approved
+                  integrator.
                 </p>
                 <HeroInlineForm source="us_target_plus_hero" region="us" submitLabel="Get a Target Plus Scope" />
               </div>
 
-              {/* Visual Hero Architecture Graphic */}
+              {/* Hero diagram: the integration path Target allows */}
               <div
                 role="img"
-                aria-label="Target Plus and DVS integration diagram showing a brand’s store connected to Target.com, carriers, barcodes and returns."
+                aria-label="Diagram: your store, ERP and 3PL connect to a Target-approved channel partner, which connects to Target Plus on Target.com."
                 style={{
                   border: '1px solid var(--pp-line)',
                   borderRadius: '18px',
@@ -382,6 +441,19 @@ export default function TargetPlusMarketplacePage() {
                   boxShadow: '0 18px 50px rgba(20,17,15,.08)',
                 }}
               >
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
+                  {[
+                    { name: 'Shopify', desc: 'Store' },
+                    { name: 'ERP', desc: 'NetSuite · Odoo' },
+                    { name: '3PL', desc: 'Warehouse' },
+                  ].map((ch) => (
+                    <div key={ch.name} style={{ border: '1px solid var(--pp-line)', borderRadius: '10px', background: '#fff', padding: '12px 8px', textAlign: 'center' }}>
+                      <b style={{ fontFamily: 'var(--pp-disp)', fontSize: '13px', display: 'block', color: 'var(--pp-ink)' }}>{ch.name}</b>
+                      <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '10px', color: 'var(--pp-muted)' }}>{ch.desc}</span>
+                    </div>
+                  ))}
+                </div>
+                <div aria-hidden="true" style={{ textAlign: 'center', fontFamily: 'var(--pp-mono)', color: 'var(--pp-muted)', margin: '8px 0' }}>↓ products, stock ↑ orders, tracking</div>
                 <div
                   style={{
                     border: '1.5px solid var(--pp-orange)',
@@ -392,21 +464,18 @@ export default function TargetPlusMarketplacePage() {
                     fontFamily: 'var(--pp-disp)',
                     fontWeight: 700,
                     color: 'var(--pp-ink)',
-                    marginBottom: '18px',
                   }}
                 >
-                  Target Plus Partner Hub
+                  Target-approved channel partner
                   <small style={{ display: 'block', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-orange-dark)', fontWeight: 600, marginTop: '2px' }}>
-                    Direct Vendor Ship (DVS) · EDI 850/856/810 · Partners Online
+                    Marketplace Connect · Acenda · ChannelEngine · Rithum
                   </small>
                 </div>
+                <div aria-hidden="true" style={{ textAlign: 'center', fontFamily: 'var(--pp-mono)', color: 'var(--pp-muted)', margin: '8px 0' }}>↓ ↑</div>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
                   {[
-                    { name: 'Target.com', desc: 'Marketplace' },
-                    { name: 'DVS EDI Stream', desc: 'Auto Ingestion' },
-                    { name: 'Shopify', desc: 'Marketplace Connect' },
-                    { name: 'Returns', desc: 'Parcel + Pallet' },
-                    { name: 'GS1 Barcodes', desc: 'UPC or EAN' },
+                    { name: 'Target Plus', desc: 'Target.com' },
+                    { name: 'GS1 barcodes', desc: 'UPC or EAN' },
                     { name: 'Carriers', desc: 'UPS · USPS · FedEx' },
                   ].map((ch) => (
                     <div key={ch.name} style={{ border: '1px solid var(--pp-line)', borderRadius: '10px', background: '#fff', padding: '12px 8px', textAlign: 'center' }}>
@@ -415,27 +484,22 @@ export default function TargetPlusMarketplacePage() {
                     </div>
                   ))}
                 </div>
-                <div
-                  style={{
-                    marginTop: '16px',
-                    padding: '10px 14px',
-                    background: '#14110F',
-                    borderRadius: '10px',
-                    color: '#fff',
-                    fontFamily: 'var(--pp-mono)',
-                    fontSize: '10.5px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <div>
-                    <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#10B981', display: 'inline-block', marginRight: '6px' }} />
-                    DVS Automated Protocol
-                  </div>
-                  <div>Direct Brands · Authorized Resellers</div>
-                </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Answer first ── */}
+        <section className="pp-sec" style={{ paddingTop: '8px', paddingBottom: '32px' }}>
+          <div className="pp-wrap pp-narrow">
+            <div className="pp-card" style={{ borderLeft: '4px solid var(--pp-orange)' }}>
+              <h2 style={{ fontSize: '22px' }}>How do you get on Target Plus?</h2>
+              <p style={{ marginTop: '10px', color: 'var(--pp-body)' }}>
+                Apply on Target’s partner form and wait for Target to invite you. Before you apply, meet Target’s
+                published prerequisites: a US business with a W-9, EIN and DUNS number, US shipping within 24 hours by
+                UPS, USPS or FedEx, pallet returns and GS1 barcodes. Once accepted, Target gives you a 70-day onboarding to
+                connect your systems through an approved route and go live.
+              </p>
             </div>
           </div>
         </section>
@@ -454,51 +518,173 @@ export default function TargetPlusMarketplacePage() {
           </div>
         </section>
 
-        {/* ── What Is ── */}
+        {/* ── What Is + Requirements ── */}
         <section className="pp-sec">
           <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// the retail marketplace</p>
-            <h2 style={{ marginTop: '10px' }}>What is Target DVS, and how does Target Plus work?</h2>
+            <p className="pp-mlabel">// what Target Plus is</p>
+            <h2 style={{ marginTop: '10px' }}>What is the Target Plus marketplace, and what does Target require?</h2>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
-                Target DVS is direct vendor ship. A guest orders on Target.com, the order goes to the vendor, and the
-                vendor ships it from its own warehouse or 3PL. Target’s 1P vendors on DVS trade those orders with Target
-                over EDI: an 850 purchase order in, an 856 ship notice and an 810 invoice back.
+                <a href={TP_HOME} target="_blank" rel="noopener noreferrer" style={LINK}>Target Plus</a> is the
+                third-party side of Target.com. Target’s seller site makes three promises to partners: a curated
+                marketplace instead of an endless aisle, one dedicated seller per SKU, and full brand control over
+                presentation, assortment, pricing and promotions. Target runs the checkout and the guest relationship.
+                You hold the stock and ship the order.
               </p>
               <p>
-                <a href={TP_APPLY} target="_blank" rel="noopener noreferrer" style={LINK}>Target Plus</a> is Target’s
-                invite-only marketplace. Target says it looks for direct brand and authorized reseller partnerships.
-                Partners list their own products, Target runs checkout, and the partner ships each order. Shopify
-                merchants can apply through Marketplace Connect, under a{' '}
+                It is not a place you sign up for. Target says Target Plus is invite-only and that it looks for new
+                assortment through direct brand and authorized reseller partnerships. Shopify merchants can reach it
+                through Marketplace Connect, under a{' '}
                 <a href={TP_SHOPIFY} target="_blank" rel="noopener noreferrer" style={LINK}>June 2024 Target and Shopify partnership</a>.
-                Commission terms come in Target’s partner agreement. Target does not publish them.
               </p>
               <p>
-                Target lists these prerequisites on its{' '}
-                <a href={TP_APPLY} target="_blank" rel="noopener noreferrer" style={LINK}>Target Plus apply page</a>{' '}
-                (read 22 Oct 2026):
+                Target lists these Target Plus seller requirements on its{' '}
+                <a href={TP_APPLY} target="_blank" rel="noopener noreferrer" style={LINK}>partner application</a>{' '}
+                ({READ}):
               </p>
-              <ul style={{ paddingLeft: '20px', marginTop: '12px', display: 'grid', gap: '8px' }}>
+              <ol style={{ paddingLeft: '20px', marginTop: '12px', display: 'grid', gap: '8px' }}>
                 {REQUIREMENTS.map((r) => (
                   <li key={r}>{r}</li>
                 ))}
-              </ul>
+              </ol>
               <p>
-                FactoryJet checks your business against that list, then connects your Shopify store or ERP to Target
-                through Marketplace Connect, Target’s API or an EDI link. If you also sell on other channels, see how we
-                run Amazon, Walmart and Faire together on our{' '}
-                <a href="/marketplace-management" style={LINK}>marketplace management</a> page, or compare
-                Target Plus with wholesale on{' '}
-                <a href="/faire-wholesale-marketplace" style={LINK}>Faire</a>.
+                Two items need the most lead time to fix. Barcodes must come from GS1 itself, so codes bought from a
+                reseller or 11-digit codes copied from another channel will not pass. Pallet returns need a loading dock
+                or a 3PL that takes semi-truck deliveries, which a home office cannot offer.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── How acceptance works ── */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">// how acceptance works</p>
+            <h2 style={{ marginTop: '10px', maxWidth: '26ch' }}>How to sell on Target Plus: the five steps from application to launch</h2>
+            <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '60ch' }}>
+              Every step below comes from Target’s own seller pages. Target does not publish an acceptance rate or a
+              response time, and nobody outside Target can promise you an invite.
+            </p>
+            <ol className="pp-bento" style={{ marginTop: '32px', listStyle: 'none', padding: 0 }}>
+              {ACCEPTANCE_STEPS.map((s, i) => (
+                <li className="pp-card" key={s.t}>
+                  <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '12px', color: 'var(--pp-orange-dark)', marginBottom: '8px' }}>Step {i + 1}</div>
+                  <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '16px', color: 'var(--pp-ink)', marginBottom: '6px' }}>{s.t}</h3>
+                  <p style={{ fontSize: '14.5px', color: 'var(--pp-body)' }}>{s.d}</p>
+                </li>
+              ))}
+            </ol>
+            <div className="pp-editorial" style={{ marginTop: '28px', maxWidth: '68ch' }}>
+              <p>
+                What gets a brand invited? Target’s{' '}
+                <a href={TP_GROWTH} target="_blank" rel="noopener noreferrer" style={LINK}>July 2026 article</a>{' '}
+                says it focuses on brands that add something meaningful for guests and fit its point of view on style,
+                design and value. It named Forever 21, JanSport and JLab among that summer’s launches, and said Target
+                Plus brands now supply more than half of its K-beauty assortment. The pattern is categories where
+                Target.com is thin. Lead your application with the gap you fill.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Integration routes ── */}
+        <section className="pp-sec">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">// integration options</p>
+            <h2 style={{ marginTop: '10px' }}>Target Plus integration: the three routes Target allows</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
+              Target’s{' '}
+              <a href={TP_PROVIDERS} target="_blank" rel="noopener noreferrer" style={LINK}>service provider page</a>{' '}
+              ({READ}) lists 12 vetted channel partners and one direct API option. The direct route has a rule most
+              guides skip: it needs a dedicated US-based in-house team, contract or temporary developers do not
+              qualify, and API credentials must stay with your own employees.
+            </p>
+            <div style={{ marginTop: '32px', overflowX: 'auto' }}>
+              <table className="pp-table">
+                <thead>
+                  <tr>
+                    <th>Route</th>
+                    <th>Best for</th>
+                    <th>How it works</th>
+                    <th>What FactoryJet does</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {ROUTES.map((r, i) => (
+                    <tr key={r.name} className={i % 2 === 0 ? 'me' : undefined}>
+                      <td className="name">{r.name}</td>
+                      <td>{r.who}</td>
+                      <td>{r.how}</td>
+                      <td>{r.us}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="pp-editorial" style={{ marginTop: '28px', maxWidth: '68ch' }}>
+              <p>
+                The 12 channel partners Target listed: Acenda, Akeneo, Base.com, ChannelEngine, Feedonomics, Goflow,
+                Mirakl Connect, Rithum, Rokt Catalog, Shopify Marketplace Connect, StoreAutomator and Zentail. Some are
+                feed and listing tools, some run orders and stock too, and Akeneo is a product information system. Pick
+                on what your system of record is and who will run the feed day to day.
+              </p>
+              <p>
+                For ERP brands, the integrator is the middle layer. Your ERP sends products, prices and stock out, and
+                takes Target Plus orders in. We have worked on NetSuite, Odoo, SAP Business One, ERPNext and custom ERPs,
+                and connected a live store to QuickBooks Enterprise; see our{' '}
+                <a href="/services/ecommerce-erp-integration" style={LINK}>ecommerce ERP integration</a> work. For
+                Microsoft Dynamics 365 Business Central, Microsoft publishes a{' '}
+                <a href="https://apps.shopify.com/dynamics-365-business-central" target="_blank" rel="noopener noreferrer" style={LINK}>Shopify connector</a>, so Business Central to
+                Shopify to Marketplace Connect is one route. We confirm which one fits your systems before any build.
+              </p>
+            </div>
+            <div style={{ marginTop: '22px' }}>
+              <ModalCTAButton label="Map my Target Plus integration" region="us" btnVariant="secondary-light" />
+            </div>
+          </div>
+        </section>
+
+        {/* ── Fees ── */}
+        <section className="pp-sec tint">
+          <div className="pp-wrap pp-narrow">
+            <p className="pp-mlabel">// fees and costs</p>
+            <h2 style={{ marginTop: '10px' }}>Target Plus fees: what Target publishes and what it does not</h2>
+            <div className="pp-editorial" style={{ marginTop: '20px' }}>
+              <p>
+                Target does not publish Target Plus commission rates or seller fees on plus.target.com. They come in the
+                partner agreement Target sends to accepted brands. Percentages quoted on blogs are second-hand, so get
+                the current terms from Target in writing.
+              </p>
+              <p>The costs Target’s own pages do name:</p>
+              <ol style={{ paddingLeft: '20px', marginTop: '12px', display: 'grid', gap: '8px' }}>
+                <li>
+                  <b>UL WERCSmart registration</b> for any hazmat or environmental-safety item. Target’s apply page says
+                  the seller pays all registration costs.
+                </li>
+                <li>
+                  <b>Your channel partner.</b> Pricing varies by integrator. Target’s directory describes Acenda as
+                  flat-rate with no transaction fees or long-term contracts, and Feedonomics as flat monthly pricing.
+                </li>
+                <li>
+                  <b>GS1 barcodes</b> for every product, since Target accepts only GS1-sourced UPC or EAN codes.
+                </li>
+                <li>
+                  <b>Fulfillment that meets the rules:</b> US-only shipping inside 24 hours and a site that can receive
+                  pallet returns.
+                </li>
+              </ol>
+              <p>
+                To compare Target Plus with Amazon and Walmart on your own products, use our{' '}
+                <a href="/marketplace-fee-calculator" style={LINK}>marketplace fee calculator</a>.
               </p>
             </div>
           </div>
         </section>
 
         {/* ── Sourced Stats ── */}
-        <section className="pp-sec tint">
+        <section className="pp-sec">
           <div className="pp-wrap">
-            <p className="pp-mlabel">// curated retail dynamics</p>
+            <p className="pp-mlabel">// from Target’s own pages</p>
             <h2 style={{ marginTop: '10px' }}>Target Plus by the numbers</h2>
             <ul className="pp-bento" style={{ marginTop: '32px' }}>
               {SOURCED.map((s) => (
@@ -520,13 +706,13 @@ export default function TargetPlusMarketplacePage() {
         </section>
 
         {/* ── Benefits ── */}
-        <section className="pp-sec">
+        <section className="pp-sec tint">
           <div className="pp-wrap">
-            <p className="pp-mlabel">// why it matters</p>
-            <h2 style={{ marginTop: '10px' }}>How our Target Plus engineering speeds up launch</h2>
+            <p className="pp-mlabel">// what we do</p>
+            <h2 style={{ marginTop: '10px' }}>Six things we handle so your Target Plus launch fits the 70 days</h2>
             <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '58ch' }}>
-              From the readiness check to live order and EDI flows, we handle the technical side of selling on
-              Target.com.
+              We design, build and support the systems side. You keep your Target Plus account, your integrator
+              contract and your credentials.
             </p>
             <ul className="pp-bento" style={{ marginTop: '32px' }}>
               {BENEFITS.map((b) => (
@@ -551,20 +737,28 @@ export default function TargetPlusMarketplacePage() {
           </div>
         </section>
 
-        {/* ── Use Case Section ── */}
+        {/* ── Target EDI and DVS ── */}
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(28px,4vw,52px)', alignItems: 'center' }} className="pp-herogrid">
               <div>
-                <p className="pp-mlabel">// curated retail showcase</p>
-                <h2 style={{ marginTop: '8px' }}>Direct Vendor Ship (DVS) EDI Architecture</h2>
+                <p className="pp-mlabel">// Target EDI and DVS</p>
+                <h2 style={{ marginTop: '8px' }}>Target EDI requirements are for vendors, not Target Plus sellers</h2>
                 <p className="pp-lead" style={{ marginTop: '14px' }}>
-                  How we connect your warehouse to Target for DVS: EDI 850 purchase orders come in, EDI 856 advance
-                  ship notices and 810 invoices go back, built to the vendor guide Target gives you on Partners
-                  Online.
+                  Target Plus runs on Target’s APIs through a channel partner. EDI belongs to Target’s vendor program:
+                  Target’s{' '}
+                  <a href={TGT_SUPPLIERS} target="_blank" rel="noopener noreferrer" style={LINK}>supplier standards</a>{' '}
+                  list the ability to use EDI to receive purchase orders. That includes DVS (direct vendor ship), where
+                  a vendor ships Target.com orders from its own warehouse.
+                </p>
+                <p style={{ marginTop: '12px', color: 'var(--pp-body)' }}>
+                  If you sell to Target as a vendor too, we build the usual X12 loop to the guide Target gives you: the
+                  850 purchase order in, the 856 ship notice and 810 invoice back, landing in your ERP. Our{' '}
+                  <a href="/services/shopify-edi-integration" style={LINK}>Shopify EDI integration</a> page covers the
+                  EDI providers we connect.
                 </p>
                 <div style={{ marginTop: '22px' }}>
-                  <ModalCTAButton label="Scope Target Plus architecture" region="us" btnVariant="secondary-light" />
+                  <ModalCTAButton label="Scope Target EDI or Target Plus" region="us" btnVariant="secondary-light" />
                 </div>
               </div>
               <Image
@@ -581,39 +775,37 @@ export default function TargetPlusMarketplacePage() {
         {/* ── Comparison Table ── */}
         <section className="pp-sec">
           <div className="pp-wrap">
-            <p className="pp-mlabel">// side by side comparison</p>
-            <h2 style={{ marginTop: '10px' }}>Target Plus vs. Open Consumer Marketplaces</h2>
+            <p className="pp-mlabel">// side by side</p>
+            <h2 style={{ marginTop: '10px' }}>Target Plus vs. Amazon and Walmart marketplaces</h2>
             <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
-              How Target Plus compares with Amazon and Walmart on what each marketplace publishes (read 22 Oct 2026).
-              Put your own products through the{' '}
-              <a href="/marketplace-fee-calculator" style={LINK}>marketplace fee calculator</a> to compare margins.
+              What each marketplace publishes, {READ}.
             </p>
             <div style={{ marginTop: '32px', overflowX: 'auto' }}>
               <table className="pp-table">
                 <thead>
                   <tr>
-                    <th>Marketplace Attribute</th>
+                    <th>What you need to know</th>
                     <th>Target Plus</th>
-                    <th>Amazon Marketplace</th>
+                    <th>Amazon</th>
                     <th>Walmart Marketplace</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="me">
-                    <td className="name">Seller Admission Model</td>
+                    <td className="name">How sellers get in</td>
                     <td>Invite-only, picked by Target</td>
                     <td>Open registration</td>
                     <td>Application-based</td>
                   </tr>
                   <tr>
-                    <td className="name">Published Fees</td>
+                    <td className="name">Published fees</td>
                     <td>Not published; set in the partner agreement</td>
                     <td>
                       Professional plan $39.99 a month plus referral fees by category (
                       <a href="https://sell.amazon.com/pricing" target="_blank" rel="noopener noreferrer" style={LINK}>Amazon pricing</a>)
                     </td>
                     <td>
-                      No setup or monthly fees; referral fees 3% to 20% by category (
+                      No setup or monthly fees; referral fees vary by category (
                       <a href="https://marketplace.walmart.com/pricing/" target="_blank" rel="noopener noreferrer" style={LINK}>Walmart pricing</a>)
                     </td>
                   </tr>
@@ -624,19 +816,19 @@ export default function TargetPlusMarketplacePage() {
                     <td>WFS or seller-fulfilled</td>
                   </tr>
                   <tr>
-                    <td className="name">Shipping Lead Time</td>
+                    <td className="name">Shipping lead time</td>
                     <td>24 hours, delivered 2 to 5 business days after shipping</td>
                     <td>Set by Amazon’s seller policies</td>
                     <td>Set by Walmart’s seller policies</td>
                   </tr>
                   <tr className="me">
-                    <td className="name">Returns Requirement</td>
+                    <td className="name">Returns</td>
                     <td>Receive parcel and palletized returns at a business location</td>
                     <td>Set by Amazon’s return policies</td>
                     <td>Set by Walmart’s return policies</td>
                   </tr>
                   <tr>
-                    <td className="name">Who We Work With</td>
+                    <td className="name">Our page for it</td>
                     <td>This page</td>
                     <td><a href="/services/amazon-agency" style={LINK}>Amazon agency</a></td>
                     <td><a href="/services/walmart-marketplace-agency" style={LINK}>Walmart agency</a></td>
@@ -644,14 +836,19 @@ export default function TargetPlusMarketplacePage() {
                 </tbody>
               </table>
             </div>
+            <p style={{ marginTop: '18px', color: 'var(--pp-body)', maxWidth: '68ch' }}>
+              Running Target Plus beside other channels? See how we run Amazon, Walmart and Faire together on our{' '}
+              <a href="/marketplace-management" style={LINK}>marketplace management</a> page, or compare it with
+              wholesale on <a href="/faire-wholesale-marketplace" style={LINK}>Faire</a>.
+            </p>
           </div>
         </section>
 
-        {/* ── How It Works ── */}
+        {/* ── Timeline ── */}
         <section className="pp-sec tint">
           <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// execution roadmap</p>
-            <h2 style={{ marginTop: '10px' }}>Our 3-stage Target Plus onboarding roadmap</h2>
+            <p className="pp-mlabel">// timeline</p>
+            <h2 style={{ marginTop: '10px' }}>A Target Plus launch plan that fits Target’s 70 days</h2>
             <ol style={{ display: 'grid', gap: '24px', marginTop: '28px', listStyle: 'none', padding: 0 }}>
               {HOW_STEPS.map((s) => (
                 <li className="pp-card" key={s.name}>
@@ -663,16 +860,14 @@ export default function TargetPlusMarketplacePage() {
             </ol>
             <div className="pp-editorial" style={{ marginTop: '28px' }}>
               <p>
-                Target runs its own onboarding clock once you are accepted. From the{' '}
-                <a href={TP_APPLY} target="_blank" rel="noopener noreferrer" style={LINK}>Target Plus apply page</a>{' '}
-                (read 22 Oct 2026):
+                Two dates come from Target, not from us. The{' '}
+                <a href={TP_APPLY} target="_blank" rel="noopener noreferrer" style={LINK}>apply page</a> sets the
+                70-day onboarding with inventory in place by day 45. The{' '}
+                <a href={TP_PROVIDERS} target="_blank" rel="noopener noreferrer" style={LINK}>service provider page</a>{' '}
+                says direct API teams typically build their feeds within 30 days, and Acenda states there that most of
+                its brands onboard within 30 days. Readiness work happens before you apply, so it does not eat into
+                Target’s clock.
               </p>
-              <ol style={{ paddingLeft: '20px', marginTop: '12px', display: 'grid', gap: '8px' }}>
-                <li>Apply. Target Plus is invite-only, and Target decides who joins.</li>
-                <li>If accepted, start Target’s 70-day onboarding timeline.</li>
-                <li>Have inventory in place and finish Target’s trainings by day 45.</li>
-                <li>Work through the rest of the 70 days with Target’s partner support, on calls from 8am to 5pm CST in English.</li>
-              </ol>
             </div>
           </div>
         </section>
@@ -733,7 +928,7 @@ export default function TargetPlusMarketplacePage() {
             <p className="pp-mlabel">// common questions</p>
             <div style={{ marginTop: '16px' }}>
               <FAQ
-                headline="Frequently asked questions about Target Plus"
+                headline="Target Plus marketplace questions, answered"
                 categories={FAQ_CATEGORIES}
                 items={FAQ_ITEMS}
               />
@@ -746,11 +941,11 @@ export default function TargetPlusMarketplacePage() {
           <div className="pp-wrap">
             <div className="pp-ctagrid">
               <div className="pp-cta">
-                <p className="pp-mlabel">// start your retail expansion</p>
-                <h2 style={{ margin: '12px 0 16px' }}>Ready to launch on Target Plus?</h2>
+                <p className="pp-mlabel">// start with a readiness check</p>
+                <h2 style={{ margin: '12px 0 16px' }}>Ready to apply to Target Plus?</h2>
                 <p className="pp-lead" style={{ maxWidth: '44ch' }}>
-                  Let us check your catalog against Target’s requirements, review your DVS and EDI needs, and give you
-                  a fixed price per phase in writing before any build starts.
+                  We check your business against Target’s requirements, map the integration route that fits your
+                  systems, and give you a fixed price per phase in writing before any build starts.
                 </p>
                 <div style={{ marginTop: '24px' }}>
                   <a className="pp-primary" href={CALENDLY} target="_blank" rel="noopener noreferrer">
