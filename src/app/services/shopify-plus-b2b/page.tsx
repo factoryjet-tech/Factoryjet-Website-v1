@@ -1,24 +1,34 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import JsonLd from '@/components/JsonLd';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import FAQ from '@/components/v2/FAQ';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import ModalCTAButton from '@/components/v2/ModalCTAButton';
-import EnterpriseArchitectureBlueprint from '@/components/v2/EnterpriseArchitectureBlueprint';
 import AuthorCard from '@/components/v2/AuthorCard';
-import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import B2bWholesaleCalculator from '@/components/commerce/B2bWholesaleCalculator';
-import Net30PaymentComparison from '@/components/commerce/Net30PaymentComparison';
-import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
 import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-11-15';
+const PAGE_MODIFIED = '2026-11-16';
+const PAGE_URL = 'https://factoryjet.com/services/shopify-plus-b2b';
+
+/* Shopify Help pages, read 16 November 2026. The plan split on this page
+   (all B2B plans vs Plus only) comes from SRC_PLAN_FEATURES. */
+const READ_ON = '16 November 2026';
+const SRC_PLAN_FEATURES = 'https://help.shopify.com/en/manual/b2b/getting-started/plan-features';
+const SRC_TERMS = 'https://help.shopify.com/en/manual/b2b/payment-terms';
+const SRC_CATALOGS = 'https://help.shopify.com/en/manual/b2b/catalogs';
+const SRC_COMPANIES = 'https://help.shopify.com/en/manual/b2b/companies';
+const SRC_PLUS_PRICING = 'https://www.shopify.com/plus/pricing';
+/* Market cost ranges, read 16 November 2026. Third-party figures, not FactoryJet prices. */
+const SRC_RIGBY = 'https://www.rigbyjs.com/guides/b2b-ecommerce-platforms/b2b-commerce-platform-pricing';
+const SRC_RINGLY = 'https://www.ringly.io/blog/shopify-plus-partner-agency';
 
 /* House terms, approved wording (2026-10-16). Same terms as /services/ai-automation. */
 const HOUSE_TERMS = [
@@ -32,185 +42,147 @@ const HOUSE_TERMS = [
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const IMG = '/images/us/marketplace';
 
+const ext = { target: '_blank', rel: 'noopener noreferrer' } as const;
+const srcLink = { color: 'var(--pp-orange-dark)', textDecoration: 'underline' } as const;
+const srcNote = { marginTop: '14px', fontFamily: 'var(--pp-mono)', fontSize: '11.5px', color: 'var(--pp-muted)', lineHeight: 1.6 } as const;
+const h3Style = { fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '22px', color: 'var(--pp-ink)' } as const;
+
 export const metadata: Metadata = {
-  title: 'Shopify Plus B2B Agency & Wholesale Development | FactoryJet',
+  title: 'Shopify B2B Agency: Price Lists, Net Terms, Wholesale Portals | FactoryJet',
   description:
-    'Scale B2B wholesale on Shopify Plus. Custom price lists, company hierarchies, and Net 30 terms. Volume pricing and real-time ERP sync on a single store.',
+    'FactoryJet sets up Shopify B2B with customer-specific price lists, net 30 or net 60 terms, company accounts and quantity rules, and syncs them with NetSuite, Acumatica, Dynamics, QuickBooks or Odoo.',
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Plus B2B Agency & Wholesale Development | FactoryJet',
+    title: 'Shopify B2B Agency: Price Lists, Net Terms, Wholesale Portals | FactoryJet',
     description:
-      'Unified B2B wholesale development on Shopify Plus. Run DTC and B2B from a single backend with custom pricing lists, Net terms, and ERP synchronization.',
-    url: 'https://factoryjet.com/services/shopify-plus-b2b',
+      'Customer-specific price lists, net terms, company accounts and quantity rules on Shopify B2B and Shopify Plus, with ERP sync where Shopify stops.',
+    url: PAGE_URL,
     images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'Shopify Plus B2B Development Agency' }],
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Plus B2B Agency | FactoryJet',
-    description: 'Build high-converting wholesale portals with Shopify Plus native B2B features, custom price rules, and ERP integrations.',
+    title: 'Shopify B2B Agency: Price Lists and Net Terms | FactoryJet',
+    description: 'Shopify B2B set up with customer-specific price lists, net terms, company accounts and ERP sync.',
     images: ['https://factoryjet.com/og-default.png'],
   },
-  alternates: { canonical: 'https://factoryjet.com/services/shopify-plus-b2b', languages: twinAlternates['shopify-plus-b2b'] },
+  alternates: { canonical: PAGE_URL, languages: twinAlternates['shopify-plus-b2b'] },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
 /* ─────────────────────────────────────────────
-   FAQ DATA
+   FAQ DATA (the visible FAQ and the FAQPage schema both read this array)
 ───────────────────────────────────────────── */
 const FAQ_CATEGORIES = [
-  { key: 'features', label: 'B2B Features' },
-  { key: 'architecture', label: 'Blended vs Dedicated' },
-  { key: 'erp', label: 'ERP & Integrations' },
-  { key: 'commercials', label: 'Terms & Scoping' },
+  { key: 'features', label: 'Price lists & terms' },
+  { key: 'architecture', label: 'Store setup' },
+  { key: 'erp', label: 'ERP & tax' },
+  { key: 'commercials', label: 'Cost & scoping' },
 ];
 
 const FAQ_ITEMS = [
-  // B2B Features
   {
     category: 'features',
-    question: 'What is Shopify Plus B2B and how does it replace third-party wholesale apps?',
+    question: 'Which agency can set up Shopify B2B with customer-specific price lists and net terms?',
     answer:
-      'Shopify Plus B2B is Shopify’s native wholesale suite. It runs directly in the core platform. This cuts slow third-party wholesale apps. You get native company accounts. You get multi-tier price lists and volume breaks. Net payment terms execute in core checkout. Validation rules run directly with zero delay.',
+      'FactoryJet sets up Shopify B2B for brands that sell to retailers and distributors. We create company accounts, give each customer its own price list, set net 30 or net 60 terms and add quantity rules such as minimums and case packs. Where Shopify stops, for example credit limits or contract prices kept in your ERP, we build the sync to NetSuite, Acumatica, Microsoft Dynamics, QuickBooks or Odoo.',
   },
   {
     category: 'features',
     question: 'Can you use Shopify for wholesale?',
     answer:
-      'Yes. Shopify for wholesale runs on its built-in B2B features: company accounts with several buyer locations, a price list per customer, net payment terms, and quantity rules such as minimums and case packs. We build Shopify wholesale stores on Shopify Plus, either as one store that serves retail and trade buyers or as a separate wholesale store, and connect them to your ERP so stock, prices and orders match.',
+      'Yes. Shopify has built-in B2B tools: company accounts with several buyer locations, catalogs with their own prices, net payment terms, and quantity rules such as minimums and case packs. We build Shopify wholesale stores either as one store that serves retail and trade buyers or as a separate wholesale store, and connect them to your ERP so stock, prices and orders match.',
   },
   {
     category: 'features',
-    question: 'How do custom B2B price lists work in Shopify Plus?',
+    question: 'How do customer-specific price lists work on Shopify B2B?',
     answer:
-      'You can assign percentage discounts or fixed contract prices to products and collections. These price lists connect directly to specific wholesale company profiles or buyer locations. Each business customer sees their exact negotiated contract pricing upon logging in.',
+      'Shopify calls them catalogs. A catalog picks which products a buyer sees and sets their prices, either as a percentage off or as a fixed price per product. On Shopify Plus you can assign a catalog straight to one company or one company location, so that customer sees only its own prices. On Basic, Grow and Advanced, catalogs are assigned to B2B markets instead, with 3 active assignments in total.',
   },
   {
     category: 'features',
-    question: 'Can corporate clients manage multiple buyer locations and permissions?',
+    question: 'How do net 30 and net 60 payment terms work on Shopify B2B?',
     answer:
-      'Yes. Shopify Plus B2B supports multi-tier company hierarchies. Corporate parent accounts manage multiple shipping locations and branch facilities. They assign unique permissions, such as Ordering Only versus Admin Approver. They also enforce distinct purchasing limits for each location.',
+      'You set payment terms on a company location or a draft order. Shopify offers net 7, 15, 30, 45, 60 and 90, due on fulfillment, or a fixed date on draft orders. The buyer places the order without paying, the order shows as overdue after the due date, and payment is not taken automatically. Reminders can be sent with a Shopify Flow action. Net terms are on every B2B plan.',
   },
   {
     category: 'features',
-    question: 'How are Net 30, Net 60, and credit terms handled at checkout?',
+    question: 'Can one company have several locations and buyers?',
     answer:
-      'Wholesale buyers submit purchase orders on terms like Net 30 or Net 60. The store creates invoices with due dates. Reminder webhooks trigger when balances come due.',
-  },
-
-  // Blended vs Dedicated
-  {
-    category: 'architecture',
-    question: 'What is the difference between a blended DTC + B2B store and a dedicated B2B expansion store?',
-    answer:
-      'A blended store serves DTC and wholesale buyers on one domain. Customer login reveals wholesale pricing and payment terms. An expansion store uses a separate Shopify Plus setup for wholesale. This provides isolated theme styling and distinct catalogs.',
+      'Yes. A company in Shopify can have many locations, such as a head office and branches. Each location can have its own address, catalog and payment terms. You add buyers to a location and choose what each one may do, for example place orders only or also manage the location.',
   },
   {
-    category: 'architecture',
-    question: 'When should a brand choose a blended store versus a dedicated expansion store?',
+    category: 'features',
+    question: 'How do quantity rules, minimum order quantities and case packs work?',
     answer:
-      'A blended store minimizes catalog maintenance and strengthens your primary domain authority. A dedicated expansion store works best when wholesale catalogs differ completely. It is also ideal for distinct shipping rules or complex custom quoting logic.',
+      'Shopify B2B has quantity rules on every B2B plan: a minimum, a maximum and an increment per product, plus price breaks for larger quantities. An increment of 12 makes buyers order in cases of 12. Rules Shopify does not cover, such as a minimum cart value of $1,500 for one customer group, we build with Shopify Functions.',
   },
   {
-    category: 'architecture',
-    question: 'Can wholesale buyers use quick-order forms and CSV bulk reordering?',
+    category: 'features',
+    question: 'Can B2B orders go to review before they are placed?',
     answer:
-      'Yes. We build high-speed B2B matrix order forms. Buyers enter SKU counts across sizes and colors on one grid. They can also upload CSV files to fill carts in seconds.',
+      'Yes. With checkout to draft, a buyer’s order becomes a draft order for your team to check instead of a finished order. Your sales team can change prices, add freight and then send the buyer an invoice. Sales reps can also build draft orders for a customer and email them a checkout link.',
   },
   {
     category: 'architecture',
-    question: 'How does Shopify Plus B2B handle minimum order quantities (MOQs) and case pack rules?',
+    question: 'Do I need Shopify Plus for B2B?',
     answer:
-      'We use Shopify Functions to enforce order rules. This includes minimum order values and SKU quantities. We also set case pack rules. Everything runs server-side with zero theme bloat.',
+      'Not always. Shopify B2B runs on Basic, Grow, Advanced and Plus. The lower plans get company accounts, net terms, quantity rules and checkout to draft, with 3 active catalog assignments. Plus adds catalogs assigned straight to one company, unlimited catalogs, deposits on large orders and partial payments. If each customer needs its own price list, you need Plus.',
   },
-
-  // ERP & Integrations
+  {
+    category: 'architecture',
+    question: 'Should I run one blended store or a separate wholesale store?',
+    answer:
+      'Pick one blended store when retail and trade buyers buy mostly the same products and you want one catalog and one stock count. Pick a separate wholesale store when the trade catalog, brand look, shipping or checkout rules differ a lot from retail. A separate store means two stores to keep in step, so it costs more to run.',
+  },
+  {
+    category: 'architecture',
+    question: 'Can wholesale buyers reorder quickly or upload a CSV?',
+    answer:
+      'Shopify B2B includes a quick order list and easy reorders on every B2B plan. When buyers need a size and color grid or a CSV upload to fill a cart, we build that into the theme.',
+  },
   {
     category: 'erp',
-    question: 'How does FactoryJet integrate Shopify Plus B2B with NetSuite or SAP?',
+    question: 'Which ERP systems do you connect to Shopify B2B?',
     answer:
-      'We build API middleware linking Shopify Plus GraphQL endpoints to your ERP. We support NetSuite, SAP, Dynamics 365, Acumatica, and QuickBooks. Contract terms, credit limits, and inventory balances sync in real time. Purchase orders sync without delay.',
+      'We connect Shopify B2B to NetSuite, Acumatica, Microsoft Dynamics, QuickBooks and Odoo. The ERP usually stays the record for customers, contract prices, stock, credit limits and invoices. Shopify holds the buyer logins, catalogs, carts and orders. Orders flow from Shopify to the ERP, and prices, stock and balances flow back.',
+  },
+  {
+    category: 'erp',
+    question: 'How are credit limits handled on Shopify B2B?',
+    answer:
+      'Shopify B2B does not track a credit limit for each customer on its own. We keep the limit and the open balance in your ERP, sync them to Shopify, and use them to hold an order for review or ask for card payment when an account is over its limit.',
   },
   {
     category: 'erp',
     question: 'How do tax exemptions and resale certificates work for B2B buyers?',
     answer:
-      'We link tax engines with Shopify Plus B2B company profiles. We connect systems like Avalara AvaTax or Vertex. The system validates state resale forms. It applies zero sales tax to qualified wholesale purchases.',
-  },
-  {
-    category: 'erp',
-    question: 'Can sales representatives place and manage orders on behalf of B2B customers (sales rep masquerade)?',
-    answer:
-      'Yes. We configure sales rep draft workflows and login tools. Sales reps can build quotes. They apply custom line discounts. They email checkout links directly to wholesale buyers.',
-  },
-
-  // Commercials & Scoping
-  {
-    category: 'commercials',
-    question: 'What is the timeline for migrating from legacy wholesale apps or Magento to Shopify Plus B2B?',
-    answer:
-      'A standard B2B portal migration takes 4 to 6 weeks. This covers company account imports and price list setup. It also includes ERP connector setup and team onboarding.',
+      'You can mark a company location as tax exempt in Shopify. When you sell across many US states and need to collect and check resale certificates, we connect a tax service such as Avalara AvaTax or Vertex to the company records.',
   },
   {
     category: 'commercials',
-    question: 'Do we have to pay extra per-transaction fees on Shopify Plus B2B orders?',
+    question: 'How much does a Shopify Plus B2B build cost?',
     answer:
-      'No. Wholesale orders on Net terms or manual invoices have zero processing fees. Standard merchant processing rates apply only when corporate buyers pay with a credit card.',
+      'Published market ranges vary with scope. Rigby puts Shopify Plus implementation at about $25,000 to $150,000 and says the higher end is more common for B2B. Ringly lists a lean Plus build with B2B setup at $25,000 to $50,000 and a full build with custom checkout, B2B and international at $50,000 to $250,000 or more. The Shopify Plus plan fee is separate. FactoryJet quotes a fixed price per phase after a scoping call.',
+  },
+  {
+    category: 'commercials',
+    question: 'How long does a Shopify B2B setup take?',
+    answer:
+      'It depends on how many price lists you have, which ERP you use and how much custom checkout logic you need. We put dates for each phase in the proposal. Ringly, an agency guide, puts a lean Plus build with B2B setup at 8 to 12 weeks.',
   },
   {
     category: 'commercials',
     question: 'What is FactoryJet’s pricing model for Shopify Plus B2B development?',
     answer:
-      'Each phase is scoped, priced and signed on its own, with milestone deliverables and no hourly billing. We never take a percentage of your wholesale revenue. Defects found after launch are fixed inside the build price for a cover period agreed before work starts. Support after that is optional, each change is quoted and approved first, and there is no monthly minimum.',
+      'Each phase is scoped, priced and signed on its own, with no hourly billing. We never take a percentage of your wholesale revenue. Defects found after launch are fixed inside the build price for a cover period agreed before work starts. Support after that is optional, each change is quoted and approved first, and there is no monthly minimum.',
   },
   {
     category: 'commercials',
-    question: 'How do we schedule a Shopify Plus B2B technical scoping session with the founder?',
+    question: 'How do we book a Shopify B2B scoping call with the founder?',
     answer:
-      'You can schedule a 30-minute scoping call directly with founder Bhavesh Barot. We review your wholesale price matrices, ERP requirements, and buyer workflows. Then we send a fixed-scope technical proposal.',
-  },
-  {
-    category: 'architecture',
-    question: 'How does Shopify Plus B2B handle multi-currency wholesale pricing for global distributors?',
-    answer:
-      'Shopify Plus B2B lets you assign currency price lists to global accounts. European accounts see Euros with Net 60 terms. UK clients see British Pounds. You manage all rules in one store admin.',
-  },
-  {
-    category: 'erp',
-    question: 'Can sales representatives edit draft B2B orders directly in Shopify Admin before payment?',
-    answer:
-      'Yes. Sales reps can create draft orders and adjust line discounts. They set custom freight rates and email invoices. Net terms are set directly in the Shopify Admin.',
-  },
-  {
-    category: 'architecture',
-    question: 'How does Shopify Plus B2B manage tax exemption certificates for wholesale accounts?',
-    answer:
-      'We connect tax systems like Avalara AvaTax or Vertex to Shopify Plus B2B. Corporate buyers upload state resale forms during signup. Verified accounts are marked tax-exempt right away.',
-  },
-  {
-    category: 'features',
-    question: 'How does Shopify Plus B2B handle minimum order quantity (MOQ) rules per SKU or collection?',
-    answer:
-      'We use Shopify Functions to enforce minimum order quantities. We set rules at the SKU level and cart level. For example, we set rules like 24 units per color or $1,500 cart totals. These rules run server-side in checkout with zero delay.',
-  },
-  {
-    category: 'features',
-    question: 'Can corporate buyers save multiple credit cards or bank accounts (ACH) for one-click wholesale checkout?',
-    answer:
-      'Yes. Shopify Plus B2B supports vaulted payment methods. Buyers save corporate cards or ACH bank details for quick reorders. Payments capture when orders ship.',
-  },
-  {
-    category: 'architecture',
-    question: 'How does Shopify Plus B2B support custom volume tier pricing tables on product pages?',
-    answer:
-      'We build native Liquid and JavaScript volume tier tables on product pages. When wholesale buyers order more units, unit price updates in real time. Total savings update on the page instantly.',
-  },
-  {
-    category: 'commercials',
-    question: 'What is the difference between Shopify B2B on Plus versus third-party wholesale apps on standard Shopify?',
-    answer:
-      'Third-party wholesale apps rely on script overrides and customer tags. These fragile setups break during theme updates. Native Shopify Plus B2B is built into core code. It supports true company hierarchies. You get native Net terms in checkout. Direct ERP webhooks run with zero app fees.',
+      'Book a 30-minute call with founder Bhavesh Barot. We look at your price lists, payment terms, ERP and how your buyers order today. Then we send a fixed-scope proposal, phase by phase.',
   },
 ];
 
@@ -230,38 +202,26 @@ const faqSchema = {
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  serviceType: 'Shopify Plus B2B Wholesale Development Agency',
-  name: 'Shopify Plus B2B Wholesale Portal Development',
+  serviceType: 'Shopify B2B and Shopify Plus wholesale development',
+  name: 'Shopify B2B setup: customer-specific price lists, net terms and ERP sync',
   description:
-    'Complete Shopify Plus native B2B wholesale portal development, custom price lists, Net terms, company account hierarchies, and ERP integrations.',
+    'Shopify B2B and Shopify Plus setup with company accounts, customer-specific price lists, net payment terms, quantity rules, draft order review and ERP integration.',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   areaServed: [
     { '@type': 'Country', name: 'United States' },
     { '@type': 'Country', name: 'United Kingdom' },
     { '@type': 'Country', name: 'Australia' },
   ],
-  audience: { '@type': 'BusinessAudience', name: 'DTC and B2B Brands Scaling Wholesale' },
-};
-
-const howtoSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'HowTo',
-  name: 'How FactoryJet Launches Shopify Plus B2B Wholesale Portals',
-  description: 'Our proven 3-phase technical framework for deploying Shopify Plus native B2B wholesale systems.',
-  step: [
-    { '@type': 'HowToStep', position: 1, name: 'Wholesale Price Matrix & Account Modeling', text: 'We map contract pricing rules, tier structures, company hierarchies, and tax exemption workflows.' },
-    { '@type': 'HowToStep', position: 2, name: 'Native B2B Architecture & ERP Integration', text: 'We configure Shopify Plus B2B price lists, Net payment terms, Shopify Functions checkout rules, and ERP connectors.' },
-    { '@type': 'HowToStep', position: 3, name: 'Buyer Testing & Full Wholesale Launch', text: 'We validate matrix order forms, test ERP invoice synchronizations, and onboard wholesale accounts.' },
-  ],
+  audience: { '@type': 'BusinessAudience', name: 'Brands, manufacturers and distributors selling wholesale' },
 };
 
 const webpageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  '@id': 'https://factoryjet.com/services/shopify-plus-b2b#webpage',
-  name: 'Shopify Plus B2B Agency & Wholesale Development | FactoryJet',
-  description: 'Scale B2B wholesale on Shopify Plus with custom pricing and ERP sync.',
-  url: 'https://factoryjet.com/services/shopify-plus-b2b',
+  '@id': `${PAGE_URL}#webpage`,
+  name: 'Shopify B2B Agency: Price Lists, Net Terms, Wholesale Portals | FactoryJet',
+  description: 'Shopify B2B setup with customer-specific price lists, net terms, company accounts, quantity rules and ERP sync.',
+  url: PAGE_URL,
   dateModified: PAGE_MODIFIED,
   author: {
     '@type': 'Person',
@@ -296,92 +256,85 @@ const breadcrumbSchema = {
   })),
 };
 
+/* What Shopify does on its own vs where we add work. Plan split from SRC_PLAN_FEATURES. */
+const NATIVE_SPLIT = [
+  { need: 'Company accounts with locations and buyers', note: 'head office, branches, who may order', where: 'All B2B plans' },
+  { need: 'Net 30, net 60 or due on fulfillment', note: 'set per location or per draft order', where: 'All B2B plans' },
+  { need: 'Quantity rules and price breaks', note: 'minimum, maximum, case-pack increment', where: 'All B2B plans' },
+  { need: 'Orders held for review', note: 'checkout to draft, then invoice', where: 'All B2B plans' },
+  { need: 'A price list for one customer', note: 'catalog assigned to one company', where: 'Plus only' },
+  { need: 'Deposits and partial payments', note: 'a share due at checkout', where: 'Plus only' },
+  { need: 'Credit limits and contract prices from your ERP', note: 'balance checked before the order goes through', where: 'ERP sync' },
+  { need: 'Cart minimums by customer group, freight rules', note: 'rules Shopify does not offer', where: 'Custom build' },
+];
+
 const STATS = [
-  { b: 'Native B2B.', s: 'Zero slow third-party wholesale apps.' },
-  { b: 'Net 30/60/90.', s: 'Automated purchase order terms.' },
-  { b: '1 Storefront.', s: 'Unified DTC + B2B catalog backend.' },
-  { b: '< 150ms ERP.', s: 'Real-time NetSuite / SAP sync.' },
+  { b: 'Net 7 to 90.', s: 'Payment terms Shopify offers, plus due on fulfillment.' },
+  { b: '3 vs unlimited.', s: 'Active catalog assignments: lower plans vs Plus.' },
+  { b: 'Min, max, step.', s: 'Quantity rules per product on every B2B plan.' },
+  { b: '5 ERPs.', s: 'NetSuite, Acumatica, Dynamics, QuickBooks, Odoo.' },
 ];
 
-const SOURCED = [
-  {
-    v: '44%+',
-    d: 'Faster order placement speed achieved by wholesale buyers. Powered by native Shopify Plus B2B matrix order forms.',
-    src: 'Shopify Enterprise Commerce Benchmark.',
-    href: 'https://www.shopify.com/plus',
-  },
-  {
-    v: '$3.6 Trillion',
-    d: 'Total US B2B digital commerce volume projected by 2026. Driven as manufacturers and distributors migrate online.',
-    src: 'Forrester US B2B E-Commerce Forecast.',
-    href: 'https://www.forrester.com',
-  },
-  {
-    v: '65%',
-    d: 'Enterprise B2B buyers prioritize digital reorder portals. They favor online tools over manual phone and email orders.',
-    src: 'McKinsey Global B2B Buyer Survey.',
-    href: 'https://www.mckinsey.com',
-  },
+const BUILDS = [
+  { t: 'Price lists loaded from your contracts.', d: 'We turn your price sheets into Shopify catalogs, fixed prices or a percentage off, and assign each one to the right company or location.' },
+  { t: 'Company accounts imported.', d: 'Every trade customer becomes a Shopify company with its locations, buyers, permissions, tax status and payment terms set.' },
+  { t: 'Checkout rules with Shopify Functions.', d: 'Cart minimums, case packs beyond Shopify’s quantity rules, and payment methods shown only to approved companies.' },
+  { t: 'Freight and delivery options.', d: 'Pallet and LTL freight, liftgate and dock options shown at checkout for the buyers who need them.' },
+  { t: 'Fast reorder screens.', d: 'Size and color order grids and CSV upload on top of Shopify’s quick order list.' },
+  { t: 'ERP sync in both directions.', d: 'Orders go to your ERP. Prices, stock, credit limits and invoices come back to Shopify.' },
 ];
 
-const BENEFITS = [
-  { i: '◈', t: 'Custom B2B Price Lists & Quantity Breaks.', d: 'Assign distinct wholesale contract pricing and volume tier discounts. Manage customer-specific catalogs with zero app bloat.' },
-  { i: '◇', t: 'Company Profiles & Location Hierarchies.', d: 'Allow corporate buyers to manage multiple branch locations. Assign unique buyer permissions and set clear spend limits.' },
-  { i: '↯', t: 'Net Payment Terms & Automated Invoicing.', d: 'Enable purchase orders on Net 15, 30, and 60 terms. Generate automatic invoices and send scheduled payment reminders.' },
-  { i: '▤', t: 'Unified DTC + B2B Storefront Architecture.', d: 'Run consumer retail and wholesale from a single store backend. This eliminates double catalog maintenance.' },
-  { i: '⛓', t: 'ERP & WMS Bi-Directional Synchronization.', d: 'Connect NetSuite, SAP, Acumatica, or Katana to Shopify Plus GraphQL APIs. Sync inventory and orders in real time.' },
-  { i: '⤢', t: 'Custom B2B Checkout Rules with Shopify Functions.', d: 'Enforce minimum order quantities (MOQs) and case pack multiples. Apply custom freight rules natively in checkout.' },
+/* Who owns which data in a Shopify B2B + ERP setup. */
+const ERP_OWNERSHIP = [
+  { data: 'Customer and company records', owner: 'ERP', flow: 'ERP to Shopify. New trade sign-ups can flow back for approval.' },
+  { data: 'Contract prices and price lists', owner: 'ERP', flow: 'ERP to Shopify catalogs when a contract changes.' },
+  { data: 'Stock by warehouse', owner: 'ERP or WMS', flow: 'ERP to Shopify, on a schedule or on each change.' },
+  { data: 'Credit limit and open balance', owner: 'ERP', flow: 'ERP to Shopify, used to hold orders over the limit.' },
+  { data: 'Buyer logins, carts, checkout', owner: 'Shopify', flow: 'Stays in Shopify.' },
+  { data: 'Orders and draft orders', owner: 'Shopify', flow: 'Shopify to ERP as sales orders.' },
+  { data: 'Invoices, payments, aging', owner: 'ERP', flow: 'ERP to Shopify, so buyers see what they owe.' },
 ];
 
-const EVALUATION_CRITERIA = [
-  {
-    label: 'Technical Execution Model.',
-    factoryjet: 'Senior commerce systems architects write custom ETL scripts. We build Shopify Functions with 100% full IP ownership.',
-    traditional: 'Junior agency generalists relying on generic third-party migration apps that cause database bloat.',
-  },
-  {
-    label: 'SEO & 301 URL Preservation.',
-    factoryjet: 'We map 100% of legacy URLs one-to-one. We configure single-hop 301 redirects and preserve schema markup.',
-    traditional: 'Wildcard home-page redirects that result in massive Google ranking and organic revenue drops.',
-  },
-  {
-    label: 'ERP & Warehouse Synchronization.',
-    factoryjet: 'Direct GraphQL webhook pipeline syncing NetSuite, SAP, and Manhattan WMS. Sync executes in under 150ms.',
-    traditional: 'Batch CSV file uploads or slow third-party middleware with frequent inventory sync failures.',
-  },
-  {
-    label: 'Commercial Terms & Accountability.',
-    factoryjet: 'Transparent fixed-price milestone scope. We guarantee a zero-downtime cutover SLA.',
-    traditional: 'Open-ended hourly retainer billing with frequent scope creep and unexpected overages.',
-  },
+const AGENCY_QUESTIONS = [
+  { q: 'Which of our needs does Shopify cover natively, and which need code?', a: 'A good answer splits your list into plan features, Plus features, ERP sync and custom Functions, like the table near the top of this page.' },
+  { q: 'Which system owns prices, stock and credit limits?', a: 'If nobody can say, you will end up typing prices into two places.' },
+  { q: 'Can we see our own products and one real price list working before we sign?', a: 'We build that draft first. Ask any agency you talk to for the same.' },
+  { q: 'Who owns the code and the app accounts?', a: 'You should. Ours sits in your repository, and Shopify and app fees bill to your accounts.' },
 ];
 
 export default function ShopifyPlusB2BPage() {
   return (
     <>
-      <script id="sp-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script id="sp-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <script id="sp-howto-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howtoSchema) }} />
-      <script id="sp-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageSchema) }} />
-      <script id="sp-org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
-      <script id="sp-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <JsonLd id="sp-faq-schema" data={faqSchema} />
+      <JsonLd id="sp-service-schema" data={serviceSchema} />
+      <JsonLd id="sp-webpage-schema" data={webpageSchema} />
+      <JsonLd id="sp-org-schema" data={orgSchema} />
+      <JsonLd id="sp-breadcrumb-schema" data={breadcrumbSchema} />
 
       <SiteHeader navLinks={[]} cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
       <Breadcrumbs items={BREADCRUMB_ITEMS} />
 
       <main className="platpage">
-        {/* ── Hero ── */}
+        {/* ── Hero: direct answer first ── */}
         <section className="pp-dotgrid">
           <div className="pp-wrap" style={{ paddingTop: 'clamp(44px,6vh,84px)', paddingBottom: 'clamp(44px,6vh,84px)' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(32px,5vw,56px)', alignItems: 'center' }} className="pp-herogrid">
               <div>
-                <p className="pp-eyebrow">Shopify Plus B2B Wholesale Agency.</p>
-                <h1 style={{ margin: '14px 0 12px', maxWidth: '20ch' }}>
-                  Shopify Plus B2B agency for <span className="pp-grad">wholesale portals.</span>
+                <p className="pp-eyebrow">Shopify B2B and Shopify Plus agency</p>
+                <h1 style={{ margin: '14px 0 12px', maxWidth: '22ch' }}>
+                  Shopify B2B setup with customer-specific price lists and net terms
                 </h1>
-                <p className="pp-lead" style={{ maxWidth: '48ch' }}>
-                  FactoryJet builds B2B wholesale portals on Shopify Plus for brands that sell to retailers and distributors. Your buyers log in to see their own price lists, Net 30 or Net 60 terms, company accounts and volume tiers. Orders sync to NetSuite, SAP, Dynamics 365, Acumatica or QuickBooks in real time.
+                <p className="pp-lead" style={{ maxWidth: '52ch' }}>
+                  FactoryJet sets up Shopify B2B for brands that sell to retailers and distributors: company accounts,
+                  customer-specific price lists, net terms and quantity rules. Shopify does most of this natively.
+                  Company accounts, net 30 or net 60 terms and quantity rules work on every B2B plan, and a price list
+                  for one customer needs Shopify Plus.
+                </p>
+                <p className="pp-lead" style={{ maxWidth: '52ch', marginTop: '12px' }}>
+                  Credit limits, contract prices kept in your ERP and order rules Shopify does not offer need ERP sync
+                  or custom work. That is the part we build, with NetSuite, Acumatica, Microsoft Dynamics, QuickBooks
+                  or Odoo.
                 </p>
                 <HeroInlineForm
                   source="us_shopify_plus_b2b_hero"
@@ -391,77 +344,57 @@ export default function ShopifyPlusB2BPage() {
                 />
               </div>
 
-              {/* Visual Architecture Graphic */}
+              {/* Native vs custom scorecard */}
               <div
-                role="img"
-                aria-label="Shopify Plus B2B wholesale architecture diagram. Shows unified DTC and B2B orders flowing into central ERP."
                 style={{
                   border: '1px solid var(--pp-line)',
                   borderRadius: '18px',
                   background: '#fff',
-                  padding: '24px',
+                  padding: '22px 24px',
                   boxShadow: '0 18px 50px rgba(20,17,15,.08)',
                 }}
               >
-                <div
-                  style={{
-                    border: '1.5px solid var(--pp-orange)',
-                    borderRadius: '12px',
-                    background: 'var(--pp-tint)',
-                    padding: '14px',
-                    textAlign: 'center',
-                    fontFamily: 'var(--pp-disp)',
-                    fontWeight: 700,
-                    color: 'var(--pp-ink)',
-                    marginBottom: '18px',
-                  }}
-                >
-                  Shopify Plus Native B2B Engine.
-                  <small style={{ display: 'block', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-orange-dark)', fontWeight: 600, marginTop: '2px' }}>
-                    Custom Price Lists · Company Accounts · Net Terms · ERP Sync.
-                  </small>
-                </div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
-                  {[
-                    { name: 'Custom Pricing', desc: 'Tiered Price Lists.' },
-                    { name: 'Company Hub', desc: 'Multi-Location.' },
-                    { name: 'Net Terms', desc: 'Net 30/60/90.' },
-                    { name: 'Quick Reorder', desc: 'Matrix & CSV.' },
-                    { name: 'Shopify Rules', desc: 'MOQ Functions.' },
-                    { name: 'Central ERP', desc: 'NetSuite / SAP.' },
-                  ].map((ch) => (
-                    <div key={ch.name} style={{ border: '1px solid var(--pp-line)', borderRadius: '10px', background: '#fff', padding: '12px 8px', textAlign: 'center' }}>
-                      <b style={{ fontFamily: 'var(--pp-disp)', fontSize: '13px', display: 'block', color: 'var(--pp-ink)' }}>{ch.name}</b>
-                      <span style={{ fontFamily: 'var(--pp-mono)', fontSize: '10px', color: 'var(--pp-muted)' }}>{ch.desc}</span>
-                    </div>
+                <p className="pp-mlabel" style={{ marginBottom: '10px' }}>What Shopify does, and what we add</p>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                  {NATIVE_SPLIT.map((row, i) => (
+                    <li
+                      key={row.need}
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        gap: '14px',
+                        alignItems: 'baseline',
+                        padding: '10px 0',
+                        borderTop: i > 0 ? '1px solid var(--pp-line)' : 'none',
+                      }}
+                    >
+                      <div>
+                        <b style={{ display: 'block', fontFamily: 'var(--pp-disp)', fontSize: '14px', color: 'var(--pp-ink)' }}>{row.need}</b>
+                        <span style={{ fontSize: '12.5px', color: 'var(--pp-muted)' }}>{row.note}</span>
+                      </div>
+                      <span
+                        style={{
+                          flexShrink: 0,
+                          fontFamily: 'var(--pp-mono)',
+                          fontSize: '11.5px',
+                          fontWeight: 600,
+                          color: row.where === 'All B2B plans' ? 'var(--pp-ink)' : 'var(--pp-orange-dark)',
+                        }}
+                      >
+                        {row.where}
+                      </span>
+                    </li>
                   ))}
-                </div>
-                <div
-                  style={{
-                    marginTop: '16px',
-                    padding: '10px 14px',
-                    background: '#14110F',
-                    borderRadius: '10px',
-                    color: '#fff',
-                    fontFamily: 'var(--pp-mono)',
-                    fontSize: '10.5px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                  }}
-                >
-                  <div>
-                    <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#10B981', display: 'inline-block', marginRight: '6px' }} />
-                    Native Platform Architecture.
-                  </div>
-                  <div>Zero App Bloat · Sub-Second Speed.</div>
-                </div>
+                </ul>
+                <p style={srcNote}>
+                  Plan split from <a href={SRC_PLAN_FEATURES} {...ext} style={srcLink}>Shopify Help, B2B features by plan</a>, read {READ_ON}.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── Stat Band ── */}
+        {/* ── Fact band ── */}
         <section className="pp-sec tint" style={{ paddingTop: '38px', paddingBottom: '38px' }}>
           <div className="pp-wrap">
             <div className="pp-stats">
@@ -475,121 +408,176 @@ export default function ShopifyPlusB2BPage() {
           </div>
         </section>
 
-        {/* ── What Is Section ── */}
-        <section className="pp-sec">
+        {/* ── Price lists and net terms ── */}
+        <section className="pp-sec" id="price-lists-net-terms">
           <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// the modern wholesale engine</p>
-            <h2 style={{ marginTop: '10px' }}>What is Shopify Plus B2B wholesale development?</h2>
+            <p className="pp-mlabel">{'// how shopify b2b works'}</p>
+            <h2 style={{ marginTop: '10px' }}>Price lists and net terms on Shopify B2B</h2>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
               <p>
-                Shopify Plus B2B development is the technical engineering of wholesale customer portals. It includes contract pricing rules and company permissions. ERP integrations connect directly with Shopify’s native suite.
+                Shopify B2B is built from a few parts. Once you know them, it is easy to see which of your rules fit and
+                which need extra work.
               </p>
+              <h3 style={h3Style}>Company accounts and locations</h3>
               <p>
-                Historically, wholesale required running separate clone stores or slow third-party apps. These apps injected fragile JavaScript workarounds into the checkout flow. Shopify Plus B2B unifies DTC retail and commercial wholesale. Both run on a single catalog and checkout engine.
+                Each trade customer is a company. A company has one or more locations, such as a head office and three
+                branches. Each location has its own shipping address, catalog and payment terms. You add buyers to a
+                location and choose what each buyer may do: place orders only, or also manage the location.
               </p>
+              <h3 style={h3Style}>Catalogs and customer-specific price lists</h3>
               <p>
-                FactoryJet designs and builds complete Shopify Plus B2B architectures. We configure custom price list matrices. We automate Net payment approvals. We implement matrix quick-order forms. We also build two-way ERP data pipelines with NetSuite, SAP, or Microsoft Dynamics.
+                A catalog decides which products a buyer sees and what they pay. Prices can be a percentage off, such as
+                40% off retail, or a fixed price per product. On Shopify Plus you assign a catalog straight to one
+                company or one location, so that customer sees only its own price list. On Basic, Grow and Advanced,
+                catalogs go to B2B markets instead, with 3 active assignments in total. If you have more than a handful of
+                negotiated price lists, that limit is usually what moves a brand to Plus.
               </p>
+              <h3 style={h3Style}>Quantity rules and price breaks</h3>
               <p>
-                Consolidating wholesale onto Shopify Plus eliminates manual purchase order entry. It removes phone-based credit card authorization and slow inventory reconciliation. Corporate buyers get a consumer-grade digital purchasing flow. Operations teams gain full visibility across receivables, fulfillment routing, and tax compliance.
+                Each product in a catalog can have a minimum, a maximum and an increment. An increment of 12 means buyers
+                order in cases of 12. Price breaks lower the unit price at higher quantities, for example 10% off at 100
+                units.
               </p>
+              <h3 style={h3Style}>Payment terms: net 30, net 60 and more</h3>
               <p>
-                We build unified blended storefronts and dedicated expansion stores. Our architectures ensure fast response times and complete data integrity. They provide automated tax compliance and scale across high wholesale order volumes.
+                You set payment terms on a company location or on a draft order. Shopify offers net 7, 15, 30, 45, 60
+                and 90, due on fulfillment, and a fixed date on draft orders. The buyer places the order without paying.
+                After the due date the order shows as overdue. Shopify does not take the payment on its own, and
+                reminders go out through a Shopify Flow action. Plus can also ask for a deposit at checkout, with the
+                rest on terms.
+              </p>
+              <h3 style={h3Style}>Draft orders and approvals</h3>
+              <p>
+                With checkout to draft, a buyer’s order becomes a draft for your team instead of a finished order. Your
+                sales team checks it, changes prices or adds freight, and sends the buyer an invoice. Sales reps can also
+                build a draft order for a customer and email them a checkout link.
               </p>
             </div>
-
-            {/* Answer-First Definitions for AI Overviews & Search Engines */}
-            <div style={{ marginTop: '36px', display: 'grid', gap: '18px' }}>
-              <AnswerFirstDefinition
-                term="Shopify Plus Native B2B Architecture."
-                definition="Shopify Plus Native B2B is a built-in enterprise wholesale suite. It runs retail and trade wholesale on a single engine. This eliminates slow third-party apps. Merchants get native Company records. They get multi-location shipping. Custom price lists and Net terms run directly in checkout."
-                keyTakeaways={[
-                  'Consolidates consumer DTC and B2B wholesale into one unified inventory and catalog backend.',
-                  'Sub-second checkout execution powered by native Shopify Functions instead of script injection.',
-                  'Zero monthly third-party wholesale app subscriptions or maintenance overhead.',
-                ]}
-                citationSource="FactoryJet Shopify Plus B2B Architecture Standard (2026)."
-              />
-              <AnswerFirstDefinition
-                term="Shopify Functions & Checkout Extensibility for B2B."
-                definition="Shopify Functions are server-side WebAssembly modules running in sub-5ms within checkout. For B2B brands, Functions enforce order minimums and pack multiples. They apply tiered pricing discounts automatically. They also gate Net 30 payment methods based on buyer company credentials."
-                keyTakeaways={[
-                  'Replaces deprecated checkout scripts with high-speed, secure WebAssembly logic.',
-                  'Validates buyer credit limits and payment terms dynamically before order completion.',
-                  'Enforces minimum spend brackets and customer-specific freight rules without theme code hacks.',
-                ]}
-                citationSource="FactoryJet WebAssembly & Checkout Extensibility Standard (2026)."
-              />
-              <AnswerFirstDefinition
-                term="Parent-Child Company Hierarchies."
-                definition="A Company record models corporate buying organizations with multiple locations and employee roles. Parent companies manage global credit terms and tax certificates. Branch managers access location-specific catalogs and purchase limits."
-                keyTakeaways={[
-                  'Corporate parent entities manage consolidated billing, credit lines, and tax resale certificates.',
-                  'Subsidiary branches maintain independent shipping endpoints, delivery docks, and tax jurisdictions.',
-                  'Role-based permissions separate ordering requisitioners from corporate management approvers.',
-                ]}
-                citationSource="FactoryJet Enterprise Commerce Entity Modeling (2026)."
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* ── Sourced Stats ── */}
-        <section className="pp-sec tint">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">// wholesale market velocity</p>
-            <h2 style={{ marginTop: '10px' }}>Shopify Plus B2B by the numbers.</h2>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
-              {SOURCED.map((s) => (
-                <div className="pp-card" key={s.v}>
-                  <div style={{ fontFamily: 'var(--pp-disp)', fontWeight: 800, fontSize: '36px', color: 'var(--pp-orange-dark)', letterSpacing: '-.03em', lineHeight: 1 }}>{s.v}</div>
-                  <p style={{ marginTop: '10px', fontSize: '15px', color: 'var(--pp-body)' }}>{s.d}</p>
-                  <a
-                    href={s.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ display: 'inline-block', marginTop: '10px', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-muted)', textDecoration: 'underline' }}
-                  >
-                    {s.src}
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── Benefits ── */}
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">// why it matters</p>
-            <h2 style={{ marginTop: '10px' }}>Core capabilities of our Shopify Plus B2B builds.</h2>
-            <p className="pp-lead" style={{ marginTop: '14px', maxWidth: '58ch' }}>
-              Everything wholesale brands need to automate purchasing. Eliminate manual data entry and speed up repeat orders.
+            <p style={srcNote}>
+              Sources: <a href={SRC_COMPANIES} {...ext} style={srcLink}>Shopify Help, B2B companies</a>;{' '}
+              <a href={SRC_CATALOGS} {...ext} style={srcLink}>Shopify Help, catalogs</a>;{' '}
+              <a href={SRC_TERMS} {...ext} style={srcLink}>Shopify Help, payment terms</a>;{' '}
+              <a href={SRC_PLAN_FEATURES} {...ext} style={srcLink}>Shopify Help, B2B features by plan</a>. Read {READ_ON}.
             </p>
-            <div className="pp-bento" style={{ marginTop: '32px' }}>
-              {BENEFITS.map((b) => (
-                <div className="pp-card" key={b.t}>
-                  <div style={{ fontFamily: 'var(--pp-mono)', fontSize: '20px', color: 'var(--pp-orange-dark)', marginBottom: '10px' }} aria-hidden="true">{b.i}</div>
-                  <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '16px', color: 'var(--pp-ink)', marginBottom: '6px' }}>{b.t}</h3>
-                  <p style={{ fontSize: '14.5px', color: 'var(--pp-body)' }}>{b.d}</p>
-                </div>
-              ))}
+          </div>
+        </section>
+
+        {/* ── Blended vs separate store ── */}
+        <section className="pp-sec tint" id="blended-vs-separate">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// store setup'}</p>
+            <h2 style={{ marginTop: '10px' }}>Blended store vs separate wholesale store</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '64ch' }}>
+              A blended store serves retail shoppers and trade buyers from one Shopify store. Trade buyers log in and see
+              their own prices and terms. A separate wholesale store is a second store just for trade.
+            </p>
+            <div style={{ marginTop: '28px', overflowX: 'auto' }}>
+              <table className="pp-table">
+                <thead>
+                  <tr>
+                    <th>Question</th>
+                    <th>One blended store</th>
+                    <th>Separate wholesale store</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="me">
+                    <td className="name">Pick it when</td>
+                    <td>Retail and trade buy mostly the same products.</td>
+                    <td>The trade catalog, look or checkout rules differ a lot from retail.</td>
+                  </tr>
+                  <tr>
+                    <td className="name">Catalog and stock</td>
+                    <td>One product list and one stock count.</td>
+                    <td>Two product lists to keep in step.</td>
+                  </tr>
+                  <tr className="me">
+                    <td className="name">Brand and theme</td>
+                    <td>One theme. Trade buyers see trade prices after login.</td>
+                    <td>A theme built only for trade buyers.</td>
+                  </tr>
+                  <tr>
+                    <td className="name">ERP integration</td>
+                    <td>One connection.</td>
+                    <td>Two stores to connect, or one connection that serves both.</td>
+                  </tr>
+                  <tr className="me">
+                    <td className="name">Running cost</td>
+                    <td>Lower. One store to maintain.</td>
+                    <td>Higher. Two stores, two sets of apps and settings.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="pp-lead" style={{ marginTop: '18px', maxWidth: '68ch', fontSize: '15.5px' }}>
+              Still choosing a platform? Our guide shows{' '}
+              <Link href="/blog/best-b2b-ecommerce-platform-manufacturers-distributors-2026" style={srcLink}>
+                how Shopify Plus compares with OroCommerce, BigCommerce B2B Edition and Adobe Commerce
+              </Link>
+              {' '}for manufacturers and distributors.
+            </p>
+          </div>
+        </section>
+
+        {/* ── ERP: who owns which data ── */}
+        <section className="pp-sec" id="erp-integration">
+          <div className="pp-wrap">
+            <p className="pp-mlabel">{'// erp integration'}</p>
+            <h2 style={{ marginTop: '10px' }}>Shopify B2B ERP integration: who owns which data</h2>
+            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '66ch' }}>
+              We connect Shopify B2B to NetSuite, Acumatica, Microsoft Dynamics, QuickBooks and Odoo. The first decision
+              is which system is the record for each kind of data. Get that wrong and someone types prices into two places.
+            </p>
+            <div style={{ marginTop: '28px', overflowX: 'auto' }}>
+              <table className="pp-table">
+                <thead>
+                  <tr>
+                    <th>Data</th>
+                    <th>Usually owned by</th>
+                    <th>Which way it moves</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {ERP_OWNERSHIP.map((row, i) => (
+                    <tr key={row.data} className={i % 2 === 0 ? 'me' : undefined}>
+                      <td className="name">{row.data}</td>
+                      <td>{row.owner}</td>
+                      <td>{row.flow}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="pp-editorial" style={{ marginTop: '24px', maxWidth: '760px' }}>
+              <p>
+                Credit limits are the most common gap. Shopify B2B has no credit limit field per customer, so we keep the
+                limit and open balance in your ERP and use them to hold an order for review, or ask for card payment, when
+                an account is over its limit.
+              </p>
+              <p>
+                For tax, you can mark a company location as tax exempt in Shopify. When you sell across many US states and
+                need to collect resale certificates, we connect Avalara AvaTax or Vertex.
+              </p>
+              <p>
+                On Odoo we have built this kind of sync before: the Sow Easy trade store on WooCommerce reads stock,
+                pricing and SKUs from Odoo, and that build is being tested on staging.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* ── Use Case & Imagery Section ── */}
+        {/* ── What we build on top ── */}
         <section className="pp-sec tint">
           <div className="pp-wrap">
             <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 'clamp(28px,4vw,52px)', alignItems: 'center' }} className="pp-herogrid">
               <div>
-                <p className="pp-mlabel">// wholesale portal showcase</p>
-                <h2 style={{ marginTop: '8px' }}>Native B2B Wholesale Portal Architecture.</h2>
+                <p className="pp-mlabel">{'// what we build'}</p>
+                <h2 style={{ marginTop: '8px' }}>What FactoryJet builds on top of Shopify B2B</h2>
                 <p className="pp-lead" style={{ marginTop: '14px' }}>
-                  We configure company account hierarchies and custom price lists. We set up Net 30 payment terms. We build matrix order forms directly in Shopify Plus.
+                  Shopify’s own features come first. We write code only where your rules go past them.
                 </p>
                 <div style={{ marginTop: '22px' }}>
-                  <ModalCTAButton label="Scope Shopify Plus B2B" region="us" btnVariant="secondary-light" />
+                  <ModalCTAButton label="Scope my Shopify B2B build" region="us" btnVariant="secondary-light" />
                 </div>
               </div>
               <Image
@@ -600,179 +588,79 @@ export default function ShopifyPlusB2BPage() {
                 style={{ width: '100%', height: 'auto', borderRadius: '18px', border: '1px solid var(--pp-line)', display: 'block', objectFit: 'cover' }}
               />
             </div>
+            <div className="pp-bento" style={{ marginTop: '36px' }}>
+              {BUILDS.map((b) => (
+                <div className="pp-card" key={b.t}>
+                  <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '16px', color: 'var(--pp-ink)', marginBottom: '6px' }}>{b.t}</h3>
+                  <p style={{ fontSize: '14.5px', color: 'var(--pp-body)' }}>{b.d}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* ── Shopify Functions & B2B Checkout Extensibility Deep Dive ── */}
-        {/* ── Shopify Functions & B2B Checkout Extensibility Deep Dive ── */}
+        {/* ── Market cost ranges ── */}
+        <section className="pp-sec" id="cost">
+          <div className="pp-wrap pp-narrow">
+            <p className="pp-mlabel">{'// what it costs'}</p>
+            <h2 style={{ marginTop: '10px' }}>What a Shopify Plus B2B build costs</h2>
+            <div className="pp-editorial" style={{ marginTop: '20px' }}>
+              <p>
+                Published market ranges, from two third-party guides:
+              </p>
+              <ul style={{ paddingLeft: '1.25rem', listStyle: 'disc', display: 'grid', gap: '8px' }}>
+                <li>
+                  <b>About $25,000 to $150,000</b> for a Shopify Plus implementation, with the higher end more common for
+                  B2B. Source: <a href={SRC_RIGBY} {...ext} style={srcLink}>Rigby, B2B commerce platform pricing</a>.
+                </li>
+                <li>
+                  <b>$25,000 to $50,000</b> for a lean Plus build with B2B setup, and <b>$50,000 to $250,000 or more</b> for
+                  a full build with custom checkout, B2B and international. Source:{' '}
+                  <a href={SRC_RINGLY} {...ext} style={srcLink}>Ringly, Shopify Plus partner agency guide</a>.
+                </li>
+              </ul>
+              <p>
+                The Shopify Plus plan fee is separate and is set by Shopify. See{' '}
+                <a href={SRC_PLUS_PRICING} {...ext} style={srcLink}>Shopify Plus pricing</a> for the current terms.
+              </p>
+              <p>
+                What moves the number most: how many price lists you have, which ERP you use, and how many checkout rules
+                Shopify does not cover. FactoryJet quotes a fixed price for each phase in writing after a scoping call.
+              </p>
+            </div>
+            <p style={srcNote}>Ranges read {READ_ON}. They are other firms’ published figures, not FactoryJet prices.</p>
+          </div>
+        </section>
+
+        {/* ── Build phases ── */}
         <section className="pp-sec tint">
           <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// modern checkout customization</p>
-            <h2 style={{ marginTop: '10px' }}>Custom B2B Validation Rules via Shopify Functions &amp; Checkout Extensibility.</h2>
+            <p className="pp-mlabel">{'// how a build runs'}</p>
+            <h2 style={{ marginTop: '10px' }}>How a Shopify B2B build runs</h2>
             <div className="pp-editorial" style={{ marginTop: '20px' }}>
-              <p>
-                With legacy checkout scripts deprecated, enterprise merchants need modern Shopify Functions.
-                Compiled to WebAssembly (WASM), they execute server-side validation rules in sub-5 milliseconds.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Dynamic Payment Customization Functions.</h3>
-              <p>
-                We write custom Shopify Functions that dynamically control payment methods. The authenticated buyer company profile
-                determines what appears at checkout. New wholesale applicants must use credit cards. Verified accounts with approved
-                terms see Net 30, Net 60, or Purchase Order options automatically.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Automated Cart &amp; Order Validation Functions.</h3>
-              <p>
-                Enforce strict commercial rules before order placement. Validate that wholesale orders meet minimum tier values.
-                Ensure case packs follow carton multiples, such as units of 12. Gated logic prevents unverified buyers from adding
-                restricted catalog lines to carts.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. Custom Delivery Customization &amp; Freight Routing.</h3>
-              <p>
-                Palletized wholesale orders require tailored shipping logic. Our delivery functions calculate real-time LTL freight
-                rates via carrier APIs. They apply customer liftgate surcharges and dock delivery options directly in checkout.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* ── Wholesale Price List Architecture & Tiered Volume Rules ── */}
-        <section className="pp-sec">
-          <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// catalog tiering architecture</p>
-            <h2 style={{ marginTop: '10px' }}>Wholesale Price List Architecture and Dynamic Volume Discounting.</h2>
-            <div className="pp-editorial" style={{ marginTop: '20px' }}>
-              <p>
-                Enterprise B2B merchants often maintain complex pricing structures. Pricing rules vary by annual order volume,
-                geographic territory, or distributor agreements. Shopify Plus B2B provides native tools to model these requirements.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Fixed vs. Percentage Price Adjustments.</h3>
-              <p>
-                Assign negotiated wholesale prices per SKU directly. You can also apply percentage margins across whole collections.
-                For example, assign 45% off MSRP for Gold Tier accounts.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Incremental Quantity Breaks and Breakpoint Pricing.</h3>
-              <p>
-                Incentivize larger corporate orders with volume price breaks. Set up tier brackets with clear quantity minimums.
-                Shopify Plus recalculates line item pricing dynamically as buyers adjust numbers.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. Territory-Specific Catalog Gating.</h3>
-              <p>
-                Restrict specific product lines based on distribution rights. Regional distributors see only their authorized catalog
-                lines. This prevents territorial conflicts across wholesale accounts.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* ── Enterprise B2B Data & Entity Modeling ── */}
-        <section className="pp-sec tint">
-          <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// data &amp; entity modeling</p>
-            <h2 style={{ marginTop: '10px' }}>Enterprise B2B Entity Modeling: Companies, Locations, and Buyer Roles.</h2>
-            <div className="pp-editorial" style={{ marginTop: '20px' }}>
-              <p>
-                Traditional platforms treat every user as an individual customer. Shopify Plus B2B introduces a relational data
-                model designed for multi-location corporate buying.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Parent Company Records.</h3>
-              <p>
-                A single corporate entity acts as the master record. It houses global payment terms, tax exemption certificates,
-                and corporate credit limits.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Company Locations &amp; Shipping Endpoints.</h3>
-              <p>
-                Parent companies can set up multiple subsidiary delivery locations. Each location maintains its own shipping
-                addresses, assigned sales reps, and distinct catalog views.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. Granular Buyer Roles &amp; Purchasing Permissions.</h3>
-              <p>
-                Corporate accounts can invite multiple staff members with specific roles. Ordering roles build carts and submit purchase
-                orders. Location managers control local addresses and users. Company admins authorize invoices and manage vaulted payment methods.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* ── Bi-Directional ERP Middleware Integration ── */}
-        <section className="pp-sec">
-          <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// erp &amp; wms integration</p>
-            <h2 style={{ marginTop: '10px' }}>Bi-Directional ERP Integration: NetSuite, SAP, Dynamics, &amp; Acumatica.</h2>
-            <div className="pp-editorial" style={{ marginTop: '20px' }}>
-              <p>
-                A modern B2B wholesale portal must connect with your back-office systems. FactoryJet builds real-time API
-                pipelines linking Shopify Plus GraphQL endpoints to your master ERP.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Real-Time Inventory Reservation &amp; Multi-Warehouse Routing.</h3>
-              <p>
-                When a buyer places a purchase order, our middleware checks stock. It reviews inventory across fulfillment centers.
-                It reserves inventory in your ERP and routes items to the optimal facility.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Customer Credit Limit &amp; Aging Invoice Synchronization.</h3>
-              <p>
-                Our Shopify Functions query ERP financial ledgers in sub-150ms before purchase orders clear. If an account has
-                overdue balances or exceeds credit lines, checkout prompts for card payment automatically.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>3. Asynchronous Master Price Matrix Updates.</h3>
-              <p>
-                When contracts change in your ERP, webhooks fire. Shopify Plus B2B price lists update in bulk instantly.
-                This eliminates manual data entry errors entirely.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* ── B2B Tax Compliance & Resale Exemption Management ── */}
-        <section className="pp-sec tint">
-          <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// tax compliance &amp; legal</p>
-            <h2 style={{ marginTop: '10px' }}>B2B Automated Tax Compliance &amp; State Resale Certificate Validation.</h2>
-            <div className="pp-editorial" style={{ marginTop: '20px' }}>
-              <p>
-                Managing sales tax across US states requires thorough verification. Our workflows ensure accurate tax collection
-                while exempting qualified wholesale buyers.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>1. Automated Resale Certificate Onboarding.</h3>
-              <p>
-                During registration, buyers submit state resale certificate numbers and exemption forms. Integrations with Avalara
-                AvaTax or Vertex validate certificates in real time.
-              </p>
-              <h3 style={{ fontFamily: 'var(--pp-disp)', fontSize: '18px', marginTop: '20px', color: 'var(--pp-ink)' }}>2. Automated Zero-Tax Wholesale Checkout.</h3>
-              <p>
-                Once verified on a Company Record, tax status is set. Shopify Plus applies zero sales tax on wholesale items. It maintains
-                standard retail tax rates for regular consumers on the same store.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* ── 6-Phase Wholesale Sprint Roadmap ── */}
-        <section className="pp-sec">
-          <div className="pp-wrap pp-narrow">
-            <p className="pp-mlabel">// sprint methodology</p>
-            <h2 style={{ marginTop: '10px' }}>The 6-Phase Shopify Plus B2B Implementation Sprint Roadmap.</h2>
-            <div className="pp-editorial" style={{ marginTop: '20px' }}>
-              <p>
-                Our structured six-phase sprint ensures zero downtime. It protects ledger accounting and speeds up buyer adoption.
-              </p>
+              <p>Each phase is scoped and priced on its own. Dates for each phase go in the proposal.</p>
               <ol style={{ listStyleType: 'decimal', paddingLeft: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '1rem' }}>
                 <li>
-                  <strong>Phase 1: B2B Price Matrix &amp; ERP Architecture Blueprint (Week 1).</strong> We audit existing wholesale price sheets. We review tier discount brackets. We map buyer rosters and ERP endpoints.
+                  <strong>Price lists and accounts mapped.</strong> We read your price sheets, payment terms and customer
+                  list, and decide which system owns each piece of data.
                 </li>
                 <li>
-                  <strong>Phase 2: Company Accounts &amp; Buyer Hierarchy Setup (Week 2).</strong> We set up native Shopify Plus B2B Company records. We build multi-location address hierarchies. We configure role permissions.
+                  <strong>Companies and catalogs set up.</strong> Trade customers become Shopify companies with locations,
+                  buyers, terms and their own catalogs.
                 </li>
                 <li>
-                  <strong>Phase 3: High-Speed Quick Order Matrix &amp; CSV Ordering UI (Week 3).</strong> We engineer bespoke wholesale ordering interfaces. We build multi-variant SKU entry grids. We add one-click CSV reordering tools.
+                  <strong>Order screens built.</strong> Quick order list, order grids and CSV upload where buyers need them.
                 </li>
                 <li>
-                  <strong>Phase 4: Shopify Functions &amp; Checkout Extensibility (Week 4).</strong> We build custom WebAssembly functions for MOQ rules. We enforce tiered spend logic. We gate payment methods for Net terms.
+                  <strong>Checkout rules added.</strong> Shopify Functions for the minimums, payment rules and freight
+                  options Shopify does not cover.
                 </li>
                 <li>
-                  <strong>Phase 5: Bi-Directional ERP &amp; Tax Middleware Integration (Week 5).</strong> We connect NetSuite, SAP, or QuickBooks. We enable real-time inventory locking. Draft orders and invoices sync automatically.
+                  <strong>ERP and tax connected.</strong> Orders to the ERP; prices, stock, balances and invoices back.
                 </li>
                 <li>
-                  <strong>Phase 6: Wholesale Buyer UAT &amp; Live Portal Launch (Week 6).</strong> We run end-to-end order test cycles with corporate accounts. We train your sales team. We launch with zero downtime.
+                  <strong>Tested with real buyers, then launched.</strong> Test orders run end to end with a few trade
+                  accounts before everyone moves over. We train your sales team.
                 </li>
               </ol>
             </div>
@@ -780,7 +668,7 @@ export default function ShopifyPlusB2BPage() {
         </section>
 
         {/* ── House terms ── */}
-        <section className="pp-sec tint" id="terms">
+        <section className="pp-sec" id="terms">
           <div className="pp-wrap">
             <div style={{ display: 'grid', gridTemplateColumns: '0.8fr 1.2fr', gap: 'clamp(32px,5vw,64px)', alignItems: 'start' }} className="pp-herogrid">
               <div>
@@ -804,149 +692,29 @@ export default function ShopifyPlusB2BPage() {
 
         <MidPageCTA
           headline="Send us one price list and one real wholesale order."
-          sub="Tell us your ERP, how many trade accounts you have and how they order today. We reply with what the Shopify Plus build would cover, phase by phase."
+          sub="Tell us your ERP, how many trade accounts you have and how they order today. We reply with what the Shopify build would cover, phase by phase."
           label="Talk to the founder"
           note="Working software on your own data before you sign. Founder replies within 24 hours."
         />
 
-        {/* ── Comparison Table ── */}
+        {/* ── Questions to ask any agency ── */}
         <section className="pp-sec">
-          <div className="pp-wrap">
-            <p className="pp-mlabel">// architectural comparison</p>
-            <h2 style={{ marginTop: '10px' }}>Shopify Plus Native B2B vs. Legacy Apps vs. Clone Stores.</h2>
-            <p className="pp-lead" style={{ marginTop: '12px', maxWidth: '68ch' }}>
-              Why top B2B brands migrate to native Shopify Plus B2B setups. Still choosing a platform? Our guide shows{' '}
-              <Link href="/blog/best-b2b-ecommerce-platform-manufacturers-distributors-2026" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>
-                how Shopify Plus compares with OroCommerce, BigCommerce B2B Edition and Adobe Commerce
-              </Link>
-              {' '}for manufacturers and distributors.
-            </p>
-            <div style={{ marginTop: '32px', overflowX: 'auto' }}>
-              <table className="pp-table">
-                <thead>
-                  <tr>
-                    <th>B2B Capability</th>
-                    <th>Shopify Plus Native B2B</th>
-                    <th>Third-Party Wholesale Apps</th>
-                    <th>Separate Wholesale Store</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="me">
-                    <td className="name">Catalog &amp; Inventory Sync.</td>
-                    <td>Unified single master catalog.</td>
-                    <td>Single catalog with script overrides.</td>
-                    <td>Duplicate catalogs to maintain.</td>
-                  </tr>
-                  <tr>
-                    <td className="name">Checkout Speed &amp; Stability.</td>
-                    <td>Native sub-second checkout.</td>
-                    <td>Slow JavaScript DOM injection.</td>
-                    <td>Native separate checkout.</td>
-                  </tr>
-                  <tr className="me">
-                    <td className="name">Company &amp; Location Hierarchy.</td>
-                    <td>Native parent-child company accounts.</td>
-                    <td>Basic customer tags only.</td>
-                    <td>Separate customer databases.</td>
-                  </tr>
-                  <tr>
-                    <td className="name">Net Terms &amp; Invoicing.</td>
-                    <td>Native Net 15/30/60 PO checkout.</td>
-                    <td>App-based draft orders.</td>
-                    <td>Manual invoice processing.</td>
-                  </tr>
-                  <tr className="me">
-                    <td className="name">ERP Integration Complexity.</td>
-                    <td>Single standard GraphQL API.</td>
-                    <td>Brittle custom app endpoints.</td>
-                    <td>Double integration pipelines.</td>
-                  </tr>
-                  <tr>
-                    <td className="name">Maintenance &amp; App Fees.</td>
-                    <td>Zero extra app fees (Included in Plus).</td>
-                    <td>High monthly app subscription overhead.</td>
-                    <td>Double Shopify subscription cost.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
-        {/* ── Net-30 Payment Terms Comparison ── */}
-        <section className="pp-sec">
-          <div className="pp-wrap">
-            <Net30PaymentComparison />
-          </div>
-        </section>
-
-
-        <EnterpriseArchitectureBlueprint
-          badge="// UNIFIED B2B COMMERCE ARCHITECTURE."
-          title="Enterprise B2B Wholesale & DTC on a Single Modern Commerce Engine."
-          subtitle="Consolidate multiple wholesale stores into one unified Shopify Plus setup. Run custom price lists, Net terms, and real-time ERP sync smoothly."
-          legacySource="Fragmented B2B Stores & Legacy EDI."
-          targetStack="Shopify Plus Native B2B + Real-Time ERP Sync."
-          ctaLabel="Schedule B2B Wholesale Architecture Review."
-          region="us"
-        />
-
-        {/* ── AGENCY EVALUATION FRAMEWORK TABLE ── */}
-        <section className="pp-sec" style={{ backgroundColor: '#F6F6F9', borderTop: '1px solid #E6E6EC', borderBottom: '1px solid #E6E6EC' }}>
-          <div className="pp-wrap">
-            <div style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 48px' }}>
-              <div className="rv-badge" style={{ marginBottom: '14px' }}>
-                <svg className="rv-badge-icon" viewBox="0 0 16 16" fill="currentColor">
-                  <path d="M8 0L9.8 6.2L16 8L9.8 9.8L8 16L6.2 9.8L0 8L6.2 6.2L8 0Z" />
-                </svg>
-                <span>Vendor Due Diligence</span>
-              </div>
-              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
-                Evaluating Migration Partners: What to Ask.
-              </h2>
-              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Compare senior engineering replatforming against traditional design agency retainers before you commit.
-              </p>
-            </div>
-
-            <div style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', overflow: 'hidden', maxWidth: '960px', margin: '0 auto' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: '#141414', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '13.5px' }}>
-                <div>Evaluation Factor.</div>
-                <div style={{ color: '#FF5622' }}>FactoryJet Engineering Model.</div>
-                <div style={{ color: '#A0A0B0' }}>Traditional Design Agencies.</div>
-              </div>
-
-              {EVALUATION_CRITERIA.map((crit, cIdx) => (
-                <div
-                  key={crit.label}
-                  style={{
-                    display: 'grid',
-                    gridTemplateColumns: '1.2fr 1.4fr 1.4fr',
-                    padding: '20px 24px',
-                    borderTop: cIdx > 0 ? '1px solid #F0F0F5' : 'none',
-                    background: cIdx % 2 === 0 ? '#FFFFFF' : '#FAFAFC',
-                    alignItems: 'center',
-                    gap: '16px',
-                  }}
-                >
-                  <div style={{ fontWeight: 800, fontSize: '14px', color: '#141414' }}>
-                    {crit.label}
-                  </div>
-                  <div style={{ fontSize: '13.5px', color: '#141414', fontWeight: 600, lineHeight: 1.45 }}>
-                    {crit.factoryjet}
-                  </div>
-                  <div style={{ fontSize: '13px', color: '#6E6E80', lineHeight: 1.45 }}>
-                    {crit.traditional}
-                  </div>
-                </div>
+          <div className="pp-wrap pp-narrow">
+            <p className="pp-mlabel">{'// choosing an agency'}</p>
+            <h2 style={{ marginTop: '10px' }}>Four questions to ask any Shopify B2B agency</h2>
+            <ol style={{ listStyleType: 'decimal', paddingLeft: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', marginTop: '20px' }}>
+              {AGENCY_QUESTIONS.map((x) => (
+                <li key={x.q}>
+                  <strong style={{ color: 'var(--pp-ink)' }}>{x.q}</strong>{' '}
+                  <span style={{ color: 'var(--pp-body)' }}>{x.a}</span>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </section>
 
-        {/* ── Interactive B2B Wholesale Savings & ROI Calculator ── */}
-        <section className="pp-sec" id="b2b-wholesale-roi-calculator">
+        {/* ── Interactive B2B Wholesale Savings Calculator ── */}
+        <section className="pp-sec tint" id="b2b-wholesale-roi-calculator">
           <div className="pp-wrap">
             <B2bWholesaleCalculator
               source="shopify_plus_b2b_service_page"
@@ -958,12 +726,12 @@ export default function ShopifyPlusB2BPage() {
         </section>
 
         {/* ── FAQ ── */}
-        <section className="pp-sec pp-faqsec tint">
+        <section className="pp-sec pp-faqsec">
           <div className="pp-wrap">
             <FAQ
-              eyebrow="SHOPIFY PLUS B2B FAQ"
-              headline="Frequently asked questions about Shopify Plus B2B."
-              lead="Direct technical answers on pricing matrices, Net terms, ERP integration, and wholesale migrations."
+              eyebrow="SHOPIFY B2B FAQ"
+              headline="Questions about Shopify B2B price lists, net terms and ERP sync"
+              lead="Plain answers on what Shopify does natively, what needs Plus, and what needs custom work."
               categories={FAQ_CATEGORIES}
               items={FAQ_ITEMS}
             />
@@ -971,18 +739,18 @@ export default function ShopifyPlusB2BPage() {
         </section>
 
         {/* ── Final CTA ── */}
-        <section className="pp-sec">
+        <section className="pp-sec tint">
           <div className="pp-wrap">
             <div className="pp-ctagrid">
               <div className="pp-cta">
-                <p className="pp-mlabel">// modernize wholesale sales</p>
-                <h2 style={{ margin: '12px 0 16px' }}>Ready to launch your Shopify Plus B2B portal?</h2>
+                <p className="pp-mlabel">{'// next step'}</p>
+                <h2 style={{ margin: '12px 0 16px' }}>Ready to set up Shopify B2B?</h2>
                 <p className="pp-lead" style={{ maxWidth: '44ch' }}>
-                  Let us review your wholesale pricing rules, ERP synchronization requirements, and buyer workflows. We deliver a fixed-price implementation roadmap.
+                  We review your price lists, payment terms, ERP and how your buyers order today. Then we send a fixed-price plan, phase by phase.
                 </p>
                 <div style={{ marginTop: '24px' }}>
                   <a className="pp-primary" href={CALENDLY} target="_blank" rel="noopener noreferrer">
-                    Book a 30-Minute Scoping Call.
+                    Book a 30-minute scoping call
                   </a>
                 </div>
                 <div className="founder">
@@ -1000,9 +768,9 @@ export default function ShopifyPlusB2BPage() {
                   </div>
                 </div>
                 <p style={{ marginTop: '20px', fontSize: '13.5px', color: 'var(--pp-muted)' }}>
-                  Explore related capabilities: <Link href="/b2b-ecommerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>B2B e-commerce platforms</Link>, <Link href="/services/shopify-development" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>Shopify store development</Link>, <Link href="/services/shopify-edi-integration" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>EDI orders from B2B customers</Link>, <Link href="/services/shopify-hubspot-integration" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>Shopify HubSpot integration for B2B companies and deals</Link>, <Link href="/agentic-commerce" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>agentic commerce</Link>, and <Link href="/services/ai-agent-development" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>AI agent operations</Link>. If a customer buys through Coupa or SAP Ariba, see our{' '}
-                  <Link href="/b2b-ecommerce/punchout-catalog" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>punchout catalog integration</Link>. Selling to trade buyers in Britain? Read the{' '}
-                  <Link href="/uk/shopify-plus-b2b" style={{ color: 'var(--pp-orange-dark)', textDecoration: 'underline' }}>UK Shopify Plus B2B page</Link>.
+                  Explore related capabilities: <Link href="/b2b-ecommerce" style={srcLink}>B2B e-commerce platforms</Link>, <Link href="/services/shopify-development" style={srcLink}>Shopify store development</Link>, <Link href="/services/shopify-edi-integration" style={srcLink}>EDI orders from B2B customers</Link>, <Link href="/services/shopify-hubspot-integration" style={srcLink}>Shopify HubSpot integration for B2B companies and deals</Link>, <Link href="/agentic-commerce" style={srcLink}>agentic commerce</Link>, and <Link href="/services/ai-agent-development" style={srcLink}>AI agent operations</Link>. If a customer buys through Coupa or SAP Ariba, see our{' '}
+                  <Link href="/b2b-ecommerce/punchout-catalog" style={srcLink}>punchout catalog integration</Link>. Selling to trade buyers in Britain? Read the{' '}
+                  <Link href="/uk/shopify-plus-b2b" style={srcLink}>UK Shopify Plus B2B page</Link>.
                 </p>
               </div>
               {/* B2B proof, 2026-10-29: GPSUK (Commerceflo) and Sow Easy (WordPress
