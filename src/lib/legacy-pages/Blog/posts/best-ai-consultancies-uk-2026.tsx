@@ -5,9 +5,9 @@ import type { BlogPost, FAQItem } from '../data.types';
 const SLUG = 'best-ai-consultancies-uk-2026';
 const PAGE_URL = `https://factoryjet.com/blog/${SLUG}`;
 const IMG = `/blog-images/${SLUG}`;
-const TITLE = 'Best AI Consultancies in the UK and London (2026): 14 Compared, Including Us';
+const TITLE = 'Best AI Consultancies in the UK and London (2026): 15 Compared, Including Us';
 const META_DESCRIPTION =
-  'Compare 14 UK AI consultancies for 2026 by the buyer they suit: small firms, 50-person companies, data teams and regulated businesses. London list included.';
+  'Compare 15 UK AI consultancies for 2026 by the buyer they suit: small firms, 50-person companies, data teams and regulated businesses. London list included.';
 
 // Every fact about every firm below was read on that firm's own website on
 // 9 October 2026 (URL in `source`, plus `hqSource` where the location or the
@@ -77,6 +77,19 @@ const FIRMS: Firm[] = [
     what: "Run by founder Chris Latham, who spent 25 years in motor claims and insurance operations and founded the firm in 2021. His rule is \"Process before technology\": map the workflow, fix it, then automate what is left. Services include a three-step operational AI audit and an AI visibility audit. Its site lists 15 live builds.",
     bestFor: 'Small service firms, especially in insurance and claims, that want one experienced operator to do the work.',
     ask: 'How many audit days a firm your size needs, and how support works once a build is live.',
+  },
+  {
+    name: 'Vantage Growth Partners',
+    url: 'https://www.vantagegrowthptnrs.com/',
+    source: 'https://www.vantagegrowthptnrs.com/ai-consultancy-for-uk-smes',
+    group: 'A firm of about 10 people',
+    based: 'City Road, London, delivering remotely across the UK',
+    london: '124 City Road, EC1V 2NX',
+    type: 'Lead-response, follow-up and booking systems, installed and then run monthly',
+    clients: 'Owner-run UK businesses of one to 25 people: clinics, trades, lettings, studios, gyms, salons and hospitality',
+    what: "Founder David Barroso spent 20 years building front-office and back-office systems in financial services and has run the firm since 2024. He installs an AI receptionist, missed-call text back, follow-up and review requests behind the website a business already has, then runs it month to month. It is one person, and the site says so: whoever scopes the work also builds and runs it. Prices are published: Core at £297 a month, Growth from £497 a month with a new website, local SEO and ads, and Scale at £1,997 a month with a full-time caller. The first audit is free.",
+    bestFor: 'Owner-run firms that lose enquiries while they are busy doing the work, and want someone to install and run the follow-up rather than hand over a template.',
+    ask: 'What you keep if you cancel, and how one person covers holidays and sick days across every client.',
   },
   {
     name: 'iwantmore.ai',
@@ -236,7 +249,7 @@ const GROUPS: Group[] = [
 
 const GROUP_INTRO: Record<Group, string> = {
   'A firm of about 10 people':
-    'You have no IT team and no time for a long project. You need someone who will look at how the work runs, fix one thing and show your staff how to use it. These three say plainly that they work with small firms, and all three publish a price for the first step.',
+    'You have no IT team and no time for a long project. You need someone who will look at how the work runs, fix one thing and show your staff how to use it. These four say plainly that they work with small firms, and all four publish a price for the first step or a monthly fee.',
   'A company of about 50 people':
     'You have several teams, a handful of AI tools nobody coordinates and a board that wants a plan. Each of these four has a defined first step, such as an audit, a workshop or a discovery phase, and each then trains your staff, builds what the plan recommends, or does both.',
   'A mid-market company with a data team':
@@ -266,6 +279,12 @@ const PRICES: { firm: string; figure: string; vat: string; source: string }[] = 
     figure: 'Operational AI audit at £1,250 a day; AI visibility audit and 90-day programme £1,995',
     vat: 'Visibility audit is plus VAT; day rate not stated',
     source: 'https://www.optimus-consulting.co.uk/services/',
+  },
+  {
+    firm: 'Vantage Growth Partners',
+    figure: 'Core £297 a month; Growth from £497 a month; Scale £1,997 a month; free 30-minute audit first; month to month (read 16 Nov 2026)',
+    vat: 'Not stated',
+    source: 'https://www.vantagegrowthptnrs.com/ai-consultancy-for-uk-smes',
   },
   {
     firm: 'OpenKit',
@@ -350,7 +369,7 @@ const SOURCES = {
 const FAQS: FAQItem[] = [
   {
     q: "What are the top AI consultancies in London in 2026?",
-    a: "Seven firms in this guide list a London address on their own sites: The AI Consultancy (Hoxton), Generativ (Paul Street), Helium42 (Uxbridge Road), Fifty One Degrees (Great Portland Street), Datatonic (One Canada Square), Faculty (Old Street) and Transparity (Paddington). They suit different buyers, from 10-person firms to public bodies, so match by size first. We read every address on 9 October 2026.",
+    a: "Eight firms in this guide list a London address on their own sites: The AI Consultancy (Hoxton), Vantage Growth Partners (City Road), Generativ (Paul Street), Helium42 (Uxbridge Road), Fifty One Degrees (Great Portland Street), Datatonic (One Canada Square), Faculty (Old Street) and Transparity (Paddington). They suit different buyers, from 10-person firms to public bodies, so match by size first. We read these addresses on 9 October 2026, and Vantage's on 16 November 2026.",
   },
   {
     q: "Best AI consultancy in London for implementing AI in a 50-person company?",
@@ -358,15 +377,15 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "Who is the best small business AI consultant in the UK?",
-    a: "There is no single best one. For a firm of about 10 people, start with The AI Consultancy in London, AI Expert UK in Worcester and Optimus Consulting in Crewe. All three say they work with small firms and all three publish the price of a first step. Pick the one whose past clients look most like you, and buy one fixed-fee job before anything larger.",
+    a: "There is no single best one. For a firm of about 10 people, start with The AI Consultancy in London, Vantage Growth Partners in London, AI Expert UK in Worcester and Optimus Consulting in Crewe. All four say they work with small firms and all four publish a price, either for a first step or, at Vantage, a monthly fee. Pick the one whose past clients look most like you, and buy one fixed-fee job before anything larger.",
   },
   {
     q: "What are the best AI consulting companies in the UK?",
-    a: "It depends on your size. For small firms: The AI Consultancy, AI Expert UK and Optimus Consulting. For companies of about 50 people: OpenKit, iwantmore.ai, Helium42 and Generativ. For mid-market companies with a data team: Fifty One Degrees, Winder.AI and Datatonic. For regulated organisations: Faculty, Aiimi and Transparity. For the largest programmes, the Big Four and the strategy firms. FactoryJet suits ecommerce and operations work.",
+    a: "It depends on your size. For small firms: The AI Consultancy, Vantage Growth Partners, AI Expert UK and Optimus Consulting. For companies of about 50 people: OpenKit, iwantmore.ai, Helium42 and Generativ. For mid-market companies with a data team: Fifty One Degrees, Winder.AI and Datatonic. For regulated organisations: Faculty, Aiimi and Transparity. For the largest programmes, the Big Four and the strategy firms. FactoryJet suits ecommerce and operations work.",
   },
   {
     q: "Is there a list of AI consulting companies in the UK?",
-    a: "Yes. This page lists 14, each checked on its own website on 9 October 2026 with a link to the source. For large firms, consultancy.uk publishes a ranking of AI and GenAI consulting firms that says it assessed more than 500 and named 35. Lists written by consultancies usually include the author, as this one does, so check who wrote any list you rely on.",
+    a: "Yes. This page lists 15, each checked on its own website with a link to the source: 14 on 9 October 2026 and Vantage Growth Partners on 16 November 2026. For large firms, consultancy.uk publishes a ranking of AI and GenAI consulting firms that says it assessed more than 500 and named 35. Lists written by consultancies usually include the author, as this one does, so check who wrote any list you rely on.",
   },
   {
     q: "Which UK consultancies can help us go from AI strategy to a working product?",
@@ -410,7 +429,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "How much does an AI consultant cost in the UK?",
-    a: "Seven of the 13 other firms in this guide publish figures. On 9 October 2026 a first step ran from £2,999 for a workshop at AI Expert UK and £3,500 for a two-week readiness review at The AI Consultancy to £10,000 for an audit at OpenKit. Published day rates were £950 to £1,500 at The AI Consultancy and £1,250 at Optimus Consulting. Most figures exclude VAT. Our UK AI cost guide covers build costs.",
+    a: "Eight of the 14 other firms in this guide publish figures. On 9 October 2026 a first step ran from £2,999 for a workshop at AI Expert UK and £3,500 for a two-week readiness review at The AI Consultancy to £10,000 for an audit at OpenKit. Vantage Growth Partners charges a monthly fee instead, from £297, after a free audit. Published day rates were £950 to £1,500 at The AI Consultancy and £1,250 at Optimus Consulting. Most figures exclude VAT. Our UK AI cost guide covers build costs.",
   },
   {
     q: "What does an AI consultant do?",
@@ -477,20 +496,20 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 9, 2026',
-  dateModified: 'Oct 11, 2026',
+  dateModified: 'Nov 16, 2026',
   readTime: '24 min read',
   imageUrl: `${IMG}-hero.webp`,
   imageAlt:
     'Over-the-shoulder view of a woman at an oak desk looking at a laptop that shows six coloured cards, three of them ticked, with a notepad, an orange mug and brick terraced houses outside the window',
   meta: {
-    title: 'Best AI Consultancies UK & London 2026: 14 Compared',
+    title: 'Best AI Consultancies UK & London 2026: 15 Compared',
     description: META_DESCRIPTION,
   },
   keyTakeaways: [
     'There is no single best AI consultancy in the UK. A 10-person firm, a 50-person company, a mid-market company with a data team and a regulated business each need a different kind of adviser.',
-    "Every fact below was read on each firm's own website on 9 October 2026. Nobody paid to be listed, and the order is not a ranking.",
-    'Seven of the 13 other firms publish prices. A first step runs from £2,999 for a workshop (AI Expert UK) to £10,000 for an audit (OpenKit). Most figures exclude VAT.',
-    'Seven of the 14 list a London address on their own sites. The London table gives each postcode and its source.',
+    "Every fact below was read on each firm's own website, on 9 October 2026 or, for Vantage Growth Partners, 16 November 2026. Nobody paid to be listed, and the order is not a ranking.",
+    'Eight of the 14 other firms publish prices. A first step runs from £2,999 for a workshop (AI Expert UK) to £10,000 for an audit (OpenKit), and Vantage Growth Partners charges from £297 a month. Most figures exclude VAT.',
+    'Eight of the 15 list a London address on their own sites. The London table gives each postcode and its source.',
     'FactoryJet is on this list. We work remotely with UK clients, and we advise and then build.',
   ],
   faqs: FAQS,
@@ -509,7 +528,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-GB',
               datePublished: '2026-10-09',
-              dateModified: '2026-10-11',
+              dateModified: '2026-11-16',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI consultancies in the United Kingdom' },
@@ -538,10 +557,10 @@ export const post: BlogPost = {
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">The short answer</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          The best AI consultancy in the UK depends on your size. For a firm of about 10 people: The AI Consultancy, AI Expert UK or Optimus Consulting. For about 50 people: OpenKit, iwantmore.ai, Helium42 or Generativ. With a data team: Fifty One Degrees, Winder.AI or Datatonic. For regulated work: Faculty, Aiimi or Transparity. For ecommerce and operations: FactoryJet.
+          The best AI consultancy in the UK depends on your size. For a firm of about 10 people: The AI Consultancy, Vantage Growth Partners, AI Expert UK or Optimus Consulting. For about 50 people: OpenKit, iwantmore.ai, Helium42 or Generativ. With a data team: Fifty One Degrees, Winder.AI or Datatonic. For regulated work: Faculty, Aiimi or Transparity. For ecommerce and operations: FactoryJet.
         </p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          We checked all 14 on their own websites on 9 October 2026: where each is based, what it does, who it serves and any price it publishes. Nobody paid to be listed. Seven list a London address. Firms are grouped by the buyer they suit, and the order inside a group means nothing.
+          We checked 14 firms on their own websites on 9 October 2026 and added a fifteenth, Vantage Growth Partners, after checking its site on 16 November 2026: where each is based, what it does, who it serves and any price it publishes. Nobody paid to be listed. Eight list a London address. Firms are grouped by the buyer they suit, and the order inside a group means nothing.
         </p>
         <p className="text-gray-800 leading-relaxed">
           If you are short on time, tell us your size and the job you have in mind. The founder will say which kind of firm fits, even when that is another firm on this page. <a href="/uk/ai-consulting" className={link}>Ask the founder</a>.
@@ -600,7 +619,7 @@ export const post: BlogPost = {
       <ol className="list-decimal pl-6 mb-6 space-y-2">
         <li><strong>Start with what buyers ask.</strong> Ten of our 13 questions came from Google Search Console, where searchers had been shown our pages for them. Three we wrote ourselves, such as &ldquo;Best small business AI consultant UK&rdquo;. We read 140 AI answers to them on 9 October 2026.</li>
         <li><strong>Note what the assistants cite.</strong> Among the pages cited most for each question, comparison lists were cited 125 times, service pages 98 times, home pages 34 times and articles 22 times. The AI Consultancy&rsquo;s own site was cited at least 21 times across four questions, the most of any consultancy in our sample.</li>
-        <li><strong>Check each firm for a UK base.</strong> Each of the 13 firms we researched had to give a UK address or say it is UK-based on its own site. We also left out two names that older lists still carry: <a href={SOURCES.tomoro} className={link} rel="noopener" target="_blank">tomoro.ai</a> now redirects to deploy.co, a site titled The OpenAI Deployment Company, and the <a href={SOURCES.meshai} className={link} rel="noopener" target="_blank">Mesh-AI home page</a> says it is now part of Indicium AI.</li>
+        <li><strong>Check each firm for a UK base.</strong> Each of the 14 firms we researched had to give a UK address or say it is UK-based on its own site. We also left out two names that older lists still carry: <a href={SOURCES.tomoro} className={link} rel="noopener" target="_blank">tomoro.ai</a> now redirects to deploy.co, a site titled The OpenAI Deployment Company, and the <a href={SOURCES.meshai} className={link} rel="noopener" target="_blank">Mesh-AI home page</a> says it is now part of Indicium AI.</li>
         <li><strong>Group by buyer, with no ranking.</strong> A list that puts a 10-person boutique next to a firm with thousands of staff helps nobody. We sorted firms into four groups by the buyer they describe on their own sites.</li>
         <li><strong>Read the source and keep the quote.</strong> Every description comes from the firm&rsquo;s own pages, opened on 9 October 2026. For each fact we saved the line that supports it: 170 lines in all. Client names and counts are the firm&rsquo;s own claims, and we say so.</li>
         <li><strong>Prices only from the firm.</strong> Where a firm publishes a price, we quote it and link the page. We never guess another company&rsquo;s price, and we give no star ratings, because we have not hired these firms.</li>
@@ -659,7 +678,7 @@ export const post: BlogPost = {
                   alt="Two people at a standing table in a small office looking down at a tablet that shows four coloured boxes joined by arrows, with two colleagues working at desks behind them"
                   className="w-full h-auto rounded-xl"
                 />
-                <figcaption className="text-sm text-gray-600 mt-2">For a small firm the first job is one workflow drawn end to end. All three firms in this group publish what that step costs.</figcaption>
+                <figcaption className="text-sm text-gray-600 mt-2">For a small firm the first job is one workflow drawn end to end. All four firms in this group publish what they charge.</figcaption>
               </figure>
             )}
             {g === 'A company of about 50 people' && (
@@ -690,7 +709,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Top AI consultancies in London 2026</h2>
       <p className="mb-4">
-        Seven of the 14 firms list a London address on their own sites. We copied each one on 9 October 2026.
+        Eight of the 15 firms list a London address on their own sites. We copied each one on 9 October 2026, and Vantage&rsquo;s on 16 November 2026.
       </p>
       <div className="overflow-x-auto mb-4 not-prose">
         <table className="w-full border-collapse text-sm">
@@ -735,7 +754,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Best small business AI consultant in the UK</h2>
       <p className="mb-4">
-        For a firm of about 10 people, the three to call first are <strong>The AI Consultancy</strong> (London; Claude and ChatGPT set-up and training), <strong>AI Expert UK</strong> (Worcester; a fixed-fee workshop, then a roadmap) and <strong>Optimus Consulting</strong> (Crewe; a founder with 25 years in claims operations). All three publish what the first step costs.
+        For a firm of about 10 people, the four to call first are <strong>The AI Consultancy</strong> (London; Claude and ChatGPT set-up and training), <strong>Vantage Growth Partners</strong> (London; one person who installs and runs lead-response and follow-up systems from £297 a month), <strong>AI Expert UK</strong> (Worcester; a fixed-fee workshop, then a roadmap) and <strong>Optimus Consulting</strong> (Crewe; a founder with 25 years in claims operations). All four publish what they charge.
       </p>
       <p className="mb-4">
         Small firms are behind on AI, and that is normal. The <a href={SOURCES.ons} className={link} rel="noopener" target="_blank">Office for National Statistics</a> found that 28% of UK businesses with 0 to 9 employees reported using at least one AI technology, against 49% of those with 250 or more. Catching up starts with one job done well.
@@ -848,7 +867,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">What these consultancies publish about price</h2>
       <p className="mb-4">
-        Most consultancies quote after a call. Seven of the 13 other firms on this list publish figures on their own sites, and we copied them on 9 October 2026. Each figure is the firm&rsquo;s own. None is a FactoryJet price and together they are not a market survey. Firms change prices, so check the source.
+        Most consultancies quote after a call. Eight of the 14 other firms on this list publish figures on their own sites. We copied them on 9 October 2026, and Vantage&rsquo;s on 16 November 2026. Each figure is the firm&rsquo;s own. None is a FactoryJet price and together they are not a market survey. Firms change prices, so check the source.
       </p>
       <div className="overflow-x-auto mb-4 not-prose">
         <table className="w-full border-collapse text-sm">
@@ -857,7 +876,7 @@ export const post: BlogPost = {
               <th className="p-3 text-left border border-gray-700">Firm</th>
               <th className="p-3 text-left border border-gray-700">Published figure (GBP)</th>
               <th className="p-3 text-left border border-gray-700">VAT</th>
-              <th className="p-3 text-left border border-gray-700">Source (read 9 Oct 2026)</th>
+              <th className="p-3 text-left border border-gray-700">Source</th>
             </tr>
           </thead>
           <tbody>

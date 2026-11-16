@@ -14,7 +14,9 @@ const IMG = '/blog-images/best-ai-receptionists-australia-2026';
 //    Australian company, ABN or ACN, or Australian address, and (c) it was named in the AU page plan,
 //    on /au/ai-receptionist, or on page 1 of Google Australia for those searches that day.
 // 3. Every fact in PRODUCTS, PRICES and ALSO_CHECKED was read on the product's own site on
-//    21 Oct 2026 (URL in `source`). No third-party review site was used for any fact.
+//    21 Oct 2026 (URL in `source`), except Tradies Line AI, added on request and read on its own
+//    site on 16 Nov 2026 (home, /pricing, /about, /faq, /invoicing, /integrations/servicem8 and
+//    /integrations/xero). No third-party review site was used for any fact.
 // 4. No scores, no stars, no ranking. The order groups products by buyer type and is NOT a ranking.
 // 5. Prices are each product's own published list prices, copied exactly with their GST wording.
 //    They are NOT FactoryJet prices. FactoryJet's own prices are never published (rule, 30 Sep 2026),
@@ -83,6 +85,18 @@ const PRODUCTS: Product[] = [
     price: 'Voice A$99 a month (70 minutes) to A$670 (2,000 minutes); its terms say prices exclude GST unless stated',
     what: 'AIssie says it picks up every call, replies on SMS, website chat, Facebook, Instagram and WhatsApp, books jobs into your calendar and follows up overdue invoices. It answers in a natural Australian voice and transfers urgent calls on rules you set. Its security page says the language models it uses are hosted in the United States, which is worth knowing if your calls include health or legal details.',
     ask: 'Whether a voice trial is available, since the free plan we saw covers chat only.',
+  },
+  {
+    name: 'Tradies Line AI',
+    url: 'https://tradiesline.ai/',
+    source: 'https://tradiesline.ai/pricing',
+    company: 'Tradies Line AI is a registered business name of Linemill Solutions Pty Ltd (ABN 17 699 800 649), Sydney',
+    type: 'Job management software for trades with an AI receptionist and AI office staff',
+    bestFor: 'Service trades doing call-outs, repairs and maintenance that want calls, messages, quotes and invoices in one app',
+    connects: 'ServiceM8 (booked jobs pushed one way), Xero (invoices), Google and Outlook calendars, WhatsApp, Facebook Messenger, Instagram and email; ServiceM8 and Xero on every plan, including Free',
+    price: 'Free plan (5 test calls in total); Starter A$97 a month, excl. GST (50 calls) to Enterprise from A$897 a month, excl. GST (1,500 calls)',
+    what: 'Tradies Line AI says its AI receptionist answers the calls you can’t take on the number your customers already know, day or night, and with booking on puts the job in your calendar and texts a confirmation. It transfers calls live to you or your team on your rules. On paid plans, texts (two-way, Australia), website chat, WhatsApp, Messenger and Instagram land in one inbox with AI replies, and email replies are drafted for you to send. AI quoting builds a quote from your voice notes and photos, priced from your own price list, for you to check and send. With reminders on, unpaid invoices get three emails, then two texts and up to five short AI calls once Tradies Line Pay is connected. It says it is not built for staged building work yet, because it does not do deposits, progress claims or variations.',
+    ask: 'What reaches ServiceM8 after the first push, since its own page says a reschedule does not update the ServiceM8 job.',
   },
   {
     name: 'Miyai',
@@ -206,11 +220,14 @@ const PRODUCTS: Product[] = [
   },
 ];
 
-// These are each product's own published list prices, read on 21 Oct 2026. Not FactoryJet prices.
+// These are each product's own published list prices, read on 21 Oct 2026 (Tradies Line AI on
+// 16 Nov 2026). Not FactoryJet prices. Tradies Line AI sorts by its Starter price, because its
+// Free plan includes 5 test calls in total and does not answer real customer calls.
 const PRICES: { product: string; entry: string; top: string; unit: string; terms: string; source: string }[] = [
   { product: 'OfficeHQ MyAI', entry: 'A$20 a month, 10 calls', top: 'A$600 a month, 500 calls', unit: 'Per call; extra calls A$1.50', terms: 'Plus GST. 7-day free trial. No lock-in. Live-agent calls charged at the applicable rate', source: 'https://www.officehq.com.au/pricing/' },
   { product: 'Johnni', entry: 'A$49 a month (A$44 yearly), 60 minutes', top: 'A$899 a month (A$809 yearly), 1,500 minutes', unit: 'Per minute; then A$0.50 to A$0.35', terms: 'Ex GST. 7-day free trial. No setup fee. Month to month', source: 'https://johnni.ai/pricing/' },
   { product: 'Voxworks', entry: 'A$49 a month, 60 minutes', top: 'A$999 a month, 2,500 minutes', unit: 'Per minute; then A$0.99 to A$0.60', terms: 'Ex GST. 14-day free trial', source: 'https://www.voxworks.ai/pricing' },
+  { product: 'Tradies Line AI', entry: 'A$97 a month, excl. GST, 50 calls (Starter); Free plan has 5 test calls in total', top: 'From A$897 a month, excl. GST, 1,500 calls (Enterprise)', unit: 'Per call; no overage, the allowance pauses; top-ups on Pro and Enterprise, A$25 for 25 calls', terms: 'Excl. GST; Australian businesses pay 10% GST on top. Free plan, no card. No setup fee. Cancel any time, no lock-in. Read 16 Nov 2026', source: 'https://tradiesline.ai/pricing' },
   { product: 'AIssie (voice)', entry: 'A$99 a month, 70 minutes', top: 'A$670 a month, 2,000 minutes', unit: 'Per minute; extra A$0.65', terms: 'Terms say ex GST unless stated. No setup fee, no lock-in', source: 'https://www.aissie.com.au/pricing' },
   { product: 'OneBookPlus', entry: 'A$104 a month (A$79 receptionist + A$25 AI Companion), 100 conversations', top: 'Extra conversations: 50 for A$39 to 500 for A$299', unit: 'Per conversation of up to 4 minutes', terms: 'Inc GST. 14-day trial. No setup fee, no contract', source: 'https://onebookplus.com.au/features/ai-receptionist' },
   { product: 'Lyngo', entry: 'A$139 a month, 45 calls', top: 'A$880 a month, 500 calls', unit: 'Per call over 10 seconds; then A$3 to A$1.80', terms: 'Plus GST. 14 days free. Free setup. No lock-in', source: 'https://www.lyngo.ai/pricing/' },
@@ -232,7 +249,7 @@ const ALSO_CHECKED: { name: string; line: string; source: string }[] = [
 const FAQS: FAQItem[] = [
   {
     q: 'Which AI receptionist is best in Australia?',
-    a: 'There is no single best one. For trades on ServiceM8 or Simpro, look first at Sophiie, then Johnni, Nexwin and AIssie. For allied health on Cliniko or Nookal, Lyngo and MayaAI. For GP practices on Best Practice, MayaAI and HealthEngine Helen. If your data must stay in Australia, AiDial. If you want it run for you, Valory. We checked all of them on their own websites on 21 October 2026.',
+    a: 'There is no single best one. For trades on ServiceM8 or Simpro, look first at Sophiie, then Johnni, Nexwin and AIssie. For allied health on Cliniko or Nookal, Lyngo and MayaAI. For GP practices on Best Practice, MayaAI and HealthEngine Helen. If your data must stay in Australia, AiDial. If you want it run for you, Valory. We checked all of them on their own websites on 21 October 2026, and Tradies Line AI on 16 November 2026.',
   },
   {
     q: 'How much does an AI receptionist cost in Australia?',
@@ -248,7 +265,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Is there a free AI receptionist?',
-    a: 'Not for voice, among the Australian products we checked. AIssie has a free plan, but it covers 15 chat messages a month, not phone calls. What you can get free is a trial: MayaAI offers a month with no card, Voxworks and Lyngo 14 days, OneBookPlus 14 days, and Johnni, Nexwin and OfficeHQ seven days. Nexwin asks for a card to start its trial.',
+    a: 'Not for voice, among the Australian products we checked. AIssie has a free plan, but it covers 15 chat messages a month, not phone calls. Tradies Line AI has a free plan with no card, but it includes 5 test calls in total, not real customer calls. What you can get free is a trial: MayaAI offers a month with no card, Voxworks and Lyngo 14 days, OneBookPlus 14 days, and Johnni, Nexwin and OfficeHQ seven days. Nexwin asks for a card to start its trial.',
   },
   {
     q: 'Is an AI receptionist a good idea for a small business?',
@@ -268,11 +285,11 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'What is the best AI receptionist for tradies in Australia?',
-    a: 'Pick by your job software. On ServiceM8 or Simpro, Sophiie lists a two-way sync with both, while Johnni connects them as a quoted custom add-on. On AroFlo or Fergus, Voxworks names them on its trades page. On Tradify, none of the 13 names it, so the practical route is an AI receptionist for tradies that books into Google Calendar, which Tradify connects to. Johnni, Nexwin and Voxworks all list Google Calendar.',
+    a: 'Pick by your job software. On ServiceM8 or Simpro, Sophiie lists a two-way sync with both, while Johnni connects them as a quoted custom add-on and Tradies Line AI pushes booked jobs into ServiceM8 one way, with invoices synced to Xero. On AroFlo or Fergus, Voxworks names them on its trades page. On Tradify, none of the 14 lists it as a connection, so the practical route is an AI receptionist for tradies that books into Google Calendar, which Tradify connects to. Johnni, Nexwin and Voxworks all list Google Calendar.',
   },
   {
     q: 'Which AI receptionist works with ServiceM8?',
-    a: 'Sophiie lists a two-way ServiceM8 sync. AIssie, Miyai (Growth plan), Nexwin and AiDial list ServiceM8 too, Johnni connects it as a quoted custom add-on, and Valory lists it as an integration to discuss. OneBookPlus says it does not connect to ServiceM8. ServiceM8’s public add-on directory listed no AI receptionist on 21 October 2026, so ask each vendor what its connection writes into a job.',
+    a: 'Sophiie lists a two-way ServiceM8 sync. AIssie, Miyai (Growth plan), Nexwin and AiDial list ServiceM8 too, Tradies Line AI pushes booked jobs into it one way, Johnni connects it as a quoted custom add-on, and Valory lists it as an integration to discuss. OneBookPlus says it does not connect to ServiceM8. ServiceM8’s public add-on directory listed no AI receptionist on 21 October 2026, so ask each vendor what its connection writes into a job.',
   },
   {
     q: 'Which AI receptionist works with Cliniko?',
@@ -280,11 +297,11 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'What is the best AI receptionist for dentists in Australia?',
-    a: 'Start with your practice software. None of the 13 products we profiled names Core Practice or Dental4Windows (Centaur) on its own site. Core Practice’s own marketplace listed DentalFlo AI, Lumie and Patientdesk.ai on 21 October 2026. Among the 13, MayaAI, Valory and Miyai name dental practices as customers they serve, but none names a dental practice system. Ask any AI receptionist for dentists whether it books into your diary or only emails the front desk.',
+    a: 'Start with your practice software. None of the 14 products we profiled names Core Practice or Dental4Windows (Centaur) on its own site. Core Practice’s own marketplace listed DentalFlo AI, Lumie and Patientdesk.ai on 21 October 2026. Among the 14, MayaAI, Valory and Miyai name dental practices as customers they serve, but none names a dental practice system. Ask any AI receptionist for dentists whether it books into your diary or only emails the front desk.',
   },
   {
     q: 'Which AI receptionist works with Tradify?',
-    a: 'None of the 13 products we profiled names Tradify as a standard connection. Waboom, a New Zealand company, says its agent reads project schedules from Tradify. Tradify’s own connections page named only Xero, QuickBooks, Stripe and Google Calendar on 21 October 2026, and we found no public developer API. The practical route today is a receptionist that books into Google Calendar, which Tradify connects to.',
+    a: 'None of the 14 products we profiled names Tradify as a standard connection. Tradies Line AI names Tradify only in a price comparison on its pricing page. Waboom, a New Zealand company, says its agent reads project schedules from Tradify. Tradify’s own connections page named only Xero, QuickBooks, Stripe and Google Calendar on 21 October 2026, and we found no public developer API. The practical route today is a receptionist that books into Google Calendar, which Tradify connects to.',
   },
   {
     q: 'Which AI medical receptionist is best in Australia?',
@@ -335,28 +352,28 @@ const FAQS: FAQItem[] = [
 export const post: BlogPost = {
   id: '797',
   slug: 'best-ai-receptionists-australia-2026',
-  title: 'Best AI Receptionists in Australia (2026): 13 Compared, Plus Us',
+  title: 'Best AI Receptionists in Australia (2026): 14 Compared, Plus Us',
   excerpt:
-    'Thirteen AI receptionists sold by Australian businesses, checked on their own websites on 21 October 2026: list prices with GST terms, which job and practice software each connects to, where call data is kept, and who each suits. Plus when a custom build fits better. FactoryJet is listed last and says so.',
+    'Fourteen AI receptionists sold by Australian businesses, checked on their own websites on 21 October 2026 (one added on 16 November 2026): list prices with GST terms, which job and practice software each connects to, where call data is kept, and who each suits. Plus when a custom build fits better. FactoryJet is listed last and says so.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 22, 2026',
-  dateModified: 'Oct 31, 2026',
+  dateModified: 'Nov 16, 2026',
   readTime: '18 min read',
   imageUrl: `${IMG}-hero.webp`,
   imageFit: 'contain',
   imageAlt:
     'Over the shoulder of a Brisbane tradesman in a navy polo sitting in the open side door of his white van, checking a simple list on his phone under a jacaranda tree',
   meta: {
-    title: 'Best AI Receptionists Australia 2026: 13 Compared',
+    title: 'Best AI Receptionists Australia 2026: 14 Compared',
     description:
       'AI receptionists sold in Australia compared, from A$20 a month + GST: ServiceM8 and Cliniko connections, where call data is kept, and who each suits.',
   },
   keyTakeaways: [
     'There is no single best AI receptionist in Australia. Choose by the software you already use: job software for trades, practice software for clinics.',
-    'Every fact here was read on each product’s own website on 21 October 2026. Nobody paid to be listed, and the order is not a ranking.',
+    'Every fact here was read on each product’s own website on 21 October 2026, and on Tradies Line AI’s on 16 November 2026. Nobody paid to be listed, and the order is not a ranking.',
     'Published entry prices ran from A$20 a month plus GST for 10 calls to A$249 plus GST for 600 minutes. Some plans count calls and some count minutes, so compare like with like.',
-    'None of the 13 names Tradify, Core Practice or Dental4Windows. If that is your software, read the custom-build section.',
+    'None of the 14 lists Tradify, Core Practice or Dental4Windows as a connection. If that is your software, read the custom-build section.',
     'FactoryJet builds custom AI receptionists, so we are on this list, last. We work remotely with Australian clients.',
   ],
   faqs: FAQS,
@@ -371,12 +388,12 @@ export const post: BlogPost = {
               '@type': 'WebPage',
               '@id': PAGE_URL,
               url: PAGE_URL,
-              name: 'Best AI Receptionists in Australia (2026): 13 Compared, Plus Us',
+              name: 'Best AI Receptionists in Australia (2026): 14 Compared, Plus Us',
               description:
                 'AI receptionists sold in Australia compared, from A$20 a month + GST: ServiceM8 and Cliniko connections, where call data is kept, and who each suits.',
               inLanguage: 'en-AU',
               datePublished: '2026-10-22',
-              dateModified: '2026-10-31',
+              dateModified: '2026-11-16',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI receptionist software in Australia' },
@@ -408,7 +425,7 @@ export const post: BlogPost = {
           The best AI receptionist in Australia is the one that books into the software you already use. For trades on ServiceM8 or Simpro, start with Sophiie, then Johnni, Nexwin and AIssie. For allied health on Cliniko or Nookal, Lyngo and MayaAI. For GP practices on Best Practice, MayaAI and HealthEngine Helen. If your data must stay onshore, AiDial. If you want it set up and run for you, Valory.
         </p>
         <p className="text-gray-800 leading-relaxed">
-          We read each product&rsquo;s own website on 21 October 2026 and copied its list prices exactly. Nobody paid to be listed. The order is not a ranking. FactoryJet builds custom receptionists, so we are last, and labelled.
+          We read each product&rsquo;s own website on 21 October 2026 (Tradies Line AI on 16 November 2026) and copied its list prices exactly. Nobody paid to be listed. The order is not a ranking. FactoryJet builds custom receptionists, so we are last, and labelled.
         </p>
       </div>
 
@@ -416,7 +433,7 @@ export const post: BlogPost = {
         On 21 October 2026 we ran 14 searches in Google Australia, such as &ldquo;ai receptionist australia&rdquo;, &ldquo;ai receptionist for tradies&rdquo;, &ldquo;ai receptionist for dental clinic&rdquo; and &ldquo;ai receptionist cliniko&rdquo;. The first page for the main phrase held seven product pages (Sophiie, AiDial, OneBookPlus, Miyai, AutoReception, Voxworks and Johnni) and three guides: two from companies that sell AI receptionists (Hey Jodie, VerticalAI) and one from an AI agency (Aivy). Most of those lists are written by a vendor about its own market. This one names the software each product connects to and prints every published price with its GST wording.
       </p>
       <p className="mb-4">
-        So we read the products themselves. For each one we opened its homepage, pricing page, integrations page and terms on 21 October 2026, and wrote down only what it says about itself: who runs it, what it does, which software it connects to, where it keeps call data, and its list price with the GST wording exactly as printed. Thirteen get a full profile. Five more get a short note saying why they are not profiled.
+        So we read the products themselves. For each one we opened its homepage, pricing page, integrations page and terms on 21 October 2026, and wrote down only what it says about itself: who runs it, what it does, which software it connects to, where it keeps call data, and its list price with the GST wording exactly as printed. We added Tradies Line AI on 16 November 2026 and read its site the same way that day. Fourteen get a full profile. Five more get a short note saying why they are not profiled.
       </p>
       <p className="mb-4">
         <strong>A note on honesty.</strong> FactoryJet builds custom AI receptionists, so we are on this list, last. We do not sell an app and none of the products below is a partner of ours. Several best-of lists on this topic are written by a product that recommends itself: Miyai ranks itself first and discloses it, Valory recommends itself, Johnni says its author runs Johnni, and AiDial discloses its conflict and declines to name a winner. That is fair practice, and a reason to read every list, this one included, with care. For how we build them ourselves, see our{' '}
@@ -462,7 +479,7 @@ export const post: BlogPost = {
         <li><strong>Start with what Australian buyers see.</strong> We ran 14 Australian searches on 21 October 2026, then the 613 questions in Google&rsquo;s &ldquo;People also ask&rdquo; boxes they led to, and noted every AI receptionist product on the first pages.</li>
         <li><strong>Keep the Australian businesses.</strong> A product is in if its own site shows an Australian company, ABN, ACN or address. Waboom sells well in Australia but is a New Zealand company, so it gets a short note instead.</li>
         <li><strong>Keep products you can buy today.</strong> Each one sells an AI receptionist now, either self-serve or as a managed service.</li>
-        <li><strong>Read the source, not the summary.</strong> Every profile comes from the product&rsquo;s own pages, opened on 21 October 2026, and links the page we read. No review site was used for any fact.</li>
+        <li><strong>Read the source, not the summary.</strong> Every profile comes from the product&rsquo;s own pages, opened on 21 October 2026 (Tradies Line AI on 16 November 2026), and links the page we read. No review site was used for any fact.</li>
         <li><strong>No scores.</strong> We have not run these products for a client, so we give no stars and no ranking. We say who each suits and one question worth asking it.</li>
         <li><strong>Prices only from the product.</strong> We copy list prices exactly, with their GST wording. Where a price is not public, we say so.</li>
       </ol>
@@ -522,7 +539,7 @@ export const post: BlogPost = {
 
       <h2 id="fj-au-receptionist-prices" className="text-2xl font-bold mt-10 mb-4">What AI receptionists cost in Australia: published list prices</h2>
       <p className="mb-4">
-        Eleven of the 13 products publish prices. We copied them exactly on 21 October 2026, sorted by entry price. These are each product&rsquo;s own list prices, not FactoryJet prices. Sophiie and HealthEngine Helen quote after a demo.
+        Twelve of the 14 products publish prices. We copied them exactly on 21 October 2026 (Tradies Line AI on 16 November 2026), sorted by entry price. Tradies Line AI sorts by its A$97 Starter plan, because its Free plan includes 5 test calls in total and does not answer real customer calls. These are each product&rsquo;s own list prices, not FactoryJet prices. Sophiie and HealthEngine Helen quote after a demo.
       </p>
       <p className="md:hidden text-sm text-gray-600 mb-2 not-prose">Swipe sideways to see every column.</p>
       <div role="region" tabIndex={0} aria-labelledby="fj-au-receptionist-prices" className="fj-au-receptionist-table overflow-x-auto mb-4 not-prose" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
@@ -552,10 +569,10 @@ export const post: BlogPost = {
         </table>
       </div>
       <ul className="list-disc pl-6 mb-6 space-y-2">
-        <li><strong>Read the unit.</strong> Six products count minutes, three count calls, one counts conversations of up to four minutes, and Miyai&rsquo;s pricing page does not say. A call at AiDial can run 10 minutes; a conversation at OneBookPlus is cut into four-minute blocks. Count your calls and their average length from last month&rsquo;s phone bill before you compare.</li>
-        <li><strong>Check GST.</strong> Johnni and Voxworks say ex GST. OfficeHQ, Lyngo, MayaAI and Nexwin say plus GST. OneBookPlus says GST included, and Miyai&rsquo;s terms say GST is included where applicable. AIssie and Valory say GST is extra only in their terms. AiDial&rsquo;s pricing page does not say.</li>
-        <li><strong>Check the extras.</strong> Valory charges setup from A$990. AiDial sets setup in a scope of work. Johnni charges A$50 a month for SMS alerts. OfficeHQ charges separately when a live receptionist takes over. Johnni, Nexwin, AIssie, Miyai, MayaAI, Lyngo and OneBookPlus each say no setup fee.</li>
-        <li><strong>Check the exit.</strong> Nine of the 13 say month to month, no lock-in or cancel any time on the pages we read: Johnni, Nexwin, AIssie, Miyai, MayaAI, Lyngo, Valory, OneBookPlus and OfficeHQ. AiDial&rsquo;s scope of work may set a minimum term.</li>
+        <li><strong>Read the unit.</strong> Six products count minutes, four count calls, one counts conversations of up to four minutes, and Miyai&rsquo;s pricing page does not say. A call at AiDial can run 10 minutes; a conversation at OneBookPlus is cut into four-minute blocks. Count your calls and their average length from last month&rsquo;s phone bill before you compare.</li>
+        <li><strong>Check GST.</strong> Johnni and Voxworks say ex GST. Tradies Line AI says excl. GST, and Australian businesses pay 10% GST on top. OfficeHQ, Lyngo, MayaAI and Nexwin say plus GST. OneBookPlus says GST included, and Miyai&rsquo;s terms say GST is included where applicable. AIssie and Valory say GST is extra only in their terms. AiDial&rsquo;s pricing page does not say.</li>
+        <li><strong>Check the extras.</strong> Valory charges setup from A$990. AiDial sets setup in a scope of work. Johnni charges A$50 a month for SMS alerts. OfficeHQ charges separately when a live receptionist takes over. Johnni, Nexwin, AIssie, Tradies Line AI, Miyai, MayaAI, Lyngo and OneBookPlus each say no setup fee.</li>
+        <li><strong>Check the exit.</strong> Ten of the 14 say month to month, no lock-in or cancel any time on the pages we read: Johnni, Nexwin, AIssie, Tradies Line AI, Miyai, MayaAI, Lyngo, Valory, OneBookPlus and OfficeHQ. AiDial&rsquo;s scope of work may set a minimum term.</li>
       </ul>
       <p className="mb-6">
         For what AI chatbots, voice agents and consultants cost across Australia more widely, read our{' '}
@@ -572,21 +589,21 @@ export const post: BlogPost = {
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Your software</th>
-              <th className="p-3 text-left border border-gray-700">Products that name it on their own site (21 Oct 2026)</th>
+              <th className="p-3 text-left border border-gray-700">Products that name it on their own site (21 Oct 2026; Tradies Line AI 16 Nov 2026)</th>
             </tr>
           </thead>
           <tbody>
-            <tr className="odd:bg-white even:bg-gray-50"><td className="p-3 border border-gray-200 font-semibold align-top">ServiceM8</td><td className="p-3 border border-gray-200 align-top">Sophiie (two-way sync), AIssie, Miyai (Growth plan), Nexwin (workflows), AiDial; Johnni as a quoted custom add-on; Valory as one to discuss. OneBookPlus says it does not.</td></tr>
+            <tr className="odd:bg-white even:bg-gray-50"><td className="p-3 border border-gray-200 font-semibold align-top">ServiceM8</td><td className="p-3 border border-gray-200 align-top">Sophiie (two-way sync), AIssie, Miyai (Growth plan), Nexwin (workflows), AiDial, Tradies Line AI (booked jobs pushed one way); Johnni as a quoted custom add-on; Valory as one to discuss. OneBookPlus says it does not.</td></tr>
             <tr className="odd:bg-white even:bg-gray-50"><td className="p-3 border border-gray-200 font-semibold align-top">Simpro</td><td className="p-3 border border-gray-200 align-top">Sophiie (two-way sync); Johnni as a quoted custom add-on; Valory as one to discuss.</td></tr>
             <tr className="odd:bg-white even:bg-gray-50"><td className="p-3 border border-gray-200 font-semibold align-top">AroFlo, Fergus</td><td className="p-3 border border-gray-200 align-top">Voxworks, on its trades page only.</td></tr>
-            <tr className="odd:bg-white even:bg-gray-50"><td className="p-3 border border-gray-200 font-semibold align-top">Tradify</td><td className="p-3 border border-gray-200 align-top">None of the 13.</td></tr>
+            <tr className="odd:bg-white even:bg-gray-50"><td className="p-3 border border-gray-200 font-semibold align-top">Tradify</td><td className="p-3 border border-gray-200 align-top">None of the 14 lists it as a connection.</td></tr>
             <tr className="odd:bg-white even:bg-gray-50"><td className="p-3 border border-gray-200 font-semibold align-top">Cliniko</td><td className="p-3 border border-gray-200 align-top">Lyngo, MayaAI, AiDial.</td></tr>
             <tr className="odd:bg-white even:bg-gray-50"><td className="p-3 border border-gray-200 font-semibold align-top">Halaxy</td><td className="p-3 border border-gray-200 align-top">MayaAI, AiDial.</td></tr>
             <tr className="odd:bg-white even:bg-gray-50"><td className="p-3 border border-gray-200 font-semibold align-top">Nookal, Splose, PracSuite</td><td className="p-3 border border-gray-200 align-top">Lyngo (all three); AiDial (PracSuite).</td></tr>
             <tr className="odd:bg-white even:bg-gray-50"><td className="p-3 border border-gray-200 font-semibold align-top">Best Practice, Pracsoft</td><td className="p-3 border border-gray-200 align-top">MayaAI (Best Practice), HealthEngine Helen (both).</td></tr>
-            <tr className="odd:bg-white even:bg-gray-50"><td className="p-3 border border-gray-200 font-semibold align-top">Core Practice, Dental4Windows (Centaur)</td><td className="p-3 border border-gray-200 align-top">None of the 13.</td></tr>
-            <tr className="odd:bg-white even:bg-gray-50"><td className="p-3 border border-gray-200 font-semibold align-top">Xero</td><td className="p-3 border border-gray-200 align-top">Sophiie, AIssie, AiDial; OneBookPlus in an invite-only beta.</td></tr>
-            <tr className="odd:bg-white even:bg-gray-50"><td className="p-3 border border-gray-200 font-semibold align-top">Google Calendar</td><td className="p-3 border border-gray-200 align-top">Johnni (every plan), Sophiie, Nexwin, AIssie, AiDial, Voxworks, Valory; OneBookPlus one-way only.</td></tr>
+            <tr className="odd:bg-white even:bg-gray-50"><td className="p-3 border border-gray-200 font-semibold align-top">Core Practice, Dental4Windows (Centaur)</td><td className="p-3 border border-gray-200 align-top">None of the 14.</td></tr>
+            <tr className="odd:bg-white even:bg-gray-50"><td className="p-3 border border-gray-200 font-semibold align-top">Xero</td><td className="p-3 border border-gray-200 align-top">Sophiie, AIssie, AiDial, Tradies Line AI (invoices); OneBookPlus in an invite-only beta.</td></tr>
+            <tr className="odd:bg-white even:bg-gray-50"><td className="p-3 border border-gray-200 font-semibold align-top">Google Calendar</td><td className="p-3 border border-gray-200 align-top">Johnni (every plan), Sophiie, Nexwin, AIssie, Tradies Line AI, AiDial, Voxworks, Valory; OneBookPlus one-way only.</td></tr>
           </tbody>
         </table>
       </div>
@@ -606,7 +623,7 @@ export const post: BlogPost = {
         Most small businesses should start with a product above. A custom build is worth the extra cost and time in five situations:
       </p>
       <ul className="list-disc pl-6 mb-4 space-y-2">
-        <li><strong>Your practice software is not on anyone&rsquo;s list.</strong> Dental practices on Core Practice or Dental4Windows (Centaur) found none of the 13 naming their system. A custom build for Core Practice goes through its partner program, so ask any builder whether they hold that access before you pay for scoping.</li>
+        <li><strong>Your practice software is not on anyone&rsquo;s list.</strong> Dental practices on Core Practice or Dental4Windows (Centaur) found none of the 14 naming their system. A custom build for Core Practice goes through its partner program, so ask any builder whether they hold that access before you pay for scoping.</li>
         <li><strong>Your job rules are the product.</strong> Priority by suburb, a callout fee that depends on the time of day, which crew holds which licence, when to quote on the phone and when to book a site visit. Apps let you write questions; they rarely let you write those rules into ServiceM8 or Simpro the way your office manager would.</li>
         <li><strong>One call touches several systems.</strong> A booking that should create a job, check an overdue invoice in Xero, and update a CRM stage needs software written for that path.</li>
         <li><strong>You need to control where data goes.</strong> The products here range from &ldquo;never leaves Australia&rdquo; (AiDial) to language models hosted in the United States (AIssie). A custom build can run in your own cloud account, in the region you choose.</li>
@@ -642,6 +659,7 @@ export const post: BlogPost = {
         <li><strong>OneBookPlus:</strong> transcripts and records stored in AWS Sydney; the live call passes through phone and voice providers in the United States.</li>
         <li><strong>Valory:</strong> primarily hosted and operated in Australia, with a terms clause allowing processing outside Australia.</li>
         <li><strong>AIssie:</strong> language models used for answering are hosted in the United States.</li>
+        <li><strong>Tradies Line AI</strong> (read 16 November 2026): main database in Sydney; calls run through its voice AI and phone providers in the United States.</li>
         <li><strong>Sophiie, Johnni, Lyngo, Miyai, HealthEngine Helen:</strong> no data-location statement on the pages we read. Ask.</li>
       </ul>
       <p className="mb-6">
@@ -652,7 +670,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How to choose an AI receptionist in Australia: 7 steps</h2>
       <ol className="list-decimal pl-6 mb-6 space-y-2">
-        <li><strong>Count last month&rsquo;s calls.</strong> Total calls, average length, and how many came after hours. Six products here bill by the minute and three by the call, so this decides which plan type suits you.</li>
+        <li><strong>Count last month&rsquo;s calls.</strong> Total calls, average length, and how many came after hours. Six products here bill by the minute and four by the call, so this decides which plan type suits you.</li>
         <li><strong>Start from your software.</strong> Use the connections table above to cut the list to two or three. On ServiceM8, for example, only Sophiie lists a two-way sync.</li>
         <li><strong>Write your five most common calls and one awkward one.</strong> A new booking, a reschedule, a price question, an urgent job, a complaint.</li>
         <li><strong>Run the free trials side by side.</strong> Ring each with those six calls, from a noisy place, with a strong accent if you can. MayaAI&rsquo;s month-long trial needs no card; Nexwin&rsquo;s seven-day trial does.</li>
