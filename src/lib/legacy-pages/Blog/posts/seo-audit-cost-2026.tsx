@@ -1,117 +1,143 @@
 import React from 'react';
 import type { BlogPost } from '../data.types';
 
+// Price sources, all fetched 16 Nov 2026:
+// WebFX survey of 250 US businesses (dateModified 20 Oct 2026):
+//   https://www.webfx.com/seo/pricing/how-much-does-seo-audit-cost/
+// Neil Patel, SEO audit pricing (updated 26 Aug 2025):
+//   https://neilpatel.com/blog/seo-audit-pricing/
+// WebFX SEO pricing by business size (dateModified 21 Oct 2026):
+//   https://www.webfx.com/seo/pricing/
+// Screaming Frog free limit: https://www.screamingfrog.co.uk/seo-spider/
+// SERP snippet ranges: DataForSEO Google US organic, "seo audit cost", 16 Nov 2026.
+
 const faqs = [
-    {
-      q: 'How much does an SEO audit cost?',
-      a: 'SEO audit costs in 2026 range from $0 for automated tool-based checks to $30,000+ for large enterprise technical audits. For small businesses with under 500 pages, professional audits typically fall in the $500–$2,500 range. Mid-market sites (500–5,000 pages) typically pay $2,500–$8,000. Enterprise audits covering 10,000+ pages run $10,000–$30,000+.',
-    },
-    {
-      q: 'What is included in an SEO audit?',
-      a: 'A complete SEO audit covers: technical SEO (crawlability, indexation, site speed, Core Web Vitals, mobile usability), on-page SEO (title tags, meta descriptions, heading structure, content quality), content analysis (thin pages, duplicate content, topical coverage gaps), backlink profile review, competitive gap analysis, and a prioritized action list with estimated impact.',
-    },
-    {
-      q: 'Is a free SEO audit worth anything?',
-      a: 'Free automated audits from tools like Semrush, Ahrefs, or Screaming Frog are useful for identifying surface-level technical issues: broken links, missing meta descriptions, slow page speed, duplicate title tags. They do not cover content strategy, competitive gaps, schema quality, or AI search readiness, and they do not prioritize findings by business impact. Use them as a starting point, not a complete diagnosis.',
-    },
-    {
-      q: 'How long does an SEO audit take?',
-      a: 'A thorough manual audit for a small business site (under 100 pages) typically takes 8–20 hours of professional time. Mid-market sites take 20–60 hours. Enterprise audits can take 100+ hours across multiple specialists. Automated-only audits can be generated in minutes but provide significantly less actionable insight.',
-    },
-    {
-      q: 'What questions should I ask before paying for an SEO audit?',
-      a: 'Ask: What will the deliverable look like, a prioritized action list or a raw crawl report? Will it include competitive gap analysis? Does it cover Core Web Vitals and mobile performance? Will it include schema and AI Overview readiness? How are findings prioritized by business impact? Who specifically will conduct the audit, a senior SEO or a junior analyst with a tool?',
-    },
-    {
-      q: 'What is the difference between a technical SEO audit and a full SEO audit?',
-      a: 'A technical SEO audit focuses specifically on crawlability, indexation, site speed, structured data, and site architecture, the infrastructure layer. A full SEO audit adds content analysis, backlink review, competitive gap analysis, and keyword opportunity mapping. Most small businesses need a full audit, not just a technical one.',
-    },
-    {
-      q: 'How often should I get an SEO audit?',
-      a: 'For most small businesses, a full audit every 12–18 months is sufficient if you have ongoing SEO monitoring in place. After a major site redesign or migration, an immediate post-launch audit is essential. After a Google algorithm update that caused a traffic drop, a targeted content and technical audit helps diagnose the cause.',
-    },
-    {
-      q: 'What is a crawl audit?',
-      a: "A crawl audit uses tools like Screaming Frog, Sitebulb, or DeepCrawl to systematically visit every URL on your site and check for technical issues: broken links, redirect chains, duplicate content, missing tags, slow pages, and crawl errors. It is the most common starting point for any SEO audit but should not be confused with a complete SEO audit.",
-    },
-    {
-      q: 'Do I need an SEO audit if my site is new?',
-      a: 'Yes, ideally before launch. A pre-launch SEO audit catches structural issues (URL patterns, internal linking, missing schema, thin pages) before they are indexed and harder to change. Post-launch audits on new sites in the first 60 days also catch indexation issues that slow down the ranking timeline.',
-    },
-    {
-      q: 'What is a content audit in SEO?',
-      a: 'A content audit evaluates every page on your site for SEO quality: thin content, duplicate content, keyword cannibalization (multiple pages competing for the same query), missing schema, poor internal linking, and pages that generate impressions but no clicks. It often reveals consolidation opportunities, merging weak pages into stronger ones, that produce significant ranking improvements.',
-    },
-    {
-      q: 'What is a backlink audit?',
-      a: 'A backlink audit reviews all external sites linking to yours, identifies toxic or low-quality links that could harm rankings, and assesses the overall quality and diversity of your link profile. Most small businesses have clean link profiles and do not need extensive backlink audits; they are most valuable after a penalty investigation or aggressive link-building campaign.',
-    },
-    {
-      q: 'Does an SEO audit include keyword research?',
-      a: 'Not always, it depends on the scope. A technical-only audit does not include keyword research. A full SEO audit should include at minimum a competitive gap analysis showing which keywords competitors rank for that you do not. Full keyword research is usually scoped as a separate deliverable.',
-    },
-    {
-      q: 'What tools are used in an SEO audit?',
-      a: 'Professional SEO audits commonly use: Screaming Frog or Sitebulb (crawl analysis), Ahrefs or Semrush (backlink and keyword analysis), Google Search Console (indexation and performance data), Google PageSpeed Insights or Lighthouse (Core Web Vitals), and Schema Markup Validator (structured data verification). No single tool covers everything, professional audits combine multiple data sources.',
-    },
-    {
-      q: 'Can I do my own SEO audit?',
-      a: "Yes, to a degree. Google Search Console provides coverage, indexation, Core Web Vitals, and manual action data for free. Screaming Frog's free tier crawls up to 500 URLs. Google's PageSpeed Insights checks Core Web Vitals. Together these cover the most critical technical issues. Content and competitive analysis require either paid tools or professional expertise.",
-    },
-    {
-      q: 'What is included in a local SEO audit?',
-      a: 'A local SEO audit covers: Google Business Profile completeness and accuracy, NAP (Name, Address, Phone) consistency across citations, local keyword rankings for city + service queries, Map Pack ranking position, local schema markup (LocalBusiness), review quantity and recency, and competitive analysis against other local providers in the Map Pack.',
-    },
-    {
-      q: 'How do I know if an SEO audit is good quality?',
-      a: 'A high-quality audit delivers: findings prioritized by business impact (not just alphabetically), competitive context for each issue (not just "this page is slow" but "your top three competitors load in 1.2s and you load in 4.1s"), clear action items with estimated effort, and a roadmap, not just a problem list. If the audit does not tell you what to fix first and why, it has not done its job.',
-    },
-    {
-      q: 'What is an AI search readiness audit?',
-      a: 'An AI search readiness audit evaluates how well your site is positioned to appear in AI-generated answers. Google AI Overviews, ChatGPT Search, Perplexity citations. It covers: schema markup coverage, content structure for AI extraction, E-E-A-T signals, author bylines, FAQ coverage, and citation-worthiness of factual claims. This is a newer audit component most agencies added in 2024–2025.',
-    },
-    {
-      q: 'Should a small business pay for an SEO audit?',
-      a: "For most small businesses, a professional audit in the $500–$1,500 range is worth the investment if you are planning any SEO activity over the next 12 months. It prevents wasting money fixing the wrong things. The caveat: only pay for an audit if you have the budget and capacity to act on the findings. An audit that sits in a Google Drive folder is a sunk cost.",
-    },
-    {
-      q: 'What happens after an SEO audit?',
-      a: 'After receiving an audit, prioritize findings by impact-to-effort ratio: fix critical technical issues (broken pages, indexation blocks, Core Web Vitals failures) first, then on-page optimizations, then content gaps, then link building. Most small businesses can implement high-priority audit findings in 4–8 weeks. Results typically become visible in Google Search Console within 6–10 weeks of implementation.',
-    },
-    {
-      q: 'What is the ROI of an SEO audit?',
-      a: "An SEO audit's ROI depends entirely on what you do with it. Audits that surface and fix critical indexation issues often produce measurable ranking improvements within 60 days. Content audits that consolidate thin pages regularly produce 20–40% traffic increases on the consolidated pages. The audit itself has no ROI, the implementation does.",
-    },
-    {
-      q: 'Does FactoryJet offer SEO audits?',
-      a: "Yes. Every FactoryJet website project includes a pre-launch SEO audit covering technical structure, schema, Core Web Vitals, and content architecture. For existing sites, we offer standalone SEO audits with prioritized action lists, not crawl data dumps. Book a free 30-minute call to discuss what your site needs.",
-    },
-  ];
+  {
+    q: 'How much does an SEO audit cost?',
+    a: 'Most businesses pay $101 to $750. That is the band 43% of respondents chose in WebFX’s survey of 250 US businesses (page updated October 2026). Audits that include a real strategy cost more: Neil Patel puts them at $500 to $2,500 from freelancers or small agencies, $2,500 to $7,500 for a full strategic audit, and $10,000 to $20,000+ for enterprise sites.',
+  },
+  {
+    q: 'Why do SEO audit quotes vary so much?',
+    a: 'Three things set the price: how many pages the site has, how much the audit covers (technical only, or also content, links and competitors), and how much a person interprets the data rather than exporting a tool report. In the US results we pulled on 16 Nov 2026, published guides quoted floors of $0 and ceilings as high as $30,000 for the same service name.',
+  },
+  {
+    q: 'What does an SEO audit cost for a small business?',
+    a: 'WebFX’s survey splits it by company size: startups and micro-businesses (1 to 10 employees) reported $50 to $750, and small businesses (11 to 50 employees) reported up to $2,500. A small site with fewer than 100 pages rarely needs more than a freelancer or small-agency audit in Neil Patel’s $500 to $2,500 band.',
+  },
+  {
+    q: 'Is it worth paying for an SEO audit?',
+    a: 'Yes, if you will act on it. A paid audit is worth it when it ends with a ranked list of fixes tied to traffic or revenue. It is wasted money when you have no budget or people to make the changes, or when the deliverable is a raw crawl export. Neil Patel’s own test: if it does not give you a strategy, it is not worth the money.',
+  },
+  {
+    q: 'Is a free SEO audit worth anything?',
+    a: 'Yes, as a first check. Free tools catch broken links, missing or duplicate title tags, 4xx errors, redirect chains and slow pages. They do not judge content quality, map keyword cannibalization, compare you with competitors, or rank findings by business impact. Neil Patel’s guide notes that anything under $500 is usually automated.',
+  },
+  {
+    q: 'What is included in an SEO audit?',
+    a: 'A full SEO audit covers technical SEO (crawlability, indexation, Core Web Vitals, mobile usability), on-page SEO (titles, meta descriptions, headings, internal links), content (thin pages, duplicates, cannibalization), the backlink profile, a competitor gap analysis, structured data, and readiness for AI answers. The deliverable that matters is a prioritized action list.',
+  },
+  {
+    q: 'How do you do an SEO audit?',
+    a: 'Start in Google Search Console: check the Pages (indexing) report, Core Web Vitals and any manual actions. Crawl the site with a tool such as Screaming Frog to find broken links, redirects and missing tags. Then review your top pages for titles, headings and content quality, compare them with the pages that outrank you, and finish by ranking every issue by impact and effort.',
+  },
+  {
+    q: 'Can I do my own SEO audit?',
+    a: 'Yes, for the technical basics. Google Search Console is free and shows indexing, Core Web Vitals and manual actions. Screaming Frog’s SEO Spider crawls up to 500 URLs free, and a licence to remove the limit is £199 per year. Content strategy and competitor analysis are harder to do yourself without paid tools or experience.',
+  },
+  {
+    q: 'Can ChatGPT do an SEO audit?',
+    a: 'Partly. ChatGPT can review a page’s copy, suggest title tags and explain what a crawl export means. It cannot crawl your whole site, read your Search Console data or measure page speed unless you give it that data. Use it to interpret findings from real tools, not as the audit itself.',
+  },
+  {
+    q: 'How long does an SEO audit take?',
+    a: 'WebFX says a professional SEO audit typically takes 30 to 45 days, and agencies can speed it up to about one week for an extra fee. Site size and complexity move the timeline. An automated report takes minutes, which is one reason it tells you much less.',
+  },
+  {
+    q: 'How often should I get an SEO audit?',
+    a: 'Once or twice a year for most businesses, according to both WebFX and Neil Patel. WebFX adds that large sites such as ecommerce stores benefit from quarterly audits. Run an extra audit before and after a redesign or migration, and after any sudden traffic drop.',
+  },
+  {
+    q: 'What is the difference between a technical SEO audit and a full SEO audit?',
+    a: 'A technical SEO audit covers the infrastructure: crawlability, indexation, site speed, structured data and site architecture. A full SEO audit adds content analysis, a backlink review, competitor gaps and keyword opportunities. Most small businesses need the full version, because content and competitors usually explain more of the gap than code does.',
+  },
+  {
+    q: 'Should I hire a freelancer or an agency for an SEO audit?',
+    a: 'A freelancer suits a small site that needs a clear technical and on-page review; Neil Patel puts that work at $500 to $2,500. An agency suits a larger site or one that needs content, link and competitor analysis together, in the $2,500 to $7,500 band. Whoever you hire, ask who will do the work and to see a sample report.',
+  },
+  {
+    q: 'What questions should I ask before paying for an SEO audit?',
+    a: 'Ask what the deliverable looks like (a prioritized action list or a raw crawl report), whether it includes a competitor gap analysis, whether it covers Core Web Vitals and mobile, whether it checks schema and AI Overview readiness, how findings are ranked, and who will run it: a senior SEO or a junior analyst exporting a tool report.',
+  },
+  {
+    q: 'How do I know if an SEO audit is good quality?',
+    a: 'A good audit ranks findings by business impact, gives competitive context for each issue (not just “this page is slow” but how slow it is next to the pages that outrank you), estimates the effort for each fix, and tells you what to do first. If it does not say what to fix first and why, it has not done its job.',
+  },
+  {
+    q: 'Do I need an SEO audit if my site is new?',
+    a: 'Yes, ideally before launch. A pre-launch audit catches URL patterns, internal linking gaps, missing schema and thin pages before Google indexes them and they become harder to change. A second check in the first couple of months after launch catches indexing problems early.',
+  },
+  {
+    q: 'What is a content audit in SEO?',
+    a: 'A content audit reviews every page for thin or duplicate content, keyword cannibalization (several pages competing for the same query), weak internal linking, and pages that get impressions but no clicks. It often ends with merging weak pages into stronger ones.',
+  },
+  {
+    q: 'What is a backlink audit?',
+    a: 'A backlink audit reviews the sites linking to yours, flags low-quality or spammy links, and checks the spread of anchor text and linking domains. Most small businesses with no history of link buying do not need a deep one. It matters most after a penalty or an aggressive link-building campaign.',
+  },
+  {
+    q: 'Does an SEO audit include keyword research?',
+    a: 'Not always. A technical-only audit does not. A full SEO audit should at least show which keywords your competitors rank for that you do not. Full keyword research is usually priced as a separate piece of work.',
+  },
+  {
+    q: 'What tools are used in an SEO audit?',
+    a: 'Common tools are Screaming Frog or Sitebulb for crawling, Ahrefs or Semrush for backlinks and keywords, Google Search Console for indexing and performance, PageSpeed Insights or Lighthouse for Core Web Vitals, and the Schema Markup Validator or Rich Results Test for structured data. No single tool covers everything.',
+  },
+  {
+    q: 'What is included in a local SEO audit?',
+    a: 'A local SEO audit checks your Google Business Profile, name, address and phone consistency across directories, rankings for city plus service searches, your Map Pack position, LocalBusiness schema, review count and recency, and how you compare with the businesses that show in the Map Pack.',
+  },
+  {
+    q: 'What is an AI search readiness audit?',
+    a: 'It checks how likely your pages are to be used in AI answers such as Google AI Overviews, ChatGPT search and Perplexity. It looks at schema coverage, whether pages answer questions in short self-contained passages, author and company signals, FAQ coverage, and whether factual claims are specific enough to quote. WebFX now lists AI search visibility as part of its audit FAQ.',
+  },
+  {
+    q: 'How much does SEO cost after the audit?',
+    a: 'Ongoing SEO is usually a monthly retainer. WebFX reports that small businesses (11 to 50 employees) typically pay $1,500 to $3,500 a month, and startups $500 to $1,500 a month. Our guide to SEO cost for small businesses breaks down retainers and one-time projects.',
+  },
+  {
+    q: 'What happens after an SEO audit?',
+    a: 'Work through the findings by impact and effort: fix technical blockers first (broken pages, indexing problems, Core Web Vitals failures), then on-page changes on your most important pages, then content gaps, then links. Track impressions and average position for the pages you changed in Google Search Console.',
+  },
+  {
+    q: 'Does FactoryJet offer SEO audits?',
+    a: 'Yes. For existing sites we run standalone SEO audits that end in a prioritized action list, not a crawl export, and every FactoryJet website project includes a pre-launch SEO check of technical structure, schema, Core Web Vitals and content architecture. FactoryJet quotes a fixed price in writing after a short scoping call.',
+  },
+];
 
 export const post: BlogPost = {
   id: '223',
   slug: 'seo-audit-cost-2026',
-  title: 'How Much Does an SEO Audit Cost in 2026? (Real Pricing Breakdown)',
+  title: 'How Much Does an SEO Audit Cost in 2026? Survey Data and Price Tiers',
   excerpt:
-    'SEO audit prices range from $0 to $30,000+ depending on who does it and what they actually check. This breakdown shows what each tier covers, what to ask for, and when a free audit is enough.',
+    '43% of US businesses pay $101 to $750 for an SEO audit, per WebFX’s survey. Full strategic audits run $2,500 to $7,500 and enterprise audits $10,000+. Here is what each price buys and what to ask for.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jun 7, 2026',
-  dateModified: 'Oct 12, 2026',
-  readTime: '10 min read',
+  dateModified: 'Nov 16, 2026',
+  readTime: '11 min read',
   imageUrl: '/blog-images/seo-audit-cost-2026.webp',
   meta: {
-    title: 'SEO Audit Cost 2026: What Each Price Tier Covers',
+    title: 'SEO Audit Cost 2026: Most Pay $101–$750 (US Survey Data)',
     description:
-      'SEO audit prices run from free to $30,000+ in 2026. See what each price tier checks, what to ask for, and when a free audit is enough.',
+      'An SEO audit costs $101–$750 for 43% of US businesses (WebFX survey). Full strategic audits run $2,500–$7,500, enterprise $10K+. See what each tier checks.',
   },
   keyTakeaways: [
-    'SEO audit costs in 2026 range from $0 (automated tools) to $30,000+ (enterprise technical audits by specialized agencies).',
-    'For most small businesses with under 500 pages, a professional audit in the $500–$2,500 range covers everything actionable.',
-    'Free automated audits (Semrush, Ahrefs, Screaming Frog free tier) are useful for surface-level technical checks but miss content quality, competitive gaps, and strategic priorities.',
-    'The most important thing to ask for in any paid audit: a prioritized action list, not just a list of issues. A 200-item crawl report with no priority ranking is not an audit, it is a data dump.',
-    'In 2026, a complete SEO audit should cover traditional technical SEO AND AI search readiness, schema markup, content structure for AI Overviews, and GEO signals.',
-    'One-time audits are useful for diagnosis; ongoing SEO monitoring produces more long-term value. Use the audit to establish a baseline, then implement systematically.',
+    'An SEO audit costs $101 to $750 for 43% of US businesses, according to WebFX’s survey of 250 US businesses (updated October 2026).',
+    'Neil Patel’s tiers: $0 to $150 for free tools, $500 to $2,500 for freelancer or small-agency audits, $2,500 to $7,500 for full strategic audits, $10,000 to $20,000+ for enterprise sites.',
+    'In WebFX’s data, 66% of businesses paid $1,000 or less and 22% paid more than $2,500. No respondent reported paying more than $15,000.',
+    'Under $500 usually means an automated report. It finds broken things but does not rank them by business impact.',
+    'The one deliverable to insist on: a prioritized action list. A crawl export with 200 unranked issues is not an audit.',
+    'In 2026 a full audit should also check AI search readiness: schema, quotable answers and author signals for Google AI Overviews and ChatGPT.',
   ],
   faqs,
   content: (
@@ -142,33 +168,41 @@ export const post: BlogPost = {
           Quick Answer
         </p>
         <p style={{ margin: 0, fontSize: '17px', lineHeight: '1.65', color: '#1a1a1a' }}>
-          An SEO audit costs <strong>$500–$2,500</strong> for most small businesses in 2026.
-          Free automated audits exist but miss content gaps, competitive analysis, and AI search
-          readiness. The most important thing to demand from any paid audit:{' '}
-          <strong>a prioritized action list</strong>, not a raw list of 200 issues with no
-          direction.
+          An SEO audit costs <strong>$101 to $750</strong> for most businesses: that is what 43% of
+          businesses paid in{' '}
+          <a href="https://www.webfx.com/seo/pricing/how-much-does-seo-audit-cost/" target="_blank" rel="noopener noreferrer">
+            WebFX’s survey
+          </a>{' '}
+          of 250 US businesses. Audits that come with a strategy cost more.{' '}
+          <a href="https://neilpatel.com/blog/seo-audit-pricing/" target="_blank" rel="noopener noreferrer">
+            Neil Patel
+          </a>{' '}
+          puts them at <strong>$500 to $2,500</strong> from a freelancer or small agency,{' '}
+          <strong>$2,500 to $7,500</strong> for a full strategic audit, and{' '}
+          <strong>$10,000 to $20,000+</strong> for enterprise sites. Free tools cost $0 to $150.
+          Whatever you pay, insist on a prioritized action list.
         </p>
       </div>
 
       {/* ── INTRO ───────────────────────────────────────────────────────── */}
       <p>
-        "How much does an SEO audit cost?" is one of those questions where the answer range, free
-        to $30,000, is so wide it tells you almost nothing. A $99 automated report and a $15,000
-        enterprise audit are both called SEO audits, but they share almost nothing in terms of
-        what they actually examine and what you can do with the output.
+        Search “seo audit cost” in the US and the guides on page one disagree badly. When we pulled
+        the top results on 16 November 2026, the quoted floors started at $0 and the ceilings ran
+        as high as $30,000. A $99 automated report and a $15,000 enterprise audit share a name and
+        almost nothing else.
       </p>
       <p>
-        This guide breaks down what each price tier actually delivers, what separates a useful
-        audit from an expensive data dump, and what a small business with a real website and real
-        SEO goals actually needs in 2026.
+        So this guide uses two sources you can check: WebFX’s survey of what 250 US businesses
+        actually paid, and Neil Patel’s tier breakdown of what each price buys. Then it covers what
+        a good audit should deliver, the red flags in a proposal, and what to do once you have the
+        report.
       </p>
 
-      {/* ── DATA TABLE ─────────────────────────────────────────────────── */}
-      <h2>SEO Audit Pricing Tiers in 2026</h2>
+      {/* ── DATA TABLE: TIERS ──────────────────────────────────────────── */}
+      <h2>SEO Audit Cost by Tier in 2026</h2>
       <p>
-        The table below summarizes what each price tier typically covers, based on pricing
-        observed across US SEO agencies, freelancers, and tools in 2025–2026 (Clutch.co Agency
-        Pricing Survey 2025; Ahrefs Freelancer Rate Study 2024).
+        Price ranges come from Neil Patel’s SEO audit pricing guide. The “what’s covered” column is
+        our summary of what each tier should include.
       </p>
       <div style={{ overflowX: 'auto', marginBottom: '32px' }}>
         <table
@@ -194,34 +228,28 @@ export const post: BlogPost = {
           <tbody>
             {[
               [
-                'Free / Automated',
-                '$0',
-                'DIY / quick check',
+                'Free tools and quick scans',
+                '$0–$150',
+                'DIY, first check',
                 'Crawl errors, broken links, missing tags, basic speed',
               ],
               [
-                'Freelancer / Starter',
-                '$250–$750',
-                'Sites under 50 pages',
-                'Technical + on-page; limited competitive context',
+                'Lite audit or freelancer',
+                '$500–$2,500',
+                'Small sites, under ~100 pages',
+                'Technical + on-page review; limited competitor context',
               ],
               [
-                'Professional',
-                '$750–$2,500',
-                'SMBs, 50–500 pages',
-                'Full technical + content + backlinks + competitive gap + prioritized roadmap',
+                'Full strategic audit',
+                '$2,500–$7,500',
+                'SMBs and mid-market sites',
+                'Technical + content + backlinks + competitor gaps + AI search readiness + prioritized roadmap',
               ],
               [
-                'Agency Mid-Market',
-                '$2,500–$8,000',
-                '500–5,000 pages',
-                'Above + keyword mapping, content audit, AI search readiness, implementation support',
-              ],
-              [
-                'Enterprise',
-                '$10,000–$30,000+',
-                '10,000+ pages, e-commerce',
-                'Full crawl engineering, log file analysis, JS rendering audit, international SEO',
+                'Enterprise audit',
+                '$10,000–$20,000+',
+                'Large, multi-domain or international sites',
+                'Log file analysis, JavaScript rendering, international SEO, custom platforms',
               ],
             ].map(([tier, price, who, covers], i) => (
               <tr
@@ -271,39 +299,158 @@ export const post: BlogPost = {
           </tbody>
         </table>
         <p style={{ fontSize: '12px', color: '#9ca3af', marginTop: '8px' }}>
-          Source: Clutch.co Agency Pricing Survey (2025); Ahrefs Freelancer Rate Study (2024).
-          Ranges reflect US market pricing. Prices vary significantly by agency reputation,
-          deliverable depth, and site complexity.
+          Source: Neil Patel, “SEO Audit Pricing” (updated 26 Aug 2025), fetched 16 Nov 2026. US
+          market pricing. Prices vary with site size, audit depth and who does the work.
         </p>
       </div>
+
+      {/* ── DATA TABLE: WHAT BUSINESSES PAID ───────────────────────────── */}
+      <h2>What US Businesses Actually Paid for an SEO Audit</h2>
+      <p>
+        WebFX surveyed 250 US businesses and published the share that paid in each price band. We
+        grouped its bands below. Add the first five rows of the original table (1.72% + 9.48% +
+        20.69% + 22.41% + 11.21%) and you get 65.5%: about two in three businesses paid $1,000 or
+        less. About 22% paid more than $2,500, and nobody reported paying over $15,000.
+      </p>
+      <div style={{ overflowX: 'auto', marginBottom: '32px' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px', lineHeight: '1.5' }}>
+          <thead>
+            <tr style={{ background: '#FF6B00', color: '#fff' }}>
+              <th style={{ padding: '12px 16px', textAlign: 'left', borderRadius: '8px 0 0 0' }}>
+                Amount paid for the audit
+              </th>
+              <th style={{ padding: '12px 16px', textAlign: 'right', borderRadius: '0 8px 0 0' }}>
+                Share of businesses
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ['Less than $100', '11.2%'],
+              ['$101–$500', '20.7%'],
+              ['$501–$750', '22.4%'],
+              ['$751–$1,000', '11.2%'],
+              ['$1,001–$2,500', '12.1%'],
+              ['$2,501–$5,500', '11.2%'],
+              ['$5,501–$15,000', '11.2%'],
+              ['More than $15,000', '0%'],
+            ].map(([band, share], i) => (
+              <tr key={i} style={{ background: i % 2 === 0 ? '#fff' : '#fff8f4' }}>
+                <td style={{ padding: '11px 16px', borderBottom: '1px solid #f0ede9', fontWeight: 600 }}>
+                  {band}
+                </td>
+                <td
+                  style={{
+                    padding: '11px 16px',
+                    borderBottom: '1px solid #f0ede9',
+                    textAlign: 'right',
+                    color: '#FF6B00',
+                    fontWeight: 700,
+                  }}
+                >
+                  {share}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <p style={{ fontSize: '12px', color: '#9ca3af', marginTop: '8px' }}>
+          Source: WebFX, “SEO Audit Pricing: How Much Does an SEO Audit Cost in 2026?” (updated
+          20 Oct 2026), fetched 16 Nov 2026. Rows combine WebFX’s narrower bands; shares are
+          rounded.
+        </p>
+      </div>
+      <p>
+        The same survey broken down by company size: startups and micro-businesses (1 to 10
+        employees) reported $50 to $750, and small businesses (11 to 50 employees) reported up to
+        $2,500. For context, WebFX’s own agency audit, a 45-day engagement covering up to 70 pages,
+        is listed at $8,600, which sits at the top of the strategic tier.
+      </p>
+
+      {/* ── WHAT THE TOP RESULTS QUOTE ─────────────────────────────────── */}
+      <h2>What the Top-Ranking Price Guides Quote</h2>
+      <p>
+        Here are the ranges shown in Google’s US results for “seo audit cost” on 16 November 2026,
+        taken from each result’s snippet. They differ mostly in what they count as an audit.
+      </p>
+      <div style={{ overflowX: 'auto', marginBottom: '32px' }}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '14px', lineHeight: '1.5' }}>
+          <thead>
+            <tr style={{ background: '#FF6B00', color: '#fff' }}>
+              <th style={{ padding: '12px 16px', textAlign: 'left', borderRadius: '8px 0 0 0' }}>Guide</th>
+              <th style={{ padding: '12px 16px', textAlign: 'left' }}>Range quoted</th>
+              <th style={{ padding: '12px 16px', textAlign: 'left', borderRadius: '0 8px 0 0' }}>What it counts</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ['Softtrix', '$0–$15,000+', 'Free tools up to large sites; 25-page site $150–$500'],
+              ['il.ly', '$300–$7,500+', 'Freelancer $300–$2,500, agency $1,500–$7,500'],
+              ['SiteRank', '$500–$5,000+', 'Technical SEO audit only'],
+              ['Charles Floate', '$650–$14,000', 'Basic audit $650–$2,000 for small sites'],
+              ['eesel AI', '$3,000–$30,000', 'Technical audit alone; content audit $5,000–$30,000'],
+            ].map(([guide, range, counts], i) => (
+              <tr key={i} style={{ background: i % 2 === 0 ? '#fff' : '#fff8f4', verticalAlign: 'top' }}>
+                <td style={{ padding: '11px 16px', borderBottom: '1px solid #f0ede9', fontWeight: 600 }}>{guide}</td>
+                <td style={{ padding: '11px 16px', borderBottom: '1px solid #f0ede9', color: '#FF6B00', fontWeight: 700, whiteSpace: 'nowrap' }}>{range}</td>
+                <td style={{ padding: '11px 16px', borderBottom: '1px solid #f0ede9' }}>{counts}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <p style={{ fontSize: '12px', color: '#9ca3af', marginTop: '8px' }}>
+          Source: Google US organic results for “seo audit cost”, retrieved via DataForSEO on 16 Nov
+          2026. Ranges as shown in each result’s snippet.
+        </p>
+      </div>
+
+      {/* ── WHAT DRIVES THE PRICE ──────────────────────────────────────── */}
+      <h2>4 Things That Set the Price of an SEO Audit</h2>
+      <ol>
+        <li>
+          <strong>Site size.</strong> More URLs mean a longer crawl and more templates to review.
+          Shared templates help: 2,000 product pages on one template are cheaper to audit than 200
+          hand-built pages.
+        </li>
+        <li>
+          <strong>Scope.</strong> A technical-only check costs less than an audit that adds
+          content, backlinks, competitor gaps and AI search readiness.
+        </li>
+        <li>
+          <strong>How much a person interprets.</strong> Cheap audits hand over the tool export.
+          Higher prices pay for someone to decide what matters and in what order.
+        </li>
+        <li>
+          <strong>Turnaround.</strong> WebFX puts a typical professional audit at 30 to 45 days and
+          charges extra to compress it to about a week.
+        </li>
+      </ol>
 
       {/* ── FREE AUDITS ─────────────────────────────────────────────────── */}
       <h2>Free SEO Audits: What They Actually Cover</h2>
       <p>
-        Free automated audits from Semrush, Ahrefs, Screaming Frog (free tier, up to 500 URLs),
-        and Google Search Console are genuinely useful starting points. They reliably catch:
-        broken internal links, missing or duplicate title tags and meta descriptions, pages
-        returning 4xx errors, redirect chains longer than two hops, images missing alt text, and
-        basic page speed issues.
+        Free tools are a useful first check. Google Search Console costs nothing, and Screaming
+        Frog’s SEO Spider crawls up to 500 URLs free (a licence to lift the limit is £199 a year).
+        Between them they catch broken internal links, missing or duplicate titles and meta
+        descriptions, 4xx errors, long redirect chains, images without alt text, and basic speed
+        problems.
       </p>
       <p>
-        What they do not cover: content quality assessment, keyword cannibalization (multiple
-        pages competing for the same query), competitive gap analysis, backlink toxicity, schema
-        markup quality, AI search readiness, or, critically, any prioritization of findings by
-        business impact. A free automated audit of a 200-page site routinely returns 150–400
-        "issues," most of which have negligible effect on rankings.
+        What they miss: content quality, keyword cannibalization (several pages competing for the
+        same query), competitor gaps, backlink quality, schema quality, AI search readiness, and
+        any ranking of findings by business impact. A free crawl of a mid-sized site often returns
+        hundreds of “issues”, and most of them do not move rankings.
       </p>
       <p>
-        Use free audits as a diagnostic triage, not a complete picture. They are excellent at
-        finding what is technically broken; they have no ability to tell you whether your content
-        strategy is aligned with how your customers actually search.
+        Use free audits to find what is broken. They cannot tell you whether your content matches
+        how your customers search.
       </p>
 
       {/* ── PROFESSIONAL TIER ───────────────────────────────────────────── */}
-      <h2>What a Professional SEO Audit ($750–$2,500) Should Deliver</h2>
+      <h2>What a Paid SEO Audit ($500–$7,500) Should Deliver</h2>
       <p>
-        This is the tier most small businesses need. A professional audit at this price point,
-        done properly, should cover:
+        This is the range most small and mid-sized businesses should budget for. Done properly, a
+        paid audit covers:
       </p>
       <ul>
         <li>
@@ -318,11 +465,11 @@ export const post: BlogPost = {
           optimization.
         </li>
         <li>
-          <strong>Content audit:</strong> Thin page identification (under 300 words with no
-          structured data), keyword cannibalization mapping, and content freshness assessment.
+          <strong>Content audit:</strong> Thin page identification, keyword cannibalization
+          mapping, and content freshness assessment.
         </li>
         <li>
-          <strong>Backlink review:</strong> Link profile quality distribution, toxic link
+          <strong>Backlink review:</strong> Link profile quality distribution, spammy link
           identification, anchor text diversity.
         </li>
         <li>
@@ -361,9 +508,9 @@ export const post: BlogPost = {
       </p>
       <ul>
         <li>
-          <strong>No mention of prioritization.</strong> If the deliverable is described as "a
-          comprehensive report" with no mention of prioritization or a roadmap, you will get a
-          spreadsheet of issues with no direction on what to fix first.
+          <strong>No mention of prioritization.</strong> If the deliverable is described only as
+          “a full report” with no roadmap, expect a spreadsheet of issues with no direction on
+          what to fix first.
         </li>
         <li>
           <strong>No mention of competitive analysis.</strong> An audit that only looks at your
@@ -371,9 +518,9 @@ export const post: BlogPost = {
           issues are actually holding you back versus which are industry-standard.
         </li>
         <li>
-          <strong>Turnaround under 48 hours for a site over 100 pages.</strong> A meaningful
-          professional audit of a 200-page site takes 10–20 hours of work. A "same-day audit"
-          is an automated report with a cover page.
+          <strong>Same-day turnaround on a large site.</strong> WebFX quotes 30 to 45 days for a
+          professional audit and about a week when rushed. A same-day audit of a site with
+          hundreds of pages is an automated report with a cover page.
         </li>
         <li>
           <strong>No mention of who specifically conducts the audit.</strong> Ask whether it
@@ -393,37 +540,33 @@ export const post: BlogPost = {
         The audit is the starting line, not the finish. After receiving your findings, work through
         them in this order:
       </p>
-      <ul>
+      <ol>
         <li>
-          <strong>Week 1–2:</strong> Fix critical technical blockers, pages returning 4xx errors,
-          canonical misconfigurations, Core Web Vitals failures, and indexation blocks. These are
-          the issues preventing Google from properly crawling and evaluating your site. Need the
-          fixes done, not just listed? See our{' '}
+          <strong>Technical blockers first:</strong> pages returning 4xx errors, canonical
+          mistakes, Core Web Vitals failures and indexing blocks. These stop Google from crawling
+          and judging your pages properly. Need the fixes done, not just listed? See our{' '}
           <a href="/services/technical-seo">technical SEO services</a>.
         </li>
         <li>
-          <strong>Week 3–4:</strong> On-page optimizations on your top 20 highest-traffic or
-          highest-potential pages. Title tags, heading structure, internal links, and schema
-          additions. Existing pages with rankings in positions 11–30 respond fastest to these
-          changes.
+          <strong>Then on-page changes on your most important pages:</strong> title tags, heading
+          structure, internal links and schema. Pages already ranking on page two are usually the
+          quickest to move.
         </li>
         <li>
-          <strong>Month 2:</strong> Content gap work, either creating new pages for identified
-          keyword opportunities or consolidating thin pages into stronger assets.
+          <strong>Then content gaps:</strong> new pages for keyword opportunities the audit found,
+          or merging thin pages into stronger ones.
         </li>
         <li>
-          <strong>Month 3 onward:</strong> Link building and content production based on the
-          competitive gap findings.
+          <strong>Then links and new content</strong> based on the competitor gap findings.
         </li>
-      </ul>
+      </ol>
       <p>
-        Use Google Search Console to track progress. Impressions and average position for targeted
-        pages should begin improving within 4–8 weeks of implementing high-priority technical and
-        on-page fixes. For a full view of{' '}
+        Track progress in Google Search Console: watch impressions and average position for the
+        pages you changed. For what to expect month by month, see{' '}
         <a href="/blog/how-long-does-seo-take-2026-month-by-month-timeline">
-          how long the full timeline looks
+          how long SEO takes
         </a>
-        , expect meaningful traffic results in 3–6 months.
+        .
       </p>
       <p>
         For context on the{' '}
