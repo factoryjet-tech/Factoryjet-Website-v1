@@ -78,7 +78,7 @@ export const metadata: Metadata = {
 
 // Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
 // Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-10-31';
+const PAGE_MODIFIED = '2026-11-16';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -281,6 +281,70 @@ const COMPARISON_ROWS = [
 
 /* House terms (approved sitewide 15-16 Oct 2026). Reused verbatim in meaning,
    written fresh for this page. */
+/** Before-and-after proof (captured 16 Nov 2026). "Before" images are the client's
+ *  previous live theme (Shopify preview) or a Wayback Machine copy; "after" is the
+ *  live site, except Sow Easy, which is still on staging. Changes listed are only what
+ *  the two screenshots show; no traffic or sales numbers. Clients approved for naming
+ *  (see memory: client naming permission, 25 and 29 Oct 2026). */
+const REDESIGN_PROOF = [
+  {
+    key: 'dtf',
+    client: 'DTF Virginia',
+    platform: 'Shopify',
+    status: 'Live',
+    beforeNote: 'Previous Shopify theme',
+    href: 'https://dtfvirginia.com',
+    hrefLabel: 'Visit dtfvirginia.com',
+    changes: [
+      'Four products with their prices in the first screen, instead of one collage image',
+      'A link to build a gang sheet sits next to the main button',
+      'Search, phone number and every product range kept in a two-row menu',
+    ],
+  },
+  {
+    key: 'holistico',
+    client: 'Shop Holistico',
+    platform: 'Shopify',
+    status: 'Live',
+    beforeNote: 'Previous Shopify theme',
+    href: '/case-studies/shopholistico-shopify-store',
+    hrefLabel: 'Read the Holistico case study',
+    changes: [
+      'The hero names the product and why it differs, with one button to buy it',
+      'Three stacked menu bars cut to one short menu',
+      'A row of quality points directly under the hero',
+    ],
+  },
+  {
+    key: 'mannik',
+    client: 'Mannik',
+    platform: 'WooCommerce',
+    status: 'Live',
+    beforeNote: 'Archived copy, Oct 2025',
+    href: 'https://mannik.co.uk',
+    hrefLabel: 'Visit mannik.co.uk',
+    changes: [
+      'A plain promise in the hero, with named people to call, email or WhatsApp',
+      'Search accepts product codes, and a quote button sits in the header',
+      'Trade body membership shown in the header',
+    ],
+  },
+  {
+    key: 'soweasy',
+    client: 'Sow Easy',
+    platform: 'WooCommerce',
+    status: 'In build, on staging',
+    beforeNote: 'Current live site',
+    href: '/case-studies/sow-easy-distributor-portal',
+    hrefLabel: 'Read the Sow Easy case study',
+    changes: [
+      'Bestsellers, Express and Bespoke routes in the first screen',
+      'Quotes, samples, orders and trade login in a bar above the menu',
+      'The slider now carries a headline, a short line and a button on every slide',
+    ],
+  },
+];
+
 const HOUSE_TERMS = [
   { k: 'Before you sign', v: 'We show working software on your own data. For a store, that is a draft theme built with your real products, prices and collections.' },
   { k: 'How it is priced', v: 'Each phase is scoped, priced and signed on its own, as a fixed price in writing. You can stop after any phase.' },
@@ -836,6 +900,75 @@ export default function WebsiteRedesignPage() {
             </div>
           }
         />
+
+        {/* ── 4b. BEFORE AND AFTER (real client redesigns) ─────────────────── */}
+        <section id="before-after" className="py-14 md:py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <p className="fj-eyebrow">BEFORE AND AFTER</p>
+              <h2 className="mt-6 font-fj-display text-[2rem] font-extrabold leading-[1.1] tracking-[-0.03em] text-fj-ink md:text-[2.5rem]">
+                Four Redesigns, Side by Side
+              </h2>
+              <p className="mt-4 font-fj-body text-[1.0625rem] leading-[1.65] text-[#46403B]">
+                The first screen of each homepage, old on the left and ours on the right, captured in November 2026. Three are live; you can open them and check.
+              </p>
+            </div>
+            <div className="mt-10 grid grid-cols-1 gap-8">
+              {REDESIGN_PROOF.map((p) => (
+                <article key={p.key} className="rounded-2xl border border-fj-neutral-200 bg-white p-4 sm:p-6">
+                  <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                    <figure className="m-0">
+                      <figcaption className="mb-2 font-fj-mono font-medium uppercase text-[#6E655F]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
+                        Before · {p.beforeNote}
+                      </figcaption>
+                      <img
+                        src={`/images/redesign-proof/${p.key}-before.webp`}
+                        alt={`${p.client} homepage before the redesign`}
+                        width={960}
+                        height={600}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-auto w-full rounded-lg border border-fj-neutral-200"
+                      />
+                    </figure>
+                    <figure className="m-0">
+                      <figcaption className="mb-2 font-fj-mono font-medium uppercase text-[#B23E13]" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
+                        After · {p.status}
+                      </figcaption>
+                      <img
+                        src={`/images/redesign-proof/${p.key}-after.webp`}
+                        alt={`${p.client} homepage after the FactoryJet redesign`}
+                        width={960}
+                        height={600}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-auto w-full rounded-lg border border-fj-neutral-200"
+                      />
+                    </figure>
+                  </div>
+                  <div className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
+                    <div>
+                      <h3 className="font-fj-display text-xl font-extrabold tracking-[-0.02em] text-fj-ink">{p.client}</h3>
+                      <p className="mt-1 font-fj-body text-[0.9375rem] text-[#6E655F]">{p.platform} · {p.status}</p>
+                      <a
+                        href={p.href}
+                        {...(p.href.startsWith('http') ? { target: '_blank', rel: 'noopener' } : {})}
+                        className="mt-3 inline-block font-fj-body text-[0.9375rem] font-semibold text-[#B23E13] underline underline-offset-4"
+                      >
+                        {p.hrefLabel}
+                      </a>
+                    </div>
+                    <ul className="m-0 list-disc space-y-2 pl-5 font-fj-body text-[0.9375rem] leading-[1.6] text-fj-ink">
+                      {p.changes.map((c) => (
+                        <li key={c}>{c}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* ── 5. THE COST OF AN OUTDATED SITE (DARK) ───────────────────────── */}
         <StrategicDarkSection
