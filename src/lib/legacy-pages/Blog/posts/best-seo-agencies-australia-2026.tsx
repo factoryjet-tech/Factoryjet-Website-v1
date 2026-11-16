@@ -286,7 +286,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 22, 2026',
-  dateModified: 'Oct 31, 2026',
+  dateModified: 'Nov 16, 2026',
   readTime: '21 min read',
   imageUrl: `${IMG}-hero.webp`,
   imageAlt:
@@ -320,7 +320,7 @@ export const post: BlogPost = {
                 'Ten Australian SEO agencies for small business compared: where each is based, contract terms, published prices in AUD and who it suits. Checked 22 Oct 2026.',
               inLanguage: 'en-AU',
               datePublished: '2026-10-22',
-              dateModified: '2026-10-31',
+              dateModified: '2026-11-16',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'SEO agencies for small and mid-size businesses in Australia' },
@@ -461,6 +461,9 @@ export const post: BlogPost = {
           </li>
         ))}
       </ul>
+      <p className="mb-6 text-sm text-gray-700">
+        <strong>Added at the firm&rsquo;s request, outside these checks.</strong> Orbis is a <a href="https://orbis.agency/au/" className="text-[#B23E13] underline" rel="noopener" target="_blank">digital marketing agency</a> founded in Aguascalientes, Mexico, in 2009. It serves Australian clients remotely, and its site lists SEO, local SEO and AEO for AI answers next to Google Ads, social ads, web design and content. It was not named in the AI answers we read, and its site shows no Australian address. Read on its own site on 16 November 2026.
+      </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">What these SEO agencies publish about price</h2>
       <p className="mb-4">
