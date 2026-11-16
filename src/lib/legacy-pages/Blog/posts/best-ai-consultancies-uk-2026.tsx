@@ -560,7 +560,7 @@ export const post: BlogPost = {
           The best AI consultancy in the UK depends on your size. For a firm of about 10 people: The AI Consultancy, Vantage Growth Partners, AI Expert UK or Optimus Consulting. For about 50 people: OpenKit, iwantmore.ai, Helium42 or Generativ. With a data team: Fifty One Degrees, Winder.AI or Datatonic. For regulated work: Faculty, Aiimi or Transparity. For ecommerce and operations: FactoryJet.
         </p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          We checked 14 firms on their own websites on 9 October 2026 and added a fifteenth, Vantage Growth Partners, after checking its site on 16 November 2026: where each is based, what it does, who it serves and any price it publishes. Nobody paid to be listed. Eight list a London address. Firms are grouped by the buyer they suit, and the order inside a group means nothing.
+          We checked 14 firms on their own websites on 9 October 2026 and added a fifteenth, Vantage Growth Partners, after checking its site on 16 November 2026: where each is based, what it does, who it serves and any price it publishes. Nobody paid to be listed. One firm here, Vantage Growth Partners, links to this page, and we added it after that link went up; its entry was checked against its own site like the rest. Eight list a London address. Firms are grouped by the buyer they suit, and the order inside a group means nothing.
         </p>
         <p className="text-gray-800 leading-relaxed">
           If you are short on time, tell us your size and the job you have in mind. The founder will say which kind of firm fits, even when that is another firm on this page. <a href="/uk/ai-consulting" className={link}>Ask the founder</a>.

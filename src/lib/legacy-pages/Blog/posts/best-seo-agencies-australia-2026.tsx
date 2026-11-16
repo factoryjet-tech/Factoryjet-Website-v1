@@ -352,7 +352,7 @@ export const post: BlogPost = {
           The best SEO company in Australia for a small business depends on your size and budget. For a large national team, look at StudioHawk, Supple Digital and Gorilla 360. For an SEO-only specialist, Safari Digital or Red Search in Sydney. For a published starting price, Webomaze in Melbourne (from A$700 a month) and Digital Marketing Tribe in Sydney and Adelaide (from A$1,200 a month plus GST). In Perth, Bloom Digital; on the Sunshine Coast, Digital Nomads HQ.
         </p>
         <p className="text-gray-800 leading-relaxed">
-          We started from the agencies AI tools themselves name for small businesses, then read each firm&rsquo;s own website on 22 October 2026. Nobody paid to be listed. The order is not a ranking. FactoryJet is last, and labelled.
+          We started from the agencies AI tools themselves name for small businesses, then read each firm&rsquo;s own website on 22 October 2026. Nobody paid to be listed. One firm in the note under the extra firms, Orbis, links to a FactoryJet page, and we added it after that link went up. The order is not a ranking. FactoryJet is last, and labelled.
         </p>
       </div>
 

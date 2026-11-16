@@ -425,7 +425,7 @@ export const post: BlogPost = {
           The best AI receptionist in Australia is the one that books into the software you already use. For trades on ServiceM8 or Simpro, start with Sophiie, then Johnni, Nexwin and AIssie. For allied health on Cliniko or Nookal, Lyngo and MayaAI. For GP practices on Best Practice, MayaAI and HealthEngine Helen. If your data must stay onshore, AiDial. If you want it set up and run for you, Valory.
         </p>
         <p className="text-gray-800 leading-relaxed">
-          We read each product&rsquo;s own website on 21 October 2026 (Tradies Line AI on 16 November 2026) and copied its list prices exactly. Nobody paid to be listed. The order is not a ranking. FactoryJet builds custom receptionists, so we are last, and labelled.
+          We read each product&rsquo;s own website on 21 October 2026 (Tradies Line AI on 16 November 2026) and copied its list prices exactly. Nobody paid to be listed. One product here, Tradies Line AI, links to this page, and we added it after that link went up; its entry was checked against its own site like the rest. The order is not a ranking. FactoryJet builds custom receptionists, so we are last, and labelled.
         </p>
       </div>
 
