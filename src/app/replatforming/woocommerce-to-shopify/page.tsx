@@ -12,6 +12,7 @@ import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import ZeroDowntimeMigrationMatrix from '@/components/commerce/ZeroDowntimeMigrationMatrix';
 import SeoLinkEquityChecklist from '@/components/commerce/SeoLinkEquityChecklist';
 import AnswerFirstDefinition from '@/components/commerce/AnswerFirstDefinition';
+import JsonLd from '@/components/JsonLd';
 import '@/components/v2/PlatformPage.css';
 
 // Lazy-load the estimator as a separate chunk so its ~255 KiB JS doesn't block
@@ -22,10 +23,10 @@ const ReplatformingScopeEstimator = dynamic(
   { ssr: true }
 );
 
-const PAGE_MODIFIED = '2026-10-22';
-const PAGE_TITLE = 'WooCommerce to Shopify Migration Services | FactoryJet';
+const PAGE_MODIFIED = '2026-11-16';
+const PAGE_TITLE = 'Migrate WooCommerce to Shopify Without Losing SEO | FactoryJet';
 const PAGE_DESCRIPTION =
-  'WooCommerce to Shopify migration services: products, customers, orders and subscriptions moved, every /product/ URL 301-mapped, fixed price per phase.';
+  'WooCommerce to Shopify migration that protects rankings: a 301 for every /product/ URL, Yoast titles kept, reviews and customers moved. Most moves take 3 to 8 weeks.';
 
 /* Official sources. Each was fetched and read on 22 Oct 2026. */
 const SRC = {
@@ -44,6 +45,8 @@ const SRC = {
   shopifyPlusPlan: 'https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans/plans-features/shopify-plus-plan',
   shopifySubs: 'https://help.shopify.com/en/manual/products/purchase-options/shopify-subscriptions',
   googleSiteMove: 'https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes',
+  /* Market cost range. Fetched and read on 16 Nov 2026 (article dated 10 Mar 2026). */
+  cartcodersCost: 'https://cartcoders.com/blog/shopify-development/shopify-developer-cost-hourly-rate-project-pricing/',
 } as const;
 
 const linkStyle = { color: '#B23E13', textDecoration: 'underline' } as const;
@@ -82,6 +85,12 @@ const FAQ_CATEGORIES = [
 const FAQ_ITEMS = [
   {
     category: 'basics',
+    question: 'Who can migrate a WooCommerce store to Shopify without losing SEO rankings?',
+    answer:
+      'Pick an agency that will show you a full URL-by-URL redirect map before launch, keeps your Yoast or Rank Math titles, moves reviews and customer accounts, and watches Search Console after DNS moves. FactoryJet does all four. We are a registered Shopify Partner, and we also build WooCommerce stores, so we know where WordPress hides product and order data. Ask any agency to show you its redirect sheet first.',
+  },
+  {
+    category: 'basics',
     question: 'What does a WooCommerce to Shopify migration service include?',
     answer:
       'A full service moves products, variants, customers, past orders, blog posts, pages and reviews from WooCommerce into Shopify, then maps every old URL to its new address with a 301 redirect. FactoryJet also replaces WooPayments with Shopify Payments or another provider, rebuilds plugin features with Shopify apps or custom code, and rehearses the switch on a staging store. You see your own catalog working on Shopify before you sign.',
@@ -97,12 +106,6 @@ const FAQ_ITEMS = [
     question: 'Is a WooCommerce to Shopify Plus migration different from a move to standard Shopify?',
     answer:
       'The data work is the same. The target features differ. Shopify Plus adds B2B company accounts, checkout extensions and Shopify Functions, plus a far higher redirect cap: Shopify lists 20,000,000 URL redirects on Plus against 100,000 on other plans. Plus costs $2,300 a month on a three-year term in the US, per Shopify\'s help center, so most WooCommerce stores move to a standard plan first.',
-  },
-  {
-    category: 'basics',
-    question: 'Is WooCommerce as good as Shopify?',
-    answer:
-      'For a store that wants full control of its code and already has a WordPress developer, WooCommerce works well. Shopify suits teams that want hosting, security updates and checkout handled by the vendor. The trade is control against upkeep. Our Shopify vs WooCommerce comparison sets both side by side. This page is for stores that have already decided to move and need the move done.',
   },
   {
     category: 'basics',
@@ -198,7 +201,7 @@ const FAQ_ITEMS = [
     category: 'cost',
     question: 'How much does a WooCommerce to Shopify migration cost?',
     answer:
-      'It depends on catalog size, the number of plugins to replace, subscriptions, and whether you want a new theme. FactoryJet quotes a fixed price in writing after a short scoping call, paid per phase, and builds a working demo on your own product data before you sign. For a first rough scope, try the replatforming cost calculator.',
+      'CartCoders lists $3,000 to $12,000 for a WooCommerce to Shopify migration in its March 2026 pricing guide. Catalog size, plugins to replace, subscriptions and a new theme move you up or down that range, and your Shopify plan is billed on top. FactoryJet quotes a fixed price per phase in writing after a short scoping call, and builds a demo on your own product data before you sign.',
   },
   {
     category: 'cost',
@@ -315,6 +318,31 @@ const EXPORT_CHECKLIST = [
   'Active subscriptions: WooCommerce Subscriptions contracts plus the gateway that stores each card',
 ];
 
+/* What a migration app usually handles vs what needs hands-on work.
+   "app" values: 'Yes' | 'Partly' | 'No'. Claims trace to SRC docs or to the FAQ answers below. */
+const APP_VS_HANDS_ON = [
+  { item: 'Simple products with up to 3 options', app: 'Yes', work: 'Products with 4 or more attributes need a split, a metafield or line-item properties. Shopify allows 3 options per product.' },
+  { item: 'Customer names, emails and addresses', app: 'Yes', work: 'Passwords cannot move. Each customer gets an invite to set a new one, sent on launch day.' },
+  { item: 'Past orders', app: 'Partly', work: 'Plugin fields saved only in HPOS tables or only in wp_postmeta can be missed. We export through the REST API to catch them.' },
+  { item: '301 redirects for /product/ and /product-category/ URLs', app: 'Partly', work: 'Every product, category, tag, page and image URL gets one 301, loaded by CSV and tested in bulk before DNS moves.' },
+  { item: 'Blog posts and their URLs', app: 'Partly', work: 'Posts move to /blogs/name/post-handle, so each old post URL needs its own redirect.' },
+  { item: 'Yoast or Rank Math titles and meta descriptions', app: 'Partly', work: 'Pulled from post meta and written into Shopify\'s search listing fields for the matching page.' },
+  { item: 'Product reviews', app: 'No', work: 'Shopify\'s own tools cannot move them. We export them and import into Judge.me, Loox or Yotpo.' },
+  { item: 'WooCommerce Subscriptions', app: 'No', work: 'Contracts move into Shopify Subscriptions or an app. Saved cards move only if the gateway allows it.' },
+  { item: 'B2B and wholesale pricing plugins', app: 'No', work: 'Rebuilt as Shopify B2B price lists on Plus, or with a wholesale app on other plans.' },
+  { item: 'Custom fields (ACF, product add-ons)', app: 'No', work: 'Each field mapped to a Shopify metafield or metaobject. Paid extras become line-item properties or an app.' },
+  { item: 'Tax rates and shipping zones', app: 'No', work: 'Rebuilt by hand, then a test order in each zone compared with the same cart on WooCommerce.' },
+] as const;
+
+const TIMELINE = [
+  { when: 'Week 1', what: 'Plugin audit, order storage check and a full list of indexed URLs from Search Console and a crawl.' },
+  { when: 'Weeks 1 to 2', what: 'REST API export and a mapping sheet you approve, including every old URL and its new address.' },
+  { when: 'Weeks 2 to 4', what: 'Shopify store build, app setup, then imports in order: products, customers, orders.' },
+  { when: 'Weeks 3 to 5', what: 'Redirect map loaded and tested, titles and meta checked, test orders placed in every shipping zone.' },
+  { when: 'Launch week', what: 'Final sync of new orders, DNS switch in a quiet hour, password invites sent.' },
+  { when: 'After launch', what: 'Daily Search Console checks for 404s and dropped pages, fixed as they appear.' },
+] as const;
+
 const FAQ_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -420,11 +448,11 @@ const EVALUATION_CRITERIA = [
 export default function WooCommerceToShopifyPage() {
   return (
     <>
-      <script id="woocommerce-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="woocommerce-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
-      <script id="woocommerce-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
-      <script id="woocommerce-org-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
-      <script id="woocommerce-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
+      <JsonLd id="woocommerce-faq-schema" data={FAQ_SCHEMA} />
+      <JsonLd id="woocommerce-service-schema" data={SERVICE_SCHEMA} />
+      <JsonLd id="woocommerce-webpage-schema" data={WEBPAGE_SCHEMA} />
+      <JsonLd id="woocommerce-org-schema" data={ORG_SCHEMA} />
+      <JsonLd id="woocommerce-breadcrumb-schema" data={BREADCRUMB_SCHEMA} />
 
       <SiteHeader cta={{ label: 'Talk to the Founder', modal: true, region: 'us' }} />
 
@@ -445,26 +473,34 @@ export default function WooCommerceToShopifyPage() {
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  WooCommerce to Shopify Migration Services
+                  Migrate WooCommerce to Shopify Without Losing SEO
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 12px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  A WooCommerce to Shopify migration moves your products, customers, orders, reviews and blog from WordPress into Shopify, then 301-redirects every old /product/ and /product-category/ URL to its new /products/ or /collections/ address. FactoryJet runs it as a fixed-price project: export through the WooCommerce REST API, clean the data, rebuild plugin features, swap WooPayments for Shopify Payments, and switch over with a tested rollback plan.
+                  FactoryJet moves WooCommerce stores to Shopify and protects the rankings you already have. Four things do that work. Every old URL gets its own 301 redirect, so each /product/ and /product-category/ page points to its new /products/ or /collections/ address. Titles and meta descriptions from Yoast or Rank Math carry over, reviews and customer accounts move with the products, and we check Search Console every day after launch.
+                </p>
+
+                <p style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 12px', fontSize: '15.5px', lineHeight: 1.6 }}>
+                  Most moves take 3 to 8 weeks. CartCoders lists $3,000 to $12,000 for a WooCommerce to Shopify migration in its{' '}
+                  <a href={SRC.cartcodersCost} target="_blank" rel="noopener noreferrer" style={linkStyle}>March 2026 pricing guide</a>.
+                  {' '}Google&apos;s{' '}
+                  <a href={SRC.googleSiteMove} target="_blank" rel="noopener noreferrer" style={linkStyle}>site move guide</a>
+                  {' '}says rankings can shift for a while after URLs change, so we track each moved page until it settles.
                 </p>
 
                 <p style={{ fontSize: '13px', color: '#6E6E80', margin: '0 0 28px' }}>
-                  Updated 22 October 2026. Vendor facts checked against WooCommerce and Shopify documentation on that date.
+                  Updated 16 November 2026. Vendor facts checked against WooCommerce and Shopify documentation on 22 October 2026; cost source read on 16 November 2026.
                 </p>
 
                 <div className="rv-actions">
                   <ModalCTAButton label="Get a WooCommerce Migration Audit" region="us" btnVariant="primary-dark" />
-                  <a href="#woo-shopify-table" className="rv-btn-secondary">
+                  <a href="#app-vs-hands-on" className="rv-btn-secondary">
                     <div className="rv-video-circle">
                       <svg width="14" height="16" viewBox="0 0 14 16" fill="#141414">
                         <path d="M13 7.13397C13.6667 7.51887 13.6667 8.48113 13 8.86603L2.5 14.9282C1.83333 15.3131 1 14.832 1 14.0622L1 1.93782C1 1.16802 1.83333 0.686897 2.5 1.0718L13 7.13397Z" />
                       </svg>
                     </div>
-                    <span>See What Moves and How</span>
+                    <span>See What Needs Hands-On Work</span>
                   </a>
                 </div>
               </div>
@@ -481,6 +517,79 @@ export default function WooCommerceToShopifyPage() {
                 />
               </div>
 
+            </div>
+          </div>
+        </section>
+
+        {/* ── 01b. APP VS HANDS-ON CHECKLIST + TIMELINE AND COST ── */}
+        <section id="app-vs-hands-on" className="pp-sec" style={{ backgroundColor: '#FFFFFF', paddingTop: 'clamp(32px, 5vh, 56px)' }}>
+          <div className="pp-wrap">
+            <div style={{ maxWidth: '760px', margin: '0 0 32px' }}>
+              <h2 style={{ fontSize: 'clamp(26px, 3.6vw, 40px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 12px' }}>
+                What a Migration App Moves, and What Needs Hands-On Work
+              </h2>
+              <p className="pp-lead" style={{ color: '#494852', margin: 0 }}>
+                Migration apps handle the bulk data. Rankings are usually lost in the rows marked Partly or No, because nobody did them by hand.
+              </p>
+            </div>
+
+            <div style={{ overflowX: 'auto', borderRadius: '14px', border: '1px solid #E6E6EC' }}>
+              <table className="pp-table" style={{ margin: 0, width: '100%', background: '#FFFFFF' }}>
+                <thead style={{ background: '#F6F6F9' }}>
+                  <tr>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>What moves</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Moves with an app?</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Hands-on work</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {APP_VS_HANDS_ON.map((row) => (
+                    <tr key={row.item}>
+                      <td className="name" style={{ fontWeight: 700, color: '#141414' }}>{row.item}</td>
+                      <td style={{ fontWeight: 700, color: row.app === 'Yes' ? '#047857' : row.app === 'Partly' ? '#9A5B00' : '#B23E13' }}>{row.app}</td>
+                      <td>{row.work}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="rv-about-grid" style={{ marginTop: '48px', alignItems: 'start' }}>
+              <div>
+                <h2 style={{ fontSize: 'clamp(24px, 3.2vw, 34px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 12px' }}>
+                  How Long It Takes
+                </h2>
+                <p style={{ fontSize: '15px', color: '#494852', lineHeight: 1.6, margin: '0 0 16px' }}>
+                  A standard store takes 3 to 5 weeks. Subscriptions, B2B pricing or heavy data cleanup push it to 5 to 8 weeks.
+                </p>
+                <ol style={{ margin: 0, padding: 0, listStyle: 'none', borderTop: '1px solid #E6E6EC' }}>
+                  {TIMELINE.map((t) => (
+                    <li key={t.when} style={{ display: 'grid', gridTemplateColumns: '120px 1fr', gap: '16px', padding: '12px 0', borderBottom: '1px solid #E6E6EC', fontSize: '14.5px', lineHeight: 1.55 }}>
+                      <span style={{ fontFamily: 'var(--pp-mono)', fontWeight: 700, color: '#141414' }}>{t.when}</span>
+                      <span style={{ color: '#494852' }}>{t.what}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+              <div>
+                <h2 style={{ fontSize: 'clamp(24px, 3.2vw, 34px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', lineHeight: 1.15, margin: '0 0 12px' }}>
+                  What It Costs
+                </h2>
+                <p style={{ fontSize: '15px', color: '#494852', lineHeight: 1.6, margin: '0 0 12px' }}>
+                  CartCoders lists $3,000 to $12,000 for a WooCommerce to Shopify migration, covering product migration, URL redirects, SEO work and a theme rebuild (
+                  <a href={SRC.cartcodersCost} target="_blank" rel="noopener noreferrer" style={linkStyle}>CartCoders, 10 March 2026</a>
+                  ). That is one firm&apos;s published range, read on 16 November 2026.
+                </p>
+                <p style={{ fontSize: '15px', color: '#494852', lineHeight: 1.6, margin: '0 0 12px' }}>
+                  Your Shopify plan and apps are billed on top. Large catalogs, subscriptions and custom plugin rebuilds sit at the top of the range or above it.
+                </p>
+                <p style={{ fontSize: '15px', color: '#494852', lineHeight: 1.6, margin: 0 }}>
+                  FactoryJet quotes a fixed price per phase in writing after a short scoping call. For a rough scope first, try the{' '}
+                  <Link href="/tools/replatforming-cost-calculator" style={linkStyle}>replatforming cost calculator</Link>
+                  . The redirect rules we follow are written up in{' '}
+                  <Link href="/blog/ecommerce-replatforming-without-losing-seo-2026" style={linkStyle}>how to replatform without losing SEO</Link>.
+                </p>
+              </div>
             </div>
           </div>
         </section>
