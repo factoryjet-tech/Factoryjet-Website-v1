@@ -10,6 +10,7 @@ import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import ComparisonTable, { type ComparisonColumn, type ComparisonRow } from '@/components/v2/ComparisonTable';
 import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
+import JsonLd from '@/components/JsonLd';
 import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import { ORG_ID, ORG_REF, FOUNDER_ID } from '@/data/organization';
 
@@ -31,8 +32,15 @@ import { ORG_ID, ORG_REF, FOUNDER_ID } from '@/data/organization';
      is a Shopify plus HubSpot project, so naming one here would imply work we
      did not do on this pairing.
    - No FactoryJet prices. The only dollar figures are CartCoders' market
-     integration range and hourly rate, inside the one cost FAQ answer, with
-     CartCoders in the Sources list. No running or upkeep costs.
+     ranges (re-read 16 Nov 2026), shown in the COST_RANGES block and the cost
+     FAQ answer, with CartCoders in the Sources list. No running or upkeep costs.
+   - 16 Nov 2026 rewrite: the buyer question "Who can connect Shopify to
+     HubSpot so orders and customers sync properly?" was answered 0 of 6 times
+     with FactoryJet named. The direct answer now sits under the H1, the
+     native-vs-custom table sits second, and the FAQ was cut from 25 to 20.
+     Historical-order and multi-store rows restate HubSpot's article as read
+     that day; HubSpot does not describe how one buyer across stores is merged,
+     so the page does not claim it.
    - The TEST_ORDERS table is our own test plan, not a client result. Do not
      add client metrics to it without Bhavesh confirming them.
    - Mirrors /services/shopify-quickbooks-integration for components and
@@ -48,10 +56,11 @@ import { ORG_ID, ORG_REF, FOUNDER_ID } from '@/data/organization';
 const CANONICAL_URL = 'https://factoryjet.com/services/shopify-hubspot-integration';
 const PAGE_TITLE = 'Shopify HubSpot Integration Services | FactoryJet';
 const PAGE_DESC =
-  'Shopify HubSpot integration for Shopify and Shopify Plus brands. When the native app is enough, and when B2B, variants, deals or attribution need custom work.';
+  'FactoryJet connects Shopify to HubSpot so orders, customers, products, carts and B2B companies sync properly. When HubSpot’s own app is enough, and when you need a custom sync.';
 const PAGE_PUBLISHED = '2026-10-29';
-const PAGE_MODIFIED = '2026-10-31';
+const PAGE_MODIFIED = '2026-11-16';
 const CHECKED_ON_2 = '31 Oct 2026';
+const CHECKED_ON_3 = '16 Nov 2026';
 const CHECKED_ON = '29 Oct 2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -136,7 +145,7 @@ const webPageSchema = {
   about: { '@id': `${CANONICAL_URL}#service` },
   publisher: { '@id': ORG_ID },
   reviewedBy: { '@type': 'Person', '@id': FOUNDER_ID, name: 'Bhavesh Barot' },
-  speakable: { '@type': 'SpeakableSpecification', cssSelector: ['#short-answer'] },
+  speakable: { '@type': 'SpeakableSpecification', cssSelector: ['#short-answer', 'h1'] },
 };
 
 const serviceSchema = {
@@ -194,7 +203,7 @@ const SRC = {
   },
   cartcoders: {
     short: 'CartCoders rate guide, 2026',
-    label: 'CartCoders: Shopify Developer Cost Breakdown for 2026',
+    label: 'CartCoders: Shopify Developer Cost Breakdown for 2026 (published March 10, 2026), read 16 Nov 2026',
     url: 'https://cartcoders.com/blog/shopify-development/shopify-developer-cost-hourly-rate-project-pricing/',
   },
   zapier: {
@@ -224,6 +233,12 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   // ── HubSpot's own app ────────────────────────────────────────────
   {
     category: 'native',
+    question: 'Who can connect Shopify to HubSpot so orders and customers sync properly?',
+    answer:
+      "FactoryJet does. We are a registered Shopify Partner that connects Shopify and Shopify Plus stores to HubSpot. We set up HubSpot's own Shopify app where it covers your needs, then build a custom sync for the gaps: B2B companies below Shopify Plus, product variants, metafields, orders that should open deals, past orders, more than one store, and duplicate contacts. You see a sample of your own orders syncing into a HubSpot test portal before you sign.",
+  },
+  {
+    category: 'native',
     question: 'Does HubSpot integrate with Shopify?',
     answer:
       "Yes. HubSpot publishes its own Shopify integration, which its help center calls Shopify Data Sync. It syncs contacts with Shopify customers, companies, products, orders and abandoned checkouts. Contacts, companies and products sync both ways. Orders and abandoned checkouts only flow from Shopify into HubSpot. For many stores that covers the basics. B2B, variants and deals are where it runs short.",
@@ -242,21 +257,15 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   },
   {
     category: 'native',
-    question: 'Does the HubSpot Shopify integration sync product variants?',
+    question: 'Does the HubSpot Shopify integration sync product variants and metafields?',
     answer:
-      "No. Per HubSpot, Shopify product variants can't sync to HubSpot. If you sell one shirt in five sizes, HubSpot sees one product, not five. That matters when sales reps quote by size or pack, or when reports need sales by variant. A custom integration can write each variant as its own product, or carry the variant on each line item.",
-  },
-  {
-    category: 'native',
-    question: 'Does it sync Shopify metafields?',
-    answer:
-      "No. HubSpot's help article says Shopify meta fields are not supported for sync through the Shopify Data Sync app. Metafields are the extra fields a store adds to products, customers or orders, such as a trade account number or a fabric type. If HubSpot workflows or reports depend on that data, a custom integration reads the metafields through Shopify's API and writes them to HubSpot properties.",
+      "No to both. HubSpot says Shopify product variants can't sync, so one shirt in five sizes shows as one product. It also says Shopify meta fields are not supported. Metafields are the extra fields a store adds, such as a trade account number. A custom sync writes each variant as its own HubSpot product, matched on the Shopify variant ID, and copies metafields into HubSpot properties.",
   },
   {
     category: 'native',
     question: 'Can I connect more than one Shopify store to HubSpot?',
     answer:
-      "Yes. Once your first store is connected, HubSpot says you can connect additional Shopify stores from the Shopify app page. Before you do, decide how customers who buy from two stores should look in HubSpot. Contacts match on email address, so one person becomes one contact, while their orders from each store sit on that record.",
+      "Yes. HubSpot says that once your first store is connected, you can connect more stores from the Shopify app page. HubSpot matches contacts by email, but its article does not say how a buyer who orders from two stores should look. Decide that rule before you connect the second store. A custom sync can tag each order with its store and keep one contact per buyer.",
   },
   // ── When to build custom ─────────────────────────────────────────
   {
@@ -291,22 +300,22 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   },
   {
     category: 'custom',
-    question: 'Can you sync Shopify data into HubSpot custom objects?',
+    question: 'Should I use Zapier, Make or a custom build to connect Shopify and HubSpot?',
     answer:
-      'Yes, if your HubSpot account has them. HubSpot lists custom objects for Enterprise subscriptions of its hubs. A custom object fits data that is not a contact, company, deal or order, such as a subscription contract, a warranty registration or a trade account. We build the sync from Shopify into that object and link it to the right contacts and companies.',
-  },
-  {
-    category: 'custom',
-    question: 'Does HubSpot track Shopify subscription renewals?',
-    answer:
-      "Not as renewals. HubSpot's Shopify article does not mention subscriptions, so renewals arrive as ordinary orders. For subscription brands we tag renewals, keep the subscription status on the contact or a custom object, and trigger HubSpot workflows when a subscription pauses or is cancelled. For wholesale, we tie each order to the company and its deal, so reps see reorders without searching.",
+      "Zapier and Make suit a few simple rules, such as a new Shopify order creating a HubSpot contact. Zapier lists a Shopify New Order trigger with line item support and a HubSpot Create Contact action. Make lists HubSpot triggers such as Watch Deals and Shopify actions such as Create an order, and says it requires no coding skills. Neither page describes deduplication or field ownership, so you design those rules yourself. A custom build fits when B2B, variants or deals need many rules kept in step.",
   },
   // ── Data and reporting ───────────────────────────────────────────
   {
     category: 'data',
     question: 'Why does the integration create duplicate contacts?',
     answer:
-      "HubSpot matches contacts by email address. Its help article says orders from customers without an email address sync as orders with no linked contact, and that records you already imported into either app may sync again and create duplicates. We clean the contact list before connecting, set an email rule, and merge duplicates that already exist.",
+      "HubSpot matches contacts by email address. Its help article says an order from a customer with no email syncs as an order without a contact, that order sync doesn't merge duplicates, and that records you already imported into either app may sync again as new records. HubSpot offers an Only sync contacts with an email address setting to cut this down. We also clean both lists first and merge duplicates that already exist.",
+  },
+  {
+    category: 'data',
+    question: 'Will my past Shopify orders sync to HubSpot?',
+    answer:
+      "Usually, if they match your filters. HubSpot says that when you turn on order sync, any records that meet your filter criteria sync at once. Its article lists no date limit. It also says imported records may sync again as duplicates, so clean first and then turn on order sync. On a custom build we load past orders in batches, matched on the Shopify order ID, and compare counts with Shopify before go live.",
   },
   {
     category: 'data',
@@ -320,54 +329,24 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     answer:
       "By name. HubSpot's help article says data sync matches products based on the product name, after stripping capitalization, special characters and punctuation. Two different products with near-identical names can merge, and one product renamed in Shopify can become a second record. A custom integration matches on the Shopify product or variant ID, which never changes.",
   },
-  {
-    category: 'data',
-    question: 'What happens when I delete a record in one system?',
-    answer:
-      "Nothing in the other system. A product deleted in Shopify is not deleted in HubSpot, a company deleted in HubSpot is not deleted in Shopify, and a customer deleted in Shopify keeps its contact in HubSpot, per HubSpot's help article. That protects data, but it leaves stale records. We set a written rule for archiving them.",
-  },
-  {
-    category: 'data',
-    question: 'Can I see order line items in HubSpot?',
-    answer:
-      "Yes. HubSpot's orders object can be linked to line items, contacts, companies, deals and more, according to its developer documentation. HubSpot's help article also says that when a product is removed from a Shopify cart, the matching line item is removed from the HubSpot record. For reports by product or category, we check the line item fields your team needs before go live.",
-  },
-  {
-    category: 'data',
-    question: 'Will HubSpot show which campaign drove a Shopify sale?',
-    answer:
-      "Partly. HubSpot says installing the integration adds its tracking code to your Shopify store automatically. Checkout is a different surface. Shopify runs tracking there through web pixels, which load in a sandbox. When marketing needs campaign source on every order, we check what reaches HubSpot from storefront to checkout, then close the gaps with a pixel and order properties.",
-  },
   // ── Working with us ──────────────────────────────────────────────
   {
     category: 'working',
     question: 'How much does a custom Shopify HubSpot integration cost?',
     answer:
-      "It depends on the gaps. HubSpot's own app is listed for all plans, and custom field mappings need Data Hub Starter or higher. CartCoders' 2026 rate guide puts a typical third-party integration at $500 to $6,000, and Shopify developers in the US and Canada at $120 to $200 an hour. FactoryJet quotes a fixed price per phase in writing after a short scoping call.",
+      "It depends on how many gaps you have. HubSpot's own app is listed for all plans, and custom field mappings need Data Hub Starter or higher. As a market guide, CartCoders' 2026 rate guide puts a typical Shopify app integration at $500 to $6,000, ERP or logistics integrations often above $8,000, and Shopify developers in the US and Canada at $120 to $200 an hour. FactoryJet quotes a fixed price per phase in writing after a short scoping call.",
   },
   {
     category: 'working',
     question: 'How long does a Shopify HubSpot integration take?',
     answer:
-      "HubSpot's own app installs from the App Marketplace, and after the first sync HubSpot says records sync within 10 minutes of a change. A custom build takes longer. The biggest driver is how messy your contact and product lists are today. Next comes the number of fields that need an agreed owner, then the number of order types you want tested. We put the timeline in writing with the quote, and each phase is scoped and signed on its own.",
+      "HubSpot's own app installs from the App Marketplace, and after the first sync HubSpot says records sync within 10 minutes of a change. A custom build takes longer. The biggest drivers are how messy your contact and product lists are today, how many fields need an agreed owner, and how many order types you want tested. We put the timeline in writing with the quote.",
   },
   {
     category: 'working',
     question: 'Can I see it working before I sign?',
     answer:
       'Yes. Before a contract, we show working software on your own data. For this kind of project that means a sample of your own orders and customers moving from a test store into a HubSpot sandbox or test portal, so your team can check the records, deals and properties it creates.',
-  },
-  {
-    category: 'custom',
-    question: 'Should I use Zapier, Make or a custom build to connect Shopify and HubSpot?',
-    answer:
-      "Zapier and Make suit a few simple rules, such as a new Shopify order creating a HubSpot contact. Zapier lists a Shopify New Order trigger with line item support and a HubSpot Create Contact action. Make lists HubSpot triggers such as Watch Deals and Shopify actions such as Create an order, and says it requires no coding skills. Neither page describes deduplication or field ownership, so you design those rules yourself. A custom build fits when B2B, variants or deals need many rules kept in step.",
-  },
-  {
-    category: 'working',
-    question: 'Do you also connect Shopify to Salesforce, NetSuite or QuickBooks?',
-    answer:
-      'Yes. The same team connects Shopify to Salesforce, to ERPs such as NetSuite and Odoo, and to QuickBooks. Many brands need two of these at once, for example HubSpot for marketing and an ERP for stock. We map who owns each field across all of them, so two systems never fight over the same number.',
   },
   {
     category: 'working',
@@ -559,42 +538,76 @@ const TEST_ORDERS: ReadonlyArray<{ order: string; check: string }> = [
   },
 ];
 
-/* ── Comparison: custom integration vs native app plus mappings vs native app ── */
+/* ── Native app vs custom sync. The "what breaks" table near the top of the
+   page. Native-app cells restate HubSpot's help article as read 16 Nov 2026
+   (last updated September 30, 2026). ── */
 const COMPARE_COLUMNS: ReadonlyArray<ComparisonColumn> = [
-  { label: 'Custom integration built by FactoryJet', isFactoryJet: true },
-  { label: 'Native app with custom field mappings' },
-  { label: "HubSpot's native app, default setup" },
+  { label: "HubSpot's own Shopify app" },
+  { label: 'Custom sync built by FactoryJet', isFactoryJet: true },
 ];
 
 const COMPARE_ROWS: ReadonlyArray<ComparisonRow> = [
   {
-    feature: 'B2B companies',
-    values: ['Any Shopify plan with B2B', 'Shopify Plus only', 'Shopify Plus only'],
+    feature: 'Duplicate contacts',
+    values: [
+      'Matches on email only. Imported records may sync again as duplicates, and order sync does not merge them.',
+      'Both lists cleaned first, then matched on Shopify customer ID and email, with a written merge rule.',
+    ],
+  },
+  {
+    feature: 'B2B company records',
+    values: [
+      'Shopify Plus only. Companies match on company name.',
+      'Any Shopify plan with B2B, matched on the Shopify company ID, with catalog and payment terms.',
+    ],
+  },
+  {
+    feature: 'Custom properties and metafields',
+    values: [
+      'Default fields only. Custom mappings need Data Hub Starter. Metafields are not supported.',
+      'Metafields and extra fields written to HubSpot properties, or to custom objects you already have.',
+    ],
+  },
+  {
+    feature: 'Historical orders',
+    values: [
+      'Past orders that meet your filters sync when order sync is turned on. No date limit listed.',
+      'Past orders loaded in batches by Shopify order ID, with counts checked against Shopify before go live.',
+    ],
+  },
+  {
+    feature: 'More than one store',
+    values: [
+      'Extra stores connect from the app page. HubSpot does not say how one buyer across stores is handled.',
+      'Each order tagged with its store, one contact per buyer, rule agreed in writing.',
+    ],
   },
   {
     feature: 'Product variants',
-    values: ['Yes, each variant matched by ID', 'No, per HubSpot', 'No, per HubSpot'],
-  },
-  {
-    feature: 'Metafields and extra fields',
-    values: ['Yes, to properties or custom objects', 'Extra fields mapped, metafields not supported', 'Default fields only'],
+    values: ['Do not sync. One product in five sizes shows as one.', 'Each variant matched on its Shopify variant ID.'],
   },
   {
     feature: 'Deals from orders',
-    values: ['Yes, with line items and stages', 'Not described by HubSpot', 'Not described by HubSpot'],
-  },
-  {
-    feature: 'HubSpot plan needed',
-    values: ['Any HubSpot plan; custom objects need Enterprise, per HubSpot', 'Data Hub Starter or higher, per HubSpot', 'Listed for all plans, per HubSpot'],
+    values: [
+      'Not described by HubSpot. Orders sync one way into the orders object.',
+      'Wholesale orders open or update a deal, with line items and stages.',
+    ],
   },
   {
     feature: 'Right call when',
     values: [
-      'B2B, variants, deals or attribution matter to the business',
-      'You need a few extra store fields on HubSpot records',
-      'You sell direct and marketing needs customers and orders',
+      'You sell direct, from one store, and marketing needs customers and orders.',
+      'B2B, variants, deals, past orders or several stores matter to how you sell.',
     ],
   },
+];
+
+/* ── Market cost ranges. CartCoders only, re-read 16 Nov 2026. CartCoders gives
+   no HubSpot-only or CRM-only figure, so none is invented here. ── */
+const COST_RANGES: ReadonlyArray<{ item: string; range: string }> = [
+  { item: 'Shopify app or API integration, per integration', range: '$500 to $6,000' },
+  { item: 'ERP or logistics integration', range: 'Often above $8,000' },
+  { item: 'Shopify developer, US and Canada', range: '$120 to $200 an hour' },
 ];
 
 const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
@@ -635,9 +648,9 @@ const SOURCE_KEYS = Object.keys(SRC) as SrcKey[];
 export default function ShopifyHubSpotIntegrationPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <JsonLd id="webpage-schema" data={webPageSchema} />
+      <JsonLd id="service-schema" data={serviceSchema} />
+      <JsonLd id="faq-schema" data={faqSchema} />
       <BreadcrumbSchema items={BREADCRUMB_ITEMS} />
 
       <SiteHeader />
@@ -657,17 +670,21 @@ export default function ShopifyHubSpotIntegrationPage() {
                 </div>
 
                 <h1 className="font-fj-display text-[1.75rem] font-extrabold leading-[1.1] tracking-[-0.02em] text-fj-ink sm:text-5xl lg:text-[3.2rem]">
-                  Shopify HubSpot integration for brands whose sales team works in HubSpot.
+                  Connect Shopify to HubSpot so orders and customers sync properly.
                 </h1>
 
-                <p className="mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600">
-                  Your store runs on Shopify or Shopify Plus. Your marketing or sales team lives in HubSpot.
+                <p id="short-answer" className="mt-5 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-ink">
+                  FactoryJet connects Shopify and Shopify Plus stores to HubSpot. We sync orders with their line
+                  items, customers as contacts, products, abandoned carts, and B2B companies and deals.
+                  HubSpot&rsquo;s own Shopify app is enough for a store that sells direct from one shop with simple
+                  products. You need a custom sync when you sell B2B below Shopify Plus, need variants or metafields,
+                  want orders to open deals, bring in past orders, run several stores, or keep getting duplicate
+                  contacts.
                 </p>
 
                 <p className="mt-4 max-w-2xl font-fj-body text-lg leading-relaxed text-fj-neutral-600">
-                  HubSpot&rsquo;s own app covers customers and orders. We set it up where it fits, and build the
-                  rest when you sell B2B, need variants or deals, or want to know which campaign paid for an order.
-                  Send us your brief or RFP (request for proposal) and you get a fixed quote in writing.
+                  We set up the native app where it fits and build only the gaps. Send us your brief or RFP (request
+                  for proposal) and you get a fixed quote in writing.
                 </p>
 
                 <p className="mt-4 max-w-2xl font-fj-mono text-xs leading-relaxed text-fj-neutral-600">
@@ -706,7 +723,7 @@ export default function ShopifyHubSpotIntegrationPage() {
                   <span>Registered Shopify Partner</span>
                   <span>500+ businesses served</span>
                   <span>Founded 2014</span>
-                  <span>HubSpot facts checked {CHECKED_ON}</span>
+                  <span>HubSpot facts checked {CHECKED_ON_3}</span>
                 </div>
               </div>
 
@@ -743,24 +760,16 @@ export default function ShopifyHubSpotIntegrationPage() {
           </div>
         </section>
 
-        {/* 2. ANSWER-FIRST BLOCK */}
-        <section className="border-b border-fj-neutral-200 bg-white py-12">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 md:px-8">
-            <div id="short-answer" className="rounded-2xl border-2 border-[#F05A28]/25 bg-fj-cream p-6 sm:p-8">
-              <div className="mb-3 font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13]">
-                Short answer
-              </div>
-              <p className="font-fj-body text-base leading-relaxed text-fj-ink sm:text-lg">
-                Yes, Shopify connects to HubSpot. HubSpot&rsquo;s own integration, called Shopify Data Sync, syncs
-                customers, companies and products both ways, and sends orders and abandoned checkouts from Shopify
-                into HubSpot. That is enough for a store selling direct to consumers. You need a custom integration
-                when company sync has to work below Shopify Plus, or when your team needs product variants,
-                metafields, deals from orders, subscription status or campaign source on each order.
-              </p>
-              <SourceLinks ids={['hsConnect', 'shopifyB2bHelp']} />
-            </div>
-          </div>
-        </section>
+        {/* 2. NATIVE APP VS CUSTOM SYNC */}
+        <ComparisonTable
+          eyebrow="Native app vs custom sync"
+          headline="Will orders and customers sync properly with HubSpot's own app?"
+          lead="Often yes, for a simple store that sells direct. These are the places it breaks, from HubSpot's own help article, and what a custom sync does instead."
+          columns={COMPARE_COLUMNS}
+          rows={COMPARE_ROWS}
+          footer={`Native-app facts from HubSpot's help article (last updated September 30, 2026), re-read on ${CHECKED_ON_3}.`}
+          scrollRegionLabel="HubSpot's own Shopify app compared with a custom sync"
+        />
 
         {/* 3. THE NATIVE APP */}
         <section className="border-b border-fj-neutral-200 bg-fj-cream py-16 md:py-20">
@@ -883,6 +892,63 @@ export default function ShopifyHubSpotIntegrationPage() {
           note="Upload a PDF or Word brief in the next step. Bhavesh replies within 24 hours."
         />
 
+        {/* 4b. MARKET COST RANGES. Sourced, never FactoryJet prices. */}
+        <section className="border-b border-fj-neutral-200 bg-white py-16 md:py-20">
+          <div className="mx-auto max-w-[1120px] px-4 sm:px-6 md:px-8">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
+              <div className="lg:col-span-5">
+                <p className="fj-eyebrow">Market cost ranges</p>
+                <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
+                  What it costs to connect Shopify to HubSpot.
+                </h2>
+                <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
+                  HubSpot&rsquo;s own app is listed for all HubSpot plans. Custom field mappings need Data Hub Starter
+                  or higher. A custom sync is paid work, and these are published market ranges for it.
+                </p>
+                <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
+                  CartCoders gives no figure for HubSpot or CRM sync alone. What moves a quote is the number of gaps
+                  from the table above, how clean your contacts and products are, and how many order types need
+                  testing. FactoryJet quotes a fixed price per phase in writing after a short scoping call.
+                </p>
+              </div>
+              <div className="lg:col-span-7">
+                <div className="overflow-hidden rounded-2xl border border-fj-neutral-200 bg-fj-cream">
+                  <table className="w-full border-collapse text-left">
+                    <caption className="sr-only">Market cost ranges for Shopify integration work, from CartCoders</caption>
+                    <thead>
+                      <tr className="border-b border-fj-neutral-200">
+                        <th scope="col" className="px-4 py-3 font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600 sm:px-6">
+                          Work
+                        </th>
+                        <th scope="col" className="px-4 py-3 font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600 sm:px-6">
+                          Market range
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {COST_RANGES.map((row) => (
+                        <tr key={row.item} className="border-b border-fj-neutral-200 last:border-b-0 align-top">
+                          <th scope="row" className="px-4 py-4 font-fj-body text-[15px] font-normal leading-relaxed text-fj-ink sm:px-6">
+                            {row.item}
+                          </th>
+                          <td className="px-4 py-4 font-fj-display text-base font-semibold text-fj-ink sm:px-6">
+                            {row.range}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p className="mt-4 font-fj-body text-sm leading-relaxed text-fj-neutral-600">
+                  Source: CartCoders, Shopify Developer Cost Breakdown for 2026, published March 10, 2026, read on{' '}
+                  {CHECKED_ON_3}. These are market figures, not FactoryJet prices.
+                </p>
+                <SourceLinks ids={['cartcoders', 'hsConnect']} />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* 5. HOUSE TERMS */}
         <section className="border-b border-fj-neutral-200 bg-fj-cream py-16 md:py-20">
           <div className="mx-auto max-w-[1120px] px-4 sm:px-6 md:px-8">
@@ -1003,17 +1069,6 @@ export default function ShopifyHubSpotIntegrationPage() {
           </div>
         </section>
 
-        {/* 7. COMPARISON */}
-        <ComparisonTable
-          eyebrow="How the routes compare"
-          headline="Native app, native app with mappings, or a custom integration."
-          lead="HubSpot's own app is often the right answer, and we will say so on the scoping call. A custom integration earns its cost when B2B, variants, deals or attribution matter to how you sell."
-          columns={COMPARE_COLUMNS}
-          rows={COMPARE_ROWS}
-          footer={`HubSpot and Shopify facts are from each vendor's own pages as read on ${CHECKED_ON}.`}
-          scrollRegionLabel="Comparison of ways to connect Shopify and HubSpot"
-        />
-
         {/* 8. RELATED SERVICES */}
         <section className="border-y border-fj-neutral-200 bg-white py-16 md:py-20">
           <div className="mx-auto max-w-[1120px] px-4 sm:px-6 md:px-8">
@@ -1044,11 +1099,12 @@ export default function ShopifyHubSpotIntegrationPage() {
               <div className="lg:col-span-4">
                 <p className="fj-eyebrow">Method</p>
                 <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
-                  Sources, checked on {CHECKED_ON}.
+                  Sources, last checked on {CHECKED_ON_3}.
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
-                  Every HubSpot and Shopify fact on this page was read from the vendor pages listed here on that day.
-                  The Zapier and Make pages, and the CartCoders integration range, were read on {CHECKED_ON_2}.
+                  Every HubSpot and Shopify fact on this page was first read from the vendor pages listed here on{' '}
+                  {CHECKED_ON}.
+                  The Zapier and Make pages were read on {CHECKED_ON_2}. HubSpot&rsquo;s Shopify article and the CartCoders ranges were re-read on {CHECKED_ON_3}.
                   Vendors update their apps and plans, so check the linked page before you act on one.
                 </p>
                 <p className="mt-6 font-fj-mono text-xs leading-relaxed text-fj-neutral-600">
@@ -1081,7 +1137,7 @@ export default function ShopifyHubSpotIntegrationPage() {
         <FAQ
           eyebrow="Shopify HubSpot integration FAQ"
           headline="Shopify and HubSpot questions, answered plainly."
-          lead={`What marketing, sales and ecommerce leads ask before connecting the two. HubSpot and Shopify answers are from the vendors' own pages as read on ${CHECKED_ON}.`}
+          lead={`What marketing, sales and ecommerce leads ask before connecting the two. HubSpot and Shopify answers are from the vendors' own pages, last re-read on ${CHECKED_ON_3}.`}
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
           bgClassName="bg-white"
