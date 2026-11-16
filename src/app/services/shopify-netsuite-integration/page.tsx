@@ -337,7 +337,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'How much does a Shopify NetSuite integration cost?',
     answer:
-      "Oracle's NetSuite ERP Connector listed plans from $199.92 to $916.58 a month in October 2026. BrokenRubik's guide puts native connector setup at $5,000 to $15,000, a Celigo implementation at $8,000 to $25,000, and custom development at $50,000 to $150,000 or more. BrokenRubik is a Celigo partner. FactoryJet quotes a fixed price in writing after a short scoping call.",
+      "Oracle's NetSuite ERP Connector lists plans from $199.92 a month on the Shopify App Store. AIONDATA, which sells integration work, listed its B2B plan at $916.58 a month in October 2026. BrokenRubik's guide puts native connector setup at $5,000 to $15,000, a Celigo implementation at $8,000 to $25,000, and custom development at $50,000 to $150,000 or more. BrokenRubik is a Celigo partner. FactoryJet quotes a fixed price in writing after a short scoping call.",
   },
   {
     category: 'working',
@@ -566,8 +566,13 @@ const BREAKS: ReadonlyArray<{ t: string; b: string }> = [
 /* ── Market cost ranges. Every row is a third party's figure, linked. ── */
 const COSTS: ReadonlyArray<{ item: string; range: string; source: SrcKey }> = [
   {
-    item: 'Oracle NetSuite ERP Connector, monthly plan',
-    range: '$199.92 (B2C Standard) to $916.58 (B2B) a month, as listed in October 2026',
+    item: 'Oracle NetSuite ERP Connector, entry plan',
+    range: 'From $199.92 a month (B2C Standard)',
+    source: 'oracleApp',
+  },
+  {
+    item: 'Oracle NetSuite ERP Connector, B2B plan',
+    range: '$916.58 a month, as listed by AIONDATA in October 2026',
     source: 'aiondata',
   },
   { item: 'Native connector setup', range: '$5,000 to $15,000', source: 'brokenrubik' },
@@ -1007,9 +1012,9 @@ export default function ShopifyNetSuiteIntegrationPage() {
                   </table>
                 </div>
                 <p className="mt-4 font-fj-body text-sm leading-relaxed text-fj-neutral-600">
-                  Oracle&rsquo;s plan prices were shown in US dollars on the Shopify App Store in October 2026. On{' '}
-                  {CHECKED_ON} the listing showed the same four plans. Houseblend attributes its custom build range to
-                  Uncap.
+                  The Shopify App Store shows prices in the visitor&rsquo;s local currency, so the dollar figure you see
+                  may differ. On {CHECKED_ON} the listing showed four plans: B2C Standard, POS, B2C Premium and B2B.
+                  Houseblend attributes its custom build range to Uncap.
                 </p>
                 <SourceLinks ids={['oracleApp', 'celigoPricing']} />
               </div>
