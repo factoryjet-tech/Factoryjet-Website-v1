@@ -187,6 +187,7 @@ import { post as woocommerceB2bStoreCost2026Post } from './posts/woocommerce-b2b
 import { post as bestBigcommerceB2bAgencies2026Post } from './posts/best-bigcommerce-b2b-agencies-2026';
 import { post as bestShopifyPlusB2bAgencies2026Post } from './posts/best-shopify-plus-b2b-agencies-2026';
 import { post as bestShopifyMigrationAgencies2026Post } from './posts/best-shopify-migration-agencies-2026';
+import { post as whatRankingEcommerceAgencyPagesContain2026Post } from './posts/what-ranking-ecommerce-agency-pages-contain-2026';
 
 export const POSTS: BlogPost[] = [
   // --- DIRECT-ANSWER GUIDES (2026-10-24): AI agent implementation timeline, Shopify Plus returns agents ---
@@ -4838,4 +4839,5 @@ export const POSTS: BlogPost[] = [
   bestBigcommerceB2bAgencies2026Post,
   bestShopifyPlusB2bAgencies2026Post,
   bestShopifyMigrationAgencies2026Post,
+  whatRankingEcommerceAgencyPagesContain2026Post,
 ];
