@@ -35,6 +35,22 @@ interface Firm {
 
 const FIRMS: Firm[] = [
   {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/uk/seo',
+    source: 'https://factoryjet.com/uk/seo',
+    group: 'us',
+    based: 'Works remotely with UK clients and schedules calls in UK business hours',
+    type: 'Founder-led SEO consultancy with its own developers; 500+ businesses served since 2014',
+    sectors: 'Professional services, B2B wholesale and manufacturing, ecommerce',
+    clients: 'No B2B SEO client is named in this profile; ask us for a reference in your sector',
+    what: 'FactoryJet runs SEO with one senior person accountable from audit to results, and the same team writes and builds the pages, so fixes ship as plain HTML that Google and AI crawlers can read without running scripts. For B2B that means comparison, pricing and use-case pages built for the questions buyers ask, entity and schema work for AI answers, and reporting on rankings, organic traffic, enquiries and where you appear in ChatGPT, Gemini, Perplexity and AI Overviews. Each phase has a fixed price, quoted in writing. Changes are quoted and approved per request, and there is no monthly minimum.',
+    proof: 'No SEO result is published in this profile. Across all its work, FactoryJet has served 500+ businesses since 2014, delivers 97% of projects on time and holds a 4.9 average review rating.',
+    price: 'No rate card. The price is fixed in writing after a free audit call, which covers twelve checks written up in plain English.',
+    bestFor: 'A B2B firm that wants the person who writes the SEO plan to also build the pages.',
+    ask: 'To see the twelve-check audit of your own site before you agree to anything.',
+    covers: { bofu: 'yes', migrations: 'yes', ai: 'yes', leads: 'yes' },
+  },
+  {
     name: 'Gripped',
     url: 'https://gripped.io/',
     source: 'https://gripped.io/b2b-saas-tech-seo-agency/',
@@ -209,25 +225,14 @@ const FIRMS: Firm[] = [
     ask: 'Which trade publications in your sector it has placed links on, and which of your pages those links would point at.',
     covers: { bofu: 'yes', migrations: 'no', ai: 'no', leads: 'yes' },
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/uk/seo',
-    source: 'https://factoryjet.com/uk/seo',
-    group: 'us',
-    based: 'Works remotely with UK clients and schedules calls in UK business hours',
-    type: 'Founder-led SEO consultancy with its own developers; 500+ businesses served since 2014',
-    sectors: 'Professional services, B2B wholesale and manufacturing, ecommerce',
-    clients: 'No B2B SEO client is named in this profile; ask us for a reference in your sector',
-    what: 'FactoryJet runs SEO with one senior person accountable from audit to results, and the same team writes and builds the pages, so fixes ship as plain HTML that Google and AI crawlers can read without running scripts. For B2B that means comparison, pricing and use-case pages built for the questions buyers ask, entity and schema work for AI answers, and reporting on rankings, organic traffic, enquiries and where you appear in ChatGPT, Gemini, Perplexity and AI Overviews. Each phase has a fixed price, quoted in writing. Changes are quoted and approved per request, and there is no monthly minimum.',
-    proof: 'No SEO result is published in this profile. Across all its work, FactoryJet has served 500+ businesses since 2014, delivers 97% of projects on time and holds a 4.9 average review rating.',
-    price: 'No rate card. The price is fixed in writing after a free audit call, which covers twelve checks written up in plain English.',
-    bestFor: 'A B2B firm that wants the person who writes the SEO plan to also build the pages.',
-    ask: 'To see the twelve-check audit of your own site before you agree to anything.',
-    covers: { bofu: 'yes', migrations: 'yes', ai: 'yes', leads: 'yes' },
-  },
 ];
 
 const GROUPS: { key: Firm['group']; heading: string; intro: string }[] = [
+  {
+    key: 'us',
+    heading: 'Which agency plans the SEO and builds the pages in the same team?',
+    intro: 'One entry here, and it is ours, so read it with that in mind. Position Digital and Polaris below also say they can implement technical fixes themselves.',
+  },
   {
     key: 'saas',
     heading: 'Which B2B SaaS SEO agency in the UK suits software and tech firms?',
@@ -252,11 +257,6 @@ const GROUPS: { key: Firm['group']; heading: string; intro: string }[] = [
     key: 'links',
     heading: 'Which agency should you use if you mainly need links?',
     intro: 'Some B2B sites are technically sound and well written but have few links from trade press. One firm here prices that work per link rather than per month.',
-  },
-  {
-    key: 'us',
-    heading: 'Which agency plans the SEO and builds the pages in the same team?',
-    intro: 'One entry here, and it is ours, so read it with that in mind. Position Digital and Polaris above also say they can implement technical fixes themselves.',
   },
 ];
 
@@ -383,11 +383,11 @@ export const post: BlogPost = {
   slug: 'best-b2b-seo-agencies-uk-2026',
   title: 'Best B2B SEO Agencies in the UK (2026): 11 Checked, Plus FactoryJet',
   excerpt:
-    'Eleven UK B2B SEO agencies for SaaS, professional services and manufacturers, each checked on its own website on 22 October 2026: where it is based, the sectors it names, what its B2B SEO pages cover, one published result and any price it prints. FactoryJet wrote this list and is on it, last.',
+    'Eleven UK B2B SEO agencies for SaaS, professional services and manufacturers, each checked on its own website on 22 October 2026: where it is based, the sectors it names, what its B2B SEO pages cover, one published result and any price it prints. FactoryJet wrote this list and lists itself first.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 22, 2026',
-  dateModified: 'Oct 31, 2026',
+  dateModified: 'Nov 18, 2026',
   readTime: '24 min read',
   imageUrl: `${IMG}.webp`,
   imageFit: 'contain',
@@ -400,7 +400,7 @@ export const post: BlogPost = {
   },
   keyTakeaways: [
     'There is no single best B2B SEO agency in the UK. Match the firm to your sector: SaaS and tech (Gripped, MRS Digital, Polaris), professional services (Definition, Position Digital, Whitehat SEO), manufacturing (The SEO Works, JDR Group), wider B2B marketing teams (Push Group, Hallam), or links (Bulldog Digital Media).',
-    'Every fact below was read on each firm’s own website on 22 October 2026. Nobody paid to be here, the order is not a ranking, and FactoryJet, which wrote the list, is last.',
+    'Every fact below was read on each firm’s own website on 22 October 2026. Nobody paid to be here. FactoryJet wrote this list and lists itself first. The other firms are not in ranked order.',
     'We read four lists that rank for this search. All three written by agencies put their own firm first, and between them the four named 32 firms, only 5 of them more than once.',
     'Six of the firms we checked print a price, listed in the cost section below. UK guides put most B2B SEO at £1,500 to £5,000 a month.',
     'Only three of the eleven outside firms name comparison, pricing or demo pages on their B2B SEO pages, the pages B2B buyers use to build a shortlist: Gripped, The SEO Works and Bulldog.',
@@ -437,7 +437,7 @@ export const post: BlogPost = {
           For manufacturers, The SEO Works and JDR Group. Push Group and Hallam run SEO inside wider B2B marketing teams, and Bulldog Digital Media sells links by the piece.
         </p>
         <p className="text-amber-800">
-          We read every firm&rsquo;s own website on 22 October 2026. Nobody paid to be listed, and the order is not a ranking. FactoryJet wrote this guide and is on it, last.
+          We read every firm&rsquo;s own website on 22 October 2026. Nobody paid to be listed. FactoryJet wrote this guide and lists itself first; the other firms are not in ranked order.
         </p>
       </div>
 
@@ -451,7 +451,7 @@ export const post: BlogPost = {
         So this guide starts from each agency&rsquo;s own website. For every firm we noted where it is based, which B2B sectors it names, what its B2B SEO pages actually cover, one result it publishes, and any price it prints. Every fact is dated and linked.
       </p>
       <p className="mb-4">
-        <strong>A note on who wrote this.</strong> FactoryJet runs <a href="/uk/seo" className={link}>SEO for UK businesses</a>, B2B firms included, so we are on this list, in the last group. That is a good reason to read every list, ours included, with care. Our <a href="/blog/best-seo-agencies-uk" className={link}>list of the best SEO agencies in the UK</a> covers every kind of business, our <a href="/blog/best-ai-seo-agencies-uk" className={link}>UK AI SEO and GEO list</a> covers AI search specialists, and our <a href="/blog/best-ecommerce-seo-agencies-uk-2026" className={link}>UK ecommerce SEO list</a> covers online stores. This one is only about firms that sell to other businesses.
+        <strong>A note on who wrote this.</strong> FactoryJet runs <a href="/uk/seo" className={link}>SEO for UK businesses</a>, B2B firms included, so we are on this list, in the first group. That is a good reason to read every list, ours included, with care. Our <a href="/blog/best-seo-agencies-uk" className={link}>list of the best SEO agencies in the UK</a> covers every kind of business, our <a href="/blog/best-ai-seo-agencies-uk" className={link}>UK AI SEO and GEO list</a> covers AI search specialists, and our <a href="/blog/best-ecommerce-seo-agencies-uk-2026" className={link}>UK ecommerce SEO list</a> covers online stores. This one is only about firms that sell to other businesses.
       </p>
       <p className="mb-6">
         A few terms first. <strong>B2B SEO</strong> is SEO for companies whose customers are other companies. The <strong>ICP</strong> (ideal customer profile) is the kind of company you most want to sell to. <strong>Bottom-of-funnel pages</strong> are the ones buyers read just before they get in touch: comparisons, pricing, &ldquo;how we work&rdquo; and case studies. <strong>Pipeline</strong> is the value of deals your sales team is working on. <strong>GEO</strong> (generative engine optimisation) is work aimed at being cited in AI answers such as ChatGPT and Google AI Overviews. <strong>AEO</strong> (answer engine optimisation) is another name for much the same work. <strong>Share of voice</strong> is how often you are named for a set of searches compared with your rivals.

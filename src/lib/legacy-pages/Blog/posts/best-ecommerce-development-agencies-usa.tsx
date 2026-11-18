@@ -27,7 +27,7 @@ export const post: BlogPost = {
   slug: 'best-ecommerce-development-agencies-usa',
   title: 'The 8 Best Ecommerce Development Agencies in the USA (2026)',
   excerpt:
-    'Platform partner tier is the fastest way to filter an ecommerce agency, and almost nobody tells you that. We compared eight US ecommerce agencies on partner status, platform depth and published results. Every claim quoted from their own site. Disclosure: we are on the list, at number eight.',
+    'Platform partner tier is the fastest way to filter an ecommerce agency, and almost nobody tells you that. We compared eight US ecommerce agencies on partner status, platform depth and published results. Every claim quoted from their own site. Disclosure: FactoryJet wrote this list and lists itself first.',
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Sep 7, 2026',
@@ -38,11 +38,11 @@ export const post: BlogPost = {
   meta: {
     title: 'The 8 Best Ecommerce Development Agencies in the USA (2026)',
     description:
-      'We compared eight US ecommerce development agencies on Shopify and BigCommerce partner tier, platform depth and results. We are on the list at number eight.',
+      'We compared eight US ecommerce development agencies on Shopify and BigCommerce partner tier, platform depth and results. FactoryJet wrote this list and lists itself first.',
   },
   keyTakeaways: [
     'Platform partner tier is the fastest filter and it is publicly verifiable. Shopify Platinum, BigCommerce Elite and Klaviyo Master Elite are earned on delivered volume, so they tell you what an agency actually does rather than what it says.',
-    'Our researched 2026 shortlist: Codal, OuterBox, Groove Commerce, We Make Websites, Inflow, 1Digital Agency, SmartSites, and FactoryJet (disclosed self-inclusion, placed eighth).',
+    'Our researched 2026 shortlist: FactoryJet (disclosed self-inclusion, listed first), Codal, OuterBox, Groove Commerce, We Make Websites, Inflow, 1Digital Agency and SmartSites.',
     'Codal holds both Shopify Platinum Partner and BigCommerce Elite Partner status, the strongest dual-platform position on this list.',
     'Groove Commerce is BigCommerce Elite, Klaviyo Master Elite and HubSpot Diamond, which is an unusually deep retention and lifecycle stack rather than build-only.',
     'Coalition Technologies scored highest in our AI test (6 of 12) but its site returned an HTTP 403 to our fetch, so it is excluded rather than described from memory. Absolute Web (4 of 12) is excluded for the same reason.',
@@ -67,14 +67,14 @@ export const post: BlogPost = {
     { q: 'Are bigger ecommerce agencies better?', a: 'Bigger means more capacity, more specialisms and more resilience when someone leaves. It also means you are more likely to be a small account handled by junior people. OuterBox states 300+ staff and 1Digital Agency 50+ specialists, and both are legitimate choices for very different clients. The question is not which is bigger but whether you would be a large client or a small one there.' },
     { q: 'What are the red flags with ecommerce agencies?', a: 'Platform expertise claimed with no verifiable partner tier. Portfolio stores you cannot browse live. Ownership of the code or theme resting with the agency. Replatform recommendations made before anyone has looked at your analytics. Fixed quotes for scope nobody has defined, which always end in change requests. And results reported as traffic rather than revenue, which in ecommerce is inexcusable because the revenue number exists.' },
     { q: 'Why is Coalition Technologies not on this list?', a: 'It scored highest in our AI engine test, named in 6 of 12 answers, but its website returned an HTTP 403 to our fetch on 7 September 2026, so we could not verify a single claim about it. We excluded it rather than describe it from memory or repeat what other roundups say. Absolute Web was excluded for the same reason. That rule costs us the top scorer on this page, which is precisely why it is worth having.' },
-    { q: 'Is FactoryJet an ecommerce specialist?', a: 'Ecommerce is our core, and unlike our other roundups this is the category where we are genuinely on home ground rather than adjacent to it. We build commerce for DTC and B2B brands and it is the majority of our work. We are still smaller than the seven agencies above us: OuterBox states 300+ staff, 1Digital 50+ specialists and 400+ brands. What we add is that we build for AI search citation alongside the store itself, because we measure what actually earns it.' },
-    { q: 'Why is FactoryJet eighth on its own list?', a: 'Because on published track record the seven above us are ahead, and this page is checkable in ten minutes. They hold platform partner tiers and client lists we cannot match today. Our slot is real but narrow: DTC and B2B brands that want the build and AI search visibility handled as one project, month-to-month, with the founder on the account. If you want Shopify Platinum with enterprise references, that is Codal, and we have ranked it first for that reason.' },
+    { q: 'Is FactoryJet an ecommerce specialist?', a: 'Ecommerce is our core, and unlike our other roundups this is the category where we are genuinely on home ground rather than adjacent to it. We build commerce for DTC and B2B brands and it is the majority of our work. We are still smaller than the seven agencies listed after us: OuterBox states 300+ staff, 1Digital 50+ specialists and 400+ brands. What we add is that we build for AI search citation alongside the store itself, because we measure what actually earns it.' },
+    { q: 'Why is FactoryJet first on its own list?', a: 'FactoryJet wrote this list and lists itself first. That is a publisher choice. The seven agencies after us follow in the order our research set, and every claim about them links to their own sites. Our focus: DTC and B2B brands that want the build and AI search visibility handled as one project, month-to-month, with the founder on the account. If you want Shopify Platinum with enterprise references, that is Codal.' },
     { q: 'Should I read this list or go to your ecommerce development page?', a: 'Depends where you are. If you are still deciding who to approach, stay here, and start with the partner tier filter at the top. If you have decided to hire and want scope and terms, go to our ecommerce development service page.' },
     { q: 'How was this list researched?', a: 'We asked ChatGPT, Claude, Gemini and Perplexity, each with live web search on, to recommend US ecommerce agencies across three phrasings, twelve answers in total, and recorded every agency named. We then pulled the live US Google results for the head terms. Finally we fetched each shortlisted agency\'s own website on 7 September 2026 and used only claims stated there. Two agencies that scored well returned HTTP 403 and were excluded. Nobody paid to appear and no review scores were invented.' },
   ],
   content: (
     <>
-      <p className="mb-4"><strong>The short answer:</strong> <strong>Codal</strong> holds the strongest dual-platform position, Shopify Platinum Partner and BigCommerce Elite Partner at once. <strong>OuterBox</strong> is the strongest for scale at 300+ staff and twenty years. <strong>Groove Commerce</strong> has the deepest lifecycle stack. <strong>We Make Websites</strong> is the strongest pure Shopify Plus design shop. FactoryJet is eighth and we explain why below.</p>
+      <p className="mb-4"><strong>The short answer:</strong> <strong>Codal</strong> holds the strongest dual-platform position, Shopify Platinum Partner and BigCommerce Elite Partner at once. <strong>OuterBox</strong> is the strongest for scale at 300+ staff and twenty years. <strong>Groove Commerce</strong> has the deepest lifecycle stack. <strong>We Make Websites</strong> is the strongest pure Shopify Plus design shop. FactoryJet wrote this list and lists itself first, and we explain below what that does and does not mean.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Start with partner tier. It is the only claim here you cannot buy.</h2>
       <p className="mb-4">Almost every roundup on this topic ranks agencies on adjectives. There is a much faster filter, and it is publicly verifiable in about two minutes.</p>
@@ -84,7 +84,7 @@ export const post: BlogPost = {
 
       <p className="mb-4"><strong>Which page do you actually need?</strong> This one ranks agencies on their ability to BUILD, which is why platform partner tier leads it. If your store already exists and the problem is that nobody finds it, our <a href="/blog/best-ecommerce-seo-agencies-usa" className="text-orange-600 underline">ecommerce SEO agency roundup</a> ranks a partly different set on technical SEO capability instead. If you have decided to hire for a build and want scope and terms, go to our <a href="/services/ecommerce-development" className="text-orange-600 underline">ecommerce development service page</a>. If you have already chosen Shopify Plus, see <a href="/blog/best-shopify-plus-agencies-usa-2026" className="text-orange-600 underline">our list of Shopify Plus agencies for US brands</a>. If you have chosen BigCommerce, see <a href="/blog/best-bigcommerce-agencies-2026" className="text-orange-600 underline">our list of BigCommerce agencies by buyer type</a>.</p>
 
-      <p className="mb-4"><strong>Disclosure, up front:</strong> FactoryJet is on this list, at number eight. Everything said about the other seven was fetched from their own websites on 7 September 2026 and is quoted or attributed. Nobody paid to appear.</p>
+      <p className="mb-4"><strong>Disclosure, up front:</strong> FactoryJet wrote this list and lists itself first. Everything said about the other seven was fetched from their own websites on 7 September 2026 and is quoted or attributed. Nobody paid to appear.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The eight compared</h2>
       <div className="overflow-x-auto mb-6">
@@ -98,58 +98,58 @@ export const post: BlogPost = {
             </tr>
           </thead>
           <tbody>
-            <tr><td className="p-3 border"><strong>1. Codal</strong></td><td className="p-3 border">Dual-platform and enterprise</td><td className="p-3 border">Chicago, IL</td><td className="p-3 border">Shopify Platinum, BigCommerce Elite, AWS Advanced</td></tr>
-            <tr><td className="p-3 border"><strong>2. OuterBox</strong></td><td className="p-3 border">Scale and ecommerce SEO</td><td className="p-3 border">Akron, OH</td><td className="p-3 border">Founded 2004, &quot;more than 300&quot; staff</td></tr>
-            <tr><td className="p-3 border"><strong>3. Groove Commerce</strong></td><td className="p-3 border">Lifecycle, retention and B2B</td><td className="p-3 border">Baltimore, MD</td><td className="p-3 border">BigCommerce Elite, Klaviyo Master Elite, HubSpot Diamond</td></tr>
-            <tr><td className="p-3 border"><strong>4. We Make Websites</strong></td><td className="p-3 border">Shopify Plus design and headless</td><td className="p-3 border">London and New York</td><td className="p-3 border">&quot;Shopify Partners, since 2011&quot;</td></tr>
-            <tr><td className="p-3 border"><strong>5. Inflow</strong></td><td className="p-3 border">Ecommerce-only SEO, PPC, CRO</td><td className="p-3 border">Denver and Tampa</td><td className="p-3 border">Founded 2007, Google Premier Partner</td></tr>
-            <tr><td className="p-3 border"><strong>6. 1Digital Agency</strong></td><td className="p-3 border">Mid-market across four platforms</td><td className="p-3 border">Philadelphia, PA</td><td className="p-3 border">Founded 2012, &quot;400+ brands&quot;, 4.9/5 from 941+ reviews</td></tr>
-            <tr><td className="p-3 border"><strong>7. SmartSites</strong></td><td className="p-3 border">Web build plus paid media</td><td className="p-3 border">US, remote</td><td className="p-3 border">&quot;900+ Websites Launched&quot;, Google Premier Partner</td></tr>
-            <tr><td className="p-3 border"><strong>8. FactoryJet</strong> (this is us)</td><td className="p-3 border">DTC and B2B brands wanting build plus AI search</td><td className="p-3 border">Remote, US coverage</td><td className="p-3 border">Smaller than the seven above, see below</td></tr>
+            <tr><td className="p-3 border"><strong>1. FactoryJet</strong> (this is us)</td><td className="p-3 border">DTC and B2B brands wanting build plus AI search</td><td className="p-3 border">Remote, US coverage</td><td className="p-3 border">Smaller than the other seven, see below</td></tr>
+            <tr><td className="p-3 border"><strong>2. Codal</strong></td><td className="p-3 border">Dual-platform and enterprise</td><td className="p-3 border">Chicago, IL</td><td className="p-3 border">Shopify Platinum, BigCommerce Elite, AWS Advanced</td></tr>
+            <tr><td className="p-3 border"><strong>3. OuterBox</strong></td><td className="p-3 border">Scale and ecommerce SEO</td><td className="p-3 border">Akron, OH</td><td className="p-3 border">Founded 2004, &quot;more than 300&quot; staff</td></tr>
+            <tr><td className="p-3 border"><strong>4. Groove Commerce</strong></td><td className="p-3 border">Lifecycle, retention and B2B</td><td className="p-3 border">Baltimore, MD</td><td className="p-3 border">BigCommerce Elite, Klaviyo Master Elite, HubSpot Diamond</td></tr>
+            <tr><td className="p-3 border"><strong>5. We Make Websites</strong></td><td className="p-3 border">Shopify Plus design and headless</td><td className="p-3 border">London and New York</td><td className="p-3 border">&quot;Shopify Partners, since 2011&quot;</td></tr>
+            <tr><td className="p-3 border"><strong>6. Inflow</strong></td><td className="p-3 border">Ecommerce-only SEO, PPC, CRO</td><td className="p-3 border">Denver and Tampa</td><td className="p-3 border">Founded 2007, Google Premier Partner</td></tr>
+            <tr><td className="p-3 border"><strong>7. 1Digital Agency</strong></td><td className="p-3 border">Mid-market across four platforms</td><td className="p-3 border">Philadelphia, PA</td><td className="p-3 border">Founded 2012, &quot;400+ brands&quot;, 4.9/5 from 941+ reviews</td></tr>
+            <tr><td className="p-3 border"><strong>8. SmartSites</strong></td><td className="p-3 border">Web build plus paid media</td><td className="p-3 border">US, remote</td><td className="p-3 border">&quot;900+ Websites Launched&quot;, Google Premier Partner</td></tr>
           </tbody>
         </table>
       </div>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The eight reviewed</h2>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">1. Codal, best dual-platform and enterprise position</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">1. FactoryJet, for brands wanting the build and AI search together (disclosure: this is us)</h3>
+      <p className="mb-4">Unlike our other roundups, this is the category where we are genuinely on home ground rather than adjacent to it. Commerce is the majority of our work, DTC and B2B.</p>
+      <p className="mb-4">We are listed first because we wrote this list. The seven agencies after us bring their own strengths: OuterBox states 300+ staff, 1Digital states 400+ brands and 941 verified reviews, and Codal holds Shopify Platinum.</p>
+      <p className="mb-4">What we add is narrow and current: we build stores to be cited by AI answer engines, not only to rank, because we measure what actually earns citations rather than guessing at it. Most commerce agencies treat that as a future problem. Month-to-month, founder on the account. Scope is on the <a href="/services/ecommerce-development" className="text-orange-600 underline">ecommerce development service page</a>, and if you are B2B specifically, the <a href="/b2b-ecommerce" className="text-orange-600 underline">B2B ecommerce page</a> covers that ground.</p>
+      <p className="mb-4"><strong>Consider us if</strong> you want the build and AI search visibility as one project. <strong>Look elsewhere if</strong> you want Shopify Platinum with enterprise references, which is Codal.</p>
+
+      <h3 className="text-xl font-bold mt-6 mb-3">2. Codal, best dual-platform and enterprise position</h3>
       <p className="mb-4">Chicago headquartered with offices in Lincoln, Ahmedabad and Toronto. It holds the strongest partner stack on this page: <strong>Shopify Platinum Partner and BigCommerce Elite Partner simultaneously</strong>, plus AWS Advanced Tier and Contentstack Preferred Partner, which together describe a genuine composable commerce practice rather than a claimed one.</p>
       <p className="mb-4">Client work is enterprise-shaped: Charles Schwab (&quot;Simplifying financial compliance for 1.8 million clients&quot;), Thermos, Cost Plus Drugs, Flexport, and Origin USA where it reports &quot;Driving $3.31M in additional sales&quot;.</p>
       <p className="mb-4"><strong>Consider it if</strong> you are weighing Shopify against BigCommerce and want an agency with no reason to push you either way. <strong>Look elsewhere if</strong> you are a small store, because this is enterprise-shaped work.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">2. OuterBox, best for scale and ecommerce SEO</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">3. OuterBox, best for scale and ecommerce SEO</h3>
       <p className="mb-4">Founded in 2004 with offices in Akron, Houston and Rochester, stating &quot;more than 300 digital marketing experts&quot; and twenty years in ecommerce. Published claims include &quot;1000+ Successful Client Partnerships&quot; and &quot;2M+ Page #1 Google Rankings&quot;, with Lowe&apos;s, JEGS, Sur La Table, Matco Tools and Golfballs.com among clients. Google Premier Partner for 2026 and a Microsoft Advertising Select Partner.</p>
       <p className="mb-4">Its ecommerce SEO practice is the notable part. Ecommerce SEO is a different discipline from content SEO, mostly faceted navigation, product schema and category architecture, and few agencies at this size run it as a named specialism.</p>
       <p className="mb-4"><strong>Consider it if</strong> you have a large catalogue and organic search is the growth channel. <strong>Look elsewhere if</strong> you want a boutique relationship.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">3. Groove Commerce, best lifecycle and retention stack</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">4. Groove Commerce, best lifecycle and retention stack</h3>
       <p className="mb-4">Founded 2007, headquartered in Baltimore with Philadelphia, Austin and Orlando locations. The partner combination is what distinguishes it: <strong>BigCommerce Elite, Klaviyo Master Elite and HubSpot Diamond</strong>. That is a retention and lifecycle stack, not a build-only one, which matters because most ecommerce agencies hand you a store and leave the repeat-purchase problem with you.</p>
       <p className="mb-4">States &quot;Trusted by 100+ eCommerce Merchants&quot; with US Open Shop, Dippin&apos; Dots, GE, NASA Official Gear and Cutter &amp; Buck named. Published results include a 47% revenue increase for Dippin&apos; Dots and 409% ROAS for Cordova Outdoors. B2B ecommerce is a named service.</p>
       <p className="mb-4"><strong>Consider it if</strong> repeat purchase matters as much as acquisition, or you are B2B on BigCommerce. <strong>Look elsewhere if</strong> you only need a build.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">4. We Make Websites, best Shopify Plus design shop</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">5. We Make Websites, best Shopify Plus design shop</h3>
       <p className="mb-4">Shopify Partners since 2011, with London and New York offices, now a Tech Mahindra company. The client list is the strongest brand roster here: Good American, UFC, Levi&apos;s Dockers, Toteme, Condé Nast, Hasbro, HP and Vollebak. Services include &quot;Headless &amp; Composable Commerce&quot; and &quot;Internationalization&quot;, with work recognised by Awwwards and CSS Design Awards.</p>
       <p className="mb-4"><strong>Consider it if</strong> design quality is the point and you are on Shopify Plus. <strong>Look elsewhere if</strong> you need BigCommerce or Magento depth.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">5. Inflow, best ecommerce-only performance agency</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">6. Inflow, best ecommerce-only performance agency</h3>
       <p className="mb-4">Founded 2007 with Denver and Tampa locations, and notable for working exclusively with ecommerce brands across SEO, PPC, paid social and CRO. States &quot;130+ Years Combined Industry Experience&quot; and &quot;$7 Million+ Media Managed&quot;, with America&apos;s Test Kitchen, Mountain House, Simms Fishing and KEH Camera among clients.</p>
       <p className="mb-4">Published results are specific: 413% increase in ad revenue year on year for KEH Camera, 126% organic traffic growth for Simms, and a &quot;First $1 Million Month&quot; for Vitrazza. It is a Google Premier Partner, a Buy With Prime Agency Partner and holds a Clutch Top Digital Marketing Company award as a women-owned business.</p>
       <p className="mb-4"><strong>Consider it if</strong> your store is built and the problem is growth. <strong>Look elsewhere if</strong> you need the build itself.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">6. 1Digital Agency, best mid-market across four platforms</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">7. 1Digital Agency, best mid-market across four platforms</h3>
       <p className="mb-4">Founded 2012 in Philadelphia, working across Shopify, BigCommerce, WooCommerce and Magento, stating &quot;50+ eCommerce specialists&quot; and &quot;400+ brands&quot; served. Its review position is the most transparent on this page: <strong>&quot;4.9/5 rating across 941+ verified reviews&quot;</strong> aggregated across Google, Trustpilot, Clutch and Facebook, which is a far more checkable claim than a single-platform score.</p>
       <p className="mb-4">Published results are given with engagement length attached, which is unusually honest: &quot;+471.2% Online revenue growth over a 24-month engagement&quot; and &quot;+131.3% Annual revenue lift over a 2-year engagement&quot;.</p>
       <p className="mb-4"><strong>Consider it if</strong> you are mid-market, especially on Magento or WooCommerce where fewer strong agencies remain. <strong>Look elsewhere if</strong> you need enterprise composable work.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">7. SmartSites, best for build plus paid media</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">8. SmartSites, best for build plus paid media</h3>
       <p className="mb-4">States &quot;900+ Websites Launched&quot; and &quot;$100M+ Client Revenue Generated&quot;, with an unusually complete accreditation set: Google Premier Partner, Microsoft Advertising Select Partner 2025, Meta Business Partner and Amazon Ads Verified Partner, plus Inc. 5000 recognition and a BBB A+ rating.</p>
       <p className="mb-4"><strong>Consider it if</strong> you want the store and the paid acquisition from one team. <strong>Look elsewhere if</strong> you want deep single-platform commerce engineering.</p>
-
-      <h3 className="text-xl font-bold mt-6 mb-3">8. FactoryJet, for brands wanting the build and AI search together (disclosure: this is us)</h3>
-      <p className="mb-4">Unlike our other roundups, this is the category where we are genuinely on home ground rather than adjacent to it. Commerce is the majority of our work, DTC and B2B.</p>
-      <p className="mb-4">We are still eighth, because on published track record the seven above are ahead. OuterBox states 300+ staff. 1Digital states 400+ brands and 941 verified reviews. Codal holds Shopify Platinum. Those are real and we are not going to talk around them.</p>
-      <p className="mb-4">What we add is narrow and current: we build stores to be cited by AI answer engines, not only to rank, because we measure what actually earns citations rather than guessing at it. Most commerce agencies treat that as a future problem. Month-to-month, founder on the account. Scope is on the <a href="/services/ecommerce-development" className="text-orange-600 underline">ecommerce development service page</a>, and if you are B2B specifically, the <a href="/b2b-ecommerce" className="text-orange-600 underline">B2B ecommerce page</a> covers that ground.</p>
-      <p className="mb-4"><strong>Consider us if</strong> you want the build and AI search visibility as one project. <strong>Look elsewhere if</strong> you want Shopify Platinum with enterprise references, which is Codal, ranked first here for that reason.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Two agencies we could not verify, and left out</h2>
       <p className="mb-4">Worth stating plainly because one of them outscored everybody.</p>

@@ -14,16 +14,15 @@ import type { BlogPost } from '../data.types';
  * returned HTTP 403 to our fetch, so it is excluded rather than described from
  * memory, and the methodology says so.
  *
- * FactoryJet is placed eighth on merit. Seven agencies above us are larger and
- * longer-established in local SEO. Saying so is what makes the page checkable,
- * and checkable is the whole point of an asset built to be cited.
+ * FactoryJet is listed first (owner decision, 18 Nov 2026). The seven agencies
+ * below follow in research order, and every claim about them links to their own sites.
  */
 export const post: BlogPost = {
   id: '432',
   slug: 'best-local-seo-companies-usa',
   title: 'The 8 Best Local SEO Companies in the USA (2026)',
   excerpt:
-    'We compared eight US local SEO companies on map pack capability, contract terms, published pricing and AI search readiness. Every claim is quoted from the agency’s own site. Full disclosure: we are on the list, at number eight, and we say why.',
+    'We compared eight US local SEO companies on map pack capability, contract terms, published pricing and AI search readiness. Every claim is quoted from the agency’s own site. Full disclosure: we wrote this list, list ourselves first and say why.',
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
   date: 'Sep 7, 2026',
@@ -34,15 +33,15 @@ export const post: BlogPost = {
   meta: {
     title: 'The 8 Best Local SEO Companies in the USA (2026), Compared',
     description:
-      'We compared eight US local SEO agencies on map pack capability, contract terms and published pricing. Disclosure: we are on the list at number eight.',
+      'We compared eight US local SEO agencies on map pack capability, contract terms and published pricing. Disclosure: we wrote it and list ourselves first.',
   },
   keyTakeaways: [
-    'Our researched 2026 shortlist: Thrive Agency, Searchbloom, WebFX, SmartSites, HigherVisibility, Victorious, Funnel Boost Media, and FactoryJet (disclosed self-inclusion, placed eighth).',
+    'Our researched 2026 shortlist: FactoryJet (disclosed self-inclusion, listed first), then Thrive Agency, Searchbloom, WebFX, SmartSites, HigherVisibility, Victorious and Funnel Boost Media.',
     'Thrive Agency and Searchbloom were each named in 8 of our 12 AI engine test answers, the joint highest score.',
     'Searchbloom is the rare US agency that publishes rates: it states SEO starts at $3,000 a month and PPC management at $2,000 a month. Almost nobody else does.',
     'Local SEO and AI visibility have converged. The signals that win the Google map pack, your Google Business Profile, reviews and directory citations, are the same signals AI engines read before naming a local business.',
     'Contract terms split the field: Thrive states month-to-month contracts and Searchbloom states "No Lengthy Contracts", while others quote longer minimums.',
-    'Honest position: seven agencies on this list are larger and longer-established in local SEO than FactoryJet, and we rank them above ourselves for that reason.',
+    'FactoryJet wrote this list and lists itself first. The seven agencies after it follow in the order our research set.',
     'This page is a shortlist. If you have already decided to hire, scope and terms live on our local SEO service page instead.',
   ],
   faqs: [
@@ -63,18 +62,18 @@ export const post: BlogPost = {
     { q: 'What are the red flags when hiring a local SEO company?', a: 'Guaranteed map pack positions, because nobody controls Google. Agencies that want to own your Google Business Profile rather than be added as a manager. Bulk citation submissions to hundreds of low-quality directories. Any offer to generate reviews for you, which violates Google policy and risks your profile. And reporting that shows rankings and traffic but never calls or direction requests.' },
     { q: 'What is NAP consistency and does it still matter?', a: 'Name, address and phone number, and yes, though less than it did a decade ago. Google is better at resolving small differences than it used to be. Where it still bites is genuine conflicts: an old address on a major directory, a tracking number on some listings and the real number on others, or duplicate profiles from a previous owner. Those are worth fixing properly and are a common first-month task.' },
     { q: 'How do I track whether local SEO is working?', a: 'Four numbers, monthly. Map pack position for your money terms, checked from inside your service area. Calls from your Google Business Profile. Direction requests. And form fills or bookings attributed to organic and local. If your report leads with impressions and sessions, ask for these four instead, because a business can gain traffic and lose customers at the same time.' },
-    { q: 'Is FactoryJet a local SEO specialist?', a: 'We do local SEO and have a local SEO service page, but we are a smaller shop than the seven agencies ranked above us here and we are not going to claim otherwise. WebFX states 750+ staff, Thrive 160+. Where we are genuinely competitive is smaller businesses that want local SEO and AI search visibility handled as one project rather than two, with month-to-month terms and the founder actually on the account.' },
-    { q: 'Why is FactoryJet eighth on its own list?', a: 'Because that is where the evidence puts us on this particular service. Most agencies publishing a roundup put themselves first. We ranked seven larger, longer-established local SEO agencies above us, and if you want the biggest team or the longest map pack track record the answer on this page is not us. A list that pretended otherwise would not survive being checked, and being checkable is the only reason a page like this is worth reading.' },
+    { q: 'Is FactoryJet a local SEO specialist?', a: 'We do local SEO and have a local SEO service page, but we are a smaller shop than the seven agencies listed after us here and we are not going to claim otherwise. WebFX states 750+ staff, Thrive 160+. Where we are genuinely competitive is smaller businesses that want local SEO and AI search visibility handled as one project rather than two, with month-to-month terms and the founder actually on the account.' },
+    { q: 'Why is FactoryJet first on its own list?', a: 'FactoryJet wrote this list and lists itself first, as a publisher choice. The seven agencies after us follow in the order our research set. If you need franchise-scale coverage or the largest team available, HigherVisibility and WebFX are listed below.' },
     { q: 'Should I read this list or go to your local SEO service page?', a: 'Depends where you are. If you are still deciding who to approach, stay here: this compares eight agencies on what each is actually good at. If you have decided to hire and want scope and terms, go to our local SEO service page. We keep the two separate deliberately.' },
     { q: 'How was this list researched?', a: 'We asked ChatGPT, Claude, Gemini and Perplexity, each with live web search on, to recommend US local SEO companies across three phrasings, twelve answers in total, and recorded every agency named and how often. We then pulled the live US Google results for the head terms to cross-check. Finally we fetched each shortlisted agency’s own website on 7 September 2026 and used only claims stated there. Boostability was named in 3 of 12 answers but its website returned an HTTP 403 to our fetch, so we left it out rather than describe it from memory. No agency paid to appear and no review scores were invented.' },
   ],
   content: (
     <>
-      <p className="mb-4"><strong>The short answer:</strong> the joint strongest US local SEO companies on our testing are <strong>Thrive Agency</strong> and <strong>Searchbloom</strong>, each named in eight of our twelve AI engine answers. Thrive is the better pick for multi-service work on month-to-month terms; Searchbloom for a documented framework and, unusually, published pricing. For sheer scale it is <strong>WebFX</strong>. FactoryJet appears eighth on this list and we explain below why we did not put ourselves first.</p>
+      <p className="mb-4"><strong>The short answer:</strong> the joint strongest US local SEO companies on our testing are <strong>Thrive Agency</strong> and <strong>Searchbloom</strong>, each named in eight of our twelve AI engine answers. Thrive is the better pick for multi-service work on month-to-month terms; Searchbloom for a documented framework and, unusually, published pricing. For sheer scale it is <strong>WebFX</strong>. FactoryJet wrote this list and lists itself first, and our entry below explains what that does and does not mean.</p>
 
       <p className="mb-4"><strong>Which page do you actually need?</strong> This one is a shortlist: eight agencies compared so you can decide who to approach. If you have already decided to hire and want scope and terms, go to our <a href="/services/local-seo" className="text-orange-600 underline">local SEO service page</a> instead. We keep the two separate on purpose.</p>
 
-      <p className="mb-4"><strong>Disclosure, up front:</strong> FactoryJet is on this list, at number eight. Everything said about the other seven was fetched from their own websites on 7 September 2026 and is quoted or attributed. No invented review scores, nobody paid to appear.</p>
+      <p className="mb-4"><strong>Disclosure, up front:</strong> FactoryJet wrote this list and lists itself first. Everything said about the other seven was fetched from their own websites on 7 September 2026 and is quoted or attributed. No invented review scores, nobody paid to appear.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Local SEO and AI visibility are now the same project</h2>
       <p className="mb-4">This is the part worth reading even if you hire nobody on this page, because it has changed recently and most businesses have not adjusted.</p>
@@ -93,58 +92,58 @@ export const post: BlogPost = {
             </tr>
           </thead>
           <tbody>
-            <tr><td className="p-3 border"><strong>1. Thrive Agency</strong></td><td className="p-3 border">Multi-service, short terms</td><td className="p-3 border">Arlington, TX</td><td className="p-3 border">Founded 2005, &quot;160+ experts&quot;, month-to-month</td></tr>
-            <tr><td className="p-3 border"><strong>2. Searchbloom</strong></td><td className="p-3 border">Documented framework, published rates</td><td className="p-3 border">South Jordan, UT</td><td className="p-3 border">ART framework, SEO from $3,000/mo</td></tr>
-            <tr><td className="p-3 border"><strong>3. WebFX</strong></td><td className="p-3 border">Scale and multi-location</td><td className="p-3 border">US, remote</td><td className="p-3 border">&quot;30-year track record&quot;, &quot;750+ digital experts&quot;</td></tr>
-            <tr><td className="p-3 border"><strong>4. SmartSites</strong></td><td className="p-3 border">Web plus search together</td><td className="p-3 border">US, remote</td><td className="p-3 border">&quot;900+ Websites Launched&quot;, Google Premier Partner</td></tr>
-            <tr><td className="p-3 border"><strong>5. HigherVisibility</strong></td><td className="p-3 border">Franchise and multi-location</td><td className="p-3 border">Memphis, TN</td><td className="p-3 border">Founded 2009, Targeted Growth System®</td></tr>
-            <tr><td className="p-3 border"><strong>6. Victorious</strong></td><td className="p-3 border">Award-track SEO programmes</td><td className="p-3 border">California</td><td className="p-3 border">&quot;600+ brands served&quot;, &quot;5x Search Agency of the Year&quot;</td></tr>
-            <tr><td className="p-3 border"><strong>7. Funnel Boost Media</strong></td><td className="p-3 border">Home services and trades</td><td className="p-3 border">San Antonio, TX</td><td className="p-3 border">Founded 2012, 4.9 Google from 257 reviews</td></tr>
-            <tr><td className="p-3 border"><strong>8. FactoryJet</strong> (this is us)</td><td className="p-3 border">Small businesses wanting local plus AI search</td><td className="p-3 border">Remote, US coverage</td><td className="p-3 border">Smaller than the seven above, see below</td></tr>
+            <tr><td className="p-3 border"><strong>1. FactoryJet</strong> (this is us)</td><td className="p-3 border">Small businesses wanting local plus AI search</td><td className="p-3 border">Remote, US coverage</td><td className="p-3 border">Smaller than the seven below, see our entry</td></tr>
+            <tr><td className="p-3 border"><strong>2. Thrive Agency</strong></td><td className="p-3 border">Multi-service, short terms</td><td className="p-3 border">Arlington, TX</td><td className="p-3 border">Founded 2005, &quot;160+ experts&quot;, month-to-month</td></tr>
+            <tr><td className="p-3 border"><strong>3. Searchbloom</strong></td><td className="p-3 border">Documented framework, published rates</td><td className="p-3 border">South Jordan, UT</td><td className="p-3 border">ART framework, SEO from $3,000/mo</td></tr>
+            <tr><td className="p-3 border"><strong>4. WebFX</strong></td><td className="p-3 border">Scale and multi-location</td><td className="p-3 border">US, remote</td><td className="p-3 border">&quot;30-year track record&quot;, &quot;750+ digital experts&quot;</td></tr>
+            <tr><td className="p-3 border"><strong>5. SmartSites</strong></td><td className="p-3 border">Web plus search together</td><td className="p-3 border">US, remote</td><td className="p-3 border">&quot;900+ Websites Launched&quot;, Google Premier Partner</td></tr>
+            <tr><td className="p-3 border"><strong>6. HigherVisibility</strong></td><td className="p-3 border">Franchise and multi-location</td><td className="p-3 border">Memphis, TN</td><td className="p-3 border">Founded 2009, Targeted Growth System®</td></tr>
+            <tr><td className="p-3 border"><strong>7. Victorious</strong></td><td className="p-3 border">Award-track SEO programmes</td><td className="p-3 border">California</td><td className="p-3 border">&quot;600+ brands served&quot;, &quot;5x Search Agency of the Year&quot;</td></tr>
+            <tr><td className="p-3 border"><strong>8. Funnel Boost Media</strong></td><td className="p-3 border">Home services and trades</td><td className="p-3 border">San Antonio, TX</td><td className="p-3 border">Founded 2012, 4.9 Google from 257 reviews</td></tr>
           </tbody>
         </table>
       </div>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The eight reviewed</h2>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">1. Thrive Agency, best for multi-service work on short terms</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">1. FactoryJet, for small businesses wanting local and AI search together (disclosure: this is us)</h3>
+      <p className="mb-4">We wrote this list and list ourselves first. The seven agencies below include larger teams: WebFX states 750 staff and thirty years, and Thrive states 160 experts and twenty.</p>
+      <p className="mb-4">Where we genuinely compete is narrower. We treat local SEO and AI search visibility as one project rather than two line items, which matters more now that the engines read the same profile and review signals the map pack does. We work month-to-month, and on a small account the founder is actually on it. Scope and terms are on the <a href="/services/local-seo" className="text-orange-600 underline">local SEO service page</a>.</p>
+      <p className="mb-4"><strong>Consider us if</strong> you are a small business and want both handled together without a lock-in. <strong>Look elsewhere if</strong> you need franchise-scale coverage or the largest team available. That is HigherVisibility or WebFX, both listed below.</p>
+
+      <h3 className="text-xl font-bold mt-6 mb-3">2. Thrive Agency, best for multi-service work on short terms</h3>
       <p className="mb-4">Founded in 2005 in Arlington, Texas, with a stated &quot;160+ online marketing experts&quot; and operations across 25 cities. It reports a &quot;95% client retention rate&quot; and seven consecutive years on the Inc. 5000, with &quot;150+ Reviews&quot; on Google and &quot;100+ Reviews&quot; on Clutch, both at five stars.</p>
       <p className="mb-4">The detail that matters most for a small business: it offers <strong>month-to-month contracts</strong> at that size, which is rarer than it should be. Published case results include &quot;+427% Top 10 Organic Keywords&quot; and &quot;+68% Organic Conversions&quot;.</p>
       <p className="mb-4"><strong>Consider it if</strong> you want SEO, paid and web from one team without a long lock-in. <strong>Look elsewhere if</strong> you want a specialist doing only local.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">2. Searchbloom, best for a documented framework and published pricing</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">3. Searchbloom, best for a documented framework and published pricing</h3>
       <p className="mb-4">Based in South Jordan, Utah. Searchbloom is the rare US agency that <strong>publishes its rates</strong>: SEO starting at $3,000 a month and PPC management at $2,000 a month. In a market where almost nobody puts a number on the page, that alone is worth something when you are building a shortlist.</p>
       <p className="mb-4">It works to a named framework, ART (Authority, Relevance, Technology), states &quot;No Lengthy Contracts&quot;, reports retention &quot;over 95 percent&quot;, and lists a Search Engine Land Award win in 2021 with finalist places in 2024 and 2025. It also names Answer Engine Optimization and Generative Engine Optimization as distinct services, so AI search is not an afterthought there.</p>
       <p className="mb-4"><strong>Consider it if</strong> you want to know the price before the call and see a documented method. <strong>Look elsewhere if</strong> your budget sits below its stated starting point.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">3. WebFX, best for scale and multi-location</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">4. WebFX, best for scale and multi-location</h3>
       <p className="mb-4">The largest operation on this list by a distance: a stated &quot;30-year track record&quot;, &quot;750+ digital experts&quot;, &quot;1,100+ reviews&quot; and 4.9 out of 5 on both G2 and Clutch. It publishes a cumulative &quot;$10,085,355,239+&quot; in revenue driven for clients and a &quot;93% CLIENT SATISFACTION SCORE&quot; against a stated industry average of 72%.</p>
       <p className="mb-4">For local specifically it prices by number of locations and states citation management across 40+ local listings, with reporting through its own RevenueCloudFX platform. That structure suits chains and franchises better than a single storefront.</p>
       <p className="mb-4"><strong>Consider it if</strong> you have many locations and want platform-grade reporting. <strong>Look elsewhere if</strong> you are a single location wanting a small senior team.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">4. SmartSites, best for web and search together</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">5. SmartSites, best for web and search together</h3>
       <p className="mb-4">States &quot;900+ Websites Launched&quot; and &quot;$100M+ Client Revenue Generated&quot;, and holds an unusually complete set of platform accreditations: Google Premier Partner, Microsoft Advertising Select Partner 2025, Meta Business Partner, Amazon Ads Verified Partner, plus Inc. 5000 recognition and a BBB A+ rating.</p>
       <p className="mb-4">The web-build volume is the differentiator. If your local rankings are being held back by the site itself rather than by your profile, an agency that launches websites at that rate is a reasonable place to start.</p>
       <p className="mb-4"><strong>Consider it if</strong> you need a new site and local SEO in one engagement. <strong>Look elsewhere if</strong> your site is fine and you only need local work.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">5. HigherVisibility, best for franchise and multi-location</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">6. HigherVisibility, best for franchise and multi-location</h3>
       <p className="mb-4">Founded in 2009 in Memphis with additional offices in Atlanta, Chicago and Miami, working to a proprietary methodology it calls The Targeted Growth System®. Franchise SEO is a named service rather than an afterthought, and its published results lean multi-location: &quot;142% YOY Increase in Organic Leads&quot; for Caliber Collision, &quot;191% YOY Increase in Organic Traffic&quot; for HOTWORX, and &quot;124% (ROAS) Return on Ad Spend&quot; for Ziebart.</p>
       <p className="mb-4"><strong>Consider it if</strong> you run a franchise network or many branches. <strong>Look elsewhere if</strong> you are a single independent business.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">6. Victorious, best for award-track SEO programmes</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">7. Victorious, best for award-track SEO programmes</h3>
       <p className="mb-4">California based, stating &quot;600+ brands served&quot; and an unusual volume of peer recognition: &quot;5x SEARCH AGENCY OF THE YEAR&quot;, &quot;183+ Awards&quot; and &quot;75+ awards judged by our peers, 2018 to 2026&quot;, alongside 119 reviews on Clutch. It also names Answer Engine Optimization as a distinct service.</p>
       <p className="mb-4">Awards are not results, and we would not choose an agency on them alone. But peer-judged awards over eight consecutive years are harder to manufacture than a testimonial page.</p>
       <p className="mb-4"><strong>Consider it if</strong> you want an established SEO programme with external validation. <strong>Look elsewhere if</strong> your need is specifically map pack work for one location.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">7. Funnel Boost Media, best for home services and trades</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">8. Funnel Boost Media, best for home services and trades</h3>
       <p className="mb-4">Founded in 2012 in San Antonio, Texas, and the clearest industry focus on this list: home improvement, home remodeling, home services, automotive, healthcare and legal services. It states a 4.9 Google rating from 257 reviews, is veteran owned, and holds a Clutch award for Top Digital Marketing Company alongside Forbes Advisor Best of 2024 recognition for SEO services.</p>
       <p className="mb-4">Its published results are refreshingly operational rather than percentage-based: &quot;4,000+ Leads Generated&quot;, &quot;1,900+ Inbound Calls&quot;, &quot;1,600+ Forms Submitted&quot;. For a trades business those are the numbers that matter.</p>
       <p className="mb-4"><strong>Consider it if</strong> you are a home services or trades business wanting calls, not impressions. <strong>Look elsewhere if</strong> you are outside its named industries.</p>
-
-      <h3 className="text-xl font-bold mt-6 mb-3">8. FactoryJet, for small businesses wanting local and AI search together (disclosure: this is us)</h3>
-      <p className="mb-4">We are eighth, and the reason is straightforward: the seven agencies above are larger and longer-established in local SEO than we are. WebFX states 750 staff and thirty years. Thrive states 160 experts and twenty. We are a small team, and on a page you can verify in ten minutes there is no sense pretending otherwise.</p>
-      <p className="mb-4">Where we genuinely compete is narrower. We treat local SEO and AI search visibility as one project rather than two line items, which matters more now that the engines read the same profile and review signals the map pack does. We work month-to-month, and on a small account the founder is actually on it. Scope and terms are on the <a href="/services/local-seo" className="text-orange-600 underline">local SEO service page</a>.</p>
-      <p className="mb-4"><strong>Consider us if</strong> you are a small business and want both handled together without a lock-in. <strong>Look elsewhere if</strong> you need franchise-scale coverage or the largest team available. That is HigherVisibility or WebFX, and we have ranked them accordingly.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">How to choose between them</h2>
       <p className="mb-4"><strong>Match the shape of your business.</strong> One location and ten locations are different disciplines. Ask any agency how many profiles it currently manages for a business your size.</p>

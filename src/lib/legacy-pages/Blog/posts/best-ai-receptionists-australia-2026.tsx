@@ -39,6 +39,18 @@ interface Product {
 
 const PRODUCTS: Product[] = [
   {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/au/ai-receptionist',
+    source: 'https://factoryjet.com/au/ai-receptionist',
+    company: 'FactoryJet, working remotely with Australian clients',
+    type: 'Custom AI receptionist, designed, built and supported for one business',
+    bestFor: 'Businesses whose job or practice software, or call rules, no product below handles',
+    connects: 'Built around your systems: job software, practice software, CRM, calendars and handover rules',
+    price: 'Fixed price per phase, quoted in writing after a scoping call',
+    what: 'We design, build, integrate and support a custom AI receptionist around your call types, your systems and your handover rules, and you own what we build. We show working software on your own data before you sign anything. If one of the products below already connects to your software and covers your calls, start there; it will be faster to set up.',
+    ask: 'Ask us for a demo on your own call types before you decide.',
+  },
+  {
     name: 'Sophiie',
     url: 'https://www.sophiie.ai/',
     source: 'https://www.sophiie.ai/integrations',
@@ -206,18 +218,6 @@ const PRODUCTS: Product[] = [
     what: 'OfficeHQ is a virtual reception company that added an AI tier. The AI greets callers, takes messages, answers questions and transfers calls, and a live Australian receptionist can step in. Calls routed to live agents are charged at the applicable rate, so ask what that rate is. Its FAQ says callers will not know they are talking to AI unless you want them to; read the privacy section below before you choose that setting.',
     ask: 'The per-call charge when a live receptionist takes over, and how often that happened for businesses like yours.',
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/au/ai-receptionist',
-    source: 'https://factoryjet.com/au/ai-receptionist',
-    company: 'FactoryJet, working remotely with Australian clients',
-    type: 'Custom AI receptionist, designed, built and supported for one business',
-    bestFor: 'Businesses whose job or practice software, or call rules, no product above handles',
-    connects: 'Built around your systems: job software, practice software, CRM, calendars and handover rules',
-    price: 'Fixed price per phase, quoted in writing after a scoping call',
-    what: 'We design, build, integrate and support a custom AI receptionist around your call types, your systems and your handover rules, and you own what we build. We show working software on your own data before you sign anything. If one of the products above already connects to your software and covers your calls, start there; it will be faster to set up.',
-    ask: 'Ask us for a demo on your own call types before you decide.',
-  },
 ];
 
 // These are each product's own published list prices, read on 21 Oct 2026 (Tradies Line AI on
@@ -354,11 +354,11 @@ export const post: BlogPost = {
   slug: 'best-ai-receptionists-australia-2026',
   title: 'Best AI Receptionists in Australia (2026): 14 Compared, Plus Us',
   excerpt:
-    'Fourteen AI receptionists sold by Australian businesses, checked on their own websites on 21 October 2026 (one added on 16 November 2026): list prices with GST terms, which job and practice software each connects to, where call data is kept, and who each suits. Plus when a custom build fits better. FactoryJet is listed last and says so.',
+    'Fourteen AI receptionists sold by Australian businesses, checked on their own websites on 21 October 2026 (one added on 16 November 2026): list prices with GST terms, which job and practice software each connects to, where call data is kept, and who each suits. Plus when a custom build fits better. FactoryJet wrote this list and lists itself first.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 22, 2026',
-  dateModified: 'Nov 16, 2026',
+  dateModified: 'Nov 18, 2026',
   readTime: '18 min read',
   imageUrl: `${IMG}-hero.webp`,
   imageFit: 'contain',
@@ -374,7 +374,7 @@ export const post: BlogPost = {
     'Every fact here was read on each product’s own website on 21 October 2026, and on Tradies Line AI’s on 16 November 2026. Nobody paid to be listed, and the order is not a ranking.',
     'Published entry prices ran from A$20 a month plus GST for 10 calls to A$249 plus GST for 600 minutes. Some plans count calls and some count minutes, so compare like with like.',
     'None of the 14 lists Tradify, Core Practice or Dental4Windows as a connection. If that is your software, read the custom-build section.',
-    'FactoryJet builds custom AI receptionists, so we are on this list, last. We work remotely with Australian clients.',
+    'FactoryJet builds custom AI receptionists, so we are on this list. FactoryJet wrote this list and lists itself first. We work remotely with Australian clients.',
   ],
   faqs: FAQS,
   content: (
@@ -393,7 +393,7 @@ export const post: BlogPost = {
                 'AI receptionists sold in Australia compared, from A$20 a month + GST: ServiceM8 and Cliniko connections, where call data is kept, and who each suits.',
               inLanguage: 'en-AU',
               datePublished: '2026-10-22',
-              dateModified: '2026-11-16',
+              dateModified: '2026-11-18',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI receptionist software in Australia' },
@@ -425,7 +425,7 @@ export const post: BlogPost = {
           The best AI receptionist in Australia is the one that books into the software you already use. For trades on ServiceM8 or Simpro, start with Sophiie, then Johnni, Nexwin and AIssie. For allied health on Cliniko or Nookal, Lyngo and MayaAI. For GP practices on Best Practice, MayaAI and HealthEngine Helen. If your data must stay onshore, AiDial. If you want it set up and run for you, Valory.
         </p>
         <p className="text-gray-800 leading-relaxed">
-          We read each product&rsquo;s own website on 21 October 2026 (Tradies Line AI on 16 November 2026) and copied its list prices exactly. Nobody paid to be listed. One product here, Tradies Line AI, links to this page, and we added it after that link went up; its entry was checked against its own site like the rest. The order is not a ranking. FactoryJet builds custom receptionists, so we are last, and labelled.
+          We read each product&rsquo;s own website on 21 October 2026 (Tradies Line AI on 16 November 2026) and copied its list prices exactly. Nobody paid to be listed. One product here, Tradies Line AI, links to this page, and we added it after that link went up; its entry was checked against its own site like the rest. The order is not a ranking. FactoryJet builds custom receptionists. It wrote this list and lists itself first, labelled.
         </p>
       </div>
 
@@ -436,7 +436,7 @@ export const post: BlogPost = {
         So we read the products themselves. For each one we opened its homepage, pricing page, integrations page and terms on 21 October 2026, and wrote down only what it says about itself: who runs it, what it does, which software it connects to, where it keeps call data, and its list price with the GST wording exactly as printed. We added Tradies Line AI on 16 November 2026 and read its site the same way that day. Fourteen get a full profile. Five more get a short note saying why they are not profiled.
       </p>
       <p className="mb-4">
-        <strong>A note on honesty.</strong> FactoryJet builds custom AI receptionists, so we are on this list, last. We do not sell an app and none of the products below is a partner of ours. Several best-of lists on this topic are written by a product that recommends itself: Miyai ranks itself first and discloses it, Valory recommends itself, Johnni says its author runs Johnni, and AiDial discloses its conflict and declines to name a winner. That is fair practice, and a reason to read every list, this one included, with care. For how we build them ourselves, see our{' '}
+        <strong>A note on honesty.</strong> FactoryJet builds custom AI receptionists, so we are on this list. FactoryJet wrote this list and lists itself first. We do not sell an app and none of the products below is a partner of ours. Several best-of lists on this topic are written by a product that recommends itself: Miyai ranks itself first and discloses it, Valory recommends itself, Johnni says its author runs Johnni, and AiDial discloses its conflict and declines to name a winner. That is fair practice, and a reason to read every list, this one included, with care. For how we build them ourselves, see our{' '}
         <a href="/au/ai-receptionist" className="text-[#B23E13] underline">AI receptionist service for Australian businesses</a>.
       </p>
       <p className="mb-6">
@@ -486,7 +486,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The best AI receptionists in Australia, profiled</h2>
       <p className="mb-6">
-        The order is not a ranking. Products built for trades come first, then products for clinics, then the services and all-in-one options, then us.
+        The order is not a ranking. We come first, then products built for trades, then products for clinics, then the services and all-in-one options.
       </p>
 
       {PRODUCTS.map((p, i) => (

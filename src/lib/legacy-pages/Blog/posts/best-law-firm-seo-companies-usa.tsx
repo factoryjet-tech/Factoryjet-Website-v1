@@ -14,15 +14,15 @@ import type { BlogPost } from '../data.types';
  * The nine agencies below are the consensus set from 12 AI answers across
  * ChatGPT, Claude, Gemini and Perplexity. Every claim about them was fetched
  * from their own site on 2026-09-07 and is quoted or attributed, never inferred.
- * FactoryJet is placed ninth on merit, not first, because the eight above us
- * are legal specialists and we are not. That is the honest ordering.
+ * FactoryJet is listed first (owner decision, 18 Nov 2026). The page says
+ * plainly that the eight agencies below it are legal specialists and we are not.
  */
 export const post: BlogPost = {
   id: '431',
   slug: 'best-law-firm-seo-companies-usa',
   title: 'The 9 Best Law Firm SEO Companies in the USA (2026)',
   excerpt:
-    'We compared nine US law firm SEO companies on legal specialisation, verifiable track record, contract terms and AI search capability. Every claim is quoted from the agency’s own site. Full disclosure: we are on the list, at number nine, and we explain why.',
+    'We compared nine US law firm SEO companies on legal specialisation, verifiable track record, contract terms and AI search capability. Every claim is quoted from the agency’s own site. Full disclosure: we wrote this list, list ourselves first and explain why.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 7, 2026',
@@ -33,15 +33,15 @@ export const post: BlogPost = {
   meta: {
     title: 'The 9 Best Law Firm SEO Companies in the USA (2026)',
     description:
-      'We compared nine US attorney SEO agencies on specialisation, verified track record and contract terms. Disclosure: we are on the list at number nine.',
+      'We compared nine US attorney SEO agencies on specialisation, verified track record and contract terms. Disclosure: we wrote it and list ourselves first.',
   },
   keyTakeaways: [
-    'Our researched 2026 shortlist: Rankings.io, Hennessey Digital, Consultwebs, LawRank, BluShark Digital, Juris Digital, iLawyer Marketing, AttorneySync, and FactoryJet (disclosed self-inclusion, placed ninth).',
+    'Our researched 2026 shortlist: FactoryJet (disclosed self-inclusion, listed first), then Rankings.io, Hennessey Digital, Consultwebs, LawRank, BluShark Digital, Juris Digital, iLawyer Marketing and AttorneySync.',
     'Rankings.io was named by all four AI engines in every one of our 12 test answers, the only agency to score 12 out of 12.',
     'Legal is the most expensive SEO vertical in the US. "Law firm seo" carries an $84 average cost per click, so a single wasted month of agency fees is rarely the biggest number in the equation.',
     'Almost no US law firm SEO agency publishes pricing. Judge them on legal specialisation, who does the work, contract length, and whether they report AI search citations separately.',
     'AI search is now a live battleground in legal marketing: Rankings.io publishes a "992% ChatGPT Visibility Growth" case study and iLawyer Marketing a "139% Increase in AI Referral Traffic" figure, both on their own sites.',
-    'Honest position: FactoryJet is not a legal specialist. Eight agencies on this list have deeper law firm track records and we rank them above ourselves for that reason.',
+    'Honest position: FactoryJet is not a legal specialist. Eight agencies on this list have deeper law firm track records. We list ourselves first because we wrote the list, not because we outrank them on legal work.',
     'This page is a shortlist. If you have already decided to hire, scope and terms live on our law firm SEO service page instead.',
   ],
   faqs: [
@@ -63,18 +63,18 @@ export const post: BlogPost = {
     { q: 'Can a small law firm compete with the big advertisers?', a: 'On the head terms in a major metro, realistically no, not quickly. On narrower ground, yes. Specific practice areas, specific suburbs, specific case types and question-shaped searches are all winnable, and they convert better because the searcher has told you what they need. The firms that struggle are the ones that insist on chasing the two-word head term their competitor has spent six years and a large budget defending.' },
     { q: 'Should my law firm do SEO in-house?', a: 'Parts of it, sensibly. Attorney bios, practice-area pages and answering the questions clients actually ask are all things your firm can write better than any agency, because you have the cases. Technical work, link acquisition and competitive analysis are harder to do occasionally. The common pattern that works is content in-house with an external audit and technical execution.' },
     { q: 'What questions should I ask on a law firm SEO sales call?', a: 'Five that separate the serious from the rest. Which of your current clients competes in my market and my practice area. Who specifically will do the work, and are they in-house. What would you do in month one, in concrete terms. How do you report signed cases rather than traffic. And what do I own if I leave. Vague answers to the last two are the reliable warning sign.' },
-    { q: 'Is FactoryJet a law firm SEO specialist?', a: 'No, and we would rather say so plainly. We build SEO and AI search visibility for small and mid-sized businesses across several sectors, including law firms, and we have a law firm SEO service page. The eight agencies ranked above us on this page have deeper legal track records, longer histories in the vertical and published legal case studies we cannot match. Where we compete is AI search visibility for smaller firms, and month-to-month terms.' },
-    { q: 'Why is FactoryJet ninth on its own list?', a: 'Because that is where the evidence puts us. Most agencies that publish a list like this put themselves first. We ranked the eight legal specialists above us because they are legal specialists and we are not, and a list that pretended otherwise would be worth nothing to you and would not survive being checked. If you want a personal injury specialist with 300 firms behind them, the answer on this page is Rankings.io, not us.' },
+    { q: 'Is FactoryJet a law firm SEO specialist?', a: 'No, and we would rather say so plainly. We build SEO and AI search visibility for small and mid-sized businesses across several sectors, including law firms, and we have a law firm SEO service page. The eight agencies listed after us on this page have deeper legal track records, longer histories in the vertical and published legal case studies we cannot match. Where we compete is AI search visibility for smaller firms, and month-to-month terms.' },
+    { q: 'Why is FactoryJet first on its own list?', a: 'FactoryJet wrote this list and lists itself first. That placement is not a claim that we are the strongest legal specialist: the eight agencies after us are legal specialists and we are not, and a list that pretended otherwise would be worth nothing to you and would not survive being checked. If you want a personal injury specialist with 300 firms behind them, the answer on this page is Rankings.io, not us.' },
     { q: 'Should I read this list or go to your law firm SEO service page?', a: 'Depends where you are. If you are still working out who to approach, stay here: this compares nine agencies on what each is actually good at. If you have decided to hire and want scope and terms, go to our law firm SEO service page. We keep the two separate deliberately so neither pretends to be the other.' },
     { q: 'How was this list researched?', a: 'Three steps, all repeatable. We asked ChatGPT, Claude, Gemini and Perplexity to recommend US law firm SEO companies across three phrasings, twelve answers in total, and recorded every agency named. We then pulled the live US Google results for the head terms. Finally we fetched each shortlisted agency’s own website on 7 September 2026 and took only claims stated there, quoted or attributed. No agency paid to appear and no review scores were invented. Full method in the Methodology section below.' },
   ],
   content: (
     <>
-      <p className="mb-4"><strong>The short answer:</strong> for personal injury, the strongest US law firm SEO company is <strong>Rankings.io</strong>, the only agency named in all twelve of our AI engine tests. For scale and technical depth it is <strong>Hennessey Digital</strong>. For the longest full-service track record it is <strong>Consultwebs</strong>, operating since 1999. FactoryJet appears ninth on this list, and we explain below exactly why we did not put ourselves first.</p>
+      <p className="mb-4"><strong>The short answer:</strong> for personal injury, the strongest US law firm SEO company is <strong>Rankings.io</strong>, the only agency named in all twelve of our AI engine tests. For scale and technical depth it is <strong>Hennessey Digital</strong>. For the longest full-service track record it is <strong>Consultwebs</strong>, operating since 1999. FactoryJet wrote this list and lists itself first, and our entry below explains exactly what that does and does not mean.</p>
 
       <p className="mb-4"><strong>Which page do you actually need?</strong> This one is a shortlist: nine agencies compared so you can decide who to approach. If you have already decided to hire and you want scope and terms, go to our <a href="/services/law-firm-seo" className="text-orange-600 underline">law firm SEO service page</a> instead. We keep the two separate on purpose.</p>
 
-      <p className="mb-4"><strong>Disclosure, up front:</strong> FactoryJet is on this list. Almost every agency publishing a roundup like this puts itself at number one. We put ourselves ninth, because the eight agencies above us are legal specialists and we are not. Everything we say about the other eight was fetched from their own websites on 7 September 2026 and is quoted or attributed. Nothing here is a review score we made up.</p>
+      <p className="mb-4"><strong>Disclosure, up front:</strong> FactoryJet wrote this list and lists itself first. That is not a ranking on legal merit: the eight agencies below us are legal specialists and we are not. Everything we say about the other eight was fetched from their own websites on 7 September 2026 and is quoted or attributed. Nothing here is a review score we made up.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Why legal is the hardest and most expensive SEO market in the US</h2>
       <p className="mb-4">Two numbers explain the whole vertical. &quot;Law firm seo&quot; carries an <strong>$84 average cost per click</strong> in the US, and the client-facing terms underneath it run far higher. That is what your competitors are willing to pay for one click, which tells you what one signed case is worth to them and how hard they will fight for the free results below the ads.</p>
@@ -92,59 +92,59 @@ export const post: BlogPost = {
             </tr>
           </thead>
           <tbody>
-            <tr><td className="p-3 border"><strong>1. Rankings.io</strong></td><td className="p-3 border">Personal injury firms</td><td className="p-3 border">US, remote</td><td className="p-3 border">&quot;300+ PI firms&quot;, &quot;100K+ PI cases&quot;</td></tr>
-            <tr><td className="p-3 border"><strong>2. Hennessey Digital</strong></td><td className="p-3 border">Scale and technical depth</td><td className="p-3 border">North Hollywood, CA</td><td className="p-3 border">Founded 2001, &quot;over 100 people&quot;</td></tr>
-            <tr><td className="p-3 border"><strong>3. Consultwebs</strong></td><td className="p-3 border">Longest full-service record</td><td className="p-3 border">Raleigh, NC</td><td className="p-3 border">Since 1999, &quot;25+ Years&quot;</td></tr>
-            <tr><td className="p-3 border"><strong>4. LawRank</strong></td><td className="p-3 border">Competitive metro markets</td><td className="p-3 border">San Diego + New York</td><td className="p-3 border">Inc 5000 honoree, JDs on staff</td></tr>
-            <tr><td className="p-3 border"><strong>5. BluShark Digital</strong></td><td className="p-3 border">Founder-operator perspective</td><td className="p-3 border">Washington, DC</td><td className="p-3 border">&quot;850+ happy law firm owners&quot;</td></tr>
-            <tr><td className="p-3 border"><strong>6. Juris Digital</strong></td><td className="p-3 border">Content and messaging</td><td className="p-3 border">US, remote</td><td className="p-3 border">StoryBrand certified, Inc Best Workplaces 2023</td></tr>
-            <tr><td className="p-3 border"><strong>7. iLawyer Marketing</strong></td><td className="p-3 border">Multi-market PI campaigns</td><td className="p-3 border">San Diego, CA</td><td className="p-3 border">Founded 2005, &quot;over 20 years&quot;</td></tr>
-            <tr><td className="p-3 border"><strong>8. AttorneySync</strong></td><td className="p-3 border">Measurement discipline</td><td className="p-3 border">Chicago, IL</td><td className="p-3 border">Operating since 2008</td></tr>
-            <tr><td className="p-3 border"><strong>9. FactoryJet</strong> (this is us)</td><td className="p-3 border">Smaller firms prioritising AI search</td><td className="p-3 border">Remote, US coverage</td><td className="p-3 border">Not a legal specialist, see below</td></tr>
+            <tr><td className="p-3 border"><strong>1. FactoryJet</strong> (this is us)</td><td className="p-3 border">Smaller firms prioritising AI search</td><td className="p-3 border">Remote, US coverage</td><td className="p-3 border">Not a legal specialist, see below</td></tr>
+            <tr><td className="p-3 border"><strong>2. Rankings.io</strong></td><td className="p-3 border">Personal injury firms</td><td className="p-3 border">US, remote</td><td className="p-3 border">&quot;300+ PI firms&quot;, &quot;100K+ PI cases&quot;</td></tr>
+            <tr><td className="p-3 border"><strong>3. Hennessey Digital</strong></td><td className="p-3 border">Scale and technical depth</td><td className="p-3 border">North Hollywood, CA</td><td className="p-3 border">Founded 2001, &quot;over 100 people&quot;</td></tr>
+            <tr><td className="p-3 border"><strong>4. Consultwebs</strong></td><td className="p-3 border">Longest full-service record</td><td className="p-3 border">Raleigh, NC</td><td className="p-3 border">Since 1999, &quot;25+ Years&quot;</td></tr>
+            <tr><td className="p-3 border"><strong>5. LawRank</strong></td><td className="p-3 border">Competitive metro markets</td><td className="p-3 border">San Diego + New York</td><td className="p-3 border">Inc 5000 honoree, JDs on staff</td></tr>
+            <tr><td className="p-3 border"><strong>6. BluShark Digital</strong></td><td className="p-3 border">Founder-operator perspective</td><td className="p-3 border">Washington, DC</td><td className="p-3 border">&quot;850+ happy law firm owners&quot;</td></tr>
+            <tr><td className="p-3 border"><strong>7. Juris Digital</strong></td><td className="p-3 border">Content and messaging</td><td className="p-3 border">US, remote</td><td className="p-3 border">StoryBrand certified, Inc Best Workplaces 2023</td></tr>
+            <tr><td className="p-3 border"><strong>8. iLawyer Marketing</strong></td><td className="p-3 border">Multi-market PI campaigns</td><td className="p-3 border">San Diego, CA</td><td className="p-3 border">Founded 2005, &quot;over 20 years&quot;</td></tr>
+            <tr><td className="p-3 border"><strong>9. AttorneySync</strong></td><td className="p-3 border">Measurement discipline</td><td className="p-3 border">Chicago, IL</td><td className="p-3 border">Operating since 2008</td></tr>
           </tbody>
         </table>
       </div>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The nine reviewed</h2>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">1. Rankings.io, best for personal injury</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">1. FactoryJet, for smaller firms prioritising AI search (disclosure: this is us)</h3>
+      <p className="mb-4">We wrote this list and list ourselves first, so be clear about one thing: the eight agencies below are legal specialists and we are not. They have longer histories in the vertical, published legal case studies and, in several cases, hundreds of law firm clients. We would be doing you no favours by pretending otherwise on a page you can check in ten minutes.</p>
+      <p className="mb-4">Where we do compete is narrower. We build for AI search visibility as a first-class deliverable rather than an add-on, tracking citations in ChatGPT, Claude, Gemini and Perplexity separately from Google, and we work month-to-month. For a smaller firm that cannot outspend the metro incumbents on the head terms, being the firm an AI engine names is currently a cheaper fight than being the firm that outranks them. Our scope and terms are on the <a href="/services/law-firm-seo" className="text-orange-600 underline">law firm SEO service page</a>.</p>
+      <p className="mb-4"><strong>Consider us if</strong> you are a smaller firm and AI search visibility is the priority. <strong>Look elsewhere if</strong> you want a PI specialist with three hundred firms behind them. That is Rankings.io, first among the eight specialists below for that reason.</p>
+
+      <h3 className="text-xl font-bold mt-6 mb-3">2. Rankings.io, best for personal injury</h3>
       <p className="mb-4">The clearest consensus pick on this page. When we asked ChatGPT, Claude, Gemini and Perplexity to recommend US law firm SEO companies across three different phrasings, Rankings.io was named in <strong>all twelve answers</strong>. No other agency managed that.</p>
       <p className="mb-4">Its own site states that &quot;more than 300+ PI firms have used Rankings.io to dominate the markets that matter most for high-value MVA, premises liability, and wrongful death cases nationwide&quot;, and that it has &quot;helped generate 100K+ PI cases&quot;. Founder Chris Dreyer is credited with &quot;nine straight years on the Inc. 5000&quot;. It also publishes a &quot;992% ChatGPT Visibility Growth&quot; case study, which makes it one of the few legal agencies putting a number on AI search.</p>
       <p className="mb-4"><strong>Consider it if</strong> you are a personal injury firm competing on high-value case types. <strong>Look elsewhere if</strong> you practise outside PI, where its focus is less pronounced.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">2. Hennessey Digital, best for scale and technical depth</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">3. Hennessey Digital, best for scale and technical depth</h3>
       <p className="mb-4">Founded in 2001 and based in North Hollywood, California, with a stated team of &quot;over 100 people&quot;, which makes it one of the larger dedicated legal shops. Founder Jason Hennessey puts the positioning bluntly on the site: &quot;The legal industry is the most dog-eat-dog place on Google. We started there, thrived there, and grew there on reputation alone.&quot;</p>
       <p className="mb-4">Notably, it states it works on <strong>month-to-month contracts with no minimum engagement terms</strong>, which is unusual at that size and worth weighing if you have been burned by a twelve-month lock-in.</p>
       <p className="mb-4"><strong>Consider it if</strong> you want a large team and short terms. <strong>Look elsewhere if</strong> you want a small senior team working directly on your account.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">3. Consultwebs, best for the longest full-service record</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">4. Consultwebs, best for the longest full-service record</h3>
       <p className="mb-4">Operating since 1999 from Raleigh, North Carolina, which makes it the longest-established agency on this list by some margin. It states &quot;25+ Years of Partnering with Law Firms Like Yours&quot;, &quot;12,000+ Law Firm Leads Generated Monthly&quot;, &quot;316% More Cases in 12 Months on Average&quot; and Google Premier Partner status for 2025.</p>
       <p className="mb-4"><strong>Consider it if</strong> you want one agency covering SEO, paid and web across a multi-office firm. <strong>Look elsewhere if</strong> you want a specialist doing one thing extremely well.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">4. LawRank, best for competitive metro markets</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">5. LawRank, best for competitive metro markets</h3>
       <p className="mb-4">Offices in San Diego and New York, describing &quot;more than a decade&quot; specialising in law firm marketing, an Inc 5000 honoree with Google Partner status. Its published results include a &quot;384% increase in first-time calls within 12 months&quot; and &quot;614% growth in SEO-attributed cases&quot; for Anderson Injury Lawyers. It also notes Juris Doctor holders on the team, which is rarer than it sounds and shows in how legal content gets reviewed.</p>
       <p className="mb-4"><strong>Consider it if</strong> you are fighting for visibility in a saturated city. <strong>Look elsewhere if</strong> you are a single-location firm in a light market and do not need that intensity.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">5. BluShark Digital, best for founder-operator perspective</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">6. BluShark Digital, best for founder-operator perspective</h3>
       <p className="mb-4">Based in Washington, DC. Founder Seth Price is described as having scaled Price Benowitz Accident Injury Lawyers from two attorneys to fifty, so the agency is run by someone who has actually built a law firm rather than only marketed for one. It states &quot;160+ 5-star reviews on Google&quot;, a &quot;4.9 Rating on Clutch.co&quot; and &quot;850+ happy law firm owners&quot;, and lists US Agency Awards wins for B2B Agency of the Year and SEO Agency of the Year.</p>
       <p className="mb-4"><strong>Consider it if</strong> you want an agency that understands intake and firm economics, not only rankings. <strong>Look elsewhere if</strong> you need deep enterprise technical SEO.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">6. Juris Digital, best for content and messaging</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">7. Juris Digital, best for content and messaging</h3>
       <p className="mb-4">A StoryBrand Certified Agency, recognised in Inc Best Workplaces 2023 and featured in Above the Law and Fast Company, with principals citing &quot;30 years of combined experience in SEO and legal digital marketing&quot;. Its published case studies lean toward lead volume: &quot;450+ Leads Per Month&quot; for TAC Injury Law and &quot;200+ Criminal Defence Leads per Month&quot; for Moses &amp; Rooth.</p>
       <p className="mb-4"><strong>Consider it if</strong> your website converts poorly despite decent traffic, which is usually a messaging problem rather than an SEO one. <strong>Look elsewhere if</strong> you need heavy technical remediation first.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">7. iLawyer Marketing, best for multi-market PI campaigns</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">8. iLawyer Marketing, best for multi-market PI campaigns</h3>
       <p className="mb-4">Founded in 2005 and based in San Diego, stating it has been &quot;trusted for over 20 years in legal marketing&quot; and listing active work across Los Angeles, New York, Dallas, Chicago, Houston, Phoenix, Austin and a dozen more metros. Published figures include &quot;141% YOY Signed Case Growth&quot; and &quot;94% Page 1 Rankings Across 600+ Keywords&quot; for personal injury clients, plus a &quot;139% Increase in AI Referral Traffic&quot; figure that puts it among the few legal agencies measuring AI search.</p>
       <p className="mb-4"><strong>Consider it if</strong> you are running campaigns across several metros at once. <strong>Look elsewhere if</strong> you want a boutique relationship.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">8. AttorneySync, best for measurement discipline</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">9. AttorneySync, best for measurement discipline</h3>
       <p className="mb-4">Chicago-based and operating since 2008, working with consumer-facing law firms across criminal defence and personal injury. What stands out is how it frames the work: &quot;integrated legal marketing solutions for consumer-facing law firms measured in qualified consultations, retained cases, and revenue&quot;. Published results include &quot;10x return on investment&quot; for a Connecticut criminal defence firm and &quot;91% growth in cases&quot; for a South Carolina PI firm.</p>
       <p className="mb-4"><strong>Consider it if</strong> you have been burned by traffic reports that never turned into cases. <strong>Look elsewhere if</strong> you want a large team on the account.</p>
-
-      <h3 className="text-xl font-bold mt-6 mb-3">9. FactoryJet, for smaller firms prioritising AI search (disclosure: this is us)</h3>
-      <p className="mb-4">We are ninth on our own list, and the reason is simple: the eight agencies above are legal specialists and we are not. They have longer histories in the vertical, published legal case studies and, in several cases, hundreds of law firm clients. We would be doing you no favours by pretending otherwise on a page you can check in ten minutes.</p>
-      <p className="mb-4">Where we do compete is narrower. We build for AI search visibility as a first-class deliverable rather than an add-on, tracking citations in ChatGPT, Claude, Gemini and Perplexity separately from Google, and we work month-to-month. For a smaller firm that cannot outspend the metro incumbents on the head terms, being the firm an AI engine names is currently a cheaper fight than being the firm that outranks them. Our scope and terms are on the <a href="/services/law-firm-seo" className="text-orange-600 underline">law firm SEO service page</a>.</p>
-      <p className="mb-4"><strong>Consider us if</strong> you are a smaller firm and AI search visibility is the priority. <strong>Look elsewhere if</strong> you want a PI specialist with three hundred firms behind them. That is Rankings.io, and we have ranked it first for that reason.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What AI engines actually read before recommending a law firm</h2>
       <p className="mb-4">This is worth knowing whether or not you hire anyone on this page, because it is counter-intuitive and most agencies have not adjusted to it.</p>

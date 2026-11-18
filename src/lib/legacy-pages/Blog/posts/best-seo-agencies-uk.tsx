@@ -49,6 +49,21 @@ interface Agency {
 
 const AGENCIES: Agency[] = [
   {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/uk/seo',
+    sources: ['https://factoryjet.com/uk/seo'],
+    group: 'us',
+    based: 'Works remotely with UK clients and schedules calls in UK business hours',
+    type: 'Founder-led SEO consultancy with its own developers; 500+ businesses served since 2014',
+    ai: true,
+    clients: 'No SEO client is named in this profile; ask us for a reference in your sector',
+    what: 'FactoryJet runs SEO with one senior person accountable from audit to results, and the same team writes and builds the pages, so fixes ship as plain HTML that Google and AI crawlers can read without running scripts. That covers technical SEO, local SEO, ecommerce category and product pages, and reporting on rankings, organic traffic, enquiries and where you appear in ChatGPT, Gemini, Perplexity and AI Overviews. Each phase has a fixed price, quoted in writing. Changes are quoted and approved per request, and there is no monthly minimum.',
+    proof: 'No SEO result is published in this profile. Across all its work, FactoryJet has served 500+ businesses since 2014, delivers 97% of projects on time and holds a 4.9 average review rating.',
+    price: 'No rate card. The price is fixed in writing after a free audit call, which covers twelve checks written up in plain English.',
+    bestFor: 'A business that wants the person who writes the SEO plan to also build the pages.',
+    ask: 'To see the twelve-check audit of your own site before you agree to anything.',
+  },
+  {
     name: 'Brainlabs',
     url: 'https://www.brainlabsdigital.com/',
     sources: ['https://www.brainlabsdigital.com/', 'https://www.brainlabsdigital.com/about-us/'],
@@ -275,24 +290,14 @@ const AGENCIES: Agency[] = [
     bestFor: 'A local business (a trade, a clinic, a shop) that wants an affordable starting point and one supplier for site and ads.',
     ask: 'What the SEO part of a package costs on its own, and how many hours a month it buys.',
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/uk/seo',
-    sources: ['https://factoryjet.com/uk/seo'],
-    group: 'us',
-    based: 'Works remotely with UK clients and schedules calls in UK business hours',
-    type: 'Founder-led SEO consultancy with its own developers; 500+ businesses served since 2014',
-    ai: true,
-    clients: 'No SEO client is named in this profile; ask us for a reference in your sector',
-    what: 'FactoryJet runs SEO with one senior person accountable from audit to results, and the same team writes and builds the pages, so fixes ship as plain HTML that Google and AI crawlers can read without running scripts. That covers technical SEO, local SEO, ecommerce category and product pages, and reporting on rankings, organic traffic, enquiries and where you appear in ChatGPT, Gemini, Perplexity and AI Overviews. Each phase has a fixed price, quoted in writing. Changes are quoted and approved per request, and there is no monthly minimum.',
-    proof: 'No SEO result is published in this profile. Across all its work, FactoryJet has served 500+ businesses since 2014, delivers 97% of projects on time and holds a 4.9 average review rating.',
-    price: 'No rate card. The price is fixed in writing after a free audit call, which covers twelve checks written up in plain English.',
-    bestFor: 'A business that wants the person who writes the SEO plan to also build the pages.',
-    ask: 'To see the twelve-check audit of your own site before you agree to anything.',
-  },
 ];
 
 const GROUPS: { key: Group; heading: string; intro: string }[] = [
+  {
+    key: 'us',
+    heading: 'Where FactoryJet fits (we wrote this list)',
+    intro: 'We wrote this list and list ourselves first. Read our entry with that in mind.',
+  },
   {
     key: 'enterprise',
     heading: 'Best SEO agencies in the UK for large, multi-market brands',
@@ -317,11 +322,6 @@ const GROUPS: { key: Group; heading: string; intro: string }[] = [
     key: 'sme',
     heading: 'Best SEO companies in the UK for small and local businesses',
     intro: 'These two are built around small firms: lower entry points, local SEO and Google Business Profile work, and teams in the North of England.',
-  },
-  {
-    key: 'us',
-    heading: 'Where FactoryJet fits (we wrote this list)',
-    intro: 'We are on our own list, last and unranked. Read our entry with that in mind.',
   },
 ];
 
@@ -442,7 +442,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Why is FactoryJet on its own list?',
-    a: 'We run SEO for UK businesses, so leaving ourselves off would hide a real option, and ranking ourselves first would be a claim we cannot prove. We are listed last, in our own section, with the same facts as everyone else: where we work, what we do, what we do not publish, and what to ask us.',
+    a: 'We run SEO for UK businesses, so leaving ourselves off would hide a real option. FactoryJet wrote this list and lists itself first, in its own section. That placement is not a ranking, and the other agencies are not ranked either. Our entry uses the same facts as everyone else: where we work, what we do, what we do not publish, and what to ask us.',
   },
 ];
 
@@ -451,11 +451,11 @@ export const post: BlogPost = {
   slug: 'best-seo-agencies-uk',
   title: 'Best SEO Agencies in the UK (2026): 14 Checked, Plus FactoryJet',
   excerpt:
-    'The best SEO agencies in the UK for large brands, online stores, technical work and small businesses: 14 agencies checked on their own websites and on Clutch on 16 November 2026, with printed prices, contract terms and awards. FactoryJet wrote this list and is on it, last.',
+    'The best SEO agencies in the UK for large brands, online stores, technical work and small businesses: 14 agencies checked on their own websites and on Clutch on 16 November 2026, with printed prices, contract terms and awards. FactoryJet wrote this list and lists itself first.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jun 11, 2026',
-  dateModified: 'Nov 16, 2026',
+  dateModified: 'Nov 18, 2026',
   readTime: '28 min read',
   imageUrl: '/blog-images/best-seo-agencies-uk-2026.webp',
   meta: {
@@ -503,7 +503,7 @@ export const post: BlogPost = {
           For small and local businesses, The SEO Works or Add People. For growth led by content and press coverage, Builtvisible, Rise at Seven, Impression or ROAST.
         </p>
         <p className="text-amber-800">
-          We read every agency&rsquo;s own website and Clutch profile on {CHECKED}. Nobody paid to be listed, and the order is not a ranking. FactoryJet wrote this guide and is on it, last.
+          We read every agency&rsquo;s own website and Clutch profile on {CHECKED}. Nobody paid to be listed. FactoryJet wrote this guide and lists itself first; the other agencies are not in ranked order.
         </p>
       </div>
 
@@ -517,7 +517,7 @@ export const post: BlogPost = {
         So this guide starts from each agency&rsquo;s own website. For every firm we noted where it is based, what it sells, clients it names, one result it publishes, any award it claims, any price or contract term it prints, and its Clutch figures. Every fact is dated and linked.
       </p>
       <p className="mb-6">
-        <strong>A note on who wrote this.</strong> FactoryJet runs <a href="/uk/seo" className={link}>SEO for UK businesses</a>, so we are on this list, in the last section. Read every list with care, ours included. If you sell to other businesses, our <a href="/blog/best-b2b-seo-agencies-uk-2026" className={link}>best B2B SEO agencies in the UK</a> list goes deeper. For AI search specialists, see our <a href="/blog/best-ai-seo-agencies-uk" className={link}>UK AI SEO and GEO agencies</a> list, and for stores, our <a href="/blog/best-ecommerce-seo-agencies-uk-2026" className={link}>UK ecommerce SEO agencies</a> list.
+        <strong>A note on who wrote this.</strong> FactoryJet runs <a href="/uk/seo" className={link}>SEO for UK businesses</a>, so we are on this list, in the first section. Read every list with care, ours included. If you sell to other businesses, our <a href="/blog/best-b2b-seo-agencies-uk-2026" className={link}>best B2B SEO agencies in the UK</a> list goes deeper. For AI search specialists, see our <a href="/blog/best-ai-seo-agencies-uk" className={link}>UK AI SEO and GEO agencies</a> list, and for stores, our <a href="/blog/best-ecommerce-seo-agencies-uk-2026" className={link}>UK ecommerce SEO agencies</a> list.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The best SEO agencies in the UK at a glance</h2>

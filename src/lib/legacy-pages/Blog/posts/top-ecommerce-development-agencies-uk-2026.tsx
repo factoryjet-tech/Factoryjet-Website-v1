@@ -23,6 +23,15 @@ interface Firm {
 
 const FIRMS: Firm[] = [
   {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/uk/ecommerce-development',
+    source: 'https://factoryjet.com/uk/ecommerce-development',
+    based: 'Works remotely with UK clients and schedules calls in UK business hours',
+    platforms: 'Shopify and Shopify Plus, WooCommerce, Magento, headless, Xero, Odoo, NetSuite, SAP Business One, ERPNext',
+    what: 'A registered Shopify Partner that builds, migrates and supports stores, with a focus on the engineering below the theme: B2B set-up, checkout rules and the links to accounting and ERP systems. We also build AI agents that work inside the store. We show working software on your own data before a contract, and you own what we build.',
+    bestFor: 'Brands and B2B sellers that want the store, the integrations and AI in one team.',
+  },
+  {
     name: 'Charle',
     url: 'https://www.charle.co.uk/',
     source: 'https://www.charle.co.uk/shopify-plus-agency/',
@@ -103,15 +112,6 @@ const FIRMS: Firm[] = [
     what: 'Says it built the 90th Shopify store in the world in 2006 and has been a Shopify Plus agency since 2014. Work is in-house and runs from design and development to migration, conversion work, SEO and subscriptions. It now lists AI consultancy.',
     bestFor: 'Brands already on Shopify Plus that want higher conversion and more repeat orders.',
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/uk/ecommerce-development',
-    source: 'https://factoryjet.com/uk/ecommerce-development',
-    based: 'Works remotely with UK clients and schedules calls in UK business hours',
-    platforms: 'Shopify and Shopify Plus, WooCommerce, Magento, headless, Xero, Odoo, NetSuite, SAP Business One, ERPNext',
-    what: 'A registered Shopify Partner that builds, migrates and supports stores, with a focus on the engineering below the theme: B2B set-up, checkout rules and the links to accounting and ERP systems. We also build AI agents that work inside the store. We show working software on your own data before a contract, and you own what we build.',
-    bestFor: 'Brands and B2B sellers that want the store, the integrations and AI in one team.',
-  },
 ];
 
 // Business sites on Google's first page for "ecommerce agency uk" (location
@@ -165,11 +165,11 @@ export const post: BlogPost = {
   id: '131',
   slug: "top-ecommerce-development-agencies-uk-2026",
   title: TITLE,
-  excerpt: "Ten UK ecommerce agencies compared on platform, location and the work each one shows on its own site, with published UK build prices in pounds, the Shopify Plus question, and what to ask before you sign. FactoryJet wrote this guide and is on the list, last.",
+  excerpt: "Ten UK ecommerce agencies compared on platform, location and the work each one shows on its own site, with published UK build prices in pounds, the Shopify Plus question, and what to ask before you sign. FactoryJet wrote this guide and lists itself first.",
   category: "E-Commerce Development",
   author: 'Bhavesh Barot',
   date: "May 04, 2026",
-  dateModified: 'Oct 29, 2026',
+  dateModified: 'Nov 18, 2026',
   readTime: '18 min read',
   imageUrl: "/blog-images/top-ecommerce-development-agencies-uk-2026-hero.webp",
   meta: {
@@ -212,7 +212,7 @@ export const post: BlogPost = {
           There is no single best ecommerce agency in the UK. For design-led consumer brands, look at Charle (London) and Cake Agency (Birmingham). For a move from Magento or another platform, Swanky, blubolt and Kubix. For B2B and ERP work, Velstar and magic42. For search-led growth, Imaginaire and Underwaterpistol.
         </p>
         <p className="text-amber-800">
-          Every outside firm&rsquo;s facts come from its own website, read on 11 October 2026. Nobody paid to be listed, and the order is not a ranking. FactoryJet wrote this guide and is on it, last.
+          Every outside firm&rsquo;s facts come from its own website, read on 11 October 2026. Nobody paid to be listed, and the order is not a ranking. FactoryJet wrote this guide and lists itself first.
         </p>
       </div>
 
@@ -238,7 +238,7 @@ export const post: BlogPost = {
 
       <h2 id="agencies" className="text-2xl font-bold mt-8 mb-4">Ecommerce agency UK: 10 development agencies compared</h2>
       <p className="mb-4">
-        We read each firm&rsquo;s own pages on 11 October 2026 and wrote down what it says it does, where it is based and which platforms it builds on. We did not review their work or speak to their clients. Nine are outside firms. The tenth is FactoryJet, and we have marked it so you can read that entry with that in mind.
+        We read each firm&rsquo;s own pages on 11 October 2026 and wrote down what it says it does, where it is based and which platforms it builds on. We did not review their work or speak to their clients. Nine are outside firms. The first is FactoryJet, and we have marked it so you can read that entry with that in mind.
       </p>
 
       <div className="overflow-x-auto mb-8">
@@ -395,7 +395,7 @@ export const post: BlogPost = {
       <p className="mb-4">If an agency won't commit to a week-by-week delivery plan with named milestones and client review gates, they're guessing, not building. Serious e-commerce partners map every stage: discovery, wireframes approved, a staging store live for you to test. Ask for three client references with full contact details: the director's name, a phone number, permission to ring them. Portfolio screenshots mean little; live URLs, Google PageSpeed scores, and a ten-minute conversation with the business owner tell you far more. If the agency hesitates or offers only first names and email addresses, ask why. No legitimate agency guarantees conversion rates or monthly revenue figures. They can improve checkout flow, site speed and product pages, but they cannot control your pricing, product-market fit, or the quality of traffic your ads deliver. Promises of "5% conversion guaranteed" or "double your sales in ninety days" ignore every variable outside their control. Technical specifications separate builders from decorators. A proper proposal states the hosting set-up, commits to a Lighthouse Performance target, defines backup frequency and retention, and lists security measures like firewall rules and PCI DSS checks. If the document focuses on colour palettes and stock photos but skips how the store runs, you're buying a brochure site with a payment button. Finally, walk away from urgency tactics. "Sign by Friday for twenty percent off" or "only two slots left this quarter" are car-dealership moves. Agencies confident in their work answer questions, provide contracts for legal review, and let you decide.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">How FactoryJet Delivers E-Commerce on a Fixed, Up-Front Price</h2>
-      <p className="mb-4">We are on the list above, so here is how we work, in plain terms. We hold client calls in UK working hours, write in British English, and have served 500+ businesses since FactoryJet was founded in 2014. Before a contract, we show working software on your own data: for a Shopify store, that means a draft theme built inside your own store. Every build is then quoted as a fixed price in writing after a short scoping call, based on catalogue size and integration complexity, and any support you choose is quoted the same way. Belle Maison, a lighting and home decor retailer, needed one store for trade buyers and retail customers, with payments and delivery zones; it went live in 6 days on Commerceflo, not Shopify. GPSUK, a Staines promotional products distributor, needed a B2B platform with RFQ workflows, trade accounts, artwork upload and print preview for custom merchandise, which we built on a custom B2B stack. A store with a custom theme takes 3 to 5 weeks, a store with subscriptions, B2B pricing or a migration takes 5 to 8 weeks, and a headless or custom build takes 8 to 14 weeks. The speed comes from standard stacks, reusable components, and a team that has built stores for retail, wholesale and hybrid models.</p>
+      <p className="mb-4">We are first on the list above, so here is how we work, in plain terms. We hold client calls in UK working hours, write in British English, and have served 500+ businesses since FactoryJet was founded in 2014. Before a contract, we show working software on your own data: for a Shopify store, that means a draft theme built inside your own store. Every build is then quoted as a fixed price in writing after a short scoping call, based on catalogue size and integration complexity, and any support you choose is quoted the same way. Belle Maison, a lighting and home decor retailer, needed one store for trade buyers and retail customers, with payments and delivery zones; it went live in 6 days on Commerceflo, not Shopify. GPSUK, a Staines promotional products distributor, needed a B2B platform with RFQ workflows, trade accounts, artwork upload and print preview for custom merchandise, which we built on a custom B2B stack. A store with a custom theme takes 3 to 5 weeks, a store with subscriptions, B2B pricing or a migration takes 5 to 8 weeks, and a headless or custom build takes 8 to 14 weeks. The speed comes from standard stacks, reusable components, and a team that has built stores for retail, wholesale and hybrid models.</p>
       <p className="mb-4">➡ Learn more: <a href="/uk/ecommerce-development" className={link}>Ecommerce Development</a>, <a href="/uk/shopify-plus" className={link}>Shopify Plus</a> or an <a href="/uk/ecommerce-consultant" className={link}>ecommerce consultant audit</a></p>
 
       <div className="overflow-x-auto mb-8">

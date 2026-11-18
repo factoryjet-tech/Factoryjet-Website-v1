@@ -30,6 +30,18 @@ interface Firm {
 
 const FIRMS: Firm[] = [
   {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/services/ai-agent-development',
+    source: 'https://factoryjet.com/services/ai-agent-development',
+    group: 'Us',
+    based: 'Works with US clients remotely and schedules calls in US business hours',
+    type: 'AI agents, AI consulting and AI inside ecommerce and operations',
+    clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
+    what: 'We map one process, then design, build and support custom AI agents, AI receptionists and customer service agents inside the tools you already use, with human approval steps. Our strongest ground is where AI meets online stores, B2B ordering, finance and operations. We are a registered Shopify Partner. The founder is involved in every project, and you own what we build.',
+    bestFor: 'Ecommerce and operations-heavy businesses that want one team for the store, the integrations and the AI.',
+    ask: 'Whether a remote team suits you. If you need people on site every week, pick a firm with an office near you.',
+  },
+  {
     name: 'Deloitte (US)',
     url: 'https://www.deloitte.com/us/en/services/consulting/services/artificial-intelligence-and-data.html',
     source: 'https://www.deloitte.com/us/en/services/consulting/services/artificial-intelligence-and-data.html',
@@ -216,21 +228,9 @@ const FIRMS: Firm[] = [
     bestFor: 'Credit unions, community banks and universities that want a sector-aware boutique.',
     ask: 'What the fixed-price assessment includes and what it costs.',
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/services/ai-agent-development',
-    source: 'https://factoryjet.com/services/ai-agent-development',
-    group: 'Us',
-    based: 'Works with US clients remotely and schedules calls in US business hours',
-    type: 'AI agents, AI consulting and AI inside ecommerce and operations',
-    clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
-    what: 'We map one process, then design, build and support custom AI agents, AI receptionists and customer service agents inside the tools you already use, with human approval steps. Our strongest ground is where AI meets online stores, B2B ordering, finance and operations. We are a registered Shopify Partner. The founder is involved in every project, and you own what we build.',
-    bestFor: 'Ecommerce and operations-heavy businesses that want one team for the store, the integrations and the AI.',
-    ask: 'Whether a remote team suits you. If you need people on site every week, pick a firm with an office near you.',
-  },
 ];
 
-const GROUPS: Group[] = ['Enterprise and strategy', 'Technology consultancies', 'Mid-market AI specialists', 'Small business and boutique', 'Us'];
+const GROUPS: Group[] = ['Us', 'Enterprise and strategy', 'Technology consultancies', 'Mid-market AI specialists', 'Small business and boutique'];
 
 const GROUP_INTRO: Record<Group, string> = {
   'Enterprise and strategy':
@@ -241,7 +241,7 @@ const GROUP_INTRO: Record<Group, string> = {
     'Smaller firms whose main business is building AI and software. The people who scope the work usually help build it.',
   'Small business and boutique':
     'Firms that say plainly they serve smaller companies or one set of industries. Easier to reach the principal, smaller minimum projects.',
-  Us: 'We build AI agents, so we are on this list. We put ourselves last and say where we do not fit.',
+  Us: 'We build AI agents, so we are on this list. FactoryJet wrote this list and lists itself first, and says where it does not fit.',
 };
 
 // Published prices, copied from each firm's own page on 26 Sep 2026.
@@ -285,7 +285,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'What are the 10 best AI consulting firms?',
-    a: 'There is no neutral top 10, and most lists online are written by firms that rank themselves first. Use this guide the other way round: decide whether you need strategy, a build or both, set a realistic budget, then shortlist three firms from the matching group above and send each the same one-page brief.',
+    a: 'There is no neutral top 10. Use this guide the other way round: decide whether you need strategy, a build or both, set a realistic budget, then shortlist three firms from the matching group above and send each the same one-page brief.',
   },
   {
     q: 'What does an AI consulting company do?',
@@ -435,7 +435,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 26, 2026',
-  dateModified: 'Oct 10, 2026',
+  dateModified: 'Nov 18, 2026',
   readTime: '19 min read',
   imageUrl: '/og-default.png',
   imageAlt: 'FactoryJet',
@@ -467,7 +467,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-09-26',
-              dateModified: '2026-10-10',
+              dateModified: '2026-11-18',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI consulting firms in the United States' },
@@ -496,10 +496,10 @@ export const post: BlogPost = {
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">The short answer</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          The best AI consulting firm in the USA depends on what you are buying. For CEO-level AI strategy, BCG and Bain. For large governed programs, Deloitte and IBM Consulting. For federal work, Booz Allen Hamilton. For mid-market builds, RTS Labs, Centric Consulting and West Monroe. For regulated AI products, EffectiveSoft. For AI engineers in US time zones, Azumo. For AI inside an online store or order flow, FactoryJet, which works remotely.
+          The best AI consulting firm in the USA depends on what you are buying. For AI inside an online store or order flow, FactoryJet, which works remotely. For CEO-level AI strategy, BCG and Bain. For large governed programs, Deloitte and IBM Consulting. For federal work, Booz Allen Hamilton. For mid-market builds, RTS Labs, Centric Consulting and West Monroe. For regulated AI products, EffectiveSoft. For AI engineers in US time zones, Azumo.
         </p>
         <p className="text-gray-800 leading-relaxed">
-          We checked all 16 firms on their own websites on 26 September 2026: where each is based, what it does, who it serves and any price it publishes. Nobody paid to be listed. The order is not a ranking; use the table to match firms to your situation.
+          We checked all 16 firms on their own websites on 26 September 2026: where each is based, what it does, who it serves and any price it publishes. Nobody paid to be listed. The order is not a ranking; use the table to match firms to your situation. FactoryJet wrote this list and lists itself first.
         </p>
       </div>
 
@@ -510,7 +510,7 @@ export const post: BlogPost = {
         So we did the slow part. We picked US firms that buyers and AI assistants name most often, across every size band, opened each firm&rsquo;s own website, and wrote down only what the firm says about itself. Every profile links to its source. We confirmed on every other firm&rsquo;s own site that it is a US firm or has a US base.
       </p>
       <p className="mb-4">
-        <strong>A note on honesty.</strong> FactoryJet designs, builds and supports AI agents, so we are on this list. We put ourselves last, and we tell you where another firm on this page will suit you better. Read every list with that in mind, including this one.
+        <strong>A note on honesty.</strong> FactoryJet designs, builds and supports AI agents, so we are on this list. FactoryJet wrote this list and lists itself first, and we tell you where another firm on this page will suit you better. Read every list with that in mind, including this one.
       </p>
       <p className="mb-6">
         A few terms first, in plain English. An <strong>AI consulting firm</strong> helps you decide where AI fits and how to introduce it safely. An <strong>implementation partner</strong> builds and connects it to your systems. An <strong>AI agent</strong> is software that takes actions in your systems, such as updating an order or drafting a reply for approval, rather than only chatting. <strong>Forward-deployed engineers</strong> are a firm&rsquo;s engineers placed inside your team. Many firms below do some of all of these.
@@ -565,7 +565,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The best AI consulting firms in the USA, profiled</h2>
       <p className="mb-6">
-        The order is not a ranking. Firms are grouped by the buyer they suit, from the largest programs to the smallest, with us last.
+        The order is not a ranking. Firms are grouped by the buyer they suit, with us first, then from the largest programs to the smallest.
       </p>
 
       {GROUPS.map((g) => {

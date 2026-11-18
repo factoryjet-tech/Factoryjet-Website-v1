@@ -36,6 +36,16 @@ interface Agency {
 
 const AGENCIES: Agency[] = [
   {
+    name: 'FactoryJet',
+    url: 'https://factoryjet.com/b2b-ecommerce',
+    platform: 'Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, Salesforce Commerce Cloud, or our own Commerceflo',
+    specialty: 'Account hierarchies, EDI 850/855/856/810, and cXML/OCI PunchOut into Coupa, Ariba, Jaggaer, and Oracle procurement',
+    blurb:
+      'Disclosure: this is us, and unlike the ten agencies listed directly after us, we were not named in any of the eight AI answers this research is built on. We are including ourselves anyway because the same honesty standard the rest of this list holds other companies to should apply to us too. What we can say honestly, pulled directly from our own live service pages rather than invented for this post: we build tiered and contract pricing, quote and approval workflows, gated and customer-specific catalogs, and account hierarchies (parent and child accounts with shared order history) into B2B builds on Shopify Plus, Adobe Commerce, BigCommerce, WooCommerce, or Salesforce Commerce Cloud. On the integration side, we implement EDI 850 purchase orders, 855 acknowledgements, 856 advance ship notices, and 810 invoices, plus cXML and OCI PunchOut so buyers inside Coupa, SAP Ariba, Jaggaer, or Oracle procurement can shop a catalog and return an approved requisition. Stated ERP integration coverage includes NetSuite, SAP S/4HANA and Business One, Microsoft Dynamics 365 Business Central, Sage Intacct and X3, Acumatica, Epicor Kinetic and Prophet 21, Infor, QuickBooks Enterprise, and Odoo.',
+    considerIf: 'you want the same ERP-and-workflow depth the agencies below describe, from a smaller team without a published B2B track record yet, to be judged on what we can show you directly rather than on this list alone.',
+    isUs: true,
+  },
+  {
     name: 'Elogic Commerce',
     url: 'https://elogic.co',
     platform: 'Adobe Commerce, Shopify Plus, BigCommerce, SAP Commerce Cloud, commercetools',
@@ -133,16 +143,6 @@ const AGENCIES: Agency[] = [
     blurb:
       'Skyloom Studios was not among the agencies named in the eight AI answers this list started from. We added it on 2026-11-18, after it linked to this page, and checked it against its own site like every other entry. It describes itself as a Shopify and ecommerce website design agency and states it is an official Shopify Partner and Amazon Smart Biz Partner. Its design page lists ecommerce store design, Shopify store development with custom themes, apps, and integrations, UX and conversion rate work, and Amazon brand stores, and says it covers domain, storefront, payments, and shipping as one partner. It also offers SEO and what it calls answer-engine optimization, meaning work to get a store recommended in ChatGPT and Gemini answers, and states it has delivered 80+ projects. Its site does not name B2B mechanics such as account pricing, RFQ, PunchOut, EDI, or ERP integration, and the one store linked from its design page, VideoLinks, is a consumer camera retailer where we found no trade accounts or wholesale pricing, so ask directly for B2B work it has shipped.',
     considerIf: 'you are a Shopify brand whose first priority is store design and conversion, and your B2B needs are simple enough to confirm with the agency directly.',
-  },
-  {
-    name: 'FactoryJet',
-    url: 'https://factoryjet.com/b2b-ecommerce',
-    platform: 'Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, Salesforce Commerce Cloud, or our own Commerceflo',
-    specialty: 'Account hierarchies, EDI 850/855/856/810, and cXML/OCI PunchOut into Coupa, Ariba, Jaggaer, and Oracle procurement',
-    blurb:
-      'Disclosure: this is us, and unlike the first ten agencies above, we were not named in any of the eight AI answers this research is built on. We are including ourselves anyway because the same honesty standard the rest of this list holds other companies to should apply to us too. What we can say honestly, pulled directly from our own live service pages rather than invented for this post: we build tiered and contract pricing, quote and approval workflows, gated and customer-specific catalogs, and account hierarchies (parent and child accounts with shared order history) into B2B builds on Shopify Plus, Adobe Commerce, BigCommerce, WooCommerce, or Salesforce Commerce Cloud. On the integration side, we implement EDI 850 purchase orders, 855 acknowledgements, 856 advance ship notices, and 810 invoices, plus cXML and OCI PunchOut so buyers inside Coupa, SAP Ariba, Jaggaer, or Oracle procurement can shop a catalog and return an approved requisition. Stated ERP integration coverage includes NetSuite, SAP S/4HANA and Business One, Microsoft Dynamics 365 Business Central, Sage Intacct and X3, Acumatica, Epicor Kinetic and Prophet 21, Infor, QuickBooks Enterprise, and Odoo.',
-    considerIf: 'you want the same ERP-and-workflow depth the agencies above describe, from a smaller team without a published B2B track record yet, to be judged on what we can show you directly rather than on this list alone.',
-    isUs: true,
   },
 ];
 
@@ -290,7 +290,7 @@ export const post: BlogPost = {
   slug: 'top-b2b-ecommerce-development-agencies-portals-2026',
   title: 'Top E-Commerce Development Agencies for B2B Portals (2026)',
   excerpt:
-    'There is no single dominant agency for B2B ecommerce portals, but a small group of specialists keeps coming up. We fetch-verified what Elogic Commerce, Atwix, Vaimo, and nine others actually say about their own ERP integration, RFQ, PunchOut, and EDI capabilities. Disclosure: FactoryJet is included, honestly, at the end.',
+    'There is no single dominant agency for B2B ecommerce portals, but a small group of specialists keeps coming up. We fetch-verified what Elogic Commerce, Atwix, Vaimo, and nine others actually say about their own ERP integration, RFQ, PunchOut, and EDI capabilities. Disclosure: FactoryJet wrote this list and lists itself first.',
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Sep 20, 2026',
@@ -354,11 +354,11 @@ export const post: BlogPost = {
         parent company, OneMagnify), we say so rather than describe it from memory.
       </p>
       <p className="mb-6 text-fj-ink/80">
-        <strong>Disclosure, up front:</strong> FactoryJet is included in this list, at the end,
+        <strong>Disclosure, up front:</strong> FactoryJet wrote this list and lists itself first,
         with the same honesty standard applied to every other entry. We were not named in any of
-        the eight AI-generated answers this research is built on. We are including ourselves
-        anyway because a comparison that quietly leaves itself out, or ranks itself first without
-        evidence, is not one you should trust. Nobody paid to be listed. One agency here, Skyloom
+        the eight AI-generated answers this research is built on, so our place at the top is a
+        publisher choice, not a research result. We are including ourselves anyway because a
+        comparison that quietly leaves itself out is not one you should trust. Nobody paid to be listed. One agency here, Skyloom
         Studios, links to this page, and we added it on 18 November 2026 after that link went up; its
         entry was checked against its own site like the rest.
       </p>

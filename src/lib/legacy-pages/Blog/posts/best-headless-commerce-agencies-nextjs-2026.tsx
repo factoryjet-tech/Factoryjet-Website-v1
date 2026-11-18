@@ -13,8 +13,8 @@ const META_DESCRIPTION =
 // agency's own website or its listing in Vercel's partner directory (URL in
 // `source`, `hqSource` where the location came from another page). Partner
 // tiers in `partner` come from the directory itself; tiers an agency claims on
-// its own site are labelled as claims in `what`. Not paid placement, and the
-// order is NOT a ranking. The ItemList schema maps from this same array.
+// its own site are labelled as claims in `what`. Not paid placement. FactoryJet
+// wrote this list and lists itself first; the order of the rest is NOT a ranking. The ItemList schema maps from this same array.
 type Group = 'US agencies, Shopify and more' | 'US agencies, BigCommerce first' | 'Large US agencies' | 'Outside the US, with US clients' | 'Us';
 
 interface Firm {
@@ -36,6 +36,22 @@ interface Firm {
 }
 
 const FIRMS: Firm[] = [
+  {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/',
+    source: 'https://factoryjet.com/services/headless-shopify-development',
+    partner: 'Not stated on this page',
+    group: 'Us',
+    based: 'Serves US clients, with calls in US business hours',
+    type: 'Commerce and AI services company',
+    clients: 'We can name DTF (Shopify) and GPSUK (Commerceflo). This page does not name a headless Next.js storefront client of ours, so ask us for one',
+    frameworks: 'Next.js with the App Router and React Server Components',
+    backends: 'Shopify and Shopify Plus through the Storefront API, BigCommerce, Commerceflo by FactoryJet',
+    cms: 'Sanity',
+    what: 'We build headless storefronts in Next.js on Shopify, BigCommerce or Commerceflo by FactoryJet, with Sanity for content. Shopify keeps checkout, so Shop Pay and its fraud checks stay. We connect the store to QuickBooks or an ERP and can add AI agents for order work. We can show a working draft built with your own products before you sign.',
+    bestFor: 'Brands that want the storefront, the back-office connections and AI agents from one team.',
+    ask: 'Which headless Next.js storefront have you shipped, and can we open it on a phone?',
+  },
   {
     name: '1Digital Agency',
     url: 'https://www.1digitalagency.com/',
@@ -223,25 +239,9 @@ const FIRMS: Firm[] = [
     bestFor: 'Content-rich stores with complex needs, in its words.',
     ask: 'Would you build our storefront on Next.js or Hydrogen, and what drives that call?',
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/',
-    source: 'https://factoryjet.com/services/headless-shopify-development',
-    partner: 'Not stated on this page',
-    group: 'Us',
-    based: 'Serves US clients, with calls in US business hours',
-    type: 'Commerce and AI services company',
-    clients: 'We can name DTF (Shopify) and GPSUK (Commerceflo). This page does not name a headless Next.js storefront client of ours, so ask us for one',
-    frameworks: 'Next.js with the App Router and React Server Components',
-    backends: 'Shopify and Shopify Plus through the Storefront API, BigCommerce, Commerceflo by FactoryJet',
-    cms: 'Sanity',
-    what: 'We build headless storefronts in Next.js on Shopify, BigCommerce or Commerceflo by FactoryJet, with Sanity for content. Shopify keeps checkout, so Shop Pay and its fraud checks stay. We connect the store to QuickBooks or an ERP and can add AI agents for order work. We can show a working draft built with your own products before you sign.',
-    bestFor: 'Brands that want the storefront, the back-office connections and AI agents from one team.',
-    ask: 'Which headless Next.js storefront have you shipped, and can we open it on a phone?',
-  },
 ];
 
-const GROUPS: Group[] = ['US agencies, Shopify and more', 'US agencies, BigCommerce first', 'Large US agencies', 'Outside the US, with US clients', 'Us'];
+const GROUPS: Group[] = ['Us', 'US agencies, Shopify and more', 'US agencies, BigCommerce first', 'Large US agencies', 'Outside the US, with US clients'];
 
 const GROUP_HEADING: Record<Group, string> = {
   'US agencies, Shopify and more': 'US headless commerce agencies that build Next.js storefronts on Shopify and other platforms',
@@ -260,7 +260,7 @@ const GROUP_INTRO: Record<Group, string> = {
     'Two big agencies with Next.js listed in Vercel’s partner directory and commerce practices across several platforms. Americaneagle holds Vercel’s Platinum tier.',
   'Outside the US, with US clients':
     'Three agencies based outside the US that name at least one US client on a Next.js storefront or list a US office. Ask each about time-zone overlap.',
-  Us: 'We build Next.js storefronts, so we are on this list. Our entry uses the same format as every other agency.',
+  Us: 'We build Next.js storefronts. FactoryJet wrote this list and lists itself first. Our entry uses the same format as every other agency.',
 };
 
 const GROUP_LABEL: Record<Group, string> = {
@@ -392,7 +392,7 @@ export const post: BlogPost = {
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Oct 23, 2026',
-  dateModified: 'Oct 31, 2026',
+  dateModified: 'Nov 18, 2026',
   readTime: '20 min read',
   imageUrl: `${IMG}/hero.webp`,
   imageAlt:
@@ -403,7 +403,7 @@ export const post: BlogPost = {
   },
   keyTakeaways: [
     'Match a headless commerce agency to the platform you will keep behind the storefront: Shopify, BigCommerce or something else. The framework follows from that.',
-    'Every fact about every agency was read on its own site or its Vercel partner listing on 23 October 2026. Nobody paid to be listed, and the order is not a ranking.',
+    'Every fact about every agency was read on its own site or its Vercel partner listing on 23 October 2026. Nobody paid to be listed. FactoryJet wrote this list and lists itself first; the order of the others is not a ranking.',
     'Only one agency publishes a headless build price: MAK Digital Design, at $50,000 to $150,000 for a mid-market storefront on an existing backend.',
     'BigCommerce Catalyst is built on Next.js, and Shopify Plus includes up to 25 Hydrogen storefronts, so both platforms now ship their own headless frameworks.',
     'Published timelines run 10 to 16 weeks (1Digital) and three to four months (Epic Design Labs).',
@@ -425,7 +425,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-10-23',
-              dateModified: '2026-10-31',
+              dateModified: '2026-11-18',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'Headless commerce agencies that build Next.js storefronts' },
@@ -451,11 +451,11 @@ export const post: BlogPost = {
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">The short answer</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          The best headless commerce agency for a Next.js storefront depends on the platform behind it. On Shopify and other backends, 1Digital Agency, IWD Agency, The Frontend Company or Epic Design Labs. On BigCommerce, MAK Digital Design or Mira Commerce. For a large agency, Codal or Americaneagle. Abroad with US clients, Calashock, Naturaily or FocusReactive. For a storefront tied to an ERP or QuickBooks with AI agents, FactoryJet.
+          The best headless commerce agency for a Next.js storefront depends on the platform behind it. For a storefront tied to an ERP or QuickBooks with AI agents, FactoryJet. On Shopify and other backends, 1Digital Agency, IWD Agency, The Frontend Company or Epic Design Labs. On BigCommerce, MAK Digital Design or Mira Commerce. For a large agency, Codal or Americaneagle. Abroad with US clients, Calashock, Naturaily or FocusReactive.
         </p>
       </div>
         <p className="text-gray-800 leading-relaxed mb-3">
-          We read all 12 agencies on 23 October 2026, on their own sites or their Vercel partner listings: where each is based, the frameworks, backends and CMS it names, its Vercel tier and any price it publishes. Nobody paid to be listed. The order is not a ranking. FactoryJet wrote this list and is on it.
+          We read all 12 agencies on 23 October 2026, on their own sites or their Vercel partner listings: where each is based, the frameworks, backends and CMS it names, its Vercel tier and any price it publishes. Nobody paid to be listed. FactoryJet wrote this list and lists itself first. The order of the other 11 is not a ranking.
         </p>
         <p className="text-gray-800 leading-relaxed">
           Short on time? <a href="/contact" className={link}>Tell us your platform and what your theme cannot do</a> and the founder will tell you whether headless is worth it for you.
@@ -475,7 +475,7 @@ export const post: BlogPost = {
         <li><strong>Two more agencies abroad</strong>, The JIBE and Mirumee, were left out to cap the non-US group at three.</li>
       </ul>
       <p className="mb-4">
-        <strong>Who wrote this.</strong> FactoryJet builds Next.js storefronts, so we are on this list. Nobody paid to be included, the order is not a ranking, and our entry uses the same format as every other agency.
+        <strong>Who wrote this.</strong> FactoryJet builds Next.js storefronts. FactoryJet wrote this list and lists itself first. Nobody paid to be included, the order of the other agencies is not a ranking, and our entry uses the same format as every other agency.
       </p>
       <p className="mb-6">
         A few terms in plain English. <strong>Headless commerce</strong> means the storefront is separate code that talks to the commerce platform behind the scenes. <strong>Next.js</strong> is a popular framework for building that storefront. <strong>Hydrogen</strong> is Shopify&rsquo;s own headless framework, and <strong>Catalyst</strong> is BigCommerce&rsquo;s, which is built on Next.js. A <strong>headless CMS</strong> is where your team edits pages and content. <strong>Vercel</strong> is the company behind Next.js, and it lists partner agencies by tier.
@@ -548,7 +548,7 @@ export const post: BlogPost = {
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The best headless commerce agencies for Next.js, profiled</h2>
-      <p className="mb-6">The order is not a ranking. Agencies are grouped by where they are based and the platform they lead with, then us.</p>
+      <p className="mb-6">FactoryJet wrote this list and lists itself first. After us the order is not a ranking: agencies are grouped by where they are based and the platform they lead with.</p>
 
       {GROUPS.map((g) => {
         const inGroup = FIRMS.filter((f) => f.group === g);
@@ -643,6 +643,7 @@ export const post: BlogPost = {
       <h2 className="text-2xl font-bold mt-10 mb-4">Which headless commerce agency fits your store</h2>
       <p className="mb-4">Find the line that sounds most like you.</p>
       <table className={[styles.profileFacts, styles.choiceFacts].join(' ')}><tbody>
+        <tr><th scope="row">&ldquo;The storefront must stay in step with our ERP, and we want AI agents on order work.&rdquo;</th><td>FactoryJet. See <a href="/services/ecommerce-erp-integration" className={link}>ecommerce ERP integration</a> and <a href="/services/shopify-ai-agents" className={link}>Shopify AI agents</a>.</td></tr>
         <tr><th scope="row">&ldquo;We are on Shopify and our theme is the limit.&rdquo;</th><td>1Digital Agency, IWD Agency or Naturaily. FactoryJet if you also need ERP or QuickBooks work.</td></tr>
         <tr><th scope="row">&ldquo;We are on BigCommerce and want Catalyst or Next.js.&rdquo;</th><td>MAK Digital Design or Mira Commerce. Calashock if a Toronto and New York team suits you.</td></tr>
         <tr><th scope="row">&ldquo;We want a published price before the first call.&rdquo;</th><td>MAK Digital Design.</td></tr>
@@ -650,7 +651,6 @@ export const post: BlogPost = {
         <tr><th scope="row">&ldquo;We have outgrown hosted platforms altogether.&rdquo;</th><td>Epic Design Labs, which also offers its own platform.</td></tr>
         <tr><th scope="row">&ldquo;We are a large brand and want one big agency.&rdquo;</th><td>Codal or Americaneagle.</td></tr>
         <tr><th scope="row">&ldquo;Our marketers need a visual editor.&rdquo;</th><td>Agencies that name Storyblok or Builder.io: MAK, Naturaily, FocusReactive or Calashock.</td></tr>
-        <tr><th scope="row">&ldquo;The storefront must stay in step with our ERP, and we want AI agents on order work.&rdquo;</th><td>FactoryJet. See <a href="/services/ecommerce-erp-integration" className={link}>ecommerce ERP integration</a> and <a href="/services/shopify-ai-agents" className={link}>Shopify AI agents</a>.</td></tr>
       </tbody></table>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How to choose a headless commerce agency: 7 steps</h2>

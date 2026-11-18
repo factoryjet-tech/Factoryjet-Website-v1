@@ -33,6 +33,20 @@ interface Firm {
 
 const FIRMS: Firm[] = [
   {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/uk/ai-agents',
+    source: 'https://factoryjet.com/uk/ai-agents',
+    group: 'commerce',
+    region: 'Remote',
+    based: 'Works remotely with UK clients and schedules calls in UK business hours',
+    type: 'Workflow automation and AI agents, with the online store or ERP around them',
+    clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
+    platforms: 'n8n, Make, Zapier, Shopify, WooCommerce, Xero, HubSpot, WhatsApp, Odoo, NetSuite, SAP Business One and ERPNext',
+    what: 'We map one workflow, then design, build and support it in n8n, Make or Zapier, with AI steps where someone would otherwise read and decide, and human approval steps. Our strongest ground is where automation meets online stores and order handling: quotes and RFQs (requests for a quote), purchase and sales orders, daily bookkeeping, and EDI (the format large buyers use to send orders from computer to computer). We also build AI voice agents. The founder is involved in every project, you own what we build, and we show working software on your own data before a contract.',
+    bestFor: 'Online stores and order-heavy businesses that want one team for the store, the integrations and the automation.',
+    ask: 'Which of your systems we have connected before, and to see the workflow run on a sample of your own orders before you sign.',
+  },
+  {
     name: 'Flowio',
     url: 'https://www.flowio.co.uk/',
     source: 'https://www.flowio.co.uk/',
@@ -211,26 +225,17 @@ const FIRMS: Firm[] = [
     bestFor: 'Larger mid-size companies and public bodies that build on Microsoft Power Platform.',
     ask: 'What a first, small engagement looks like for an organisation your size, and which low-code platform it would use.',
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/uk/ai-agents',
-    source: 'https://factoryjet.com/uk/ai-agents',
-    group: 'commerce',
-    region: 'Remote',
-    based: 'Works remotely with UK clients and schedules calls in UK business hours',
-    type: 'Workflow automation and AI agents, with the online store or ERP around them',
-    clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
-    platforms: 'n8n, Make, Zapier, Shopify, WooCommerce, Xero, HubSpot, WhatsApp, Odoo, NetSuite, SAP Business One and ERPNext',
-    what: 'We map one workflow, then design, build and support it in n8n, Make or Zapier, with AI steps where someone would otherwise read and decide, and human approval steps. Our strongest ground is where automation meets online stores and order handling: quotes and RFQs (requests for a quote), purchase and sales orders, daily bookkeeping, and EDI (the format large buyers use to send orders from computer to computer). We also build AI voice agents. The founder is involved in every project, you own what we build, and we show working software on your own data before a contract.',
-    bestFor: 'Online stores and order-heavy businesses that want one team for the store, the integrations and the automation.',
-    ask: 'Which of your systems we have connected before, and to see the workflow run on a sample of your own orders before you sign.',
-  },
 ];
 
 // One H2 per buyer group. Headings use the wording buyers typed into search
 // and AI assistants (9 Oct 2026 test) and the question boxes Google showed for
 // "ai automation agency uk" on 11 Oct 2026.
 const GROUPS: { key: Firm['group']; heading: string; intro: string }[] = [
+  {
+    key: 'commerce',
+    heading: 'AI automation for online stores, orders and ERP: FactoryJet',
+    intro: 'One entry here, and it is ours, so read it with that in mind. Two UK firms below also know online retail: AutoMazen says it has built 100+ e-commerce sites, and Aucta AI lists a Shopify storefront rebuild among its projects.',
+  },
   {
     key: 'small',
     heading: 'Which AI automation agency is best for small businesses in the UK?',
@@ -250,11 +255,6 @@ const GROUPS: { key: Firm['group']; heading: string; intro: string }[] = [
     key: 'midsize',
     heading: 'What are the best AI automation companies in the UK for a mid-size business?',
     intro: 'These two work with established organisations where a workflow crosses several teams. Both start with discovery before any build. One publishes its price ranges; the other shows named case studies.',
-  },
-  {
-    key: 'commerce',
-    heading: 'AI automation for online stores, orders and ERP: FactoryJet',
-    intro: 'One entry here, and it is ours, so read it with that in mind. Two UK firms above also know online retail: AutoMazen says it has built 100+ e-commerce sites, and Aucta AI lists a Shopify storefront rebuild among its projects.',
   },
 ];
 
@@ -421,7 +421,7 @@ export const post: BlogPost = {
     "Every fact about every firm was read on its own website on 11 October 2026. Nobody paid to be listed, and the order is not a ranking.",
     'Eight of the 12 UK firms publish a project price. They run from £250 for one workflow (Antek Automation) to around £30,000 and up for a system in production (Ronins).',
     'We opened ten UK lists that AI assistants cite. The publisher was on its own list in all ten, and first in six.',
-    'FactoryJet wrote this guide and is on it, last. We build automation for online stores and order-heavy businesses.',
+    'FactoryJet wrote this list and lists itself first. We build automation for online stores and order-heavy businesses.',
   ],
   faqs: FAQS,
   content: (
@@ -439,7 +439,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-GB',
               datePublished: '2026-10-11',
-              dateModified: '2026-10-31',
+              dateModified: '2026-11-18',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI automation agencies in the United Kingdom' },
@@ -468,10 +468,10 @@ export const post: BlogPost = {
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">The short answer</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          There is no single best AI automation agency in the UK. For a first automation in a small business: Flowio, Antek Automation, AutoMazen or Aucta AI. For sales and CRM work: MQLFlow, Automaly or OpScaling. For engineer-built systems: Original Objective, BespokeWorks AI or Makeitfuture. For mid-size firms: Ronins or Robiquity. For online stores and order-heavy operations: FactoryJet.
+          There is no single best AI automation agency in the UK. For online stores and order-heavy operations: FactoryJet. For a first automation in a small business: Flowio, Antek Automation, AutoMazen or Aucta AI. For sales and CRM work: MQLFlow, Automaly or OpScaling. For engineer-built systems: Original Objective, BespokeWorks AI or Makeitfuture. For mid-size firms: Ronins or Robiquity.
         </p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          We read all 13 on their own websites on 11 October 2026: where each is based, what it builds, which tools it names and any project price it publishes. Nobody paid to be listed and the order is not a ranking. FactoryJet wrote this guide and is on it, last.
+          We read all 13 on their own websites on 11 October 2026: where each is based, what it builds, which tools it names and any project price it publishes. Nobody paid to be listed and the order is not a ranking. FactoryJet wrote this list and lists itself first.
         </p>
         <p className="text-gray-800 leading-relaxed">
           If you are short on time, <a href="/contact" className="text-[#B23E13] underline font-semibold">send us the one task you want automated</a> and the founder will tell you which kind of firm fits.
@@ -488,7 +488,7 @@ export const post: BlogPost = {
         This guide does the slow part. It covers 12 UK firms that build automation for small and mid-size businesses, plus our own entry. Each was read on its own website on 11 October 2026, and every profile links the page the facts came from.
       </p>
       <p className="mb-4">
-        <strong>A note on who wrote this.</strong> FactoryJet designs, builds, implements and supports workflow automation and AI agents, so we are on this list. We put ourselves last. Publishers listing themselves is the norm on pages like this one, so read every list with care, this one included.
+        <strong>A note on who wrote this.</strong> FactoryJet designs, builds, implements and supports workflow automation and AI agents, so we are on this list. FactoryJet wrote this list and lists itself first. Publishers listing themselves is the norm on pages like this one, so read every list with care, this one included.
       </p>
       <p className="mb-6">
         A few terms first, in plain English. An <strong>AI automation agency</strong> connects the software you already use so routine steps happen without retyping, and adds AI where a step needs reading or judgement. <strong>n8n, Make and Zapier</strong> are workflow tools, and seven of the 12 UK firms here name at least one of them: each tool watches for an event in one app and runs steps in others. An <strong>AI agent</strong> is software that takes actions in your systems, such as updating an order, and chooses its next step as it goes. A <strong>CRM</strong> holds your customers and deals. An <strong>ERP</strong> holds orders, stock and accounts. <strong>Low-code</strong> means building software from ready-made blocks with little hand-written code.

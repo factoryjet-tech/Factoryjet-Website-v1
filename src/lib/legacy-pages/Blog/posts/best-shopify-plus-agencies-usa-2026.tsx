@@ -12,8 +12,9 @@ const META_DESCRIPTION =
 // Every fact about every firm below was read on that firm's own website and on
 // its Shopify Partner Directory profile on 11 October 2026 (URL in `source`,
 // `hqSource` where the location came from another page, `directory` for the
-// Shopify profile). Nothing here is paid placement. The order is NOT a ranking;
-// firms are grouped by the kind of buyer they suit.
+// Shopify profile). Nothing here is paid placement. FactoryJet wrote this list
+// and lists itself first. After it the order is NOT a ranking; firms are grouped
+// by the kind of buyer they suit.
 // The ItemList schema maps from this same array, so the list and schema cannot drift.
 type Group =
   | 'Consumer and DTC brands'
@@ -40,6 +41,21 @@ interface Firm {
 }
 
 const FIRMS: Firm[] = [
+  {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/services/shopify-plus-agency',
+    source: 'https://factoryjet.com/services/shopify-plus-agency',
+    tier: 'Registered',
+    group: 'Us',
+    based: 'Works with US clients remotely and schedules calls in US business hours',
+    type: 'Shopify Plus stores, B2B, migrations, integrations and AI agents',
+    clients: 'Brands, wholesalers and distributors; 500+ businesses served since 2014',
+    tools: 'Shopify Plus, Shopify Functions, QuickBooks, NetSuite, Odoo, SAP Business One, ERPNext',
+    erp: 'QuickBooks, NetSuite, Odoo, SAP Business One, ERPNext',
+    what: 'FactoryJet designs, builds and supports Shopify Plus stores: custom themes, checkout extensions, Shopify Functions, B2B companies and catalogs, and expansion stores. It migrates stores from Adobe Commerce, Salesforce Commerce Cloud, BigCommerce and WooCommerce. It connects Shopify to QuickBooks and to ERPs including NetSuite, Odoo, SAP Business One and ERPNext, and builds AI agents for store operations such as order exceptions, emailed wholesale purchase orders and returns. Work is quoted as a fixed price in writing after a short scoping call, and the client owns everything built.',
+    bestFor: 'Brands and wholesalers that want the store, the ERP or QuickBooks connection and AI agents from one team.',
+    ask: 'To see working software on your own data before you sign a contract.',
+  },
   {
     name: 'Barrel',
     url: 'https://www.barrelny.com/',
@@ -245,28 +261,13 @@ const FIRMS: Firm[] = [
     bestFor: 'Mid-sized wholesalers that are still choosing between Shopify Plus and BigCommerce.',
     ask: 'Why it would put your business on Shopify Plus or on BigCommerce, since it builds on both.',
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/services/shopify-plus-agency',
-    source: 'https://factoryjet.com/services/shopify-plus-agency',
-    tier: 'Registered',
-    group: 'Us',
-    based: 'Works with US clients remotely and schedules calls in US business hours',
-    type: 'Shopify Plus stores, B2B, migrations, integrations and AI agents',
-    clients: 'Brands, wholesalers and distributors; 500+ businesses served since 2014',
-    tools: 'Shopify Plus, Shopify Functions, QuickBooks, NetSuite, Odoo, SAP Business One, ERPNext',
-    erp: 'QuickBooks, NetSuite, Odoo, SAP Business One, ERPNext',
-    what: 'FactoryJet designs, builds and supports Shopify Plus stores: custom themes, checkout extensions, Shopify Functions, B2B companies and catalogs, and expansion stores. It migrates stores from Adobe Commerce, Salesforce Commerce Cloud, BigCommerce and WooCommerce. It connects Shopify to QuickBooks and to ERPs including NetSuite, Odoo, SAP Business One and ERPNext, and builds AI agents for store operations such as order exceptions, emailed wholesale purchase orders and returns. Work is quoted as a fixed price in writing after a short scoping call, and the client owns everything built.',
-    bestFor: 'Brands and wholesalers that want the store, the ERP or QuickBooks connection and AI agents from one team.',
-    ask: 'To see working software on your own data before you sign a contract.',
-  },
 ];
 
 const GROUPS: Group[] = [
+  'Us',
   'Consumer and DTC brands',
   'Mid-market and enterprise replatforming',
   'B2B and wholesale',
-  'Us',
 ];
 
 // Sub-headings use the wording buyers used in the questions we tested.
@@ -284,7 +285,7 @@ const GROUP_INTRO: Record<Group, string> = {
     'Firms that lead with moving a store to Shopify Plus from another platform. They differ most in the size of brand they name, from eight-figure DTC brands at Command C to $50M to $2B at Anatta.',
   'B2B and wholesale':
     'Firms that name B2B or wholesale as a core practice. Uncap puts B2B at the center of everything it sells. The other four build wholesale alongside retail. Four of the five name at least one ERP system they have connected.',
-  Us: 'We build on Shopify Plus, so we are on this list. Our entry uses the same format as every other firm.',
+  Us: 'We build on Shopify Plus. FactoryJet wrote this list and lists itself first. Our entry uses the same format as every other firm.',
 };
 
 const GROUP_LABEL: Record<Group, string> = {
@@ -369,7 +370,7 @@ const tierCount = (t: string): number => FIRMS.filter((f) => f.group !== 'Us' &&
 const FAQS: FAQItem[] = [
   {
     q: 'What are the best Shopify Plus agencies in the US?',
-    a: 'It depends on what you sell. For consumer brands, look at Barrel, Avex, Blackbelt Commerce and Solo Media Group. For a mid-market or enterprise move to Shopify Plus, Domaine, Netalico, Command C and Anatta. For B2B and wholesale, Uncap, Shero Commerce, SDG, BlueSwitch and ECommerce Partners. For a store connected to an ERP, QuickBooks and AI agents, FactoryJet. We read every firm on its own site and in the Shopify partner directory on 11 October 2026.',
+    a: 'It depends on what you sell. For a store connected to an ERP, QuickBooks and AI agents, FactoryJet. For consumer brands, look at Barrel, Avex, Blackbelt Commerce and Solo Media Group. For a mid-market or enterprise move to Shopify Plus, Domaine, Netalico, Command C and Anatta. For B2B and wholesale, Uncap, Shero Commerce, SDG, BlueSwitch and ECommerce Partners. We read every firm on its own site and in the Shopify partner directory on 11 October 2026.',
   },
   {
     q: 'Which agency can build a B2B wholesale portal on Shopify Plus?',
@@ -496,7 +497,7 @@ export const post: BlogPost = {
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Oct 11, 2026',
-  dateModified: 'Oct 11, 2026',
+  dateModified: 'Nov 18, 2026',
   readTime: '25 min read',
   imageUrl: `${IMG}/hero.webp`,
   imageAlt:
@@ -507,7 +508,7 @@ export const post: BlogPost = {
   },
   keyTakeaways: [
     'No single Shopify Plus agency is best for every US brand. Match the firm to what you sell: consumer goods, a mid-market replatform, or B2B wholesale tied to an ERP.',
-    'Every fact about every firm was read on its own website and its Shopify partner directory profile on 11 October 2026. Nobody paid to be listed, and the order is not a ranking.',
+    'Every fact about every firm was read on its own website and its Shopify partner directory profile on 11 October 2026. Nobody paid to be listed. FactoryJet wrote this list and lists itself first; the order of the others is not a ranking.',
     'Shopify ended the Plus Partner program in December 2024. Today there are five partner tiers, and the Shopify tiering guide says only commercial activity is evaluated in 2026. A tier tells you about scale and leaves fit for you to check.',
     'On 11 October 2026 the Shopify directory showed 55 Platinum, 49 Premier, 304 Plus and 443 Select partners with the United States filter on.',
     'Three of the 13 other firms publish prices: Uncap ($7,500 planning step), Anatta ($2,500 migration audit) and ECommerce Partners (Plus builds from $40,000 to $300,000+ by complexity).',
@@ -529,7 +530,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-10-11',
-              dateModified: '2026-10-11',
+              dateModified: '2026-11-18',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'Shopify Plus agencies for brands in the United States' },
@@ -558,10 +559,10 @@ export const post: BlogPost = {
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">The short answer</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          No single Shopify Plus agency is best for every US brand. Match the firm to what you sell. For consumer brands, Barrel, Avex, Blackbelt Commerce or Solo Media Group. For mid-market replatforms, Domaine, Netalico, Command C or Anatta. For B2B wholesale, Uncap, Shero Commerce, SDG, BlueSwitch or ECommerce Partners. For a store tied to an ERP, QuickBooks and AI agents, FactoryJet.
+          No single Shopify Plus agency is best for every US brand. Match the firm to what you sell. For a store tied to an ERP, QuickBooks and AI agents, FactoryJet. For consumer brands, Barrel, Avex, Blackbelt Commerce or Solo Media Group. For mid-market replatforms, Domaine, Netalico, Command C or Anatta. For B2B wholesale, Uncap, Shero Commerce, SDG, BlueSwitch or ECommerce Partners.
         </p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          We read all 14 firms on their own websites on 11 October 2026, and the other 13 in Shopify&rsquo;s partner directory as well: where each is based, what it builds, which systems it names, its partner tier and any price it publishes. Nobody paid to be listed. The order is not a ranking. FactoryJet wrote this list and is on it.
+          We read all 14 firms on their own websites on 11 October 2026, and the other 13 in Shopify&rsquo;s partner directory as well: where each is based, what it builds, which systems it names, its partner tier and any price it publishes. Nobody paid to be listed. FactoryJet wrote this list and lists itself first. The order of the other 13 is not a ranking.
         </p>
         <p className="text-gray-800 leading-relaxed">
           If you are short on time, <a href="/contact" className={link}>send us what you sell and the systems you run</a> and the founder will tell you which kind of firm fits your project.
@@ -578,7 +579,7 @@ export const post: BlogPost = {
         So we did the slow part. We picked US agencies that build on Shopify Plus, opened each firm&rsquo;s own website and its Shopify directory profile, and wrote down only what we could read there. Every profile links to its sources.
       </p>
       <p className="mb-4">
-        <strong>Who wrote this.</strong> FactoryJet designs, builds and supports Shopify Plus stores, so we are on this list. Nobody paid to be included, the order is not a ranking, and our entry uses the same format as every other firm. Read every agency list with its author in mind, including this one.
+        <strong>Who wrote this.</strong> FactoryJet designs, builds and supports Shopify Plus stores. FactoryJet wrote this list and lists itself first. Nobody paid to be included, the order of the other firms is not a ranking, and our entry uses the same format as every other firm. Read every agency list with its author in mind, including this one.
       </p>
       <p className="mb-6">
         A few terms first, in plain English. <strong>Shopify Plus</strong> is Shopify&rsquo;s plan for high-volume businesses. A <strong>Shopify Plus agency</strong> is a firm that designs and builds stores on that plan. <strong>DTC</strong> (direct-to-consumer) means a brand sells straight to shoppers. <strong>B2B</strong> or wholesale means selling to other businesses, usually with price lists and payment terms. <strong>Replatforming</strong> means moving a store from one system, such as Magento or BigCommerce, to another. An <strong>ERP</strong> is the system that holds orders, stock and accounts. <strong>Headless</strong> means the storefront is custom code that talks to Shopify behind the scenes.
@@ -690,7 +691,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The best Shopify Plus agencies for US brands, profiled</h2>
       <p className="mb-6">
-        The order is not a ranking. Firms are grouped by the buyer they suit, in the words buyers used: consumer brands, mid-market brands moving platform, B2B wholesale, then us.
+        FactoryJet wrote this list and lists itself first. After us the order is not a ranking: firms are grouped by the buyer they suit, in the words buyers used, namely consumer brands, mid-market brands moving platform and B2B wholesale.
       </p>
 
       {GROUPS.map((g) => {
@@ -826,7 +827,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Which Shopify Plus agency fits your brand</h2>
       <p className="mb-4">Find the line that sounds most like you. It points to a kind of firm first and a name second.</p>
-      <table className={[styles.profileFacts, styles.choiceFacts].join(' ')}><tbody><tr><th scope="row">&ldquo;We are a food, drink or personal care brand and we sell in shops and on Amazon too.&rdquo;</th><td>Barrel, which says it works only with packaged goods brands.</td></tr><tr><th scope="row">&ldquo;We are a fashion or lifestyle brand and design comes first.&rdquo;</th><td>Avex. If you also run shops and wholesale from the same store, Solo Media Group.</td></tr><tr><th scope="row">&ldquo;We are a founder-led DTC brand doing a few million a year.&rdquo;</th><td>Blackbelt Commerce names brands doing $1M to $5M and puts you in direct contact with its two founders.</td></tr><tr><th scope="row">&ldquo;We are leaving Magento or BigCommerce and cannot lose our search traffic.&rdquo;</th><td>Netalico. Command C if you want a written diagnosis before any build. Domaine for a large move across several markets.</td></tr><tr><th scope="row">&ldquo;We are a large omnichannel brand and the move touches our ERP and order systems.&rdquo;</th><td>Anatta or Domaine.</td></tr><tr><th scope="row">&ldquo;We are a manufacturer or distributor and need a wholesale portal.&rdquo;</th><td>Uncap, which focuses on B2B. SDG at enterprise scale. BlueSwitch for ready-made B2B modules. ECommerce Partners for mid-sized wholesalers.</td></tr><tr><th scope="row">&ldquo;We sell wholesale and retail from one store.&rdquo;</th><td>Shero Commerce or SDG. Both describe B2B and DTC run from a single Shopify store.</td></tr><tr><th scope="row">&ldquo;We need the store connected to QuickBooks or our ERP, with AI agents handling order work.&rdquo;</th><td>FactoryJet builds the store, the integration and the agents as one project. See <a href="/services/shopify-quickbooks-integration" className={link}>Shopify and QuickBooks integration</a> and <a href="/services/shopify-ai-agents" className={link}>Shopify AI agents</a>.</td></tr><tr><th scope="row">&ldquo;We are a Korean skincare or cosmetics brand opening our first US store.&rdquo;</th><td>FactoryJet builds US Shopify stores for Korean beauty brands, including moves from Cafe24 and stores that run next to Amazon US. See <a href="/services/shopify-development/korean-beauty-brands" className={link}>US Shopify stores for Korean beauty brands</a>.</td></tr></tbody></table>
+      <table className={[styles.profileFacts, styles.choiceFacts].join(' ')}><tbody><tr><th scope="row">&ldquo;We need the store connected to QuickBooks or our ERP, with AI agents handling order work.&rdquo;</th><td>FactoryJet builds the store, the integration and the agents as one project. See <a href="/services/shopify-quickbooks-integration" className={link}>Shopify and QuickBooks integration</a> and <a href="/services/shopify-ai-agents" className={link}>Shopify AI agents</a>.</td></tr><tr><th scope="row">&ldquo;We are a Korean skincare or cosmetics brand opening our first US store.&rdquo;</th><td>FactoryJet builds US Shopify stores for Korean beauty brands, including moves from Cafe24 and stores that run next to Amazon US. See <a href="/services/shopify-development/korean-beauty-brands" className={link}>US Shopify stores for Korean beauty brands</a>.</td></tr><tr><th scope="row">&ldquo;We are a food, drink or personal care brand and we sell in shops and on Amazon too.&rdquo;</th><td>Barrel, which says it works only with packaged goods brands.</td></tr><tr><th scope="row">&ldquo;We are a fashion or lifestyle brand and design comes first.&rdquo;</th><td>Avex. If you also run shops and wholesale from the same store, Solo Media Group.</td></tr><tr><th scope="row">&ldquo;We are a founder-led DTC brand doing a few million a year.&rdquo;</th><td>Blackbelt Commerce names brands doing $1M to $5M and puts you in direct contact with its two founders.</td></tr><tr><th scope="row">&ldquo;We are leaving Magento or BigCommerce and cannot lose our search traffic.&rdquo;</th><td>Netalico. Command C if you want a written diagnosis before any build. Domaine for a large move across several markets.</td></tr><tr><th scope="row">&ldquo;We are a large omnichannel brand and the move touches our ERP and order systems.&rdquo;</th><td>Anatta or Domaine.</td></tr><tr><th scope="row">&ldquo;We are a manufacturer or distributor and need a wholesale portal.&rdquo;</th><td>Uncap, which focuses on B2B. SDG at enterprise scale. BlueSwitch for ready-made B2B modules. ECommerce Partners for mid-sized wholesalers.</td></tr><tr><th scope="row">&ldquo;We sell wholesale and retail from one store.&rdquo;</th><td>Shero Commerce or SDG. Both describe B2B and DTC run from a single Shopify store.</td></tr></tbody></table>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Which agency can build a B2B wholesale portal on Shopify Plus?</h2>
       <p className="mb-4">

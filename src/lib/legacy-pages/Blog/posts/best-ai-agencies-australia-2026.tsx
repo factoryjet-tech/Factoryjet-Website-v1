@@ -6,8 +6,8 @@ const IMG = '/blog-images/best-ai-agencies-australia-2026';
 
 // Every fact about every agency below was read on that agency's own website on
 // 26 September 2026 (homepage or main service page, URL in `source`). Nothing
-// here is paid placement. The list order is NOT a ranking; it groups agencies
-// by the kind of buyer they suit. The ItemList schema maps from this same array.
+// here is paid placement. The list order is NOT a ranking. FactoryJet, the
+// publisher, is listed first; the rest are grouped by the kind of buyer they suit. The ItemList schema maps from this same array.
 interface Agency {
   name: string;
   url: string;
@@ -22,6 +22,18 @@ interface Agency {
 }
 
 const AGENCIES: Agency[] = [
+  {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/au',
+    source: 'https://factoryjet.com/au',
+    based: 'We work remotely with Australian clients and schedule calls in Australian business hours',
+    type: 'AI agents, AI receptionists and AI inside ecommerce and operations',
+    clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
+    platforms: 'Shopify, custom Next.js commerce, Xero, MYOB, HubSpot, OpenAI, Anthropic, Google models',
+    what: 'We map the process, then design, build and support custom AI agents, AI receptionists and customer service agents inside the tools you already use, with human approval steps. Our strongest ground is where AI meets online stores, order handling, finance and operations. The founder is involved in every project and you own what we build.',
+    bestFor: 'Ecommerce and operations-heavy SMBs that want one team for the store, the integrations and the AI.',
+    ask: 'Which of your systems we have connected before, and how the first build is scoped.',
+  },
   {
     name: 'Team 400',
     url: 'https://team400.ai/',
@@ -166,18 +178,6 @@ const AGENCIES: Agency[] = [
     bestFor: 'Businesses whose AI question is really a data question: forecasting, analytics or machine vision.',
     ask: 'Whether they recommend fixed price or time and materials for your project, and why.',
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/au',
-    source: 'https://factoryjet.com/au',
-    based: 'We work remotely with Australian clients and schedule calls in Australian business hours',
-    type: 'AI agents, AI receptionists and AI inside ecommerce and operations',
-    clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
-    platforms: 'Shopify, custom Next.js commerce, Xero, MYOB, HubSpot, OpenAI, Anthropic, Google models',
-    what: 'We map the process, then design, build and support custom AI agents, AI receptionists and customer service agents inside the tools you already use, with human approval steps. Our strongest ground is where AI meets online stores, order handling, finance and operations. The founder is involved in every project and you own what we build.',
-    bestFor: 'Ecommerce and operations-heavy SMBs that want one team for the store, the integrations and the AI.',
-    ask: 'Which of your systems we have connected before, and how the first build is scoped.',
-  },
 ];
 
 // Published prices, copied from each agency's own page on 26 Sep 2026.
@@ -197,7 +197,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "Which AI company is the best in Australia?",
-    a: "There is no single best one, and any list that crowns itself number one deserves a second look. The best choice depends on who you are. A 15-person trade business needs a different partner from a bank. Use the table in this guide to narrow by client size and platform, then ask two or three agencies to map one real workflow before you sign anything.",
+    a: "There is no single best one. FactoryJet wrote this list and lists itself first, which is not a ranking. The best choice depends on who you are. A 15-person trade business needs a different partner from a bank. Use the table in this guide to narrow by client size and platform, then ask two or three agencies to map one real workflow before you sign anything.",
   },
   {
     q: "What are some reputable AI consulting companies in Australia?",
@@ -310,7 +310,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Sep 26, 2026',
-  dateModified: 'Oct 21, 2026',
+  dateModified: 'Nov 18, 2026',
   readTime: '17 min read',
   imageUrl: `${IMG}-hero.webp`,
   imageAlt:
@@ -344,7 +344,7 @@ export const post: BlogPost = {
                 'Compare the best AI automation agencies in Australia for 2026: where each is based, who it suits, platforms, published prices and how to choose the right one.',
               inLanguage: 'en-AU',
               datePublished: '2026-09-26',
-              dateModified: '2026-10-21',
+              dateModified: '2026-11-18',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI automation agencies in Australia' },
@@ -387,7 +387,7 @@ export const post: BlogPost = {
         So we did the boring part. We took the Australian agencies that came up most often, opened each one&rsquo;s own website, and wrote down only what they say about themselves: where they are based, what they build, who they build it for, which platforms they use and any published prices. If we could not confirm an Australian address or a clear service, the company is not here.
       </p>
       <p className="mb-4">
-        <strong>A note on honesty.</strong> FactoryJet builds AI agents, so we are on this list. We put ourselves last, and we tell you when another agency will suit you better. Two other agencies that publish &ldquo;top AI agencies in Australia&rdquo; lists, Team 400 and Edison AI, include themselves too, and both disclose it. That is fair practice, and it is also a reason to read every list, including this one, with care.
+        <strong>A note on honesty.</strong> FactoryJet builds AI agents, so we are on this list. FactoryJet wrote this list and lists itself first, and we tell you when another agency will suit you better. Two other agencies that publish &ldquo;top AI agencies in Australia&rdquo; lists, Team 400 and Edison AI, include themselves too, and both disclose it. That is fair practice, and it is also a reason to read every list, including this one, with care.
       </p>
       <p className="mb-6">
         A few terms first, in plain English. An <strong>AI automation agency</strong> connects AI to the software you already use so routine steps happen without retyping. An <strong>AI consultancy</strong> helps you decide where AI fits and how to introduce it safely. An <strong>AI developer</strong> writes custom software. An <strong>AI agent</strong> is software that takes actions in your systems, such as updating an order or booking a job, rather than only chatting. Most agencies below do some of all four.
@@ -433,7 +433,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The best AI agencies in Australia, profiled</h2>
       <p className="mb-6">
-        The order is not a ranking. We start with the five agencies AI assistants named most often for Australian buyers, then smaller specialists, then enterprise consultancies, then us.
+        The order is not a ranking. FactoryJet wrote this list and lists itself first. After us come the five agencies AI assistants named most often for Australian buyers, then smaller specialists, then enterprise consultancies.
       </p>
 
       {AGENCIES.map((a, i) => (

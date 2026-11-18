@@ -35,6 +35,17 @@ interface Firm {
 
 const FIRMS: Firm[] = [
   {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/au/seo',
+    source: 'https://factoryjet.com/au/seo',
+    based: 'We work remotely with Australian clients and schedule calls in Australian business hours',
+    type: 'SEO done by the team that builds and fixes websites and online stores',
+    terms: 'Fixed written quote after a free first call; we do not publish prices',
+    what: 'We start by measuring: where you rank today, what your Google Business Profile is missing, which questions your buyers ask in Google and AI tools, and what the sites above you do. Then our engineers change the site itself, because we build websites and online stores, and we report each month on enquiries as well as rankings. We have served 500+ businesses since 2014.',
+    bestFor: 'Businesses whose SEO problems sit in the website, such as slow pages or an old platform.',
+    ask: 'What we would change on your site first, and what we would leave alone.',
+  },
+  {
     name: 'StudioHawk',
     url: 'https://studiohawk.com.au/',
     source: 'https://studiohawk.com.au/about/',
@@ -146,17 +157,6 @@ const FIRMS: Firm[] = [
     what: 'Its small business page says its minimum engagement starts from A$700 a month and varies with the type of site, keyword competition and scope. The listed work includes keyword and competitor research, on-page optimisation, a Google Business Profile listing, a real-time reporting dashboard and weekly reports. It also has location pages for cities in every mainland state.',
     bestFor: 'Small businesses with a tight budget that want a low entry point and no lock-in.',
     ask: 'What the A$700 level includes for your site, and whether it is quoted with or without GST.',
-  },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/au/seo',
-    source: 'https://factoryjet.com/au/seo',
-    based: 'We work remotely with Australian clients and schedule calls in Australian business hours',
-    type: 'SEO done by the team that builds and fixes websites and online stores',
-    terms: 'Fixed written quote after a free first call; we do not publish prices',
-    what: 'We start by measuring: where you rank today, what your Google Business Profile is missing, which questions your buyers ask in Google and AI tools, and what the sites above you do. Then our engineers change the site itself, because we build websites and online stores, and we report each month on enquiries as well as rankings. We have served 500+ businesses since 2014.',
-    bestFor: 'Businesses whose SEO problems sit in the website, such as slow pages or an old platform.',
-    ask: 'What we would change on your site first, and what we would leave alone.',
   },
 ];
 
@@ -282,11 +282,11 @@ export const post: BlogPost = {
   slug: 'best-seo-agencies-australia-2026',
   title: 'Best SEO Agencies in Australia for Small Business (2026): 10 Compared',
   excerpt:
-    'Ten Australian SEO agencies for small and mid-size businesses, checked on their own websites on 22 October 2026: where each is based, the contract terms, published prices copied exactly, and who each one suits. Four more get a short entry. FactoryJet is listed last and says so.',
+    'Ten Australian SEO agencies for small and mid-size businesses, checked on their own websites on 22 October 2026: where each is based, the contract terms, published prices copied exactly, and who each one suits. Four more get a short entry. FactoryJet wrote this list, lists itself first and says so.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 22, 2026',
-  dateModified: 'Nov 16, 2026',
+  dateModified: 'Nov 18, 2026',
   readTime: '21 min read',
   imageUrl: `${IMG}-hero.webp`,
   imageAlt:
@@ -301,7 +301,7 @@ export const post: BlogPost = {
     'We started from the agencies AI tools name when asked which suit small businesses, then read each firm’s own site on 22 October 2026.',
     'Three of the ten publish a price or minimum: from A$700 a month (Webomaze) to about A$2,000 a month (Red Search). Most quote after a call.',
     'Six of the ten said on their own sites that they offer no lock-in or month-to-month terms. Get the notice period and GST position in writing.',
-    'FactoryJet is on this list, last. We work remotely with Australian clients.',
+    'FactoryJet wrote this list and lists itself first. We work remotely with Australian clients.',
   ],
   faqs: FAQS,
   content: (
@@ -320,7 +320,7 @@ export const post: BlogPost = {
                 'Ten Australian SEO agencies for small business compared: where each is based, contract terms, published prices in AUD and who it suits. Checked 22 Oct 2026.',
               inLanguage: 'en-AU',
               datePublished: '2026-10-22',
-              dateModified: '2026-11-16',
+              dateModified: '2026-11-18',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'SEO agencies for small and mid-size businesses in Australia' },
@@ -352,7 +352,7 @@ export const post: BlogPost = {
           The best SEO company in Australia for a small business depends on your size and budget. For a large national team, look at StudioHawk, Supple Digital and Gorilla 360. For an SEO-only specialist, Safari Digital or Red Search in Sydney. For a published starting price, Webomaze in Melbourne (from A$700 a month) and Digital Marketing Tribe in Sydney and Adelaide (from A$1,200 a month plus GST). In Perth, Bloom Digital; on the Sunshine Coast, Digital Nomads HQ.
         </p>
         <p className="text-gray-800 leading-relaxed">
-          We started from the agencies AI tools themselves name for small businesses, then read each firm&rsquo;s own website on 22 October 2026. Nobody paid to be listed. One firm in the note under the extra firms, Orbis, links to a FactoryJet page, and we added it after that link went up. The order is not a ranking. FactoryJet is last, and labelled.
+          We started from the agencies AI tools themselves name for small businesses, then read each firm&rsquo;s own website on 22 October 2026. Nobody paid to be listed. One firm in the note under the extra firms, Orbis, links to a FactoryJet page, and we added it after that link went up. FactoryJet wrote this list and lists itself first, labelled. The other firms are not in ranked order.
         </p>
       </div>
 
@@ -360,7 +360,7 @@ export const post: BlogPost = {
         On 9 October 2026 we asked eight AI tools the question an Australian owner asks before hiring: &ldquo;Which SEO agencies in Australia are best for small businesses?&rdquo; We ran it twice each on ChatGPT (the API and the app), Claude, Gemini (the API and the app) and Perplexity, and once each on Google AI Mode and Google AI Overviews: 14 answers in all. StudioHawk was named in 11 of them, Digital Nomads HQ in 9 and Supple Digital in 7. Eight firms were named in three answers or more.
       </p>
       <p className="mb-4">
-        <strong>A note on honesty.</strong> FactoryJet sells SEO in Australia, so we are on this list. We put ourselves last. Many lists that rank for this search are written by an agency that puts itself first, which is a reason to read every list, this one included, with care. For how we do the work, see our{' '}
+        <strong>A note on honesty.</strong> FactoryJet sells SEO in Australia, so we are on this list. We list ourselves first. Many lists that rank for this search are written by an agency that puts itself first. For how we do the work, see our{' '}
         <a href="/au/seo" className="text-[#B23E13] underline">SEO services in Australia</a>.
       </p>
       <p className="mb-6">
@@ -408,7 +408,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The best SEO agencies and companies in Australia for small business</h2>
       <p className="mb-6">
-        The order is not a ranking. Larger agencies come first, then SEO specialists, then firms that publish a starting price, then us.
+        The order is not a ranking. We come first because we wrote the list. After us come larger agencies, then SEO specialists, then firms that publish a starting price.
       </p>
 
       {FIRMS.map((f, i) => (

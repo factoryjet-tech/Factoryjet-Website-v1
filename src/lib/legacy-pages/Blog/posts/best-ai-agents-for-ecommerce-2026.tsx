@@ -200,8 +200,8 @@ export const post: BlogPost = {
       <p className="mb-8">
         Our interest: FactoryJet builds custom AI agents and sells its own commerce operator,
         Commerceflo by FactoryJet, and we are a registered Shopify Partner. So we have a stake in
-        the build side of this decision. Commerceflo is listed last and described only from its
-        product page, and we say plainly where an off-the-shelf tool is the better buy.
+        the build side of this decision. FactoryJet wrote this list and lists Commerceflo first. It is
+        described only from its product page, and we say plainly where an off-the-shelf tool is the better buy.
       </p>
 
       <hr className="my-8 border-gray-200" />
@@ -224,6 +224,19 @@ export const post: BlogPost = {
             </tr>
           </thead>
           <tbody>
+            <tr className="bg-gray-50">
+              <td className="border p-3">Commerceflo (our product)</td>
+              <td className="border p-3">Operations across DTC, B2B, marketplaces and POS</td>
+              <td className="border p-3">
+                Amazon, Walmart, eBay, TikTok Shop, WooCommerce, BigCommerce, Magento. NetSuite, SAP,
+                QuickBooks.
+              </td>
+              <td className="border p-3">
+                Not published. One-time implementation plus a monthly subscription.
+              </td>
+              <td className="border p-3">High. Early access, scoped on a call.</td>
+              <td className="border p-3">Brands on several channels that want one system</td>
+            </tr>
             <tr className="bg-white">
               <td className="border p-3">Gorgias AI Agent</td>
               <td className="border p-3">Support and pre-sale chat</td>
@@ -317,19 +330,6 @@ export const post: BlogPost = {
               <td className="border p-3">Brands selling on several channels</td>
             </tr>
             <tr className="bg-gray-50">
-              <td className="border p-3">Commerceflo (our product)</td>
-              <td className="border p-3">Operations across DTC, B2B, marketplaces and POS</td>
-              <td className="border p-3">
-                Amazon, Walmart, eBay, TikTok Shop, WooCommerce, BigCommerce, Magento. NetSuite, SAP,
-                QuickBooks.
-              </td>
-              <td className="border p-3">
-                Not published. One-time implementation plus a monthly subscription.
-              </td>
-              <td className="border p-3">High. Early access, scoped on a call.</td>
-              <td className="border p-3">Brands on several channels that want one system</td>
-            </tr>
-            <tr className="bg-white">
               <td className="border p-3">Custom-built agent</td>
               <td className="border p-3">Any job your systems allow</td>
               <td className="border p-3">Anything with an API</td>
@@ -341,7 +341,61 @@ export const post: BlogPost = {
         </table>
       </div>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">1. Customer Support Agents</h2>
+      <h2 className="text-2xl font-bold mt-8 mb-4">1. Multi-Channel Operations: Commerceflo (Our Product)</h2>
+      <p className="mb-8">
+        FactoryJet wrote this list and lists its own product first. The other tools follow,
+        grouped by job.
+      </p>
+
+      <h3 className="text-xl font-bold mt-6 mb-3">
+        Commerceflo (FactoryJet&apos;s Own Product): For Multi-Channel Operations
+      </h3>
+      <p className="mb-4">
+        Disclosure: Commerceflo is our product, so weigh this section with that in mind. We describe
+        it only from our{' '}
+        <a href="/commerceflo" className="text-[#B23E13] hover:underline">
+          Commerceflo product page
+        </a>{' '}
+        and{' '}
+        <a
+          href="https://commerceflo.ai/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#B23E13] hover:underline"
+        >
+          commerceflo.ai
+        </a>
+        . It is an AI commerce operator in early access that runs a DTC store, B2B portals,
+        marketplace listings and retail point of sale on one data model. Eight named agents watch
+        the business and propose a worked fix. Inventory, Pricing, Content, Customer and Growth make
+        changes after you approve them, or under an auto-approve rule you set. Fulfillment, Financial
+        and Compliance only flag issues.
+      </p>
+      <ul className="list-disc pl-6 mb-8 space-y-2">
+        <li>
+          <strong>Works with:</strong> commerceflo.ai lists connections including Amazon, Walmart,
+          eBay, TikTok Shop, WooCommerce, BigCommerce, Magento and Squarespace, plus NetSuite, SAP,
+          QuickBooks, Salesforce, Klaviyo, ShipBob, Linnworks and Cin7. Confirm your exact connector
+          first.
+        </li>
+        <li>
+          <strong>Pricing:</strong> not published. commerceflo.ai describes a one-time implementation
+          plus a monthly subscription, both scoped on a call, with no revenue share.
+        </li>
+        <li>
+          <strong>Best for:</strong> brands selling on several channels that want one system in place
+          of a stack of apps.
+        </li>
+        <li>
+          <strong>Watch out for:</strong> it is new, and commerceflo.ai says it has no customer logos
+          or metrics to show yet. Our own page says it is the wrong choice if you sell mainly through
+          one store with simple rules, need proven results first, want the largest app ecosystem, or
+          cannot change core systems this year. Checkout inside ChatGPT, Gemini or Claude is still
+          listed as in development.
+        </li>
+      </ul>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">2. Customer Support Agents</h2>
       <p className="mb-8">
         Support is where most stores start, because the questions repeat: where is my order (often
         shortened to WISMO), can I return this, can I change my address. These four tools answer
@@ -598,7 +652,7 @@ export const post: BlogPost = {
         </li>
       </ul>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">2. Shopping Assistants and Product Discovery</h2>
+      <h2 className="text-2xl font-bold mt-8 mb-4">3. Shopping Assistants and Product Discovery</h2>
       <p className="mb-8">
         Shopping assistants work before the sale. They answer product questions, recommend items and
         guide hesitant shoppers to checkout. These two price very differently.
@@ -727,7 +781,7 @@ export const post: BlogPost = {
         </div>
       </div>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">3. On-Site Search and Discovery: Algolia</h2>
+      <h2 className="text-2xl font-bold mt-8 mb-4">4. On-Site Search and Discovery: Algolia</h2>
       <p className="mb-4">
         Algolia is search infrastructure, not a chat widget. It indexes your catalog and returns
         results as shoppers type, with AI ranking on its Grow Plus plan. Its{' '}
@@ -782,7 +836,7 @@ export const post: BlogPost = {
         </li>
       </ul>
 
-      <h2 className="text-2xl font-bold mt-8 mb-4">4. Merchant Back Office Agents</h2>
+      <h2 className="text-2xl font-bold mt-8 mb-4">5. Merchant Back Office Agents</h2>
       <p className="mb-8">These agents work for you and your staff, not your shoppers.</p>
 
       <h3 className="text-xl font-bold mt-6 mb-3">
@@ -906,54 +960,6 @@ export const post: BlogPost = {
         <li>
           <strong>Watch out for:</strong> it works on your data, not with your shoppers, so it does
           not replace a support or shopping agent.
-        </li>
-      </ul>
-
-      <h3 className="text-xl font-bold mt-6 mb-3">
-        Commerceflo (FactoryJet&apos;s Own Product): For Multi-Channel Operations
-      </h3>
-      <p className="mb-4">
-        Disclosure: Commerceflo is our product, so weigh this section with that in mind. We describe
-        it only from our{' '}
-        <a href="/commerceflo" className="text-[#B23E13] hover:underline">
-          Commerceflo product page
-        </a>{' '}
-        and{' '}
-        <a
-          href="https://commerceflo.ai/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#B23E13] hover:underline"
-        >
-          commerceflo.ai
-        </a>
-        . It is an AI commerce operator in early access that runs a DTC store, B2B portals,
-        marketplace listings and retail point of sale on one data model. Eight named agents watch
-        the business and propose a worked fix. Inventory, Pricing, Content, Customer and Growth make
-        changes after you approve them, or under an auto-approve rule you set. Fulfillment, Financial
-        and Compliance only flag issues.
-      </p>
-      <ul className="list-disc pl-6 mb-8 space-y-2">
-        <li>
-          <strong>Works with:</strong> commerceflo.ai lists connections including Amazon, Walmart,
-          eBay, TikTok Shop, WooCommerce, BigCommerce, Magento and Squarespace, plus NetSuite, SAP,
-          QuickBooks, Salesforce, Klaviyo, ShipBob, Linnworks and Cin7. Confirm your exact connector
-          first.
-        </li>
-        <li>
-          <strong>Pricing:</strong> not published. commerceflo.ai describes a one-time implementation
-          plus a monthly subscription, both scoped on a call, with no revenue share.
-        </li>
-        <li>
-          <strong>Best for:</strong> brands selling on several channels that want one system in place
-          of a stack of apps.
-        </li>
-        <li>
-          <strong>Watch out for:</strong> it is new, and commerceflo.ai says it has no customer logos
-          or metrics to show yet. Our own page says it is the wrong choice if you sell mainly through
-          one store with simple rules, need proven results first, want the largest app ecosystem, or
-          cannot change core systems this year. Checkout inside ChatGPT, Gemini or Claude is still
-          listed as in development.
         </li>
       </ul>
 

@@ -392,9 +392,14 @@ export const post: BlogPost = {
       </h2>
       <p className={pCls}>
         These are the options that come up again and again when Australian businesses ask which ecommerce platform to
-        use. Each has a clear best-fit customer. None is best for everyone.
+        use. Each has a clear best-fit customer. None is best for everyone. FactoryJet wrote this list and lists its own
+        platform, Commerceflo, first. The order is not a ranking.
       </p>
       <ol className="list-decimal pl-5 space-y-3 text-gray-700 leading-relaxed mb-6">
+        <li>
+          <strong>Commerceflo by FactoryJet: for brands selling DTC, B2B, marketplace and in store from one stock
+          pool.</strong> Our own platform, in early access. Only where it fits.
+        </li>
         <li>
           <strong>Shopify: best overall for small and mid-sized stores.</strong> Hosted, billed in AUD, quick to launch,
           and the largest pool of apps, themes and Australian agencies.
@@ -422,10 +427,6 @@ export const post: BlogPost = {
         <li>
           <strong>Wix and Squarespace: best for very small catalogues.</strong> Website builders first, stores second.
           Good for a service business that sells a handful of products.
-        </li>
-        <li>
-          <strong>Commerceflo by FactoryJet: for brands selling DTC, B2B, marketplace and in store from one stock
-          pool.</strong> Our own platform, in early access. Only where it fits.
         </li>
       </ol>
 
@@ -627,7 +628,22 @@ export const post: BlogPost = {
         Each ecommerce platform in detail
       </h2>
 
-      <h3 className={h3Cls}>1. Shopify: the best ecommerce platform for most Australian small businesses</h3>
+      <h3 className={h3Cls}>1. Commerceflo by FactoryJet: our own platform, and when it fits</h3>
+      <p className={pCls}>
+        Full disclosure: Commerceflo is ours. It is an AI commerce operator that puts DTC, B2B, marketplace and in-store
+        selling on one data model, with AI agents that propose changes (to stock, pricing, content and customer
+        follow-up) and act only after a person approves them or within limits the merchant sets. It is in early access,
+        there are no public prices, and evaluation accounts are set up after a scoping call. We built Belle Maison’s DTC
+        and B2B storefront on it.
+      </p>
+      <p className={pCls}>
+        It fits a specific kind of business: one selling to consumers, trade customers and marketplaces from the same
+        stock, where keeping those channels in sync is the daily headache. For most Australian stores, especially new
+        ones, a mainstream platform is the better choice, and that is what we recommend. Read more on our{' '}
+        <a href="/commerceflo" className={linkCls}>Commerceflo overview</a>.
+      </p>
+
+      <h3 className={h3Cls}>2. Shopify: the best ecommerce platform for most Australian small businesses</h3>
       <p className={pCls}>
         Shopify is a hosted platform, which means Shopify runs the servers, security and updates, and you manage
         products, orders and design. On its{' '}
@@ -648,7 +664,7 @@ export const post: BlogPost = {
         design, build, integrations and support after launch.
       </p>
 
-      <h3 className={h3Cls}>2. Shopify Plus: what it is and when it pays off</h3>
+      <h3 className={h3Cls}>3. Shopify Plus: what it is and when it pays off</h3>
       <p className={pCls}>
         Shopify Plus is Shopify’s plan for larger and more complex businesses. Its{' '}
         <a href={SRC.shopifyPlus} {...extLinkProps}>Australian Plus pricing page</a> lists it from $3,700 AUD a month
@@ -663,7 +679,7 @@ export const post: BlogPost = {
         blocked by checkout limits, B2B catalogue limits or multi-market needs, the standard plans are enough.
       </p>
 
-      <h3 className={h3Cls}>3. BigCommerce: best for stores that want no platform transaction fees</h3>
+      <h3 className={h3Cls}>4. BigCommerce: best for stores that want no platform transaction fees</h3>
       <p className={pCls}>
         BigCommerce is also hosted. Its{' '}
         <a href={SRC.bigcommerce} {...extLinkProps}>Australian pricing page</a> lists Core at US$39 a month (US$29
@@ -680,7 +696,7 @@ export const post: BlogPost = {
         <a href="/blog/bigcommerce-vs-shopify-2026-fee-change" className={linkCls}>BigCommerce vs Shopify after the 2026 fee change</a>.
       </p>
 
-      <h3 className={h3Cls}>4. WooCommerce: best for WordPress businesses that want full control</h3>
+      <h3 className={h3Cls}>5. WooCommerce: best for WordPress businesses that want full control</h3>
       <p className={pCls}>
         WooCommerce is a free plugin that turns a WordPress website into a store. Its{' '}
         <a href={SRC.woocommerce} {...extLinkProps}>pricing page</a> (global, in US dollars) says there is no monthly
@@ -696,7 +712,7 @@ export const post: BlogPost = {
         exist for exactly that.
       </p>
 
-      <h3 className={h3Cls}>5. Maropost Commerce Cloud (formerly Neto): the Australian-built option</h3>
+      <h3 className={h3Cls}>6. Maropost Commerce Cloud (formerly Neto): the Australian-built option</h3>
       <p className={pCls}>
         Maropost Commerce Cloud grew out of Neto, an Australian-built platform, and is aimed at retailers
         that run warehouses and wholesale. With the currency switch on its{' '}
@@ -712,7 +728,7 @@ export const post: BlogPost = {
         is marketing, conversion and apps, Shopify is usually the easier fit.
       </p>
 
-      <h3 className={h3Cls}>6. Adobe Commerce (Magento): best for complex enterprise catalogues</h3>
+      <h3 className={h3Cls}>7. Adobe Commerce (Magento): best for complex enterprise catalogues</h3>
       <p className={pCls}>
         Adobe Commerce is the enterprise version of Magento. Adobe’s{' '}
         <a href={SRC.adobe} {...extLinkProps}>Australian product page</a> does not publish a price; you book a demo and
@@ -726,28 +742,13 @@ export const post: BlogPost = {
         <a href="/blog/magento-to-shopify-plus-migration-checklist-2026" className={linkCls}>Magento to Shopify Plus migration</a>.
       </p>
 
-      <h3 className={h3Cls}>7. Wix and Squarespace: best for a handful of products</h3>
+      <h3 className={h3Cls}>8. Wix and Squarespace: best for a handful of products</h3>
       <p className={pCls}>
         Wix and Squarespace are website builders with ecommerce plans. They are easy to use and look polished, which
         makes them a fair choice for a café, studio or service business selling a few products or gift vouchers. Both
         can show different prices depending on where you browse from, so check their pricing pages from Australia. As a catalogue
         grows past a few dozen products, or you need wholesale pricing, deeper shipping rules or serious marketing
         apps, a dedicated ecommerce platform becomes the better home.
-      </p>
-
-      <h3 className={h3Cls}>8. Commerceflo by FactoryJet: our own platform, and when it fits</h3>
-      <p className={pCls}>
-        Full disclosure: Commerceflo is ours. It is an AI commerce operator that puts DTC, B2B, marketplace and in-store
-        selling on one data model, with AI agents that propose changes (to stock, pricing, content and customer
-        follow-up) and act only after a person approves them or within limits the merchant sets. It is in early access,
-        there are no public prices, and evaluation accounts are set up after a scoping call. We built Belle Maison’s DTC
-        and B2B storefront on it.
-      </p>
-      <p className={pCls}>
-        It fits a specific kind of business: one selling to consumers, trade customers and marketplaces from the same
-        stock, where keeping those channels in sync is the daily headache. For most Australian stores, especially new
-        ones, a mainstream platform is the better choice, and that is what we recommend. Read more on our{' '}
-        <a href="/commerceflo" className={linkCls}>Commerceflo overview</a>.
       </p>
 
       <figure className="my-8">

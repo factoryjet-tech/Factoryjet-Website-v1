@@ -35,6 +35,21 @@ interface Firm {
 
 const FIRMS: Firm[] = [
   {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/uk/ecommerce-seo',
+    source: 'https://factoryjet.com/uk/ecommerce-seo',
+    group: 'commerce',
+    based: 'Works remotely with UK clients and schedules calls in UK business hours',
+    type: 'Ecommerce build and SEO team; 500+ businesses served since 2014',
+    platforms: 'Shopify and Shopify Plus, WooCommerce, Magento (Adobe Commerce) and BigCommerce',
+    clients: 'DTF (Shopify), Mannik (WooCommerce), Sow Easy (WooCommerce) and GPSUK (Commerceflo)',
+    what: 'FactoryJet builds and supports online stores, and the same developers carry out the SEO fixes. On Shopify that means editing Liquid templates directly: canonical tags, filter pages that waste crawl budget, theme duplicates and content that only appears after JavaScript runs. Engagements cover a technical crawl and fix list in month one, category keyword mapping and copy, product structured data, Core Web Vitals, editorial links and GA4 revenue tracking. FactoryJet is a registered Shopify Partner. Marketplace listings on Amazon or eBay are scoped separately.',
+    price: 'No rate card. Each phase has a fixed price, quoted in writing after a free audit call. Changes are quoted and approved per request, and there is no monthly minimum.',
+    bestFor: 'A store that wants the people who write the SEO plan to also change the code.',
+    ask: 'To see the fix list for your own store from the free audit before you agree to anything.',
+    covers: { facets: 'yes', migrations: 'yes', schema: 'yes', merchant: 'yes', ai: 'yes' },
+  },
+  {
     name: 'Eastside Co',
     url: 'https://eastsideco.com/',
     source: 'https://eastsideco.com/shopify-seo-experts',
@@ -192,24 +207,14 @@ const FIRMS: Firm[] = [
     ask: 'How its revenue-share terms are measured in GA4, and which current client looks most like your store.',
     covers: { facets: 'no', migrations: 'yes', schema: 'yes', merchant: 'no', ai: 'yes' },
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/uk/ecommerce-seo',
-    source: 'https://factoryjet.com/uk/ecommerce-seo',
-    group: 'commerce',
-    based: 'Works remotely with UK clients and schedules calls in UK business hours',
-    type: 'Ecommerce build and SEO team; 500+ businesses served since 2014',
-    platforms: 'Shopify and Shopify Plus, WooCommerce, Magento (Adobe Commerce) and BigCommerce',
-    clients: 'DTF (Shopify), Mannik (WooCommerce), Sow Easy (WooCommerce) and GPSUK (Commerceflo)',
-    what: 'FactoryJet builds and supports online stores, and the same developers carry out the SEO fixes. On Shopify that means editing Liquid templates directly: canonical tags, filter pages that waste crawl budget, theme duplicates and content that only appears after JavaScript runs. Engagements cover a technical crawl and fix list in month one, category keyword mapping and copy, product structured data, Core Web Vitals, editorial links and GA4 revenue tracking. FactoryJet is a registered Shopify Partner. Marketplace listings on Amazon or eBay are scoped separately.',
-    price: 'No rate card. Each phase has a fixed price, quoted in writing after a free audit call. Changes are quoted and approved per request, and there is no monthly minimum.',
-    bestFor: 'A store that wants the people who write the SEO plan to also change the code.',
-    ask: 'To see the fix list for your own store from the free audit before you agree to anything.',
-    covers: { facets: 'yes', migrations: 'yes', schema: 'yes', merchant: 'yes', ai: 'yes' },
-  },
 ];
 
 const GROUPS: { key: Firm['group']; heading: string; intro: string }[] = [
+  {
+    key: 'commerce',
+    heading: 'Which agency builds the store and does the SEO in the same team?',
+    intro: 'One entry here, and it is ours, so read it with that in mind. Eastside Co and Envisage Digital below also have developers and SEO people under one roof.',
+  },
   {
     key: 'shopify',
     heading: 'Best Shopify SEO agencies in the UK',
@@ -234,11 +239,6 @@ const GROUPS: { key: Firm['group']; heading: string; intro: string }[] = [
     key: 'senior',
     heading: 'Which agency offers a small senior team?',
     intro: 'Glass Digital has 13 people, works only with UK ecommerce brands, and offers revenue-share terms on some accounts.',
-  },
-  {
-    key: 'commerce',
-    heading: 'Which agency builds the store and does the SEO in the same team?',
-    intro: 'One entry here, and it is ours, so read it with that in mind. Eastside Co and Envisage Digital above also have developers and SEO people under one roof.',
   },
 ];
 
@@ -361,7 +361,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Why is FactoryJet on its own list?',
-    a: 'Because we do this work, and leaving ourselves out would hide that from you. We put FactoryJet last, labelled it, and used the same profile format as everyone else, with facts taken from our own service page. All four agency-written lists we read put their own firm first. Read every list on this topic, ours included, knowing who wrote it.',
+    a: 'Because we do this work, and leaving ourselves out would hide that from you. We put FactoryJet first, labelled it, and used the same profile format as everyone else, with facts taken from our own service page. All four agency-written lists we read put their own firm first. Read every list on this topic, ours included, knowing who wrote it.',
   },
 ];
 
@@ -370,11 +370,11 @@ export const post: BlogPost = {
   slug: 'best-ecommerce-seo-agencies-uk-2026',
   title: 'Best Ecommerce SEO Agencies in the UK (2026): 10 Checked',
   excerpt:
-    'Ten UK ecommerce SEO agencies for Shopify, Magento, WooCommerce and large catalogues, each checked on its own website on 21 October 2026: where it is based, the platforms it names, what its ecommerce SEO page covers, and the prices it publishes. FactoryJet wrote this list and is on it, last.',
+    'Ten UK ecommerce SEO agencies for Shopify, Magento, WooCommerce and large catalogues, each checked on its own website on 21 October 2026: where it is based, the platforms it names, what its ecommerce SEO page covers, and the prices it publishes. FactoryJet wrote this list and lists itself first.',
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Oct 22, 2026',
-  dateModified: 'Oct 31, 2026',
+  dateModified: 'Nov 18, 2026',
   readTime: '26 min read',
   imageUrl: `${IMG}.webp`,
   imageFit: 'contain',
@@ -387,7 +387,7 @@ export const post: BlogPost = {
   },
   keyTakeaways: [
     'There is no single best ecommerce SEO agency in the UK. Match the firm to your platform and size: Shopify (Eastside Co, StudioHawk UK, s360 UK), Magento and Adobe Commerce (Envisage Digital, Polaris), big catalogues and migrations (Edge45, Bring Digital, Seed), links or a small senior team (Reboot Online, Glass Digital).',
-    'Every fact below was read on each firm’s own website on 21 October 2026. Nobody paid to be here, the order is not a ranking, and FactoryJet, which wrote the list, is last.',
+    'Every fact below was read on each firm’s own website on 21 October 2026. Nobody paid to be here. FactoryJet wrote this list and lists itself first. The other firms are not in ranked order.',
     'We read five of the lists that rank for this search. All four written by agencies put their own firm first, and between them the five named 60 agencies, only 7 of them more than once.',
     'Published prices are rare. Polaris prints £3,000 to £19,500 a month by tier and Reboot Online a £2,000 monthly minimum. UK guides put ecommerce SEO at about £1,500 to £10,000+ a month.',
     'Three of the ten outside firms name all five ecommerce jobs on their own pages (faceted navigation, migrations, product schema, Merchant Center and AI search): Eastside Co, Edge45 and Seed. Polaris names four and sells migrations as a separate service. Only four name faceted navigation.',
@@ -405,8 +405,8 @@ export const post: BlogPost = {
             '@id': `${PAGE_URL}#agencies`,
             name: 'UK ecommerce SEO agencies compared (2026)',
             itemListOrder: 'https://schema.org/ItemListUnordered',
-            numberOfItems: FIRMS.filter((a) => a.group !== 'commerce').length,
-            itemListElement: FIRMS.filter((a) => a.group !== 'commerce').map((a, i) => ({
+            numberOfItems: FIRMS.length,
+            itemListElement: FIRMS.map((a, i) => ({
               '@type': 'ListItem',
               position: i + 1,
               name: a.name,
@@ -422,7 +422,7 @@ export const post: BlogPost = {
           The best ecommerce SEO company in the UK is the agency that knows your platform and shows results on stores like yours. Shopify: Eastside Co, StudioHawk UK, s360 UK. Magento or Adobe Commerce: Envisage Digital, Polaris. Big catalogues or a platform move: Edge45, Bring Digital, Seed. Links: Reboot Online. A small senior team: Glass Digital.
         </p>
         <p className="text-[#3A3A38]">
-          We read every firm&rsquo;s site on 21 October 2026. FactoryJet wrote this guide and is listed last.
+          We read every firm&rsquo;s site on 21 October 2026. FactoryJet wrote this guide and lists itself first.
         </p>
       </div>
 
@@ -436,7 +436,7 @@ export const post: BlogPost = {
         So this guide starts from each agency&rsquo;s own website. For every firm we noted where it is based, which platforms it names, what its ecommerce SEO page actually covers, one result it publishes for an ecommerce client, and any price it prints. Every fact is dated and linked.
       </p>
       <p className="mb-4">
-        <strong>A note on who wrote this.</strong>{' '}FactoryJet builds online stores and runs <a href="/uk/ecommerce-seo" className={link}>ecommerce SEO for UK stores</a>, so we are on this list, in the last group. Listing yourself is common on pages like this; it is a good reason to read every list, ours included, with care. This list shares no firm with our <a href="/blog/best-seo-agencies-uk" className={link}>list of the best SEO agencies in the UK</a>{' '}apart from us: that one covers every kind of business, this one only online stores.
+        <strong>A note on who wrote this.</strong>{' '}FactoryJet builds online stores and runs <a href="/uk/ecommerce-seo" className={link}>ecommerce SEO for UK stores</a>, so we are on this list, in the first group. Listing yourself is common on pages like this; it is a good reason to read every list, ours included, with care. This list shares no firm with our <a href="/blog/best-seo-agencies-uk" className={link}>list of the best SEO agencies in the UK</a>{' '}apart from us: that one covers every kind of business, this one only online stores.
       </p>
       <p className="mb-6">
         A few terms first. <strong>Category pages</strong>{' '}(also called collection or PLP pages) list products of one type, like &ldquo;women&rsquo;s trainers&rdquo;. <strong>Faceted navigation</strong>{' '}is the set of filters on those pages. A <strong>migration</strong>{' '}is moving the store to a new platform, domain or URL structure. <strong>Product schema</strong>{' '}is code that tells Google a product&rsquo;s price, stock and reviews. <strong>Google Merchant Center</strong>{' '}is where you send product data so items can appear in Google&rsquo;s shopping results. <strong>GEO</strong>{' '}(generative engine optimisation) means work aimed at AI answers such as ChatGPT and Google AI Overviews.

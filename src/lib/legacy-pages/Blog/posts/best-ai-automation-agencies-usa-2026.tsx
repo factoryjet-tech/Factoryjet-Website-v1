@@ -38,6 +38,19 @@ interface Firm {
 
 const FIRMS: Firm[] = [
   {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/services/ai-automation',
+    source: 'https://factoryjet.com/services/ai-automation',
+    group: 'Us',
+    based: 'Works with US clients remotely and schedules calls in US business hours',
+    type: 'AI and workflow automation, AI agents and the store or system around them',
+    clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
+    tools: 'n8n, Make, Zapier, HubSpot, Shopify',
+    what: 'We map one workflow, then design, build and support it in n8n, Make or Zapier, with AI steps where someone would otherwise read and decide, and human approval steps. Work is fixed-price and paid by milestone, and you own every workflow. Our strongest ground is where automation meets online stores, order handling, accounting and ERP systems. We are a registered Shopify Partner. The founder is involved in every project.',
+    bestFor: 'Online stores and order-heavy businesses that want one team for the store, the integrations and the automation.',
+    ask: 'Which of your tools we have connected before, and how the first workflow is scoped.',
+  },
+  {
     name: 'SuperDupr',
     url: 'https://superdupr.com/',
     source: 'https://superdupr.com/company',
@@ -214,27 +227,14 @@ const FIRMS: Firm[] = [
     bestFor: 'US agencies that want one white-label partner for web, marketing and automation work.',
     ask: 'Where the people who build your workflows are located, and who holds the Zapier, Make or n8n account after handover.',
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/services/ai-automation',
-    source: 'https://factoryjet.com/services/ai-automation',
-    group: 'Us',
-    based: 'Works with US clients remotely and schedules calls in US business hours',
-    type: 'AI and workflow automation, AI agents and the store or system around them',
-    clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
-    tools: 'n8n, Make, Zapier, HubSpot, Shopify',
-    what: 'We map one workflow, then design, build and support it in n8n, Make or Zapier, with AI steps where someone would otherwise read and decide, and human approval steps. Work is fixed-price and paid by milestone, and you own every workflow. Our strongest ground is where automation meets online stores, order handling, accounting and ERP systems. We are a registered Shopify Partner. The founder is involved in every project.',
-    bestFor: 'Online stores and order-heavy businesses that want one team for the store, the integrations and the automation.',
-    ask: 'Which of your tools we have connected before, and how the first workflow is scoped.',
-  },
 ];
 
 const GROUPS: Group[] = [
+  'Us',
   'Small business',
   'Growing and mid-size companies',
   'Ecommerce',
   'White-label for digital agencies',
-  'Us',
 ];
 
 // Sub-headings use the wording buyers used in the questions we tested.
@@ -252,10 +252,10 @@ const GROUP_INTRO: Record<Group, string> = {
   'Growing and mid-size companies':
     'Firms for companies whose workflows cross several systems and need engineers to build them. Two of the five, QueryNow and Revere Advisory, publish a fixed price for the first build.',
   Ecommerce:
-    'Firms that say they work with online sellers. One builds stores as well as automation; the other pairs automation with paid ads. FactoryJet, further down, also belongs in this group.',
+    'Firms that say they work with online sellers. One builds stores as well as automation; the other pairs automation with paid ads. FactoryJet, listed first above, also belongs in this group.',
   'White-label for digital agencies':
     'Firms that build automation for other agencies to sell under their own brand. Both have US addresses. E2M also has an office in Ahmedabad, India. Three of the buyer questions we tested asked for offshore, staffing or support help for agencies.',
-  Us: 'We build automation, so we are on this list. We put ourselves last.',
+  Us: 'We build automation, so we are on this list. FactoryJet wrote this list and lists itself first.',
 };
 
 // Published prices, copied from each firm's own page on 9 Oct 2026.
@@ -489,7 +489,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-10-09',
-              dateModified: '2026-10-31',
+              dateModified: '2026-11-18',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI and workflow automation agencies in the United States' },
@@ -521,7 +521,7 @@ export const post: BlogPost = {
           For US small businesses, the best AI automation agency depends on the job. For missed calls and lead follow-up, SuperDupr or Epiphany Dynamics. For a fixed-price build you own, AutomateNexus. For help by the hour, XRAY. For one mid-size workflow, QueryNow or Revere Advisory. For agencies, E2M or White Label IQ. For online stores, FactoryJet, Bitcot or The Snow Media.
         </p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          We checked all 14 firms on their own websites on 9 October 2026: where each is based, what it builds, which tools it names and any price it publishes. Nobody paid to be listed. The order is not a ranking. FactoryJet wrote this list and is on it, last.
+          We checked all 14 firms on their own websites on 9 October 2026: where each is based, what it builds, which tools it names and any price it publishes. Nobody paid to be listed. The order is not a ranking. FactoryJet wrote this list and lists itself first.
         </p>
         <p className="text-gray-800 leading-relaxed">
           Short on time? <a href="/contact" className={link}>Send us the one task you want automated</a> and the founder will tell you which kind of firm fits, even if that is not us.
@@ -538,7 +538,7 @@ export const post: BlogPost = {
         So we did the slow part. We picked US firms that build automation for small and mid-size buyers, opened each firm&rsquo;s own website, and wrote down only what the firm says about itself. Every profile links to its source. We confirmed a US base on each of those firms&rsquo; own sites.
       </p>
       <p className="mb-4">
-        <strong>A note on honesty.</strong> FactoryJet designs, builds and supports workflow automation and AI agents, so we are on this list. We put ourselves last, and we tell you where another firm on this page will suit you better. Read every list with that in mind, including this one.
+        <strong>A note on honesty.</strong> FactoryJet designs, builds and supports workflow automation and AI agents, so we are on this list. FactoryJet wrote this list and lists itself first, and we tell you where another firm on this page will suit you better. Read every list with that in mind, including this one.
       </p>
       <p className="mb-6">
         A few terms first, in plain English. An <strong>AI automation agency</strong> connects the software you already use so routine steps happen without retyping, and adds AI where a step needs reading or judgment. <strong>n8n, Make and Zapier</strong> are the three tools most of these firms build on: each one watches for an event in one app and runs steps in others. An <strong>AI agent</strong> is software that takes actions in your systems, such as updating an order, instead of only chatting. <strong>White-label</strong> means one firm builds and another sells the work under its own brand. An <strong>ERP</strong> is the system that holds orders, stock and accounts.
@@ -586,7 +586,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The best AI automation agencies in the US, profiled</h2>
       <p className="mb-6">
-        The order is not a ranking. Firms are grouped by the buyer they suit, in the words buyers used: small businesses, mid-sized businesses, digital commerce, digital agencies, then us.
+        The order is not a ranking. Firms are grouped by the buyer they suit, in the words buyers used: us first, then small businesses, mid-sized businesses, digital commerce and digital agencies.
       </p>
 
       {GROUPS.map((g) => {

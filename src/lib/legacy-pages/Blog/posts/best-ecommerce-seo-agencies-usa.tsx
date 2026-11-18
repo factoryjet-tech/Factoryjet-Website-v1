@@ -25,7 +25,7 @@ export const post: BlogPost = {
   slug: 'best-ecommerce-seo-agencies-usa',
   title: 'The 8 Best Ecommerce SEO Agencies in the USA (2026)',
   excerpt:
-    'Ecommerce SEO is a technical catalogue problem, not content marketing, and most SEO agencies cannot do it. We compared eight US ecommerce SEO agencies on the five technical capabilities that actually separate them. Disclosure: we are on the list, at number eight.',
+    'Ecommerce SEO is a technical catalogue problem, not content marketing, and most SEO agencies cannot do it. We compared eight US ecommerce SEO agencies on the five technical capabilities that actually separate them. Disclosure: we wrote this list and list ourselves first.',
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Sep 7, 2026',
@@ -36,12 +36,12 @@ export const post: BlogPost = {
   meta: {
     title: 'The 8 Best Ecommerce SEO Agencies in the USA (2026)',
     description:
-      'We compared eight US ecommerce SEO agencies on faceted navigation, crawl budget, product schema and catalogue depth. Disclosure: we are on the list at number 8.',
+      'We compared eight US ecommerce SEO agencies on faceted navigation, crawl budget, product schema and catalogue depth. Disclosure: we wrote it and list ourselves first.',
   },
   keyTakeaways: [
     'Ecommerce SEO is a technical catalogue discipline, not content marketing. Faceted navigation, crawl budget, product schema, out-of-stock URL handling and pagination are where stores win or lose, and none of them appear in a normal SEO proposal.',
     'The five-question technical test in this post will tell you in one call whether an agency actually does ecommerce SEO or does content SEO for ecommerce clients. Those are different services at the same price.',
-    'Our researched 2026 shortlist: OuterBox, Inflow, Uproer, SmartSites, 1Digital Agency, Searchbloom, ROI Revolution, and FactoryJet (disclosed self-inclusion, placed eighth).',
+    'Our researched 2026 shortlist: FactoryJet (disclosed self-inclusion, listed first), then OuterBox, Inflow, Uproer, SmartSites, 1Digital Agency, Searchbloom and ROI Revolution.',
     'OuterBox was named in 10 of 12 AI engine answers, the highest single score we have recorded across five of these studies.',
     'Amazon marketing is not ecommerce SEO. They are separate disciplines with separate agencies, and conflating them is a common and expensive mistake.',
     '"Ecommerce seo agency" carries a $126 average cost per click, among the highest in any agency category, which tells you what one store client is worth and why the market is crowded.',
@@ -65,13 +65,13 @@ export const post: BlogPost = {
     { q: 'Why is Coalition Technologies not on this list?', a: 'It scored 7 of 12 in our AI engine test and ranks on page one for this term, so its absence is not an oversight. Its website returned an HTTP 403 to our fetch on 7 September 2026, so we could not verify a single claim about it and excluded it rather than describe it from memory. We applied the same rule in our ecommerce development and local SEO roundups.' },
     { q: 'Why is Polaris Agency not on this list?', a: 'It was named in our testing and has strong published results including a 644% increase for Dune London and European Search Awards 2025 recognition, but it is headquartered in Gerrards Cross in the UK. This is a US list, so it is out of scope. We are noting it rather than dropping it silently, because if you are UK-based it is worth a look.' },
     { q: 'Is FactoryJet an ecommerce SEO specialist?', a: 'Ecommerce is our core work and SEO for stores is a large part of it, so this is home ground rather than adjacent ground. What we add is that we treat AI answer engine citation as a first-class deliverable alongside Google, because we measure per-engine citations rather than assuming Google rankings carry over.' },
-    { q: 'Why is FactoryJet eighth on its own list?', a: 'We put ourselves last on our own list, as a matter of method. Our slot is smaller and mid-sized stores that want organic and AI search visibility handled together, month-to-month. For a very large catalogue, OuterBox is ranked first for that reason.' },
+    { q: 'Why is FactoryJet first on its own list?', a: 'FactoryJet wrote this list and lists itself first. The other seven follow in the order our research set, led by OuterBox, the top score in our AI answer test. Our slot is smaller and mid-sized stores that want organic and AI search visibility handled together, month-to-month. For a very large catalogue, OuterBox is the better fit.' },
     { q: 'Should I read this list or go to your ecommerce SEO page?', a: 'Stay here if you are still choosing who to approach, and use the five-question technical test before you take any sales call. If you have decided to hire and want scope and terms, our ecommerce SEO service page covers that.' },
     { q: 'How was this list researched?', a: 'We asked ChatGPT, Claude, Gemini and Perplexity, each with live web search on, to recommend US ecommerce SEO agencies across three phrasings, twelve answers in total, and recorded every agency named. OuterBox scored 10 of 12, Inflow 8, Coalition Technologies and SmartSites 7, 1Digital 6, WebFX and Searchbloom 5. We then pulled the live US Google results for the head terms. Finally we fetched each shortlisted agency\'s own website on 7 September 2026 and used only claims stated there. Nobody paid to appear and no review scores were invented.' },
   ],
   content: (
     <>
-      <p className="mb-4"><strong>The short answer:</strong> <strong>OuterBox</strong> is the strongest US ecommerce SEO agency on the evidence, named in 10 of our 12 AI engine answers, the highest score across five of these studies. <strong>Inflow</strong> is the strongest ecommerce-only performance shop. <strong>Uproer</strong> is the strongest small specialist. FactoryJet is eighth (this is us), and our entry below says who we suit.</p>
+      <p className="mb-4"><strong>The short answer:</strong> <strong>OuterBox</strong> is the strongest US ecommerce SEO agency on the evidence, named in 10 of our 12 AI engine answers, the highest score across five of these studies. <strong>Inflow</strong> is the strongest ecommerce-only performance shop. <strong>Uproer</strong> is the strongest small specialist. FactoryJet wrote this list and lists itself first (this is us), and our entry below says who we suit.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Ecommerce SEO is a catalogue problem, not a content problem</h2>
       <p className="mb-4">This is the thing that decides whether you hire well, and most roundups on this term skip it entirely.</p>
@@ -91,7 +91,7 @@ export const post: BlogPost = {
 
       <p className="mb-4"><strong>Which page do you actually need?</strong> This one is for organic growth on a store that already exists. If the store itself needs building or replatforming, our <a href="/blog/best-ecommerce-development-agencies-usa" className="text-orange-600 underline">ecommerce development agency roundup</a> covers that instead, ranked on platform partner tier rather than SEO capability. If you have decided to hire for SEO, scope is on our <a href="/services/ecommerce-seo" className="text-orange-600 underline">ecommerce SEO service page</a>.</p>
 
-      <p className="mb-4"><strong>Disclosure, up front:</strong> FactoryJet is on this list, at number eight. Everything about the other seven was fetched from their own websites on 7 September 2026 and is quoted or attributed. Nobody paid to appear.</p>
+      <p className="mb-4"><strong>Disclosure, up front:</strong> FactoryJet wrote this list and lists itself first. The other seven follow in the order our research set. Everything about the other seven was fetched from their own websites on 7 September 2026 and is quoted or attributed. Nobody paid to appear.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The eight compared</h2>
       <div className="overflow-x-auto mb-6">
@@ -105,57 +105,57 @@ export const post: BlogPost = {
             </tr>
           </thead>
           <tbody>
-            <tr><td className="p-3 border"><strong>1. OuterBox</strong></td><td className="p-3 border">Large catalogues</td><td className="p-3 border">Akron, OH</td><td className="p-3 border">2004, 300+ staff, &quot;2M+ Page #1 Google Rankings&quot;</td></tr>
-            <tr><td className="p-3 border"><strong>2. Inflow</strong></td><td className="p-3 border">Ecommerce-only performance</td><td className="p-3 border">Denver and Tampa</td><td className="p-3 border">2007, ecommerce clients exclusively</td></tr>
-            <tr><td className="p-3 border"><strong>3. Uproer</strong></td><td className="p-3 border">Smaller stores, GEO and AEO</td><td className="p-3 border">Saint Paul, MN</td><td className="p-3 border">Founded 2017, ecommerce SEO and SEM</td></tr>
-            <tr><td className="p-3 border"><strong>4. SmartSites</strong></td><td className="p-3 border">SEO plus paid media</td><td className="p-3 border">US, remote</td><td className="p-3 border">&quot;900+ Websites Launched&quot;, Google Premier Partner</td></tr>
-            <tr><td className="p-3 border"><strong>5. 1Digital Agency</strong></td><td className="p-3 border">Mid-market, four platforms</td><td className="p-3 border">Philadelphia, PA</td><td className="p-3 border">2012, &quot;400+ brands&quot;, 4.9/5 from 941+ reviews</td></tr>
-            <tr><td className="p-3 border"><strong>6. Searchbloom</strong></td><td className="p-3 border">Published rates, documented method</td><td className="p-3 border">South Jordan, UT</td><td className="p-3 border">ART framework, SEO from $3,000/mo</td></tr>
-            <tr><td className="p-3 border"><strong>7. ROI Revolution</strong></td><td className="p-3 border">Retail media breadth</td><td className="p-3 border">Raleigh, NC</td><td className="p-3 border">Founded 2002, &quot;300+ brands&quot;</td></tr>
-            <tr><td className="p-3 border"><strong>8. FactoryJet</strong> (this is us)</td><td className="p-3 border">Stores wanting organic plus AI search</td><td className="p-3 border">Remote, US coverage</td><td className="p-3 border">Month-to-month, founder on the account, AI citations tracked per engine</td></tr>
+            <tr><td className="p-3 border"><strong>1. FactoryJet</strong> (this is us)</td><td className="p-3 border">Stores wanting organic plus AI search</td><td className="p-3 border">Remote, US coverage</td><td className="p-3 border">Month-to-month, founder on the account, AI citations tracked per engine</td></tr>
+            <tr><td className="p-3 border"><strong>2. OuterBox</strong></td><td className="p-3 border">Large catalogues</td><td className="p-3 border">Akron, OH</td><td className="p-3 border">2004, 300+ staff, &quot;2M+ Page #1 Google Rankings&quot;</td></tr>
+            <tr><td className="p-3 border"><strong>3. Inflow</strong></td><td className="p-3 border">Ecommerce-only performance</td><td className="p-3 border">Denver and Tampa</td><td className="p-3 border">2007, ecommerce clients exclusively</td></tr>
+            <tr><td className="p-3 border"><strong>4. Uproer</strong></td><td className="p-3 border">Smaller stores, GEO and AEO</td><td className="p-3 border">Saint Paul, MN</td><td className="p-3 border">Founded 2017, ecommerce SEO and SEM</td></tr>
+            <tr><td className="p-3 border"><strong>5. SmartSites</strong></td><td className="p-3 border">SEO plus paid media</td><td className="p-3 border">US, remote</td><td className="p-3 border">&quot;900+ Websites Launched&quot;, Google Premier Partner</td></tr>
+            <tr><td className="p-3 border"><strong>6. 1Digital Agency</strong></td><td className="p-3 border">Mid-market, four platforms</td><td className="p-3 border">Philadelphia, PA</td><td className="p-3 border">2012, &quot;400+ brands&quot;, 4.9/5 from 941+ reviews</td></tr>
+            <tr><td className="p-3 border"><strong>7. Searchbloom</strong></td><td className="p-3 border">Published rates, documented method</td><td className="p-3 border">South Jordan, UT</td><td className="p-3 border">ART framework, SEO from $3,000/mo</td></tr>
+            <tr><td className="p-3 border"><strong>8. ROI Revolution</strong></td><td className="p-3 border">Retail media breadth</td><td className="p-3 border">Raleigh, NC</td><td className="p-3 border">Founded 2002, &quot;300+ brands&quot;</td></tr>
           </tbody>
         </table>
       </div>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">The eight reviewed</h2>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">1. OuterBox, best for large catalogues</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">1. FactoryJet, for stores wanting organic and AI search together (disclosure: this is us)</h3>
+      <p className="mb-4">Ecommerce is our core and SEO for stores is a large part of it, so this is home ground.</p>
+      <p className="mb-4">What we add is current rather than historic: we treat citation in AI answer engines as a deliverable alongside Google rankings, tracking ChatGPT, Claude, Gemini and Perplexity separately, because we measure per-engine citation rather than assuming Google performance carries across. Most ecommerce SEO agencies are not yet reporting that at all. Month-to-month, founder on the account. Scope is on the <a href="/services/ecommerce-seo" className="text-orange-600 underline">ecommerce SEO service page</a>.</p>
+      <p className="mb-4"><strong>Consider us if</strong> you want organic and AI visibility as one project on a small or mid-sized store. <strong>Look elsewhere if</strong> you have a very large catalogue. That is OuterBox, the top score in our test.</p>
+
+      <h3 className="text-xl font-bold mt-6 mb-3">2. OuterBox, best for large catalogues</h3>
       <p className="mb-4">The clearest consensus pick we have recorded in this series: <strong>named in 10 of 12 AI engine answers</strong>. Founded 2004 with offices in Akron, Houston and Rochester, stating &quot;more than 300 digital marketing experts&quot; and &quot;2M+ Page #1 Google Rankings&quot; across &quot;1000+ Successful Client Partnerships&quot;. Clients include Lowe&apos;s, JEGS, Sur La Table, Matco Tools and Golfballs.com.</p>
       <p className="mb-4">What matters here is that ecommerce SEO is a named practice rather than a service page, and that its client list is heavy on large-catalogue retailers. Large catalogues are mostly a crawl budget and templating problem, and that is learned on hundreds of thousands of URLs, not hundreds.</p>
       <p className="mb-4"><strong>Consider it if</strong> your catalogue runs to thousands of SKUs. <strong>Look elsewhere if</strong> you are small enough to be a minor account there.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">2. Inflow, best ecommerce-only performance agency</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">3. Inflow, best ecommerce-only performance agency</h3>
       <p className="mb-4">Founded 2007, Denver and Tampa, and notable for working <strong>exclusively</strong> with ecommerce brands. That focus shows in the published results: &quot;126% increase in organic traffic YOY&quot; for Simms Fishing, a &quot;First $1 Million Month&quot; for Vitrazza, and 413% ad revenue growth for KEH Camera. States &quot;130+ Years Combined Industry Experience&quot; and &quot;$7 Million+ Media Managed&quot;.</p>
       <p className="mb-4">Google Premier Partner, Buy With Prime Agency Partner, and a Clutch Top Digital Marketing Company award as a women-owned business. Clients include America&apos;s Test Kitchen, Mountain House and Gaia.</p>
       <p className="mb-4"><strong>Consider it if</strong> you want an agency that has never had to learn ecommerce on someone else&apos;s account. <strong>Look elsewhere if</strong> you need the store built too.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">3. Uproer, best small specialist</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">4. Uproer, best small specialist</h3>
       <p className="mb-4">Founded in May 2017 by Griffin Roer in Saint Paul, Minnesota, after &quot;years of working as an SEO consultant to some of the country&apos;s largest retail and tech brands&quot;. It offers &quot;SEO &amp; SEM Solutions for Ecommerce&quot; and, unusually for an agency this size, names <strong>GEO and AEO</strong> among its solutions rather than treating AI search as a future problem.</p>
       <p className="mb-4">It also publishes its own ecommerce SEO agency roundup, which currently ranks on page one for this term. We mention that because it is the same play this page is making, and it works.</p>
       <p className="mb-4"><strong>Consider it if</strong> you want senior attention on a smaller account. <strong>Look elsewhere if</strong> you need a large team or enterprise references.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">4. SmartSites, best for SEO plus paid media</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">5. SmartSites, best for SEO plus paid media</h3>
       <p className="mb-4">States &quot;900+ Websites Launched&quot; and &quot;$100M+ Client Revenue Generated&quot;, with a complete accreditation set: Google Premier Partner, Microsoft Advertising Select Partner 2025, Meta Business Partner and Amazon Ads Verified Partner, plus Inc. 5000 recognition.</p>
       <p className="mb-4"><strong>Consider it if</strong> you want organic and paid from one team. <strong>Look elsewhere if</strong> you want a pure SEO specialist.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">5. 1Digital Agency, best mid-market across platforms</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">6. 1Digital Agency, best mid-market across platforms</h3>
       <p className="mb-4">Founded 2012 in Philadelphia, working across Shopify, BigCommerce, WooCommerce and Magento with &quot;50+ eCommerce specialists&quot; and &quot;400+ brands&quot; served. Its review transparency is the best here: <strong>&quot;4.9/5 rating across 941+ verified reviews&quot;</strong> aggregated across Google, Trustpilot, Clutch and Facebook.</p>
       <p className="mb-4">Results are published with engagement length attached, which is rarer and more honest than a bare percentage: &quot;+471.2% Online revenue growth over a 24-month engagement&quot;.</p>
       <p className="mb-4"><strong>Consider it if</strong> you are on Magento or WooCommerce, where strong agencies have thinned out. <strong>Look elsewhere if</strong> you need enterprise scale.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">6. Searchbloom, best published rates and documented method</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">7. Searchbloom, best published rates and documented method</h3>
       <p className="mb-4">South Jordan, Utah. The only agency here that <strong>publishes what it charges</strong>: SEO from $3,000 a month. Works to a named ART framework (Authority, Relevance, Technology), states &quot;No Lengthy Contracts&quot; and retention &quot;over 95 percent&quot;, lists ecommerce SEO as a distinct specialism alongside Answer Engine Optimization and Generative Engine Optimization, and holds a Search Engine Land Award win from 2021.</p>
       <p className="mb-4"><strong>Consider it if</strong> you want the number before the call. <strong>Look elsewhere if</strong> your budget is below its floor.</p>
 
-      <h3 className="text-xl font-bold mt-6 mb-3">7. ROI Revolution, best retail media breadth</h3>
+      <h3 className="text-xl font-bold mt-6 mb-3">8. ROI Revolution, best retail media breadth</h3>
       <p className="mb-4">Founded 2002 in Raleigh, North Carolina, stating &quot;300+ brands&quot; and an unusually wide platform footprint: Amazon, Google, Microsoft, Meta, Target, Walmart, Costco, Home Depot, Wayfair, Roku, TikTok and more. Certifications include Google Premier Partner 2026, Microsoft Elite Partner 2026 and Amazon Ads Verified Partner. Clients include Peter Millar, Guy Harvey and Steiner Tractor.</p>
       <p className="mb-4">It is more performance and retail media than pure organic, so weigh it accordingly, but for a store selling across marketplaces as well as its own site that breadth is genuinely useful.</p>
       <p className="mb-4"><strong>Consider it if</strong> you sell across several retail platforms. <strong>Look elsewhere if</strong> you want organic search depth specifically.</p>
-
-      <h3 className="text-xl font-bold mt-6 mb-3">8. FactoryJet, for stores wanting organic and AI search together (disclosure: this is us)</h3>
-      <p className="mb-4">Ecommerce is our core and SEO for stores is a large part of it, so this is home ground.</p>
-      <p className="mb-4">What we add is current rather than historic: we treat citation in AI answer engines as a deliverable alongside Google rankings, tracking ChatGPT, Claude, Gemini and Perplexity separately, because we measure per-engine citation rather than assuming Google performance carries across. Most ecommerce SEO agencies are not yet reporting that at all. Month-to-month, founder on the account. Scope is on the <a href="/services/ecommerce-seo" className="text-orange-600 underline">ecommerce SEO service page</a>.</p>
-      <p className="mb-4"><strong>Consider us if</strong> you want organic and AI visibility as one project on a small or mid-sized store. <strong>Look elsewhere if</strong> you have a very large catalogue. That is OuterBox, ranked first here for that reason.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Amazon marketing is not ecommerce SEO</h2>
       <p className="mb-4">Worth separating, because conflating them is common and expensive.</p>
@@ -167,7 +167,7 @@ export const post: BlogPost = {
       <p className="mb-4"><strong>Polaris Agency</strong> was named and has strong published work, including a 644% increase for Dune London and European Search Awards 2025 recognition. It is headquartered in Gerrards Cross in the UK, so it is out of scope for a US list. Noting it rather than dropping it silently, because if you are UK-based it is worth a look.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Methodology</h2>
-      <p className="mb-4">Run on 7 September 2026 and repeatable. We asked ChatGPT (gpt-5.6), Claude (Sonnet 5), Gemini (3.8 Flash) and Perplexity (Sonar Pro), each with live web search enabled, to recommend US ecommerce SEO agencies across three phrasings. Twelve answers. OuterBox scored 10 of 12, Inflow 8, Coalition Technologies and SmartSites 7, 1Digital 6, WebFX and Searchbloom 5, First Page Sage 4.</p>
+      <p className="mb-4">Run on 7 September 2026 and repeatable. We asked ChatGPT (gpt-5.6), Claude (Sonnet 5), Gemini (3.8 Flash) and Perplexity (Sonar Pro), each with live web search enabled, to recommend US ecommerce SEO agencies across three phrasings. Twelve answers. OuterBox scored 10 of 12, Inflow 8, Coalition Technologies and SmartSites 7, 1Digital 6, WebFX and Searchbloom 5, First Page Sage 4. FactoryJet wrote this list and is listed first. The other seven follow in the order our research set, led by OuterBox, the top score in this test.</p>
       <p className="mb-4">We then pulled the live US Google results for the head terms, and fetched each shortlisted agency&apos;s own website, recording only claims stated there. Where a site does not state a founding year or team size, we left it out rather than estimate it.</p>
       <p className="mb-4">Four agencies here also appear on our <a href="/blog/best-ecommerce-development-agencies-usa" className="text-orange-600 underline">ecommerce development roundup</a>, because the consensus sets genuinely overlap and omitting the strongest agencies to avoid repetition would make this list worse. The two pages rank on different criteria: that one on platform partner tier and build capability, this one on technical SEO capability. Codal, Groove Commerce and We Make Websites appear there and not here because they are build shops rather than SEO specialists.</p>
       <p className="mb-4">Nobody paid to appear. No review scores were invented.</p>

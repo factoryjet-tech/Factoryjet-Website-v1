@@ -28,6 +28,21 @@ interface Consultancy {
 }
 
 const CONSULTANCIES: Consultancy[] = [
+  // ── Remote ──
+  {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/au/ai-consulting',
+    source: 'https://factoryjet.com/au/ai-consulting',
+    city: 'Remote',
+    suits: 'Small or mid-size business',
+    based: 'Works remotely with Australian clients and schedules calls in Australian business hours',
+    type: 'AI readiness assessment, use case selection, AI usage policy, then the build',
+    clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
+    builds: 'Yes. We are implementation-led: we advise, then we build',
+    what: 'We run the readiness assessment, pick the two or three use cases worth doing first, check your data and Privacy Act duties, and recommend whether to buy a tool or build one. If a build is the right call, the same team designs, builds and supports it, and you own the code. We do not resell any AI platform. The founder is involved in every engagement. We are not lawyers and do not give legal sign-off.',
+    bestFor: 'A small or mid-size business that wants advice from the people who will build the system, and is happy to work over video.',
+    ask: 'What you hold in writing at the end of the readiness assessment.',
+  },
   // ── Sydney ──
   {
     name: 'Nimbull',
@@ -240,21 +255,6 @@ const CONSULTANCIES: Consultancy[] = [
     what: 'A founder-led practice. Its founder, Ben, writes that he started it after years of building full-stack software, AI integrations and workflow automations. Its Business Audit maps how the whole business runs, then sets out in a written roadmap what to automate first, what to leave alone and which AI tools fit, with the roadmap due within four business days. The audit is A$1,250, paid up front, and comes off any build that follows. Its site says the roadmap is yours to keep even if you never build with it, that every build gets one fixed price in writing, and that you own the code. It also offers a free AI readiness check.',
     bestFor: 'A small business that wants one person to map its admin, rank what to automate and say plainly what to leave alone.',
     ask: 'How support works after handover, since the founder does the work himself.',
-  },
-  // ── Remote ──
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/au/ai-consulting',
-    source: 'https://factoryjet.com/au/ai-consulting',
-    city: 'Remote',
-    suits: 'Small or mid-size business',
-    based: 'Works remotely with Australian clients and schedules calls in Australian business hours',
-    type: 'AI readiness assessment, use case selection, AI usage policy, then the build',
-    clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
-    builds: 'Yes. We are implementation-led: we advise, then we build',
-    what: 'We run the readiness assessment, pick the two or three use cases worth doing first, check your data and Privacy Act duties, and recommend whether to buy a tool or build one. If a build is the right call, the same team designs, builds and supports it, and you own the code. We do not resell any AI platform. The founder is involved in every engagement. We are not lawyers and do not give legal sign-off.',
-    bestFor: 'A small or mid-size business that wants advice from the people who will build the system, and is happy to work over video.',
-    ask: 'What you hold in writing at the end of the readiness assessment.',
   },
 ];
 
@@ -503,10 +503,10 @@ export const post: BlogPost = {
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">The short answer</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          There is no single best AI consultancy in Australia. Match by city and size. Small business: Nimbull (Sydney), Real Minds AI or Synap (Melbourne), Integrity Ai or Workvolve (Brisbane). Mid-size: Kinetic Consulting or JOURN3Y, Yes AI or Revium, Advancer. Regulated or government-facing: AI Consulting Group, RUBIX, Humanising Technologies. FactoryJet advises, then builds.
+          There is no single best AI consultancy in Australia. FactoryJet advises, then builds. Otherwise, match by city and size. Small business: Nimbull (Sydney), Real Minds AI or Synap (Melbourne), Integrity Ai or Workvolve (Brisbane). Mid-size: Kinetic Consulting or JOURN3Y, Yes AI or Revium, Advancer. Regulated or government-facing: AI Consulting Group, RUBIX, Humanising Technologies.
         </p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          FactoryJet wrote this list and is on it. We read every firm on its own website on 9 October 2026, and Workvolve on 18 November 2026: where it is based, what advice it sells, who it suits and any price it publishes. Nobody paid to be listed and the order is not a ranking. One firm here, Workvolve, links to this page, and we added it after that link went up; its entry was checked against its own site like the rest.
+          FactoryJet wrote this list and lists itself first. We read every firm on its own website on 9 October 2026, and Workvolve on 18 November 2026: where it is based, what advice it sells, who it suits and any price it publishes. Nobody paid to be listed and the order is not a ranking. One firm here, Workvolve, links to this page, and we added it after that link went up; its entry was checked against its own site like the rest.
         </p>
         <p className="text-gray-800 leading-relaxed">
           For a second opinion on your shortlist, <a href="/contact" className="text-[#B23E13] underline font-semibold">talk to the Founder</a>. The first call is free.
@@ -520,7 +520,7 @@ export const post: BlogPost = {
         Most lists of Australian AI firms are national, and that hides the question buyers ask. In Australia, &ldquo;ai consulting&rdquo; draws about 1,000 Google searches a month, and &ldquo;ai consulting sydney&rdquo; and &ldquo;ai consulting melbourne&rdquo; about 110 each (DataForSEO, read on 9 October 2026). People search by city. So this list is sorted by city, then by the kind of buyer each firm suits: a small business, a mid-size company, or a regulated or government-facing organisation.
       </p>
       <p className="mb-4">
-        <strong>A note on honesty.</strong> FactoryJet sells AI consulting, so we are on this list. We put ourselves last. We are implementation-led, which means we advise and then build. Where another firm will suit you better, we say that too.
+        <strong>A note on honesty.</strong> FactoryJet sells AI consulting, so we are on this list. FactoryJet wrote this list and lists itself first. We are implementation-led, which means we advise and then build. Where another firm will suit you better, we say that too.
       </p>
       <p className="mb-6">
         A few terms, in plain English. A <strong>readiness assessment</strong> is a short review of your data, systems, people and risks. A <strong>roadmap</strong> is a ranked list of what to do, in order. <strong>Governance</strong> means the rules for using AI: who is accountable, which tools are allowed, what data may go into them and who checks the output. A <strong>use case</strong> is one job you want AI to help with, such as drafting quotes.
@@ -622,6 +622,15 @@ export const post: BlogPost = {
         <figcaption className="text-sm text-gray-600 mt-2">A readiness assessment starts with how the work runs today. A good adviser asks to see the job being done before talking about tools.</figcaption>
       </figure>
 
+      <h2 id="remote" className="text-2xl font-bold mt-10 mb-4">Remote AI consulting for Australian businesses</h2>
+      <p className="mb-4">
+        Remote advice works for most of this, because workshops and interviews run well over video. Advancer, a Brisbane firm, says on its own site that most of its delivery happens remotely, with on-site sessions where they add value.
+      </p>
+      {renderFirms('Remote')}
+      <p className="mb-6">
+        FactoryJet services for Australian businesses: <a href="/au/ai-consulting" className="text-[#B23E13] underline">AI consulting in Australia</a>, <a href="/au/ai-agents" className="text-[#B23E13] underline">AI agent development</a> and <a href="/au/ai-development" className="text-[#B23E13] underline">custom AI development</a>.
+      </p>
+
       <h2 id="sydney" className="text-2xl font-bold mt-10 mb-4">Best AI consultancy in Sydney for a small business, a mid-size company or a regulated one</h2>
       <p className="mb-4">
         Five Sydney firms made this list. &ldquo;ai consulting sydney&rdquo; and &ldquo;ai consultant sydney&rdquo; each draw about 110 Google searches a month. For a mid-size company, start with Kinetic Consulting or JOURN3Y, or with Melotti AI Ethics Consulting if the first need is a written policy. For a small business, Nimbull. For regulated or government-facing work, AI Consulting Group.
@@ -666,15 +675,6 @@ export const post: BlogPost = {
         />
         <figcaption className="text-sm text-gray-600 mt-2">Training is often the cheapest first step. Ask that the session uses your own tasks and the tools your policy allows.</figcaption>
       </figure>
-
-      <h2 id="remote" className="text-2xl font-bold mt-10 mb-4">Remote AI consulting for Australian businesses</h2>
-      <p className="mb-4">
-        Remote advice works for most of this, because workshops and interviews run well over video. Advancer, a Brisbane firm, says on its own site that most of its delivery happens remotely, with on-site sessions where they add value.
-      </p>
-      {renderFirms('Remote')}
-      <p className="mb-6">
-        FactoryJet services for Australian businesses: <a href="/au/ai-consulting" className="text-[#B23E13] underline">AI consulting in Australia</a>, <a href="/au/ai-agents" className="text-[#B23E13] underline">AI agent development</a> and <a href="/au/ai-development" className="text-[#B23E13] underline">custom AI development</a>.
-      </p>
 
       <h2 id="prices" className="text-2xl font-bold mt-10 mb-4">How much do AI consulting firms charge? What these firms publish</h2>
       <p className="mb-4">

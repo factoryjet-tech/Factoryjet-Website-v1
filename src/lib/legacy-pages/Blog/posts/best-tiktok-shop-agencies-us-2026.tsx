@@ -38,6 +38,21 @@ interface Firm {
 
 const FIRMS: Firm[] = [
   {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/',
+    source: 'https://factoryjet.com/services/tiktok-shop-agency',
+    group: 'Us',
+    tsp: 'None claimed',
+    based: 'Serves US brands, with calls in US business hours',
+    type: 'Commerce and AI services company',
+    clients: 'DTF (Shopify store) and Mannik (WooCommerce store). We show working software on your own products before you sign',
+    channels: 'TikTok Shop, Shopify, Amazon, Walmart, Target Plus, with one catalog and stock count across them',
+    what: 'We set up TikTok Shop in Seller Center, list your products, connect your Shopify store and set shipping and return rules. Then we find creators, run TikTok Shop ads and handle the daily work. Because we also build the systems behind the store, we keep TikTok Shop, Shopify, Amazon and Walmart on one catalog and one inventory count. Every engagement starts with a free audit.',
+    fee: 'Quoted after the free audit',
+    bestFor: 'Brands that want TikTok Shop run on the same catalog and stock system as their store and marketplaces.',
+    ask: 'Can you show our own products and stock moving between Shopify and TikTok Shop before we sign?',
+  },
+  {
     name: 'MediaLabs',
     url: 'https://medialabs-co.com/',
     source: 'https://medialabs-co.com/',
@@ -226,24 +241,9 @@ const FIRMS: Firm[] = [
     bestFor: 'Brands that want TikTok Shop run inside a wider paid media and Amazon program.',
     ask: 'Which brands are in your TikTok Shop portfolio today, and who is on the social commerce team?',
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/',
-    source: 'https://factoryjet.com/services/tiktok-shop-agency',
-    group: 'Us',
-    tsp: 'None claimed',
-    based: 'Serves US brands, with calls in US business hours',
-    type: 'Commerce and AI services company',
-    clients: 'DTF (Shopify store) and Mannik (WooCommerce store). We show working software on your own products before you sign',
-    channels: 'TikTok Shop, Shopify, Amazon, Walmart, Target Plus, with one catalog and stock count across them',
-    what: 'We set up TikTok Shop in Seller Center, list your products, connect your Shopify store and set shipping and return rules. Then we find creators, run TikTok Shop ads and handle the daily work. Because we also build the systems behind the store, we keep TikTok Shop, Shopify, Amazon and Walmart on one catalog and one inventory count. Every engagement starts with a free audit.',
-    fee: 'Quoted after the free audit',
-    bestFor: 'Brands that want TikTok Shop run on the same catalog and stock system as their store and marketplaces.',
-    ask: 'Can you show our own products and stock moving between Shopify and TikTok Shop before we sign?',
-  },
 ];
 
-const GROUPS: Group[] = ['TikTok Shop specialists', 'Marketplace agencies', 'Us'];
+const GROUPS: Group[] = ['Us', 'TikTok Shop specialists', 'Marketplace agencies'];
 
 const GROUP_HEADING: Record<Group, string> = {
   'TikTok Shop specialists': 'TikTok Shop management agencies and creator specialists',
@@ -384,7 +384,7 @@ export const post: BlogPost = {
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Oct 23, 2026',
-  dateModified: 'Oct 31, 2026',
+  dateModified: 'Nov 18, 2026',
   readTime: '20 min read',
   imageUrl: `${IMG}/hero.webp`,
   imageAlt:
@@ -417,7 +417,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-10-23',
-              dateModified: '2026-10-31',
+              dateModified: '2026-11-18',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'TikTok Shop agencies for brands in the United States' },
@@ -447,7 +447,7 @@ export const post: BlogPost = {
         </p>
       </div>
       <p className="text-gray-800 leading-relaxed mb-3">
-        We read all 13 agencies on their own websites on 23 October 2026: where each is based, which channels it runs, what it claims about TikTok partner status and any fee it publishes. Nobody paid to be listed. The order is not a ranking. FactoryJet wrote this list and is on it.
+        We read all 13 agencies on their own websites on 23 October 2026: where each is based, which channels it runs, what it claims about TikTok partner status and any fee it publishes. Nobody paid to be listed. The order is not a ranking. FactoryJet wrote this list and lists itself first.
       </p>
       <p className="text-gray-800 leading-relaxed mb-6">
         Short on time? <a href="/contact" className={link}>Tell us what you sell and where</a>. Bhavesh, our founder, reads every request.
@@ -526,7 +526,7 @@ export const post: BlogPost = {
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The best TikTok Shop agencies for US brands, profiled</h2>
-      <p className="mb-6">The order is not a ranking. Agencies are grouped by what they lead with: TikTok specialists, then marketplace agencies, then us.</p>
+      <p className="mb-6">The order is not a ranking. FactoryJet wrote this list and lists itself first. The other agencies are grouped by what they lead with: TikTok specialists, then marketplace agencies.</p>
 
       {GROUPS.map((g) => {
         const inGroup = FIRMS.filter((f) => f.group === g);

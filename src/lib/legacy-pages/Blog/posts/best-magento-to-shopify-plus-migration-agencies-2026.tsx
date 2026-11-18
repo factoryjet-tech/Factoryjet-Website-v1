@@ -13,8 +13,9 @@ const META_DESCRIPTION =
 // Every fact about every firm below was read on that firm's own website and on
 // its Shopify Partner Directory profile on 23 October 2026 (URL in `source`,
 // `hqSource` where the location came from another page, `directory` for the
-// Shopify profile). Nothing here is paid placement. The order is NOT a ranking;
-// firms are grouped by the kind of Magento store they suit.
+// Shopify profile). Nothing here is paid placement. FactoryJet wrote this list
+// and lists itself first. After it the order is NOT a ranking; firms are grouped
+// by the kind of Magento store they suit.
 // The ItemList schema maps from this same array, so the list and schema cannot drift.
 type Group = 'Enterprise Adobe Commerce' | 'B2B and ERP-heavy stores' | 'Mid-market stores' | 'Smaller single-site stores' | 'Us';
 
@@ -38,6 +39,22 @@ interface Firm {
 }
 
 const FIRMS: Firm[] = [
+  {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/',
+    source: 'https://factoryjet.com/replatforming/magento-to-shopify',
+    tier: 'Registered',
+    group: 'Us',
+    based: 'Serves US clients, with calls in US business hours',
+    type: 'Commerce and AI services company',
+    clients: 'Brands and wholesalers whose store must stay in step with QuickBooks or an ERP',
+    systems: 'Magento, Adobe Commerce, Salesforce Commerce Cloud, BigCommerce, WooCommerce, QuickBooks, NetSuite, Odoo, SAP Business One, ERPNext, EDI',
+    timeline: '5 to 8 weeks for B2B, subscriptions or heavy data cleanup; 8 to 14 weeks for headless or custom builds',
+    what: 'We move Magento and Adobe Commerce stores to Shopify Plus and connect the new store to the accounting or ERP system behind it. We publish our migration runbook, the published cost ranges and Adobe’s end-of-support dates on our Magento to Shopify page. We quote a fixed price in writing after a short scoping call, and you own everything we build.',
+    seo: 'Our runbook includes a URL inventory, a redirect map and checks after launch. See the runbook on our Magento to Shopify page.',
+    bestFor: 'Stores that want the migration, the ERP or QuickBooks connection and AI agents for store work from one team.',
+    ask: 'Can we see working software on our own data before we sign a contract?',
+  },
   {
     name: 'SDG',
     url: 'https://www.sdg.la/',
@@ -234,25 +251,9 @@ const FIRMS: Firm[] = [
     bestFor: 'Smaller Magento stores where protecting search traffic is the main worry.',
     ask: 'How many Magento to Shopify migrations has your team finished, and can we speak to one of those clients?',
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/',
-    source: 'https://factoryjet.com/replatforming/magento-to-shopify',
-    tier: 'Registered',
-    group: 'Us',
-    based: 'Serves US clients, with calls in US business hours',
-    type: 'Commerce and AI services company',
-    clients: 'Brands and wholesalers whose store must stay in step with QuickBooks or an ERP',
-    systems: 'Magento, Adobe Commerce, Salesforce Commerce Cloud, BigCommerce, WooCommerce, QuickBooks, NetSuite, Odoo, SAP Business One, ERPNext, EDI',
-    timeline: '5 to 8 weeks for B2B, subscriptions or heavy data cleanup; 8 to 14 weeks for headless or custom builds',
-    what: 'We move Magento and Adobe Commerce stores to Shopify Plus and connect the new store to the accounting or ERP system behind it. We publish our migration runbook, the published cost ranges and Adobe’s end-of-support dates on our Magento to Shopify page. We quote a fixed price in writing after a short scoping call, and you own everything we build.',
-    seo: 'Our runbook includes a URL inventory, a redirect map and checks after launch. See the runbook on our Magento to Shopify page.',
-    bestFor: 'Stores that want the migration, the ERP or QuickBooks connection and AI agents for store work from one team.',
-    ask: 'Can we see working software on our own data before we sign a contract?',
-  },
 ];
 
-const GROUPS: Group[] = ['Enterprise Adobe Commerce', 'B2B and ERP-heavy stores', 'Mid-market stores', 'Smaller single-site stores', 'Us'];
+const GROUPS: Group[] = ['Us', 'Enterprise Adobe Commerce', 'B2B and ERP-heavy stores', 'Mid-market stores', 'Smaller single-site stores'];
 
 // Sub-headings use the wording buyers used in the questions we tested.
 const GROUP_HEADING: Record<Group, string> = {
@@ -272,7 +273,7 @@ const GROUP_INTRO: Record<Group, string> = {
     'Firms that describe themselves around mid-market brands. Two publish timelines. They differ most in how they start: Netalico with a redirect map, Solo Media Group with a published starting price, Command C with a paid roadmap.',
   'Smaller single-site stores':
     'Two Shopify Plus tier partners whose pages suit a single Magento website selling direct. One publishes a fixed starting price.',
-  Us: 'We move Magento stores to Shopify Plus, so we are on this list. Our entry uses the same format as every other firm.',
+  Us: 'We move Magento stores to Shopify Plus. FactoryJet wrote this list and lists itself first. Our entry uses the same format as every other firm.',
 };
 
 const GROUP_LABEL: Record<Group, string> = {
@@ -309,7 +310,7 @@ const tierCount = (t: string): number => FIRMS.filter((f) => f.group !== 'Us' &&
 const FAQS: FAQItem[] = [
   {
     q: 'Who should I hire to migrate from Magento to Shopify Plus?',
-    a: 'Hire for the store you have. For enterprise Adobe Commerce, look at SDG, Domaine or Anatta. For B2B and ERP-heavy stores, Shero Commerce, ECommerce Partners or Fyresite. For mid-market brands, Netalico, Solo Media Group or Command C. For a single website selling direct, Ruby Digital Agency or Black Belt Commerce. For a store tied to QuickBooks or an ERP with AI agents, FactoryJet. We read every firm on its own site on 23 October 2026.',
+    a: 'Hire for the store you have. For a store tied to QuickBooks or an ERP with AI agents, FactoryJet. For enterprise Adobe Commerce, look at SDG, Domaine or Anatta. For B2B and ERP-heavy stores, Shero Commerce, ECommerce Partners or Fyresite. For mid-market brands, Netalico, Solo Media Group or Command C. For a single website selling direct, Ruby Digital Agency or Black Belt Commerce. We read every firm on its own site on 23 October 2026.',
   },
   {
     q: 'What are the best Magento to Shopify migration agencies in the US?',
@@ -420,7 +421,7 @@ export const post: BlogPost = {
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Oct 23, 2026',
-  dateModified: 'Oct 31, 2026',
+  dateModified: 'Nov 18, 2026',
   hideExcerptOnPage: true,
   readTime: '22 min read',
   imageUrl: `${IMG}/hero.webp`,
@@ -432,7 +433,7 @@ export const post: BlogPost = {
   },
   keyTakeaways: [
     'No single Magento to Shopify migration agency suits every store. Match the firm to your store: enterprise Adobe Commerce, B2B with an ERP, a mid-market brand, or one website selling direct.',
-    'Every fact about every firm was read on its own website on 23 October 2026, and on its Shopify partner directory profile where one exists (10 of the 11 other firms). Nobody paid to be listed, and the order is not a ranking.',
+    'Every fact about every firm was read on its own website on 23 October 2026, and on its Shopify partner directory profile where one exists (10 of the 11 other firms). Nobody paid to be listed. FactoryJet wrote this list and lists itself first; the order of the others is not a ranking.',
     'Published timelines run from 10 to 14 weeks for a simple store to 24 to 36 weeks for enterprise Adobe Commerce with ERP work.',
     'Three firms publish a price: Ruby Digital Agency (from $3,500 for one website), Solo Media Group (one line says from about $20,000, its FAQ says around $15,000) and Anatta ($2,500 audit, credited).',
     'Shopify’s free Store Migration app does not list Magento as a source. Magento moves need a paid app, scripts or a partner.',
@@ -454,7 +455,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-10-23',
-              dateModified: '2026-10-31',
+              dateModified: '2026-11-18',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'Magento to Shopify Plus migration agencies for US brands' },
@@ -480,12 +481,12 @@ export const post: BlogPost = {
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">The short answer</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          For a migration from Magento to Shopify, hire for the store you have. For enterprise Adobe Commerce, SDG, Domaine or Anatta. For B2B and ERP-heavy stores, Shero Commerce, ECommerce Partners or Fyresite. For mid-market brands, Netalico, Solo Media Group or Command C. For one website selling direct, Ruby Digital Agency or Black Belt Commerce. For a store tied to QuickBooks or an ERP with AI agents, FactoryJet.
+          For a migration from Magento to Shopify, hire for the store you have. For a store tied to QuickBooks or an ERP with AI agents, FactoryJet. For enterprise Adobe Commerce, SDG, Domaine or Anatta. For B2B and ERP-heavy stores, Shero Commerce, ECommerce Partners or Fyresite. For mid-market brands, Netalico, Solo Media Group or Command C. For one website selling direct, Ruby Digital Agency or Black Belt Commerce.
         </p>
       </div>
 
       <p className="text-gray-800 leading-relaxed mb-3">
-          We read all 12 firms on their own websites on 23 October 2026, and 10 of the other 11 in Shopify&rsquo;s partner directory as well (ECommerce Partners has no profile we could find): where each is based, its tier, the systems it names, its timeline, how it handles redirects and any price it publishes. Nobody paid to be listed. The order is not a ranking. FactoryJet wrote this list and is on it.
+          We read all 12 firms on their own websites on 23 October 2026, and 10 of the other 11 in Shopify&rsquo;s partner directory as well (ECommerce Partners has no profile we could find): where each is based, its tier, the systems it names, its timeline, how it handles redirects and any price it publishes. Nobody paid to be listed. FactoryJet wrote this list and lists itself first. The order of the other 11 is not a ranking.
         </p>
         <p className="text-gray-800 leading-relaxed">
           Short on time? <a href="/contact" className={link}>Send us your Magento version, extensions and ERP</a> and the founder will tell you which kind of firm fits your move.
@@ -498,7 +499,7 @@ export const post: BlogPost = {
         So we did the slow part. We started from the firms those answers named, kept only those with a US base and a real Magento to Shopify service, and opened each firm&rsquo;s own migration page and, where one exists, its Shopify directory profile. We dropped nine firms. Makro Agency and Taylor Sicard are based in Canada. Superco and Unified are in London, and Swanky lists teams in the UK and Australia. Turnaround Commerce lists no US office. UncannyCS, eSEOspace and OnTap Group showed no Magento to Shopify service on the pages we read. Every profile below links to its sources.
       </p>
       <p className="mb-4">
-        <strong>Who wrote this.</strong> FactoryJet moves Magento stores to Shopify Plus, so we are on this list. Nobody paid to be included, the order is not a ranking, and our entry uses the same format as every other firm. Read every agency list with its author in mind, including this one.
+        <strong>Who wrote this.</strong> FactoryJet moves Magento stores to Shopify Plus. FactoryJet wrote this list and lists itself first. Nobody paid to be included, the order of the other firms is not a ranking, and our entry uses the same format as every other firm. Read every agency list with its author in mind, including this one.
       </p>
       <p className="mb-6">
         A few terms in plain English. <strong>Magento</strong> is the ecommerce platform Adobe now sells as <strong>Adobe Commerce</strong>; the free edition is Magento Open Source. <strong>Shopify Plus</strong> is Shopify&rsquo;s plan for high-volume businesses. A <strong>migration</strong> or replatform moves your products, customers, orders and web addresses from one platform to another. A <strong>301 redirect</strong> sends an old web address to its new page so shoppers and search engines follow it. An <strong>ERP</strong> is the system that holds orders, stock and accounts. A <strong>metafield</strong> is an extra field Shopify adds to a product, customer or order for data its standard fields do not hold. A <strong>store view</strong> is Magento&rsquo;s way of running one store in several languages or regions. A <strong>canonical tag</strong> tells search engines which address is the main copy of a page. <strong>Cutover</strong> is the moment the old store stops taking orders and the new one starts, and <strong>rollback</strong> is the plan to switch back if launch goes wrong. <a href="https://shopify.dev/docs/apps/build/functions" className={link} rel="noopener" target="_blank">Shopify Functions</a>{' '}are small pieces of custom code that change how discounts, shipping or checkout work.
@@ -580,7 +581,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The best Magento to Shopify Plus migration agencies, profiled</h2>
       <p className="mb-6">
-        The order is not a ranking. Firms are grouped by the kind of Magento store they suit: enterprise Adobe Commerce, B2B and ERP-heavy stores, mid-market brands, smaller single-site stores, then us. Of the 11 other firms, the Shopify directory listed {tierCount('Platinum')} as Platinum, {tierCount('Premier')} as Premier and {tierCount('Plus')} as Plus on 23 October 2026.
+        FactoryJet wrote this list and lists itself first. After us the order is not a ranking: firms are grouped by the kind of Magento store they suit, namely enterprise Adobe Commerce, B2B and ERP-heavy stores, mid-market brands and smaller single-site stores. Of the 11 other firms, the Shopify directory listed {tierCount('Platinum')} as Platinum, {tierCount('Premier')} as Premier and {tierCount('Plus')} as Plus on 23 October 2026.
       </p>
 
       {GROUPS.map((g) => {
@@ -782,6 +783,7 @@ export const post: BlogPost = {
       <h2 className="text-2xl font-bold mt-10 mb-4">Which Magento to Shopify migration agency fits your store</h2>
       <p className="mb-4">Find the line that sounds most like you. It points to a kind of firm first and a name second.</p>
       <table className={[styles.profileFacts, styles.choiceFacts].join(' ')}><tbody>
+        <tr><th scope="row">&ldquo;The new store must stay in step with QuickBooks or our ERP, and we want AI agents on order work.&rdquo;</th><td>FactoryJet builds the store, the connection and the agents as one project. See <a href="/services/ecommerce-erp-integration" className={link}>ecommerce ERP integration</a> and <a href="/services/shopify-ai-agents" className={link}>Shopify AI agents</a>.</td></tr>
         <tr><th scope="row">&ldquo;We run enterprise Adobe Commerce with several back-office systems.&rdquo;</th><td>SDG, or Anatta if you have $10M or more in revenue and subscriptions.</td></tr>
         <tr><th scope="row">&ldquo;We are a fashion or beauty brand on Adobe Commerce or Salesforce Commerce Cloud.&rdquo;</th><td>Domaine.</td></tr>
         <tr><th scope="row">&ldquo;We sell wholesale on Magento with company accounts and price lists.&rdquo;</th><td>ECommerce Partners or Shero Commerce.</td></tr>
@@ -790,7 +792,6 @@ export const post: BlogPost = {
         <tr><th scope="row">&ldquo;We want a written plan before we commit to a build.&rdquo;</th><td>Command C, or Anatta&rsquo;s paid audit.</td></tr>
         <tr><th scope="row">&ldquo;We have one Adobe Commerce website and a modest budget.&rdquo;</th><td>Ruby Digital Agency, or Black Belt Commerce for an SEO-led team.</td></tr>
         <tr><th scope="row">&ldquo;We are leaving Salesforce Commerce Cloud, not Magento.&rdquo;</th><td>Domaine and Command C name finished moves. Anatta, Netalico, Ruby Digital Agency and Black Belt Commerce also list it. See our <a href="/replatforming/salesforce-commerce-cloud-to-shopify-plus" className={link}>Salesforce Commerce Cloud to Shopify Plus guide</a>.</td></tr>
-        <tr><th scope="row">&ldquo;The new store must stay in step with QuickBooks or our ERP, and we want AI agents on order work.&rdquo;</th><td>FactoryJet builds the store, the connection and the agents as one project. See <a href="/services/ecommerce-erp-integration" className={link}>ecommerce ERP integration</a> and <a href="/services/shopify-ai-agents" className={link}>Shopify AI agents</a>.</td></tr>
       </tbody></table>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Magento to Shopify migration steps: how to choose a partner in 7 steps</h2>

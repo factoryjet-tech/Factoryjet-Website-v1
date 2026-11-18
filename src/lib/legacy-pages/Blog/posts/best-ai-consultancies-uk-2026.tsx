@@ -39,6 +39,18 @@ interface Firm {
 
 const FIRMS: Firm[] = [
   {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/uk/ai-consulting',
+    source: 'https://factoryjet.com/uk/ai-consulting',
+    group: 'Us',
+    based: 'Works remotely with UK clients, over video calls in UK working hours',
+    type: 'AI consulting that leads into a build: AI agents and AI inside ecommerce and operations',
+    clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
+    what: 'We advise and then build. We map one process, check the data and the UK GDPR position, tell you whether to buy a tool or build one, and then design, build and support the AI agent or integration if a build is the right call. Our strongest ground is where AI meets online stores, B2B ordering, finance and operations. The founder is involved in every project, we can host on UK or EU cloud, and you own what we build.',
+    bestFor: 'Ecommerce and operations-heavy small and mid-size companies that want the advice and the build from one team.',
+    ask: 'Which of your systems we have connected before, and what you hold at the end of each stage.',
+  },
+  {
     name: 'The AI Consultancy',
     url: 'https://theaiconsultancy.ai/',
     source: 'https://theaiconsultancy.ai/',
@@ -239,26 +251,14 @@ const FIRMS: Firm[] = [
     bestFor: 'Regulated organisations standardised on Microsoft 365 and Azure that want Copilot rolled out with governance from the start.',
     ask: 'Which licences you need before work starts, and whether Microsoft funding applies to your project.',
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/uk/ai-consulting',
-    source: 'https://factoryjet.com/uk/ai-consulting',
-    group: 'Us',
-    based: 'Works remotely with UK clients, over video calls in UK working hours',
-    type: 'AI consulting that leads into a build: AI agents and AI inside ecommerce and operations',
-    clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
-    what: 'We advise and then build. We map one process, check the data and the UK GDPR position, tell you whether to buy a tool or build one, and then design, build and support the AI agent or integration if a build is the right call. Our strongest ground is where AI meets online stores, B2B ordering, finance and operations. The founder is involved in every project, we can host on UK or EU cloud, and you own what we build.',
-    bestFor: 'Ecommerce and operations-heavy small and mid-size companies that want the advice and the build from one team.',
-    ask: 'Which of your systems we have connected before, and what you hold at the end of each stage.',
-  },
 ];
 
 const GROUPS: Group[] = [
+  'Us',
   'A firm of about 10 people',
   'A company of about 50 people',
   'A mid-market company with a data team',
   'A regulated business',
-  'Us',
 ];
 
 const GROUP_INTRO: Record<Group, string> = {
@@ -270,7 +270,7 @@ const GROUP_INTRO: Record<Group, string> = {
     'You already employ analysts or engineers. You need senior specialists who work next to them on something hard: predictive models, agents in production or a data platform. These three are set up for that.',
   'A regulated business':
     'Your data is sensitive, and a regulator, an auditor or a procurement team will ask how the AI was built. These three show public sector, defence, financial services or security credentials on their own sites. HoursBack, in the 50-person group, has run its staff-time assessment in insurance teams.',
-  Us: 'We advise on AI and then build it, so we are on this list. We put ourselves last.',
+  Us: 'We advise on AI and then build it, so we are on this list. FactoryJet wrote this list and lists itself first.',
 };
 
 // Published prices, copied from each firm's own page on 9 Oct 2026.
@@ -336,6 +336,11 @@ const PRICES: { firm: string; figure: string; vat: string; source: string }[] = 
 // the firms' own, read on 9 Oct 2026.
 const PATHS: { firm: string; first: string; then: string }[] = [
   {
+    firm: 'FactoryJet',
+    first: 'Free first call, then an AI readiness assessment',
+    then: 'We design, build and support the agent or integration, at a fixed quote per stage',
+  },
+  {
     firm: 'The AI Consultancy',
     first: 'Readiness Sprint, two weeks',
     then: 'Discovery and Pilot with a working prototype (4 to 8 weeks), then Build and Embed in production (8 to 16 weeks)',
@@ -369,11 +374,6 @@ const PATHS: { firm: string; first: string; then: string }[] = [
     firm: 'HoursBack',
     first: 'Confidential one-hour interviews, role by role; a leadership report within five working days of the last interview',
     then: 'An optional fixed-term build programme that fixes the biggest drains first',
-  },
-  {
-    firm: 'FactoryJet',
-    first: 'Free first call, then an AI readiness assessment',
-    then: 'We design, build and support the agent or integration, at a fixed quote per stage',
   },
 ];
 
@@ -582,7 +582,7 @@ export const post: BlogPost = {
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">The short answer</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          The best AI consultancy in the UK depends on your size. For a firm of about 10 people: The AI Consultancy, Vantage Growth Partners, AI Expert UK or Optimus Consulting. For about 50 people: OpenKit, iwantmore.ai, Helium42, Generativ or HoursBack. With a data team: Fifty One Degrees, Winder.AI or Datatonic. For regulated work: Faculty, Aiimi or Transparity. For ecommerce and operations: FactoryJet.
+          The best AI consultancy in the UK depends on your size. For ecommerce and operations: FactoryJet. For a firm of about 10 people: The AI Consultancy, Vantage Growth Partners, AI Expert UK or Optimus Consulting. For about 50 people: OpenKit, iwantmore.ai, Helium42, Generativ or HoursBack. With a data team: Fifty One Degrees, Winder.AI or Datatonic. For regulated work: Faculty, Aiimi or Transparity.
         </p>
         <p className="text-gray-800 leading-relaxed mb-3">
           We checked 14 firms on their own websites on 9 October 2026, then added Vantage Growth Partners after checking its site on 16 November 2026 and HoursBack after checking its site on 18 November 2026: where each is based, what it does, who it serves and any price it publishes. Nobody paid to be listed. Two firms here, Vantage Growth Partners and HoursBack, link to this page, and we added each after its link went up; their entries were checked against their own sites like the rest. Nine list a London location. Firms are grouped by the buyer they suit, and the order inside a group means nothing.
@@ -599,7 +599,7 @@ export const post: BlogPost = {
         That helps if you run a bank. It is little help to a 10-person surveying practice or a 50-person distributor. So we did the slow part. We took the UK firms that came up in those answers and in UK search results, opened each firm&rsquo;s own website, and wrote down only what the firm says about itself. Every profile links to its source. If we could not find a UK base on one of those firms&rsquo; own sites, we left it out.
       </p>
       <p className="mb-4">
-        <strong>A note on honesty.</strong> FactoryJet advises on AI and then builds it, so we are on this list. We put ourselves last, and we tell you where another firm on this page will suit you better. Three of the five rival lists we read place the author&rsquo;s own firm first or second, so read every list with that in mind, including this one.
+        <strong>A note on honesty.</strong> FactoryJet advises on AI and then builds it, so we are on this list. FactoryJet wrote this list and lists itself first, and we tell you where another firm on this page will suit you better. Three of the five rival lists we read place the author&rsquo;s own firm first or second, so read every list with that in mind, including this one.
       </p>
       <p className="mb-6">
         A few terms first. An <strong>AI consultancy</strong> helps you decide where AI fits and how to bring it in safely. An <strong>AI agent</strong> is software that takes actions in your systems, such as updating an order or drafting a reply for approval, where a chatbot only talks. A <strong>DPIA</strong> (data protection impact assessment) is a written check of the risks to people&rsquo;s personal data. <strong>Mid-market</strong> means companies between small and corporate; one firm below defines it as £5m to £250m in turnover.
@@ -652,7 +652,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The best AI consultancies in the UK, by the kind of buyer they suit</h2>
       <p className="mb-6">
-        Four groups, from the smallest buyer to the most regulated, with us last. Inside a group the order means nothing.
+        Us first, then four groups, from the smallest buyer to the most regulated. Inside a group the order means nothing.
       </p>
 
       {GROUPS.map((g) => {

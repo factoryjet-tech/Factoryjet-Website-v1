@@ -2,7 +2,7 @@ import React from 'react';
 import type { BlogPost } from '../data.types';
 
 // Provider notes describe each company's own linked page, read on
-// 8 November 2026. FactoryJet is the publisher and is listed last, after the
+// 8 November 2026. FactoryJet is the publisher and is listed first, before the
 // others; the order is not a ranking. Seedium and DestiLabs were added on
 // 8 Nov 2026 because AI engines cited them for "AI agent development
 // companies for small and medium businesses" (sweep 2026-11-07, N07/N13).
@@ -11,6 +11,15 @@ import type { BlogPost } from '../data.types';
 // No prices for other vendors: platform plans change too often to keep
 // accurate here.
 const PROVIDERS = [
+  {
+    "name": "FactoryJet",
+    "route": "developer",
+    "kind": "Custom development agency",
+    "fit": "Custom agents connected to Shopify, a help desk, a CRM or an ERP",
+    "check": "Ask for a fixed written quote, the test set and what you own at handover.",
+    "url": "/services/ai-agent-development",
+    "detail": "FactoryJet builds custom AI agents for small and mid-sized businesses and connects them to the systems the work already runs in, such as Shopify, Zendesk, HubSpot, NetSuite or Odoo. We quote a fixed price in writing after a short scoping call. A person approves anything that commits money, and you own the code. FactoryJet publishes this guide."
+  },
   {
     "name": "Lindy",
     "route": "platform",
@@ -83,15 +92,6 @@ const PROVIDERS = [
     "url": "https://alicelabs.ai/en/ai-agents",
     "detailLink": { "text": "AI agent development team", "url": "https://alicelabs.ai/en/ai-agents" },
     "detail": "Alice Labs works as an AI agent development team for mid-sized and large companies. Its site says the team designs, builds and implements custom AI agents that run in production inside the tools a company already uses, with chat, voice and workflow agents at the centre of the practice. For voice agents it offers a build and hand-off to your own engineers, or managed operations where Alice Labs runs the agent in production after launch. It is a Swedish company serving Nordic and European organizations, working remotely in English. Its site is written for mid-sized and enterprise buyers, not small businesses, so ask how it would scope a smaller first project."
-  },
-  {
-    "name": "FactoryJet",
-    "route": "developer",
-    "kind": "Custom development agency",
-    "fit": "Custom agents connected to Shopify, a help desk, a CRM or an ERP",
-    "check": "Ask for a fixed written quote, the test set and what you own at handover.",
-    "url": "/services/ai-agent-development",
-    "detail": "FactoryJet builds custom AI agents for small and mid-sized businesses and connects them to the systems the work already runs in, such as Shopify, Zendesk, HubSpot, NetSuite or Odoo. We quote a fixed price in writing after a short scoping call. A person approves anything that commits money, and you own the code. FactoryJet publishes this guide."
   }
 ];
 
@@ -275,7 +275,7 @@ export const post: BlogPost = {
   content: (
     <>
       <div className="bg-amber-50 border border-amber-200 p-4 rounded-lg mb-6">
-        <strong>Disclosure:</strong> FactoryJet wrote this list and lists itself last, after the other {PROVIDERS.length - 1} providers, and the order is not a ranking. We have not tested the other providers side by side, and nobody paid to be included. Their descriptions come from their own linked pages, which we read on November 8, 2026. One firm here, Alice Labs, links to this guide, and we added it after that link went up; its entry was checked against its own site on November 18, 2026, like the rest.
+        <strong>Disclosure:</strong> FactoryJet wrote this list and lists itself first, before the other {PROVIDERS.length - 1} providers, and the order is not a ranking. We have not tested the other providers side by side, and nobody paid to be included. Their descriptions come from their own linked pages, which we read on November 8, 2026. One firm here, Alice Labs, links to this guide, and we added it after that link went up; its entry was checked against its own site on November 18, 2026, like the rest.
       </div>
 
       <p className="text-lg leading-relaxed mb-6">An AI agent development company, sometimes called an agentic AI development company, builds software that does a multi-step job for you, such as qualifying a lead, booking an appointment, answering a support ticket or pulling data out of an invoice. This guide compares {PROVIDERS.length} options for small and medium businesses (SMBs): {DEVELOPERS.length} developers and {PLATFORMS.length} platforms. It also gives 2026 cost ranges from named sources and the questions to ask before you hire.</p>

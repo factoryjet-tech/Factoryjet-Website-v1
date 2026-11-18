@@ -34,6 +34,20 @@ interface Firm {
 
 const FIRMS: Firm[] = [
   {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/services/shopify-plus-b2b',
+    source: 'https://factoryjet.com/services/shopify-plus-b2b',
+    tier: 'Registered Shopify Partner, without a higher tier',
+    based: 'Works with US clients remotely; calls in US business hours',
+    serves: 'Brands, wholesalers and distributors that sell to retailers and other businesses',
+    b2bShown: 'Shopify B2B with company accounts, customer price lists, net terms and quantity rules, synced to an ERP',
+    erps: 'NetSuite, Acumatica, Microsoft Dynamics, QuickBooks, Odoo',
+    price: 'None published. Fixed price per phase, in writing, after a scoping call',
+    what: 'FactoryJet sets up Shopify B2B with company accounts, a price list for each customer, net 30 or net 60 terms and quantity rules such as minimums and case packs. It connects Shopify to NetSuite, Acumatica, Microsoft Dynamics, QuickBooks or Odoo, keeps credit limits and contract prices in the ERP and syncs them to Shopify, and adds Shopify Functions for cart minimums and payment methods shown only to approved companies. Before you sign, it builds a working draft of your store with your own products and one of your price lists. Each phase is priced on its own, and the code sits in your own repository.',
+    bestFor: 'Wholesalers that want the store, the ERP sync and later AI agents from one team.',
+    ask: 'To see the draft store with your own price list before you sign anything.',
+  },
+  {
     name: 'Uncap',
     url: 'https://www.uncap.com/',
     source: 'https://www.uncap.com/shopify-agency',
@@ -209,20 +223,6 @@ const FIRMS: Firm[] = [
     bestFor: 'Manufacturers and distributors that run Acumatica and want one firm that knows both systems.',
     ask: 'Which parts of the Acumatica sync use the standard connector and which it builds itself.',
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/services/shopify-plus-b2b',
-    source: 'https://factoryjet.com/services/shopify-plus-b2b',
-    tier: 'Registered Shopify Partner, without a higher tier',
-    based: 'Works with US clients remotely; calls in US business hours',
-    serves: 'Brands, wholesalers and distributors that sell to retailers and other businesses',
-    b2bShown: 'Shopify B2B with company accounts, customer price lists, net terms and quantity rules, synced to an ERP',
-    erps: 'NetSuite, Acumatica, Microsoft Dynamics, QuickBooks, Odoo',
-    price: 'None published. Fixed price per phase, in writing, after a scoping call',
-    what: 'FactoryJet sets up Shopify B2B with company accounts, a price list for each customer, net 30 or net 60 terms and quantity rules such as minimums and case packs. It connects Shopify to NetSuite, Acumatica, Microsoft Dynamics, QuickBooks or Odoo, keeps credit limits and contract prices in the ERP and syncs them to Shopify, and adds Shopify Functions for cart minimums and payment methods shown only to approved companies. Before you sign, it builds a working draft of your store with your own products and one of your price lists. Each phase is priced on its own, and the code sits in your own repository.',
-    bestFor: 'Wholesalers that want the store, the ERP sync and later AI agents from one team.',
-    ask: 'To see the draft store with your own price list before you sign anything.',
-  },
 ];
 
 // Firms we read but did not list, with the reason. About what we could check, not about the quality of their work.
@@ -394,7 +394,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Why is FactoryJet on its own list?',
-    a: 'Because FactoryJet builds Shopify B2B stores, leaving it off would hide a choice from readers. Nobody paid to be listed, and the order is not a ranking. FactoryJet wrote this guide and is on it. Its entry uses the same fields and the same rules as every other firm, and it is placed last.',
+    a: 'Because FactoryJet builds Shopify B2B stores, leaving it off would hide a choice from readers. Nobody paid to be listed, and the order is not a ranking. FactoryJet wrote this guide and lists itself first. Its entry uses the same fields and the same rules as every other firm.',
   },
 ];
 
@@ -412,7 +412,7 @@ export const post: BlogPost = {
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Nov 16, 2026',
-  dateModified: 'Nov 16, 2026',
+  dateModified: 'Nov 18, 2026',
   readTime: '22 min read',
   imageUrl: '/og-default.png',
   imageAlt: 'FactoryJet guide comparing Shopify Plus B2B agencies',
@@ -444,7 +444,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-11-16',
-              dateModified: '2026-11-16',
+              dateModified: '2026-11-18',
               lastReviewed: '2026-11-16',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
@@ -474,7 +474,7 @@ export const post: BlogPost = {
           To build a B2B wholesale portal on Shopify Plus with customer price lists, net terms and ERP sync, start with the firm that fits your size and ERP. Uncap focuses only on B2B for $2M to $50M manufacturers and distributors. SDG suits enterprise wholesale on NetSuite, Acumatica or Dynamics 365. Shero Commerce and BlueSwitch show named dealer and industrial work. Netalico and ECommerce Partners publish B2B prices. Kensium suits Acumatica shops. Avex, Superco, Swanky and Fyresite each fit a narrower case. FactoryJet builds the store and the ERP sync together.
         </p>
         <p className="text-gray-800 leading-relaxed">
-          We read all 12 on their own sites and in Shopify&rsquo;s partner directory on {READ_ON}. Nobody paid to be listed, and the order is not a ranking. FactoryJet wrote this guide and is on it.
+          We read all 12 on their own sites and in Shopify&rsquo;s partner directory on {READ_ON}. Nobody paid to be listed, and the order is not a ranking. FactoryJet wrote this guide and lists itself first.
         </p>
       </div>
 
@@ -526,7 +526,7 @@ export const post: BlogPost = {
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The agencies, profiled</h2>
-      <p className="mb-6">The order is not a ranking. B2B-focused firms come first, then firms that build B2B alongside retail, then us.</p>
+      <p className="mb-6">The order is not a ranking. FactoryJet wrote this guide and lists itself first. After us come B2B-focused firms, then firms that build B2B alongside retail.</p>
 
       {FIRMS.map((f, i) => (
         <div key={f.name} className="mb-8">
@@ -715,7 +715,7 @@ export const post: BlogPost = {
       </div>
 
       <p className="text-sm text-gray-600 mb-2">
-        {others.length} other firms and FactoryJet. Method and firm facts checked {READ_ON}. Nobody paid to be listed, and the order is not a ranking. FactoryJet wrote this guide and is on it.
+        {others.length} other firms and FactoryJet. Method and firm facts checked {READ_ON}. Nobody paid to be listed, and the order is not a ranking. FactoryJet wrote this guide and lists itself first.
       </p>
     </>
   ),

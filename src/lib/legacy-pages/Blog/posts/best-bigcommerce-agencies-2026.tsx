@@ -13,8 +13,8 @@ const META_DESCRIPTION =
 // firm's own site that the profile leans on, `alsoRead` a second page on that
 // site, `hqSource` the page that shows the address, and `directory` the firm's
 // profile in the BigCommerce partner directory (tier and badges come from there).
-// No entry is paid for. Array order carries no ranking: entries are grouped by
-// buyer type. The ItemList schema is built from this array, so the visible list
+// No entry is paid for. FactoryJet wrote this list and lists itself first; the
+// other entries are grouped by buyer type and their order carries no ranking. The ItemList schema is built from this array, so the visible list
 // and the schema stay identical.
 type Group =
   | 'B2B and wholesale'
@@ -46,6 +46,20 @@ interface Firm {
 }
 
 const FIRMS: Firm[] = [
+  {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/bigcommerce-development',
+    source: 'https://factoryjet.com/bigcommerce-development',
+    group: 'Us',
+    base: 'Remote delivery for US clients, with calls held in US business hours',
+    type: 'BigCommerce stores, B2B Edition, integrations and migrations',
+    clients: 'Wholesalers, distributors and consumer brands; FactoryJet has served 500+ businesses since 2014',
+    tools: 'BigCommerce, B2B Edition, Next.js, NetSuite, Odoo, SAP Business One, ERPNext, QuickBooks, Xero',
+    erp: 'NetSuite, Odoo, SAP Business One, ERPNext and custom ERPs; QuickBooks and Xero; EDI and punchout catalogs',
+    what: 'FactoryJet designs, builds and supports BigCommerce stores: custom themes, B2B Edition with company accounts, price lists, quotes and payment terms, multi-storefront setups and headless storefronts on Next.js. It migrates stores to BigCommerce from Magento and WooCommerce, with a redirect for every old web address. It connects the store to ERPs including NetSuite, Odoo, SAP Business One and ERPNext, to QuickBooks and Xero, and builds EDI and punchout catalog integrations. Each project is priced as a fixed figure in writing once a short scoping call has set the scope, and the store, the code and the accounts belong to the client.',
+    bestFor: 'Wholesalers and distributors whose store has to stay in step with an ERP, and who want one team accountable for both.',
+    ask: 'To see working software on your own data before you sign a contract.',
+  },
   {
     name: 'Silk Commerce',
     url: 'https://www.silkcommerce.com/',
@@ -281,23 +295,9 @@ const FIRMS: Firm[] = [
     bestFor: 'Merchants on Magento, WooCommerce or Shopify weighing a move to BigCommerce against fixing the store they have.',
     ask: 'Whether it would migrate you or improve your current store, and what data that advice rests on.',
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/bigcommerce-development',
-    source: 'https://factoryjet.com/bigcommerce-development',
-    group: 'Us',
-    base: 'Remote delivery for US clients, with calls held in US business hours',
-    type: 'BigCommerce stores, B2B Edition, integrations and migrations',
-    clients: 'Wholesalers, distributors and consumer brands; FactoryJet has served 500+ businesses since 2014',
-    tools: 'BigCommerce, B2B Edition, Next.js, NetSuite, Odoo, SAP Business One, ERPNext, QuickBooks, Xero',
-    erp: 'NetSuite, Odoo, SAP Business One, ERPNext and custom ERPs; QuickBooks and Xero; EDI and punchout catalogs',
-    what: 'FactoryJet designs, builds and supports BigCommerce stores: custom themes, B2B Edition with company accounts, price lists, quotes and payment terms, multi-storefront setups and headless storefronts on Next.js. It migrates stores to BigCommerce from Magento and WooCommerce, with a redirect for every old web address. It connects the store to ERPs including NetSuite, Odoo, SAP Business One and ERPNext, to QuickBooks and Xero, and builds EDI and punchout catalog integrations. Each project is priced as a fixed figure in writing once a short scoping call has set the scope, and the store, the code and the accounts belong to the client.',
-    bestFor: 'Wholesalers and distributors whose store has to stay in step with an ERP, and who want one team accountable for both.',
-    ask: 'To see working software on your own data before you sign a contract.',
-  },
 ];
 
-const GROUPS: Group[] = ['B2B and wholesale', 'Mid-market DTC', 'Headless and composable', 'Migrations', 'Us'];
+const GROUPS: Group[] = ['Us', 'B2B and wholesale', 'Mid-market DTC', 'Headless and composable', 'Migrations'];
 
 // Group headings echo the search terms in the brief (agencies, developers, B2B, headless, migrations).
 const GROUP_HEADING: Record<Group, string> = {
@@ -317,7 +317,7 @@ const GROUP_INTRO: Record<Group, string> = {
     'Three firms whose pages name headless or composable builds on BigCommerce. In a headless build the storefront is written separately from the commerce engine. In a composable one you choose each part of the stack yourself. Catalyst is the headless storefront framework BigCommerce makes, built with Next.js.',
   Migrations:
     'These three put replatforming first. They differ in the routes they name. 1Digital Agency lists six platforms it moves stores between, Forix lists three routes into BigCommerce, and Classy Llama works across four platforms.',
-  Us: 'FactoryJet wrote this page and builds on BigCommerce. Our entry follows the same template as the other 13.',
+  Us: 'FactoryJet wrote this page, builds on BigCommerce and lists itself first. Our entry follows the same template as the other 13.',
 };
 
 const GROUP_LABEL: Record<Group, string> = {
@@ -521,7 +521,7 @@ export const post: BlogPost = {
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Oct 11, 2026',
-  dateModified: 'Oct 31, 2026',
+  dateModified: 'Nov 18, 2026',
   readTime: '24 min read',
   imageUrl: `${IMG}/hero.webp`,
   imageAlt:
@@ -532,7 +532,7 @@ export const post: BlogPost = {
   },
   keyTakeaways: [
     'The right BigCommerce agency depends on the job. This page sorts 14 firms into four jobs: B2B and wholesale, a mid-market consumer brand, a headless storefront and a migration.',
-    'Each profile was written from two sources opened on 11 October 2026: the firm website and its BigCommerce partner directory profile. No firm paid for a place, and the order carries no ranking.',
+    'Each profile was written from two sources opened on 11 October 2026: the firm website and its BigCommerce partner directory profile. No firm paid for a place. FactoryJet wrote this list and lists itself first; the order of the other 13 carries no ranking.',
     'The BigCommerce partner directory listed 755 agencies on 11 October 2026. Its tier filters showed 14 Elite, 12 Preferred, 30 Partner and 694 Enrolled. Elite and Preferred together are 26 listings.',
     'A tier is a first filter. The public pages we read do not list what an agency must do to reach each tier, so check the work as well as the badge.',
     'Wholesale on BigCommerce does not always call for B2B Edition. IntuitSolutions says most merchants can start B2B on standard BigCommerce, and B2B Edition adds company accounts, quotes, invoices and a buyer portal.',
@@ -554,7 +554,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-10-11',
-              dateModified: '2026-10-31',
+              dateModified: '2026-11-18',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'BigCommerce agencies and developers in the United States' },
@@ -583,10 +583,10 @@ export const post: BlogPost = {
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">In short</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          The best BigCommerce agency depends on the job. B2B and wholesale: Silk Commerce, IntuitSolutions, Anchor Group or Jamersan. A mid-market consumer brand: Groove Commerce, DigitlHaus or EYStudios. A headless storefront: Codal, Americaneagle.com or MoJo Active. A migration: 1Digital Agency, Classy Llama or Forix. A store that must stay in step with an ERP: FactoryJet.
+          The best BigCommerce agency depends on the job. A store that must stay in step with an ERP: FactoryJet. B2B and wholesale: Silk Commerce, IntuitSolutions, Anchor Group or Jamersan. A mid-market consumer brand: Groove Commerce, DigitlHaus or EYStudios. A headless storefront: Codal, Americaneagle.com or MoJo Active. A migration: 1Digital Agency, Classy Llama or Forix.
         </p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          Each of the 14 was checked on its own website on 11 October 2026, and 13 of them in BigCommerce&rsquo;s partner directory as well. We recorded the address, the directory tier, the work the firm takes on and the systems it names. FactoryJet is the author and the fourteenth firm. No firm paid for a place, and the order carries no ranking.
+          Each of the 14 was checked on its own website on 11 October 2026, and 13 of them in BigCommerce&rsquo;s partner directory as well. We recorded the address, the directory tier, the work the firm takes on and the systems it names. FactoryJet wrote this list and lists itself first. No firm paid for a place, and the order of the other 13 carries no ranking.
         </p>
         <p className="text-gray-800 leading-relaxed">
           For a quick steer, <a href="/contact" className={link}>tell us what you sell and which systems you run</a>. The founder will say which of the four groups your project belongs in.
@@ -603,7 +603,7 @@ export const post: BlogPost = {
         So we started from the directory. We counted every tier, picked US agencies whose own sites name one of four kinds of buyer, and kept only what is written on each firm&rsquo;s site and its directory profile. Each profile ends with the links we used.
       </p>
       <p className="mb-4">
-        <strong>Who wrote this.</strong> FactoryJet builds BigCommerce stores for a living, and we put ourselves on this page. No firm paid or asked to be listed. Our entry is written to the same template as the other 13. Keep the author in mind with any agency list, this one included.
+        <strong>Who wrote this.</strong> FactoryJet builds BigCommerce stores for a living, and we list ourselves first on this page. No firm paid or asked to be listed. Our entry is written to the same template as the other 13. Keep the author in mind with any agency list, this one included.
       </p>
       <p className="mb-6">
         Eight terms come up on every agency site, so here they are in plain words. <strong>BigCommerce</strong> is a platform for running an online store, sold as a subscription. A <strong>BigCommerce agency</strong> or <strong>developer</strong> designs and builds stores on it. <strong>B2B</strong>, or wholesale, is selling to other companies on agreed price lists and payment terms. <strong>B2B Edition</strong> is BigCommerce&rsquo;s add-on set of tools for that kind of selling. <strong>Stencil</strong> is BigCommerce&rsquo;s standard theme system. <strong>Headless</strong> means the part shoppers see is built separately and fetches products, prices and carts from BigCommerce, and <strong>Catalyst</strong> is the framework BigCommerce makes for it. An <strong>ERP</strong> is the back-office system where orders, stock and accounts are kept.
@@ -693,7 +693,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The 14 BigCommerce agencies and developers, by the buyer they suit</h2>
       <p className="mb-6">
-        Four groups, then us: B2B and wholesale, mid-market consumer brands, headless builds and migrations. Within a group the order means nothing.
+        Us first, then four groups: B2B and wholesale, mid-market consumer brands, headless builds and migrations. Within a group the order means nothing.
       </p>
 
       {GROUPS.map((g) => {

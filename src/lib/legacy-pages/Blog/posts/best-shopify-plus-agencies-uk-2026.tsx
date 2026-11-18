@@ -10,8 +10,9 @@ const DIR = 'https://www.shopify.com/partners/directory/partner/';
 // 11 October 2026 (URL in `source`), and each firm was looked up in Shopify's
 // partner directory the same day (URL in `directory`, tier in `tier`). The
 // quote behind each claim is in the research ledger kept outside the repo.
-// Nothing here is paid placement. The order is NOT a ranking; firms are
-// grouped by the kind of buyer they suit. The table, the profiles, the town
+// Nothing here is paid placement. FactoryJet wrote this list and lists itself
+// first. After it the order is NOT a ranking; firms are grouped by the kind of
+// buyer they suit. The table, the profiles, the town
 // table and the ItemList schema all map from this same array.
 interface Firm {
   name: string;
@@ -31,6 +32,20 @@ interface Firm {
 }
 
 const FIRMS: Firm[] = [
+  {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/uk/shopify-plus',
+    source: 'https://factoryjet.com/uk/shopify-plus',
+    group: 'commerce',
+    region: 'Remote',
+    based: 'Works remotely with UK clients and schedules calls in UK business hours',
+    type: 'Shopify and Shopify Plus builds, migrations, integrations and AI agents',
+    clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
+    platforms: 'Shopify and Shopify Plus, WooCommerce, Xero, HubSpot, WhatsApp, EDI, punchout catalogues, Odoo, NetSuite, SAP Business One and ERPNext',
+    what: 'FactoryJet is a registered Shopify Partner. We design, build, migrate and support Shopify and Shopify Plus stores, with a focus on the engineering below the theme: B2B set-up, checkout extensions, Shopify Functions, multi-store set-up and the links to accounting and ERP systems. We also build AI agents that work inside the store and the operations behind it. The founder is involved in every project, you own what we build, and we show working software on your own data before a contract.',
+    bestFor: 'Brands and B2B sellers that want one team for the store, the integrations behind it and AI in day-to-day operations.',
+    ask: 'To see working software on your own data before you sign, and how we would connect the store to your accounting or ERP system.',
+  },
   {
     name: 'Swanky',
     url: 'https://swankyagency.com/',
@@ -253,25 +268,16 @@ const FIRMS: Firm[] = [
     tier: 'Platinum Partner',
     directory: `${DIR}tryzensglobal`,
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/uk/shopify-plus',
-    source: 'https://factoryjet.com/uk/shopify-plus',
-    group: 'commerce',
-    region: 'Remote',
-    based: 'Works remotely with UK clients and schedules calls in UK business hours',
-    type: 'Shopify and Shopify Plus builds, migrations, integrations and AI agents',
-    clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
-    platforms: 'Shopify and Shopify Plus, WooCommerce, Xero, HubSpot, WhatsApp, EDI, punchout catalogues, Odoo, NetSuite, SAP Business One and ERPNext',
-    what: 'FactoryJet is a registered Shopify Partner. We design, build, migrate and support Shopify and Shopify Plus stores, with a focus on the engineering below the theme: B2B set-up, checkout extensions, Shopify Functions, multi-store set-up and the links to accounting and ERP systems. We also build AI agents that work inside the store and the operations behind it. The founder is involved in every project, you own what we build, and we show working software on your own data before a contract.',
-    bestFor: 'Brands and B2B sellers that want one team for the store, the integrations behind it and AI in day-to-day operations.',
-    ask: 'To see working software on your own data before you sign, and how we would connect the store to your accounting or ERP system.',
-  },
 ];
 
 // One H2 per buyer group. Headings use the wording buyers type into search
 // and AI assistants.
 const GROUPS: { key: Firm['group']; heading: string; intro: string }[] = [
+  {
+    key: 'commerce',
+    heading: 'Who builds the Shopify Plus store, the integrations and AI agents together?',
+    intro: 'One entry here, and it is ours. FactoryJet wrote this list and lists itself first, so read it with that in mind. Two firms below also list AI work: Velstar offers AI strategy and build, and Underwaterpistol offers AI consultancy.',
+  },
   {
     key: 'replatform',
     heading: 'Which Shopify Plus agencies handle a move from Magento, Salesforce or another platform?',
@@ -291,11 +297,6 @@ const GROUPS: { key: Firm['group']; heading: string; intro: string }[] = [
     key: 'complex',
     heading: 'Who builds B2B, wholesale and enterprise stores on Shopify Plus?',
     intro: 'These three take on the complicated end: trade pricing, several stores, ERP links and large teams. B2B means selling to other businesses. An ERP is the system that holds orders, stock and accounts.',
-  },
-  {
-    key: 'commerce',
-    heading: 'Who builds the Shopify Plus store, the integrations and AI agents together?',
-    intro: 'One entry here, and it is ours, so read it with that in mind. Two firms above also list AI work: Velstar offers AI strategy and build, and Underwaterpistol offers AI consultancy.',
   },
 ];
 
@@ -372,7 +373,7 @@ const PLANS: { row: string; advanced: string; plus: string }[] = [
 const FAQS: FAQItem[] = [
   {
     q: "What are the best Shopify Plus agencies in the UK?",
-    a: "There is no independent ranking, so choose by the job. For a migration from another platform: Swanky (Exeter), blubolt (Bath), Kubix (Birmingham) and Onstate (Leeds). For design-led consumer brands: By Association Only, Charle (London), Cake Agency (Birmingham) and Eleven (London). For growth after launch: Underwaterpistol (London), Rainy City Agency (Manchester) and Imaginaire (Nottingham). For B2B and enterprise: Velstar (Liverpool), magic42 (Birmingham) and Tryzens Global (London). FactoryJet builds Shopify Plus stores with integrations and AI agents for UK brands.",
+    a: "There is no independent ranking, so choose by the job. FactoryJet builds Shopify Plus stores with integrations and AI agents for UK brands. For a migration from another platform: Swanky (Exeter), blubolt (Bath), Kubix (Birmingham) and Onstate (Leeds). For design-led consumer brands: By Association Only, Charle (London), Cake Agency (Birmingham) and Eleven (London). For growth after launch: Underwaterpistol (London), Rainy City Agency (Manchester) and Imaginaire (Nottingham). For B2B and enterprise: Velstar (Liverpool), magic42 (Birmingham) and Tryzens Global (London).",
   },
   {
     q: "Which Shopify Plus agency is the best?",
@@ -504,7 +505,7 @@ export const post: BlogPost = {
   },
   keyTakeaways: [
     'There is no single best Shopify Plus agency for a UK brand. Match the firm to the job: a migration, a design-led rebuild, growth after launch, or B2B and enterprise work.',
-    "Every fact below was read on each firm's own website on 11 October 2026, and each firm was looked up in Shopify's partner directory the same day. Nobody paid to be here, and the order is not a ranking.",
+    "Every fact below was read on each firm's own website on 11 October 2026, and each firm was looked up in Shopify's partner directory the same day. Nobody paid to be here. FactoryJet wrote this list and lists itself first; the order of the others is not a ranking.",
     "Shopify's directory listed 462 service partners under United Kingdom on 11 October 2026: 19 Platinum, 17 Premier, 106 Plus and 173 Select, with 147 showing no tier.",
     'Shopify Plus starts at £1,800 a month on a three-year term or £1,950 on a one-year term, according to Shopify UK. On the pages we read, four of the other 14 firms show a price signal, up to a printed starting price of £30,000 for builds.',
     'FactoryJet is on this list. It is a registered Shopify Partner that builds Shopify and Shopify Plus stores, the integrations behind them and AI agents.',
@@ -526,7 +527,7 @@ export const post: BlogPost = {
                 'Compare 15 Shopify Plus agencies for UK brands: the tier Shopify shows for each, where each is based, who it suits and the prices they publish.',
               inLanguage: 'en-GB',
               datePublished: '2026-10-11',
-              dateModified: '2026-10-11',
+              dateModified: '2026-11-18',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'Shopify Plus agencies for brands in the United Kingdom' },
@@ -555,10 +556,10 @@ export const post: BlogPost = {
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">The short answer</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          The best Shopify Plus agency in the UK depends on the job. For a move from another platform such as Magento, look at Swanky, blubolt, Kubix and Onstate. For design-led brands, By Association Only, Charle, Cake and Eleven. For growth after launch, Underwaterpistol, Rainy City and Imaginaire. For B2B and enterprise, Velstar, magic42 and Tryzens. For the store, integrations and AI together, FactoryJet.
+          The best Shopify Plus agency in the UK depends on the job. For the store, integrations and AI together, FactoryJet. For a move from another platform such as Magento, look at Swanky, blubolt, Kubix and Onstate. For design-led brands, By Association Only, Charle, Cake and Eleven. For growth after launch, Underwaterpistol, Rainy City and Imaginaire. For B2B and enterprise, Velstar, magic42 and Tryzens.
         </p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          We read every firm&rsquo;s own website on 11 October 2026 and looked each one up in Shopify&rsquo;s partner directory the same day. Nobody paid to be listed and the order is not a ranking. FactoryJet wrote this guide and is on it, last.
+          We read every firm&rsquo;s own website on 11 October 2026 and looked each one up in Shopify&rsquo;s partner directory the same day. Nobody paid to be listed. FactoryJet wrote this list and lists itself first; the order of the other 14 is not a ranking.
         </p>
         <p className="text-gray-800 leading-relaxed">
           For a second opinion on your own shortlist, <a href="/contact" className="text-[#B23E13] underline font-semibold">talk to the founder</a>.
@@ -575,7 +576,7 @@ export const post: BlogPost = {
         Then we checked the lists against <a href="https://www.shopify.com/partners/directory" className="text-[#B23E13] underline" rel="noopener" target="_blank">Shopify&rsquo;s own partner directory</a>, where the tier is set by Shopify. It showed 462 service partners under United Kingdom that day, 19 of them at the top tier, Platinum. Six of those 19 are named on none of the 13 lists. This guide starts from the directory and from each firm&rsquo;s own pages, with every fact dated and linked.
       </p>
       <p className="mb-4">
-        <strong>A note on who wrote this.</strong> FactoryJet builds and supports Shopify and Shopify Plus stores, so we are on this list, in the last group. FactoryJet is a registered Shopify Partner. Listing yourself is common on pages like this one, which is a good reason to read every list, ours included, with care.
+        <strong>A note on who wrote this.</strong> FactoryJet builds and supports Shopify and Shopify Plus stores, so we are on this list. FactoryJet wrote this list and lists itself first. FactoryJet is a registered Shopify Partner. Listing yourself is common on pages like this one, which is a good reason to read every list, ours included, with care.
       </p>
       <p className="mb-6">
         A few terms first, in plain English. <strong>Shopify Plus</strong> is the top Shopify plan, sold on a contract. A <strong>Shopify Plus agency</strong> designs, builds and supports stores on that plan. <strong>Replatforming</strong> means moving a store from one ecommerce system to another. <strong>B2B</strong> is selling to other businesses. An <strong>ERP</strong> is the system that holds orders, stock and accounts. <strong>CRO</strong>, short for conversion rate optimisation, is testing changes so that more visitors buy. A <strong>retainer</strong> is a monthly agreement for ongoing work.

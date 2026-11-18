@@ -13,6 +13,7 @@ const META_DESCRIPTION =
 // on 23 October 2026 (URL in `source`, `hqSource` where the location came from
 // another page). Compliance lines are each company's own words, never our
 // assessment. Nothing here is paid placement and the order is NOT a ranking.
+// FactoryJet, the publisher, is listed first; the rest are grouped by job.
 // The ItemList schema maps from this same array, so the list and schema cannot drift.
 type Group = 'Front desk and phone' | 'Larger groups and health systems' | 'Clinical documentation' | 'Custom development' | 'Us';
 
@@ -33,6 +34,20 @@ interface Firm {
 }
 
 const FIRMS: Firm[] = [
+  {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/',
+    source: 'https://factoryjet.com/services/healthcare-ai-agents',
+    group: 'Us',
+    based: 'Serves US practices, with calls in US business hours',
+    type: 'AI services company that builds custom agents',
+    clients: 'Medical practices and dental clinics',
+    systems: 'We connect the agent to your EHR or practice management system through its API, such as Epic, Cerner, Dentrix or athenahealth. Which actions write back to your schedule is confirmed in writing for each project',
+    what: 'We build custom AI agents that start at the front desk phone. They can book and move appointments, check insurance eligibility, text intake forms, take refill requests in English and Spanish, and hand emergencies to your staff. The timeline is quoted for each project after a scoping call.',
+    compliance: 'Our healthcare agents run under a signed Business Associate Agreement, as our healthcare page states.',
+    bestFor: 'Practices that want a custom phone agent tied to their own EHR, which they own.',
+    ask: 'Can you show the agent booking into our own schedule, on our call types, before we sign?',
+  },
   {
     name: 'Assort Health',
     url: 'https://www.assorthealth.com',
@@ -211,23 +226,9 @@ const FIRMS: Firm[] = [
     bestFor: 'Groups that need an assistant built alongside EHR integration or coding work.',
     ask: 'Which of your healthcare projects included an agent that talks to patients, and can we speak to that client?',
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/',
-    source: 'https://factoryjet.com/services/healthcare-ai-agents',
-    group: 'Us',
-    based: 'Serves US practices, with calls in US business hours',
-    type: 'AI services company that builds custom agents',
-    clients: 'Medical practices and dental clinics',
-    systems: 'We connect the agent to your EHR or practice management system through its API, such as Epic, Cerner, Dentrix or athenahealth. Which actions write back to your schedule is confirmed in writing for each project',
-    what: 'We build custom AI agents that start at the front desk phone. They can book and move appointments, check insurance eligibility, text intake forms, take refill requests in English and Spanish, and hand emergencies to your staff. The timeline is quoted for each project after a scoping call.',
-    compliance: 'Our healthcare agents run under a signed Business Associate Agreement, as our healthcare page states.',
-    bestFor: 'Practices that want a custom phone agent tied to their own EHR, which they own.',
-    ask: 'Can you show the agent booking into our own schedule, on our call types, before we sign?',
-  },
 ];
 
-const GROUPS: Group[] = ['Front desk and phone', 'Larger groups and health systems', 'Clinical documentation', 'Custom development', 'Us'];
+const GROUPS: Group[] = ['Us', 'Front desk and phone', 'Larger groups and health systems', 'Clinical documentation', 'Custom development'];
 
 const GROUP_HEADING: Record<Group, string> = {
   'Front desk and phone': 'AI voice agents for healthcare front desks and phones',
@@ -246,7 +247,7 @@ const GROUP_INTRO: Record<Group, string> = {
     'Agents that listen to the visit and draft the note. They do not answer phones, but they are often what a clinician means by an AI agent. Both name large health systems as customers.',
   'Custom development':
     'Firms that build an agent for you rather than rent you one. Each lists at least one front desk or authorization agent among its work. Two publish a build or app price.',
-  Us: 'We build healthcare agents, so we are on this list. Our entry uses the same format as every other company.',
+  Us: 'We build healthcare agents, so we are on this list. FactoryJet wrote this list and lists itself first. Our entry uses the same format as every other company.',
 };
 
 const GROUP_LABEL: Record<Group, string> = {
@@ -383,7 +384,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 23, 2026',
-  dateModified: 'Oct 31, 2026',
+  dateModified: 'Nov 18, 2026',
   readTime: '21 min read',
   imageUrl: `${IMG}/hero.webp`,
   imageAlt:
@@ -415,7 +416,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-10-23',
-              dateModified: '2026-10-31',
+              dateModified: '2026-11-18',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'Companies that build AI agents for healthcare practices in the United States' },
@@ -445,7 +446,7 @@ export const post: BlogPost = {
         </p>
       </div>
       <p className="text-gray-800 leading-relaxed mb-3">
-          We read all 13 companies on their own websites on 23 October 2026: where each is based, what its agent does, which EHRs it names, what it says about HIPAA and BAAs, and any price it publishes. Nobody paid to be listed. The order is not a ranking. FactoryJet wrote this list and is on it.
+          We read all 13 companies on their own websites on 23 October 2026: where each is based, what its agent does, which EHRs it names, what it says about HIPAA and BAAs, and any price it publishes. Nobody paid to be listed. The order is not a ranking. FactoryJet wrote this list and lists itself first.
         </p>
         <p className="text-gray-800 leading-relaxed">
           <a href="/contact" className={link}>Tell us your EHR and the calls you miss</a>, and the founder will tell you which kind of company fits.
@@ -530,7 +531,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The best AI agent companies for healthcare practices, profiled</h2>
       <p className="mb-6">
-        The order is not a ranking. Companies are grouped by the job they do: phone and front desk agents, platforms for larger groups, clinical documentation, custom development, then us.
+        The order is not a ranking. FactoryJet wrote this list and lists itself first. The other companies are grouped by the job they do: phone and front desk agents, platforms for larger groups, clinical documentation, then custom development.
       </p>
 
       {GROUPS.map((g) => {

@@ -12,8 +12,9 @@ const META_DESCRIPTION =
 // Every fact about every company below was read on that company's own website
 // on 8 November 2026 (URL in `source`, plus `moreSources` where other facts
 // came from further pages on the same site). Nothing here is paid
-// placement. The order is NOT a ranking; companies are grouped by the kind of
-// purchase a manufacturer or distributor is making.
+// placement. The order is NOT a ranking. FactoryJet, the publisher, is listed
+// first; the rest are grouped by the kind of purchase a manufacturer or
+// distributor is making.
 // The ItemList schema maps from this same array, so the list and schema cannot drift.
 type Group =
   | 'Plant floor and industrial data'
@@ -37,6 +38,19 @@ interface Firm {
 }
 
 const FIRMS: Firm[] = [
+  {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/services/manufacturing-ai-agents',
+    source: 'https://factoryjet.com/services/manufacturing-ai-agents',
+    group: 'Us',
+    company: 'Has served 500+ businesses since 2014. Works remotely with US clients and schedules calls in US business hours',
+    type: 'Custom AI agents and integrations built on the ERP you already run',
+    clients: 'Small and mid-size manufacturers and distributors',
+    systems: 'Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs; EDI, punchout catalogs and Shopify',
+    what: 'FactoryJet builds agents for the quoting and order work around production. An RFQ agent reads the incoming request, pulls prices and stock from your ERP and drafts the quote for your estimator to approve. Order agents prepare purchase orders and sales orders in the ERP for a person to check. We also build EDI and punchout catalog integrations and B2B ordering portals. We have worked on Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs. We design, build, implement and support, and you own what we build.',
+    bestFor: 'Manufacturers and distributors that want quoting and order entry sped up inside the ERP they already own.',
+    ask: 'To see working software run on your own RFQs or orders before you sign a contract.',
+  },
   {
     name: 'Siemens',
     url: 'https://www.siemens.com/en-us/company/insights/generative-ai-industrial-copilot/',
@@ -269,26 +283,13 @@ const FIRMS: Firm[] = [
     bestFor: 'Manufacturers that want a consultant to rank AI use cases first and then build the chosen ones.',
     ask: 'Which manufacturing agents it has running in production, beyond the case studies on its page.',
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/services/manufacturing-ai-agents',
-    source: 'https://factoryjet.com/services/manufacturing-ai-agents',
-    group: 'Us',
-    company: 'Has served 500+ businesses since 2014. Works remotely with US clients and schedules calls in US business hours',
-    type: 'Custom AI agents and integrations built on the ERP you already run',
-    clients: 'Small and mid-size manufacturers and distributors',
-    systems: 'Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs; EDI, punchout catalogs and Shopify',
-    what: 'FactoryJet builds agents for the quoting and order work around production. An RFQ agent reads the incoming request, pulls prices and stock from your ERP and drafts the quote for your estimator to approve. Order agents prepare purchase orders and sales orders in the ERP for a person to check. We also build EDI and punchout catalog integrations and B2B ordering portals. We have worked on Odoo, NetSuite, SAP Business One, ERPNext and custom ERPs. We design, build, implement and support, and you own what we build.',
-    bestFor: 'Manufacturers and distributors that want quoting and order entry sped up inside the ERP they already own.',
-    ask: 'To see working software run on your own RFQs or orders before you sign a contract.',
-  },
 ];
 
 const GROUPS: Group[] = [
+  'Us',
   'Plant floor and industrial data',
   'Ready-made quote and order software',
   'Custom AI agent builders',
-  'Us',
 ];
 
 // Short label used in the at-a-glance table.
@@ -314,7 +315,7 @@ const GROUP_INTRO: Record<Group, string> = {
     'Products you subscribe to and configure. All three work on the office side: quotes from part files, emailed purchase orders, and quotes and orders for distributors. Each connects to an ERP and publishes no price on the pages we read.',
   'Custom AI agent builders':
     'Firms that build an agent around your own process and systems. Each one names manufacturing on its own site. They differ in size and in where they start: enterprise blueprints, drawings, procurement, plant data, or the office paperwork around production.',
-  Us: 'FactoryJet wrote this list and builds this kind of agent, so it is listed here, separately and last. The entry follows the same format as every other.',
+  Us: 'FactoryJet wrote this list and builds this kind of agent, so it is listed here, separately and first. The entry follows the same format as every other.',
 };
 
 // Eight jobs AI agents do for manufacturers and distributors, and which
@@ -494,7 +495,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 11, 2026',
-  dateModified: 'Nov 8, 2026',
+  dateModified: 'Nov 18, 2026',
   readTime: '22 min read',
   imageUrl: `${IMG}/hero.webp`,
   imageAlt:
@@ -505,7 +506,7 @@ export const post: BlogPost = {
   },
   keyTakeaways: [
     'Manufacturers buy two different things under the name AI agent: AI for machines and production data, and agents for office work such as RFQs, quotes and orders. Decide which one you need before you compare companies.',
-    'We re-read 17 companies on their own websites on 8 November 2026 and grouped them by the kind of purchase. FactoryJet wrote this list and lists itself separately, nobody paid to be listed, and the order is not a ranking.',
+    'We re-read 17 companies on their own websites on 8 November 2026 and grouped them by the kind of purchase. FactoryJet wrote this list and lists itself first, nobody paid to be listed, and the order is not a ranking.',
     'Five sell plant-floor and industrial-data AI: Siemens, Rockwell Automation, Cognite, MachineMetrics and C3 AI. Three sell ready-made quote and order software: Paperless Parts, Conexiom and Proton.ai.',
     'Eight other firms build custom agents and name manufacturing: Intellectyx, USM Business Systems, Xcelacore, Phos AI Labs, Markovate, LeewayHertz, ThirdEye Data and Master of Code Global. FactoryJet builds them too and has its own group.',
     'All seven of the manufacturing lists we read that AI assistants cite rank their own publisher first, and none mentions EDI, punchout or order entry. Treat every list, including this one, as a starting point.',
@@ -526,7 +527,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-10-11',
-              dateModified: '2026-11-08',
+              dateModified: '2026-11-18',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'Companies that build AI agents for manufacturers and distributors' },
@@ -555,7 +556,7 @@ export const post: BlogPost = {
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">The short answer</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          FactoryJet wrote this list, lists itself separately in the last group, and the order is not a ranking.
+          FactoryJet wrote this list and lists itself first, in its own group, and the order is not a ranking.
         </p>
         <p className="text-gray-800 leading-relaxed mb-3">
           The best AI agent development company for a manufacturer depends on where the work sits. For machines and production data: Siemens, Rockwell Automation, Cognite, MachineMetrics or C3 AI. For ready-made quote and order software: Paperless Parts, Conexiom or Proton.ai. For a custom agent built around your process: Intellectyx, USM Business Systems, Xcelacore, Phos AI Labs, Markovate, LeewayHertz, ThirdEye Data or Master of Code Global.
@@ -584,7 +585,7 @@ export const post: BlogPost = {
         So we sorted them. We opened each company&rsquo;s own website, wrote down only what the company says about itself, and grouped the 17 by the kind of purchase. Every profile links to its source.
       </p>
       <p className="mb-4">
-        <strong>A note on who wrote this.</strong> FactoryJet designs, builds and supports AI agents for the quoting and order side of manufacturing and distribution, so we are on this list, in the last group. Our entry follows the same format as every other. Read every list with that in mind, including this one.
+        <strong>A note on who wrote this.</strong> FactoryJet designs, builds and supports AI agents for the quoting and order side of manufacturing and distribution, so we are on this list. FactoryJet wrote this list and lists itself first, in its own group. Our entry follows the same format as every other. Read every list with that in mind, including this one.
       </p>
       <p className="mb-6">
         A few terms first, in plain English. An <strong>AI agent</strong> is software that takes actions in your systems, such as drafting a quote in the ERP, instead of only answering questions. An <strong>ERP</strong> is the system that holds orders, stock, purchasing and accounts. An <strong>MES</strong> (manufacturing execution system) tracks production on the shop floor. An <strong>RFQ</strong> is a customer&rsquo;s request for a quote. <strong>EDI</strong> (electronic data interchange) is the structured way large customers send orders computer to computer. A <strong>punchout catalog</strong> lets a buyer shop your catalog from inside their own purchasing system.
@@ -694,7 +695,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The best AI agent development companies for manufacturers, profiled</h2>
       <p className="mb-6">
-        The order is not a ranking. Companies are grouped by what you are buying: plant-floor and industrial-data AI, ready-made quote and order software, custom agent builders, then us.
+        The order is not a ranking. FactoryJet wrote this list and lists itself first. The other companies are grouped by what you are buying: plant-floor and industrial-data AI, ready-made quote and order software, then custom agent builders.
       </p>
 
       {GROUPS.map((g) => {
@@ -842,7 +843,7 @@ export const post: BlogPost = {
         Factory automation in the strict sense means PLCs (the controllers that run machines), robots and SCADA screens. The people who program those are control system integrators. The <a href={CSIA_URL} className={link} rel="noopener" target="_blank">Control System Integrators Association</a> runs a directory it calls the Industrial Automation Exchange, and says it holds thousands of integrators and suppliers.
       </p>
       <p className="mb-4">
-        AI agent developers work one layer up, on the data and documents around the machines. The five vendors in the first group sell agents that sit close to production. The builders in the third group, and FactoryJet, write agents for quoting, orders and ERP work. Four questions sort a developer into the right trade:
+        AI agent developers work one layer up, on the data and documents around the machines. The five vendors in the plant-floor group sell agents that sit close to production. The builders in the custom agent group, and FactoryJet, write agents for quoting, orders and ERP work. Four questions sort a developer into the right trade:
       </p>
       <ul className="list-disc pl-6 mb-6 space-y-2">
         <li>Which system will the agent read from, and which will it write to?</li>
@@ -898,7 +899,7 @@ export const post: BlogPost = {
       <div className="space-y-3 mb-8 not-prose">
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">1. Decide which side of the plant the problem is on</summary>
-          <p className="mt-3 text-gray-700">Machines, schedules and quality data point to the first group. Quotes, orders and supplier paperwork point to the second and third. Use the comparison table above. This one decision removes most names from any list.</p>
+          <p className="mt-3 text-gray-700">Machines, schedules and quality data point to the plant-floor group. Quotes, orders and supplier paperwork point to the ready-made software and custom builder groups. Use the comparison table above. This one decision removes most names from any list.</p>
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">2. Write down one workflow with real numbers</summary>
@@ -906,7 +907,7 @@ export const post: BlogPost = {
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">3. Check whether a product already does it</summary>
-          <p className="mt-3 text-gray-700">If you are a job shop quoting from part files, or a distributor keying emailed orders, a product in the second group may cover most of the work. Ask for a trial on your own files. Go custom for the parts a product cannot reach. Our <a href="/blog/ai-agent-build-vs-buy-2026" className={link}>build versus buy guide</a> goes through the trade-offs.</p>
+          <p className="mt-3 text-gray-700">If you are a job shop quoting from part files, or a distributor keying emailed orders, a product in the ready-made software group may cover most of the work. Ask for a trial on your own files. Go custom for the parts a product cannot reach. Our <a href="/blog/ai-agent-build-vs-buy-2026" className={link}>build versus buy guide</a> goes through the trade-offs.</p>
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">4. Send the same five documents to three companies</summary>

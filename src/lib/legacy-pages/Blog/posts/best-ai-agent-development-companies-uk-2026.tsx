@@ -8,8 +8,8 @@ const IMG = '/blog-images/best-ai-agent-development-companies-uk-2026';
 // Every fact about every firm below was read on that firm's own website on
 // 9 October 2026 (URL in `source`; the quote behind each claim is in the
 // research ledger kept outside the repo). Nothing here is paid placement.
-// The order is NOT a ranking; firms are grouped by the kind of buyer they
-// suit. The table, the profiles, the regional table and the ItemList schema
+// The order is NOT a ranking. FactoryJet, the publisher, is listed first;
+// the other firms are grouped by the kind of buyer they suit. The table, the profiles, the regional table and the ItemList schema
 // all map from this same array.
 interface Firm {
   name: string;
@@ -27,6 +27,20 @@ interface Firm {
 }
 
 const FIRMS: Firm[] = [
+  {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/uk/ai-agents',
+    source: 'https://factoryjet.com/uk/ai-agents',
+    group: 'commerce',
+    region: 'Remote',
+    based: 'Works remotely with UK clients and keeps UK working hours',
+    type: 'AI agents, AI receptionists and AI inside ecommerce and operations',
+    clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
+    platforms: 'Shopify, WooCommerce, Xero, Sage, HubSpot, Odoo, NetSuite, SAP Business One, ERPNext, and OpenAI, Anthropic and Google models',
+    what: 'We map the process, then design, build and support custom AI agents, AI receptionists and customer service agents inside the tools you already use, with human approval steps. Our strongest ground is where AI meets online stores, order handling, finance and operations. The founder is involved in every project, you own what we build, and we show working software on your own data before a contract.',
+    bestFor: 'Ecommerce and operations-heavy SMBs that want one team for the store, the integrations and the AI.',
+    ask: 'Ask us, as you would any supplier, where your data is stored and how it is protected.',
+  },
   {
     name: 'Happy Webs',
     url: 'https://happywebs.co.uk/',
@@ -223,25 +237,16 @@ const FIRMS: Firm[] = [
     bestFor: 'Mid-size organisations in the North that already run on Microsoft 365 and want agents inside it.',
     ask: 'Which Microsoft licences the agents need, and whether your data is ready for Copilot.',
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/uk/ai-agents',
-    source: 'https://factoryjet.com/uk/ai-agents',
-    group: 'commerce',
-    region: 'Remote',
-    based: 'Works remotely with UK clients and keeps UK working hours',
-    type: 'AI agents, AI receptionists and AI inside ecommerce and operations',
-    clients: 'Small and mid-size businesses; 500+ businesses served since 2014',
-    platforms: 'Shopify, WooCommerce, Xero, Sage, HubSpot, Odoo, NetSuite, SAP Business One, ERPNext, and OpenAI, Anthropic and Google models',
-    what: 'We map the process, then design, build and support custom AI agents, AI receptionists and customer service agents inside the tools you already use, with human approval steps. Our strongest ground is where AI meets online stores, order handling, finance and operations. The founder is involved in every project, you own what we build, and we show working software on your own data before a contract.',
-    bestFor: 'Ecommerce and operations-heavy SMBs that want one team for the store, the integrations and the AI.',
-    ask: 'Ask us, as you would any supplier, where your data is stored and how it is protected.',
-  },
 ];
 
 // One H2 per buyer group. Headings use the wording buyers typed into search
 // and AI assistants (measured 9 Oct 2026).
 const GROUPS: { key: Firm['group']; heading: string; intro: string }[] = [
+  {
+    key: 'commerce',
+    heading: 'Who provides reliable e-commerce AI agents for automation?',
+    intro: 'One entry here, and it is ours, so read it with that in mind. FactoryJet wrote this list and lists itself first. Two firms below also know online retail: Tom&Co built ecommerce platforms for over a decade, and Green Arrow names Shopify among the systems its agents work in.',
+  },
   {
     key: 'first',
     heading: 'Which UK companies build custom AI agents for small and mid-size businesses?',
@@ -261,11 +266,6 @@ const GROUPS: { key: Firm['group']; heading: string; intro: string }[] = [
     key: 'systems',
     heading: 'Who can integrate AI agents with our CRM and ERP in the UK?',
     intro: 'These three connect agents to the systems that hold customers, orders, stock and accounts. Read this group if you run a UK manufacturing business and want supplier emails and orders handled.',
-  },
-  {
-    key: 'commerce',
-    heading: 'Who provides reliable e-commerce AI agents for automation?',
-    intro: 'One entry here, and it is ours, so read it with that in mind. Two firms above also know online retail: Tom&Co built ecommerce platforms for over a decade, and Green Arrow names Shopify among the systems its agents work in.',
   },
 ];
 
@@ -487,7 +487,7 @@ export const post: BlogPost = {
           There is no single best AI agent development company in the UK. For a small first agent with published prices, look at Happy Webs, Augustova and Softomate. For product teams, Pixelfield and Magora. For sensitive data, OpenKit and Ayoob AI. For orders and ERP, Tom&amp;Co. For Microsoft, BCN. For AI inside an online store, FactoryJet.
         </p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          We read every firm&rsquo;s own website on 9 October 2026: where it is based, what it builds, who it serves and any prices it publishes. Nobody paid to be listed and the order is not a ranking. FactoryJet wrote this guide and is on it, last.
+          We read every firm&rsquo;s own website on 9 October 2026: where it is based, what it builds, who it serves and any prices it publishes. Nobody paid to be listed and the order is not a ranking. FactoryJet wrote this guide and lists itself first.
         </p>
         <p className="text-gray-800 leading-relaxed">
           For a second opinion on your own shortlist, <a href="/contact" className="text-[#B23E13] underline font-semibold">talk to the founder</a>.
@@ -501,7 +501,7 @@ export const post: BlogPost = {
         So we opened six of those lists. Four put the publisher&rsquo;s own firm first. Two name Accenture, which is a fair answer for a bank and a poor one for a 20-person firm. This guide does the slow part. It covers 14 UK firms that build for small and mid-size businesses, each read on its own website, with every fact dated and linked to the page it came from.
       </p>
       <p className="mb-4">
-        <strong>A note on honesty.</strong> FactoryJet builds AI agents, so we are on this list. We put ourselves last, and we tell you when another firm will suit you better. Listing yourself is common on pages like this one. It is also a reason to read every list, ours included, with care.
+        <strong>A note on honesty.</strong> FactoryJet builds AI agents, so we are on this list. FactoryJet wrote this list and lists itself first, and we tell you when another firm will suit you better. Listing yourself is common on pages like this one. It is also a reason to read every list, ours included, with care.
       </p>
       <p className="mb-6">
         A few terms first, in plain English. An <strong>AI agent</strong> is software that takes actions in your systems, such as raising an order or booking a job, and does more than chat. An <strong>AI agent development company</strong> writes that software for you. An <strong>AI automation agency</strong> connects AI to the tools you already use so routine steps happen without retyping. A <strong>CRM</strong> is the system that holds your customers and deals, and an <strong>ERP</strong> is the one that holds orders, stock and accounts. Most firms below do some of each.

@@ -10,7 +10,8 @@ const META_DESCRIPTION =
 
 // Every fact about every firm below was read on that firm's own website and on
 // its Shopify Partner Directory profile on 16 November 2026. The URLs are in
-// `sources` and `directory`. Nobody paid to be listed. The order is NOT a ranking.
+// `sources` and `directory`. Nobody paid to be listed. FactoryJet wrote this list
+// and lists itself first; the order of the rest is NOT a ranking.
 // The comparison table, the profiles and the ItemList schema all map from FIRMS.
 type Mark = 'Shown' | 'Not shown';
 
@@ -35,6 +36,28 @@ interface Firm {
 }
 
 const FIRMS: Firm[] = [
+  {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/',
+    sources: [
+      { label: 'Replatforming hub', href: 'https://factoryjet.com/replatforming' },
+      { label: 'WooCommerce to Shopify', href: 'https://factoryjet.com/replatforming/woocommerce-to-shopify' },
+      { label: 'Salesforce Commerce Cloud to Shopify Plus', href: 'https://factoryjet.com/replatforming/salesforce-commerce-cloud-to-shopify-plus' },
+    ],
+    tier: 'Registered Shopify Partner',
+    based: 'Serves US clients, with calls in US business hours',
+    woo: 'Shown',
+    bc: 'Shown',
+    sfcc: 'Shown',
+    magento: 'Shown',
+    sqwix: 'Both shown',
+    what: 'We move stores to Shopify and Shopify Plus from WooCommerce, BigCommerce, Salesforce Commerce Cloud, Magento, Squarespace and Wix, and connect the new store to QuickBooks or an ERP. On Salesforce Commerce Cloud moves we rebuild the SFRA or SiteGenesis storefront as a Shopify theme and list every cartridge before we price the work. We quote a fixed price per phase in writing after a short scoping call and build a demo on your own product data before you sign.',
+    seo: 'We collect every URL from the sitemap, Search Console and backlink data, map each one-to-one as a single-hop 301 before DNS moves, keep Yoast or Rank Math titles on WooCommerce moves, and watch Search Console daily after launch.',
+    timeline: 'Most WooCommerce moves take 3 to 8 weeks. Moves with data and integrations usually take 5 to 8 weeks; headless or heavy custom work 8 to 14 weeks',
+    price: 'Fixed price per phase after scoping. See our replatforming pages for sourced market ranges',
+    bestFor: 'Stores that want the migration and the QuickBooks or ERP connection done by one team.',
+    ask: 'Can we see working software on our own data before we sign a contract?',
+  },
   {
     name: 'Domaine',
     url: 'https://domaineworldwide.com/',
@@ -222,28 +245,6 @@ const FIRMS: Firm[] = [
     bestFor: 'Smaller stores where keeping search traffic is the main worry and the catalog is simple.',
     ask: 'How many migrations from our platform has your team finished, and can we speak to one of those clients?',
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/',
-    sources: [
-      { label: 'Replatforming hub', href: 'https://factoryjet.com/replatforming' },
-      { label: 'WooCommerce to Shopify', href: 'https://factoryjet.com/replatforming/woocommerce-to-shopify' },
-      { label: 'Salesforce Commerce Cloud to Shopify Plus', href: 'https://factoryjet.com/replatforming/salesforce-commerce-cloud-to-shopify-plus' },
-    ],
-    tier: 'Registered Shopify Partner',
-    based: 'Serves US clients, with calls in US business hours',
-    woo: 'Shown',
-    bc: 'Shown',
-    sfcc: 'Shown',
-    magento: 'Shown',
-    sqwix: 'Both shown',
-    what: 'We move stores to Shopify and Shopify Plus from WooCommerce, BigCommerce, Salesforce Commerce Cloud, Magento, Squarespace and Wix, and connect the new store to QuickBooks or an ERP. On Salesforce Commerce Cloud moves we rebuild the SFRA or SiteGenesis storefront as a Shopify theme and list every cartridge before we price the work. We quote a fixed price per phase in writing after a short scoping call and build a demo on your own product data before you sign.',
-    seo: 'We collect every URL from the sitemap, Search Console and backlink data, map each one-to-one as a single-hop 301 before DNS moves, keep Yoast or Rank Math titles on WooCommerce moves, and watch Search Console daily after launch.',
-    timeline: 'Most WooCommerce moves take 3 to 8 weeks. Moves with data and integrations usually take 5 to 8 weeks; headless or heavy custom work 8 to 14 weeks',
-    price: 'Fixed price per phase after scoping. See our replatforming pages for sourced market ranges',
-    bestFor: 'Stores that want the migration and the QuickBooks or ERP connection done by one team.',
-    ask: 'Can we see working software on our own data before we sign a contract?',
-  },
 ];
 
 const others = FIRMS.filter((f) => !f.name.startsWith('FactoryJet'));
@@ -409,7 +410,7 @@ export const post: BlogPost = {
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Nov 16, 2026',
-  dateModified: 'Nov 16, 2026',
+  dateModified: 'Nov 18, 2026',
   hideExcerptOnPage: true,
   readTime: '20 min read',
   imageUrl: '/images/blog/best-magento-to-shopify-plus-migration-agencies-2026/hero.webp',
@@ -421,7 +422,7 @@ export const post: BlogPost = {
   },
   keyTakeaways: [
     'Pick the agency by the platform you are leaving. Salesforce Commerce Cloud, WooCommerce and Wix moves have different hard parts: cartridges, plugins and data with no export.',
-    `Every firm was read on its own website and its Shopify partner profile on ${READ_DATE}. Nobody paid to be listed, and the order is not a ranking.`,
+    `Every firm was read on its own website and its Shopify partner profile on ${READ_DATE}. Nobody paid to be listed. FactoryJet wrote this list and lists itself first; the order of the others is not a ranking.`,
     'Published timelines run from 4 to 6 weeks for a simple store to 39 to 52 weeks for enterprise Salesforce Commerce Cloud.',
     'Netalico and Solo Media Group publish price tiers. Netalico lists BigCommerce moves at $15,000 to $150,000+ and puts most Salesforce Commerce Cloud moves in the upper half of $25,000 to $250,000+.',
     'Shopify uses fixed /products/ and /collections/ paths, so nearly every old URL changes and needs a 301 before DNS moves.',
@@ -442,7 +443,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-11-16',
-              dateModified: '2026-11-16',
+              dateModified: '2026-11-18',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'Shopify migration agencies for US brands' },
@@ -471,7 +472,7 @@ export const post: BlogPost = {
           Choose a Shopify migration agency by the platform you are leaving. From Salesforce Commerce Cloud: Domaine for enterprise, Anatta or Shero Commerce for mid-market. From WooCommerce without losing rankings: Shero Commerce, Netalico or Solo Media Group. From BigCommerce: Netalico, 1Digital Agency or Fyresite. From Squarespace or Wix: Netalico, Solo Media Group or Shero Commerce. For Magento depth, see our <a href="/blog/best-magento-to-shopify-plus-migration-agencies-2026" className={link}>Magento to Shopify Plus list</a>.
         </p>
         <p className="text-gray-800 leading-relaxed">
-          Nobody paid to be listed, and the order is not a ranking. FactoryJet wrote this guide and is on it.
+          Nobody paid to be listed. FactoryJet wrote this list and lists itself first; the order of the other 9 is not a ranking.
         </p>
       </div>
 
@@ -541,7 +542,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The agencies, profiled</h2>
       <p className="mb-6">
-        The order is not a ranking. Enterprise firms come first, then firms that cover every platform, then BigCommerce and WooCommerce specialists, then us.
+        FactoryJet wrote this list and lists itself first. After us the order is not a ranking: enterprise firms come next, then firms that cover every platform, then BigCommerce and WooCommerce specialists.
       </p>
       {FIRMS.map((f, i) => (
         <section key={f.name} className="mb-10">
@@ -670,14 +671,14 @@ export const post: BlogPost = {
       <h2 className="text-2xl font-bold mt-10 mb-4">Which kind of firm fits your store</h2>
       <table className="w-full border-collapse text-sm mb-8 not-prose">
         <tbody>
-          <tr><th scope="row" className="p-3 text-left align-top border-b border-gray-200 w-1/2">&ldquo;We run several Salesforce Commerce Cloud sites and regions.&rdquo;</th><td className="p-3 border-b border-gray-200">Domaine, or Anatta at $10M+ revenue.</td></tr>
+          <tr><th scope="row" className="p-3 text-left align-top border-b border-gray-200 w-1/2">&ldquo;The new store must stay in step with QuickBooks or our ERP.&rdquo;</th><td className="p-3 border-b border-gray-200">FactoryJet does the migration and the connection as one project. See <a href="/replatforming" className={link}>our replatforming guides</a>.</td></tr>
+          <tr><th scope="row" className="p-3 text-left align-top border-b border-gray-200">&ldquo;We run several Salesforce Commerce Cloud sites and regions.&rdquo;</th><td className="p-3 border-b border-gray-200">Domaine, or Anatta at $10M+ revenue.</td></tr>
           <tr><th scope="row" className="p-3 text-left align-top border-b border-gray-200">&ldquo;Our Salesforce Commerce Cloud store has years of custom cartridges.&rdquo;</th><td className="p-3 border-b border-gray-200">Shero Commerce or Netalico, both of which classify every cartridge first.</td></tr>
           <tr><th scope="row" className="p-3 text-left align-top border-b border-gray-200">&ldquo;We are on WooCommerce and organic search is our biggest channel.&rdquo;</th><td className="p-3 border-b border-gray-200">Shero Commerce, Netalico or Solo Media Group. Ask each for the WooCommerce redirect map from a past move.</td></tr>
           <tr><th scope="row" className="p-3 text-left align-top border-b border-gray-200">&ldquo;We are on BigCommerce and want a price band before we call anyone.&rdquo;</th><td className="p-3 border-b border-gray-200">Netalico publishes three tiers.</td></tr>
           <tr><th scope="row" className="p-3 text-left align-top border-b border-gray-200">&ldquo;We sell parts with fitment data or B2B price lists.&rdquo;</th><td className="p-3 border-b border-gray-200">Fyresite, or 1Digital Agency.</td></tr>
           <tr><th scope="row" className="p-3 text-left align-top border-b border-gray-200">&ldquo;We are on Squarespace or Wix and have outgrown it.&rdquo;</th><td className="p-3 border-b border-gray-200">Netalico, Solo Media Group or Shero Commerce. A small store may only need a tool.</td></tr>
           <tr><th scope="row" className="p-3 text-left align-top border-b border-gray-200">&ldquo;We want one big vendor for migration, design and marketing.&rdquo;</th><td className="p-3 border-b border-gray-200">Americaneagle.com.</td></tr>
-          <tr><th scope="row" className="p-3 text-left align-top border-b border-gray-200">&ldquo;The new store must stay in step with QuickBooks or our ERP.&rdquo;</th><td className="p-3 border-b border-gray-200">FactoryJet does the migration and the connection as one project. See <a href="/replatforming" className={link}>our replatforming guides</a>.</td></tr>
         </tbody>
       </table>
 

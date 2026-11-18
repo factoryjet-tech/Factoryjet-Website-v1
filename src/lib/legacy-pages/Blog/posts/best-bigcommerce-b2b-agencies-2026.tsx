@@ -13,8 +13,8 @@ const READ_DATE = '16 Nov 2026';
 // profile in the BigCommerce partner directory (`directory`). Tier comes from
 // the badge on that profile. Every firm except FactoryJet appears in the
 // directory's "B2B Specialized" certification filter (DIRECTORY_B2B_URL).
-// Nobody paid to be listed. Array order is not a ranking: firms are grouped by
-// the kind of buyer they suit. The ItemList schema maps from this array, so the
+// Nobody paid to be listed. FactoryJet wrote this list and lists itself first.
+// After it, array order is not a ranking: firms are grouped by the kind of buyer they suit. The ItemList schema maps from this array, so the
 // list and the schema cannot drift apart.
 type Group = 'B2B-first firms' | 'BigCommerce specialists' | 'Large full-service firms' | 'Us';
 
@@ -39,6 +39,19 @@ interface Firm {
 const DIRECTORY_B2B_URL = 'https://partners.bigcommerce.com/directory/search?f0=Certifications&f0v0=B2B+Specialized';
 
 const FIRMS: Firm[] = [
+  {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/services/bigcommerce-b2b',
+    source: 'https://factoryjet.com/services/bigcommerce-b2b',
+    tier: 'Not listed in the B2B Specialized filter',
+    group: 'Us',
+    based: 'Works with US clients remotely, with calls in US business hours',
+    b2bWork: 'Our published B2B ordering builds are on Commerceflo (GPSUK) and on WooCommerce with Odoo (Sow Easy, in testing on staging), not on BigCommerce',
+    erps: 'NetSuite, Odoo, SAP Business One, ERPNext and custom ERPs; QuickBooks and Xero',
+    what: 'FactoryJet builds B2B Edition stores for distributors and manufacturers and puts most of the effort into the work around B2B Edition: syncing company price lists and stock from the ERP, search and filters across a large catalog, product data from a spreadsheet or a PIM such as Akeneo or Salsify, and cXML or OCI punchout for buyers on SAP Ariba or Coupa. Before you sign, it builds a working draft with your own products and one of your price lists. Each phase is scoped, priced and signed on its own, with no hourly billing, and the code sits in your own repository.',
+    bestFor: 'Distributors whose real problem is ERP price sync, large-catalog search or punchout, and who want to see a draft on their own data first.',
+    ask: 'To see the working draft built on your own products and price list before you commit.',
+  },
   {
     name: 'Silk Commerce',
     url: 'https://www.silkcommerce.com/',
@@ -197,28 +210,15 @@ const FIRMS: Firm[] = [
     bestFor: 'Manufacturers leaving Magento or Adobe Commerce that want a firm that knows both platforms.',
     ask: 'To see a live B2B Edition store it built, since the stories we read do not name the platform.',
   },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/services/bigcommerce-b2b',
-    source: 'https://factoryjet.com/services/bigcommerce-b2b',
-    tier: 'Not listed in the B2B Specialized filter',
-    group: 'Us',
-    based: 'Works with US clients remotely, with calls in US business hours',
-    b2bWork: 'Our published B2B ordering builds are on Commerceflo (GPSUK) and on WooCommerce with Odoo (Sow Easy, in testing on staging), not on BigCommerce',
-    erps: 'NetSuite, Odoo, SAP Business One, ERPNext and custom ERPs; QuickBooks and Xero',
-    what: 'FactoryJet builds B2B Edition stores for distributors and manufacturers and puts most of the effort into the work around B2B Edition: syncing company price lists and stock from the ERP, search and filters across a large catalog, product data from a spreadsheet or a PIM such as Akeneo or Salsify, and cXML or OCI punchout for buyers on SAP Ariba or Coupa. Before you sign, it builds a working draft with your own products and one of your price lists. Each phase is scoped, priced and signed on its own, with no hourly billing, and the code sits in your own repository.',
-    bestFor: 'Distributors whose real problem is ERP price sync, large-catalog search or punchout, and who want to see a draft on their own data first.',
-    ask: 'To see the working draft built on your own products and price list before you commit.',
-  },
 ];
 
-const GROUPS: Group[] = ['B2B-first firms', 'BigCommerce specialists', 'Large full-service firms', 'Us'];
+const GROUPS: Group[] = ['Us', 'B2B-first firms', 'BigCommerce specialists', 'Large full-service firms'];
 
 const GROUP_INTRO: Record<Group, string> = {
   'B2B-first firms': 'These four lead with B2B for manufacturers and distributors. Two of them sell a package tied to one ERP.',
   'BigCommerce specialists': 'These three are smaller BigCommerce shops with named B2B work. They suit a buyer who wants a close working team.',
   'Large full-service firms': 'These three are larger agencies that work on several platforms. They suit a buyer who wants one vendor for many services.',
-  Us: 'We wrote this guide, so our entry follows the same format and the same rules as everyone else.',
+  Us: 'FactoryJet wrote this list and lists itself first. Our entry follows the same format and the same rules as everyone else.',
 };
 
 // What B2B Edition does natively, per the BigCommerce developer docs and the
@@ -355,7 +355,7 @@ export const post: BlogPost = {
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Nov 16, 2026',
-  dateModified: 'Nov 16, 2026',
+  dateModified: 'Nov 18, 2026',
   readTime: '22 min read',
   imageUrl: '/images/blog/best-bigcommerce-agencies-2026/b2b-wholesale.webp',
   imageAlt:
@@ -369,7 +369,7 @@ export const post: BlogPost = {
     'B2B Edition already handles company accounts, price lists, quotes and invoices. The paid work for a large distributor is ERP price sync, search over 20,000+ SKUs, product data and punchout.',
     'All 10 other firms appear in the BigCommerce directory filter for B2B Specialized partners, which showed 76 firms on 16 November 2026.',
     'Two firms publish figures: a $5,000 diagnostic (The B2B eCommerce Agency) and contact-form budget bands from $25,000 (ioVista). BigCommerce announced accelerator packages at $15,000, $30,000 and $50,000.',
-    'Nobody paid to be listed, and the order is not a ranking. FactoryJet wrote this guide and is on it.',
+    'Nobody paid to be listed. FactoryJet wrote this list and lists itself first; the order of the other 10 is not a ranking.',
   ],
   faqs: FAQS,
   content: (
@@ -387,7 +387,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-US',
               datePublished: '2026-11-16',
-              dateModified: '2026-11-16',
+              dateModified: '2026-11-18',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'BigCommerce B2B Edition agencies for distributors and manufacturers' },
@@ -419,7 +419,7 @@ export const post: BlogPost = {
           For a distributor with 20,000 SKUs, the platform is rarely the problem. Price lists that stay in step with the ERP, search that finds part numbers and clean product data are. Pick the firm that can show you that work on a live store.
         </p>
         <p className="text-gray-800 leading-relaxed">
-          We read every firm on its own website and in the BigCommerce partner directory on {READ_DATE}. Nobody paid to be listed, and the order is not a ranking. FactoryJet wrote this guide and is on it.
+          We read every firm on its own website and in the BigCommerce partner directory on {READ_DATE}. Nobody paid to be listed. FactoryJet wrote this list and lists itself first; the order of the other 10 is not a ranking.
         </p>
       </div>
 
@@ -469,7 +469,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The BigCommerce B2B agencies, profiled</h2>
       <p className="mb-6">
-        The order is not a ranking. Firms are grouped by the kind of buyer they suit. Each profile ends with its sources, all read on {READ_DATE}.
+        FactoryJet wrote this list and lists itself first. After that the order is not a ranking: firms are grouped by the kind of buyer they suit. Each profile ends with its sources, all read on {READ_DATE}.
       </p>
 
       {GROUPS.map((g) => (
@@ -602,6 +602,7 @@ export const post: BlogPost = {
         <table className="w-full border-collapse text-sm">
           <tbody>
             {[
+              ['Our hard part is ERP price sync, search over a big catalog or punchout.', 'FactoryJet, which scopes that integration work first and shows a draft on your own data.'],
               ['We run NetSuite and the store has to agree with it.', 'Anchor Group, whose accelerator includes B2B Edition setup and NetSuite sync. Access Solutions for live NetSuite pricing.'],
               ['We run Epicor.', 'Silk Commerce, which has its own Epicor connector, ShopHive.'],
               ['We run Prophet 21, Infor, Acumatica or Sage, or have not picked a platform.', 'The B2B eCommerce Agency, which names those ERPs and starts with a fixed $5,000 diagnostic.'],
@@ -611,7 +612,6 @@ export const post: BlogPost = {
               ['We want one large vendor for build, hosting and marketing.', 'Americaneagle.com.'],
               ['We are leaving Magento or Adobe Commerce.', 'Classy Llama, which works on both platforms.'],
               ['We are in Texas and want a local team.', 'ioVista in Dallas.'],
-              ['Our hard part is ERP price sync, search over a big catalog or punchout.', 'FactoryJet, which scopes that integration work first and shows a draft on your own data.'],
             ].map(([sit, pick]) => (
               <tr key={sit} className="odd:bg-white even:bg-gray-50">
                 <th scope="row" className="p-3 border border-gray-200 text-left font-semibold align-top">&ldquo;{sit}&rdquo;</th>

@@ -35,6 +35,17 @@ interface Firm {
 
 const FIRMS: Firm[] = [
   {
+    name: 'FactoryJet (that is us)',
+    url: 'https://factoryjet.com/au/ai-seo',
+    source: 'https://factoryjet.com/au/ai-seo',
+    based: 'We work remotely with Australian clients and schedule calls in Australian business hours',
+    type: 'AI SEO done by the engineers who build the site, store or AI agent',
+    engines: 'ChatGPT, Claude, Gemini, Perplexity, Google AI Overviews',
+    what: 'We measure first: the questions your buyers ask, run through each engine, with the websites every answer cites, plus a check that AI crawlers can read your site. Then we change the site itself, because we build websites and online stores, and we re-test every month. We have served 500+ businesses since 2014 and quote in writing after a free first call.',
+    bestFor: 'Ecommerce and service businesses that want the AI search work and the website changes done by the same team.',
+    ask: 'Which questions we would track for you, and what we would change on your site first.',
+  },
+  {
     name: 'StudioHawk',
     url: 'https://studiohawk.com.au/',
     source: 'https://studiohawk.com.au/seo-services/ai-seo/',
@@ -143,17 +154,6 @@ const FIRMS: Firm[] = [
     what: 'Works in four layers: entity definition (including Wikidata alignment, which means matching your business record in the free Wikidata database), validated schema, answer-first content, and a fixed prompt set run monthly against each engine, logged and screenshotted. Because it builds websites too, it says the fixes land in your code instead of a PDF of recommendations. It starts every engagement with a free AI visibility audit and offers no lock-in contracts.',
     bestFor: 'South Australian businesses that want the site build and the AI search work from one small team.',
     ask: 'Which pages it would rebuild first, and what the monthly report shows.',
-  },
-  {
-    name: 'FactoryJet (that is us)',
-    url: 'https://factoryjet.com/au/ai-seo',
-    source: 'https://factoryjet.com/au/ai-seo',
-    based: 'We work remotely with Australian clients and schedule calls in Australian business hours',
-    type: 'AI SEO done by the engineers who build the site, store or AI agent',
-    engines: 'ChatGPT, Claude, Gemini, Perplexity, Google AI Overviews',
-    what: 'We measure first: the questions your buyers ask, run through each engine, with the websites every answer cites, plus a check that AI crawlers can read your site. Then we change the site itself, because we build websites and online stores, and we re-test every month. We have served 500+ businesses since 2014 and quote in writing after a free first call.',
-    bestFor: 'Ecommerce and service businesses that want the AI search work and the website changes done by the same team.',
-    ask: 'Which questions we would track for you, and what we would change on your site first.',
   },
 ];
 
@@ -290,11 +290,11 @@ export const post: BlogPost = {
   slug: 'best-ai-seo-agencies-australia-2026',
   title: 'Best AI SEO Agencies in Australia (2026): 10 Compared, Plus Us',
   excerpt:
-    'Ten Australian agencies that help businesses show up in ChatGPT and Google AI Overviews, checked on their own websites on 21 October 2026: where each is based, which AI engines it covers, what it publishes about price and who it suits. Eight more get a short entry. FactoryJet is listed last and says so.',
+    'Ten Australian agencies that help businesses show up in ChatGPT and Google AI Overviews, checked on their own websites on 21 October 2026: where each is based, which AI engines it covers, what it publishes about price and who it suits. Eight more get a short entry. FactoryJet wrote this list and lists itself first.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 21, 2026',
-  dateModified: 'Oct 31, 2026',
+  dateModified: 'Nov 18, 2026',
   readTime: '16 min read',
   imageUrl: `${IMG}-hero.webp`,
   imageFit: 'contain',
@@ -310,7 +310,7 @@ export const post: BlogPost = {
     'Every firm here was named by AI tools when we asked which Australian agencies help businesses show up in ChatGPT and Google AI Overviews. Every fact was then read on the firm’s own site on 21 October 2026.',
     'Six of the 18 firms on this list publish prices: from A$500 a month for SEO packages that include AI search, to A$5,000 a month for an engineering-led retainer.',
     'Google says there are no extra requirements to appear in AI Overviews or AI Mode. Good AI SEO is sound SEO plus measurement in each AI tool.',
-    'FactoryJet is on this list, last. We work remotely with Australian clients.',
+    'FactoryJet is on this list. FactoryJet wrote this list and lists itself first. We work remotely with Australian clients.',
   ],
   faqs: FAQS,
   content: (
@@ -329,7 +329,7 @@ export const post: BlogPost = {
                 'Australian AI SEO and GEO agencies compared: where each is based, which AI engines it tracks, published prices and who it suits. Every fact checked 21 Oct 2026.',
               inLanguage: 'en-AU',
               datePublished: '2026-10-21',
-              dateModified: '2026-10-31',
+              dateModified: '2026-11-18',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI SEO and generative engine optimisation agencies in Australia' },
@@ -361,7 +361,7 @@ export const post: BlogPost = {
           The best AI SEO or GEO (generative engine optimisation) agency in Australia depends on your size and where you are. For large brands, look at StudioHawk, Prosperity Media, NP Digital Australia and Luminary. For engineering-heavy work with published prices, DEJAN in Brisbane and ClickedOn in North Sydney. For small businesses, WebGlobals and Click Click Media in Sydney, Search Scope in Perth and BOHN Digital in Adelaide.
         </p>
         <p className="text-gray-800 leading-relaxed">
-          We started from the firms AI tools themselves name for this question, then read each firm&rsquo;s own website on 21 October 2026. Nobody paid to be listed. The order is not a ranking. FactoryJet is last, and labelled.
+          We started from the firms AI tools themselves name for this question, then read each firm&rsquo;s own website on 21 October 2026. Nobody paid to be listed. The order is not a ranking. FactoryJet wrote this list and lists itself first, labelled.
         </p>
       </div>
 
@@ -372,7 +372,7 @@ export const post: BlogPost = {
         So we opened the website of each of those 18 firms on 21 October 2026, plus Search Scope in Perth. Several of the 18 serve Perth clients, but none showed a Western Australian office address on the pages we read. We kept a firm if its own site shows an Australian address and an AI search service. Then we wrote down only what each firm says about itself: where it is, which AI tools it works on, what the work includes and any prices it publishes. Ten get a full profile below. Eight more passed the same checks and get a short entry.
       </p>
       <p className="mb-4">
-        <strong>A note on honesty.</strong> FactoryJet sells AI SEO in Australia, so we are on this list. We put ourselves last. Several lists that rank for this topic are written by an agency that puts itself first. That is common practice, and a reason to read every list, this one included, with care. For how we do the work ourselves, see our{' '}
+        <strong>A note on honesty.</strong> FactoryJet sells AI SEO in Australia, so we are on this list. FactoryJet wrote this list and lists itself first. Several other lists that rank for this topic are also written by an agency that puts itself first. That is common practice, and a reason to read every list, this one included, with care. For how we do the work ourselves, see our{' '}
         <a href="/au/ai-seo" className="text-[#B23E13] underline">AI SEO agency service in Australia</a>.
       </p>
       <p className="mb-6">
@@ -419,7 +419,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The best AI SEO agencies in Australia, profiled</h2>
       <p className="mb-6">
-        The order is not a ranking. Large agencies come first, then technical specialists, then firms built for small businesses, then us.
+        The order is not a ranking. We come first, then large agencies, then technical specialists, then firms built for small businesses.
       </p>
 
       {FIRMS.map((f, i) => (
