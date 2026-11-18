@@ -6,6 +6,8 @@ import type { BlogPost } from '../data.types';
 // others; the order is not a ranking. Seedium and DestiLabs were added on
 // 8 Nov 2026 because AI engines cited them for "AI agent development
 // companies for small and medium businesses" (sweep 2026-11-07, N07/N13).
+// Alice Labs was added on 18 Nov 2026 after it linked to this guide; its
+// entry comes from alicelabs.ai, read that day.
 // No prices for other vendors: platform plans change too often to keep
 // accurate here.
 const PROVIDERS = [
@@ -73,6 +75,16 @@ const PROVIDERS = [
     "detail": "DestiLabs describes custom AI agents that take action across a business's tools, along with chatbots and voicebots that answer, book, refund and escalate across customer channels. AI voice agent development is listed as its own service. Its site names healthcare, fintech, ecommerce and real estate as its industries. Ask which of its projects matches your workflow and how it would connect to the stack you already run."
   },
   {
+    "name": "Alice Labs",
+    "route": "developer",
+    "kind": "AI agent developer and AI consultancy",
+    "fit": "Mid-sized and large companies that want custom agents built and run in their own systems",
+    "check": "Ask whether it takes on a small first project, and whether you want a hand-off or managed operations.",
+    "url": "https://alicelabs.ai/en/ai-agents",
+    "detailLink": { "text": "AI agent development team", "url": "https://alicelabs.ai/en/ai-agents" },
+    "detail": "Alice Labs works as an AI agent development team for mid-sized and large companies. Its site says the team designs, builds and implements custom AI agents that run in production inside the tools a company already uses, with chat, voice and workflow agents at the centre of the practice. For voice agents it offers a build and hand-off to your own engineers, or managed operations where Alice Labs runs the agent in production after launch. It is a Swedish company serving Nordic and European organizations, working remotely in English. Its site is written for mid-sized and enterprise buyers, not small businesses, so ask how it would scope a smaller first project."
+  },
+  {
     "name": "FactoryJet",
     "route": "developer",
     "kind": "Custom development agency",
@@ -85,6 +97,15 @@ const PROVIDERS = [
 
 const DEVELOPERS = PROVIDERS.filter(provider => provider.route === 'developer');
 const PLATFORMS = PROVIDERS.filter(provider => provider.route === 'platform');
+// Renders a provider's detail text, turning detailLink.text into a link where
+// the provider has one.
+const renderDetail = (provider: (typeof PROVIDERS)[number]) => {
+  const link = provider.detailLink;
+  if (!link) return provider.detail;
+  const at = provider.detail.indexOf(link.text);
+  if (at < 0) return provider.detail;
+  return <>{provider.detail.slice(0, at)}<a href={link.url} className="text-[#B23E13] underline">{link.text}</a>{provider.detail.slice(at + link.text.length)}</>;
+};
 const listNames = (items: typeof PROVIDERS) => {
   const names = items.map(item => item.name);
   return names.length > 1 ? `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}` : names.join('');
@@ -118,7 +139,7 @@ export const post: BlogPost = {
   category: "Emerging Tech",
   author: "Bhavesh Barot",
   date: "Jun 13, 2026",
-  dateModified: "Nov 8, 2026",
+  dateModified: "Nov 18, 2026",
   readTime: "14 min read",
   imageUrl: "/blog-images/best-ai-agent-development-companies-small-business-2026.webp",
   meta: {
@@ -192,7 +213,7 @@ export const post: BlogPost = {
     },
     {
       "q": "Which AI voice agent is best for small businesses?",
-      "a": "This guide compares companies that build agents for written work such as email, tickets, quotes and CRM updates. It does not rank voice products. For a phone agent, test four things on real calls before you buy: how it copes with interruptions, how it copes with background noise, how it hands a caller to a person, and what it costs at your call volume. Of the firms here, Master of Code Global and DestiLabs list voice agents among their services, and FactoryJet builds AI receptionists as a separate service."
+      "a": "This guide compares companies that build agents for written work such as email, tickets, quotes and CRM updates. It does not rank voice products. For a phone agent, test four things on real calls before you buy: how it copes with interruptions, how it copes with background noise, how it hands a caller to a person, and what it costs at your call volume. Of the firms here, Master of Code Global, DestiLabs and Alice Labs list voice agents among their services, and FactoryJet builds AI receptionists as a separate service."
     },
     {
       "q": "What is the difference between an AI agent and a chatbot?",
@@ -254,7 +275,7 @@ export const post: BlogPost = {
   content: (
     <>
       <div className="bg-amber-50 border border-amber-200 p-4 rounded-lg mb-6">
-        <strong>Disclosure:</strong> FactoryJet wrote this list and lists itself last, after the other {PROVIDERS.length - 1} providers, and the order is not a ranking. We have not tested the other providers side by side, and nobody paid to be included. Their descriptions come from their own linked pages, which we read on November 8, 2026.
+        <strong>Disclosure:</strong> FactoryJet wrote this list and lists itself last, after the other {PROVIDERS.length - 1} providers, and the order is not a ranking. We have not tested the other providers side by side, and nobody paid to be included. Their descriptions come from their own linked pages, which we read on November 8, 2026. One firm here, Alice Labs, links to this guide, and we added it after that link went up; its entry was checked against its own site on November 18, 2026, like the rest.
       </div>
 
       <p className="text-lg leading-relaxed mb-6">An AI agent development company, sometimes called an agentic AI development company, builds software that does a multi-step job for you, such as qualifying a lead, booking an appointment, answering a support ticket or pulling data out of an invoice. This guide compares {PROVIDERS.length} options for small and medium businesses (SMBs): {DEVELOPERS.length} developers and {PLATFORMS.length} platforms. It also gives 2026 cost ranges from named sources and the questions to ask before you hire.</p>
@@ -278,7 +299,7 @@ export const post: BlogPost = {
           <tbody>{PROVIDERS.map(provider => <tr key={provider.name}><th scope="row" className="border p-3 text-left"><a href={provider.url} className="text-[#B23E13] underline">{provider.name}</a></th><td className="border p-3">{provider.kind}</td><td className="border p-3">{provider.fit}</td><td className="border p-3">{provider.check}</td></tr>)}</tbody>
         </table>
       </div>
-      {PROVIDERS.map(provider => <section key={provider.name} className="mb-8"><h3 className="text-xl font-bold mb-3">{provider.name}</h3><p className="mb-3">{provider.detail}</p><a href={provider.url} className="text-[#B23E13] underline">Review {provider.name} services or documentation</a></section>)}
+      {PROVIDERS.map(provider => <section key={provider.name} className="mb-8"><h3 className="text-xl font-bold mb-3">{provider.name}</h3><p className="mb-3">{renderDetail(provider)}</p><a href={provider.url} className="text-[#B23E13] underline">Review {provider.name} services or documentation</a></section>)}
 
       <h2 className="text-2xl font-bold mt-8 mb-4">What AI agent development costs in 2026</h2>
       <p className="mb-4">These are market ranges published by firms that sell this work. They are in US dollars and none of them is a FactoryJet price. We read each source page on September 30, 2026.</p>

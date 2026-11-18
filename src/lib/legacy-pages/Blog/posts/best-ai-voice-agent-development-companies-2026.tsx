@@ -8,7 +8,7 @@ import './best-ai-voice-agent-development-companies-2026/page.css';
  * (best-ai-receptionist-small-business); this post links there and does not repeat them.
  *
  * Every company entry was read on that company's own page on 29 Oct 2026 (URLs in
- * VOICE_COMPANIES). Platforms are only the ones each page names. A page that names
+ * VOICE_COMPANIES). Owlab was added and read on its own site on 18 Nov 2026. Platforms are only the ones each page names. A page that names
  * none says so.
  *
  * Build ranges: memory voice-agent-build-ranges-2026-10-21, re-fetched 29 Oct 2026
@@ -85,6 +85,15 @@ export const VOICE_COMPANIES = [
     detail: 'Master of Code Global names the most contact center suites of any firm here, and its page cites work for call centers with over twenty thousand agents. It also publishes a voice cost guide we quote below. Debt recovery is on its list, which puts outbound calling rules at the top of the scope.',
   },
   {
+    name: 'Owlab',
+    url: 'https://owlab.group/services/ai-voice-agents',
+    builds: 'Voice agents for inbound phone lines, including call routing and keypad (DTMF) flows, and the systems the calls feed into. The first step is a fixed-price pilot, first stage or module from $1,000, half paid at the start and half after it is checked on the client’s data.',
+    tools: 'Retell, Gemini Live, Claude, ElevenLabs, Twilio',
+    platforms: 'Retell or Gemini Live, or a custom stack with Claude, ElevenLabs and Twilio, with n8n behind the agents in its case studies.',
+    fit: 'Teams with one repeated call type that has to land in their own systems',
+    detail: 'Owlab’s published case is an incident line for a US security services company. Two agents share one number, a dispatcher and an incident agent, and they match the site and the officer across 3,496 sites and 6,627 employees before filing the report and texting the caller an incident number. The case study also lists what broke on live calls and how it was fixed. Owlab is based in Tallinn, Estonia, and clients own the code and IP when the project is completed.',
+  },
+  {
     name: 'RaftLabs',
     url: 'https://www.raftlabs.com/services/ai-voicebot-development',
     builds: 'Inbound answering and routing with a briefing for the person who takes over, booking within approved rules, lead qualification that records consent, research interviews and opted-in outbound follow-up.',
@@ -123,15 +132,15 @@ const EVAL_STEPS = [
 ];
 
 const faqs = [
-  { q: 'What are some of the top companies that develop voice AI agents?', a: `If you want a voice agent built for you, the nine development companies compared here are ${NAME_LIST}. Each one publishes a voice agent service page, linked in this article. If you want a platform to build on yourself, Retell AI and Vapi are the two that both Softcery and Groovy Web name on the pages we read. FactoryJet publishes this list, so the order is alphabetical and carries no ranking.` },
-  { q: 'Which conversational AI companies build phone agents?', a: 'Conversational AI companies split into platforms and build firms. PolyAI, Cognigy and Kore.ai sell enterprise platforms, and each one says on its own site that it runs voice AI agents for contact centers. A build firm, such as the nine voice AI companies on this list, designs your call flows and connects the agent to your own systems, and may build on one of those platforms or on its own stack.' },
+  { q: 'What are some of the top companies that develop voice AI agents?', a: `If you want a voice agent built for you, the ten development companies compared here are ${NAME_LIST}. Each one publishes a voice agent service page, linked in this article. If you want a platform to build on yourself, Retell AI and Vapi are the two that both Softcery and Groovy Web name on the pages we read. FactoryJet publishes this list, so the order is alphabetical and carries no ranking.` },
+  { q: 'Which conversational AI companies build phone agents?', a: 'Conversational AI companies split into platforms and build firms. PolyAI, Cognigy and Kore.ai sell enterprise platforms, and each one says on its own site that it runs voice AI agents for contact centers. A build firm, such as the ten voice AI companies on this list, designs your call flows and connects the agent to your own systems, and may build on one of those platforms or on its own stack.' },
   { q: 'Is there an AI company that builds voice agents for businesses?', a: 'Yes. Development firms such as Appinventiv, Master of Code Global, RaftLabs and FactoryJet build a custom voice agent around your calls and connect it to your phone system and CRM. You hire them for a project. That is different from a platform like Vapi or Retell, where your own developer does the build, or a ready-made AI receptionist you sign up for.' },
   { q: 'Who are the biggest AI voice agent companies and leaders in voice AI?', a: 'No independent body ranks voice AI companies by size or on the same test, and we found no shared headcount figures to compare. Platforms often named in this space include Retell AI, Vapi, Bland AI, ElevenLabs and PolyAI. Among build firms, compare what you can check: a live agent on a phone line, the systems it writes to and what you own when the project ends.' },
   { q: 'What is the best AI voice agent platform?', a: 'For a team with a developer, Retell AI, Vapi and Bland AI are the platforms Softcery names on its own page as the ones it moves clients off, which tells you they are common starting points. A platform gives you speed and charges you for every minute you use it. A custom build costs more up front and leaves you owning the agent. Our list of AI receptionists and voice agent platforms compares the platforms in detail.' },
   { q: 'What are the best AI voice agents, or the best AI for answering calls?', a: 'There is no single best one, because three kinds of thing share the name: ready-made AI receptionists, platforms a developer builds on, and custom agents built for one business. The best fit for a small office is usually a ready-made product. The best fit for a call center whose calls depend on its own systems is usually a custom build from a firm on this list.' },
   { q: 'Which AI voice agent is best for small businesses?', a: 'A small office with standard calls should start with a ready-made AI receptionist it can switch on this week, because no build is faster. A custom agent pays off when your calls need your own booking rules, quoting logic or software a product cannot connect to. FactoryJet builds that second kind; see our AI receptionist page for the scope.' },
   { q: 'Which voice AI agent is best for restaurants?', a: 'A single restaurant can use the reservation and ordering assistant built into its booking or point-of-sale system. A restaurant group with several locations, a call center or catering orders usually needs an agent built around its own menu, hours and POS. Appinventiv lists restaurants among its voice industries, and FactoryJet builds restaurant voice agents that take orders, bookings and catering inquiries.' },
-  { q: 'Who builds AI voice agents for car dealerships?', a: 'Among the nine firms here, Master of Code Global shows automotive case studies on its voice page, Appinventiv lists automotive among its voice industries, and FactoryJet builds automotive AI voice agents for service booking and parts orders. A dealership agent needs to read and write the service scheduler and the dealer management system, so ask each firm to show a booking land in yours.' },
+  { q: 'Who builds AI voice agents for car dealerships?', a: 'Among the ten firms here, Master of Code Global shows automotive case studies on its voice page, Appinventiv lists automotive among its voice industries, and FactoryJet builds automotive AI voice agents for service booking and parts orders. A dealership agent needs to read and write the service scheduler and the dealer management system, so ask each firm to show a booking land in yours.' },
   { q: 'What is an AI voice agent?', a: 'An AI voice agent is software that answers or places phone calls and talks with the caller in plain speech. It turns speech into text, uses an AI model to decide what to say or do, then turns the reply back into a voice. A good one also acts: it books the appointment, updates the CRM and passes the caller to a person when it should.' },
   { q: 'How do I build or create an AI agent to answer calls?', a: 'Pick a route first. Sign up for a ready-made AI receptionist, have a developer build on a platform such as Retell AI or Vapi, or hire a development firm to wire a custom agent into your phone system and CRM. Then pick one call type, such as booking or order status. Write the questions the agent must ask, the systems it checks and the point where it hands over to a person, and test it on 20 of your own recorded calls before it takes a live one.' },
   { q: 'How long does it take to build an AI voice agent?', a: 'It depends on how many call types and systems the agent touches, and none of the three cost guides we read gives a single timeline. The order of work is the same everywhere: a scoping call on your top call reasons, a working demo on your own recordings, then the build and connections to your phone system and CRM, then a test on recorded calls before the agent takes live ones. Ask each firm for a dated plan for each step.' },
@@ -146,27 +155,27 @@ const faqs = [
   { q: 'Will AI eventually replace call center agents?', a: 'Not across the whole job. Voice agents take the repeated calls, such as order status, booking and password resets, and pass the rest to people with the notes attached. The calls left for people are the hard ones: complaints, disputes and anything that needs judgment. Plan the hand-off and the staff training as part of the build.' },
   { q: 'Do AI receptionists work?', a: 'They work well for standard calls and fail on calls they were not built for. Play 20 recordings of your own calls through the agent and listen. If it handles your top five call reasons and transfers the rest cleanly, it works for you. If it guesses, it will cost you customers.' },
   { q: 'How do AI phone calls work?', a: 'The call arrives through a carrier such as Twilio or Telnyx. Speech recognition turns the caller’s words into text, an AI model decides the reply and any action, and a speech engine reads the reply aloud. Behind that, connectors read and write your CRM, calendar or order system. Each step adds delay, which is why latency testing matters.' },
-  { q: 'Are the companies on this list independently ranked?', a: 'No. FactoryJet publishes this article and is one of the nine entries, listed alphabetically with the others. We read each company’s own voice agent page on 29 October 2026 and describe what it says. We have not hired every firm or tested them on the same calls, so use the questions in this article to test them yourself.' },
+  { q: 'Are the companies on this list independently ranked?', a: 'No. FactoryJet publishes this article and is one of the ten entries, listed alphabetically with the others. We read each company’s own voice agent page on 29 October 2026 (Owlab’s on 18 November 2026) and describe what it says. We have not hired every firm or tested them on the same calls, so use the questions in this article to test them yourself.' },
 ];
 
 export const post: BlogPost = {
   id: '847',
   slug: 'best-ai-voice-agent-development-companies-2026',
-  title: 'Best AI Voice Agent Development Companies in 2026: 9 Firms Compared',
-  excerpt: 'Nine companies that build custom AI voice agents, compared by what each one builds, the platforms its own page names and who it suits, with sourced 2026 build ranges and the FCC rule on AI voices.',
+  title: 'Best AI Voice Agent Development Companies in 2026: 10 Firms Compared',
+  excerpt: 'Ten companies that build custom AI voice agents, compared by what each one builds, the platforms its own page names and who it suits, with sourced 2026 build ranges and the FCC rule on AI voices.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 29, 2026',
-  dateModified: 'Oct 31, 2026',
+  dateModified: 'Nov 18, 2026',
   readTime: '14 min read',
   imageUrl: '/blog-images/best-ai-automation-agencies-usa-2026-call.webp',
   imageAlt: 'A buyer on a video call with a four-person vendor team, a notebook beside the keyboard.',
   meta: {
     title: 'Best AI Voice Agent Development Companies (2026)',
-    description: 'Nine voice AI companies that build custom agents, compared on what each builds, the platforms it names, who it fits, 2026 build costs and how to test them.',
+    description: 'Ten voice AI companies that build custom agents, compared on what each builds, the platforms it names, who it fits, 2026 build costs and how to test them.',
   },
   keyTakeaways: [
-    'Nine firms that build custom AI voice agents, read on their own sites on 29 October 2026: Appinventiv, Appther, Concret.io, FactoryJet, Groovy Web, Intellectyx, Master of Code Global, RaftLabs and Softcery.',
+    'Ten firms that build custom AI voice agents, read on their own sites between 29 October and 18 November 2026: Appinventiv, Appther, Concret.io, FactoryJet, Groovy Web, Intellectyx, Master of Code Global, Owlab, RaftLabs and Softcery.',
     'A development firm builds the agent around your calls and systems. A platform such as Retell AI or Vapi needs your own developer. A ready-made AI receptionist needs neither.',
     'Published build ranges run from $3,000 to $12,000 for a single-purpose agent (Groovy Web) up to $150,000 to $300,000+ for enterprise-grade work (Master of Code Global).',
     'Since 8 February 2024 the FCC treats AI-generated voices as "artificial" under the Telephone Consumer Protection Act (TCPA), so outbound voice agents need robocall-grade consent.',
@@ -174,11 +183,11 @@ export const post: BlogPost = {
   ],
   faqs,
   content: <div className="fj-voice-builders-2026">
-    <p className="text-lg leading-relaxed mb-6"><strong>The best AI voice agent development company is the one that can play your own call recordings through a working agent, pass a caller to a person with notes attached and write the result into your CRM.</strong> Nine firms that build custom voice agents are compared below, with what each builds, the platforms its page names and who it fits.</p>
-    <p className="mb-6">FactoryJet publishes this article and is one of the nine. The order is alphabetical. We read every company&apos;s own voice agent page on 29 October 2026 and describe only what it says. We have not hired the other eight or tested them on the same calls. If you want a ready-made AI receptionist or a platform to build on yourself, our <a href="/blog/best-ai-receptionist-small-business" className="text-[#B23E13] underline">list of AI receptionists and voice agent platforms</a> covers those with their published prices.</p>
+    <p className="text-lg leading-relaxed mb-6"><strong>The best AI voice agent development company is the one that can play your own call recordings through a working agent, pass a caller to a person with notes attached and write the result into your CRM.</strong> Ten firms that build custom voice agents are compared below, with what each builds, the platforms its page names and who it fits.</p>
+    <p className="mb-6">FactoryJet publishes this article and is one of the ten. The order is alphabetical. We read every company&apos;s own voice agent page on 29 October 2026, and Owlab&apos;s on 18 November 2026, and describe only what it says. We have not hired the other nine or tested them on the same calls. One firm here, Owlab, links to this guide, and we added it after that link went up; its entry was checked against its own site like the rest. If you want a ready-made AI receptionist or a platform to build on yourself, our <a href="/blog/best-ai-receptionist-small-business" className="text-[#B23E13] underline">list of AI receptionists and voice agent platforms</a> covers those with their published prices.</p>
 
-    <h2 className="text-2xl font-bold mt-10 mb-4">Nine voice AI companies that build custom agents</h2>
-    <p className="mb-4">Many voice AI companies sell a platform. The nine below are AI voice agent development companies. A firm that sells AI voice agent development services builds the agent for you and connects it to your phone system, CRM and booking tools. You hire it for a project. Each entry links to the company&apos;s own voice agent page.</p>
+    <h2 className="text-2xl font-bold mt-10 mb-4">Ten voice AI companies that build custom agents</h2>
+    <p className="mb-4">Many voice AI companies sell a platform. The ten below are AI voice agent development companies. A firm that sells AI voice agent development services builds the agent for you and connects it to your phone system, CRM and booking tools. You hire it for a project. Each entry links to the company&apos;s own voice agent page.</p>
     <picture className="voice-integration-picture">
       <source type="image/avif" srcSet="/images/blog/best-ai-voice-agent-development-companies-2026/custom-voice-phone-booking-test-640.avif 640w, /images/blog/best-ai-voice-agent-development-companies-2026/custom-voice-phone-booking-test-960.avif 960w, /images/blog/best-ai-voice-agent-development-companies-2026/custom-voice-phone-booking-test-1280.avif 1280w" sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.6667vw - 164px), (min-width: 640px) calc(100vw - 116px), calc(100vw - 68px)" />
       <source type="image/webp" srcSet="/images/blog/best-ai-voice-agent-development-companies-2026/custom-voice-phone-booking-test-640.webp 640w, /images/blog/best-ai-voice-agent-development-companies-2026/custom-voice-phone-booking-test-960.webp 960w, /images/blog/best-ai-voice-agent-development-companies-2026/custom-voice-phone-booking-test-1280.webp 1280w" sizes="(min-width: 1280px) 690px, (min-width: 1024px) calc(66.6667vw - 164px), (min-width: 640px) calc(100vw - 116px), calc(100vw - 68px)" />
@@ -204,7 +213,7 @@ export const post: BlogPost = {
     </ol>
 
     <h2 className="text-2xl font-bold mt-10 mb-4">Comparison table: voice agent builders side by side</h2>
-    <p id="voice-compare-caption" className="text-left mb-2 px-3 pt-2 text-sm">What each firm&apos;s own page said on 29 October 2026</p>
+    <p id="voice-compare-caption" className="text-left mb-2 px-3 pt-2 text-sm">What each firm&apos;s own page said, read between 29 October and 18 November 2026</p>
     <p className="md:hidden text-xs text-gray-600 mb-2">Swipe sideways to see every column.</p>
     <div className="voice-table-scroll mb-8" tabIndex={0} aria-labelledby="voice-compare-caption" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
       <table className="w-full text-sm border-collapse" style={{ minWidth: 640 }} aria-labelledby="voice-compare-caption">
@@ -222,14 +231,14 @@ export const post: BlogPost = {
         </tbody>
       </table>
     </div>
-    <p className="mb-6">Two patterns stand out. Only Softcery and Groovy Web mention Retell or Vapi at all, and both describe them as platforms you pay for by the minute, with a custom build as the route to owning the agent. Three of the nine (Intellectyx, RaftLabs and Concret.io) name no voice platform, so ask them directly what carries the call and what you keep at the end.</p>
+    <p className="mb-6">Two patterns stand out. Softcery and Groovy Web describe Retell and Vapi as platforms you pay for by the minute, with a custom build as the route to owning the agent. Owlab builds on Retell or Gemini Live, or on a custom stack, and says clients own the code and IP when the project is completed, so ask it which of those your agent would run on. Three of the ten (Intellectyx, RaftLabs and Concret.io) name no voice platform, so ask them directly what carries the call and what you keep at the end.</p>
 
     <h2 className="text-2xl font-bold mt-10 mb-4">Build firm, platform or ready-made product</h2>
     <p className="mb-4">Three kinds of company use the words &quot;AI voice agent&quot;. Pick the kind before you pick the company.</p>
     <ul className="voice-routes list-disc pl-6 space-y-3 mb-6">
       <li><strong>Ready-made AI receptionist.</strong> You sign up, load your hours and FAQs, and forward your number. Fastest route for a small office with standard calls.</li>
       <li><strong>Developer platform (Retell AI, Vapi, Bland AI, <a href="https://synthflow.ai/" className="text-[#B23E13] underline" target="_blank" rel="noopener noreferrer">Synthflow</a>).</strong> Your own developer builds AI phone agents on the platform and connects a phone number. You pay the platform for every minute. Speech companies such as Deepgram also sell a <a href="https://deepgram.com/product/voice-agent-api" className="text-[#B23E13] underline" target="_blank" rel="noopener noreferrer">Voice Agent API</a> that handles listening, the model call and the spoken reply in one connection.</li>
-      <li><strong>Development firm (the nine above).</strong> The firm designs the calls and builds the agent. It connects the agent to your phone system and CRM and supports it after launch, and you own what is built.</li>
+      <li><strong>Development firm (the ten above).</strong> The firm designs the calls and builds the agent. It connects the agent to your phone system and CRM and supports it after launch, and you own what is built.</li>
     </ul>
     <p className="mb-6">Paying for voice AI agent development from a build firm is the right call when the call depends on your own systems: a quote that needs your pricing rules, a booking that needs your dispatch board, a call center queue with a team of people behind it. Our <a href="/blog/ai-voice-agents-vs-human-answering-services-cost-comparison-2026" className="text-[#B23E13] underline">guide to choosing between an AI voice agent and a human answering service</a> covers the step before this one.</p>
 

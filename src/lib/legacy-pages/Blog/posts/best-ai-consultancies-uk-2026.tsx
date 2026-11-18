@@ -5,9 +5,9 @@ import type { BlogPost, FAQItem } from '../data.types';
 const SLUG = 'best-ai-consultancies-uk-2026';
 const PAGE_URL = `https://factoryjet.com/blog/${SLUG}`;
 const IMG = `/blog-images/${SLUG}`;
-const TITLE = 'Best AI Consultancies in the UK and London (2026): 15 Compared, Including Us';
+const TITLE = 'Best AI Consultancies in the UK and London (2026): 16 Compared, Including Us';
 const META_DESCRIPTION =
-  'Compare 15 UK AI consultancies for 2026 by the buyer they suit: small firms, 50-person companies, data teams and regulated businesses. London list included.';
+  'Compare 16 UK AI consultancies for 2026 by the buyer they suit: small firms, 50-person companies, data teams and regulated businesses. London list included.';
 
 // Every fact about every firm below was read on that firm's own website on
 // 9 October 2026 (URL in `source`, plus `hqSource` where the location or the
@@ -144,6 +144,20 @@ const FIRMS: Firm[] = [
     ask: 'Which platforms the integrations run on and who owns those accounts.',
   },
   {
+    name: 'HoursBack',
+    url: 'https://www.hoursback.co.uk/',
+    source: 'https://www.hoursback.co.uk/enterprise',
+    hqSource: 'https://www.hoursback.co.uk/ai-consultancy-london',
+    group: 'A company of about 50 people',
+    based: 'Bromley, South East London, working with clients across the UK',
+    london: 'Bromley, South East London (no street address on its site)',
+    type: 'Role-by-role assessment of where staff time goes on admin, then automations and AI agents to win it back',
+    clients: 'Teams in insurance, recruitment and education software; named owner-led clients include Inside Out and Watson Textiles',
+    what: "Founder David Bevan spent more than 20 years in creative and marketing operations, most of them inside large organisations, and leads every engagement. Its Workforce Capacity Programme starts with confidential one-hour interviews, role by role, to find where staff time goes on repeated admin. A leadership report follows within five working days of the last interview, and building the fixes is a separate, optional decision. Its site reports about 770 hours a year of admin found in a specialist insurer's finance function, about 870 at a marine insurance broker and about 780 in a recruitment team, and calls these hours identified in interviews, not a forecast. What it builds runs in the client's own accounts. Owner-led businesses can start with a £799 assessment instead.",
+    bestFor: 'Companies that want a count of where staff time goes, role by role, before they spend on AI.',
+    ask: 'What the fixed fee would be for the team you have in mind, and which of the hours found it would expect to win back first.',
+  },
+  {
     name: 'Fifty One Degrees',
     url: 'https://www.51d.co/',
     source: 'https://www.51d.co/',
@@ -251,11 +265,11 @@ const GROUP_INTRO: Record<Group, string> = {
   'A firm of about 10 people':
     'You have no IT team and no time for a long project. You need someone who will look at how the work runs, fix one thing and show your staff how to use it. These four say plainly that they work with small firms, and all four publish a price for the first step or a monthly fee.',
   'A company of about 50 people':
-    'You have several teams, a handful of AI tools nobody coordinates and a board that wants a plan. Each of these four has a defined first step, such as an audit, a workshop or a discovery phase, and each then trains your staff, builds what the plan recommends, or does both.',
+    'You have several teams, a handful of AI tools nobody coordinates and a board that wants a plan. Each of these five has a defined first step, such as an audit, a workshop or a discovery phase, and each then trains your staff, builds what the plan recommends, or does both.',
   'A mid-market company with a data team':
     'You already employ analysts or engineers. You need senior specialists who work next to them on something hard: predictive models, agents in production or a data platform. These three are set up for that.',
   'A regulated business':
-    'Your data is sensitive, and a regulator, an auditor or a procurement team will ask how the AI was built. These three show public sector, defence, financial services or security credentials on their own sites.',
+    'Your data is sensitive, and a regulator, an auditor or a procurement team will ask how the AI was built. These three show public sector, defence, financial services or security credentials on their own sites. HoursBack, in the 50-person group, has run its staff-time assessment in insurance teams.',
   Us: 'We advise on AI and then build it, so we are on this list. We put ourselves last.',
 };
 
@@ -285,6 +299,12 @@ const PRICES: { firm: string; figure: string; vat: string; source: string }[] = 
     figure: 'Core £297 a month; Growth from £497 a month; Scale £1,997 a month; free 30-minute audit first; month to month (read 16 Nov 2026)',
     vat: 'Not stated',
     source: 'https://www.vantagegrowthptnrs.com/ai-consultancy-for-uk-smes',
+  },
+  {
+    firm: 'HoursBack',
+    figure: 'Workforce Capacity Programme: fixed fee set by the number of people interviewed, quoted after a call; owner-led Assessment £799, refunded if it finds under 5 hours a week; team assessment from £1,199; AI agent builds from £949 (read 18 Nov 2026)',
+    vat: 'Not stated',
+    source: 'https://www.hoursback.co.uk/pricing',
   },
   {
     firm: 'OpenKit',
@@ -346,6 +366,11 @@ const PATHS: { firm: string; first: string; then: string }[] = [
     then: 'Design and delivery, led by senior engineers',
   },
   {
+    firm: 'HoursBack',
+    first: 'Confidential one-hour interviews, role by role; a leadership report within five working days of the last interview',
+    then: 'An optional fixed-term build programme that fixes the biggest drains first',
+  },
+  {
     firm: 'FactoryJet',
     first: 'Free first call, then an AI readiness assessment',
     then: 'We design, build and support the agent or integration, at a fixed quote per stage',
@@ -369,7 +394,7 @@ const SOURCES = {
 const FAQS: FAQItem[] = [
   {
     q: "What are the top AI consultancies in London in 2026?",
-    a: "Eight firms in this guide list a London address on their own sites: The AI Consultancy (Hoxton), Vantage Growth Partners (City Road), Generativ (Paul Street), Helium42 (Uxbridge Road), Fifty One Degrees (Great Portland Street), Datatonic (One Canada Square), Faculty (Old Street) and Transparity (Paddington). They suit different buyers, from 10-person firms to public bodies, so match by size first. We read these addresses on 9 October 2026, and Vantage's on 16 November 2026.",
+    a: "Nine firms in this guide list a London location on their own sites: The AI Consultancy (Hoxton), Vantage Growth Partners (City Road), HoursBack (Bromley), Generativ (Paul Street), Helium42 (Uxbridge Road), Fifty One Degrees (Great Portland Street), Datatonic (One Canada Square), Faculty (Old Street) and Transparity (Paddington). They suit different buyers, from 10-person firms to public bodies, so match by size first. We read these addresses on 9 October 2026, Vantage's on 16 November 2026 and HoursBack's on 18 November 2026.",
   },
   {
     q: "Best AI consultancy in London for implementing AI in a 50-person company?",
@@ -381,15 +406,15 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "What are the best AI consulting companies in the UK?",
-    a: "It depends on your size. For small firms: The AI Consultancy, Vantage Growth Partners, AI Expert UK and Optimus Consulting. For companies of about 50 people: OpenKit, iwantmore.ai, Helium42 and Generativ. For mid-market companies with a data team: Fifty One Degrees, Winder.AI and Datatonic. For regulated organisations: Faculty, Aiimi and Transparity. For the largest programmes, the Big Four and the strategy firms. FactoryJet suits ecommerce and operations work.",
+    a: "It depends on your size. For small firms: The AI Consultancy, Vantage Growth Partners, AI Expert UK and Optimus Consulting. For companies of about 50 people: OpenKit, iwantmore.ai, Helium42, Generativ and HoursBack. For mid-market companies with a data team: Fifty One Degrees, Winder.AI and Datatonic. For regulated organisations: Faculty, Aiimi and Transparity. For the largest programmes, the Big Four and the strategy firms. FactoryJet suits ecommerce and operations work.",
   },
   {
     q: "Is there a list of AI consulting companies in the UK?",
-    a: "Yes. This page lists 15, each checked on its own website with a link to the source: 14 on 9 October 2026 and Vantage Growth Partners on 16 November 2026. For large firms, consultancy.uk publishes a ranking of AI and GenAI consulting firms that says it assessed more than 500 and named 35. Lists written by consultancies usually include the author, as this one does, so check who wrote any list you rely on.",
+    a: "Yes. This page lists 16, each checked on its own website with a link to the source: 14 on 9 October 2026, Vantage Growth Partners on 16 November 2026 and HoursBack on 18 November 2026. For large firms, consultancy.uk publishes a ranking of AI and GenAI consulting firms that says it assessed more than 500 and named 35. Lists written by consultancies usually include the author, as this one does, so check who wrote any list you rely on.",
   },
   {
     q: "Which UK consultancies can help us go from AI strategy to a working product?",
-    a: "Look for a firm whose first step leads into a build by the same people. The AI Consultancy runs a readiness sprint, a pilot and a production build. OpenKit runs an audit, then an embedded lead builds. Helium42 moves from discovery to a build of six to twelve weeks. Fifty One Degrees says a proof of concept ships in two to four weeks. Winder.AI and FactoryJet also build what they recommend.",
+    a: "Look for a firm whose first step leads into a build by the same people. The AI Consultancy runs a readiness sprint, a pilot and a production build. OpenKit runs an audit, then an embedded lead builds. Helium42 moves from discovery to a build of six to twelve weeks. Fifty One Degrees says a proof of concept ships in two to four weeks. HoursBack follows its staff-time interviews with an optional build programme. Winder.AI and FactoryJet also build what they recommend.",
   },
   {
     q: "What consultancies can help an e-commerce business develop new AI-powered digital products?",
@@ -429,7 +454,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "How much does an AI consultant cost in the UK?",
-    a: "Eight of the 14 other firms in this guide publish figures. On 9 October 2026 a first step ran from £2,999 for a workshop at AI Expert UK and £3,500 for a two-week readiness review at The AI Consultancy to £10,000 for an audit at OpenKit. Vantage Growth Partners charges a monthly fee instead, from £297, after a free audit. Published day rates were £950 to £1,500 at The AI Consultancy and £1,250 at Optimus Consulting. Most figures exclude VAT. Our UK AI cost guide covers build costs.",
+    a: "Nine of the 15 other firms in this guide publish figures. On 9 October 2026 a first step ran from £2,999 for a workshop at AI Expert UK and £3,500 for a two-week readiness review at The AI Consultancy to £10,000 for an audit at OpenKit. Vantage Growth Partners charges a monthly fee instead, from £297, after a free audit. HoursBack lists a £799 assessment for owner-led businesses and quotes its team programme by headcount. Published day rates were £950 to £1,500 at The AI Consultancy and £1,250 at Optimus Consulting. Most figures exclude VAT. Our UK AI cost guide covers build costs.",
   },
   {
     q: "What does an AI consultant do?",
@@ -496,20 +521,20 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 9, 2026',
-  dateModified: 'Nov 16, 2026',
+  dateModified: 'Nov 18, 2026',
   readTime: '24 min read',
   imageUrl: `${IMG}-hero.webp`,
   imageAlt:
     'Over-the-shoulder view of a woman at an oak desk looking at a laptop that shows six coloured cards, three of them ticked, with a notepad, an orange mug and brick terraced houses outside the window',
   meta: {
-    title: 'Best AI Consultancies UK & London 2026: 15 Compared',
+    title: 'Best AI Consultancies UK & London 2026: 16 Compared',
     description: META_DESCRIPTION,
   },
   keyTakeaways: [
     'There is no single best AI consultancy in the UK. A 10-person firm, a 50-person company, a mid-market company with a data team and a regulated business each need a different kind of adviser.',
-    "Every fact below was read on each firm's own website, on 9 October 2026 or, for Vantage Growth Partners, 16 November 2026. Nobody paid to be listed, and the order is not a ranking.",
-    'Eight of the 14 other firms publish prices. A first step runs from £2,999 for a workshop (AI Expert UK) to £10,000 for an audit (OpenKit), and Vantage Growth Partners charges from £297 a month. Most figures exclude VAT.',
-    'Eight of the 15 list a London address on their own sites. The London table gives each postcode and its source.',
+    "Every fact below was read on each firm's own website, on 9 October 2026, or 16 November 2026 for Vantage Growth Partners and 18 November 2026 for HoursBack. Nobody paid to be listed, and the order is not a ranking.",
+    'Nine of the 15 other firms publish prices. A first step runs from £2,999 for a workshop (AI Expert UK) to £10,000 for an audit (OpenKit), and Vantage Growth Partners charges from £297 a month. Most figures exclude VAT.',
+    'Nine of the 16 list a London location on their own sites. The London table gives each address and its source.',
     'FactoryJet is on this list. We work remotely with UK clients, and we advise and then build.',
   ],
   faqs: FAQS,
@@ -528,7 +553,7 @@ export const post: BlogPost = {
               description: META_DESCRIPTION,
               inLanguage: 'en-GB',
               datePublished: '2026-10-09',
-              dateModified: '2026-11-16',
+              dateModified: '2026-11-18',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI consultancies in the United Kingdom' },
@@ -557,10 +582,10 @@ export const post: BlogPost = {
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">The short answer</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          The best AI consultancy in the UK depends on your size. For a firm of about 10 people: The AI Consultancy, Vantage Growth Partners, AI Expert UK or Optimus Consulting. For about 50 people: OpenKit, iwantmore.ai, Helium42 or Generativ. With a data team: Fifty One Degrees, Winder.AI or Datatonic. For regulated work: Faculty, Aiimi or Transparity. For ecommerce and operations: FactoryJet.
+          The best AI consultancy in the UK depends on your size. For a firm of about 10 people: The AI Consultancy, Vantage Growth Partners, AI Expert UK or Optimus Consulting. For about 50 people: OpenKit, iwantmore.ai, Helium42, Generativ or HoursBack. With a data team: Fifty One Degrees, Winder.AI or Datatonic. For regulated work: Faculty, Aiimi or Transparity. For ecommerce and operations: FactoryJet.
         </p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          We checked 14 firms on their own websites on 9 October 2026 and added a fifteenth, Vantage Growth Partners, after checking its site on 16 November 2026: where each is based, what it does, who it serves and any price it publishes. Nobody paid to be listed. One firm here, Vantage Growth Partners, links to this page, and we added it after that link went up; its entry was checked against its own site like the rest. Eight list a London address. Firms are grouped by the buyer they suit, and the order inside a group means nothing.
+          We checked 14 firms on their own websites on 9 October 2026, then added Vantage Growth Partners after checking its site on 16 November 2026 and HoursBack after checking its site on 18 November 2026: where each is based, what it does, who it serves and any price it publishes. Nobody paid to be listed. Two firms here, Vantage Growth Partners and HoursBack, link to this page, and we added each after its link went up; their entries were checked against their own sites like the rest. Nine list a London location. Firms are grouped by the buyer they suit, and the order inside a group means nothing.
         </p>
         <p className="text-gray-800 leading-relaxed">
           If you are short on time, tell us your size and the job you have in mind. The founder will say which kind of firm fits, even when that is another firm on this page. <a href="/uk/ai-consulting" className={link}>Ask the founder</a>.
@@ -709,7 +734,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Top AI consultancies in London 2026</h2>
       <p className="mb-4">
-        Eight of the 15 firms list a London address on their own sites. We copied each one on 9 October 2026, and Vantage&rsquo;s on 16 November 2026.
+        Nine of the 16 firms list a London location on their own sites. We copied each one on 9 October 2026, Vantage&rsquo;s on 16 November 2026 and HoursBack&rsquo;s on 18 November 2026. HoursBack gives Bromley, South East London, with no street address.
       </p>
       <div className="overflow-x-auto mb-4 not-prose">
         <table className="w-full border-collapse text-sm">
@@ -768,7 +793,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Which UK consultancies take you from AI strategy to a working product?</h2>
       <p className="mb-4">
-        The common complaint about consultants is a report with nothing running at the end. These seven describe, on their own sites, a first step that leads into a build. The durations are theirs.
+        The common complaint about consultants is a report with nothing running at the end. These eight describe, on their own sites, a first step that leads into a build. The durations are theirs.
       </p>
       <div className="overflow-x-auto mb-4 not-prose">
         <table className="w-full border-collapse text-sm">
@@ -832,7 +857,7 @@ export const post: BlogPost = {
             </tr>
             <tr className="odd:bg-white even:bg-gray-50">
               <td className="p-3 border border-gray-200 font-semibold">First step</td>
-              <td className="p-3 border border-gray-200">Often a fixed-fee audit, workshop or sprint; five firms here publish the fee</td>
+              <td className="p-3 border border-gray-200">Often a fixed-fee audit, workshop or sprint; six firms here publish the fee</td>
               <td className="p-3 border border-gray-200">Scoped by proposal; no price on the four UK pages we read</td>
               <td className="p-3 border border-gray-200 bg-orange-50">Free first call, then a fixed quote per stage</td>
             </tr>
@@ -867,7 +892,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">What these consultancies publish about price</h2>
       <p className="mb-4">
-        Most consultancies quote after a call. Eight of the 14 other firms on this list publish figures on their own sites. We copied them on 9 October 2026, and Vantage&rsquo;s on 16 November 2026. Each figure is the firm&rsquo;s own. None is a FactoryJet price and together they are not a market survey. Firms change prices, so check the source.
+        Most consultancies quote after a call. Nine of the 15 other firms on this list publish figures on their own sites. We copied them on 9 October 2026, Vantage&rsquo;s on 16 November 2026 and HoursBack&rsquo;s on 18 November 2026. Each figure is the firm&rsquo;s own. None is a FactoryJet price and together they are not a market survey. Firms change prices, so check the source.
       </p>
       <div className="overflow-x-auto mb-4 not-prose">
         <table className="w-full border-collapse text-sm">
@@ -946,7 +971,7 @@ export const post: BlogPost = {
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">5. Ask for a fixed first step in writing</summary>
-          <p className="mt-3 text-gray-700">Five firms on this page publish the price of theirs, from a workshop to a full audit, so it is a fair thing to ask of anyone. Get the scope, the fee and whether VAT is included. Three of the seven firms that publish any figure do not mention VAT on the page we read.</p>
+          <p className="mt-3 text-gray-700">Six firms on this page publish the price of theirs, from a workshop to a full audit, so it is a fair thing to ask of anyone. Get the scope, the fee and whether VAT is included. Five of the nine firms that publish any figure do not mention VAT on the page we read.</p>
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">6. Settle data, ownership and the DPIA before the build</summary>
@@ -974,7 +999,7 @@ export const post: BlogPost = {
       <ol className="list-decimal pl-6 mb-6 space-y-2">
         <li><strong>A ranking with the author on top.</strong> Three of the five rival lists we read place the author&rsquo;s own firm first or second, and a fourth is a comparison site that says it may earn commission from the providers it features. Check the sources on any list, ours included.</li>
         <li><strong>A plan with no build.</strong> A long strategy document with nothing running at the end is a report. Ask what will be live, and for whom, by week eight.</li>
-        <li><strong>No fixed first step.</strong> Five firms here publish the price of theirs. A firm that will not put a fee and a written scope on the first piece of work is asking you to carry the risk.</li>
+        <li><strong>No fixed first step.</strong> Six firms here publish the price of theirs. A firm that will not put a fee and a written scope on the first piece of work is asking you to carry the risk.</li>
         <li><strong>Vague ownership.</strong> If the automation lives in the consultancy&rsquo;s account, you are renting your own operations. Ask for admin access from day one, and for the code and prompts at handover.</li>
         <li><strong>No mention of personal data.</strong> The ICO expects a DPIA in the vast majority of AI projects. A consultancy that never raises data protection is leaving that work to you.</li>
         <li><strong>No plan for month three.</strong> If support is missing from the proposal, expect to pay for surprises later.</li>

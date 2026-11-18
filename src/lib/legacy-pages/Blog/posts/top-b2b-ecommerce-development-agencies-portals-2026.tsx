@@ -14,7 +14,8 @@ import type { BlogPost, FAQItem } from '../data.types';
  * research list (Corevist, blocked by bot-protection software; Guidance, which
  * redirects to its parent OneMagnify) are handled the way the site always handles
  * an unreachable or renamed source: read what is actually reachable, say so, and
- * do not describe a site from memory.
+ * do not describe a site from memory. Skyloom Studios was added on 2026-11-18,
+ * after it linked to this page; its claims were fetched from its own site that day.
  *
  * AGENCIES is the single source of truth for the comparison table, the individual
  * write-ups, AND the ItemList JSON-LD below. Do not hand-duplicate this data
@@ -125,12 +126,21 @@ const AGENCIES: Agency[] = [
     considerIf: 'your B2B sale involves configured products, formal quoting, or recurring billing at enterprise scale.',
   },
   {
+    name: 'Skyloom Studios',
+    url: 'https://skyloomstudios.com/design',
+    platform: 'Shopify (states it is an official Shopify Partner), plus Amazon brand stores',
+    specialty: 'Shopify store design and development: custom themes, apps, integrations, and conversion-focused UX; no B2B-specific service named on its site',
+    blurb:
+      'Skyloom Studios was not among the agencies named in the eight AI answers this list started from. We added it on 2026-11-18, after it linked to this page, and checked it against its own site like every other entry. It describes itself as a Shopify and ecommerce website design agency and states it is an official Shopify Partner and Amazon Smart Biz Partner. Its design page lists ecommerce store design, Shopify store development with custom themes, apps, and integrations, UX and conversion rate work, and Amazon brand stores, and says it covers domain, storefront, payments, and shipping as one partner. It also offers SEO and what it calls answer-engine optimization, meaning work to get a store recommended in ChatGPT and Gemini answers, and states it has delivered 80+ projects. Its site does not name B2B mechanics such as account pricing, RFQ, PunchOut, EDI, or ERP integration, and the one store linked from its design page, VideoLinks, is a consumer camera retailer where we found no trade accounts or wholesale pricing, so ask directly for B2B work it has shipped.',
+    considerIf: 'you are a Shopify brand whose first priority is store design and conversion, and your B2B needs are simple enough to confirm with the agency directly.',
+  },
+  {
     name: 'FactoryJet',
     url: 'https://factoryjet.com/b2b-ecommerce',
     platform: 'Shopify Plus, Adobe Commerce (Magento), BigCommerce, WooCommerce, Salesforce Commerce Cloud, or our own Commerceflo',
     specialty: 'Account hierarchies, EDI 850/855/856/810, and cXML/OCI PunchOut into Coupa, Ariba, Jaggaer, and Oracle procurement',
     blurb:
-      'Disclosure: this is us, and unlike the ten agencies above, we were not named in any of the eight AI answers this research is built on. We are including ourselves anyway because the same honesty standard the rest of this list holds other companies to should apply to us too. What we can say honestly, pulled directly from our own live service pages rather than invented for this post: we build tiered and contract pricing, quote and approval workflows, gated and customer-specific catalogs, and account hierarchies (parent and child accounts with shared order history) into B2B builds on Shopify Plus, Adobe Commerce, BigCommerce, WooCommerce, or Salesforce Commerce Cloud. On the integration side, we implement EDI 850 purchase orders, 855 acknowledgements, 856 advance ship notices, and 810 invoices, plus cXML and OCI PunchOut so buyers inside Coupa, SAP Ariba, Jaggaer, or Oracle procurement can shop a catalog and return an approved requisition. Stated ERP integration coverage includes NetSuite, SAP S/4HANA and Business One, Microsoft Dynamics 365 Business Central, Sage Intacct and X3, Acumatica, Epicor Kinetic and Prophet 21, Infor, QuickBooks Enterprise, and Odoo.',
+      'Disclosure: this is us, and unlike the first ten agencies above, we were not named in any of the eight AI answers this research is built on. We are including ourselves anyway because the same honesty standard the rest of this list holds other companies to should apply to us too. What we can say honestly, pulled directly from our own live service pages rather than invented for this post: we build tiered and contract pricing, quote and approval workflows, gated and customer-specific catalogs, and account hierarchies (parent and child accounts with shared order history) into B2B builds on Shopify Plus, Adobe Commerce, BigCommerce, WooCommerce, or Salesforce Commerce Cloud. On the integration side, we implement EDI 850 purchase orders, 855 acknowledgements, 856 advance ship notices, and 810 invoices, plus cXML and OCI PunchOut so buyers inside Coupa, SAP Ariba, Jaggaer, or Oracle procurement can shop a catalog and return an approved requisition. Stated ERP integration coverage includes NetSuite, SAP S/4HANA and Business One, Microsoft Dynamics 365 Business Central, Sage Intacct and X3, Acumatica, Epicor Kinetic and Prophet 21, Infor, QuickBooks Enterprise, and Odoo.',
     considerIf: 'you want the same ERP-and-workflow depth the agencies above describe, from a smaller team without a published B2B track record yet, to be judged on what we can show you directly rather than on this list alone.',
     isUs: true,
   },
@@ -280,7 +290,7 @@ export const post: BlogPost = {
   slug: 'top-b2b-ecommerce-development-agencies-portals-2026',
   title: 'Top E-Commerce Development Agencies for B2B Portals (2026)',
   excerpt:
-    'There is no single dominant agency for B2B ecommerce portals, but a small group of specialists keeps coming up. We fetch-verified what Elogic Commerce, Atwix, Vaimo, and eight others actually say about their own ERP integration, RFQ, PunchOut, and EDI capabilities. Disclosure: FactoryJet is included, honestly, at the end.',
+    'There is no single dominant agency for B2B ecommerce portals, but a small group of specialists keeps coming up. We fetch-verified what Elogic Commerce, Atwix, Vaimo, and nine others actually say about their own ERP integration, RFQ, PunchOut, and EDI capabilities. Disclosure: FactoryJet is included, honestly, at the end.',
   category: 'E-Commerce Development',
   author: 'Bhavesh Barot',
   date: 'Sep 20, 2026',
@@ -295,7 +305,7 @@ export const post: BlogPost = {
   },
   keyTakeaways: [
     'There is no single dominant winner for "best B2B portal agency." Elogic Commerce, Atwix, and Vaimo come up most often in AI-generated answers, but the honest differentiator between agencies is depth on ERP integration, RFQ and quote workflows, PunchOut and cXML support, and account hierarchies, not a ranking.',
-    'Every claim about a named competitor in this article was fetch-verified from that company\'s own live website on 2026-09-20. Two sources could not be verified (Corevist is behind bot-detection software; Guidance now redirects to its parent, OneMagnify) and are handled accordingly rather than described from memory.',
+    'Every claim about a named competitor in this article was fetch-verified from that company\'s own live website on 2026-09-20, or on 2026-11-18 for Skyloom Studios. Two sources could not be verified (Corevist is behind bot-detection software; Guidance now redirects to its parent, OneMagnify) and are handled accordingly rather than described from memory.',
     'FactoryJet is disclosed as an entry in this list. We were not named in any of the eight AI answers this research is based on, and we say so directly rather than implying otherwise.',
     'Jargon explained once, in plain language: a B2B portal is a gated storefront for business buyers; RFQ is a request for a custom quote; PunchOut lets a buyer shop your catalog from inside their own purchasing software; cXML is the technical format PunchOut runs on; EDI is standardized computer-to-computer ordering; an account hierarchy models a parent company with multiple locations underneath it.',
     'US B2B digital sales grew 17% year over year in 2023 (Digital Commerce 360), and 67% of B2B buyers now say they prefer a rep-free, self-service buying experience (Gartner, 2026), which is the demand behind why this comparison matters.',
@@ -319,7 +329,7 @@ export const post: BlogPost = {
           A small group of specialists on Adobe Commerce, Shopify Plus, and BigCommerce B2B keep
           coming up, and what actually separates them is depth on five specific things: ERP
           integration, RFQ and quote workflows, PunchOut and cXML support, account hierarchies,
-          and platform fit for your catalog size. This guide compares eleven agencies on exactly
+          and platform fit for your catalog size. This guide compares twelve agencies on exactly
           those points, using only what each company states on its own live website.
         </p>
       </div>
@@ -348,7 +358,9 @@ export const post: BlogPost = {
         with the same honesty standard applied to every other entry. We were not named in any of
         the eight AI-generated answers this research is built on. We are including ourselves
         anyway because a comparison that quietly leaves itself out, or ranks itself first without
-        evidence, is not one you should trust.
+        evidence, is not one you should trust. Nobody paid to be listed. One agency here, Skyloom
+        Studios, links to this page, and we added it on 18 November 2026 after that link went up; its
+        entry was checked against its own site like the rest.
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4 text-fj-ink font-fj-display">
@@ -399,7 +411,7 @@ export const post: BlogPost = {
       </div>
 
       <h2 className="text-2xl font-bold mt-8 mb-4 text-fj-ink font-fj-display">
-        The eleven agencies compared
+        The twelve agencies compared
       </h2>
       <p className="mb-4 text-fj-ink/80">
         Every row below comes from the same data used to generate the ItemList schema on this
@@ -465,7 +477,7 @@ export const post: BlogPost = {
       </ul>
 
       <h2 className="text-2xl font-bold mt-8 mb-4 text-fj-ink font-fj-display">
-        The eleven agencies, reviewed
+        The twelve agencies, reviewed
       </h2>
 
       {AGENCIES.map((a, i) => (
@@ -531,7 +543,9 @@ export const post: BlogPost = {
         claims stated there: platform focus, named B2B mechanics like RFQ, PunchOut, cXML, or EDI,
         stated ERP integrations, and named clients. We also pulled live Google &quot;People Also Ask&quot;
         data for &quot;b2b ecommerce agency&quot; and &quot;b2b ecommerce development company&quot; through
-        DataForSEO to help ground the FAQ section in real buyer questions.
+        DataForSEO to help ground the FAQ section in real buyer questions. One later addition,
+        Skyloom Studios, did not come from those eight answers: we added it on 18 November 2026 after it
+        linked to this page, and read its own site on that date under the same rules.
       </p>
       <p className="mb-6 text-fj-ink/80">
         Two shortlisted companies could not be verified and were handled as described above rather
@@ -554,6 +568,7 @@ export const post: BlogPost = {
         <li><a href="https://www.clarity-ventures.com" target="_blank" rel="noopener noreferrer nofollow" className="text-[#B23E13] underline">Clarity Ventures</a>, Clarity eCommerce Platform and Clarity Connect integration statement</li>
         <li><a href="https://ironplane.com" target="_blank" rel="noopener noreferrer nofollow" className="text-[#B23E13] underline">IronPlane</a>, Magento tenure and B2B site design specialization</li>
         <li><a href="https://www.objectedge.com" target="_blank" rel="noopener noreferrer nofollow" className="text-[#B23E13] underline">Object Edge</a>, CPQ, contract pricing, and enterprise client list</li>
+        <li><a href="https://skyloomstudios.com/design" target="_blank" rel="noopener noreferrer" className="text-[#B23E13] underline">Skyloom Studios</a>, Shopify Partner status, store design and development services, and project count (read 2026-11-18)</li>
         <li><a href="https://cxml.org/about/" target="_blank" rel="noopener noreferrer nofollow" className="text-[#B23E13] underline">cXML.org</a>, official protocol description used for the cXML and PunchOut definitions above</li>
         <li><a href="https://www.digitalcommerce360.com/2024/02/27/b2b-market-2023-2024/" target="_blank" rel="noopener noreferrer nofollow" className="text-[#B23E13] underline">Digital Commerce 360</a>, 17% year-over-year growth in US B2B digital sales in 2023</li>
         <li><a href="https://www.digitalcommerce360.com/2026/03/17/gartner-b2b-buyers-rep-free-purchasing-ai-reshapes-sales/" target="_blank" rel="noopener noreferrer nofollow" className="text-[#B23E13] underline">Digital Commerce 360, reporting a Gartner survey</a>, 67% of B2B buyers preferring a rep-free buying experience</li>

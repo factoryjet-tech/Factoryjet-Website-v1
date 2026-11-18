@@ -227,6 +227,20 @@ const CONSULTANCIES: Consultancy[] = [
     bestFor: 'A Queensland agency, or a supplier to one, that wants a senior practitioner to test an AI business case before it goes to market.',
     ask: 'His availability. One person can take only a few engagements at a time.',
   },
+  {
+    name: 'Workvolve',
+    url: 'https://workvolve.com/',
+    source: 'https://workvolve.com/ai-consulting',
+    city: 'Brisbane',
+    suits: 'Small business',
+    based: 'Brisbane (ABN 16 875 294 154), working remotely across Australia',
+    type: 'Business audit, a written automation roadmap and advice on which AI tools fit',
+    clients: 'In its own words, any business, from law firms and marketing agencies to trades, coaches, brokers and disability support',
+    builds: 'Yes. Workflow automations, AI agents and custom software, deployed to your own accounts and yours to keep',
+    what: 'A founder-led practice. Its founder, Ben, writes that he started it after years of building full-stack software, AI integrations and workflow automations. Its Business Audit maps how the whole business runs, then sets out in a written roadmap what to automate first, what to leave alone and which AI tools fit, with the roadmap due within four business days. The audit is A$1,250, paid up front, and comes off any build that follows. Its site says the roadmap is yours to keep even if you never build with it, that every build gets one fixed price in writing, and that you own the code. It also offers a free AI readiness check.',
+    bestFor: 'A small business that wants one person to map its admin, rank what to automate and say plainly what to leave alone.',
+    ask: 'How support works after handover, since the founder does the work himself.',
+  },
   // ── Remote ──
   {
     name: 'FactoryJet (that is us)',
@@ -253,6 +267,7 @@ const PUBLISHED: { firm: string; item: string; figure: string; time: string; sou
   { firm: 'Real Minds AI', item: 'AI Working Session with your team', figure: 'A$4,500, credited against a build. GST not stated for this item', time: 'Half a day to a full day', source: 'https://realmindsai.com.au/ai-consulting-services/' },
   { firm: 'Synap', item: 'AI Readiness Assessment', figure: 'From A$950 plus GST', time: 'Results in 7 days', source: 'https://www.synap.au/readiness-assessment' },
   { firm: 'AI Consulting by Yes AI', item: 'AI Opportunity Audit', figure: 'A$3,000 plus GST, fixed', time: 'Typically 2 to 3 weeks', source: 'https://ai-consulting.au/pricing' },
+  { firm: 'Workvolve', item: 'Business Audit and written roadmap', figure: 'A$1,250, paid up front and taken off any build. GST not stated (read 18 Nov 2026)', time: 'Roadmap within four business days', source: 'https://workvolve.com/ai-consulting' },
   { firm: 'JOURN3Y', item: 'AI Strategy Blueprint', figure: 'Not published', time: 'Typically 2 to 4 weeks', source: 'https://www.journ3y.com.au/products/blueprint' },
   { firm: 'RUBIX', item: 'AI governance framework', figure: 'Not published', time: 'Typically 8 to 12 weeks', source: 'https://www.rubix.com.au/ai-governance-consulting' },
   { firm: 'AI Consulting Group', item: 'Education, ideation and strategy workshops', figure: 'Not published', time: '1 to 3 days', source: 'https://aiconsultinggroup.com.au/' },
@@ -286,7 +301,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "Which Australian companies build custom AI agents for small and mid-size businesses?",
-    a: "Most firms in this guide advise first and can then build. Synap, Yes AI, Advancer, Integrity Ai and Sunburnt AI all list AI agents or automation for smaller businesses on their own sites, and FactoryJet builds custom agents too. For firms whose main work is building, see our guide to AI agencies in Australia. An agent is software that takes actions in your systems, with a person approving the steps that matter.",
+    a: "Most firms in this guide advise first and can then build. Synap, Yes AI, Advancer, Integrity Ai, Sunburnt AI and Workvolve all list AI agents or automation for smaller businesses on their own sites, and FactoryJet builds custom agents too. For firms whose main work is building, see our guide to AI agencies in Australia. An agent is software that takes actions in your systems, with a person approving the steps that matter.",
   },
   {
     q: "Who is the best AI automation agency in Australia?",
@@ -326,7 +341,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "How much do AI consulting firms charge?",
-    a: "Three firms in this guide publish prices, read on 9 October 2026. Real Minds AI lists a A$400 Starter and a A$4,500 working session. Synap lists a readiness assessment from A$950 plus GST. Yes AI lists a fixed A$3,000 plus GST audit. The other firms quote after a call. FactoryJet quotes a fixed price per stage after a free call.",
+    a: "Four firms in this guide publish prices, read on 9 October 2026 or, for Workvolve, 18 November 2026. Real Minds AI lists a A$400 Starter and a A$4,500 working session. Synap lists a readiness assessment from A$950 plus GST. Workvolve lists a A$1,250 audit that comes off any build. Yes AI lists a fixed A$3,000 plus GST audit. The other firms quote after a call. FactoryJet quotes a fixed price per stage after a free call.",
   },
   {
     q: "How much does an AI consultant cost?",
@@ -342,7 +357,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "Who are the best AI consulting firms?",
-    a: "It depends where you are and how big you are, which is why this guide is sorted by city and buyer. For a small business, look at Nimbull, Real Minds AI, Synap or Integrity Ai. For a mid-size company, Kinetic Consulting, JOURN3Y, Yes AI, Revium or Advancer. For regulated or government work, AI Consulting Group, RUBIX or Humanising Technologies. FactoryJet advises and then builds.",
+    a: "It depends where you are and how big you are, which is why this guide is sorted by city and buyer. For a small business, look at Nimbull, Real Minds AI, Synap, Integrity Ai or Workvolve. For a mid-size company, Kinetic Consulting, JOURN3Y, Yes AI, Revium or Advancer. For regulated or government work, AI Consulting Group, RUBIX or Humanising Technologies. FactoryJet advises and then builds.",
   },
   {
     q: "What is an AI readiness assessment?",
@@ -358,7 +373,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "Who are the AI consultants in Brisbane?",
-    a: "Four we checked on 9 October 2026. Integrity Ai advises and trains small businesses. Sunburnt AI on Eagle Street leads with strategy and governance policy. Advancer in Fortitude Valley offers readiness audits and a Fractional AI Director. Humanising Technologies is one senior practitioner who advises government agencies. Revium and RUBIX, both based in Melbourne, list Brisbane offices too.",
+    a: "Five we checked: four on 9 October 2026 and Workvolve on 18 November 2026. Integrity Ai advises and trains small businesses. Sunburnt AI on Eagle Street leads with strategy and governance policy. Advancer in Fortitude Valley offers readiness audits and a Fractional AI Director. Humanising Technologies is one senior practitioner who advises government agencies. Workvolve is a founder-led firm that sells a A$1,250 audit and roadmap. Revium and RUBIX, both based in Melbourne, list Brisbane offices too.",
   },
   {
     q: "Can a remote AI consultancy work for an Australian business?",
@@ -382,7 +397,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: "What is the difference between an AI consultancy and an AI agency?",
-    a: "A consultancy helps you decide: where AI fits, what to do first, what rules to set and which tools to buy. An agency builds and connects the software. Many Australian firms do both, and 13 of the 15 in this guide say they also build. The label matters less than the first deliverable. Ask whether step one is a written plan you own or a quote for a build.",
+    a: "A consultancy helps you decide: where AI fits, what to do first, what rules to set and which tools to buy. An agency builds and connects the software. Many Australian firms do both, and 14 of the 16 in this guide say they also build. The label matters less than the first deliverable. Ask whether step one is a written plan you own or a quote for a build.",
   },
   {
     q: "Is AI consulting worth it for a small business?",
@@ -420,11 +435,11 @@ export const post: BlogPost = {
   slug: 'best-ai-consultancies-australia-2026',
   title: 'Best AI Consultancies in Australia (2026): Sydney, Melbourne, Brisbane and Remote',
   excerpt:
-    'A fact-checked guide to firms that help a business decide what to do with AI: readiness assessments, strategy, governance, training and vendor choice. Fifteen consultancies, grouped by city and by the kind of buyer each suits. FactoryJet is on the list and says so.',
+    'A fact-checked guide to firms that help a business decide what to do with AI: readiness assessments, strategy, governance, training and vendor choice. Sixteen consultancies, grouped by city and by the kind of buyer each suits. FactoryJet is on the list and says so.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 9, 2026',
-  dateModified: 'Oct 11, 2026',
+  dateModified: 'Nov 18, 2026',
   readTime: '21 min read',
   imageUrl: `${IMG}-hero.webp`,
   imageAlt:
@@ -432,13 +447,13 @@ export const post: BlogPost = {
   meta: {
     title: 'Best AI Consultancies in Australia 2026 by City | FactoryJet',
     description:
-      'Fifteen AI consultancies in Sydney, Melbourne and Brisbane, plus remote, grouped by the buyer each suits. Each read on its own site on 9 October 2026.',
+      'Sixteen AI consultancies in Sydney, Melbourne and Brisbane, plus remote, grouped by the buyer each suits. Each read on its own site on 9 October or 18 November 2026.',
   },
   keyTakeaways: [
     'There is no single best AI consultancy in Australia. Sort by your city first, then by your size.',
-    'We read every firm on its own website on 9 October 2026. Nobody paid to be listed, and the order is not a ranking.',
-    'Thirteen of the 15 firms also build what they recommend. Ask each one for a written plan you own before any build.',
-    'Three firms publish prices: Real Minds AI, Synap and Yes AI. Entry points run from A$400 plus GST for three hours to A$3,000 plus GST for a two to three week audit.',
+    'We read every firm on its own website on 9 October 2026, and Workvolve on 18 November 2026. Nobody paid to be listed, and the order is not a ranking.',
+    'Fourteen of the 16 firms also build what they recommend. Ask each one for a written plan you own before any build.',
+    'Four firms publish prices: Real Minds AI, Synap, Workvolve and Yes AI. Entry points run from A$400 plus GST for three hours to A$3,000 plus GST for a two to three week audit.',
     'From 10 December 2026, privacy policies must explain certain automated decisions that use personal information (OAIC).',
     'FactoryJet is on this list. We work remotely with Australian clients, and we advise and then build.',
   ],
@@ -456,10 +471,10 @@ export const post: BlogPost = {
               url: PAGE_URL,
               name: 'Best AI Consultancies in Australia (2026): Sydney, Melbourne, Brisbane and Remote',
               description:
-                'Fifteen AI consultancies in Sydney, Melbourne and Brisbane, plus remote, grouped by the buyer each suits. Each read on its own site on 9 October 2026.',
+                'Sixteen AI consultancies in Sydney, Melbourne and Brisbane, plus remote, grouped by the buyer each suits. Each read on its own site on 9 October or 18 November 2026.',
               inLanguage: 'en-AU',
               datePublished: '2026-10-09',
-              dateModified: '2026-10-11',
+              dateModified: '2026-11-18',
               isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com' },
               publisher: { '@id': 'https://factoryjet.com/#organization' },
               about: { '@type': 'Thing', name: 'AI consultancies in Australia' },
@@ -488,10 +503,10 @@ export const post: BlogPost = {
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">The short answer</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          There is no single best AI consultancy in Australia. Match by city and size. Small business: Nimbull (Sydney), Real Minds AI or Synap (Melbourne), Integrity Ai (Brisbane). Mid-size: Kinetic Consulting or JOURN3Y, Yes AI or Revium, Advancer. Regulated or government-facing: AI Consulting Group, RUBIX, Humanising Technologies. FactoryJet advises, then builds.
+          There is no single best AI consultancy in Australia. Match by city and size. Small business: Nimbull (Sydney), Real Minds AI or Synap (Melbourne), Integrity Ai or Workvolve (Brisbane). Mid-size: Kinetic Consulting or JOURN3Y, Yes AI or Revium, Advancer. Regulated or government-facing: AI Consulting Group, RUBIX, Humanising Technologies. FactoryJet advises, then builds.
         </p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          FactoryJet wrote this list and is on it. We read every firm on its own website on 9 October 2026: where it is based, what advice it sells, who it suits and any price it publishes. Nobody paid to be listed and the order is not a ranking.
+          FactoryJet wrote this list and is on it. We read every firm on its own website on 9 October 2026, and Workvolve on 18 November 2026: where it is based, what advice it sells, who it suits and any price it publishes. Nobody paid to be listed and the order is not a ranking. One firm here, Workvolve, links to this page, and we added it after that link went up; its entry was checked against its own site like the rest.
         </p>
         <p className="text-gray-800 leading-relaxed">
           For a second opinion on your shortlist, <a href="/contact" className="text-[#B23E13] underline font-semibold">talk to the Founder</a>. The first call is free.
@@ -513,7 +528,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">The shortlist at a glance</h2>
       <p className="mb-4">
-        Find your city, then your size, and read those profiles in full. Check the last column, because 13 of these 15 firms also build what they recommend.
+        Find your city, then your size, and read those profiles in full. Check the last column, because 14 of these 16 firms also build what they recommend.
       </p>
       <div className="overflow-x-auto mb-8 not-prose">
         <table className="w-full border-collapse text-sm">
@@ -543,11 +558,11 @@ export const post: BlogPost = {
       <h2 className="text-2xl font-bold mt-10 mb-4">How we built this list</h2>
       <ol className="list-decimal pl-6 mb-6 space-y-2">
         <li><strong>Start with what buyers ask.</strong> On 9 October 2026 we read 122 AI assistant answers to 10 Australian buyer questions. That included 14 answers to &ldquo;Best AI consultancy in Sydney for implementing AI in a mid-size company?&rdquo;, 14 to &ldquo;Can you recommend an AI development company in Melbourne?&rdquo; and 8 to &ldquo;What are some consulting firms in Australia?&rdquo;.</li>
-        <li><strong>Read the lists those answers cite.</strong> Assistants lean on lists. On our ten questions, list articles made up 73 percent of the small-firm pages Perplexity cited, 59 percent for the Gemini app, 36 percent for the ChatGPT app and 35 percent for Google. We read four of those lists. One covers Sydney only. One sorts firms by size tier. One is about firms that build agents. One national top seven never mentions Melbourne or Brisbane. Eleven of the 14 other firms on our list appear in none of the four.</li>
+        <li><strong>Read the lists those answers cite.</strong> Assistants lean on lists. On our ten questions, list articles made up 73 percent of the small-firm pages Perplexity cited, 59 percent for the Gemini app, 36 percent for the ChatGPT app and 35 percent for Google. We read four of those lists. One covers Sydney only. One sorts firms by size tier. One is about firms that build agents. One national top seven never mentions Melbourne or Brisbane. Eleven of the 14 other firms on our original list appear in none of the four.</li>
         <li><strong>Check Google as well.</strong> We ran 14 Australian searches about AI consulting through DataForSEO. Google showed an AI Overview on 11 of them. It showed none for either Brisbane search.</li>
         <li><strong>Advisory work only.</strong> A firm had to sell at least one of five things on its own site: a readiness assessment, a strategy or roadmap, governance and policy, training, or independent advice on tools and vendors.</li>
-        <li><strong>An Australian city on the firm&rsquo;s own site.</strong> Each of the 14 firms we researched shows one.</li>
-        <li><strong>Read the source, not the summary.</strong> Every profile comes from the firm&rsquo;s own pages, opened on 9 October 2026 and linked under each entry. We give no star ratings because we have not been a client of these firms.</li>
+        <li><strong>An Australian city on the firm&rsquo;s own site.</strong> Each of the 15 firms we researched shows one.</li>
+        <li><strong>Read the source, not the summary.</strong> Every profile comes from the firm&rsquo;s own pages, opened on 9 October 2026 (Workvolve on 18 November 2026) and linked under each entry. We give no star ratings because we have not been a client of these firms.</li>
         <li><strong>Prices only from the firm.</strong> Where a firm publishes a price, we quote it and link the page. We never guess another company&rsquo;s price.</li>
       </ol>
 
@@ -630,12 +645,12 @@ export const post: BlogPost = {
         <a href="/contact" className="inline-block rounded-lg bg-[#B23E13] px-5 py-3 font-semibold text-white">Talk to the Founder</a>
       </div>
 
-      <h2 id="brisbane" className="text-2xl font-bold mt-10 mb-4">AI consultants in Brisbane: four firms by the buyer each suits</h2>
+      <h2 id="brisbane" className="text-2xl font-bold mt-10 mb-4">AI consultants in Brisbane: five firms by the buyer each suits</h2>
       <p className="mb-4">
-        A Brisbane buyer has less to go on. DataForSEO returned no monthly search figure for &ldquo;ai consulting brisbane&rdquo; on 9 October 2026. Google showed no AI Overview for either Brisbane search we ran, and one firm held three of the top ten results for the first. None of the four firms below is named in any of the four lists we read.
+        A Brisbane buyer has less to go on. DataForSEO returned no monthly search figure for &ldquo;ai consulting brisbane&rdquo; on 9 October 2026. Google showed no AI Overview for either Brisbane search we ran, and one firm held three of the top ten results for the first. None of the four Brisbane firms we checked on 9 October 2026 is named in any of the four lists we read.
       </p>
       <p className="mb-6">
-        For a small business, start with Integrity Ai or Sunburnt AI. For a mid-size company, Advancer. For a government agency or a supplier to one, Humanising Technologies. Revium and RUBIX also list Brisbane offices.
+        For a small business, start with Integrity Ai, Sunburnt AI or Workvolve. For a mid-size company, Advancer. For a government agency or a supplier to one, Humanising Technologies. Revium and RUBIX also list Brisbane offices.
       </p>
       {renderFirms('Brisbane')}
 
@@ -663,7 +678,7 @@ export const post: BlogPost = {
 
       <h2 id="prices" className="text-2xl font-bold mt-10 mb-4">How much do AI consulting firms charge? What these firms publish</h2>
       <p className="mb-4">
-        Most consultancies quote after a call. Three on this list publish prices for advisory work, and several more publish how long a step takes. We copied both on 9 October 2026. These are each firm&rsquo;s own figures. They are not FactoryJet prices and not a market survey, and firms change them, so check the source.
+        Most consultancies quote after a call. Four on this list publish prices for advisory work, and several more publish how long a step takes. We copied both on 9 October 2026, and Workvolve&rsquo;s on 18 November 2026. These are each firm&rsquo;s own figures. They are not FactoryJet prices and not a market survey, and firms change them, so check the source.
       </p>
       <div className="overflow-x-auto mb-4 not-prose">
         <table className="w-full border-collapse text-sm">
@@ -673,7 +688,7 @@ export const post: BlogPost = {
               <th className="p-3 text-left border border-gray-700">Advisory step</th>
               <th className="p-3 text-left border border-gray-700">Published figure (AUD)</th>
               <th className="p-3 text-left border border-gray-700">Published time</th>
-              <th className="p-3 text-left border border-gray-700">Source (read 9 Oct 2026)</th>
+              <th className="p-3 text-left border border-gray-700">Source (read 9 Oct 2026 unless noted)</th>
             </tr>
           </thead>
           <tbody>
@@ -785,11 +800,11 @@ export const post: BlogPost = {
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">4. Ask whether the adviser also builds</summary>
-          <p className="mt-3 text-gray-700">Thirteen of the 15 firms here do, including us. That is not a fault, since a builder knows what holds up against real systems. Ask how the advice stays honest. Two good signs are a roadmap you own and no commission on software.</p>
+          <p className="mt-3 text-gray-700">Fourteen of the 16 firms here do, including us. That is not a fault, since a builder knows what holds up against real systems. Ask how the advice stays honest. Two good signs are a roadmap you own and no commission on software.</p>
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">5. Buy a small paid first step</summary>
-          <p className="mt-3 text-gray-700">Published first steps from Real Minds AI, Synap and Yes AI run from A$400 to A$4,500 and take from three hours to three weeks. Agree in writing what document you hold at the end. Be wary of a free assessment whose only output is a quote for a build.</p>
+          <p className="mt-3 text-gray-700">Published first steps from Real Minds AI, Synap, Workvolve and Yes AI run from A$400 to A$4,500 and take from three hours to three weeks. Agree in writing what document you hold at the end. Be wary of a free assessment whose only output is a quote for a build.</p>
         </details>
         <details className="rounded-xl border border-gray-200 p-4">
           <summary className="font-semibold cursor-pointer">6. Settle data and privacy early</summary>
