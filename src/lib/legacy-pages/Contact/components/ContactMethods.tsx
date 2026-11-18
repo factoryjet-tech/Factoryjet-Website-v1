@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MessageCircle, Calendar, Mail, Clock, ArrowRight } from 'lucide-react';
+import { Calendar, Mail, Clock, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 // Track WhatsApp click conversion for Google Ads
@@ -50,49 +50,6 @@ const ContactMethods: React.FC = () => {
             </a>
           </motion.div>
 
-          {/* Card 2: Phone */}
-          <motion.div 
-            whileHover={{ y: -5 }}
-            className="bg-white rounded-2xl p-6 md:p-8 shadow-neumorphic border-t-4 border-jetOrange flex flex-col h-full"
-          >
-            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-orange-100 text-jetOrange rounded-xl flex items-center justify-center mb-5 md:mb-6">
-              <Phone className="w-7 h-7" />
-            </div>
-            <h4 className="text-xl font-bold text-slate-900 mb-2">Call Us Directly</h4>
-            <span className="inline-block px-3 py-1 bg-orange-50 text-[#B23E13] text-xs font-bold rounded-full w-fit mb-4">Urgent Needs</span>
-            <p className="text-slate-600 mb-6 flex-grow">Speak directly with a knowledgeable team member (not a receptionist). Get immediate answers.</p>
-            
-            <div className="space-y-3 mb-6 md:mb-8 text-sm text-slate-500">
-               <p className="font-bold text-xl sm:text-2xl text-slate-900">+1 650 444 2422</p>
-               <p className="text-xs">Wait Time: &lt;2 mins during business hours</p>
-            </div>
-
-            <a href="tel:+16504442422" className="w-full py-3 bg-white border-2 border-slate-200 text-slate-700 font-semibold rounded-lg hover:border-jetOrange hover:text-jetOrange transition-colors text-center">
-              Call Now
-            </a>
-          </motion.div>
-
-          {/* Card 3: WhatsApp */}
-          <motion.div 
-            whileHover={{ y: -5 }}
-            className="bg-white rounded-2xl p-6 md:p-8 shadow-neumorphic border-t-4 border-jetGreen flex flex-col h-full"
-          >
-            <div className="w-12 h-12 sm:w-14 sm:h-14 bg-emerald-100 text-jetGreen rounded-xl flex items-center justify-center mb-5 md:mb-6">
-              <MessageCircle className="w-7 h-7" />
-            </div>
-            <h4 className="text-xl font-bold text-slate-900 mb-2">WhatsApp Us</h4>
-            <span className="inline-block px-3 py-1 bg-emerald-50 text-jetGreen text-xs font-bold rounded-full w-fit mb-4">Fast Response</span>
-            <p className="text-slate-600 mb-6 flex-grow">Quick questions, sharing documents, or ongoing communication. Response within 30 minutes.</p>
-            
-            <div className="space-y-3 mb-6 md:mb-8 text-sm text-slate-500">
-               <p className="font-bold text-xl sm:text-2xl text-slate-900">+1 650 444 2422</p>
-               <p className="text-xs">Share screenshots & docs easily</p>
-            </div>
-
-            <a href="https://wa.me/16504442422?text=Hi%20FactoryJet" onClick={trackWhatsAppConversion} className="w-full py-3 bg-whatsapp text-white font-semibold rounded-lg hover:bg-whatsapp-hover transition-colors flex items-center justify-center gap-2">
-              <MessageCircle className="w-5 h-5" /> Chat on WhatsApp
-            </a>
-          </motion.div>
         </div>
 
         {/* Email Section */}

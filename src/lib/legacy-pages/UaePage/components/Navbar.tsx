@@ -56,10 +56,6 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
               </a>
             ))}
             <div className="flex items-center space-x-4 ml-4">
-              <a href="https://wa.me/16504442422?text=Hi%20FactoryJet%20Dubai" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-semibold hover:text-[#25D366] transition-colors text-white">
-                <WhatsAppIcon size={18} />
-                <span className="hidden xl:inline">WhatsApp</span>
-              </a>
               <button
                 onClick={onOpenModal}
                 className="bg-primary hover:bg-primary-dark text-white px-5 py-2 rounded-lg text-sm font-semibold transition-all shadow-lg shadow-primary/30 flex items-center gap-2"
@@ -97,9 +93,6 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
               </a>
             ))}
             <div className="pt-4 space-y-3">
-              <a href="https://wa.me/16504442422?text=Hi%20FactoryJet%20Dubai" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-3 bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/20 rounded-lg font-semibold hover:bg-[#25D366]/20 transition-colors">
-                <WhatsAppIcon size={18} /> WhatsApp Us
-              </a>
               <button
                 onClick={() => {
                   setIsOpen(false);

@@ -11,7 +11,6 @@ import HeroInlineForm from '@/components/HeroInlineForm';
 import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/ServiceJourneyRow';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
-import WhatsAppCTA from '@/components/v2/WhatsAppCTA';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    /ai-seo, India AI SEO service page ("The Answer Card, Director's Cut")
@@ -447,7 +446,6 @@ export default function AiSeoIndiaPage() {
           }
           lead="10 crore Indians use ChatGPT every week, and they ask it which company to trust. As an AI SEO company in India, we make ChatGPT, Perplexity, Gemini, and Google AI answers say your name. With proof, every month."
           secondaryCta={{ label: 'See how it works', href: '#how-it-works' }}
-          extraCta={<WhatsAppCTA city="India" service="AI SEO" />}
           trustItems={['4 AI engines tracked monthly', 'Month to month, no lock-in', '5-minute reports, plain language']}
           rightSlot={<AnswerCardStack />}
         />
@@ -668,7 +666,7 @@ export default function AiSeoIndiaPage() {
         <FAQ
           eyebrow="QUESTIONS, ANSWERED SIMPLY"
           headline="AI SEO FAQ for India: your questions about AI SEO, GEO and AEO, answered simply"
-          lead="If your question is not below, message us on WhatsApp and you will usually hear back the same day."
+          lead="If your question is not below, email connect@factoryjet.com and you will usually hear back the same day."
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />

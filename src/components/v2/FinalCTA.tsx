@@ -28,7 +28,7 @@ export interface FinalCTAProps {
   sub?: string;
   primaryCta: { label: string; href?: string; modal?: true; region?: ModalRegion };
   secondaryCta?: { label: string; href?: string; modal?: true; region?: ModalRegion };
-  /** Optional third CTA rendered after the secondary slot — e.g. WhatsAppCTA. */
+  /** Optional third CTA rendered after the secondary slot. */
   extraCta?: ReactNode;
   objectionHandler?: string;
 }

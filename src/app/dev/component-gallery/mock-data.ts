@@ -38,8 +38,8 @@ export const mockHero: HeroSectionProps = {
     href: 'https://factoryjet.com/contact',
   },
   secondaryCta: {
-    label: 'WhatsApp Us',
-    href: 'https://wa.me/16504442422',
+    label: 'Email us',
+    href: 'mailto:connect@factoryjet.com',
   },
   serviceVariant: 'web-design',
   city: 'London',
@@ -505,6 +505,6 @@ export const mockFinalCTAAnchor: FinalCTAAnchorProps = {
   },
   whatsappCta: {
     label: 'Or message on WhatsApp',
-    href: 'https://wa.me/16504442422',
+    href: 'mailto:connect@factoryjet.com',
   },
 };

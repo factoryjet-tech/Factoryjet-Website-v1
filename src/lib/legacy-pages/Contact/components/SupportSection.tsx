@@ -20,12 +20,6 @@ const SupportSection: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               <div>
-                <p className="text-red-700 font-medium mb-2">Emergency Hotline (24/7)</p>
-                <p className="text-2xl font-bold text-slate-900">+1 650 444 2422</p>
-                <p className="text-sm text-red-600 mt-1">Response: Within 1 hour</p>
-              </div>
-              
-              <div>
                  <p className="text-red-700 font-medium mb-2">What Qualifies?</p>
                  <ul className="text-sm text-slate-700 space-y-1 list-disc list-inside">
                    <li>Website completely down</li>

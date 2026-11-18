@@ -14,7 +14,6 @@ import SuccessStories from './components/SuccessStories';
 import Pricing from './components/Pricing';
 import FAQ, { faqData } from './components/FAQ';
 import Contact from './components/Contact';
-import WhatsAppFloat from './components/WhatsAppFloat';
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -49,7 +48,6 @@ function App() {
         <FAQ />
       </main>
       <Contact />
-      <WhatsAppFloat />
     </div>
   );
 }

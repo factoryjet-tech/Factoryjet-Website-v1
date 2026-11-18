@@ -1,4 +1,4 @@
-import { CheckCircle2, MessageCircle, Mail } from "lucide-react";
+import { CheckCircle2, Mail } from "lucide-react";
 import LeadFormInline from "@/components/LeadFormInline";
 
 const TRUST_POINTS = [
@@ -80,17 +80,6 @@ export default function FinalCTA() {
 
             {/* Contact details */}
             <div className="flex flex-col" style={{ gap: "12px" }}>
-              <a
-                href="https://wa.me/16504442422"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 transition-opacity duration-200 hover:opacity-80"
-              >
-                <MessageCircle size={17} style={{ color: "#10B981", flexShrink: 0 }} aria-hidden="true" />
-                <span style={{ fontSize: "14px", color: "rgba(255,255,255,0.6)" }}>
-                  Message us on WhatsApp
-                </span>
-              </a>
               <a
                 href="mailto:connect@factoryjet.com"
                 className="flex items-center gap-3 transition-opacity duration-200 hover:opacity-80"

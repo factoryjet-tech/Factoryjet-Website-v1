@@ -59,14 +59,6 @@ export default function Hero() {
               >
                 Get a free site review
               </UkAuditButton>
-              <a
-                href="https://wa.me/16504442422"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border border-fj-neutral-200 bg-white px-6 py-3 font-fj-body text-base font-semibold text-fj-ink transition-colors hover:bg-fj-neutral-50"
-              >
-                Message us on WhatsApp
-              </a>
             </div>
 
             <ul
