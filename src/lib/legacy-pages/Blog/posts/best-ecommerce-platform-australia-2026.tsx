@@ -157,6 +157,7 @@ type PriceRow = {
   billing: string;
   src: string;
   srcLabel: string;
+  internal?: boolean;
 };
 
 const priceRows: PriceRow[] = [
@@ -168,6 +169,16 @@ const priceRows: PriceRow[] = [
     billing: 'AUD. 10% GST added unless you are GST-registered and add your ABN',
     src: SRC.shopify,
     srcLabel: 'Shopify AU pricing',
+  },
+  {
+    platform: 'Commerceflo by FactoryJet (our own platform)',
+    entry: 'Early access. No public price list',
+    mid: 'Evaluation accounts are set up after a scoping call',
+    top: 'Scoped per business: DTC, B2B, marketplace and in store on one stock pool',
+    billing: 'Not published while in early access',
+    src: '/commerceflo',
+    srcLabel: 'Commerceflo overview',
+    internal: true,
   },
   {
     platform: 'BigCommerce',
@@ -464,7 +475,11 @@ export const post: BlogPost = {
                 <td className="p-3.5">{r.top}</td>
                 <td className="p-3.5">{r.billing}</td>
                 <td className="p-3.5">
-                  <a href={r.src} {...extLinkProps}>{r.srcLabel}</a>
+                  {r.internal ? (
+                    <a href={r.src} className={linkCls}>{r.srcLabel}</a>
+                  ) : (
+                    <a href={r.src} {...extLinkProps}>{r.srcLabel}</a>
+                  )}
                 </td>
               </tr>
             ))}
