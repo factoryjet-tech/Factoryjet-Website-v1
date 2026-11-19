@@ -232,6 +232,7 @@ export const post: BlogPost = {
             temporalCoverage: '2026-11-07/2026-11-16',
             spatialCoverage: 'United States',
             isAccessibleForFree: true,
+            license: 'https://creativecommons.org/licenses/by/4.0/',
             keywords: ['ecommerce agency', 'Shopify', 'SEO', 'referring domains', 'AI search citations'],
             variableMeasured: [
               'word count',
