@@ -44,6 +44,8 @@ const SRC = {
   gorgiasAgent: 'https://www.gorgias.com/ai-agent',
   gorgiasDocs: 'https://docs.gorgias.com/en-US/ai-agent-explained-497772',
   productCrafters: 'https://productcrafters.io/blog/how-much-does-it-cost-to-build-an-ai-agent/',
+  finiPricing: 'https://www.usefini.com/pricing',
+  finiHome: 'https://www.usefini.com/',
 };
 
 const faqs: FAQItem[] = [
@@ -220,7 +222,7 @@ export const post: BlogPost = {
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Oct 11, 2026',
-  dateModified: 'Oct 21, 2026',
+  dateModified: 'Nov 21, 2026',
   readTime: '27 min read',
   imageUrl: '/images/blog/intercom-fin-vs-zendesk-ai-vs-custom-ai-agent-2026/hero.webp',
   imageAlt:
@@ -236,7 +238,8 @@ export const post: BlogPost = {
     'Zendesk AI agents are in every Suite and Support plan. Extra automated resolutions list at $2.00 pay-as-you-go, less on a committed volume. Since 18 May 2026 Zendesk sorts results into three tiers, and only verified resolutions draw on the allowance.',
     'Salesforce Agentforce lists at $500 per 100,000 Flex Credits, with 20 credits per standard action, or $2 per conversation. It builds its actions from flows, Apex and APIs you already have in Salesforce.',
     'Gorgias AI Agent lists at $0.85 to $1.00 per automated interaction and is set up per connected Shopify store. Its order actions need the Basic plan or higher.',
-    'The four billing units are four different things. At list prices, 10 agents and 2,000 AI conversations a month come to $2,100 to $4,950 a month across the four vendors, if every conversation is billed. Read what each vendor counts before you compare.',
+    'The four billing units are four different things. At list prices, 10 agents and 2,000 AI conversations a month come to $2,100 to $4,950 a month across the five vendors, if every conversation is billed. Read what each vendor counts before you compare.',
+    'Fini AI bills $0.89 per resolved ticket on its Growth plan, falling to $0.49 on Enterprise, with no per-seat fees, and runs on Zendesk, Intercom, HubSpot, Salesforce, Gorgias, Front, Freshdesk and other help desks (usefini.com, read 21 November 2026).',
     'You can keep a rented agent and have only the missing piece built. All four accept custom actions or API connectors.',
     'No figure on this page is a FactoryJet price. FactoryJet quotes the build, and any support you choose, as fixed prices in writing after a short scoping call.',
   ],
@@ -262,7 +265,9 @@ export const post: BlogPost = {
           read on 11 October 2026 and linked where it appears. We re-read every pricing page on 21 October 2026, and
           every price here is the 21 October figure. The dollar figures are those vendors&apos; published list
           prices, plus one market range for a build from a named firm. None of them is a FactoryJet price. Vendors
-          change prices and plan names often, so check the linked page before you budget.
+          change prices and plan names often, so check the linked page before you budget. Nobody paid to be listed.
+          Fini AI was added on 21 November 2026 after Fini linked to this guide from its own site, and its entry was
+          read from Fini&apos;s own pricing page that day under the same rules as the others.
         </p>
       </div>
 
@@ -350,6 +355,19 @@ export const post: BlogPost = {
               </td>
               <td className="p-3 border border-gray-200">$0.85 to $1.00 per automated interaction, by plan</td>
               <td className="p-3 border border-gray-200">A Shopify brand whose tickets are about orders</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">
+                <a href={SRC.finiHome} target="_blank" rel="noopener noreferrer">Fini AI</a>
+              </td>
+              <td className="p-3 border border-gray-200">
+                The help desk you have: Zendesk, Intercom, HubSpot, Salesforce, Gorgias, LiveChat, Front, Freshdesk,
+                Slack or a custom one
+              </td>
+              <td className="p-3 border border-gray-200">
+                $0.89, $0.69 or $0.49 per resolved ticket on Growth, Scale and Enterprise. No per-seat fees
+              </td>
+              <td className="p-3 border border-gray-200">You want to keep your help desk and pay only for resolved tickets</td>
             </tr>
             <tr className="bg-white">
               <td className="p-3 border border-gray-200 font-semibold">A custom-built agent</td>
@@ -447,6 +465,22 @@ export const post: BlogPost = {
                 Gorgias says you pay only when the AI Agent resolves a conversation
               </td>
             </tr>
+            <tr className="bg-white">
+              <td className="p-3 border border-gray-200 font-semibold">
+                <a href={SRC.finiPricing} target="_blank" rel="noopener noreferrer">Fini AI</a>
+              </td>
+              <td className="p-3 border border-gray-200">
+                Resolved ticket: $0.89 on Growth (up to 3,000 tickets a month), $0.69 on Scale (up to 10,000), $0.49 on
+                Enterprise. Voice is billed per answered call, from $0.89
+              </td>
+              <td className="p-3 border border-gray-200">
+                No seats from Fini. Your help desk plan stays with your help desk vendor
+              </td>
+              <td className="p-3 border border-gray-200">
+                Fini solves the issue end to end with no human handover. Escalations, greetings, spam and abandoned
+                sessions are not billed, and a conversation reopened within 72 hours is not billed twice
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -511,7 +545,7 @@ export const post: BlogPost = {
 
       <h2 id="worked-example">A worked example: 10 agents and 2,000 AI conversations a month, at list prices</h2>
       <p>
-        Here is one support team priced five ways. It has 10 human agents, and 2,000 conversations a month are handled by
+        Here is one support team priced six ways. It has 10 human agents, and 2,000 conversations a month are handled by
         the AI. Prices are the list prices we read on each vendor&apos;s pricing page on 21 October 2026, with annual
         billing where it is offered. The sum assumes every one of those 2,000 conversations is billable, so it is the
         ceiling for each vendor.
@@ -542,11 +576,16 @@ export const post: BlogPost = {
               <td className="p-3 border border-gray-200">$3,130</td>
             </tr>
             <tr className="bg-gray-50">
+              <td className="p-3 border border-gray-200 font-semibold">Fini AI Growth on Zendesk Suite Professional</td>
+              <td className="p-3 border border-gray-200">10 Zendesk seats &times; $115 = $1,150, plus 2,000 resolutions &times; $0.89 = $1,780</td>
+              <td className="p-3 border border-gray-200">$2,930, if no plan minimum applies (see below)</td>
+            </tr>
+            <tr className="bg-white">
               <td className="p-3 border border-gray-200 font-semibold">Agentforce, conversation pricing</td>
               <td className="p-3 border border-gray-200">2,000 conversations &times; $2 = $4,000</td>
               <td className="p-3 border border-gray-200">$4,000, plus the Salesforce licenses underneath</td>
             </tr>
-            <tr className="bg-white">
+            <tr className="bg-gray-50">
               <td className="p-3 border border-gray-200 font-semibold">Zendesk Suite Professional with its AI agents</td>
               <td className="p-3 border border-gray-200">10 seats &times; $115 = $1,150, plus (2,000 &minus; 100 included) &times; $2.00 = $3,800</td>
               <td className="p-3 border border-gray-200">$4,950</td>
@@ -570,6 +609,13 @@ export const post: BlogPost = {
           <strong>Seats you already pay for.</strong> A team already on Zendesk pays the $1,150 in seats whichever
           agent it adds. The question there is $3,800 for Zendesk&apos;s own agent against $1,980 for Fin, on the same
           tickets.
+        </li>
+        <li>
+          <strong>Ask Fini about a plan minimum.</strong> Fini&apos;s visible pricing page, read 21 November 2026, shows
+          Growth at $0.89 per resolved ticket and says each plan covers the platform, implementation and a monthly
+          allowance. The structured data in the same page lists Growth at $3,600 a month ($3,000 billed yearly) with
+          2,000 resolved tickets included. If that plan fee applies, the Fini row is $4,750 with the Zendesk seats.
+          The $0.49 rate is the Enterprise tier, not this volume.
         </li>
       </ul>
       <p>
@@ -835,6 +881,30 @@ export const post: BlogPost = {
         returns and writes only the fields your team approves. It can work inside Gorgias through its API, so the team
         keeps its inbox. See <a href="/services/ecommerce-ai-agents">ecommerce AI agents</a>.
       </p>
+
+      <h2 id="fini-ai">Fini AI: billed per resolved ticket, on the help desk you have</h2>
+      <p>
+        Fini AI sells a support agent that runs on top of an existing help desk. Its{' '}
+        <a href={SRC.finiPricing} target="_blank" rel="noopener noreferrer">pricing page</a> lists Zendesk, Intercom,
+        HubSpot, Salesforce, Gorgias, LiveChat, Front, Freshdesk and Slack, plus custom help desks, and four channels:
+        chat, email, a website widget and voice. Fini charges no per-seat fees and says your human team is never
+        billed.
+      </p>
+      <p>
+        The unit is a resolution, which Fini defines as an issue solved end to end with no human handover. Growth
+        lists at $0.89 per resolved ticket for up to 3,000 tickets a month, Scale at $0.69 for up to 10,000, and
+        Enterprise at $0.49. Escalations to your team, greetings, spam and abandoned sessions are not billed, and a
+        conversation reopened within 72 hours is billed once. Voice is priced per answered call: $0.89 for the first
+        10,000 a month, $0.59 up to 50,000 and $0.35 above that. Enterprise customers can run a 90-day free pilot on
+        live traffic, with targets agreed in writing before the plan begins.
+      </p>
+      <table className={visualQa.profileFacts} tabIndex={0} aria-labelledby="fini-ai"><tbody><tr><th scope="row"><strong>Where it fits.</strong></th><td> You want to keep your help desk, add an agent across chat, email and voice, and
+        pay only for tickets the agent closes without a person.
+      </td></tr><tr><th scope="row"><strong>Where it stops.</strong></th><td> Ask whether a monthly plan fee applies. The visible page shows per-resolution
+        rates, while its structured data lists Growth at $3,600 a month with 2,000 resolved tickets included. Fini
+        also publishes a 90 percent resolution rate at 99 percent accuracy. We found no description of how accuracy is
+        measured, so we do not use those figures here.
+      </td></tr></tbody></table>
 
       <h2 id="custom-build">A custom-built agent: for work that leaves the help desk</h2>
       <p>
