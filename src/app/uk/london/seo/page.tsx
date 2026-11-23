@@ -759,47 +759,49 @@ export default function LondonSeoPage() {
           </div>
 
           {/* ═══ 3b. PROOF + NEXT STEP (added 23 Nov 2026: ChatGPT sent UK readers here and the
-              page had no case study anywhere). Every Impulse Branding and GPSUK claim below is
-              taken from their entries in src/data/case-studies/index.ts. No traffic figures:
-              that file says none are published until measured and agreed by the client. ═══ */}
+              page had no case study anywhere; GPSUK moved to the lead on 23 Nov so a UK client
+              comes first). Every GPSUK and Impulse Branding claim below is taken from their entries
+              in src/data/case-studies/index.ts. No traffic figures: that file says none are
+              published until measured and agreed by the client. ═══ */}
           <section className="sec proofcta" aria-labelledby="proofcta-title">
             <div className="wrap">
               <div className="proofcta-grid">
                 <div>
                   <span className="eyebrow">SEO and AI search work we run today</span>
                   <h2 id="proofcta-title" className="mt-4">
-                    Impulse Branding: a site built to be found, with search work that continues
+                    GPSUK: a UK trade storefront, with search work that continues
                   </h2>
                   <p className="lead">
-                    Impulse Branding Solutions makes commercial signage and handles fit-out work for
-                    brands. We built its website on Next.js and run its ongoing SEO and AI search
-                    work, so buyers can find a service, see similar projects and send an inquiry.
+                    GPSUK supplies branded promotional products such as pens, drinkware, bags and tech
+                    accessories to UK business customers. We built its trade storefront on Commerceflo
+                    and run its ongoing SEO and AI search work, so buyers can find products the way they
+                    describe them and reorder at their own account prices.
                   </p>
                   <dl className="proofcta-facts mt-6">
                     <div>
                       <dt>What we built</dt>
-                      <dd>A page per service, a page per sector, project case studies and an insights section.</dd>
+                      <dd>A trade storefront where business buyers log in, see their own pricing and move from quote to order without retyping.</dd>
                     </div>
                     <div>
-                      <dt>Readable by AI</dt>
-                      <dd>Every page is plain server-rendered text, so search engines and AI tools read it without running code.</dd>
+                      <dt>Built to be found</dt>
+                      <dd>A catalogue structured around the words buyers use, in a category with a wide range and many near-identical items.</dd>
                     </div>
                     <div>
                       <dt>What continues</dt>
-                      <dd>New pages where buyers are searching, internal links between services, sectors and projects, and fixes as the site grows.</dd>
+                      <dd>Ongoing SEO and AI search work, so the catalogue stays visible in Google and in AI answers as it grows.</dd>
                     </div>
                     <div>
                       <dt>Status</dt>
-                      <dd>Live on impulsebranding.in. Impulse Branding Solutions has reviewed FactoryJet publicly.</dd>
+                      <dd>Live on Commerceflo, serving UK trade buyers. SEO and AI search work continues.</dd>
                     </div>
                   </dl>
                   <p className="proofcta-note">
-                    We also run SEO and AI search work for GPSUK, a UK supplier of branded promotional
-                    products. Neither case quotes traffic numbers yet: we publish those once they are
-                    measured and the client agrees to share them.
+                    We also built the website for Impulse Branding Solutions, a commercial signage and
+                    fit-out firm, and run its SEO and AI search work. Neither case quotes traffic numbers
+                    yet: we publish those once they are measured and the client agrees to share them.
                   </p>
-                  <Link className="proofcta-link" href="/case-studies/impulse-branding-migration">
-                    Read the Impulse Branding case study <span aria-hidden="true">→</span>
+                  <Link className="proofcta-link" href="/case-studies/gpsuk-promotional-products">
+                    Read the GPSUK case study <span aria-hidden="true">→</span>
                   </Link>
                 </div>
 
