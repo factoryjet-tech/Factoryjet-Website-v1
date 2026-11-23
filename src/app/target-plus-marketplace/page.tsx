@@ -518,6 +518,59 @@ export default function TargetPlusMarketplacePage() {
           </div>
         </section>
 
+        {/* ── Proof + next step (added 23 Nov 2026: engaged US readers had no next step until section 6).
+            Every claim about the client is taken from the Sow Easy entry in src/data/case-studies/index.ts. ── */}
+        <section className="pp-sec" aria-labelledby="tp-proof-title">
+          <div className="pp-wrap">
+            <div className="pp-herogrid" style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: 'clamp(28px,4vw,48px)', alignItems: 'start' }}>
+              <div>
+                <p className="pp-eyebrow">Store and ERP work we are doing now</p>
+                <h2 id="tp-proof-title" style={{ margin: '12px 0 12px', maxWidth: '24ch' }}>
+                  Sow Easy: a trade store that reads stock, prices and SKUs from Odoo
+                </h2>
+                <p className="pp-lead" style={{ maxWidth: '56ch' }}>
+                  A Target Plus connection depends on one clean source for products, prices and stock. That is the
+                  same problem we are solving for Sow Easy, a B2B distributor that runs its stock, pricing and product
+                  data in Odoo.
+                </p>
+                <dl className="pp-duo" style={{ marginTop: '22px', maxWidth: '640px' }}>
+                  {[
+                    { t: 'What we are building', d: 'A WooCommerce trade store with product pages and trade ordering.' },
+                    { t: 'Where the data lives', d: 'Odoo owns stock, pricing and SKUs. The store reads from it, so there is no second copy to drift.' },
+                    { t: 'How it is tested', d: 'Product data and ordering are checked against Odoo staging before anything touches live stock.' },
+                    { t: 'Status', d: 'Build in progress. Launch is still ahead, so no sales results are reported.' },
+                  ].map((f) => (
+                    <div key={f.t} style={{ borderTop: '1px solid var(--pp-line)', paddingTop: '12px' }}>
+                      <dt style={{ fontFamily: 'var(--pp-mono)', fontSize: '11px', letterSpacing: '.1em', textTransform: 'uppercase', color: 'var(--pp-orange-dark)', marginBottom: '6px' }}>{f.t}</dt>
+                      <dd style={{ margin: 0, fontSize: '15px', lineHeight: 1.6, color: 'var(--pp-ink)' }}>{f.d}</dd>
+                    </div>
+                  ))}
+                </dl>
+                <a href="/case-studies/sow-easy-distributor-portal" style={{ ...LINK, display: 'inline-block', marginTop: '20px', fontWeight: 600 }}>
+                  Read the Sow Easy case study <span aria-hidden="true">→</span>
+                </a>
+              </div>
+
+              <div style={{ border: '1px solid var(--pp-line)', borderTop: '4px solid var(--pp-orange)', borderRadius: '18px', background: '#fff', padding: '24px' }}>
+                <p className="pp-eyebrow">Your next step</p>
+                <h3 style={{ marginTop: '10px', fontSize: 'clamp(20px,2.2vw,24px)', fontWeight: 800 }}>Check if you are ready for Target Plus</h3>
+                <p style={{ marginTop: '10px', fontSize: '15px', lineHeight: 1.6, color: 'var(--pp-body)' }}>
+                  Tell us your store, ERP and 3PL. On a short call we check them against Target’s published requirements
+                  and tell you which integration route fits.
+                </p>
+                <div style={{ marginTop: '18px' }}>
+                  <ModalCTAButton label="Book a Target Plus readiness call" region="us" btnVariant="primary-light" />
+                </div>
+                <ul style={{ listStyle: 'none', margin: '18px 0 0', padding: 0, borderTop: '1px solid var(--pp-line)' }}>
+                  {['Fixed price per phase, in writing', 'A demo on your own data before you sign', '500+ projects delivered, 97% on time'].map((t) => (
+                    <li key={t} style={{ fontSize: '14px', color: 'var(--pp-ink)', padding: '10px 0', borderBottom: '1px solid var(--pp-line)' }}>{t}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ── What Is + Requirements ── */}
         <section className="pp-sec">
           <div className="pp-wrap pp-narrow">
