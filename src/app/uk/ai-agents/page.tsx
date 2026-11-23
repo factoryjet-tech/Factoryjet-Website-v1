@@ -362,6 +362,62 @@ export default function AiAgentsUKPage() {
           </div>
         </section>
 
+        {/* ═══ 3b. PROOF + NEXT STEP (added 23 Nov 2026: UK readers had no clear next step) ═══
+            Every claim below is taken from src/data/case-studies/washington-law-group.ts. */}
+        <section className="sec-lg proof-cta" aria-labelledby="proof-cta-title">
+          <div className="wrap">
+            <div className="col-6040">
+              <div>
+                <span className="eyebrow">An agent we built, live in production</span>
+                <h2 id="proof-cta-title">Washington Law Group: an agent that reads crash news in 50 states</h2>
+                <p className="lead mt-6" style={{ maxWidth: 600 }}>
+                  Washington Law Group is a US personal injury firm. Serious truck crashes are first reported by
+                  local news and state police across 50 states. Nobody at the firm could read all of that every
+                  day, so we built an agent that does the reading and emails them the crashes that qualify.
+                </p>
+                <dl className="proof-facts mt-8">
+                  <div>
+                    <dt>What it does</dt>
+                    <dd>Reads news and police sources every two hours, pulls out the facts, applies the firm&apos;s own rules and emails the qualifying crashes.</dd>
+                  </div>
+                  <div>
+                    <dt>How it stays accurate</dt>
+                    <dd>Every victim name is checked against the article text. A name that is not in the article is dropped and never emailed.</dd>
+                  </div>
+                  <div>
+                    <dt>Who decides</dt>
+                    <dd>Lawyers at the firm review every lead. Fault and when to make contact stay with them.</dd>
+                  </div>
+                  <div>
+                    <dt>Status</dt>
+                    <dd>Live on a dedicated US server, every day, weekends included.</dd>
+                  </div>
+                </dl>
+                <a className="proof-link mt-6" href="/case-studies/washington-law-group-accident-detection-agent">
+                  Read the Washington Law Group case study <span aria-hidden="true">→</span>
+                </a>
+              </div>
+
+              <div className="card card-top-orange proof-cta-card">
+                <span className="eyebrow">Your next step</span>
+                <h3>Book a short call to scope your agent</h3>
+                <p className="mt-4">
+                  Tell us the task your team repeats every day. On the call we work out whether an agent fits,
+                  which of your tools it has to connect to, and what a first phase would cover.
+                </p>
+                <div className="mt-6">
+                  <ModalCTAButton label="Book a call to scope my agent" region="uk" modalVariant="ai" btnVariant="primary-light" className="proof-cta-btn" />
+                </div>
+                <ul className="proof-terms mt-6">
+                  <li>Fixed price per phase, in writing</li>
+                  <li>A demo on your own data before you sign</li>
+                  <li>500+ projects delivered, 97% on time</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ═══ 4. WHY IT MATTERS NOW (cited external stats) ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
