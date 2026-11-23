@@ -758,6 +758,76 @@ export default function LondonSeoPage() {
             </div>
           </div>
 
+          {/* ═══ 3b. PROOF + NEXT STEP (added 23 Nov 2026: ChatGPT sent UK readers here and the
+              page had no case study anywhere). Every Impulse Branding and GPSUK claim below is
+              taken from their entries in src/data/case-studies/index.ts. No traffic figures:
+              that file says none are published until measured and agreed by the client. ═══ */}
+          <section className="sec proofcta" aria-labelledby="proofcta-title">
+            <div className="wrap">
+              <div className="proofcta-grid">
+                <div>
+                  <span className="eyebrow">SEO and AI search work we run today</span>
+                  <h2 id="proofcta-title" className="mt-4">
+                    Impulse Branding: a site built to be found, with search work that continues
+                  </h2>
+                  <p className="lead">
+                    Impulse Branding Solutions makes commercial signage and handles fit-out work for
+                    brands. We built its website on Next.js and run its ongoing SEO and AI search
+                    work, so buyers can find a service, see similar projects and send an inquiry.
+                  </p>
+                  <dl className="proofcta-facts mt-6">
+                    <div>
+                      <dt>What we built</dt>
+                      <dd>A page per service, a page per sector, project case studies and an insights section.</dd>
+                    </div>
+                    <div>
+                      <dt>Readable by AI</dt>
+                      <dd>Every page is plain server-rendered text, so search engines and AI tools read it without running code.</dd>
+                    </div>
+                    <div>
+                      <dt>What continues</dt>
+                      <dd>New pages where buyers are searching, internal links between services, sectors and projects, and fixes as the site grows.</dd>
+                    </div>
+                    <div>
+                      <dt>Status</dt>
+                      <dd>Live on impulsebranding.in. Impulse Branding Solutions has reviewed FactoryJet publicly.</dd>
+                    </div>
+                  </dl>
+                  <p className="proofcta-note">
+                    We also run SEO and AI search work for GPSUK, a UK supplier of branded promotional
+                    products. Neither case quotes traffic numbers yet: we publish those once they are
+                    measured and the client agrees to share them.
+                  </p>
+                  <Link className="proofcta-link" href="/case-studies/impulse-branding-migration">
+                    Read the Impulse Branding case study <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
+
+                <div className="proofcta-card">
+                  <span className="eyebrow">Your next step</span>
+                  <h3>See where your site stands in Google and in AI answers</h3>
+                  <p>
+                    Send us your URL. The free audit shows how you rank today, whether ChatGPT, Gemini
+                    and Perplexity name you, and what we would fix first.
+                  </p>
+                  <div className="mt-6">
+                    <ModalCTAButton
+                      label="Get a free SEO audit →"
+                      region="uk"
+                      modalVariant="seo"
+                      btnVariant="secondary-light"
+                    />
+                  </div>
+                  <ul className="proofcta-terms">
+                    <li>Fixed price per phase, in writing</li>
+                    <li>500+ projects delivered, 97% on time</li>
+                    <li>4.9 average client rating</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* ═══ 4. SCOPE: WHAT IS INCLUDED ═══ */}
           <section className="sec" id="scope">
             <div className="wrap">
