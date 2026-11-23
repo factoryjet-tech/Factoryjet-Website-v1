@@ -52,5 +52,25 @@ export default function PauseOffscreenLoops() {
     };
   }, [pathname]);
 
+  // The hero workflow panels' "Replay animation" button is a type="reset" button.
+  // Reset clears a selected row and the pause box, but CSS cannot restart a running
+  // animation, so with nothing selected or paused the click changed nothing (Clarity
+  // dead-click review, 2026-11-23). The reset event fires before the inputs clear,
+  // so wait a frame, then send every looping animation in that panel back to 0.
+  useEffect(() => {
+    const onReset = (e: Event) => {
+      const form = e.target;
+      if (!(form instanceof HTMLFormElement) || !form.querySelector('.workflow-replay')) return;
+      if (typeof form.getAnimations !== 'function') return;
+      requestAnimationFrame(() => {
+        for (const a of form.getAnimations({ subtree: true })) {
+          if (a.effect?.getTiming().iterations === Infinity) a.currentTime = 0;
+        }
+      });
+    };
+    document.addEventListener('reset', onReset);
+    return () => document.removeEventListener('reset', onReset);
+  }, []);
+
   return null;
 }
