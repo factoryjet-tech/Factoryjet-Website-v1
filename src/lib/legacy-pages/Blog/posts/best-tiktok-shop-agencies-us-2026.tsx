@@ -389,6 +389,7 @@ export const post: BlogPost = {
     button: 'Get my free shop audit',
     serviceHref: '/services/tiktok-shop-agency',
     serviceLabel: 'See our TikTok Shop agency service',
+    modalVariant: 'default',
   },
   author: 'Bhavesh Barot',
   date: 'Oct 23, 2026',

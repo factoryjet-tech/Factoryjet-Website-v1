@@ -1,4 +1,5 @@
 import React from 'react';
+import type { ModalRegion, ModalVariant } from '@/context/ContactModalContext';
 
 export interface FAQItem {
   q: string;
@@ -17,6 +18,10 @@ export interface BlogPostCta {
   button: string;
   serviceHref: string;
   serviceLabel: string;
+  /** Lead form region. Defaults to 'us'. */
+  region?: ModalRegion;
+  /** Lead form service list. Defaults to 'ai'; ecommerce posts use 'default' (E-Commerce first). */
+  modalVariant?: ModalVariant;
 }
 
 export interface BlogPost {

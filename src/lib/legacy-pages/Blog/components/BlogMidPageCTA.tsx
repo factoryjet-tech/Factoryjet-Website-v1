@@ -121,7 +121,7 @@ function TopicMidPageCTA({ topic, service }: { topic: BlogPostCta; service: stri
       <p className="mt-2 font-fj-display text-xl md:text-2xl font-extrabold tracking-[-0.02em] text-[#0F0F12]">{topic.heading}</p>
       <p className="mt-2 max-w-2xl text-base leading-relaxed text-[#3A3A38]">{topic.body}</p>
       <div className="mt-5 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-        <ModalCTAButton label={topic.button} region="us" modalVariant="ai" btnVariant="primary-light" />
+        <ModalCTAButton label={topic.button} region={topic.region ?? 'us'} modalVariant={topic.modalVariant ?? 'ai'} btnVariant="primary-light" />
         <Link
           prefetch={false}
           href={topic.serviceHref}

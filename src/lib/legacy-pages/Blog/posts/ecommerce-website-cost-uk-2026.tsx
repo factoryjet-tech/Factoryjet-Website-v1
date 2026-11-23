@@ -182,6 +182,8 @@ export const post: BlogPost = {
     button: 'Scope my store',
     serviceHref: '/uk/ecommerce-development',
     serviceLabel: 'See UK ecommerce development',
+    region: 'uk',
+    modalVariant: 'default',
   },
   author: 'Bhavesh Barot',
   date: 'Oct 11, 2026',

@@ -38,6 +38,7 @@ export const post: BlogPost = {
     button: 'Scope my B2B store',
     serviceHref: '/b2b-ecommerce',
     serviceLabel: 'See B2B ecommerce development',
+    modalVariant: 'default',
   },
   author: 'Bhavesh Barot',
   date: 'November 16, 2026',
