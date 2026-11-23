@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import type { BlogLeadOffer } from '../leadOffer';
+import type { BlogPostCta } from '../data.types';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
 
 /**
  * Mid-article call to action for blog posts.
@@ -101,7 +103,41 @@ const COPY: Record<string, { heading: string; body: string }> = {
   },
 };
 
-export function BlogMidPageCTA({ offer }: { offer: Pick<BlogLeadOffer, 'service'> }) {
+/**
+ * Topic version, for posts that set `cta` (added 2026-11-23). A Clarity review of 1 to 23 Nov
+ * found readers spending 7 to 9 minutes on AI agent architecture posts whose only topical next
+ * step sat after the Sources list. This one names the post's own job, opens the lead form in
+ * place and links the closest service page.
+ */
+function TopicMidPageCTA({ topic, service }: { topic: BlogPostCta; service: string }) {
+  return (
+    <aside
+      aria-label="Talk to FactoryJet"
+      data-cta="blog_topic_cta"
+      data-cta-service={service}
+      className="blog-midpage-cta not-prose my-10 md:my-12 rounded-xl md:rounded-2xl border border-gray-200 border-l-4 border-l-[#B23E13] bg-[#FAFAF7] px-5 py-6 md:px-8 md:py-7"
+    >
+      <p className="font-fj-mono text-xs font-semibold uppercase tracking-widest text-[#B23E13]">{topic.eyebrow ?? 'Next step'}</p>
+      <p className="mt-2 font-fj-display text-xl md:text-2xl font-extrabold tracking-[-0.02em] text-[#0F0F12]">{topic.heading}</p>
+      <p className="mt-2 max-w-2xl text-base leading-relaxed text-[#3A3A38]">{topic.body}</p>
+      <div className="mt-5 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+        <ModalCTAButton label={topic.button} region="us" modalVariant="ai" btnVariant="primary-light" />
+        <Link
+          prefetch={false}
+          href={topic.serviceHref}
+          className="inline-flex items-center gap-1.5 text-base font-semibold text-[#B23E13] underline underline-offset-4 hover:text-[#9A3510]"
+        >
+          {topic.serviceLabel}
+          <span aria-hidden="true">&rarr;</span>
+        </Link>
+      </div>
+      <p className="mt-3 text-sm text-[#4A4A45]">Bhavesh replies within 24 hours.</p>
+    </aside>
+  );
+}
+
+export function BlogMidPageCTA({ offer, topic }: { offer: Pick<BlogLeadOffer, 'service'>; topic?: BlogPostCta }) {
+  if (topic) return <TopicMidPageCTA topic={topic} service={offer.service} />;
   const copy = COPY[offer.service] ?? COPY.default;
   return (
     <aside

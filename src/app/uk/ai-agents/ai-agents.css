@@ -614,3 +614,18 @@
 .uk-aiagents [role="region"][tabindex="0"]:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
 
 .uk-aiagents footer.us-footer summary::after { content: none; }
+
+/* ─── Proof + next step block (3b, added 23 Nov 2026) ─── */
+.uk-aiagents .proof-facts {display:grid;grid-template-columns:1fr 1fr;gap:20px 32px;max-width:640px}
+.uk-aiagents .proof-facts > div {border-top:1px solid var(--n200);padding-top:14px}
+.uk-aiagents .proof-facts dt {font-family:var(--fm);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#B23E13;margin-bottom:6px}
+.uk-aiagents .proof-facts dd {margin:0;font-size:15px;line-height:1.6;color:var(--ink)}
+.uk-aiagents .proof-link {display:inline-block;font-weight:600;color:#B23E13;text-decoration:underline;text-underline-offset:3px}
+.uk-aiagents .proof-cta-card h3 {font-size:clamp(1.3rem,2.2vw,1.6rem);font-weight:800}
+.uk-aiagents .proof-cta-card p {color:var(--n600);line-height:1.65}
+.uk-aiagents .proof-terms {list-style:none;margin:0;padding:0;border-top:1px solid var(--n200)}
+.uk-aiagents .proof-terms li {font-size:14px;color:var(--ink);padding:10px 0;border-bottom:1px solid var(--n200)}
+@media(max-width:560px) {
+  .uk-aiagents .proof-facts {grid-template-columns:1fr}
+  .uk-aiagents .proof-cta-btn {width:100%}
+}

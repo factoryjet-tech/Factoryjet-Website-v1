@@ -178,6 +178,14 @@ export const post: BlogPost = {
   excerpt:
     'Microsoft Copilot Studio pricing read on 18 October 2026: $200 credit packs, pay-as-you-go, what each Copilot Credit buys, the 125% switch-off, rate limits, UK and Australian prices, and when a custom AI agent or a custom back end is the better call for a mid-sized company.',
   category: 'Emerging Tech',
+  cta: {
+    eyebrow: 'Copilot Studio or custom',
+    heading: 'Find out which parts Copilot Studio covers and which need custom work',
+    body: 'Tell us the job, who will use the agent and the systems behind it. We tell you where Copilot Studio is enough and where a custom agent fits, then show the custom part working on your own data before you sign.',
+    button: 'Get a second opinion',
+    serviceHref: '/services/ai-agent-development',
+    serviceLabel: 'See custom AI agent development',
+  },
   author: 'Bhavesh Barot',
   date: 'Oct 18, 2026',
   dateModified: 'Oct 18, 2026',
