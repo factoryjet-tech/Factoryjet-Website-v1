@@ -7,6 +7,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import MidPageCTA from '@/components/v2/MidPageCTA';
 import FinalCTA from '@/components/v2/FinalCTA';
+import ModalCTAButton from '@/components/v2/ModalCTAButton';
 import FAQ, { type FAQItem, type FAQCategory } from '@/components/v2/FAQ';
 import ComparisonTable, { type ComparisonColumn, type ComparisonRow } from '@/components/v2/ComparisonTable';
 import Breadcrumbs, { type BreadcrumbItem } from '@/components/v2/Breadcrumbs';
@@ -1026,6 +1027,74 @@ export default function FaireAlternativesPage() {
           scrollRegionLabel="Comparison of Faire and its alternatives"
           footer="Shared means orders and payment pass through the marketplace, which also holds the retailer's account. Yours means they sit with you. Not published means the platform did not show it on the pages we read."
         />
+
+        {/* 6b. OFFER, added 2026-11-23. Clarity (1 to 23 Nov) showed US readers from Google
+            and Gemini spend 7 to 22 minutes here and finish at the table with no next step
+            in view. The offer sits where the comparing ends. Proof is limited to what
+            /b2b-ecommerce already says about GPSUK and Sow Easy. No prices, no new numbers.
+            The button opens the shared contact modal (the same one FinalCTA uses). */}
+        <section
+          data-wholesale-offer
+          aria-labelledby="wholesale-offer-title"
+          className="border-t border-fj-neutral-200 bg-fj-cream py-14 md:py-16"
+        >
+          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
+            <div className="grid grid-cols-1 gap-10 rounded-2xl border border-fj-neutral-200 border-t-[3px] border-t-[#F05A28] bg-white p-6 sm:p-8 lg:grid-cols-12 lg:gap-12 lg:p-10">
+              <div className="lg:col-span-7">
+                <p className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13]">
+                  Done comparing?
+                </p>
+                <h2 id="wholesale-offer-title" className="mt-3 font-fj-display text-2xl font-bold leading-tight tracking-[-0.02em] text-fj-ink sm:text-3xl">
+                  We build your own wholesale store, so no marketplace takes a share of the orders you win.
+                </h2>
+                <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
+                  Your retailers log in, see their own prices and minimums, and reorder when they want. We set this
+                  up on Shopify B2B, WooCommerce or BigCommerce B2B, and it can sit inside the store you already run. The accounts,
+                  prices and order history stay with you.
+                </p>
+                <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-4">
+                  <ModalCTAButton label="Plan my wholesale store" region="us" btnVariant="primary-light" />
+                  <Link
+                    href="/b2b-ecommerce"
+                    className="inline-flex items-center gap-2 font-fj-body text-sm font-semibold text-fj-ink hover:opacity-70"
+                  >
+                    How we build B2B stores
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true" className="h-4 w-4">
+                      <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </Link>
+                </div>
+                <p className="mt-5 font-fj-body text-sm leading-relaxed text-fj-neutral-600">
+                  You see working software on your own products before you sign anything.
+                </p>
+              </div>
+
+              <div className="lg:col-span-5">
+                <p className="font-fj-mono text-xs font-bold uppercase tracking-wider text-fj-neutral-600">
+                  Trade stores we have worked on
+                </p>
+                <ul className="mt-4 grid gap-4">
+                  <li className="border-l-[3px] border-l-[#F05A28] pl-4">
+                    <Link href="/case-studies/gpsuk-promotional-products" className="font-fj-display text-base font-semibold text-fj-ink hover:opacity-70">
+                      GPSUK
+                    </Link>
+                    <p className="mt-1 font-fj-body text-sm leading-relaxed text-fj-neutral-600">
+                      A trade storefront on Commerceflo with account-based pricing and quote-to-order for UK trade buyers.
+                    </p>
+                  </li>
+                  <li className="border-l-[3px] border-l-[#F05A28] pl-4">
+                    <Link href="/case-studies/sow-easy-distributor-portal" className="font-fj-display text-base font-semibold text-fj-ink hover:opacity-70">
+                      Sow Easy
+                    </Link>
+                    <p className="mt-1 font-fj-body text-sm leading-relaxed text-fj-neutral-600">
+                      A WooCommerce trade store that reads stock, pricing and SKUs from Odoo. Being tested on staging before launch.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* 7. YOUR OWN WHOLESALE PORTAL */}
         <section className="border-y border-fj-neutral-200 bg-white py-16 md:py-20">
