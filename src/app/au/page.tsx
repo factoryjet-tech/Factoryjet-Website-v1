@@ -547,6 +547,80 @@ export function AustraliaHubContent({ reviewConcept }: { reviewConcept?: Austral
           </div>
         </section>
 
+        {/* ═══ 3b. PROOF + NEXT STEP (added 23 Nov 2026: AU readers had no case study or
+            modal CTA in the top third). Every fact below is taken from
+            src/data/case-studies/index.ts (formative-concepts-bim) and
+            src/data/case-studies/washington-law-group.ts. Do not add figures. */}
+        <section className="sec-lg proof-cta" aria-labelledby="proof-cta-title">
+          <div className="wrap">
+            <div className="col-6040">
+              <div>
+                <span className="eyebrow">Work we built and still manage</span>
+                <h2 id="proof-cta-title">Two client projects you can check today</h2>
+
+                <article className="proof-case mt-8">
+                  <h3>Washington Law Group: an AI agent that reads crash news in 50 states</h3>
+                  <dl className="proof-facts mt-4">
+                    <div>
+                      <dt>What it does</dt>
+                      <dd>Reads news and police sources every two hours and emails the firm the serious commercial-vehicle crashes that qualify.</dd>
+                    </div>
+                    <div>
+                      <dt>How it stays accurate</dt>
+                      <dd>Every victim name is checked against the article text before an alert goes out.</dd>
+                    </div>
+                    <div>
+                      <dt>Status</dt>
+                      <dd>Live in production. Lawyers at the firm review every lead.</dd>
+                    </div>
+                  </dl>
+                  <a className="proof-link mt-4" href="/case-studies/washington-law-group-accident-detection-agent">
+                    Read the Washington Law Group case study <span aria-hidden="true">→</span>
+                  </a>
+                </article>
+
+                <article className="proof-case mt-8">
+                  <h3>Formative Concepts: a website overseas buyers can find and trust</h3>
+                  <dl className="proof-facts mt-4">
+                    <div>
+                      <dt>The client</dt>
+                      <dd>An architectural drafting, MEP design and BIM firm selling to architects and contractors in other countries.</dd>
+                    </div>
+                    <div>
+                      <dt>What we built</dt>
+                      <dd>A WordPress site with 20+ pages at launch: one per service and one per country it serves, Australia included.</dd>
+                    </div>
+                    <div>
+                      <dt>Status</dt>
+                      <dd>Live on formativeconcepts.com. FactoryJet built and manages the site.</dd>
+                    </div>
+                  </dl>
+                  <a className="proof-link mt-4" href="/case-studies/formative-concepts-bim">
+                    Read the Formative Concepts case study <span aria-hidden="true">→</span>
+                  </a>
+                </article>
+              </div>
+
+              <div className="card card-top-orange proof-cta-card">
+                <span className="eyebrow">Your next step</span>
+                <h3>Tell us what you need built</h3>
+                <p className="mt-4">
+                  Send a few lines about the store, website or AI agent you have in mind. We reply with what a first
+                  phase would cover, which of your tools it connects to, and what we need from you to start.
+                </p>
+                <div className="mt-6">
+                  <ModalCTAButton label="Scope my project" region="au" modalVariant="default" btnVariant="primary-light" className="proof-cta-btn" />
+                </div>
+                <ul className="proof-terms mt-6">
+                  <li>Fixed price per phase, in writing</li>
+                  <li>A demo on your own data before you sign</li>
+                  <li>500+ projects delivered, 97% on time</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ═══ 4. ALL AU SERVICES (hover cards = ItemList) ═══ */}
         <section className="sec-lg dot-grid" id="services">
           <div className="wrap">

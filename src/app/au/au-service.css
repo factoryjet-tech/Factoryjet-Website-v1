@@ -601,3 +601,20 @@
   .au-svc h1 {font-size:clamp(2.1rem,3.6vw,2.9rem)!important}
   .au-svc main > section:first-of-type {padding-top:44px!important}
 }
+
+/* ─── Proof + next step block (/au section 3b, added 23 Nov 2026) ─── */
+.au-svc .proof-case {border-top:1px solid var(--n200);padding-top:24px}
+.au-svc .proof-case h3 {font-size:clamp(1.15rem,2vw,1.35rem);font-weight:800}
+.au-svc .proof-facts {display:grid;grid-template-columns:repeat(3,1fr);gap:16px 28px}
+.au-svc .proof-facts dt {font-family:var(--fm);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#B23E13;margin-bottom:6px}
+.au-svc .proof-facts dd {margin:0;font-size:14.5px;line-height:1.6;color:var(--ink)}
+.au-svc .proof-link {display:inline-block;font-weight:600;color:#B23E13;text-decoration:underline;text-underline-offset:3px}
+.au-svc .proof-cta-card h3 {font-size:clamp(1.3rem,2.2vw,1.6rem);font-weight:800}
+.au-svc .proof-cta-card p {color:var(--n600);line-height:1.65}
+.au-svc .proof-terms {list-style:none;margin:0;padding:0;border-top:1px solid var(--n200)}
+.au-svc .proof-terms li {font-size:14px;color:var(--ink);padding:10px 0;border-bottom:1px solid var(--n200)}
+@media(max-width:960px) {.au-svc .proof-facts {grid-template-columns:1fr 1fr}}
+@media(max-width:560px) {
+  .au-svc .proof-facts {grid-template-columns:1fr}
+  .au-svc .proof-cta-btn {width:100%}
+}
