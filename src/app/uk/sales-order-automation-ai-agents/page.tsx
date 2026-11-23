@@ -381,6 +381,63 @@ export default function SalesOrderAutomationUKPage() {
           </div>
         </section>
 
+        {/* ═══ 3b. PROOF + NEXT STEP (added 23 Nov 2026: a ChatGPT visitor read this page and had no next step near the top)
+            Every GPSUK claim below is taken from the gpsuk-promotional-products entry in src/data/case-studies/index.ts.
+            GPSUK is a storefront build, not an order agent, and the copy says so. Styles reuse the 3b classes in ../ai-agents/ai-agents.css. ═══ */}
+        <section className="sec-lg proof-cta" aria-labelledby="proof-cta-title">
+          <div className="wrap">
+            <div className="col-6040">
+              <div>
+                <span className="eyebrow">UK trade orders we already handle</span>
+                <h2 id="proof-cta-title">GPSUK: trade reorders that are no longer rebuilt by hand</h2>
+                <p className="lead mt-6" style={{ maxWidth: 600 }}>
+                  GPSUK supplies branded promotional products to UK business customers. Most of their orders are
+                  repeats, and each one used to be rebuilt by email against a price that lived in someone&apos;s inbox.
+                  We built their trade storefront on Commerceflo so those reorders arrive as orders, not emails.
+                </p>
+                <dl className="proof-facts mt-8">
+                  <div>
+                    <dt>What we built</dt>
+                    <dd>A trade storefront where business buyers log in, see their own account pricing and place the order themselves.</dd>
+                  </div>
+                  <div>
+                    <dt>What it removed</dt>
+                    <dd>Retyping. A quote carries through to the order as one record instead of being keyed again once approved.</dd>
+                  </div>
+                  <div>
+                    <dt>Where an agent fits</dt>
+                    <dd>Orders that still arrive as a PDF or an email. That is the job this page describes.</dd>
+                  </div>
+                  <div>
+                    <dt>Status</dt>
+                    <dd>Live on Commerceflo, with SEO and AI search work continuing.</dd>
+                  </div>
+                </dl>
+                <a className="proof-link mt-6" href="/case-studies/gpsuk-promotional-products">
+                  Read the GPSUK case study <span aria-hidden="true">→</span>
+                </a>
+              </div>
+
+              <div className="card card-top-orange proof-cta-card">
+                <span className="eyebrow">Your next step</span>
+                <h3>See the agent run on your own purchase orders</h3>
+                <p className="mt-4">
+                  Tell us which ERP you use and how your trade customers send orders today. We show you drafts built
+                  from your own past POs, next to the orders your team keyed, before you sign anything.
+                </p>
+                <div className="mt-6">
+                  <ModalCTAButton label="See a demo on my data" region="uk" modalVariant="default" btnVariant="primary-light" className="proof-cta-btn" />
+                </div>
+                <ul className="proof-terms mt-6">
+                  <li>A demo on your own data before you sign</li>
+                  <li>Fixed price per phase, in writing</li>
+                  <li>500+ projects delivered, 97% on time</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ═══ 4. WHAT HAPPENS TO ONE ORDER ═══ */}
         <section className="sec-lg dot-grid">
           <div className="wrap">
