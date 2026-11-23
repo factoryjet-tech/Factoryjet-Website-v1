@@ -222,6 +222,20 @@
 .uk-londonseo .mt-6 {margin-top:24px}
 .uk-londonseo .mt-8 {margin-top:30px}
 
+/* ─── 3b proof + next step ─── */
+.uk-londonseo .proofcta {padding-top:56px;padding-bottom:56px}
+.uk-londonseo .proofcta-grid {display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:start}
+.uk-londonseo .proofcta-facts {display:grid;grid-template-columns:1fr 1fr;gap:14px 24px}
+.uk-londonseo .proofcta-facts dt {font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#B23E13}
+.uk-londonseo .proofcta-facts dd {font-size:14.5px;color:var(--ink);margin-top:4px;line-height:1.5}
+.uk-londonseo .proofcta-note {font-size:13.5px;margin-top:20px;max-width:620px}
+.uk-londonseo .proofcta-link {display:inline-block;margin-top:16px;font-weight:600;font-size:14.5px;color:#B23E13;border-bottom:1px solid currentColor}
+.uk-londonseo .proofcta-card {background:#fff;border:1px solid var(--n200);border-top:2px solid var(--orange);border-radius:18px;padding:26px}
+.uk-londonseo .proofcta-card h3 {font-size:20px;margin-top:10px}
+.uk-londonseo .proofcta-card p {margin-top:10px}
+.uk-londonseo .proofcta-terms {list-style:none;margin-top:20px;padding-top:16px;border-top:1px solid var(--n100);display:grid;gap:6px}
+.uk-londonseo .proofcta-terms li {font-family:var(--mono);font-size:11.5px;color:var(--n500)}
+
 /* ─── responsive ─── */
 @media(max-width:860px) {
   .uk-londonseo .hero-grid,
@@ -232,7 +246,9 @@
   .uk-londonseo .ademo,
   .uk-londonseo .msplit,
   .uk-londonseo .explorer,
-  .uk-londonseo .faq-grid {grid-template-columns:1fr}
+  .uk-londonseo .faq-grid,
+  .uk-londonseo .proofcta-grid,
+  .uk-londonseo .proofcta-facts {grid-template-columns:1fr}
   .uk-londonseo .faq-sidebar, .uk-londonseo .exnav {display:none}
 }
 @media(max-width:560px) {

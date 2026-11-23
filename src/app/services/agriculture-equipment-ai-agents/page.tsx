@@ -440,6 +440,79 @@ export default function AgricultureEquipmentAiAgentsPage() {
           </div>
         </section>
 
+        {/* PROOF + NEXT STEP (added 23 Nov 2026: engaged US readers had no next step until the mid-page CTA).
+            Every claim about the client is taken from src/data/case-studies/washington-law-group.ts. */}
+        <section className="py-16 bg-white border-b border-[#E7DED6]" aria-labelledby="ag-proof-title">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+              <div className="lg:col-span-7">
+                <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
+                  // An agent we built, live in production
+                </div>
+                <h2 id="ag-proof-title" className="text-2xl sm:text-3xl font-extrabold text-[#14110F] font-heading max-w-2xl">
+                  Washington Law Group: an agent that reads crash news in all 50 states
+                </h2>
+                <p className="text-base sm:text-lg text-[#46403B] leading-relaxed mt-4 max-w-2xl">
+                  Washington Law Group is a US personal injury firm. Serious truck crashes are first reported by local
+                  news and state police across 50 states, far more than anyone at the firm could read. We built an
+                  agent that does the reading and emails the firm the crashes that qualify under its own rules.
+                </p>
+                <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5 mt-8 max-w-2xl">
+                  <div className="border-t border-[#E7DED6] pt-3">
+                    <dt className="font-mono text-[11px] uppercase tracking-wider text-[#C94A1A] mb-1.5">What it does</dt>
+                    <dd className="text-[15px] leading-relaxed text-[#14110F]">Reads news and police sources every two hours, pulls out the facts and applies the firm&apos;s rules.</dd>
+                  </div>
+                  <div className="border-t border-[#E7DED6] pt-3">
+                    <dt className="font-mono text-[11px] uppercase tracking-wider text-[#C94A1A] mb-1.5">How it stays accurate</dt>
+                    <dd className="text-[15px] leading-relaxed text-[#14110F]">Every victim name is checked against the article text before an email goes out.</dd>
+                  </div>
+                  <div className="border-t border-[#E7DED6] pt-3">
+                    <dt className="font-mono text-[11px] uppercase tracking-wider text-[#C94A1A] mb-1.5">Who decides</dt>
+                    <dd className="text-[15px] leading-relaxed text-[#14110F]">Lawyers at the firm review every lead. The agent finds and checks; people make the call.</dd>
+                  </div>
+                  <div className="border-t border-[#E7DED6] pt-3">
+                    <dt className="font-mono text-[11px] uppercase tracking-wider text-[#C94A1A] mb-1.5">Status</dt>
+                    <dd className="text-[15px] leading-relaxed text-[#14110F]">Live in production on a dedicated US server, every day.</dd>
+                  </div>
+                </dl>
+                <a
+                  href="/case-studies/washington-law-group-accident-detection-agent"
+                  className="inline-block mt-6 font-semibold text-[#C94A1A] underline underline-offset-4"
+                >
+                  Read the Washington Law Group case study <span aria-hidden="true">→</span>
+                </a>
+              </div>
+
+              <div className="lg:col-span-5 rounded-2xl border border-[#E7DED6] border-t-4 border-t-[#F05A28] bg-[#FAFAF7] p-6 sm:p-8">
+                <div className="font-mono text-xs text-[#F05A28] font-bold uppercase tracking-wider mb-2">
+                  // Your next step
+                </div>
+                <h3 className="text-xl sm:text-2xl font-extrabold text-[#14110F] font-heading">
+                  Book a short call to scope your dealership agent
+                </h3>
+                <p className="text-[15px] text-[#46403B] leading-relaxed mt-3">
+                  Tell us the calls and tasks your parts and service team repeats every day. On the call we work out
+                  whether an agent fits, which systems it has to connect to, and what a first phase would cover.
+                </p>
+                <div className="mt-6">
+                  <ModalCTAButton
+                    label="Book a call to scope my agent"
+                    region="us"
+                    modalVariant="ai"
+                    btnVariant="primary-light"
+                    className="w-full sm:w-auto"
+                  />
+                </div>
+                <ul className="mt-6 border-t border-[#E7DED6]">
+                  <li className="text-sm text-[#14110F] py-2.5 border-b border-[#E7DED6]">Fixed price per phase, in writing</li>
+                  <li className="text-sm text-[#14110F] py-2.5 border-b border-[#E7DED6]">A demo on your own data before you sign</li>
+                  <li className="text-sm text-[#14110F] py-2.5 border-b border-[#E7DED6]">500+ projects delivered, 97% on time</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* VERIFIED AG INDUSTRY BENCHMARKS SECTION */}
         <section className="py-16 bg-white border-b border-[#E7DED6]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
