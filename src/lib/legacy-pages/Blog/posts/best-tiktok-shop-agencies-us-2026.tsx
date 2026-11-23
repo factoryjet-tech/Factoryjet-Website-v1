@@ -382,6 +382,14 @@ export const post: BlogPost = {
   excerpt:
     'A fact-checked guide to TikTok Shop agencies for US brands, split into TikTok specialists and marketplace agencies that also run Amazon and Walmart. Each profile was read on the agency’s own site on 23 October 2026, with how TikTok Shop Partner tiers work. FactoryJet is on the list and says so.',
   category: 'E-Commerce Development',
+  cta: {
+    eyebrow: 'TikTok Shop audit',
+    heading: 'Run TikTok Shop on the same catalog as your store',
+    body: 'Tell us what you sell and where your products live today: Shopify, Amazon or Walmart. We audit your shop for free, then set it up, recruit creators and run LIVE selling on one catalog and one inventory count.',
+    button: 'Get my free shop audit',
+    serviceHref: '/services/tiktok-shop-agency',
+    serviceLabel: 'See our TikTok Shop agency service',
+  },
   author: 'Bhavesh Barot',
   date: 'Oct 23, 2026',
   dateModified: 'Nov 18, 2026',

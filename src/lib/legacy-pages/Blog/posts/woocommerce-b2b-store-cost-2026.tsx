@@ -31,6 +31,14 @@ export const post: BlogPost = {
   excerpt:
     'Published 2026 agency guides put a plugin-based WooCommerce wholesale store at about $13,000 to $33,000, a custom WooCommerce B2B build at $50,000 to $100,000, and ERP sync at $5,000 to $15,000 more. This guide breaks down each line with the source next to every number.',
   category: 'E-Commerce Development',
+  cta: {
+    eyebrow: 'B2B store scoping',
+    heading: 'Turn your pricing rules into a fixed-price B2B build',
+    body: 'Send us your pricing rules, customer groups and the ERP or accounting system the store must sync with. We tell you whether WooCommerce fits, quote each phase at a fixed price and show the store working before you sign.',
+    button: 'Scope my B2B store',
+    serviceHref: '/b2b-ecommerce',
+    serviceLabel: 'See B2B ecommerce development',
+  },
   author: 'Bhavesh Barot',
   date: 'November 16, 2026',
   dateModified: 'November 16, 2026',

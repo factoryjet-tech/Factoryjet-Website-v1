@@ -175,6 +175,14 @@ export const post: BlogPost = {
   excerpt:
     'What an ecommerce website costs to have built in the UK in 2026, in pounds: Shopify, Shopify Plus, WooCommerce, Magento, Adobe Commerce and BigCommerce, by platform and by size of project. Every figure is a published UK market range or a platform list price, with its source, date and VAT basis.',
   category: 'E-Commerce Development',
+  cta: {
+    eyebrow: 'UK store scoping',
+    heading: 'Get a fixed price for your UK store, phase by phase',
+    body: 'Tell us your platform, how many products you sell and the systems the store must talk to: stock, accounting or couriers. We split the build into phases, quote each one at a fixed price and show you a working demo before you sign.',
+    button: 'Scope my store',
+    serviceHref: '/uk/ecommerce-development',
+    serviceLabel: 'See UK ecommerce development',
+  },
   author: 'Bhavesh Barot',
   date: 'Oct 11, 2026',
   dateModified: 'Oct 11, 2026',
