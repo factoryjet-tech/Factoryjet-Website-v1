@@ -352,6 +352,82 @@ export default function CityHubPage({ city }: CityHubPageProps) {
           </section>
         )}
 
+        {/* Proof + next step (added 2026-11-23). Clarity, 1 to 23 Nov: ChatGPT sent a UK
+            visitor to /uk/hull, which had a hero form but no proof near the top and zero
+            links to /case-studies on all 15 city roots. Every GPSUK fact below comes from
+            the gpsuk-promotional-products entry in src/data/case-studies/index.ts.
+            GPSUK is a UK client, NOT a client in this city: the copy must never imply a
+            local office, local team or local client. The city name appears only in the
+            sentence about how we work with businesses there. */}
+        <section aria-labelledby="city-proof-title" className="border-y border-fj-neutral-200 px-6 py-14 md:px-8 md:py-16">
+          <div className="mx-auto grid max-w-[1160px] gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-14">
+            <div>
+              <p className="font-fj-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-fj-neutral-400">
+                UK work you can check
+              </p>
+              <h2 id="city-proof-title" className={`mt-4 ${H2}`}>
+                GPSUK: a trade storefront UK business buyers order from
+              </h2>
+              <p className={LEAD}>
+                GPSUK supplies branded promotional products to UK business customers. Repeat orders used to be
+                rebuilt by email against prices that lived in someone&apos;s inbox. We built their trade storefront
+                on Commerceflo so buyers reorder at their own account prices. Work for {city.name} businesses runs
+                the same way: a written scope and a fixed price per phase before anything starts.
+              </p>
+              <dl className="mt-8 grid gap-x-8 gap-y-6 sm:grid-cols-2">
+                {[
+                  ['What we built', 'A trade storefront where business buyers log in and see their own account pricing.'],
+                  ['What it removed', 'Retyping. A quote carries through to the order instead of being keyed again.'],
+                  ['The catalogue', 'Structured so buyers find products the way they describe them, across a wide range of near-identical items.'],
+                  ['Status', 'Live on Commerceflo, with SEO and AI search work continuing.'],
+                ].map(([dt, dd]) => (
+                  <div key={dt} className="border-t border-fj-neutral-200 pt-4">
+                    <dt className="font-fj-body text-[13px] font-semibold uppercase tracking-[0.08em] text-fj-neutral-400">{dt}</dt>
+                    <dd className="mt-2 font-fj-body text-[15px] leading-[1.6] text-fj-ink">{dd}</dd>
+                  </div>
+                ))}
+              </dl>
+              <div className="mt-7 flex flex-wrap gap-x-7 gap-y-3">
+                <Link
+                  href="/case-studies/gpsuk-promotional-products"
+                  className="inline-flex items-center gap-1.5 font-fj-body text-[14.5px] font-semibold text-[#B23E13] transition-colors hover:text-[#F05A28]"
+                >
+                  Read the GPSUK case study
+                  <span aria-hidden="true">&rarr;</span>
+                </Link>
+                <Link
+                  href="/case-studies"
+                  className="inline-flex items-center gap-1.5 font-fj-body text-[14.5px] font-semibold text-fj-ink transition-colors hover:text-[#B23E13]"
+                >
+                  All case studies
+                  <span aria-hidden="true">&rarr;</span>
+                </Link>
+              </div>
+            </div>
+
+            <div className="self-start rounded-2xl border border-fj-neutral-200 border-t-[3px] border-t-[#C2440F] bg-white px-6 py-7 md:px-8 md:py-8">
+              <p className="font-fj-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-[#B23E13]">
+                Your next step
+              </p>
+              <h3 className="mt-3 font-fj-display text-[1.375rem] font-semibold leading-[1.25] tracking-[-0.01em] text-fj-ink">
+                Get a written scope for your {city.name} project
+              </h3>
+              <p className="mt-3 font-fj-body text-[15px] leading-[1.65] text-fj-neutral-600">
+                Send your current site or a short brief. We reply with what we would build, in what order, and a
+                fixed price for each phase. For AI agent work, you see a demo on your own data before you sign.
+              </p>
+              <div className="mt-6">
+                <ModalCTAButton label="Get a scoped proposal" region="uk" modalVariant="default" btnVariant="primary-light" />
+              </div>
+              <ul className="mt-6 flex flex-col gap-2">
+                {['Fixed price per phase, in writing', 'AI agents: a demo on your own data before you sign', '500+ projects delivered, 97% on time'].map((t) => (
+                  <li key={t} className="font-fj-body text-[14px] text-fj-ink">{t}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
         {/* Real search demand, as a comparison table */}
         {market && market.terms.length > 0 && (
           <section className="px-6 py-16 md:px-8 md:py-20">
