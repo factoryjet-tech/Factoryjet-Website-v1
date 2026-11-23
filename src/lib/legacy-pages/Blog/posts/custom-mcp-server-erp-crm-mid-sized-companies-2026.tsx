@@ -148,6 +148,14 @@ export const post: BlogPost = {
   excerpt:
     'When a mid-sized company should build a custom MCP server, when a vendor\'s official one is enough, the tools an ERP MCP server should expose, how MCP servers are structured and hosted, and the security rules from the MCP documentation that a company server must follow.',
   category: 'Emerging Tech',
+  cta: {
+    eyebrow: 'MCP server scoping',
+    heading: 'Scope a custom MCP server for your ERP and CRM',
+    body: 'Tell us the system and what people should be able to ask or change. We map the tools, permissions and approvals, and show the server working on your own data before you sign. You own the code from day one.',
+    button: 'Scope my MCP server',
+    serviceHref: '/services/ai-integration-services',
+    serviceLabel: 'See AI integration services',
+  },
   author: 'Bhavesh Barot',
   date: 'Oct 18, 2026',
   dateModified: 'Oct 31, 2026',

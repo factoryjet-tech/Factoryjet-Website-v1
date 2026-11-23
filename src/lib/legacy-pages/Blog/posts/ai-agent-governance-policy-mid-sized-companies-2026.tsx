@@ -159,6 +159,14 @@ export const post: BlogPost = {
   excerpt:
     'A working AI agent governance policy for a company of roughly 100 to 2,000 people: four autonomy levels, written approval limits, access rules, logging, testing and an off switch, mapped to NIST AI RMF, OWASP LLM06 and ISO/IEC 42001. Includes a free, editable policy template.',
   category: 'Emerging Tech',
+  cta: {
+    eyebrow: 'Governance before go-live',
+    heading: 'Set your first agent\'s limits before it is built',
+    body: 'Tell us the job, the systems and who signs off. We suggest the autonomy level, the limits and what to log, and show the agent working on your own data before you sign.',
+    button: 'Review my agent plan',
+    serviceHref: '/services/ai-agent-monitoring',
+    serviceLabel: 'See AI agent monitoring and support',
+  },
   author: 'Bhavesh Barot',
   date: 'Oct 17, 2026',
   dateModified: 'Oct 17, 2026',

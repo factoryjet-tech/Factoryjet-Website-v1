@@ -153,6 +153,14 @@ export const post: BlogPost = {
   excerpt:
     'A five-layer reference architecture for agentic AI at a mid-sized company: where work arrives, the agent, the tool layer where permissions live, your ERP and CRM, and the control layer. With the five workflow patterns, when to go multi-agent, how MCP fits, and a worked example from emailed purchase order to draft sales order.',
   category: 'Emerging Tech',
+  cta: {
+    eyebrow: 'Architecture scoping',
+    heading: 'Sketch the architecture for your first agent',
+    body: 'Tell us the job and the systems behind it: ERP, CRM, inbox or portal. We tell you which parts are a workflow, which need an agent and what a person should approve, then quote each phase at a fixed price.',
+    button: 'Scope my agent',
+    serviceHref: '/services/ai-agent-development',
+    serviceLabel: 'See AI agent development',
+  },
   author: 'Bhavesh Barot',
   date: 'Oct 17, 2026',
   dateModified: 'Oct 17, 2026',

@@ -92,10 +92,13 @@ export const BlogPostPage: React.FC<BlogPostPageProps> = ({
 }) => {
   // One offer per post, matched to its topic and market (see ../leadOffer.ts).
   const leadOffer = blogLeadOffer(post);
-  // A post that already renders its own CTA between 20% and 80% of the text keeps it alone.
-  const content = scanPostContent(post.content).hasOwnMidCta
-    ? post.content
-    : withMidPageCTA(post.content, <BlogMidPageCTA offer={leadOffer} />);
+  // A post with its own `cta` always gets that topic CTA. Otherwise, a post that already renders
+  // its own CTA between 20% and 80% of the text keeps it alone.
+  const content = post.cta
+    ? withMidPageCTA(post.content, <BlogMidPageCTA offer={leadOffer} topic={post.cta} />)
+    : scanPostContent(post.content).hasOwnMidCta
+      ? post.content
+      : withMidPageCTA(post.content, <BlogMidPageCTA offer={leadOffer} />);
   return (
     <div className={`blog-post min-h-screen bg-[#FAFAF7] relative${post.slug === 'best-ai-seo-agencies-india' ? ' blog-india-guide' : ''}`}>
       <ReadingProgress />
