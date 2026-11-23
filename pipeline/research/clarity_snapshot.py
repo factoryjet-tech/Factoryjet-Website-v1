@@ -23,6 +23,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.request
 
@@ -30,6 +31,10 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT_ROOT = os.path.join(HERE, 'data', 'clarity')
 API = 'https://www.clarity.ms/export-data/api/v1/project-live-insights'
 SPLITS = {'totals': None, 'url': 'URL', 'source': 'Source', 'device': 'Device'}
+# Network drops (Mac asleep or offline at 23:30) and read timeouts used to crash
+# the whole run and leave an empty day folder (3, 4, 8, 21 Nov 2026). Retry those.
+RETRIES = 3
+RETRY_WAIT = 90
 
 
 def token():
@@ -58,10 +63,20 @@ def main():
         if os.path.exists(path) and not force:
             print(f'skip {day}/{name} (exists)')
             continue
-        try:
-            data = fetch(tok, dim)
-        except urllib.error.HTTPError as e:
-            print(f'FAIL {name}: HTTP {e.code}', file=sys.stderr)
+        data = None
+        for attempt in range(1, RETRIES + 1):
+            try:
+                data = fetch(tok, dim)
+                break
+            except urllib.error.HTTPError as e:
+                # 4xx (bad token, rate limit) will not fix itself on retry.
+                print(f'FAIL {name}: HTTP {e.code}', file=sys.stderr)
+                break
+            except (urllib.error.URLError, TimeoutError, OSError) as e:
+                print(f'FAIL {name} attempt {attempt}/{RETRIES}: {e}', file=sys.stderr)
+                if attempt < RETRIES:
+                    time.sleep(RETRY_WAIT)
+        if data is None:
             continue
         with open(path, 'w') as f:
             json.dump({'fetched_at': datetime.datetime.now().isoformat(timespec='seconds'), 'split': name, 'data': data}, f, indent=1)
