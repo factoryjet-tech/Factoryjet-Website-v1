@@ -763,7 +763,7 @@ export default function LocalSeoServicePage() {
                 <div className="ic ic-o"><PinIcon /></div>
                 <div className="kk">Category + profile tuning</div>
                 <h3>Google Business Profile</h3>
-                <p>Categories, services, posts, photos, and Q and A tuned for Google Maps SEO so you rank in the map pack. Your profile is the single biggest signal Google reads, so it gets the most attention.</p>
+                <p>Categories, services, posts, photos, and Q and A tuned for Google Maps SEO so you rank in the map pack. Your profile is the single biggest signal Google reads, so it gets the most attention. Only the profile needs work? See <Link href="/services/google-business-profile-optimization" style={LINK_STYLE}>Google Business Profile optimization</Link>.</p>
                 <div className="impact">Map-pack impact <span className="bar"><i style={{ width: '96%' }} /></span> High</div>
               </div>
               <div className="tile">

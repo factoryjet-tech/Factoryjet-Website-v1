@@ -60,6 +60,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/services/ai-quoting-software',                 source: 'src/app/services/ai-quoting-software/page.tsx' },
   // /services/seo retired 2026-09-23: 301 to /services/ai-seo (the AI Search & SEO hub).
   { path: '/services/local-seo',                           source: 'src/app/services/local-seo/page.tsx' },
+  { path: '/services/google-business-profile-optimization', source: 'src/app/services/google-business-profile-optimization/page.tsx' },
   { path: '/services/ecommerce-seo',                       source: 'src/app/services/ecommerce-seo/page.tsx' },
   { path: '/services/shopify-seo',                         source: 'src/app/services/shopify-seo/page.tsx' },
   { path: '/services/small-business-seo',                  source: 'src/app/services/small-business-seo/page.tsx' },
