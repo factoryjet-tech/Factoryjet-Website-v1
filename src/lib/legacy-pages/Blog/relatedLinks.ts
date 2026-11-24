@@ -74,6 +74,13 @@ const SERVICE_RULES: ServiceRule[] = [
     weight: 4,
   },
   {
+    href: '/services/seo-copywriting',
+    label: 'SEO Copywriting',
+    blurb: 'Service, location, product and blog pages written from search data and checked by a person.',
+    keywords: ['seo copywriting', 'seo copywriter', 'seo content writing', 'seo writing', 'content writing', 'copywriting'],
+    weight: 4,
+  },
+  {
     href: '/services/seo-audit',
     label: 'SEO Audit',
     blurb: 'Find what is holding the site back before spending on content or links.',
@@ -776,6 +783,7 @@ const SERVICE_FAMILY: Record<string, ServiceFamily> = {
   '/services/ai-seo': 'search',
   '/services/seo-consulting': 'search',
   '/services/white-label-seo': 'search',
+  '/services/seo-copywriting': 'search',
   '/services/seo-audit': 'search',
   '/services/local-seo': 'search',
   '/services/google-business-profile-optimization': 'search',
