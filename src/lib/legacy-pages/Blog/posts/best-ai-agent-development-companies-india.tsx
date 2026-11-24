@@ -127,7 +127,7 @@ const FIRMS: Firm[] = [
     offices: 'Not read on the pages we opened, so we name no city',
     type: 'Enterprise AI company with an agentic AI platform and data-led AI services',
     scale: 'Its about page says it was founded in 2000 and supports large global enterprises',
-    what: 'Its about page says it aims to power human decisions in its clients' enterprises with AI. Its home page says its work is powered by its own enterprise agentic AI platform, and talks about moving AI beyond pilots.',
+    what: 'Its about page says it aims to power human decisions in its clients\' enterprises with AI. Its home page says its work is powered by its own enterprise agentic AI platform, and talks about moving AI beyond pilots.',
     bestFor: 'Worth a look if you are a large enterprise that wants agents tied to a data programme.',
     ask: 'Whether it takes a small first piece of work from a mid-sized company.',
   },
@@ -197,7 +197,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Where do I find good AI agent developers to hire in India?',
-    a: 'Look for people who have run an agent in a live business and can explain how it stops safely when it errs. Quytech's menu lists AI Agent Developers among the developers you can hire. A project firm suits a fixed scope, and a freelancer suits a small trial.',
+    a: 'Look for people who have run an agent in a live business and can explain how it stops safely when it errs. Quytech\'s menu lists AI Agent Developers among the developers you can hire. A project firm suits a fixed scope, and a freelancer suits a small trial.',
   },
   {
     q: 'Is there a good AI agent development company in Bangalore?',
