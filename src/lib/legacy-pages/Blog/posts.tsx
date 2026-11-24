@@ -188,6 +188,12 @@ import { post as bestBigcommerceB2bAgencies2026Post } from './posts/best-bigcomm
 import { post as bestShopifyPlusB2bAgencies2026Post } from './posts/best-shopify-plus-b2b-agencies-2026';
 import { post as bestShopifyMigrationAgencies2026Post } from './posts/best-shopify-migration-agencies-2026';
 import { post as whatRankingEcommerceAgencyPagesContain2026Post } from './posts/what-ranking-ecommerce-agency-pages-contain-2026';
+import { post as bestAiAgentDevelopmentCompaniesIndiaPost } from './posts/best-ai-agent-development-companies-india';
+import { post as topAiDevelopmentCompaniesIndiaPost } from './posts/top-ai-development-companies-india';
+import { post as bestAiAutomationAgenciesIndiaPost } from './posts/best-ai-automation-agencies-india';
+import { post as aiAgentDevelopmentCostIndiaPost } from './posts/ai-agent-development-cost-india';
+import { post as bestShopifyDevelopmentCompaniesIndiaPost } from './posts/best-shopify-development-companies-india';
+import { post as ecommerceWebsiteDevelopmentCostIndiaPost } from './posts/ecommerce-website-development-cost-india';
 
 export const POSTS: BlogPost[] = [
   // --- DIRECT-ANSWER GUIDES (2026-10-24): AI agent implementation timeline, Shopify Plus returns agents ---
@@ -4840,4 +4846,10 @@ export const POSTS: BlogPost[] = [
   bestShopifyPlusB2bAgencies2026Post,
   bestShopifyMigrationAgencies2026Post,
   whatRankingEcommerceAgencyPagesContain2026Post,
+  bestAiAgentDevelopmentCompaniesIndiaPost,
+  topAiDevelopmentCompaniesIndiaPost,
+  bestAiAutomationAgenciesIndiaPost,
+  aiAgentDevelopmentCostIndiaPost,
+  bestShopifyDevelopmentCompaniesIndiaPost,
+  ecommerceWebsiteDevelopmentCostIndiaPost,
 ];

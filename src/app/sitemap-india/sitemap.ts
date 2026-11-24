@@ -121,6 +121,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: PRIORITY.service,
     },
     // /services/ecommerce-development is listed in sitemap-us only (deduped 2026-09-30).
+    // The five India twins below live at root paths and are listed here (added 2026-11-24).
+    {
+      url: `${SITE_URL}/ai-agent-development`,
+      lastModified: getFileLastMod('src/app/ai-agent-development/page.tsx'),
+      changeFrequency: CHANGEFREQ.service as ChangeFreq,
+      priority: PRIORITY.service,
+    },
+    {
+      url: `${SITE_URL}/ai-development`,
+      lastModified: getFileLastMod('src/app/ai-development/page.tsx'),
+      changeFrequency: CHANGEFREQ.service as ChangeFreq,
+      priority: PRIORITY.service,
+    },
+    {
+      url: `${SITE_URL}/ai-automation`,
+      lastModified: getFileLastMod('src/app/ai-automation/page.tsx'),
+      changeFrequency: CHANGEFREQ.service as ChangeFreq,
+      priority: PRIORITY.service,
+    },
+    {
+      url: `${SITE_URL}/ai-chatbot-development`,
+      lastModified: getFileLastMod('src/app/ai-chatbot-development/page.tsx'),
+      changeFrequency: CHANGEFREQ.service as ChangeFreq,
+      priority: PRIORITY.service,
+    },
+    {
+      url: `${SITE_URL}/ecommerce-development`,
+      lastModified: getFileLastMod('src/app/ecommerce-development/page.tsx'),
+      changeFrequency: CHANGEFREQ.service as ChangeFreq,
+      priority: PRIORITY.service,
+    },
     {
       url: `${SITE_URL}/shopify-development`,
       lastModified: getFileLastMod('src/app/shopify-development/page.tsx'),

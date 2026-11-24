@@ -58,10 +58,13 @@ export const EXEMPT_CRAWLER_UA = [
 export const INDIA_TO_US_RULES = [
   // ecommerce city pages — sub-paths only; the bare hub /services/ecommerce-development is US-owned
   { match: (p) => p.startsWith('/services/ecommerce-development/'), target: '/services/ecommerce-development' },
-  // REMOVED 2026-08-06: /services/ai-agent-development was retargeted from India to
-  // the US (measured demand 8,250/mo, median KD 6). This rule was bouncing every
-  // North American visitor off the page, so the retarget would have been pointless
-  // while it stood. The cluster is now US-owned and serves NA traffic directly.
+  // History: on 2026-08-06 the old India /services/ai-agent-development rule was removed
+  // because that URL was retargeted to the US (measured demand 8,250/mo, median KD 6),
+  // and the cluster stayed US-owned with no India twin. Changed 2026-11-24: five
+  // dedicated India pages now exist at root paths (/ai-agent-development, /ai-development,
+  // /ai-automation, /ai-chatbot-development, /ecommerce-development). They are listed
+  // below so NA humans are sent to the US twin. The US URLs under /services/ are
+  // unchanged and still serve NA traffic directly.
   // India web-design hub + city pages → US /services/web-design
   { match: (p) => p === '/web-design' || p.startsWith('/web-design/'), target: '/services/web-design' },
   // India SEO hub + city + discipline pages → US SEO hub. Repointed 2026-09-23:
@@ -74,6 +77,13 @@ export const INDIA_TO_US_RULES = [
   { match: (p) => p === '/wordpress-development', target: '/services/wordpress-development' },
   { match: (p) => p === '/n8n-automation', target: '/services/ai-automation' },
   { match: (p) => p === '/whatsapp-chatbot', target: '/services/ai-chatbot-development' },
+  // India twins of five US pages, added 2026-11-24. Exact match only, so the US
+  // sub-paths (/services/ecommerce-development/<city>, agent cluster pages) are untouched.
+  { match: (p) => p === '/ai-agent-development', target: '/services/ai-agent-development' },
+  { match: (p) => p === '/ai-development', target: '/services/ai-development' },
+  { match: (p) => p === '/ai-automation', target: '/services/ai-automation' },
+  { match: (p) => p === '/ai-chatbot-development', target: '/services/ai-chatbot-development' },
+  { match: (p) => p === '/ecommerce-development', target: '/services/ecommerce-development' },
   // India digital-marketing hub → US services hub (no dedicated US DM page yet)
   { match: (p) => p === '/digital-marketing' || p.startsWith('/digital-marketing/'), target: '/services' },
 ]
@@ -90,11 +100,12 @@ export const IN_COUNTRIES = new Set(['IN'])
 //      /omnichannel-commerce, /ecommerce-for-manufacturers, /headless-commerce,
 //      /commerceflo, /agentic-commerce). There is nowhere better to send an India
 //      visitor, so they keep the US page. The footer region selector covers these.
-//   2. Reverses that NARROW the page. /services/ai-automation → /n8n-automation
-//      and /services/ai-chatbot-development → /whatsapp-chatbot exist as forward rules
-//      because a broad US page is a fine landing spot for a narrow India one. The
-//      reverse is not true: sending someone from "AI workflow automation" to a page
-//      only about n8n is a downgrade. Not mirrored.
+//   2. Reverses that NARROW the page. /n8n-automation → /services/ai-automation and
+//      /whatsapp-chatbot → /services/ai-chatbot-development exist as forward rules
+//      because a broad US page is a fine landing spot for a narrow India page. Those
+//      two narrow pages are not the mirror target. Since 2026-11-24 the broad India
+//      twins /ai-automation and /ai-chatbot-development exist, and those ARE mirrored
+//      below (broad to broad, so no downgrade).
 export const US_TO_INDIA_RULES = [
   // REMOVED 2026-09-23 at Bhavesh's request: /services/web-design → /web-design and
   // /services/ai-seo → /ai-seo. Both hubs were rebuilt to serve the US and India
@@ -105,10 +116,14 @@ export const US_TO_INDIA_RULES = [
   // /services/ai-seo rule below instead.
   { match: (p) => p === '/services/shopify-development',  target: '/shopify-development' },
   { match: (p) => p === '/services/wordpress-development', target: '/wordpress-development' },
-  // REMOVED 2026-08-06: this sent Indian visitors from /services/ai-agents to
-  // /services/ai-agent-development, which is now the US page. There is no India
-  // twin for the agent cluster any more, so India traffic stays on the US page
-  // rather than being routed to a second US page.
+  // History: 2026-08-06 the old /services/ai-agents rule was removed (it pointed at a
+  // US page). /services/ai-agents is now a CDN 301, so geo ignores it. Added 2026-11-24:
+  // five genuine 1:1 India twins, bare path only (city and cluster sub-paths stay US).
+  { match: (p) => p === '/services/ai-agent-development', target: '/ai-agent-development' },
+  { match: (p) => p === '/services/ai-development', target: '/ai-development' },
+  { match: (p) => p === '/services/ai-automation', target: '/ai-automation' },
+  { match: (p) => p === '/services/ai-chatbot-development', target: '/ai-chatbot-development' },
+  { match: (p) => p === '/services/ecommerce-development', target: '/ecommerce-development' },
 ]
 
 /** Drop a trailing slash (except root) so `/web-design/` and a target with no slash
@@ -155,9 +170,9 @@ export function isIndiaPath(pathname) {
  * True when the response for this path depends on country or User-Agent, in either
  * direction, and therefore must not be stored in the shared edge cache.
  *
- * Cost of the 2026-08-03 addition, stated plainly: the six US pages in
+ * Cost of the 2026-08-03 addition (now eleven pages after 2026-11-24), stated plainly: the US pages in
  * US_TO_INDIA_RULES now bypass shared edge caching too. Pages still serves them from
- * the edge, but they lose the cached-HTML fast path. Six pages is an acceptable
+ * the edge, but they lose the cached-HTML fast path. This is an acceptable
  * price for symmetric routing; adding the whole /services tree here would not be.
  */
 export function isGeoSensitivePath(pathname) {

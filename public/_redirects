@@ -154,8 +154,9 @@
 # /services/ecommerce-development is the canonical India ecommerce hub (page.tsx exists).
 # No redirect needed — page serves directly.
 
-# Bare /ecommerce-development → canonical India ecommerce hub
-/ecommerce-development /services/ecommerce-development 301
+# Bare /ecommerce-development is NOT redirected since 2026-11-24: a dedicated India page
+# now lives at that path (src/app/ecommerce-development). The old bare 301 would have hidden it
+# and looped with the geo mirror. City paths below are unchanged.
 # City paths under the retired /ecommerce-development prefix → canonical /services/ URL
 # (legacy static public/ecommerce-development/* deleted 2026-06-05; see FJ-001)
 /ecommerce-development/mumbai /services/ecommerce-development/mumbai 301

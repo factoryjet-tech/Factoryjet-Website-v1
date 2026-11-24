@@ -141,13 +141,40 @@ expect('IN human /services/shopify-development → /shopify-development (twin st
   decideInRedirect({ path: '/services/shopify-development', country: 'IN', userAgent: CHROME }), '/shopify-development')
 expect('IN human /services/seo (retired) → NOT redirected by geo',
   decideInRedirect({ path: '/services/seo', country: 'IN', userAgent: CHROME }), null)
-// Changed 2026-08-06: /services/ai-agent-development is now the US page, so it is
-// no longer a valid India destination. There is no India twin for the agent
-// cluster, and routing India traffic from one US page to another is not a mirror.
+// /services/ai-agents is retired (301 at the CDN), so geo leaves it alone.
 expect('IN human /services/ai-agents (retired) → NOT redirected by geo',
   decideInRedirect({ path: '/services/ai-agents', country: 'IN', userAgent: CHROME }), null)
-expect('IN human /services/ai-agent-development → NOT redirected (US page, no mirror)',
-  decideInRedirect({ path: '/services/ai-agent-development', country: 'IN', userAgent: CHROME }), null)
+// Changed 2026-11-24: five India pages now exist as genuine 1:1 twins of US pages,
+// so India visitors are mirrored to them (same pattern as /services/shopify-development).
+const NEW_TWINS = [
+  ['/services/ai-agent-development', '/ai-agent-development'],
+  ['/services/ai-development', '/ai-development'],
+  ['/services/ai-automation', '/ai-automation'],
+  ['/services/ai-chatbot-development', '/ai-chatbot-development'],
+  ['/services/ecommerce-development', '/ecommerce-development'],
+]
+for (const [us, india] of NEW_TWINS) {
+  expect(`IN human ${us} → ${india} (new India twin)`,
+    decideInRedirect({ path: us, country: 'IN', userAgent: CHROME }), india)
+  expect(`IN human ${us}/ (trailing slash) → ${india}`,
+    decideInRedirect({ path: us + '/', country: 'IN', userAgent: CHROME }), india)
+  expect(`NA human ${india} → ${us} (new India page bounces NA)`,
+    decideNaRedirect({ path: india, country: 'US', userAgent: CHROME }), us)
+  expect(`NA human ${india}/ (trailing slash) → ${us}`,
+    decideNaRedirect({ path: india + '/', country: 'CA', userAgent: CHROME }), us)
+  expect(`Googlebot on ${india} → NOT redirected`,
+    decideNaRedirect({ path: india, country: 'US', userAgent: GOOGLEBOT }), null)
+  expect(`Googlebot on ${us} from IN → NOT redirected`,
+    decideInRedirect({ path: us, country: 'IN', userAgent: GOOGLEBOT }), null)
+  expect(`LOOP CHECK: IN visitor on ${india} is served`,
+    decideGeoRedirect({ path: india, country: 'IN', userAgent: CHROME }), null)
+  expect(`LOOP CHECK: US visitor on ${us} is served`,
+    decideGeoRedirect({ path: us, country: 'US', userAgent: CHROME }), null)
+}
+expect('IN human /services/ecommerce-development/mumbai → NOT redirected (sub-path, no mirror)',
+  decideInRedirect({ path: '/services/ecommerce-development/mumbai', country: 'IN', userAgent: CHROME }), null)
+expect('IN human /services/ai-agent-development/ai-scheduling-agent → NOT redirected (sub-path, no mirror)',
+  decideInRedirect({ path: '/services/ai-agent-development/ai-scheduling-agent', country: 'IN', userAgent: CHROME }), null)
 expect('IN human trailing slash normalised',
   decideInRedirect({ path: '/services/shopify-development/', country: 'IN', userAgent: CHROME }), '/shopify-development')
 expect('country case-insensitive',
@@ -166,9 +193,13 @@ expect('IN human /replatforming → NOT redirected (no India twin)',
   decideInRedirect({ path: '/replatforming', country: 'IN', userAgent: CHROME }), null)
 expect('IN human /b2b-ecommerce → NOT redirected (no India twin)',
   decideInRedirect({ path: '/b2b-ecommerce', country: 'IN', userAgent: CHROME }), null)
-// Deliberately NOT mirrored: the reverse would narrow the page. See US_TO_INDIA_RULES.
-expect('IN human /services/ai-automation → NOT redirected (reverse would narrow)',
-  decideInRedirect({ path: '/services/ai-automation', country: 'IN', userAgent: CHROME }), null)
+// Still not mirrored: the narrow forward targets. NA on /n8n-automation and
+// /whatsapp-chatbot keep their forward rules; their reverse is covered by the
+// broad ai-automation and ai-chatbot-development twins above.
+expect('US human /n8n-automation → /services/ai-automation (narrow forward rule kept)',
+  decideNaRedirect({ path: '/n8n-automation', country: 'US', userAgent: CHROME }), '/services/ai-automation')
+expect('US human /whatsapp-chatbot → /services/ai-chatbot-development (narrow forward rule kept)',
+  decideNaRedirect({ path: '/whatsapp-chatbot', country: 'US', userAgent: CHROME }), '/services/ai-chatbot-development')
 expect('US human on a US page → NOT redirected',
   decideInRedirect({ path: '/services/ai-seo', country: 'US', userAgent: CHROME }), null)
 expect('unknown country → NOT redirected (fail open)',
