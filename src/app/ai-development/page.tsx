@@ -16,7 +16,7 @@ import FinalCTA from '@/components/v2/FinalCTA';
 export const metadata: Metadata = {
   title: 'Best AI Development Company in India | FactoryJet',
   description:
-    'Custom AI software for businesses across India: answers from your own documents, AI built into your CRM and ERP, generative AI apps. Tested on your data before launch.',
+    'Custom AI software for businesses across India: answers from your documents, AI inside your CRM and ERP, generative AI apps. Tested on your data first.',
   keywords: [
     'AI development company',
     'AI development company in India',
@@ -105,42 +105,43 @@ const DEV_SERVICES = [
 
 const DEV_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
-  { label: 'Large IT services firm' },
-  { label: 'Freelancer' },
-  { label: 'AI product company (SaaS)' },
+  { label: 'Big IT consultancy' },
+  { label: 'Independent contractor' },
+  { label: 'Ready-made AI product' },
 ] as const;
 
 const DEV_COMPARISON_ROWS = [
   {
-    feature: 'Built around your own systems',
-    values: ['Yes, one job at a time', 'Yes, inside a larger programme', 'Yes, quality varies', 'You configure what the product offers'],
+    feature: 'Fit to your own systems',
+    values: ['Built around them, one job at a time', 'Typically part of a wider programme', 'Typically depends on the person', 'Typically limited to its settings'],
   },
   {
-    feature: 'Tested on your cases before launch',
-    values: ['Yes, with a pass mark you approve', 'Usually after a discovery phase', 'Rarely', 'Generic demo data'],
+    feature: 'Proof before you commit',
+    values: ['Prototype scored on your cases, pass mark agreed', 'Typically a discovery phase first', 'Typically a short sample', 'Typically a generic demo'],
   },
   {
     feature: 'How the price is set',
-    values: ['Fixed price per phase, in writing', 'Programme quote', 'Hourly or per project', 'Monthly plan per seat or volume'],
+    values: ['Fixed price per phase, in writing', 'Typically a programme quote', 'Typically hourly or per project', 'Typically a monthly plan'],
   },
   {
-    feature: 'Who owns the code',
-    values: ['You do, from day one', 'Contract decides', 'Contract decides', 'The vendor does'],
+    feature: 'Code ownership',
+    values: ['Yours, in your repository and cloud account', 'Typically set by the contract', 'Typically set by the contract', 'Typically stays with the vendor'],
   },
   {
     feature: 'Support after launch',
-    values: ['Optional, no monthly minimum', 'Separate support contract', 'Ask before you hire', 'Included in the plan'],
+    values: ['Optional, scored monthly against your test set', 'Typically a separate contract', 'Typically agreed case by case', 'Typically bundled into the plan'],
   },
   {
-    feature: 'Best fit',
-    values: ['A mid-sized business with a specific AI job', 'Programmes with thousands of users', 'A small prototype', 'A standard task that needs no custom logic'],
+    feature: 'Where it fits best',
+    values: ['A mid-sized business with one clear AI job', 'Very large, multi-team programmes', 'A small prototype', 'A standard task with no custom logic'],
   },
 ];
 
 const DEV_COST_ROWS = [
-  { tier: 'Retrieval build (answers from your documents)', range: '₹12,00,000 to ₹35,00,000' },
-  { tier: 'Fine-tuned open-source model', range: '₹20,00,000 to ₹60,00,000 and above' },
-  { tier: 'Fully custom model', range: '₹1,00,00,000 and above' },
+  { tier: 'API-based build (hosted model, your logic around it)', range: '₹5 lakh to ₹20 lakh' },
+  { tier: 'Retrieval build (answers from your documents)', range: '₹12 lakh to ₹35 lakh' },
+  { tier: 'Fine-tuned open-source model', range: '₹20 lakh to ₹60 lakh and above' },
+  { tier: 'Fully custom model', range: '₹1 crore and above' },
 ];
 
 const DEV_STEPS = [
@@ -177,7 +178,7 @@ const DEV_FAQS = [
     category: 'choosing',
     question: 'Which is the best AI development company in India?',
     answer:
-      'No ranking is neutral and every list weighs size differently. For a mid-sized business with a specific job, FactoryJet is our answer: one problem built end to end, tested on your own cases, priced in writing. A very large programme with thousands of users may suit a large IT services firm better.',
+      'No ranking is neutral and every list weighs size differently. For a mid-sized business with a specific job, FactoryJet is our answer: one problem built end to end, tested on your own cases, priced in writing. A programme spanning many teams and countries may suit a big IT consultancy better.',
   },
   {
     category: 'choosing',
@@ -207,13 +208,13 @@ const DEV_FAQS = [
     category: 'choosing',
     question: 'Which is the best generative AI development company in India for a mid-sized business?',
     answer:
-      'Mid-sized businesses usually need one working system, not a transformation programme. Look for a generative AI development company that starts with a single use case, scores it on a sample of your data, and lets you decide each next phase after seeing the last one work.',
+      'A mid-sized business gets the most from one well-chosen use case, such as drafting replies or answering from its own files. A good generative AI development company will ask for a sample of your data, score its first version on it, and quote the next phase only once you have seen the result.',
   },
   {
     category: 'choosing',
     question: 'What should I look for in an AI app development company?',
     answer:
-      'Ask to see AI systems they have put live, not demos. Ask who writes the code and who supports it after launch. Ask how accuracy is measured, where your data is processed, and whether you will own the code, prompts and test set. Plain answers to all of those are a good sign.',
+      'Ask to see AI systems they have put live in a business. Ask who writes the code and who supports it after launch. Ask how accuracy is measured, where your data is processed, and whether you will own the code, prompts and test set. Plain answers to all of those are a good sign.',
   },
   {
     category: 'choosing',
@@ -225,14 +226,14 @@ const DEV_FAQS = [
     category: 'choosing',
     question: 'Is there a good AI development company for businesses in Bangalore, Mumbai or Delhi?',
     answer:
-      'Yes. We work with businesses across India, and scoping, demos and reviews run over video calls, so a company in Bengaluru, Mumbai, Delhi NCR or Pune is served the same way. Send the job and we will say whether AI is the right tool for it.',
+      'Yes. We work with businesses across India, whichever city you are in. Send the job and we will say whether AI is the right tool for it.',
   },
   /* ── Cost ── */
   {
     category: 'cost',
     question: 'How much does AI development cost in India?',
     answer:
-      'A July 2026 guide from an Indian agency, updated 31 October 2026, puts a retrieval build (answers from your documents) at ₹12,00,000 to ₹35,00,000 and lists simpler API-based builds below that. A second guide, dated 31 July 2026, puts AI-native apps at ₹20,00,000 to ₹60,00,000. FactoryJet quotes a fixed price in writing after a short scoping call.',
+      'A July 2026 guide from an Indian agency, updated 31 October 2026, puts an API-based build at ₹5 lakh to ₹20 lakh and a retrieval build (answers from your documents) at ₹12 lakh to ₹35 lakh. A second guide, dated 31 July 2026, puts an AI MVP at ₹10 lakh to ₹21 lakh, AI-native apps at ₹20 lakh to ₹60 lakh, and its overall band at ₹6 lakh to ₹60 lakh. FactoryJet quotes a fixed price in writing after a short scoping call.',
   },
   {
     category: 'cost',
@@ -256,7 +257,7 @@ const DEV_FAQS = [
     category: 'cost',
     question: 'How long does AI development take?',
     answer:
-      'It depends on the job and the data. Published guides give ranges from weeks to many months, and the spread is wide. We agree the timeline in writing during scoping, before any work starts, and tie payments to milestones.',
+      'It depends on the job and the data. A working prototype on your own data usually takes 3 to 5 weeks. A production build for one job connected to one or two systems runs 5 to 8 weeks, and builds that touch several systems or regulated data take 8 to 14 weeks. We agree the timeline in writing during scoping and tie payments to milestones.',
   },
   /* ── What it is and does ── */
   {
@@ -287,7 +288,7 @@ const DEV_FAQS = [
     category: 'build',
     question: 'Can you add AI to software we already use?',
     answer:
-      'Usually. We check at scoping which of your systems offer a way in, such as an API or an export. Typical targets are Shopify, NetSuite, Salesforce, HubSpot, Zendesk and Microsoft 365. Anything that blocks a connection is named before you sign.',
+      'Usually. We check at scoping which of your systems offer a way in, such as an API or an export. Typical targets are Shopify, NetSuite, Salesforce, HubSpot, Zendesk and Microsoft 365.',
   },
   {
     category: 'build',
@@ -311,7 +312,7 @@ const DEV_FAQS = [
     category: 'build',
     question: 'Who owns the code and who supports the system after launch?',
     answer:
-      'You own the code, prompts and test sets, in your repository and cloud account, with no licence fee to us. Support after launch is optional, with no monthly minimum, so you are never locked in to keep the system running.',
+      'You own the code, prompts and test sets, in your repository and cloud account, with no licence fee to us. Support after launch is optional, and you can take it in-house any time because the code and documentation are yours.',
   },
   /* ── Data, models and compliance ── */
   {
@@ -336,13 +337,13 @@ const DEV_FAQS = [
     category: 'data',
     question: 'What happens when the AI gets something wrong?',
     answer:
-      'We plan for it. Early phases keep a person in the loop, so important outputs are approved before they count. Monitoring raises an alert when scores drop, and you decide where approval stays and where the system acts alone.',
+      'We plan for it. Early phases keep a person in the loop, so important outputs are approved before they count. Scores are tracked every month after launch so drift gets caught, and you decide where approval stays and where the system acts alone.',
   },
   {
     category: 'data',
     question: 'How do you show the system working before I sign?',
     answer:
-      'We run a prototype on a sample of your own data and walk you through the results, including the cases it got wrong. You judge it on your data, not on someone else\'s logo. No contract is needed for that step.',
+      'We run a prototype on a sample of your own data and walk you through what it got right and wrong. The results come from your data, wrong answers included, and no contract is needed for that step.',
   },
 ];
 
@@ -491,8 +492,7 @@ export default function AiDevelopmentIndiaPage() {
                 The best AI development company in India for a mid-sized business is the one that tests its work on your
                 own cases, builds inside the software you already use, and writes the price down before starting.
                 FactoryJet works that way. We build custom AI software, from answers drawn from your documents to
-                generative AI apps, and you own the result. Large IT services firms suit programmes with thousands of
-                users. A focused team suits the one problem that has to work first.
+                generative AI apps, and you own the result. Large IT consultancies suit programmes that span many teams and countries. A focused team suits the one problem that has to work first.
               </p>
             </div>
             <div className="lg:col-span-4">
@@ -581,7 +581,7 @@ export default function AiDevelopmentIndiaPage() {
           <p className={`mt-5 max-w-[760px] ${PROSE}`}>
             A generative AI development company builds software that writes. That can be a reply to a customer, a
             summary of a long contract, a product description in your house style or a weekly report assembled from
-            several systems. The hard part is the checking: the software must use your facts, show
+            several systems. Checking takes the most care. The software has to use your facts, show
             where they came from, and pass a test you set before it reaches anyone.
           </p>
           <p className={`mt-4 max-w-[760px] ${PROSE}`}>
@@ -629,15 +629,15 @@ export default function AiDevelopmentIndiaPage() {
                 >
                   updated 31 October 2026
                 </a>
-                , gives the build ranges in the table, lists simpler API-based builds below them, and puts yearly upkeep at 15 to 20 percent of the build.
+                , gives the build ranges in the table and puts yearly upkeep at 15 to 20 percent of the build.
               </p>
               <p className={`mt-4 ${PROSE}`}>
                 A second guide,{' '}
                 <a className={LINK} href="https://ecorpit.com/ai-app-development-cost-india-2026/" rel="noopener">
                   published 31 July 2026
                 </a>
-                , puts AI-native apps with retrieval, agents or voice at ₹20,00,000 to ₹60,00,000, with upkeep at 15 to 25
-                percent a year. Both are vendor sources, so treat them as rough. These are market figures, not FactoryJet
+                , puts an AI MVP built on a model API at ₹10 lakh to ₹21 lakh and AI-native apps with retrieval, agents or voice at
+                ₹20 lakh to ₹60 lakh, in an overall band of ₹6 lakh to ₹60 lakh, with upkeep at 15 to 25 percent a year. Both are vendor sources, so treat them as rough. These are market figures, not FactoryJet
                 prices. FactoryJet quotes a fixed price in writing after a short scoping call.
               </p>
             </div>
