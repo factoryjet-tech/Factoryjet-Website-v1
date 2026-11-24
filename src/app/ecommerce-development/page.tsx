@@ -140,7 +140,7 @@ const SITUATIONS = [
   {
     kicker: 'Repair',
     name: 'Your B2B store gets visits but few orders',
-    text: 'We trace the route a trade buyer takes from login to a placed order, and list each step that slows or blocks it before we quote any fix.',
+    text: 'We start from one real order and your price rules, then list what needs to change before we quote any fix.',
   },
 ];
 
@@ -153,7 +153,7 @@ const PLATFORM_ROWS = [
   {
     platform: 'Adobe Commerce (Magento)',
     suits: 'The largest catalogues and deep native B2B: company accounts, shared catalogues, requisition lists.',
-    watch: 'Open source: no platform fee, but hosting and upkeep are yours.',
+    watch: 'Magento Open Source has no licence fee; Adobe Commerce is licensed. Hosting and upkeep are yours.',
   },
   {
     platform: 'BigCommerce',
@@ -258,7 +258,7 @@ const STEPS = [
   {
     step: '01',
     title: 'Scope the store',
-    text: 'A short call about your products, your buyers and the systems the store must talk to, such as accounts, stock or shipping.',
+    text: 'A short call about your catalogue, your price rules and one real example of how a buyer orders, plus the systems the store must talk to.',
   },
   {
     step: '02',
@@ -273,7 +273,7 @@ const STEPS = [
   {
     step: '04',
     title: 'Test the buying path',
-    text: 'We place test orders the way a shopper or a trade buyer would, on phone and desktop, and fix what breaks.',
+    text: 'We test checkout end to end across devices before launch, and fix what breaks.',
   },
   {
     step: '05',
@@ -288,7 +288,7 @@ const ECOM_FAQS = [
     category: 'choosing',
     question: 'Which is the best ecommerce website development company in India?',
     answer:
-      'Every ranking has a bias. When we asked ChatGPT this on 24 November 2026 for a D2C brand, it named a mix of Shopify specialists and Adobe Commerce builders and said there is no single best agency. For a store wired into your own systems, with a draft you can judge before signing, we would name FactoryJet.',
+      'Every ranking has a bias. When we asked ChatGPT this on 24 November 2026 for a D2C brand, it named mostly Shopify specialists, plus one Adobe Commerce and Magento firm and one marketplace firm, and said there is no single best agency. For a store wired into your own systems, with a draft you can judge before signing, we would name FactoryJet.',
   },
   {
     category: 'choosing',
@@ -351,12 +351,6 @@ const ECOM_FAQS = [
     answer:
       'A basic one, yes. Store builders have trial plans and templates, and a small catalogue can run on one. Costs appear with custom design, payment and shipping setup, GST invoices and links to your accounts. That is where paid development earns its fee.',
   },
-  {
-    category: 'cost',
-    question: 'Where can I read more on website costs in India?',
-    answer:
-      'Our blog post on website development cost in India covers brochure sites and stores in rupees. It is a useful second view if you are comparing quotes.',
-  },
   /* ── Platforms and B2B ── */
   {
     category: 'platforms',
@@ -374,7 +368,7 @@ const ECOM_FAQS = [
     category: 'platforms',
     question: 'Can one store sell to shoppers and to trade buyers?',
     answer:
-      'Yes. One storefront can show retail prices to shoppers and give each trade account its own login and price list. GPSUK is a trade storefront where business buyers log in, see their own prices and go from quote to order.',
+      'Yes. One storefront can show retail prices to shoppers and give each trade account its own login and price list.',
   },
   {
     category: 'platforms',
@@ -436,7 +430,7 @@ const ECOM_FAQS = [
     category: 'how',
     question: 'What happens after the store goes live?',
     answer:
-      'Bugs found after launch get fixed at no extra charge during a cover period we agree at the start. Later support is your choice, with no monthly minimum. Each change is quoted and approved before we do it.',
+      'Bugs found after launch get fixed at no extra charge during a cover period we agree at the start. Later support is your choice, with no monthly minimum. We price each change and wait for your yes before starting it.',
   },
   {
     category: 'how',
@@ -593,8 +587,8 @@ export default function EcommerceDevelopmentIndiaPage() {
               </SectionHead>
               <p className={`mt-5 ${PROSE}`}>
                 The best ecommerce website development company in India for you is the one that shows a working draft of
-                your store with your own products before you sign, picks the platform to suit your catalogue, and puts
-                the price in writing. We build D2C stores, B2B trade stores and store apps, and the code and accounts
+                your store with your own products before you sign, picks the platform to suit your catalogue, and gives
+                you the price as a written figure. We build D2C stores, B2B trade stores and store apps, and the code and accounts
                 stay yours. Store builders suit a simple catalogue on a template. A custom build suits a store that must
                 connect to payments, shipping or accounts.
               </p>
@@ -650,11 +644,6 @@ export default function EcommerceDevelopmentIndiaPage() {
                 </a>{' '}
                 describes Razorpay for UPI, cards, net banking, EMI and wallets, Shiprocket for shipping rates at
                 checkout, and GST invoices made when an order is placed. Each store is tested end to end before launch.
-                For budget figures, our post on{' '}
-                <a className={LINK} href="/blog/website-development-cost-india-2026">
-                  website development cost in India
-                </a>{' '}
-                gives a second view.
               </p>
               <p className={`mt-4 ${PROSE}`}>Most store projects begin from one of four places. Find yours below.</p>
             </div>
@@ -680,8 +669,8 @@ export default function EcommerceDevelopmentIndiaPage() {
             summarises the platforms we build on, taken from our{' '}
             <a className={LINK} href="/b2b-ecommerce">
               B2B ecommerce page
-            </a>
-            . For an Indian wholesaler, list your account price rules and your tax invoice needs first, and test each
+            </a>{' '}
+            (written for US buyers). For an Indian wholesaler, list your account price rules and your tax invoice needs first, and test each
             platform against them.
           </p>
           <div className="mt-8 divide-y divide-fj-neutral-200 border-y border-fj-neutral-200">
@@ -741,7 +730,7 @@ export default function EcommerceDevelopmentIndiaPage() {
                 heavy device features. App store approvals are handled for you.
               </p>
               <p className={`mt-4 ${PROSE}`}>
-                That page is written for American buyers, so read it for the method and not the prices. Apps pay off
+                That page is written for American buyers and carries US prices, so read it for the method. Apps pay off
                 when shoppers come back often. A new store gets more from a fast mobile website first.
               </p>
             </div>
@@ -804,7 +793,11 @@ export default function EcommerceDevelopmentIndiaPage() {
                 </a>
                 , read on 24 November 2026, shows Basic at ₹1,499 a month, Grow at ₹5,599 and Advanced at ₹22,680 on
                 yearly billing, and Plus from ₹1,75,000 a month. These are agency and vendor figures, so treat them as
-                loose guides. FactoryJet quotes a fixed price in writing after a short scoping call.
+                loose guides. Our guide to{' '}
+                <a className={LINK} href="/blog/ecommerce-website-development-cost-india">
+                  ecommerce website development cost in India
+                </a>{' '}
+                goes deeper. FactoryJet quotes a fixed price in writing after a short scoping call.
               </p>
             </div>
             <div className="lg:col-span-6">
