@@ -568,6 +568,43 @@ export default function CityHubPage({ city }: CityHubPageProps) {
           </div>
         </section>
 
+        {/* 2b. Cardiff only: SEO and AI search (Search Console gap, 24 Nov 2026) */}
+        {city.slug === 'cardiff' && (
+          <section aria-labelledby="cardiff-seo-title" className="border-t border-fj-neutral-200 bg-white px-6 py-16 md:px-8 md:py-20">
+            <div className="mx-auto max-w-[1160px]">
+              <h2 id="cardiff-seo-title" className={H2}>SEO and AI search for Cardiff businesses</h2>
+              <p className={LEAD}>
+                A Cardiff buyer now searches in two places: Google, and an AI assistant that answers
+                before any link is shown. We work on both for businesses in Cardiff, Bridgend and the
+                Vale of Glamorgan.
+              </p>
+              <ul className="mt-10 grid gap-x-10 gap-y-8 md:grid-cols-2">
+                <li>
+                  <h3 className="font-fj-display text-[1.125rem] font-semibold text-fj-ink">Local search</h3>
+                  <p className="mt-2 max-w-[52ch] font-fj-body text-[15px] leading-[1.65] text-fj-neutral-600">
+                    Google Business Profile, service pages written around how people in Cardiff, Penarth
+                    and Barry actually search, and technical fixes so those pages get crawled and indexed.
+                    The detail is on our <Link href="/uk/local-seo" className="underline underline-offset-2">local SEO page</Link>.
+                  </p>
+                </li>
+                <li>
+                  <h3 className="font-fj-display text-[1.125rem] font-semibold text-fj-ink">AI search visibility</h3>
+                  <p className="mt-2 max-w-[52ch] font-fj-body text-[15px] leading-[1.65] text-fj-neutral-600">
+                    We check which questions ChatGPT, Gemini and Perplexity answer for your sector and
+                    whether your business is named. Then we fix the pages and facts they pull from.
+                    More on our <Link href="/uk/ai-seo" className="underline underline-offset-2">AI SEO service</Link>.
+                  </p>
+                </li>
+              </ul>
+              <p className="mt-10 max-w-[74ch] font-fj-body text-[1rem] leading-[1.75] text-fj-neutral-600">
+                SEO and web design work best together, so we scope them against the same site. If you
+                already have a site, we start with an audit of what Google and the AI assistants can
+                currently find.
+              </p>
+            </div>
+          </section>
+        )}
+
         {/* 3. Project shapes that recur here */}
         {depth && (
           <section className="border-t border-fj-neutral-200 bg-white px-6 py-16 md:px-8 md:py-20">
