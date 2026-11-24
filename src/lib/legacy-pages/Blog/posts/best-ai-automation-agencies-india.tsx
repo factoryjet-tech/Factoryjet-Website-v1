@@ -27,7 +27,7 @@ const FIRMS: Firm[] = [
     name: 'FactoryJet',
     url: 'https://factoryjet.com/ai-automation',
     group: 'workflow',
-    place: 'Businesses across India',
+    place: 'Not stated',
     tools: 'n8n, Make, Zapier, Tally, Zoho, Razorpay, WhatsApp',
     lists: 'Rule-based workflows, document reading, drafting agents and reports, scoped one workflow at a time',
     profile:
@@ -77,7 +77,6 @@ const FIRMS: Firm[] = [
     profile:
       'The page describes one Kolkata team with fixed prices, a working demo every two weeks and support after launch. For automation it names self-hosted n8n and Python wired into LLM APIs. It publishes a payment pattern of 40 percent to start, 40 percent at a mid-project review and 20 percent on handover, and says it hands over every credential at launch.',
     stated: [
-      'Gives its own starting figure for an automation workflow: ₹1.7 lakh',
       'Lists itself as a Shopify Partner and an AWS Partner',
       'Shows a client result as stated on its page: for Bandbox, 84% of WhatsApp queries auto-resolved and 130+ hours saved every month',
     ],
@@ -87,7 +86,7 @@ const FIRMS: Firm[] = [
     url: 'https://www.hexagondigital.in/',
     group: 'agents',
     place: 'Mumbai',
-    tools: 'WhatsApp, voice calls, CRM tools',
+    tools: 'WhatsApp, voice calls',
     lists: 'Custom AI agents, voice agents, chatbots and WhatsApp bots, workflow and CRM automation',
     profile:
       'Hexagon Digital describes itself as an AI automation agency in Mumbai. Its voice agents answer calls, qualify leads and book appointments, and its chatbot and WhatsApp bot work sits beside workflow and CRM automation. It says a project goes from first call to live system in 4 to 10 weeks, with fixed scope, timeline and price and a working demo every week.',
@@ -161,13 +160,13 @@ const GROUPS: { key: Firm['group']; heading: string; intro: string }[] = [
     key: 'workflow',
     heading: 'Which agencies build workflows on n8n, Make and Zapier?',
     intro:
-      'Four agencies whose pages put platform workflows first. These tools are visual builders that pass a record from one app to the next when something happens. FactoryJet wrote this page, so weigh its own entry accordingly. It is taken from our AI automation page.',
+      'Four agencies whose pages name platform workflows. Innovatrix Infotech leads with Shopify stores and also names n8n automation. These tools are visual builders that pass a record from one app to the next when something happens. FactoryJet wrote this page, so weigh its own entry accordingly. It is taken from our AI automation page.',
   },
   {
     key: 'agents',
     heading: 'Which firms build AI agents for WhatsApp and phone calls?',
     intro:
-      'Two firms whose pages lead with agents that talk to customers, by chat or by voice. Both also list workflow work, so read the full profile before you decide.',
+      'Two firms whose pages lead with agents that talk to customers, by chat or by voice.',
   },
   {
     key: 'accounts',
@@ -179,7 +178,7 @@ const GROUPS: { key: Firm['group']; heading: string; intro: string }[] = [
     key: 'wider',
     heading: 'Which wider software firm also lists AI automation?',
     intro:
-      'One firm that sells automation as one part of a broad software offer. Its page mentions older rule-based tools next to newer AI work, which is a useful contrast for a buyer.',
+      'One firm that sells automation as one part of a broad software offer.',
   },
 ];
 
@@ -191,18 +190,18 @@ const JOBS: { job: string; firms: string }[] = [
   { job: 'Zoho in the loop', firms: 'FactoryJet, Amatec, Pragyantra' },
   { job: 'Odoo in the loop', firms: 'Appmetry, Pragyantra' },
   { job: 'WhatsApp agent or bot', firms: 'Hexagon Digital, InfyOm Technologies, Appmetry, Innovatrix Infotech, Pragyantra (Tally with WhatsApp)' },
-  { job: 'Phone-call or voice agent', firms: 'Hexagon Digital, InfyOm Technologies, Appmetry, SynkrAI (sales calling agent)' },
+  { job: 'Phone-call or voice agent', firms: 'Hexagon Digital, InfyOm Technologies, Appmetry, SynkrAI (product named Sales Calling Agent)' },
   { job: 'Older rule-based tools such as UiPath', firms: 'Softlabs Group' },
 ];
 
 const FAQS: FAQItem[] = [
   {
     q: 'Which AI automation agency is best in India?',
-    a: 'Nobody can crown one, because buyers want different things. We opened nine home pages on 24 November 2026 and sorted the firms by the automation work each describes. FactoryJet, Amatec, SynkrAI and Innovatrix Infotech lead with platform workflows. Hexagon Digital and InfyOm Technologies lead with agents. Pragyantra and Appmetry sit nearest to Tally, Zoho and Odoo. Pick by your job first.',
+    a: 'Nobody can crown one, because buyers want different things. We opened nine home pages on 24 November 2026 and sorted the firms by the automation work each describes. FactoryJet, Amatec, SynkrAI and Innovatrix Infotech name platform workflows. Hexagon Digital and InfyOm Technologies lead with agents. Pragyantra and Appmetry sit nearest to Tally, Zoho and Odoo. Pick by your job first.',
   },
   {
     q: 'What are the top 5 automation companies in India?',
-    a: 'No body publishes an official one, and buyers mean different things by the phrase. Some mean robotic process automation, which is software robots that click through screens. Others mean AI workflow automation. For AI workflow work, five pages worth reading first in this guide are FactoryJet, Amatec, SynkrAI, Innovatrix Infotech and Hexagon Digital, because each describes building automations. That is a reading list, not a ranking.',
+    a: 'No official top five is published, and buyers mean different things by the phrase. Some mean robotic process automation, which is software robots that click through screens. Others mean AI workflow automation. For AI workflow work, five pages worth reading first in this guide are FactoryJet, Amatec, SynkrAI, Innovatrix Infotech and Hexagon Digital, because each describes building automations. That is a reading list, not a ranking.',
   },
   {
     q: 'Which company should I pick for AI work in India?',
@@ -254,7 +253,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'How much does AI automation cost in India?',
-    a: 'It follows the job: how many tools it crosses, whether a step reads documents, how many odd cases need a person. Innovatrix Infotech publishes its own starting figure for an automation workflow. The rupee ranges we found from two Indian vendor guides sit on our AI automation page. FactoryJet gives a fixed written price once a short scoping call is done.',
+    a: 'It follows the job: how many tools it crosses, whether a step reads documents, how many odd cases need a person. The rupee ranges we found from two Indian vendor guides sit on our AI automation page. FactoryJet gives a fixed written price once a short scoping call is done.',
   },
   {
     q: 'Does AI automation cost money to run after launch?',
@@ -298,7 +297,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Do these firms publish prices?',
-    a: 'Innovatrix Infotech publishes its own starting figure for an automation workflow on its home page. We report no prices for the other firms, so check each one directly. FactoryJet publishes no rate card and quotes after scoping.',
+    a: 'Ask every firm to split the build price from monthly running costs. FactoryJet publishes no rate card and quotes one fixed price in writing after a scoping call.',
   },
   {
     q: 'Which firms on this list mention Zoho?',
@@ -327,8 +326,8 @@ export const post: BlogPost = {
   keyTakeaways: [
     'Pick the best AI automation agency in India by job, because no single firm suits every business: platform workflows, WhatsApp and voice agents, or links to Tally, Zoho and Odoo.',
     'Facts about the other eight firms come from their home pages, read on 24 November 2026. No slot was bought, and the order carries no rank.',
-    'Pages for FactoryJet, Amatec, SynkrAI and Innovatrix Infotech lead with platform workflows. Hexagon Digital and InfyOm Technologies lead with agents. Pragyantra and Appmetry sit closest to Tally and Odoo.',
-    'Innovatrix Infotech publishes its own starting figure for an automation workflow. We report no prices for the others. Ask every firm to split the build price from monthly running costs.',
+    'Pages for FactoryJet, Amatec, SynkrAI and Innovatrix Infotech name platform workflows. Hexagon Digital and InfyOm Technologies lead with agents. Pragyantra and Appmetry sit closest to Tally and Odoo.',
+    'Ask every firm to split the build price from monthly running costs. FactoryJet quotes one fixed price in writing after a scoping call.',
     'FactoryJet wrote the guide and sits first. Put the same six checks to every firm, ourselves included.',
   ],
   faqs: FAQS,
@@ -435,7 +434,7 @@ export const post: BlogPost = {
       <dl className="mb-6 space-y-3">
         <div>
           <dt className="font-semibold">Where the names came from</dt>
-          <dd>Buyer searches such as &ldquo;best ai automation agency in india&rdquo; and its Tally, Zoho and n8n variants, read from Google results and from the answers AI tools give to them.</dd>
+          <dd>Buyer searches such as &ldquo;best ai automation agency in india&rdquo; and its Tally, Zoho and n8n variants, read from Google results.</dd>
         </div>
         <div>
           <dt className="font-semibold">What got a firm in</dt>
@@ -503,12 +502,12 @@ export const post: BlogPost = {
         No official top five exists, and the phrase covers two different markets. Robotic process automation, or RPA, means software robots that click through screens, and UiPath is one product in that group. AI workflow automation means connecting apps and adding a language model to some steps. This guide is about the second.
       </p>
       <p className="mb-6">
-        If you need five pages to read first for AI workflow automation, start with FactoryJet, Amatec, SynkrAI, Innovatrix Infotech and Hexagon Digital. Each describes building automations. That is a reading list drawn from what the pages say, not a ranking of quality.
+        If you need five pages to read first for AI workflow automation, start with FactoryJet, Amatec, SynkrAI, Innovatrix Infotech and Hexagon Digital. That is a reading list drawn from what the pages say.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">What does AI automation cost in India?</h2>
       <p className="mb-4">
-        Innovatrix Infotech puts its own starting figure for an automation workflow at ₹1.7 lakh, and says one fixed price is agreed after a discovery call. We report no prices for the other firms, so check each directly.
+        This guide lists no prices for any firm.
       </p>
       <p className="mb-6">
         Our <a href="/ai-automation" className="text-[#B23E13] underline">AI automation page</a> lists sourced rupee ranges from two Indian vendor guides, each labelled the way its source labels it. We publish no rate card. Scoping starts with a short call, and one fixed price in writing follows it. Whatever the build price, ask for running costs as a separate line: platform plan, model usage, hosting and fixes.
