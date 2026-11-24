@@ -81,6 +81,13 @@ const SERVICE_RULES: ServiceRule[] = [
     weight: 4,
   },
   {
+    href: '/services/video-seo',
+    label: 'Video SEO',
+    blurb: 'YouTube titles, chapters and captions, plus watch pages and video schema on your own site.',
+    keywords: ['video seo', 'youtube seo', 'youtube video', 'video schema', 'video sitemap', 'key moments'],
+    weight: 4,
+  },
+  {
     href: '/services/seo-audit',
     label: 'SEO Audit',
     blurb: 'Find what is holding the site back before spending on content or links.',
@@ -784,6 +791,7 @@ const SERVICE_FAMILY: Record<string, ServiceFamily> = {
   '/services/seo-consulting': 'search',
   '/services/white-label-seo': 'search',
   '/services/seo-copywriting': 'search',
+  '/services/video-seo': 'search',
   '/services/seo-audit': 'search',
   '/services/local-seo': 'search',
   '/services/google-business-profile-optimization': 'search',
