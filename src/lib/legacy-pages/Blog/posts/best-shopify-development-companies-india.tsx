@@ -36,7 +36,7 @@ const FIRMS: Firm[] = [
     name: 'Dynamic Dreamz',
     url: 'https://www.dynamicdreamz.com/',
     group: 'plus',
-    place: 'Global brands and digital agencies, as its page words it',
+    place: 'Global brands and digital agencies, as its page words it; its page data lists addresses in Surat and Ahmedabad',
     status: 'Page says Shopify Platinum Partner',
     lists: 'Shopify Plus development, migration and replatforming, custom apps, white label work, mobile apps',
     profile:
@@ -44,30 +44,32 @@ const FIRMS: Firm[] = [
     stated: [
       'Says it has been helping global brands and digital agencies build and grow ecommerce',
       'Lists Shopify mobile app development as its own service',
+      'The structured data on the page lists addresses in Surat and Ahmedabad',
     ],
   },
   {
     name: 'Seventh Triangle',
     url: 'https://seventhtriangle.com/',
     group: 'plus',
-    place: 'Address listed in HSR Layout, Bengaluru',
+    place: 'Addresses listed in Noida and Bengaluru',
     status: 'Page title says Shopify Plus Partners',
     lists: 'Store builds, migration, custom apps, support and maintenance, D2C store marketing',
     profile:
       'The page title reads e-commerce agency and Shopify Plus Partners. The services menu names Shopify migration, custom app development and support and maintenance. A separate line describes hands-on D2C store marketing meant to expand reach, drive traffic and hit conversions. Conversions here means visitors who buy.',
-    stated: ['Footer address is in HSR Layout, Bengaluru'],
+    stated: ['Footer addresses are in Noida (The Berry Coworks) and Bengaluru (HSR Layout)'],
   },
   {
     name: 'FarziEngineer',
     url: 'https://farziengineer.com/',
     group: 'plus',
-    place: 'Offices across India, a Chicago office and remote work abroad, as its page says',
+    place: 'Addresses listed in Noida, Lucknow and Chicago; more Indian cities named; remote work abroad',
     status: 'Page says Shopify Plus Partner',
     lists: 'Shopify Plus stores, headless commerce platforms, D2C mobile apps, a free store audit',
     profile:
       'FarziEngineer calls itself a Shopify Plus agency and a D2C ecommerce company. Its page says it builds Shopify Plus stores, headless commerce platforms and D2C mobile apps. A headless store keeps the shop front on its own code and talks to Shopify behind the scenes. The page also offers a free, no-obligation CRO and tech audit of a Shopify store. CRO is conversion rate optimisation, which means testing changes that turn more visitors into buyers.',
     stated: [
       'Names Mamaearth, boAt and PlixLife among the D2C brands that trust it',
+      'Lists addresses in Noida, Lucknow and Chicago, and names Bangalore, Mumbai, Jaipur, Hyderabad and Delhi NCR among its offices',
       'Says it serves D2C brands from a Chicago office and works with international clients remotely',
     ],
   },
@@ -75,23 +77,24 @@ const FIRMS: Firm[] = [
     name: 'ControlF5',
     url: 'https://www.controlf5.in/',
     group: 'builds',
-    place: 'Indore address listed; page speaks of solutions for global brands',
+    place: 'Addresses listed in Indore, Houston and Milton Keynes; page speaks of solutions for global brands',
     status: 'Calls itself a Shopify Plus agency',
     lists: 'Custom store development, speed work, migration, Plus development, white label work',
     profile:
       'ControlF5 describes itself as a Shopify and WordPress agency that designs, builds and scales eCommerce brands. Its services list covers custom Shopify store development, speed and performance optimisation, migration services, Shopify Plus development and white label Shopify development.',
-    stated: ['The address on the page is in Indore', 'Page title calls it a Shopify Plus agency'],
+    stated: ['Footer addresses are in Indore, Houston (Texas) and Milton Keynes (UK)', 'Page title calls it a Shopify Plus agency'],
   },
   {
     name: 'Codify Infotech',
     url: 'https://codifyinfotech.com/',
     group: 'builds',
-    place: 'Clients in the USA, UK, Canada, Australia and India',
+    place: 'Address listed in Surat; clients in the USA, UK, Canada, Australia and India',
     status: 'Page says Official Shopify Partner',
     lists: 'Custom stores built in Liquid, themes, apps, migration, Plus development, hourly hiring of developers',
     profile:
       'The page title calls Codify Infotech a Shopify development company for India. It says it builds stores with its own Liquid code instead of stacking ten apps on a theme. Liquid is Shopify’s template language. Beside store builds it lists app development, migration and Shopify Plus development, and an Hourly Hiring option for hiring Shopify developers.',
     stated: [
+      'Footer address is in Surat, Gujarat',
       'Says it serves clients in the USA, UK, Canada, Australia and India',
       'One result stated on the page: store speed improved from 4.8 seconds to under 2 seconds',
     ],
@@ -111,23 +114,24 @@ const FIRMS: Firm[] = [
     name: 'Webkul',
     url: 'https://webkul.com/',
     group: 'wider',
-    place: 'India headquarters listed in Noida',
+    place: 'Addresses listed in Noida (India HQ), Lucknow and Wilmington, DE (USA)',
     status: 'Lists Shopify Expert among its partner labels',
     lists: 'Shopify development, Hydrogen, themes, custom apps, marketplaces, support',
     profile:
       'Webkul’s Shopify menu lists Shopify Development, Shopify Hydrogen Development, Theme Development, Custom App Development, Marketplace Development, and Support and Maintenance. Hydrogen is Shopify’s own toolkit for headless stores. Shopify is one of several platforms on its home page.',
-    stated: ['Says it has 16+ years behind it', 'Shows a Shopify Expert label in its partner list'],
+    stated: ['Lists locations in Noida (India HQ), Lucknow and Wilmington, DE in the USA', 'Says it has 16+ years behind it', 'Shows a Shopify Expert label in its partner list'],
   },
   {
     name: 'Innovatrix Infotech',
     url: 'https://www.innovatrixinfotech.com/',
     group: 'wider',
-    place: 'A Kolkata team, as its page says',
+    place: 'Kolkata address listed; the page says it has no physical office outside Kolkata',
     status: 'Page shows a Shopify Partner credential',
     lists: 'Shopify stores, automation workflows and business systems',
     profile:
       'Innovatrix Infotech puts Shopify first in a title that also names automation and business software. The page speaks of a single Kolkata team that works to fixed prices, shows a demo every second week and stays on after launch. For ecommerce it names Liquid and Hydrogen. Its page gives four to eight weeks for a Shopify build, folds 30 days of support after launch into each project, and hands source code, designs and assets to the client.',
     stated: [
+      'Footer address is in Kolkata, and the page says it does not imply a physical office outside Kolkata',
       'Shows a credential labelled as a platform-recognised Shopify delivery partner',
       'Sells automation and business systems on the same page as its Shopify work',
     ],
@@ -207,7 +211,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'How do I check a firm in the Shopify Partner Directory?',
-    a: 'Ask the firm for the link to its own directory listing. Open it yourself and check that the name and website match the firm you are talking to, that the services listed match your job, and what the listing shows about past work. A badge on a home page alone is a claim, not a check.',
+    a: 'Ask the firm for the link to its own directory listing. Open it yourself and check that the name and website match the firm you are talking to, that the services listed match your job, and what the listing shows about past work. Seeing the listing yourself is the check.',
   },
   {
     q: 'Does a Shopify Partner badge mean a firm is good?',
@@ -227,7 +231,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Is Shopify still worth it in 2026?',
-    a: 'For many shops that sell physical goods, yes, because the plan includes hosting and the checkout. It is a poorer fit where your product data is unusual or you want to own every layer. Weigh the monthly plan, app and payment fees against the time you save on servers and updates.',
+    a: 'In our view, for many shops that sell physical goods, yes, because the plan includes hosting and the checkout. It is a poorer fit where your product data is unusual or you want to own every layer. Weigh the monthly plan, app and payment fees against the time you save on servers and updates.',
   },
   {
     q: 'What are the disadvantages of Shopify?',
@@ -311,7 +315,7 @@ export const post: BlogPost = {
   },
   keyTakeaways: [
     'There is no single best Shopify development company in India. Choose by job: a first store, a platform move, Shopify Plus, custom apps or a headless build.',
-    'Each fact about the eight other firms is a line from that firm’s home page, loaded on 24 November 2026. Nobody paid for a slot, and position means nothing.',
+    'Each fact about the eight other firms is a line from that firm’s home page, loaded on 24 November 2026. Position carries no rank.',
     'Shopify’s India pricing page shows Advanced at ₹22,680 a month paid yearly, Grow at ₹5,599 and Basic at ₹1,499. Apps, a developer and payment fees are extra.',
     'Check any firm in the Shopify Partner Directory by opening its listing yourself, then ask for two live stores and a fixed written quote.',
     'FactoryJet published this guide and is listed first. Run the same checks on every firm, us too.',
@@ -492,7 +496,7 @@ export const post: BlogPost = {
         <li>Ask for two live stores in your category and the name of the person who would do the work.</li>
       </ol>
       <p className="mb-6">
-        A badge on a home page is a claim until you see the listing. Of the nine firms here, FarziEngineer, Dynamic Dreamz, Codify Infotech, Brisk Developers, Seventh Triangle and Innovatrix Infotech state a Shopify Partner status or listing on their pages, and Webkul shows a Shopify Expert label. Use the steps above on each one.
+        Open the listing before you rely on a badge. Of the nine firms here, FarziEngineer, Dynamic Dreamz, Codify Infotech, Brisk Developers, Seventh Triangle and Innovatrix Infotech state a Shopify Partner status or listing on their pages, and Webkul shows a Shopify Expert label. Use the steps above on each one.
       </p>
 
       <h2 className="text-2xl font-bold mt-10 mb-4">How much does a Shopify store cost per month in India?</h2>
@@ -529,7 +533,7 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Is Shopify still worth it in 2026?</h2>
       <p className="mb-4">
-        For many shops that sell physical products, yes. The plan includes secure hosting, so you do not buy servers, and the checkout is built in. Shopify suits a seller who wants to spend time on products and customers instead of upkeep.
+        In our view, for many shops that sell physical products, yes. The plan includes secure hosting, so you do not buy servers, and the checkout is built in. Shopify suits a seller who wants to spend time on products and customers instead of upkeep.
       </p>
       <p className="mb-6">
         It fits less well where your product data is unusual, where you want to own every layer of the stack, or where monthly fees plus apps would outrun the time you save. Our guide to <a href="/blog/shopify-vs-woocommerce-india-comparison" className="text-[#B23E13] underline">Shopify against WooCommerce in India</a> weighs the two.
