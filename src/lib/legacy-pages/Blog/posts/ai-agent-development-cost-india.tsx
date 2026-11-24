@@ -14,19 +14,19 @@ import type { BlogPost, FAQItem } from '../data.types';
 const faqs: FAQItem[] = [
   {
     q: 'How much does it cost to build an AI agent in India?',
-    a: 'Five Indian guides we read on 24 November 2026 give five different ranges, because each uses the words AI agent for a different job. WavX Solutions puts a single-task agent between ₹1,50,000 and ₹4,00,000, and a departmental agent between ₹4,00,000 and ₹12,00,000. Innovative AI Solutions lists ₹25,000 to ₹3,00,000 for a lightweight no-code agent. Sigosoft says a first agent usually costs ₹25,000 to ₹8 lakh.',
+    a: 'For an agent connected to your business systems, WavX Solutions puts a single-task agent between ₹1,50,000 and ₹4,00,000 and a departmental agent between ₹4,00,000 and ₹12,00,000. Sigosoft lists Growth, connected to a CRM, calendar or payments, at 1.5 to 8 lakh. Simpler no-code agents are priced apart: Innovative AI Solutions lists ₹25,000 to ₹3,00,000 for Lightweight / No-Code. All three guides were read on 24 November 2026.',
   },
   {
     q: 'What does AI agent development cost in India in 2026?',
-    a: 'From about ₹25,000 for a lightweight no-code agent (Innovative AI Solutions, updated 2 November 2026) up to ₹40,00,000 and above for an enterprise agent platform (WavX Solutions, updated 13 November 2026). Most of the guides place an agent that connects to your CRM, accounts or order system in the ₹85,000 to ₹12 lakh range. Running costs come on top, every month.',
+    a: 'For agents whose source names integrations, the build runs from ₹1,50,000 (WavX Solutions Single-task agent, Sigosoft Growth) to ₹12,00,000 (WavX Solutions Departmental agent), and WavX Solutions lists multi-agent systems up to ₹40,00,000 and an enterprise platform above that. A simpler no-code agent can cost from about ₹25,000 (Innovative AI Solutions, updated 2 November 2026). Running costs come on top, every month.',
   },
   {
     q: 'What is the cost to build an AI agent in India for a small business?',
-    a: 'Sigosoft, in a guide updated on 10 November 2026 and written for Indian small businesses, lists a Starter agent on one channel at ₹25,000 to ₹1 lakh and a Growth agent connected to a CRM, calendar or payments at ₹1.5 lakh to ₹8 lakh. Innovative AI Solutions puts a Sales / Booking Agent at ₹85,000 to ₹1,80,000. These are vendor guides, so use them to frame a quote. They cannot replace one.',
+    a: 'Sigosoft, in a guide updated on 10 November 2026 and written for Indian small businesses, lists a Starter agent on one channel at ₹25,000 to ₹1 lakh and a Growth agent connected to a CRM, calendar or payments at ₹1.5 lakh to ₹8 lakh. Innovative AI Solutions lists a Sales / Booking Agent, for lead qualification and appointment scheduling, at ₹85,000 to ₹1,80,000, with no integrations named. These are vendor guides, so use them to frame a quote. They cannot replace one.',
   },
   {
     q: 'How much does a simple AI agent cost in India?',
-    a: 'WavX Solutions lists a Single-task agent between ₹1,50,000 and ₹4,00,000, with a build time of 3 to 6 weeks. Innovative AI Solutions lists a RAG Knowledge Assistant, an agent that answers from your own documents, at ₹45,000 to ₹85,000. The gap comes from scope: one system and one channel at the low end, several tools and approval steps at the high end.',
+    a: 'WavX Solutions lists a Single-task agent between ₹1,50,000 and ₹4,00,000, with a build time of 3 to 6 weeks. Innovative AI Solutions lists a RAG Knowledge Assistant, an agent that answers from your own documents, at ₹45,000 to ₹85,000. WavX Solutions describes its row as one job on one or two systems; the Innovative row is an assistant for an internal knowledge base.',
   },
   {
     q: 'How much does a multi-agent system cost in India?',
@@ -94,7 +94,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'What is the cheapest way to start with an AI agent in India?',
-    a: 'Innovative AI Solutions says a lightweight no-code agent can be scoped for ₹25,000 to ₹3,00,000, with monthly running costs under ₹2,500. Sigosoft lists a Starter agent at ₹25,000 to ₹1 lakh. Both are vendor figures. A short pilot on one process, with the cost per task measured, tells you more than a large plan on paper.',
+    a: 'For a simple, no-code start that is not connected to your systems, Innovative AI Solutions says a lightweight agent can be scoped for ₹25,000 to ₹3,00,000, with monthly running costs under ₹2,500. Sigosoft lists a Starter agent at ₹25,000 to ₹1 lakh. Both are vendor figures. A short pilot on one process, with the cost per task measured, tells you more than a large plan on paper.',
   },
   {
     q: 'Is AI agent development in India cheaper than in the US or UK?',
@@ -114,19 +114,25 @@ const faqs: FAQItem[] = [
   },
 ];
 
-const BUILD_ROWS: { source: string; label: string; range: string; covers: string }[] = [
-  { source: 'WavX Solutions', label: 'Single-task agent', range: '₹1,50,000 – ₹4,00,000', covers: 'Custom agent builds; 3 to 6 weeks' },
-  { source: 'WavX Solutions', label: 'Departmental agent', range: '₹4,00,000 – ₹12,00,000', covers: 'Three to five integrations; 8 to 14 weeks' },
-  { source: 'WavX Solutions', label: 'Multi-agent system', range: '₹12,00,000 – ₹40,00,000', covers: 'Several agents with a supervisor; 4 to 9 months' },
-  { source: 'WavX Solutions', label: 'Enterprise agentic platform', range: '₹40,00,000+', covers: 'Organisation-wide; 9 to 18 months' },
+const SIMPLE_ROWS: { source: string; label: string; range: string; covers: string }[] = [
   { source: 'Innovative AI Solutions (agent guide)', label: 'Lightweight / No-Code', range: '₹25,000 – ₹3,00,000', covers: 'Basic Q&A, data extraction, simple workflows' },
   { source: 'Innovative AI Solutions (agent guide)', label: 'RAG Knowledge Assistant', range: '₹45,000 – ₹85,000', covers: 'Internal knowledge base, support deflection' },
   { source: 'Innovative AI Solutions (agent guide)', label: 'Sales / Booking Agent', range: '₹85,000 – ₹1,80,000', covers: 'Lead qualification, appointment scheduling' },
-  { source: 'Innovative AI Solutions (agent guide)', label: 'Autonomous Transactional Agent', range: '₹1,80,000 – ₹4,00,000', covers: 'Order management, payment processing, logistics' },
-  { source: 'Innovative AI Solutions (agent guide)', label: 'Multi-Agent System', range: '₹5,00,000 – ₹15,00,000+', covers: 'Revenue operations, complex workflow orchestration' },
   { source: 'Sigosoft', label: 'Starter', range: '25,000 to 1 lakh', covers: 'One channel (WhatsApp or website), FAQ-trained; 1 to 2 weeks' },
+];
+
+const CONNECTED_ROWS: { source: string; label: string; range: string; covers: string }[] = [
+  { source: 'WavX Solutions', label: 'Single-task agent', range: '₹1,50,000 – ₹4,00,000', covers: 'Custom agent builds; 3 to 6 weeks' },
+  { source: 'WavX Solutions', label: 'Departmental agent', range: '₹4,00,000 – ₹12,00,000', covers: 'Three to five integrations; 8 to 14 weeks' },
+  { source: 'Innovative AI Solutions (agent guide)', label: 'Autonomous Transactional Agent', range: '₹1,80,000 – ₹4,00,000', covers: 'Order management, payment processing, logistics' },
   { source: 'Sigosoft', label: 'Growth', range: '1.5 to 8 lakh', covers: 'Connected to CRM, calendar or payments; 3 to 9 weeks' },
   { source: 'Sigosoft', label: 'Advanced', range: '8 lakh and above', covers: 'Multi-system across ERP, accounting and app; 2 to 4 months' },
+];
+
+const LARGE_ROWS: { source: string; label: string; range: string; covers: string }[] = [
+  { source: 'WavX Solutions', label: 'Multi-agent system', range: '₹12,00,000 – ₹40,00,000', covers: 'Several agents with a supervisor; 4 to 9 months' },
+  { source: 'WavX Solutions', label: 'Enterprise agentic platform', range: '₹40,00,000+', covers: 'Organisation-wide; 9 to 18 months' },
+  { source: 'Innovative AI Solutions (agent guide)', label: 'Multi-Agent System', range: '₹5,00,000 – ₹15,00,000+', covers: 'Revenue operations, complex workflow orchestration' },
 ];
 
 const WIDER_ROWS: { source: string; label: string; range: string; covers: string }[] = [
@@ -147,6 +153,7 @@ const RUN_ROWS: { source: string; label: string; range: string }[] = [
   { source: 'Innovative AI Solutions (agent guide)', label: 'Multi-Agent System, monthly run cost', range: '₹25,000 – ₹1,00,000+' },
   { source: 'Sigosoft', label: 'Starter, running cost per month', range: '5,000 to 15,000' },
   { source: 'Sigosoft', label: 'Growth, running cost per month', range: '15,000 to 45,000' },
+  { source: 'Sigosoft', label: 'Advanced, running cost per month', range: 'Quoted per project' },
 ];
 
 const TH = 'p-3 text-left border border-gray-700';
@@ -155,7 +162,7 @@ const TD = 'p-3 border border-gray-200 align-top';
 export const post: BlogPost = {
   id: '861',
   slug: 'ai-agent-development-cost-india',
-  title: 'AI Agent Development Cost in India 2026: What Five Indian Guides Quote in Rupees',
+  title: 'AI Agent Development Cost in India 2026: What Indian Guides Quote in Rupees',
   excerpt:
     'What it costs to build and run an AI agent in India in 2026, in rupees: build ranges, monthly running costs, model prices and upkeep, each from a named guide we read on 24 November 2026.',
   category: 'Emerging Tech',
@@ -171,8 +178,8 @@ export const post: BlogPost = {
       'AI agent development cost in India for 2026, in rupees: build ranges, monthly running costs and upkeep from five named Indian guides, with sources.',
   },
   keyTakeaways: [
-    'Five Indian guides read on 24 November 2026 put an AI agent build anywhere from ₹25,000 (lightweight no-code agent) to ₹40,00,000 and above (enterprise agent platform).',
-    'An agent connected to a CRM or order system sits between ₹85,000 (Innovative AI Solutions, Sales / Booking Agent) and ₹12 lakh (WavX Solutions, Departmental agent) across three of the guides.',
+    'Three Indian agent guides read on 24 November 2026 put a custom agent connected to business systems at ₹1,50,000 (WavX Solutions Single-task agent, Sigosoft Growth) up to ₹12,00,000 (WavX Solutions Departmental agent), with multi-agent systems above that.',
+    'Simpler no-code and template agents are priced apart: ₹25,000 to ₹3,00,000 for the Lightweight / No-Code row at Innovative AI Solutions and 25,000 to 1 lakh for the Starter tier at Sigosoft.',
     'Running costs are separate and monthly: ₹1,200 to ₹2,500 for a lightweight agent, ₹5,000 to ₹45,000 for Sigosoft’s Starter and Growth tiers, and up to ₹1,00,000 or more for a multi-agent system.',
     'Yearly upkeep is quoted at 15 to 30 percent of the original build price. Innovative AI Solutions suggests adding 30 to 50 percent above a first estimate.',
     'These are market ranges from named vendors. They are not our prices. FactoryJet quotes a fixed price in writing after a short scoping call.',
@@ -193,9 +200,10 @@ export const post: BlogPost = {
       <div className="bg-white border-2 border-[#E5DFD7] rounded-xl p-6 sm:p-8 mb-10">
         <p className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-3">The short answer</p>
         <p className="text-lg leading-relaxed text-[#1F2937] mb-0">
-          Five Indian guides we read on 24 November 2026 put <strong>building an AI agent at ₹25,000 to ₹40,00,000 and above</strong>.
-          The low end is a lightweight no-code agent. The high end is an enterprise platform. For an agent that connects to
-          your CRM, accounts or orders, the guides cluster between <strong>₹85,000 and ₹12 lakh</strong>. Running it costs
+          For a custom AI agent that connects to your business systems, three Indian agent guides we read on 24 November 2026
+          put the build at <strong>₹1,50,000 to ₹12,00,000</strong> across the bands that name integrations, with larger
+          multi-agent systems up to ₹40,00,000 and above. Simpler no-code and template agents are listed apart in each
+          guide, from ₹25,000. Running it costs
           extra every month, from <strong>₹1,200 for a tiny agent to ₹1,00,000 or more</strong> for a multi-agent system, and
           yearly upkeep is quoted at 15 to 30 percent of the build.
         </p>
@@ -211,7 +219,7 @@ export const post: BlogPost = {
       </div>
 
       <p>
-        Across five Indian guides the lowest agent build figure is ₹25,000 and the highest is ₹40,00,000 and above. Both can be
+        Across the three agent guides the lowest build figure is ₹25,000 and the highest is ₹40,00,000 and above. Both can be
         honest. The word covers a bot that answers from a PDF, a program that reads your email and updates a CRM, and a team
         of programs that pass work to each other. This page puts five published guides next to each other so you can see
         where the numbers agree, where they split, and what each one is pricing.
@@ -228,12 +236,17 @@ export const post: BlogPost = {
         <a href="/blog/best-ai-agent-development-companies-india">best AI agent development companies in India</a>.
       </p>
 
-      <h2 id="build-cost" className="text-2xl font-bold mt-10 mb-4">What does AI agent development cost in India? Five guides side by side</h2>
+      <h2 id="build-cost" className="text-2xl font-bold mt-10 mb-4">What does AI agent development cost in India? Connected builds first, simpler ones apart</h2>
       <p>
         Every row below uses the label the source gives it. The last column says what the source says the row covers.
         Rows from one source are not directly comparable with rows from another, because the sources define their tiers
-        differently. Sigosoft prints its figures as 25,000 to 1 lakh without a rupee sign in the table, so we copy them as
+        differently, so we sort rows by what the source says the agent connects to. Sigosoft prints its figures as 25,000 to 1 lakh without a rupee sign in the table, so we copy them as
         printed.
+      </p>
+      <h3 id="connected-agents" className="text-xl font-bold mt-8 mb-3">Custom agents connected to business systems</h3>
+      <p>
+        These rows come from sources that say the agent connects to something: systems, integrations, a CRM, a calendar,
+        payments or an ERP.
       </p>
       <div className="overflow-x-auto my-6">
         <table className="w-full border-collapse text-sm">
@@ -246,7 +259,66 @@ export const post: BlogPost = {
             </tr>
           </thead>
           <tbody>
-            {BUILD_ROWS.map((r) => (
+            {CONNECTED_ROWS.map((r) => (
+              <tr key={r.source + r.label} className="odd:bg-white even:bg-gray-50">
+                <td className={TD + ' font-semibold'}>{r.source}</td>
+                <td className={TD}>{r.label}</td>
+                <td className={TD}>{r.range}</td>
+                <td className={TD}>{r.covers}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p>
+        On these rows the build starts between ₹1,50,000 (WavX Solutions, Single-task agent, and Sigosoft, Growth) and
+        ₹1,80,000 (Innovative AI Solutions, Autonomous Transactional Agent). The top of the stated bands runs to ₹12,00,000
+        (WavX Solutions, Departmental agent), and Sigosoft lists Advanced at 8 lakh and above. Agents with more integrations,
+        approval steps and safety work sit higher in each guide.
+      </p>
+
+      <h3 id="simpler-builds" className="text-xl font-bold mt-8 mb-3">Simpler and template builds, listed apart</h3>
+      <p>
+        These rows are the low figures in each guide. Their sources describe basic question answering, a single channel,
+        no-code platforms or lead and booking flows, and do not say the agent is connected to your business systems. Do not
+        compare them with the table above.
+      </p>
+      <div className="overflow-x-auto my-6">
+        <table className="w-full border-collapse text-sm">
+          <thead>
+            <tr className="bg-gray-800 text-white">
+              <th className={TH}>Source</th>
+              <th className={TH}>Row label, as the source writes it</th>
+              <th className={TH}>Build range</th>
+              <th className={TH}>What the source says it covers</th>
+            </tr>
+          </thead>
+          <tbody>
+            {SIMPLE_ROWS.map((r) => (
+              <tr key={r.source + r.label} className="odd:bg-white even:bg-gray-50">
+                <td className={TD + ' font-semibold'}>{r.source}</td>
+                <td className={TD}>{r.label}</td>
+                <td className={TD}>{r.range}</td>
+                <td className={TD}>{r.covers}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h3 id="large-systems" className="text-xl font-bold mt-8 mb-3">Multi-agent and enterprise systems</h3>
+      <div className="overflow-x-auto my-6">
+        <table className="w-full border-collapse text-sm">
+          <thead>
+            <tr className="bg-gray-800 text-white">
+              <th className={TH}>Source</th>
+              <th className={TH}>Row label, as the source writes it</th>
+              <th className={TH}>Build range</th>
+              <th className={TH}>What the source says it covers</th>
+            </tr>
+          </thead>
+          <tbody>
+            {LARGE_ROWS.map((r) => (
               <tr key={r.source + r.label} className="odd:bg-white even:bg-gray-50">
                 <td className={TD + ' font-semibold'}>{r.source}</td>
                 <td className={TD}>{r.label}</td>
@@ -263,11 +335,8 @@ export const post: BlogPost = {
         <a href="https://sigosoft.com/blog/ai-agents-for-indian-smbs/" target="_blank" rel="noopener noreferrer">Sigosoft</a>, updated 10 November 2026. All fetched 24 November 2026.
       </p>
       <p>
-        Read the table by job and ignore the totals. Three guides describe an agent wired into a CRM, a calendar or an order system:
-        Innovative AI Solutions lists a Sales / Booking Agent at ₹85,000 to ₹1,80,000, Sigosoft lists Growth at 1.5 to 8
-        lakh, and WavX Solutions lists a Departmental agent between ₹4,00,000 and ₹12,00,000. That is a spread of about fourteen
-        times between the lowest and highest figure, and it is one of the reasons to ask each firm what the agent connects to
-        before you compare.
+        Read each table by job and ignore the totals. Before you compare two quotes, ask each firm what the agent connects
+        to, because a simple build and a connected build are priced as different things.
       </p>
 
       <h2 id="why-ranges-differ" className="text-2xl font-bold mt-10 mb-4">Why do the guides disagree so much?</h2>
@@ -425,8 +494,7 @@ export const post: BlogPost = {
 
       <h2 id="build-or-buy" className="text-2xl font-bold mt-10 mb-4">Is it cheaper to build, buy or hire for an AI agent?</h2>
       <p>
-        Buying is cheaper to start. Building is cheaper per task once volume is high and the process is yours alone. Hiring
-        pays when agents are the product. WavX Solutions sets the options side by side:
+        WavX Solutions lists low-code tools as breaking when logic branches or volume grows, and agent platforms as a poor fit when your process is not their template. It sets the options side by side:
       </p>
       <div className="overflow-x-auto my-6">
         <table className="w-full border-collapse text-sm">
