@@ -263,7 +263,7 @@ const AUTO_FAQS = [
     category: 'choosing',
     question: 'Is there a good AI automation agency for businesses in Mumbai, Bengaluru, Delhi NCR, Pune, Hyderabad, Chennai or Ahmedabad?',
     answer:
-      'Yes. Businesses in these cities send us work, and so do those elsewhere in India. Describe the workflow and we will tell you if it needs AI or if plain rules will do.',
+      'Yes. We take on automation projects for businesses across India, and each one begins with a scoping call. Outline the workflow there and we will say whether it needs AI or plain rules will do.',
   },
   /* ── Cost ── */
   {
