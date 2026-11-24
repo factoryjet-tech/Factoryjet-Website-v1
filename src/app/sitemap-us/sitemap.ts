@@ -68,6 +68,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/services/small-business-seo',                  source: 'src/app/services/small-business-seo/page.tsx' },
   { path: '/services/seo-audit',                           source: 'src/app/services/seo-audit/page.tsx' },
   { path: '/services/technical-seo',                        source: 'src/app/services/technical-seo/page.tsx' },
+  { path: '/services/international-seo',                    source: 'src/app/services/international-seo/page.tsx' },
   { path: '/services/seo-consulting',                      source: 'src/app/services/seo-consulting/page.tsx' },
   { path: '/services/white-label-seo',                     source: 'src/app/services/white-label-seo/page.tsx' },
   { path: '/services/seo-copywriting',                     source: 'src/app/services/seo-copywriting/page.tsx' },
