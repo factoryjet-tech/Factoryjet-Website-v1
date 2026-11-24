@@ -204,8 +204,8 @@ const FAQS: FAQItem[] = [
     a: 'We did not verify a firm headquartered in Bengaluru for this list, so we name none. Four of the ten list addresses or delivery centres in Noida, Gurgaon, Mohali, Pune or Indore, and Maruti Techlabs lists Ahmedabad. Agent projects are scoped and reviewed over video calls, so the city matters less than the answers to the questions below.',
   },
   {
-    q: 'Does this list include Infosys, TCS and Wipro?',
-    a: 'No. AI assistants name them often, but we did not open their sites for this guide, so they carry no entry here. If you want them considered, add them to your own shortlist and ask them the same seven questions.',
+    q: 'Why are Infosys, TCS and Wipro not in this list?',
+    a: 'They are large IT services firms, and AI assistants name them often. This guide covers firms that describe AI agent work on their own sites for businesses of different sizes, so they have no entry here. If you want them considered, add them to your shortlist and ask them the same seven questions.',
   },
   {
     q: 'Is FactoryJet really the right choice, or is that just marketing?',
