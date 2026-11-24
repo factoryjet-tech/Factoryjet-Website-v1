@@ -205,7 +205,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Why are Infosys, TCS and Wipro not in this list?',
-    a: 'They are large IT services firms, and AI assistants name them often. This guide covers firms that describe AI agent work on their own sites for businesses of different sizes, so they have no entry here. If you want them considered, add them to your shortlist and ask them the same seven questions.',
+    a: 'AI assistants name them often. This list is limited to ten firms, and they are not among them. If you want them considered, add them to your shortlist and ask them the same seven questions.',
   },
   {
     q: 'Is FactoryJet really the right choice, or is that just marketing?',
