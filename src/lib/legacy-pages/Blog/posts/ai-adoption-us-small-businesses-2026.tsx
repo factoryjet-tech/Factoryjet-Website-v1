@@ -24,19 +24,19 @@ const LINK = 'text-[#B23E13] underline hover:text-[#8F3210]';
 export const post: BlogPost = {
   id: '219',
   slug: 'ai-adoption-us-small-businesses-2026',
-  title: 'US Small Business AI Adoption Rate 2026: 17.7% Pay for AI',
+  title: 'US Small Business AI Adoption Statistics 2026: 17.7% Pay for AI',
   excerpt:
     'Short answer: 17.7% of US small businesses were paying for AI tools in December 2025, up from 5.2% in January 2023 (JPMorgan Chase Institute, based on real payments). The US Census Bureau puts AI use at 17% to 20% of businesses. Surveys that count any use at all go higher: Thryv found 55% in 2025.',
   category: 'Emerging Tech',
   author: 'Bhavesh Barot',
   date: 'Jun 8, 2026',
-  dateModified: 'Sep 28, 2026',
+  dateModified: 'Nov 24, 2026',
   readTime: '9 min read',
   imageUrl: '/blog-images/ai-adoption-us-small-businesses-2026.webp',
   meta: {
-    title: 'US Small Business AI Adoption Rate 2026: 17.7% Pay for AI',
+    title: 'US Small Business AI Adoption Statistics 2026: 17.7% Pay for AI',
     description:
-      '17.7% of US small businesses paid for AI by Dec 2025, up from 5.2% in 2023 (JPMorgan Chase). Census: 17-20% use AI. Every stat sourced, with what it means.',
+      'Small business AI adoption statistics 2026: 17.7% paid for AI by Dec 2025, up from 5.2% in 2023 (JPMorgan Chase). Census: 17-20% use AI. Every stat sourced.',
   },
   keyTakeaways: [
     '17.7% of US small businesses paid for AI services in December 2025, up from 5.2% in January 2023 and 1.7% in January 2019 (JPMorgan Chase Institute, based on actual payments).',
@@ -111,7 +111,7 @@ export const post: BlogPost = {
   content: (
     <>
       <p className="text-sm text-gray-500 mb-6">
-        Updated September 28, 2026. Every figure below was re-checked against its source that day.
+        Updated November 24, 2026. Every statistic below names its source. Figures were last re-checked against those sources on September 28, 2026.
       </p>
 
       <div className="bg-amber-50 border border-amber-200 p-5 rounded-lg mb-8">
@@ -140,6 +140,78 @@ export const post: BlogPost = {
           .
         </p>
       </div>
+
+      <h2 className="text-2xl font-bold mt-8 mb-4">Small Business AI Adoption Statistics, 2026</h2>
+      <p className="mb-4">
+        The key numbers in one place. Each row names the publisher and the period it covers. The
+        sections below explain why they differ.
+      </p>
+      <div className="overflow-x-auto mb-6">
+        <table className="min-w-full border-collapse border border-gray-300 text-sm">
+          <thead className="bg-gray-100 text-gray-900">
+            <tr>
+              <th className="p-3 border text-left">Statistic</th>
+              <th className="p-3 border text-left">Figure</th>
+              <th className="p-3 border text-left">Source and period</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="bg-white">
+              <td className="p-3 border">Small businesses paying for AI</td>
+              <td className="p-3 border font-semibold">17.7%</td>
+              <td className="p-3 border">JPMorgan Chase Institute, Dec 2025</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border">Same measure, three years earlier</td>
+              <td className="p-3 border font-semibold">5.2% (Jan 2023), 1.7% (Jan 2019)</td>
+              <td className="p-3 border">JPMorgan Chase Institute</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border">US businesses using AI</td>
+              <td className="p-3 border font-semibold">17% to 20%</td>
+              <td className="p-3 border">US Census Bureau BTOS, Dec 14 2025 to May 3 2026</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border">Firms with 100 to 249 employees using AI</td>
+              <td className="p-3 border font-semibold">32%</td>
+              <td className="p-3 border">US Census Bureau, May 2026</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border">Firms with 4 or fewer employees using AI</td>
+              <td className="p-3 border font-semibold">Under 20%</td>
+              <td className="p-3 border">US Census Bureau, May 2026</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border">US firms that had adopted AI</td>
+              <td className="p-3 border font-semibold">About 18%</td>
+              <td className="p-3 border">Federal Reserve FEDS Note, end of 2025</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border">Small vs large firms using AI</td>
+              <td className="p-3 border font-semibold">6.3% to 8.8% vs 11.1%</td>
+              <td className="p-3 border">SBA Office of Advocacy, 2025</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border">Firms under 5 employees saying AI is not applicable</td>
+              <td className="p-3 border font-semibold">Nearly 82%</td>
+              <td className="p-3 border">SBA Office of Advocacy, 2025</td>
+            </tr>
+            <tr className="bg-white">
+              <td className="p-3 border">Owners who say they use AI at all</td>
+              <td className="p-3 border font-semibold">55% (39% in 2024)</td>
+              <td className="p-3 border">Thryv survey of 540 owners, 2025</td>
+            </tr>
+            <tr className="bg-gray-50">
+              <td className="p-3 border">AI users saving more than 20 hours a month</td>
+              <td className="p-3 border font-semibold">58%</td>
+              <td className="p-3 border">Thryv survey, 2025 (self-reported)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p className="mb-4 text-sm text-gray-700">
+        Sources are linked in the list at the bottom of this page.
+      </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Why You See Both 55% and 17.7%</h2>
       <p className="mb-4">
