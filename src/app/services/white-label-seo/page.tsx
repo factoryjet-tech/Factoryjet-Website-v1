@@ -46,14 +46,21 @@ import { ORG_ID, ORG_REF, FOUNDER_ID } from '@/data/organization';
    - The vendor branch of the lead form goes to a separate inbox. The trust
      line on the hero form tells agencies to choose "Hire FactoryJet".
 
+   - SEO outsourcing (added 24 Nov 2026): the same Search Console audit found
+     "seo outsourcing company usa" (pos 80.8), "best seo outsourcing company"
+     (86.8) and "seo outsourcing companies in usa" (71.3) with no page.
+     DataForSEO US: "seo outsourcing" 260/mo, CPC $96.56. Same buyer as white
+     label, so it lives here (one section + 4 FAQs) instead of a new page.
+     The outsourcing copy reuses only facts already on this page.
+
    Schema: WebPage + Service + FAQPage + BreadcrumbList, through <JsonLd>.
    FAQPage is built from the same FAQ_ITEMS array the visible <FAQ> renders.
 ───────────────────────────────────────────────────────────────────────────── */
 
 const CANONICAL_URL = 'https://factoryjet.com/services/white-label-seo';
-const PAGE_TITLE = 'White Label SEO Services for Agencies | FactoryJet';
+const PAGE_TITLE = 'White Label SEO & SEO Outsourcing for Agencies | FactoryJet';
 const PAGE_DESC =
-  'White label SEO for agencies: audits, technical fixes, page writing and local SEO delivered under your brand. You keep the client. Fixed quote per task.';
+  'White label SEO and SEO outsourcing for agencies: audits, technical fixes, page writing and local SEO under your brand. You keep the client. Quoted per task.';
 const PAGE_PUBLISHED = '2026-11-24';
 const PAGE_MODIFIED = '2026-11-24';
 const CHECKED_ON = '24 Nov 2026';
@@ -74,6 +81,10 @@ export const metadata: Metadata = {
     'white label seo reseller',
     'white label seo reporting',
     'seo outsourcing for agencies',
+    'seo outsourcing',
+    'seo outsourcing company',
+    'seo outsourcing services',
+    'outsource seo',
   ],
   alternates: {
     canonical: CANONICAL_URL,
@@ -260,6 +271,30 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     question: 'Is white label SEO worth it for an agency?',
     answer:
       'It is worth it when the work is good enough to put your name on and your margin covers the time you spend managing the client. It is not worth it when you cannot check what was done. Before you sign with any provider, ask for a sample audit and a sample monthly report.',
+  },
+  {
+    category: 'basics',
+    question: 'What is SEO outsourcing?',
+    answer:
+      'SEO outsourcing is paying an outside team to do search work, such as audits, technical fixes and page writing, instead of doing it yourself. Agencies outsource client SEO, often white label under their own brand. Businesses with an in-house marketer outsource the parts their team has no time or skills for.',
+  },
+  {
+    category: 'basics',
+    question: 'What is the difference between SEO outsourcing and white label SEO?',
+    answer:
+      'SEO outsourcing is the broad term for handing SEO work to an outside team. White label SEO is one form of it: the agency sells the work under its own brand and the provider\'s name never appears. Every white label job is outsourced, but not every outsourced job is white label.',
+  },
+  {
+    category: 'basics',
+    question: 'Should an agency outsource SEO or hire an in-house SEO?',
+    answer:
+      'Outsource when your clients need different kinds of work, or when demand rises and falls, because you pay per job instead of a salary. Hire when SEO is a large, permanent part of your agency and there is enough steady work to keep one person busy every week.',
+  },
+  {
+    category: 'delivery',
+    question: 'What do I hand over when I outsource SEO to FactoryJet?',
+    answer:
+      'A brief and access. The brief covers the client\'s website, what they sell, where they sell it, what they asked you for and anything you have already promised them. Access means manager or user access on the client\'s own Analytics, Search Console, Business Profile and website. You approve each written quote before work starts.',
   },
   // ── Delivery ───────────────────────────────────────────────────
   {
@@ -782,6 +817,75 @@ export default function WhiteLabelSeoPage() {
                 </li>
               ))}
             </ul>
+          </div>
+        </section>
+
+        {/* 3b. SEO OUTSOURCING */}
+        <section className="border-b border-fj-neutral-200 bg-white py-16 md:py-20">
+          <div className="mx-auto max-w-[1120px] px-4 sm:px-6 md:px-8">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
+              <div className="lg:col-span-5">
+                <p className="fj-eyebrow">SEO outsourcing</p>
+                <h2 className="mt-4 font-fj-display text-3xl font-bold text-fj-ink sm:text-4xl">
+                  Outsourcing SEO to us: what you hand over and what you keep.
+                </h2>
+                <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
+                  SEO outsourcing means paying an outside team to do search work you would otherwise do yourself. White
+                  label SEO is one kind of outsourcing, where the work goes out under your agency&rsquo;s name. Not
+                  every outsourced job needs that.
+                </p>
+                <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-ink">
+                  Whichever way you outsource, you hand over two things: a brief and access. You keep the sign-off.
+                  Nothing starts until you approve a written quote for it.
+                </p>
+                <div className="mt-6 rounded-2xl border border-fj-neutral-200 bg-fj-cream p-5">
+                  <p className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13]">What you hand over</p>
+                  <ul className="mt-3 grid gap-2.5">
+                    {[
+                      'The client’s website, what they sell and where they sell it',
+                      'What the client asked you for, and anything you already promised them',
+                      'Manager or user access on the client’s own Analytics, Search Console, Business Profile and website',
+                    ].map((x) => (
+                      <li key={x} className="flex items-start gap-2.5 font-fj-body text-[15px] leading-relaxed text-fj-ink">
+                        <span aria-hidden="true" className="mt-[9px] h-1.5 w-1.5 flex-shrink-0 rounded-full bg-[#F05A28]" />
+                        {x}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <ul className="grid gap-4 lg:col-span-7">
+                {[
+                  {
+                    t: 'An agency outsourcing fully white label',
+                    b: 'Your client never sees our name. Reports carry your logo, we sign an NDA and we promise in writing not to contact or approach your clients. This is what the rest of this page describes.',
+                  },
+                  {
+                    t: 'An agency that tells clients it uses a partner',
+                    b: 'Some agencies are open with clients about using a specialist. The work, the written quotes and the typical turnaround are the same. What you tell your client about how your agency works is your decision.',
+                  },
+                  {
+                    t: 'An in-house marketing team',
+                    b: 'A business with its own marketer can outsource audits, technical fixes or page writing to us directly. There is no agency in between, so the work is done for your team, not under another brand.',
+                    href: '/services/ai-seo',
+                    link: 'SEO for businesses that hire us directly',
+                  },
+                ].map((x) => (
+                  <li key={x.t} className="rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6">
+                    <h3 className="font-fj-display text-lg font-bold text-fj-ink">{x.t}</h3>
+                    <p className="mt-1.5 font-fj-body text-[15px] leading-relaxed text-fj-neutral-600">{x.b}</p>
+                    {x.href ? (
+                      <Link
+                        href={x.href}
+                        className="mt-3 inline-flex min-h-11 items-center font-fj-body text-sm font-semibold text-[#B23E13] underline underline-offset-4"
+                      >
+                        {x.link}
+                      </Link>
+                    ) : null}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
 
