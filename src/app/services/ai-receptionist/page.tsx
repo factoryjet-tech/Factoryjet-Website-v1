@@ -13,10 +13,10 @@ import { US_FOOTER_COLUMNS } from '@/data/usFooterColumns';
 import StickyCtaLabel from '@/components/v2/StickyCtaLabel';
 
 const CANONICAL_URL = 'https://factoryjet.com/services/ai-receptionist';
-const PAGE_TITLE = 'AI Receptionist | Custom 24/7 Phone Answering | FactoryJet';
+const PAGE_TITLE = 'AI Virtual Receptionist | Custom 24/7 Phone Answering | FactoryJet';
 const PAGE_DESC =
   'A custom AI receptionist that answers every call 24/7, qualifies the caller and books the job into your CRM or scheduling software. Get a free call audit.';
-const PAGE_MODIFIED = '2026-10-11';
+const PAGE_MODIFIED = '2026-11-24';
 
 // Single source of truth for the breadcrumb trail. Feeds both the visible
 // <Breadcrumbs> component and the BreadcrumbList JSON-LD below so the two
@@ -459,11 +459,11 @@ export default function AiReceptionistPage() {
                   </span>
                 </div>
                 
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#14110F] font-heading leading-tight mb-6">Custom AI Receptionists That{' '}
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#14110F] font-heading leading-tight mb-6">Custom AI Virtual Receptionists That{' '}
                   <span className="text-[#F05A28]">Answer Every Call.</span></h1>
                 
                 <p className="text-lg sm:text-xl text-[#46403B] font-normal leading-relaxed mb-8 max-w-2xl">
-                  We build the AI receptionist around your business, your call flow, and the software you already run. It answers 24/7, qualifies the caller, handles the urgent ones first, and books the job straight into your CRM or dispatch board. No hold music, no voicemail, no lost after-hours lead.
+                  We build your AI virtual receptionist around your business, your call flow, and the software you already run. It answers 24/7, qualifies the caller, handles the urgent ones first, and books the job straight into your CRM or dispatch board. No hold music, no voicemail, no lost after-hours lead.
                 </p>
 
                 <div className="mb-8">
@@ -526,8 +526,9 @@ export default function AiReceptionistPage() {
               <div className="font-mono text-xs uppercase tracking-wider text-[#F05A28] font-bold mb-3">
                 // Definition: What is an AI Receptionist?
               </div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#14110F] font-heading mb-3">What Is an AI Virtual Receptionist, and What Does It Do?</h2>
               <p className="text-base sm:text-lg text-[#14110F] leading-relaxed font-medium">
-                An AI receptionist is an automated voice system that answers a business phone line 24 hours a day, holds a natural spoken conversation with the caller, and completes the task the caller rang about. It greets the caller, answers routine questions, qualifies the enquiry, books the appointment inside the CRM or scheduling software the business already uses, and transfers urgent calls to a human. Unlike a traditional answering service, which takes a message for someone else to action later, an AI receptionist finishes the job on the call itself, at any hour, on every line at once.
+                An AI virtual receptionist (also called an AI receptionist) is an automated voice system that answers a business phone line 24 hours a day, holds a natural spoken conversation with the caller, and completes the task the caller rang about. It greets the caller, answers routine questions, qualifies the enquiry, books the appointment inside the CRM or scheduling software the business already uses, and transfers urgent calls to a human. Unlike a traditional answering service, which takes a message for someone else to action later, an AI receptionist finishes the job on the call itself, at any hour, on every line at once.
               </p>
             </div>
           </div>
