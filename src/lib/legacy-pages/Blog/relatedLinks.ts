@@ -97,6 +97,13 @@ const SERVICE_RULES: ServiceRule[] = [
     weight: 4,
   },
   {
+    href: '/services/international-seo',
+    label: 'International SEO',
+    blurb: 'Site structure, hreflang and keyword research for sites that sell in more than one country.',
+    keywords: ['international seo', 'hreflang', 'multilingual seo', 'global seo', 'multiple countries', 'cctld'],
+    weight: 4,
+  },
+  {
     href: '/services/law-firm-seo',
     label: 'Law Firm SEO',
     blurb: 'SEO built for the practice areas and case types that actually pay.',
@@ -797,6 +804,7 @@ const SERVICE_FAMILY: Record<string, ServiceFamily> = {
   '/services/electrician-seo': 'search',
   '/services/cleaning-company-seo': 'search',
   '/services/technical-seo': 'search',
+  '/services/international-seo': 'search',
   '/ai-visibility-checker': 'search',
   '/uk/ai-seo': 'search',
   '/uk/seo-audit': 'search',
