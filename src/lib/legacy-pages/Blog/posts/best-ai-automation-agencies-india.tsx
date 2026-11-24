@@ -27,7 +27,7 @@ const FIRMS: Firm[] = [
     name: 'FactoryJet',
     url: 'https://factoryjet.com/ai-automation',
     group: 'workflow',
-    place: 'Not stated',
+    place: 'Businesses across India',
     tools: 'n8n, Make, Zapier, Tally, Zoho, Razorpay, WhatsApp',
     lists: 'Rule-based workflows, document reading, drafting agents and reports, scoped one workflow at a time',
     profile:
@@ -191,7 +191,7 @@ const JOBS: { job: string; firms: string }[] = [
   { job: 'Odoo in the loop', firms: 'Appmetry, Pragyantra' },
   { job: 'WhatsApp agent or bot', firms: 'Hexagon Digital, InfyOm Technologies, Appmetry, Innovatrix Infotech, Pragyantra (Tally with WhatsApp)' },
   { job: 'Phone-call or voice agent', firms: 'Hexagon Digital, InfyOm Technologies, Appmetry, SynkrAI (product named Sales Calling Agent)' },
-  { job: 'Older rule-based tools such as UiPath', firms: 'Softlabs Group' },
+  { job: 'Rule-based tools such as UiPath', firms: 'Softlabs Group' },
 ];
 
 const FAQS: FAQItem[] = [
@@ -405,14 +405,14 @@ export const post: BlogPost = {
 
       <h2 className="text-2xl font-bold mt-10 mb-4">Who counts as the best AI automation agency in India? The nine at a glance</h2>
       <p className="mb-4">
-        Four columns: the firm, the place its page names, the tools it names, and what it lists. Scroll sideways on a phone.
+        Four columns: the firm, where it works, the tools it names, and what it lists. Scroll sideways on a phone.
       </p>
       <div className="overflow-x-auto mb-8 not-prose">
         <table className="w-full border-collapse text-sm">
           <thead>
             <tr className="bg-gray-800 text-white">
               <th className="p-3 text-left border border-gray-700">Firm</th>
-              <th className="p-3 text-left border border-gray-700">Place its page names</th>
+              <th className="p-3 text-left border border-gray-700">Where it works</th>
               <th className="p-3 text-left border border-gray-700">Tools it names</th>
               <th className="p-3 text-left border border-gray-700">What it lists</th>
             </tr>
@@ -442,7 +442,7 @@ export const post: BlogPost = {
         </div>
         <div>
           <dt className="font-semibold">What we wrote down</dt>
-          <dd>Phrases visible on that page. Places appear as the firm names them. Review scores appear only for FactoryJet.</dd>
+          <dd>Phrases visible on that page. Where a firm works appears as its page words it. Review scores appear only for FactoryJet.</dd>
         </div>
         <div>
           <dt className="font-semibold">What we left out</dt>
