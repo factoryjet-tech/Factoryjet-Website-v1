@@ -70,6 +70,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/services/technical-seo',                        source: 'src/app/services/technical-seo/page.tsx' },
   { path: '/services/seo-consulting',                      source: 'src/app/services/seo-consulting/page.tsx' },
   { path: '/services/white-label-seo',                     source: 'src/app/services/white-label-seo/page.tsx' },
+  { path: '/services/seo-copywriting',                     source: 'src/app/services/seo-copywriting/page.tsx' },
   { path: '/services/roofing-seo',                         source: 'src/app/services/roofing-seo/page.tsx' },
   { path: '/services/plumber-seo',                         source: 'src/app/services/plumber-seo/page.tsx' },
   { path: '/services/electrician-seo',                     source: 'src/app/services/electrician-seo/page.tsx' },
