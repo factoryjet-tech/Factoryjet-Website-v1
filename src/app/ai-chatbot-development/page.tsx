@@ -98,17 +98,13 @@ const BOT_SERVICES = [
     name: 'Internal knowledge chatbot',
     text: 'Trained on your SOPs, handbooks and internal documents, so staff stop asking each other where a policy lives.',
   },
-  {
-    name: 'Chatbot review and rescue',
-    text: 'If a bot is already live and giving poor answers, we read the conversation logs, find the pattern and fix the knowledge or the rules behind it.',
-  },
 ];
 
 const SUPPORT_BLOCKS = [
   {
     kicker: 'Answers',
     name: 'The repeated questions',
-    text: 'Order status, return rules, delivery times, fees, opening hours. The bot answers from your documents, found passage by passage, so a reply comes from your policy and not from a guess.',
+    text: 'Order status, return rules, delivery times, fees, opening hours. The bot answers from your documents, found passage by passage, so each reply comes from your policy.',
   },
   {
     kicker: 'Lookups',
@@ -259,7 +255,7 @@ const BOT_FAQS = [
     category: 'choosing',
     question: 'Is there a good chatbot development company for Mumbai, Bengaluru, Delhi NCR, Pune, Hyderabad or Chennai?',
     answer:
-      'Yes. We take on chatbot projects for businesses across India. Calls and demos happen on video, so a business in any of those cities gets the same service. Send us the questions your customers ask and we reply with what the bot could cover.',
+      'Yes. We take on chatbot projects for businesses across India. Send us the questions your customers ask and we reply with what the bot could cover.',
   },
   /* ── Cost ── */
   {
@@ -282,7 +278,7 @@ const BOT_FAQS = [
   },
   {
     category: 'cost',
-    question: 'Do you publish a price list for chatbot development?',
+    question: 'Is there a fixed rate card for chatbot work?',
     answer:
       'No. The questions, the channels and the tools to connect decide the price. After a brief scoping call we send one written price for each phase, with payment at milestones.',
   },
@@ -309,11 +305,11 @@ const BOT_FAQS = [
     category: 'basics',
     question: 'What do AI chatbot services include?',
     answer:
-      'Customer service bots, sales and lead bots, WhatsApp bots, store and order bots, internal knowledge bots, and a review of any bot already live. Each begins with a call about the questions your customers ask and the tools the bot must reach.',
+      'Customer service bots, sales and lead bots, WhatsApp bots, store and order bots, and internal knowledge bots. Each begins with a call about the questions your customers ask and the tools the bot must reach.',
   },
   {
     category: 'basics',
-    question: 'What is the difference between an AI chatbot and a rule-based chatbot?',
+    question: 'How does an AI chatbot differ from a rule-based one?',
     answer:
       'A rule-based bot follows a menu of buttons and keywords. It works until a customer words something differently, and then it loops. An AI chatbot uses a language model to understand what was meant and answer from your information. Many good builds use both: buttons for fixed steps, AI for open questions.',
   },
@@ -550,7 +546,7 @@ export default function AiChatbotDevelopmentIndiaPage() {
               <p className={`mt-5 ${PROSE}`}>
                 The best AI chatbot development company in India for your business is the one that answers a sample of
                 your own customer questions before you sign, hands difficult chats to your team, and puts the price in
-                writing. FactoryJet does it like this. We build for your website and
+                writing. We build for your website and
                 WhatsApp, connect the bot to tools such as Shopify, Zoho CRM and Razorpay, and leave you the code.
                 Chatbot platforms such as Haptik, Yellow.ai and Gupshup suit teams that want a product and a monthly bill. A
                 custom build suits a bot that has to read your orders or documents.
@@ -607,8 +603,8 @@ export default function AiChatbotDevelopmentIndiaPage() {
           <p className={`mt-5 max-w-[760px] ${PROSE}`}>
             A customer service chatbot takes the first line of support. In many Indian businesses that line is a shared
             inbox, a WhatsApp number and a phone, all fed by the same twenty questions. The bot answers those
-            questions at any hour. Your people keep the conversations that need judgement. A good build is judged by how
-            cleanly it hands over, not by how rarely it does.
+            questions at any hour. Your people keep the conversations that need judgement. Judge a good build by how
+            cleanly it hands over.
           </p>
           <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-3">
             {SUPPORT_BLOCKS.map((b) => (
