@@ -13,11 +13,11 @@ import type { BlogPost, FAQItem } from '../data.types';
 const faqs: FAQItem[] = [
   {
     q: 'How much does an ecommerce website cost in India in 2026?',
-    a: 'For a custom store that connects to payment, shipping or invoicing tools, CodeVibe prices its Mid-range store at ₹1,50,000 to ₹5,00,000, and Webhorse Studio prices a small business store with shipping and WhatsApp integrations at ₹80,000 to ₹2 lakh. With ERP or inventory sync, Webhorse Studio and CodeVibe list ₹5 lakh to ₹25 lakh or more. Template stores are priced apart, from ₹25,000.',
+    a: 'For a custom store that connects to payment, shipping or invoicing tools, CodeVibe’s guide lists a Mid-range store tier at ₹1,50,000 to ₹5,00,000, and Webhorse Studio’s guide, which takes its tiers from HTBG’s 2026 guide, lists a small business store tier with shipping and WhatsApp integrations at ₹80,000 to ₹2 lakh. With ERP or inventory sync, Webhorse Studio and CodeVibe list ₹5 lakh to ₹25 lakh or more. Template stores are priced apart, from ₹25,000.',
   },
   {
     q: 'What is the ecommerce website development cost in India for a custom store?',
-    a: 'Three Indian guides put custom stores between ₹80,000 and ₹25 lakh or more, depending on what the store connects to. CodeVibe prices Mid-range at ₹1,50,000 to ₹5,00,000 and Custom or enterprise at ₹5,00,000 to ₹25,00,000+. DigitalXBrand lists custom Next.js builds from ₹2,50,000 to ₹20,00,000+. Webhorse Studio lists its Advanced store at ₹5 lakh to ₹10 lakh.',
+    a: 'Three Indian guides put custom stores between ₹80,000 and ₹25 lakh or more, depending on what the store connects to. CodeVibe’s guide lists a Mid-range tier at ₹1,50,000 to ₹5,00,000 and a Custom or enterprise tier at ₹5,00,000 to ₹25,00,000+. DigitalXBrand lists custom Next.js builds from ₹2,50,000 to ₹20,00,000+. Webhorse Studio’s guide lists an Advanced store tier at ₹5 lakh to ₹10 lakh.',
   },
   {
     q: 'How much does a Shopify website cost in India?',
@@ -65,7 +65,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How much does ERP or Tally integration add to an ecommerce website in India?',
-    a: 'No guide here prints a standalone price for it. CodeVibe folds basic ERP or Tally sync into its Standard B2B row at ₹4 to 12 lakh, and deep ERP or SAP integration into its Custom row at ₹15 to 35 lakh or more. Webhorse Studio puts ERP or inventory sync in its Advanced store at ₹5 lakh to ₹10 lakh. Ask each quote which system it connects and whether it reads, writes or both.',
+    a: 'No guide here prints a standalone price for it. CodeVibe folds basic ERP or Tally sync into its Standard B2B row at ₹4 to 12 lakh, and deep ERP or SAP integration into its Custom row at ₹15 to 35 lakh or more. Webhorse Studio’s guide lists ERP or inventory sync in an Advanced store tier at ₹5 lakh to ₹10 lakh. Ask each quote which system it connects and whether it reads, writes or both.',
   },
   {
     q: 'What is the average cost of website design in India?',
@@ -77,7 +77,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'Can I build an ecommerce website for ₹10,000?',
-    a: 'You can start a store yourself on a builder plan for less, but Webhorse Studio says a professionally built store is rarely under ₹25,000 in 2026 price guides. It warns that very cheap offers often leave out the domain, gateway setup, policy pages or the right to the store itself. Before you pay, ask who owns the store account.',
+    a: 'You can start a store yourself on a builder plan for less, but Webhorse Studio says a professionally built store is rarely under ₹25,000 in 2026 price guides. It warns that cheap offers often leave out the domain, gateway setup, policy pages or the right to the store itself. Before you pay, ask who owns the store account.',
   },
   {
     q: 'How to create an eCommerce website for free in India?',
@@ -105,7 +105,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'Why do ecommerce website quotes in India vary so much?',
-    a: 'Because the same words cover very different jobs. CodeVibe names catalogue size, design, integrations, custom features and traffic headroom as the five things that move a quote most. Webhorse Studio adds variants, rules such as cash-on-delivery limits by pincode, and language versions: a Hindi or Marathi store, it says, doubles much of the content work. Compare quotes line by line.',
+    a: 'Because the same words cover different jobs. CodeVibe names catalogue size, design, integrations, custom features and traffic headroom as the five things that move a quote most. Webhorse Studio adds variants, rules such as cash-on-delivery limits by pincode, and language versions: a Hindi or Marathi store, it says, doubles much of the content work. Compare quotes line by line.',
   },
   {
     q: 'How much should I budget for the first year of an online store?',
@@ -135,12 +135,12 @@ const faqs: FAQItem[] = [
 
 const CUSTOM_ROWS: { source: string; label: string; range: string; covers: string }[] = [
   { source: 'Webhorse Studio', label: 'Small business store', range: '₹80,000 to ₹2 lakh', covers: 'Customised theme, category structure, shipping and WhatsApp integrations' },
-  { source: 'Webhorse Studio', label: 'Mid-scale store', range: '₹2 lakh to ₹5 lakh', covers: 'Custom design, hundreds of products, filters, reviews, email automation' },
+  { source: 'Webhorse Studio', label: 'Mid-scale store', range: '₹2 lakh to ₹5 lakh', covers: 'Custom design, hundreds of products, filters, reviews, email automation (no integration named)' },
   { source: 'Webhorse Studio', label: 'Advanced store', range: '₹5 lakh to ₹10 lakh', covers: 'Custom features, ERP or inventory sync, loyalty, multi-warehouse' },
   { source: 'Webhorse Studio', label: 'Enterprise or marketplace', range: '₹10 lakh to ₹25 lakh+', covers: 'Multi-vendor, custom backend, high traffic' },
   { source: 'CodeVibe', label: 'Mid-range store', range: '₹1,50,000 to ₹5,00,000', covers: 'Custom design, shipping and invoicing integrations, conversion features for a growing D2C brand; 5 to 8 weeks' },
   { source: 'CodeVibe', label: 'Custom or enterprise', range: '₹5,00,000 to ₹25,00,000+', covers: 'Custom architecture, inventory logic, ERP, CRM or warehouse integrations, multi-vendor; 8 to 16 weeks' },
-  { source: 'DigitalXBrand', label: 'Growth (WooCommerce table)', range: '₹90,000 to ₹2,00,000', covers: 'Custom child theme, up to 150 SKUs, Shiprocket, coupons, GST; 6 to 10 weeks' },
+  { source: 'DigitalXBrand', label: 'Growth (WooCommerce table)', range: '₹90,000 to ₹2,00,000', covers: 'Custom child theme, up to 150 SKUs, Shiprocket, coupons, GST (the source does not call these integrations); 6 to 10 weeks' },
   { source: 'DigitalXBrand', label: 'Advanced (WooCommerce table)', range: '₹2,00,000 to ₹5,00,000', covers: 'Custom plugins, subscriptions, multi-vendor lite, ERP sync; 10 to 16 weeks' },
   { source: 'DigitalXBrand', label: 'Plus / headless (Shopify table)', range: '₹2,50,000 to ₹12,00,000+', covers: 'Shopify Plus or Hydrogen storefront; 12 to 24 weeks' },
   { source: 'DigitalXBrand', label: 'MVP (custom Next.js table)', range: '₹2,50,000 to ₹4,50,000', covers: 'Catalog, cart, Razorpay, admin lite, up to 100 SKUs; 10 to 14 weeks' },
@@ -167,7 +167,7 @@ const SHOPIFY_ROWS: { plan: string; yearly: string; monthly: string; fee: string
   { plan: 'Basic', yearly: '₹1,499 a month', monthly: '₹1,994 a month', fee: '2%' },
   { plan: 'Grow', yearly: '₹5,599 a month', monthly: '₹7,447 a month', fee: '1%' },
   { plan: 'Advanced', yearly: '₹22,680 a month', monthly: '₹30,164 a month', fee: '0.6%' },
-  { plan: 'Plus', yearly: 'Not shown', monthly: 'From ₹1,75,000 a month', fee: '0.2%' },
+  { plan: 'Plus', yearly: 'Not offered yearly', monthly: 'From ₹1,75,000 a month', fee: '0.2%' },
 ];
 
 const PLATFORM_ROWS: { source: string; platform: string; build: string; running: string }[] = [
@@ -243,8 +243,8 @@ export const post: BlogPost = {
         <p className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13] mb-3">The short answer</p>
         <p className="text-lg leading-relaxed text-[#1F2937] mb-0">
           For a custom store that connects to payment, shipping and invoicing tools, the Indian guides we read on 24 November
-          2026 list <strong>₹80,000 to ₹5,00,000</strong>: Webhorse Studio puts its small business store, with shipping and
-          WhatsApp integrations, at ₹80,000 to ₹2 lakh, and CodeVibe puts its Mid-range store at ₹1,50,000 to ₹5,00,000. Where
+          2026 list <strong>₹80,000 to ₹5,00,000</strong>: Webhorse Studio’s guide (tiers credited to HTBG’s 2026 guide) lists a small
+          business store tier, with shipping and WhatsApp integrations, at ₹80,000 to ₹2 lakh, and CodeVibe’s guide lists a Mid-range store tier at ₹1,50,000 to ₹5,00,000. Where
           ERP, inventory sync or several warehouses are named, Webhorse Studio and CodeVibe list <strong>₹5 lakh to ₹25 lakh
           or more</strong>, and DigitalXBrand lists a WooCommerce build with ERP sync at ₹2,00,000 to ₹5,00,000. Template stores on a ready-made theme are listed apart, from ₹25,000. Shopify’s own plans cost ₹1,499 to ₹22,680
           a month billed yearly, and running the store adds gateway fees, hosting and upkeep.
@@ -315,11 +315,11 @@ export const post: BlogPost = {
         </table>
       </div>
       <p>
-        Rows that name shipping, invoicing or WhatsApp links sit between ₹80,000 and ₹5,00,000. Rows that name ERP,
+        Rows that call out shipping, invoicing or WhatsApp integrations (Webhorse Studio’s small business store, CodeVibe’s Mid-range store) sit between ₹80,000 and ₹5,00,000. Webhorse Studio’s Mid-scale row names no integration, and DigitalXBrand’s WooCommerce Growth row names Shiprocket and GST without calling them integrations, so neither is counted in that band. Rows that name ERP,
         inventory sync, warehouses or a custom backend run from ₹2,00,000 (DigitalXBrand, WooCommerce Advanced, with ERP
         sync) to ₹25 lakh or more. Webhorse Studio’s Advanced and Enterprise rows, CodeVibe’s Custom or enterprise row and
         DigitalXBrand’s Enterprise row sit at ₹5 lakh and above. Webhorse Studio’s table credits HTBG’s 2026 guide for its
-        tiers, and says Indian agencies almost always quote before tax.
+        tiers, adds a second source’s band beside each tier (for example ₹80,000 to ₹2.5 lakh for a small business store, from SolutionBowl), and says Indian agencies almost always quote before tax. We show the first band only.
       </p>
 
       <h3 id="template-stores" className="text-xl font-bold mt-8 mb-3">Stores on a ready-made theme, listed apart</h3>
@@ -358,7 +358,7 @@ export const post: BlogPost = {
       </p>
       <p>
         Webhorse Studio adds a floor. It says a professionally built store is rarely under ₹25,000 in 2026 price guides, and
-        that very cheap offers often leave out the domain, gateway setup, policy pages or the right to the store itself.
+        that cheap offers often leave out the domain, gateway setup, policy pages or the right to the store itself.
       </p>
 
       <h2 id="b2b-cost" className="text-2xl font-bold mt-10 mb-4">How much does a B2B ecommerce website cost in India?</h2>
@@ -425,7 +425,7 @@ export const post: BlogPost = {
         </table>
       </div>
       <p className="text-sm text-gray-600">
-        Source: <a href="https://www.shopify.com/in/pricing" target="_blank" rel="noopener noreferrer">Shopify India, Pricing</a>, fetched 24 November 2026. The page also shows 3 days free, then ₹20 a month for 3 months. Plans change; check the page before you budget.
+        Source: <a href="https://www.shopify.com/in/pricing" target="_blank" rel="noopener noreferrer">Shopify India, Pricing</a>, fetched 24 November 2026. The page also shows 3 days free, then ₹20 a month for 3 months. The page shows no yearly price for Plus, and Webhorse Studio says Plus is not offered yearly. Plans change; check the page before you budget.
       </p>
       <p>
         On those prices, Basic billed yearly comes to ₹17,988 a year (₹1,499 × 12) and Grow to ₹67,188. That is our
