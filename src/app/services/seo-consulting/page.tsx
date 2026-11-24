@@ -1134,7 +1134,12 @@ export default function SeoConsultingPage() {
                   <Link href="/blog/best-seo-consulting-companies-usa" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
                     best SEO consulting companies in the USA
                   </Link>{' '}
-                  list sets the options side by side.
+                  list sets the options side by side. If you run an agency and need the work delivered under your own
+                  brand, see{' '}
+                  <Link href="/services/white-label-seo" className="font-semibold underline underline-offset-2" style={{ color: ORANGE_DARK }}>
+                    white label SEO for agencies
+                  </Link>
+                  .
                 </p>
               </div>
             </div>
