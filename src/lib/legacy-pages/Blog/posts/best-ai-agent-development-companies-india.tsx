@@ -32,7 +32,7 @@ const FIRMS: Firm[] = [
     type: 'Custom AI agents for one job at a time: calls, WhatsApp replies, documents, support and lead follow-up',
     scale: 'Rated 5.0 on Clutch from 4 reviews and 5.0 on GoodFirms from 5 reviews',
     what: 'We scope one job on a short call, test the agent on real samples of your documents, emails or calls before you sign, then build it in phases. Each phase has one fixed price in writing, paid at milestones. Early phases keep a person approving every draft, and you choose where approval stays. The code and repository are yours from the first day, and later support is optional with no monthly minimum. Two named examples: Sow Easy, where WooCommerce trade ordering is connected to Odoo, and GPSUK, online ordering for trade buyers who reorder the same promotional products again and again.',
-    bestFor: 'A business of middling size that needs a single workflow working before it commits to a bigger programme, with price and code ownership settled in writing.',
+    bestFor: 'A mid-sized business that wants one workflow working first, with the price and code ownership settled in writing.',
     ask: 'Ask us what we would not automate in your process. A short answer to that tells you whether we have thought about your job.',
   },
   {
@@ -53,21 +53,21 @@ const FIRMS: Firm[] = [
     source: 'https://www.innovationm.com/services/ai/development/agents/',
     group: 'agency',
     offices: 'Noida, Uttar Pradesh (marked HQ), with offices in New Canaan, Connecticut and Oxted, Surrey',
-    type: 'Software engineering firm with AI agent development services',
+    type: 'Software engineering firm with an AI agent development service',
     scale: 'Its home page says it was established in 2011',
-    what: 'Its agent page describes systems that perceive the context of an operation, make autonomous decisions and carry out multi-step workflows in real time. It sits next to application engineering, custom product development and software integration, so the agent can be part of a larger software build.',
-    bestFor: 'A product company or SME that expects the agent to grow into a wider custom software project.',
+    what: 'Its agent page describes systems that perceive the context of an operation, make autonomous decisions and carry out multi-step workflows in real time. Its home page lists application engineering, custom product development and software integration as separate capabilities.',
+    bestFor: 'Worth a look if you expect the agent to sit inside a wider custom software project.',
     ask: 'Who on its team would run your project week to week, and how a handover to your own developers works.',
   },
   {
     name: 'Trigma',
     url: 'https://trigma.com/',
-    source: 'https://trigma.com/agentic-ai-services/',
+    source: 'https://trigma.com/',
     group: 'agency',
     offices: 'Mohali and Las Vegas, Nevada (its home page lists both)',
     type: 'Custom AI and software development: agentic AI, multi-agent systems and agent observability',
     scale: 'Its home page states 1000+ projects delivered and 17+ years of expertise',
-    what: 'Its home page says it designs and deploys agentic AI systems that go beyond chatbots, with reasoning, planning and tool use for end-to-end business workflows. Separate service pages cover multi-agent development and agent observability, which means watching what an agent did and why. One case study on the site is an AI voice agent that follows up on insurance claims for a US healthcare billing company.',
+    what: 'Its home page says it designs and deploys agentic AI systems with reasoning, planning and tool-integrating capabilities for end-to-end business workflows. Its services menu lists Multi Agent and AI Agent Observability, which means watching what an agent did and why. One case study on the home page is titled AI Voice Agents for Healthcare Claims Follow-Up, for a US healthcare RCM company.',
     bestFor: 'A team that already knows it needs several agents working together and wants monitoring built in.',
     ask: 'How it measures whether an agent is right after launch, and what that monitoring costs to run each month.',
   },
@@ -77,9 +77,9 @@ const FIRMS: Firm[] = [
     source: 'https://www.ksolves.com/',
     group: 'agency',
     offices: 'Delivery centres in Noida, Pune and Indore, as its home page states',
-    type: 'IT services company with tailored AI agents, big data, Salesforce and Odoo practices',
+    type: 'Software company with tailored AI agents and Salesforce, Odoo and open source practices',
     scale: 'Its home page lists 14+ years in business, 750+ projects and 200+ clients, and says it is stock market listed',
-    what: 'Its home page presents tailored AI agents for marketing, HR, operations, design and finance, and a Build Your Own Agent option. Beyond agents it runs enterprise practice areas such as open source, Salesforce and Odoo, so an agent can be wired into the business software it already uses.',
+    what: 'Its home page presents tailored AI agents for marketing, HR, operations, design and finance, and a Build Your Own Agent option. Beyond agents its home page names practice areas including open source, Salesforce and Odoo.',
     bestFor: 'A business that runs Odoo or Salesforce and wants an agent added to that system by the same firm.',
     ask: 'Which of the agent types on its home page it has shipped for a business of your size, and what the support terms are after launch.',
   },
@@ -91,7 +91,7 @@ const FIRMS: Firm[] = [
     offices: 'Gurgaon (Delhi NCR), Haryana, and Walnut, California (its site lists both)',
     type: 'Software and AI development with agentic AI, AI voice agent and AI sales agent services',
     scale: 'Its home page shows a 98% client retention rate',
-    what: 'Its service menu lists Agentic AI Development, AI Sales Agent Development and AI Voice Agent Development, next to generative AI, LLM development, chatbots and computer vision. Its menu also lets you hire AI agent developers, next to a dedicated developers option.',
+    what: 'Its service menu lists Agentic AI Development, AI Sales Agent Development and AI Voice Agent Development, next to generative AI, LLM development, chatbots and computer vision. Its menu also lists AI Agent Developers and Hire Dedicated Developers.',
     bestFor: 'A company that wants a sales or voice agent and is open to hiring dedicated developers instead of a fixed-scope project.',
     ask: 'Whether it prefers a fixed scope or dedicated developers for your job, and who owns the code in each case.',
   },
@@ -101,11 +101,11 @@ const FIRMS: Firm[] = [
     source: 'https://www.leewayhertz.com/ai-agent-development-company/',
     group: 'engineering',
     offices: 'Not stated on the pages we read, so we name no city',
-    type: 'AI development firm with agent, copilot and generative AI services and its own AI products',
+    type: 'AI development firm with AI agent, AI copilot and generative AI services and a list of its own AI products',
     scale: 'No team or project figure read on the pages we opened',
     what: 'Its agent page says it helps enterprises build and deploy AI agents and multi-agent systems that automate complex workflows and coordinate work across applications, data and teams. It describes support for the whole agent lifecycle, from use-case analysis and technical design to development, governed deployment and AgentOps, the day-to-day running and monitoring of agents.',
-    bestFor: 'A larger company that wants a firm with a defined agent lifecycle and its own agent products to start from.',
-    ask: 'Which parts of your agent would come from its own platform and which would be written fresh for you.',
+    bestFor: 'Worth a look if you want a firm that describes the whole agent lifecycle and lists its own AI products.',
+    ask: 'Which parts of your agent would come from its listed AI products and which would be written fresh for you.',
   },
   {
     name: 'Simform',
@@ -115,8 +115,8 @@ const FIRMS: Firm[] = [
     offices: 'Its about page has a Headquarters heading but the city did not appear in the text we read',
     type: 'AI-native digital engineering company with agentic AI services',
     scale: 'Its about page lists founded 2010, 1200+ employees and 350+ platform certified engineers',
-    what: 'Its home page says it was a global finalist at the 2026 Microsoft Partner of the Year Awards, for work on AI agents in field operations, in the Innovate with Azure AI Apps and Agents category. Its services list covers agentic AI next to product engineering, data and cloud work.',
-    bestFor: 'A company building on Microsoft Azure that wants agents inside a larger engineering programme.',
+    what: 'Its home page says it was a global finalist at the 2026 Microsoft Partner of the Year Awards, for work on AI agents in field operations, in the Innovate with Azure AI Apps and Agents category. Its services menu lists agentic AI next to product engineering, data and cloud and platform work.',
+    bestFor: 'Worth a look if you build on Microsoft Azure and want agents inside a wider engineering programme.',
     ask: 'What size of project it takes on at the low end, and who leads the work after the sales call.',
   },
   {
@@ -127,9 +127,9 @@ const FIRMS: Firm[] = [
     offices: 'Not read on the pages we opened, so we name no city',
     type: 'Enterprise AI company with an agentic AI platform and data-led AI services',
     scale: 'Its about page says it was founded in 2000 and supports large global enterprises',
-    what: 'Its about page describes an enterprise AI company built to power human decisions inside large clients. Its home page says its work is powered by its own enterprise agentic AI platform, and talks about moving AI beyond pilots.',
-    bestFor: 'A large enterprise with analytics-heavy decisions that wants agents tied to a data programme.',
-    ask: 'Whether a mid-sized company can buy a small first piece of work, or whether its model begins at enterprise scale.',
+    what: 'Its about page says it aims to power human decisions in its clients' enterprises with AI. Its home page says its work is powered by its own enterprise agentic AI platform, and talks about moving AI beyond pilots.',
+    bestFor: 'Worth a look if you are a large enterprise that wants agents tied to a data programme.',
+    ask: 'Whether it takes a small first piece of work from a mid-sized company.',
   },
   {
     name: 'Yellow.ai',
@@ -138,8 +138,8 @@ const FIRMS: Firm[] = [
     group: 'enterprise',
     offices: 'Not read on the pages we opened, so we name no city',
     type: 'Agentic AI platform for customer and employee service automation',
-    scale: 'Its about page says it was founded by three friends and serves enterprises globally',
-    what: 'It is a platform you configure, not a custom build. Its home page offers an AI Agent Builder for creating enterprise-ready agents for any channel, and a desktop agent for employee experience. The about page calls it an agentic AI platform for service automation.',
+    scale: 'Its about page says it was founded by three friends and caters to enterprises globally',
+    what: 'Its home page presents it as a platform, with an AI Agent Builder for creating enterprise-ready agents for any channel and a Nexus EDGE agentic desktop ally for employee experience automation. The about page calls it an agentic AI platform for service automation.',
     bestFor: 'A business whose main need is customer or employee service across many channels, and that wants a product rather than a project.',
     ask: 'What the platform does when your process needs a rule it does not support, and who owns the conversation data.',
   },
@@ -155,29 +155,29 @@ const GROUPS: { key: Firm['group']; heading: string; intro: string }[] = [
   },
   {
     key: 'agency',
-    heading: 'Which Indian AI agent development companies suit SMEs and mid-sized firms?',
-    intro: 'These five are software and AI firms that describe agent work on their own sites and sell to businesses of different sizes. Each lists its Indian city or delivery centres, plus offices abroad.',
+    heading: 'Which Indian software firms describe AI agent development on their own sites?',
+    intro: 'These five are software and AI firms that describe agent work on their own sites. Each profile gives the Indian city or delivery centres its site lists, and any office abroad it lists.',
   },
   {
     key: 'engineering',
-    heading: 'Which engineering-led AI firms in India build agents for larger programmes?',
-    intro: 'These two pitch agents as part of a bigger engineering or product effort. Expect more process, more people and a wider scope than a single-workflow job.',
+    heading: 'Which engineering-led AI firms in India list agent services?',
+    intro: 'These two describe agents next to wider AI and engineering services on their own sites.',
   },
   {
     key: 'enterprise',
-    heading: 'Who are the large AI agent and platform players in India?',
-    intro: 'These two sell to big enterprises. One is a platform you configure, the other an analytics-led AI company. They suit programmes with thousands of users, and a small job may sit awkwardly with their model.',
+    heading: 'Which AI platform and analytics firms in India offer agents?',
+    intro: 'These two describe their work for enterprises on their own sites. One presents an agentic platform for service automation, the other an enterprise AI company with its own agentic platform.',
   },
 ];
 
 const FAQS: FAQItem[] = [
   {
     q: 'What is the best AI agent development company in India?',
-    a: 'Nobody publishes an independent ranking and we will not invent one. We read the websites of ten firms on 24 November 2026. Choose by fit: Maruti Techlabs, InnovationM, Trigma, Ksolves and Quytech for SMEs and mid-sized firms, LeewayHertz and Simform for larger programmes, Fractal and Yellow.ai for enterprises. We wrote this list, and we suit a single workflow in a mid-sized business.',
+    a: 'Nobody publishes an independent ranking and we will not invent one. We read the websites of ten firms on 24 November 2026. Choose by fit: the profiles group Maruti Techlabs, InnovationM, Trigma, Ksolves and Quytech as software firms with agent services, LeewayHertz and Simform as engineering-led, and Fractal and Yellow.ai as platform and analytics firms. We wrote this list, and we suit a single workflow in a mid-sized business.',
   },
   {
     q: 'Which are the best AI agent development companies in India?',
-    a: 'For a first agent in a small or mid-sized business, shortlist Maruti Techlabs, InnovationM, Trigma, Ksolves, Quytech and FactoryJet. For an agent inside a bigger engineering programme, add LeewayHertz and Simform. For enterprise scale, Fractal Analytics and Yellow.ai. We read each firm\'s own site on 24 November 2026 and list what it states.',
+    a: 'Start with Maruti Techlabs, InnovationM, Trigma, Ksolves, Quytech and FactoryJet, which each describe agent work for businesses. Add LeewayHertz and Simform if the agent sits inside wider engineering, and Fractal Analytics or Yellow.ai if you want a platform or analytics firm. We read each firm\'s own site on 24 November 2026 and list what it states.',
   },
   {
     q: 'Which Indian company could build a bespoke AI agent for my business?',
@@ -193,11 +193,11 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'What company is developing AI agents?',
-    a: 'Many do. Among Indian firms we read, Maruti Techlabs, InnovationM, Trigma, Ksolves, Quytech, LeewayHertz, Simform and FactoryJet build agents for clients, Fractal builds on its own agentic platform, and Yellow.ai sells a platform for creating agents. Each states this on its own pages.',
+    a: 'Many do. Among Indian firms we read, Maruti Techlabs, InnovationM, Trigma, Ksolves, Quytech, LeewayHertz, Simform and FactoryJet build agents for clients, Fractal describes its own enterprise agentic platform, and Yellow.ai describes an agentic platform for service automation. Each says this on its own pages.',
   },
   {
     q: 'Where do I find good AI agent developers to hire in India?',
-    a: 'Look for people who have run an agent in a live business and can explain how it stops safely when it errs. Quytech lists hiring AI agent developers as a service. A project firm suits a fixed scope, and a freelancer suits a small trial.',
+    a: 'Look for people who have run an agent in a live business and can explain how it stops safely when it errs. Quytech's menu lists AI Agent Developers among the developers you can hire. A project firm suits a fixed scope, and a freelancer suits a small trial.',
   },
   {
     q: 'Is there a good AI agent development company in Bangalore?',
@@ -205,11 +205,11 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Does this list include Infosys, TCS and Wipro?',
-    a: 'No. They suit very large programmes and AI assistants name them often, but most mid-sized buyers asking for one agent will find the process heavy. We focused on firms that describe agent services for businesses across a range of sizes. If you are a large regulated enterprise, add them to your own shortlist.',
+    a: 'No. AI assistants name them often, but we did not open their sites for this guide, so they carry no entry here. If you want them considered, add them to your own shortlist and ask them the same seven questions.',
   },
   {
     q: 'Is FactoryJet really the right choice, or is that just marketing?',
-    a: 'We wrote this list and put ourselves first, which is a conflict of interest. We suit a company of middling size that wants a single workflow built, demonstrated on its own data before signing, with a fixed price per phase and code ownership in writing. If you need enterprise scale, another firm here fits better.',
+    a: 'We wrote this list and put ourselves first, which is a conflict of interest. We suit a mid-sized business that wants one workflow built, demonstrated on its own data before signing, with a fixed price per phase and code ownership in writing. If you want a platform or an analytics firm, another entry fits better.',
   },
   {
     q: 'How did you choose the firms on this list?',
@@ -233,7 +233,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Does it cost money to use an AI agent?',
-    a: 'Yes, twice over: once to build it, then monthly for the AI model, hosting and upkeep. Platforms such as Yellow.ai charge for the platform instead of a custom build. Get both the build price and the monthly bill in writing from any firm.',
+    a: 'Yes, twice over: once to build it, then monthly for the AI model, hosting and upkeep. Get both the build price and the monthly bill in writing from any firm.',
   },
   {
     q: 'What is the difference between an AI agent and a chatbot?',
@@ -249,7 +249,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Is a platform like Yellow.ai better than a custom agent?',
-    a: 'A platform is faster to start when your need is customer or employee service across many channels and you are happy to work within its rules. A custom agent fits a process that is specific to your business. The question is whether your job fits the product as it stands.',
+    a: 'A platform and a custom agent are different purchases. Yellow.ai describes an agentic platform for service automation. A custom agent is written around your own process. Ask each option to show your actual job working, and ask what happens when your process needs something the product or the first build does not cover.',
   },
   {
     q: 'Are the firms on this list vetted by you?',
@@ -290,8 +290,8 @@ export const post: BlogPost = {
   keyTakeaways: [
     'No one firm is the best for everybody. Match the firm to your size, your software and the job you want done.',
     'We took every fact below from each firm\'s own website on 24 November 2026. No firm paid for a place, and the order carries no ranking.',
-    'Five firms suit SMEs and mid-sized businesses: Maruti Techlabs, InnovationM, Trigma, Ksolves and Quytech. Two suit larger engineering programmes, and two sell at enterprise scale.',
-    'Yellow.ai is a platform you configure. The others build agents for you, so the buying questions differ.',
+    'Five firms describe agent services as software companies: Maruti Techlabs, InnovationM, Trigma, Ksolves and Quytech. Two are engineering-led, and two are a platform and an analytics firm.',
+    'Yellow.ai presents itself as an agentic platform, so its buying questions differ from those for a project firm.',
     'We wrote this guide and put ourselves first. Ask every firm the same five things: who does the coding, whether you get a demo on your data, whether the price is fixed in writing, who holds the code, and how the agent behaves when it errs.',
   ],
   faqs: FAQS,
@@ -350,7 +350,7 @@ export const post: BlogPost = {
       <div id="answer-first" className="mb-8 rounded-2xl border border-gray-200 bg-gray-50 p-6 not-prose">
         <p className="text-sm font-semibold uppercase tracking-wide text-[#B23E13] mb-2">The short answer</p>
         <p className="text-gray-800 leading-relaxed mb-3">
-          No one firm is the best AI agent development company in India for everybody. For a first agent in an SME or mid-sized firm, look at Maruti Techlabs, InnovationM, Trigma, Ksolves, Quytech or FactoryJet. For a larger engineering programme, LeewayHertz and Simform. For enterprise scale, Fractal Analytics. For a platform you configure yourself, Yellow.ai.
+          No one firm is the best AI agent development company in India for everybody. Maruti Techlabs, InnovationM, Trigma, Ksolves, Quytech and FactoryJet each describe agent work for businesses. LeewayHertz and Simform are engineering-led. Fractal Analytics is an enterprise AI company, and Yellow.ai is an agentic platform.
         </p>
         <p className="text-gray-800 leading-relaxed">
           We read every firm&rsquo;s own website on 24 November 2026. No firm paid for a place and the order carries no ranking. We wrote this guide and put ourselves first.
@@ -447,7 +447,7 @@ export const post: BlogPost = {
         </div>
         <div className="rounded-xl border border-gray-200 p-4">
           <p className="font-semibold mb-1">&ldquo;My need is support across chat, voice and email, and I want a product.&rdquo;</p>
-          <p className="text-gray-700 text-sm">Yellow.ai is a platform for that job. Test whether its rules fit how you work.</p>
+          <p className="text-gray-700 text-sm">Yellow.ai&rsquo;s site presents an agentic platform for service automation. Ask whether its set-up fits how you work.</p>
         </div>
         <div className="rounded-xl border border-gray-200 p-4">
           <p className="font-semibold mb-1">&ldquo;We run Odoo or Salesforce and the agent must live inside it.&rdquo;</p>
@@ -478,7 +478,7 @@ export const post: BlogPost = {
       <ul className="list-disc pl-6 mb-6 space-y-1">
         <li>Maruti Techlabs: <a href="https://marutitech.com/services/ai-agent-development-services/" className="text-[#B23E13] underline" rel="noopener" target="_blank">marutitech.com/services/ai-agent-development-services/</a></li>
         <li>InnovationM: <a href="https://www.innovationm.com/services/ai/development/agents/" className="text-[#B23E13] underline" rel="noopener" target="_blank">www.innovationm.com/services/ai/development/agents/</a></li>
-        <li>Trigma: <a href="https://trigma.com/agentic-ai-services/" className="text-[#B23E13] underline" rel="noopener" target="_blank">trigma.com/agentic-ai-services/</a></li>
+        <li>Trigma: <a href="https://trigma.com/" className="text-[#B23E13] underline" rel="noopener" target="_blank">trigma.com/agentic-ai-services/</a></li>
         <li>Ksolves: <a href="https://www.ksolves.com/" className="text-[#B23E13] underline" rel="noopener" target="_blank">www.ksolves.com/</a></li>
         <li>Quytech: <a href="https://www.quytech.com/" className="text-[#B23E13] underline" rel="noopener" target="_blank">www.quytech.com/</a></li>
         <li>LeewayHertz: <a href="https://www.leewayhertz.com/ai-agent-development-company/" className="text-[#B23E13] underline" rel="noopener" target="_blank">www.leewayhertz.com/ai-agent-development-company/</a></li>
