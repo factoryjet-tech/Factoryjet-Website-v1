@@ -417,6 +417,20 @@ const SERVICE_RULES: ServiceRule[] = [
   },
   // --- Verticals ---
   {
+    href: '/services/home-services-seo',
+    label: 'Home Services SEO',
+    blurb: 'Map pack, service-area pages and reviews for HVAC, plumbing, electrical and cleaning companies.',
+    keywords: ['home services', 'home service', 'contractor seo', 'trades seo', 'service-area business', 'service area business'],
+    weight: 4,
+  },
+  {
+    href: '/services/hvac-seo',
+    label: 'HVAC SEO',
+    blurb: 'Seasonal pages, emergency searches and Local Services Ads planned together for heating and cooling companies.',
+    keywords: ['hvac', 'heating and cooling', 'air conditioning', 'furnace', 'heat pump'],
+    weight: 5,
+  },
+  {
     href: '/services/roofing-seo',
     label: 'Roofing SEO',
     blurb: 'Search and lead generation built around how roofing buyers actually search.',
@@ -744,6 +758,8 @@ const SERVICE_FAMILY: Record<string, ServiceFamily> = {
   '/services/seo-audit': 'search',
   '/services/local-seo': 'search',
   '/services/google-business-profile-optimization': 'search',
+  '/services/home-services-seo': 'search',
+  '/services/hvac-seo': 'search',
   '/services/ecommerce-seo': 'search',
   '/services/shopify-seo': 'search',
   '/services/small-business-seo': 'search',

@@ -834,7 +834,9 @@ export default function LocalSeoServicePage() {
                 <Link href="/services/small-business-seo" style={LINK_STYLE}>small business SEO</Link>. We also offer vertical programs including{' '}
                 <Link href="/services/dental-seo" style={LINK_STYLE}>dental SEO</Link>,{' '}
                 <Link href="/services/healthcare-seo" style={LINK_STYLE}>healthcare SEO</Link> and{' '}
-                <Link href="/services/law-firm-seo" style={LINK_STYLE}>law firm SEO</Link>. If you also
+                <Link href="/services/law-firm-seo" style={LINK_STYLE}>law firm SEO</Link>, and for HVAC, plumbing,
+                electrical, roofing and cleaning companies there is{' '}
+                <Link href="/services/home-services-seo" style={LINK_STYLE}>home services SEO</Link>. If you also
                 sell online, the product and collection side sits on{' '}
                 <Link href="/services/ecommerce-seo" style={LINK_STYLE}>ecommerce SEO</Link>, and product reviews
                 collected in Yotpo or Judge.me are a separate stream from your Google Business Profile reviews, so do
