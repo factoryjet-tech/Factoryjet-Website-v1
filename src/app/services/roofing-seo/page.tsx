@@ -1362,6 +1362,11 @@ export default function RoofingSeoPage() {
             <div className="mt-10 grid grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-3">
               {[
                 {
+                  label: 'Home services SEO',
+                  href: '/services/home-services-seo',
+                  desc: 'The trade SEO hub: what roofing shares with HVAC, plumbing, electrical and cleaning programmes.',
+                },
+                {
                   label: 'Local SEO',
                   href: '/services/local-seo',
                   desc: 'Map pack, Google Business Profile and near-me search for any service-area business, roofing or otherwise.',
