@@ -14,20 +14,21 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
-import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { ecommerceCityAlternatesIN } from '@/data/hreflangMap';
-import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
+import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
+import { AnswerFirst, QuestionAnswers, SourceList } from '@/components/india-pages/IndiaAnswerBlocks';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development in Mumbai | FactoryJet',
+  title: "Best Ecommerce Website Development in Mumbai | FactoryJet",
   description:
-    'Ecommerce development in Mumbai for fashion labels, Zaveri Bazaar jewellers, FMCG brands and Bhiwandi-stocked sellers. Shopify, UPI, COD, GST. 7-day delivery.',
+    "Ecommerce website development company in Mumbai for fashion, jewellery and FMCG brands. Shopify developers, Bhiwandi warehouse sync, UPI, COD and GST.",
   keywords: [
     'ecommerce development company mumbai',
     'ecommerce website development mumbai',
@@ -47,9 +48,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Company in Mumbai | FactoryJet',
+    title: "Ecommerce Website Development Company in Mumbai | FactoryJet",
     description:
-      'Mumbai ecommerce: Shopify stores for Bandra fashion and D2C beauty brands, jewellery catalogues, stock synced with Bhiwandi warehouses. 7-day delivery.',
+      "Shopify and WooCommerce stores for Mumbai fashion, jewellery and FMCG brands, with Bhiwandi warehouse sync, UPI, COD and GST. A draft store before you sign.",
     url: 'https://factoryjet.com/services/ecommerce-development/mumbai',
     images: [
       {
@@ -63,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Mumbai | FactoryJet',
+    title: "Ecommerce Website Development Company in Mumbai | FactoryJet",
     description:
-      'Mumbai ecommerce: fashion, jewellery and FMCG stores with warehouse sync, UPI and GST.',
+      "Mumbai ecommerce: fashion, jewellery and FMCG stores with warehouse sync, UPI, COD and GST.",
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -92,7 +93,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-11-07';
+const PAGE_MODIFIED = '2026-11-24';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -126,7 +127,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/mumbai',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Mumbai, Thane and Navi Mumbai businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD, warehouse sync and GST invoicing. 7-day delivery.',
+    'Ecommerce development company serving Mumbai, Thane and Navi Mumbai businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD, warehouse sync and GST invoicing.',
   areaServed: [
     'Andheri', 'Bandra', 'BKC', 'Lower Parel', 'Navi Mumbai',
     'Thane', 'Powai', 'Malad', 'Goregaon', 'Kurla',
@@ -188,7 +189,7 @@ const MUMBAI_ECOM_FAQ_ITEMS = [
     category: 'pricing',
     question: "How long does it take to launch an ecommerce store in Mumbai?",
     answer:
-      "A standard Shopify or WooCommerce store for a Mumbai brand goes live in 7 days once we have your products, photos and payment gateway approval. Fashion labels with hundreds of size and colour variants need a few extra days for product data. Omnichannel builds that share stock with your retail outlets take 5 to 8 weeks. Custom platforms and marketplaces take 8 to 14 weeks.",
+      "A Mumbai store with a custom-designed theme takes 3 to 5 weeks once we have your products, photos and payment gateway approval. Fashion labels with hundreds of size and colour variants need a few extra days for product data. Omnichannel builds that share stock with your retail outlets take 5 to 8 weeks. Custom platforms and marketplaces take 8 to 14 weeks.",
   },
   {
     category: 'pricing',
@@ -328,6 +329,24 @@ const MUMBAI_ECOM_FAQ_ITEMS = [
     answer:
       'A freelancer can put up a basic store. A Mumbai brand usually also needs warehouse sync, marketplace connectors, payments, GST, couriers and SEO, which is more than one person covers well. A small senior team handles it for a fixed price. If you do hire an ecommerce developer in Mumbai, load two of their live stores on your phone first.',
   },
+  {
+    category: "platform",
+    question: "Who is the best Shopify developer in Mumbai?",
+    answer:
+      "Look for a Shopify developer or team in Mumbai who has built stores with variants, outlet stock and warehouse sync, not only themes. FactoryJet is a registered Shopify Partner with senior developers who write the code, and we build a draft on your own products before you sign, so you can judge the work first.",
+  },
+  {
+    category: "pricing",
+    question: "What is the top ecommerce development company in Mumbai for B2B wholesale?",
+    answer:
+      "For B2B, pick a firm that has built login-only trade catalogues with customer-specific prices, minimum order quantities and reorder lists. We build these on Shopify Plus B2B or on Commerceflo, our own B2B platform. Belle Maison, a home decor wholesaler, takes trade orders on a Commerceflo store we built.",
+  },
+  {
+    category: "platform",
+    question: "Should a Mumbai brand sell on Amazon and Myntra or on its own website?",
+    answer:
+      "Both, for most brands. Marketplaces bring buyers who are already shopping, but they own the customer and set the fees. Your own Shopify store keeps the customer list and the margin. The key is one stock count across all of them, so a size sold on Myntra disappears from your website at the same moment.",
+  },
 ];
 
 const faqSchema = {
@@ -354,6 +373,74 @@ const speakableSchema = {
   },
   url: 'https://factoryjet.com/services/ecommerce-development/mumbai',
 };
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   India refresh, 24 Nov 2026: answer-first block, buyer questions, comparison,
+   sources. Each source opened and checked on 24 Nov 2026.
+───────────────────────────────────────────────────────────────────────────── */
+
+const CITY_CHECKED_ON = '24 November 2026';
+
+const CITY_SRC = {
+  shopifyPricing: { label: 'Shopify India pricing', url: 'https://www.shopify.com/in/pricing' },
+  razorpay: { label: 'Razorpay pricing', url: 'https://razorpay.com/pricing/' },
+  ibef: { label: 'IBEF: E-commerce industry in India', url: 'https://www.ibef.org/industry/ecommerce' },
+  shopifyGst: { label: 'Shopify Help: GST in India', url: 'https://help.shopify.com/en/manual/taxes/india-gst' },
+} as const;
+
+const CITY_QUESTIONS = [
+  {
+    q: "How much does an ecommerce website cost in Mumbai?",
+    a: ["The build price depends on catalogue size, how many channels share stock, warehouse or outlet sync, and whether you sell abroad. A single-warehouse store costs far less than an omnichannel fashion brand. Running costs are separate: Shopify's India page lists Basic at ₹1,499 a month on yearly billing, and Razorpay lists a 2% fee per domestic transaction plus GST on the fee. We quote the build as a fixed price per phase after a short scoping call."],
+    sources: [CITY_SRC.shopifyPricing, CITY_SRC.razorpay],
+  },
+  {
+    q: "Shopify or WooCommerce for a Mumbai brand?",
+    a: ["Shopify suits most Mumbai D2C fashion and beauty labels: variants, size charts, Instagram shops and Shopify POS for outlets all work well. WooCommerce suits a brand that already runs a busy WordPress blog or needs custom logic Shopify makes hard. Jewellers with daily gold-rate pricing can use either, with a price feed. We pick after seeing your catalogue, channels and warehouse."],
+  },
+  {
+    q: "How long does it take to build an ecommerce website in Mumbai?",
+    a: ["A store with a custom-designed theme takes 3 to 5 weeks. Stores with outlet stock sync, B2B pricing or a migration take 5 to 8 weeks, and headless or custom platforms take 8 to 14. For most Mumbai brands the deadline is Diwali, so brief us about two months ahead and avoid switching couriers in the middle of the monsoon."],
+  },
+  {
+    q: "What should you check before hiring a Shopify developer in Mumbai?",
+    a: ["Ask which engineer writes your code, ask for two live stores to test on your phone, and ask how they would sync stock with your Bhiwandi warehouse or 3PL. Ask for the price in writing and for the store, code and accounts in your company name. A good Shopify developer in Mumbai will happily build a draft on your products first."],
+  },
+];
+
+const CITY_COMPARISON_COLUMNS = [
+  { label: 'FactoryJet', isFactoryJet: true },
+  { label: "Typical Mumbai agency" },
+  { label: 'Freelancer' },
+  { label: 'Marketplace only' },
+] as const;
+
+const CITY_COMPARISON_ROWS = [
+  {
+    feature: 'Draft store on your products before you sign',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Sometimes" />, <CompareIcon key="freelancer" kind="partial" label="Sometimes" />, <CompareIcon key="marketplace" kind="no" label="No own store" />],
+  },
+  {
+    feature: 'Fixed price per phase, in writing',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Varies" />, <CompareIcon key="freelancer" kind="partial" label="Varies" />, 'Fees per order'],
+  },
+  {
+    feature: "Bhiwandi warehouse or 3PL sync planned before design",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="no" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: "Outlet and Myntra or Ajio stock on one count",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="partial" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Customer list and brand stay yours',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="yes" />, <CompareIcon key="freelancer" kind="yes" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Typical time for a custom-theme store',
+    values: ['3 to 5 weeks', 'Varies', 'Varies', 'Listing in days, no store'],
+  },
+];
 
 export default function MumbaiEcommercePage() {
   return (
@@ -386,32 +473,63 @@ export default function MumbaiEcommercePage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Mumbai', url: 'https://factoryjet.com/services/ecommerce-development/mumbai' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Mumbai", url: 'https://factoryjet.com/services/ecommerce-development/mumbai' },
         ]}
       />
 
       <main className="bg-fj-cream">
       <Breadcrumbs items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Mumbai', url: 'https://factoryjet.com/services/ecommerce-development/mumbai' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Mumbai", url: 'https://factoryjet.com/services/ecommerce-development/mumbai' },
         ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_mumbai_hero" />}
-          eyebrow="ECOMMERCE DEVELOPMENT · MUMBAI"
-          headline="Ecommerce Development in Mumbai: Store Live in 7 Days"
-          lead="FactoryJet builds Shopify stores for Mumbai fashion, beauty and FMCG brands, jewellery catalogues for Zaveri Bazaar houses, and omnichannel setups that share stock between your outlets and a Bhiwandi warehouse. UPI and COD at checkout, Lighthouse 90+. 7-day delivery."
-          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
+          eyebrow="ECOMMERCE WEBSITE DEVELOPMENT · MUMBAI"
+          headline="Ecommerce Website Development Company in Mumbai for Fashion, Jewellery and FMCG Brands"
+          lead="FactoryJet builds Shopify stores for Mumbai fashion, beauty and FMCG brands, jewellery catalogues for Zaveri Bazaar houses, and omnichannel setups that share stock between your outlets and a Bhiwandi warehouse. UPI and COD at checkout, GST invoices, and a draft of your store before you sign."
+          secondaryCta={{ label: 'See a draft of my store', modal: true as const, region: 'in' as const }}
           trustItems={[
-            '7-day delivery',
+            'Draft store before you sign',
             'Razorpay + UPI + COD ready',
           ]}
-          rightSlot={<HeroBrowserMockup />}
+          rightSlot={
+            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-7 shadow-sm">
+              <p className="font-fj-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">WHAT A MUMBAI STORE USUALLY NEEDS</p>
+              <ul className="mt-5 space-y-3">
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Stock</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">One count across website, outlets, Myntra and a Bhiwandi warehouse</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Fashion</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Size charts and exchange-first returns</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Jewellery</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Gold-rate pricing, HUID details, insured shipping</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Checkout</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Razorpay with UPI, cards and COD rules</p></li>
+              </ul>
+              <p className="mt-5 rounded-xl bg-[rgba(240,90,40,0.08)] px-4 py-3 font-fj-body text-[0.875rem] font-semibold text-[#B23E13]">Custom-theme stores take 3 to 5 weeks. Fixed price per phase, in writing.</p>
+            </div>
+          }
+        />
+
+        {/* ── 1b. ANSWER FIRST ─────────────────────────────────────────────── */}
+        <AnswerFirst
+          eyebrow="THE SHORT ANSWER"
+          question={"Which is the best ecommerce website development company in Mumbai?"}
+          answer={[
+            "The best ecommerce website development company in Mumbai for your brand is one that plans the store around where your stock sits, writes the code with its own senior developers, and fixes the price in writing. FactoryJet builds Mumbai stores warehouse first: Bhiwandi or 3PL sync, outlet stock, Myntra and Ajio feeds, then the storefront. You see a working draft on your own products before you sign.",
+            "We are a registered Shopify Partner, rated 5.0 on Clutch from 4 reviews and 5.0 on GoodFirms from 5 reviews. Before choosing any Mumbai firm, open two of its live stores on your phone and place a test order.",
+          ]}
+          factsTitle="FactoryJet at a glance"
+          facts={[
+            { k: 'Shopify status', v: 'Registered Shopify Partner' },
+            { k: 'Reviews', v: 'Clutch 5.0 (4 reviews), GoodFirms 5.0 (5 reviews)' },
+            { k: 'Track record', v: '500+ businesses served, 97% of projects on time or early, founded 2014' },
+            { k: 'Timelines', v: 'Custom-theme store 3 to 5 weeks; advanced store 5 to 8; headless or custom 8 to 14' },
+          ]}
+          links={[
+            { label: 'Ecommerce development in India', href: '/ecommerce-development' },
+            { label: 'Shopify development company in India', href: '/shopify-development' },
+            { label: 'Ecommerce website cost in India', href: '/blog/ecommerce-website-development-cost-india' },
+          ]}
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
@@ -420,8 +538,8 @@ export default function MumbaiEcommercePage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Stores, catalogues and B2B portals for businesses in India, the US, the UK and the UAE. Mumbai brands get a fixed price per phase, full ownership of code and accounts, and 7-day delivery on standard stores."
+          headline="500+ businesses served. 97% on-time delivery. Founded 2014."
+          description="Stores, catalogues and B2B portals for businesses in India, the US, the UK and the UAE. Mumbai brands get a fixed price per phase, full ownership of code and accounts, and a draft store before they sign."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
@@ -455,32 +573,6 @@ export default function MumbaiEcommercePage() {
               <p>
                 Mumbai brands rarely sell through one channel. A label might sell on its own site, on Myntra and Ajio, on Instagram and in two malls, all from stock held in Bhiwandi. If those channels do not share one stock count, the same size sells twice and someone gets a refund instead of a kurta. The store is the hub that keeps them honest.
               </p>
-
-              <div className="grid grid-cols-3 gap-3" aria-hidden>
-                {[
-                  { value: '0.9%', label: 'India avg. ecommerce conversion rate' },
-                  { value: '65%', label: 'India ecommerce traffic via mobile' },
-                  { value: '78%', label: 'cart abandonment rate in India' },
-                ].map((b) => (
-                  <div
-                    key={b.value}
-                    className="rounded-xl border border-fj-neutral-200 bg-white px-3 py-4 text-center shadow-sm"
-                  >
-                    <p
-                      className="fj-display font-bold text-[#F05A28]"
-                      style={{ fontSize: '1.375rem', lineHeight: 1, letterSpacing: '-0.03em' }}
-                    >
-                      {b.value}
-                    </p>
-                    <p
-                      className="mt-1.5 font-fj-mono font-medium uppercase text-fj-neutral-400"
-                      style={{ fontSize: '0.6875rem', letterSpacing: '0.07em' }}
-                    >
-                      {b.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
 
               <div className="border-l-2 border-[#F05A28] pl-5 py-1" aria-hidden>
                 <p
@@ -549,16 +641,24 @@ export default function MumbaiEcommercePage() {
           }
         />
 
+        {/* ── 4b. BUYER QUESTIONS ──────────────────────────────────────────── */}
+        <QuestionAnswers
+          eyebrow={"WHAT MUMBAI BUYERS ASK BEFORE HIRING"}
+          intro="Short answers to the questions buyers type into Google and ask AI assistants. Prices quoted here are Shopify's and Razorpay's published prices, not ours."
+          items={CITY_QUESTIONS}
+          bgClassName="bg-white"
+        />
+
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Mumbai Brands Work With FactoryJet"
-          lead="Mumbai brands live by launch dates: a drop, a sale, a season. We put a fixed price on each phase in writing, write 7-day delivery for standard stores into the agreement, and show you a working draft on your own products before you sign."
+          lead="Mumbai brands live by launch dates: a drop, a sale, a season. We put a fixed price on each phase in writing, agree the launch date before work starts, and show you a working draft on your own products before you sign."
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing.',
-              body: 'A standard Shopify or WooCommerce store for a Mumbai brand goes live in 7 days once products, photos and gateway approval are in. The date is in the agreement, and 97% of our builds have launched on schedule.',
+              title: 'A draft store before you sign.',
+              body: 'We build a draft on a handful of your real products so your team can test it on their phones. The launch date goes into the agreement, and 97% of our projects have been delivered on time or early.',
             },
             {
               icon: '📱',
@@ -593,24 +693,34 @@ export default function MumbaiEcommercePage() {
           ]}
           stats={[
             {
-              value: '23%',
-              label: "India's projected ecommerce market growth rate, year over year through 2030",
-              sourceUrl: 'https://www.ibef.org/industry/ecommerce',
+              value: 'US$ 345B',
+              label: "India's projected e-commerce market by 2030, up from US$ 125 billion in 2024 (18.4% a year)",
+              sourceUrl: CITY_SRC.ibef.url,
               sourceLabel: 'India Brand Equity Foundation',
             },
             {
-              value: '3.5L+',
-              label: 'Registered businesses in Mumbai: India\'s densest commercial ecosystem',
-              sourceUrl: 'https://www.mca.gov.in/',
-              sourceLabel: 'Ministry of Corporate Affairs',
+              value: '₹1,499',
+              label: 'a month for Shopify Basic in India on yearly billing, before apps and fees',
+              sourceUrl: CITY_SRC.shopifyPricing.url,
+              sourceLabel: 'Shopify India pricing',
             },
             {
-              value: '500M+',
-              label: 'UPI transactions per month in India: the payment rail your store must support',
-              sourceUrl: 'https://www.npci.org.in/what-we-do/upi/product-statistics',
-              sourceLabel: 'NPCI UPI Statistics',
+              value: '2%',
+              label: 'Razorpay platform fee per domestic transaction, plus GST on the fee',
+              sourceUrl: CITY_SRC.razorpay.url,
+              sourceLabel: 'Razorpay pricing',
             },
           ]}
+        />
+
+        {/* ── 7b. COMPARISON ───────────────────────────────────────────────── */}
+        <ComparisonTable
+          eyebrow="HOW TO CHOOSE"
+          headline={"Choosing an Ecommerce Developer in Mumbai"}
+          lead={"Four ways to get an online store in Mumbai, compared on what decides the result."}
+          columns={CITY_COMPARISON_COLUMNS}
+          rows={CITY_COMPARISON_ROWS}
+          footer="Agency and freelancer cells are general patterns, not claims about any one firm. Ask every firm you shortlist the same questions."
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
@@ -675,7 +785,7 @@ export default function MumbaiEcommercePage() {
               description:
                 'Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.',
               imageSrc: '/images/portfolio/belle-maison.webp',
-              stat1: 'Live in 7 days',
+              stat1: 'Trade price tiers',
               stat2: 'Commerceflo · B2B',
             },
             {
@@ -684,7 +794,7 @@ export default function MumbaiEcommercePage() {
               description:
                 'Impulse Branding is a Mumbai print branding and general contracting company. FactoryJet built impulsebranding.in and is now building their next-generation site.',
               imageSrc: '/images/work/impulse-branding-desktop.webp',
-              stat1: 'Launched in 6 days',
+              stat1: '75+ page site',
               stat2: 'Web · SEO',
             },
           ]}
@@ -692,7 +802,11 @@ export default function MumbaiEcommercePage() {
           ctaLabel="View full portfolio"
         />
 
-        <GetFreeQuoteCTA />
+        <MidPageCTA
+          headline={"See your Mumbai store before you sign."}
+          sub={"Send your catalogue or current store link. We will build a draft on a few of your real products and price each phase in writing."}
+          label="See a draft of my store"
+        />
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
@@ -708,15 +822,25 @@ export default function MumbaiEcommercePage() {
           items={MUMBAI_ECOM_FAQ_ITEMS}
         />
 
+        {/* ── 12b. SOURCES ─────────────────────────────────────────────────── */}
+        <SourceList
+          checkedOn={CITY_CHECKED_ON}
+          sources={[
+            { ...CITY_SRC.shopifyPricing, note: 'Shopify plan prices in rupees and third-party transaction fees' },
+            { ...CITY_SRC.razorpay, note: '2% platform fee on domestic transactions, plus GST on the fee' },
+            { ...CITY_SRC.ibef, note: 'India e-commerce market size for 2024 and projection for 2030' },
+          ]}
+        />
+
         {/* ── 13. FINAL CTA (DARK) ─────────────────────────────────────────── */}
         <FinalCTA
-          variant="dark"
+          variant="light"
           eyebrow="READY TO LAUNCH"
-          headline="Your Mumbai Store, Live in 7 Days"
+          headline="Your Mumbai Store, Built Around Your Stock"
           sub="500+ businesses across India, the US, the UK and the UAE have worked with FactoryJet. Tell us where you sell and where your stock sits. We will recommend a platform, price each phase in writing and show you a draft of your store before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price per phase. 7-day delivery. Stock synced, UPI and GST set up. Your code and accounts from day one."
+          objectionHandler="Fixed price per phase. Draft before contract. Stock synced, UPI and GST set up. Your code and accounts from day one."
         />
 
       </main>

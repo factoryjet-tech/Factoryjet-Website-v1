@@ -14,20 +14,21 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
-import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { ecommerceCityAlternatesIN } from '@/data/hreflangMap';
-import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
+import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
+import { AnswerFirst, QuestionAnswers, SourceList } from '@/components/india-pages/IndiaAnswerBlocks';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development in Kolkata | FactoryJet',
+  title: "Best Ecommerce Website Development in Kolkata | FactoryJet",
   description:
-    'Ecommerce development in Kolkata for saree and Kantha sellers, leather makers, tea traders and Burrabazar wholesalers. Shopify, UPI, GST. 7-day delivery.',
+    "Ecommerce website development company in Kolkata for saree, leather and tea brands and Burrabazar wholesalers. Shopify, Bengali stores, UPI and GST.",
   keywords: [
     'ecommerce development company kolkata',
     'ecommerce website development kolkata',
@@ -47,9 +48,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Company in Kolkata | FactoryJet',
+    title: "Ecommerce Website Development Company in Kolkata | FactoryJet",
     description:
-      'Kolkata ecommerce stores: tant and Baluchari sarees, Kantha, leather goods, tea and mishti, plus wholesale portals for Burrabazar traders. 7-day delivery.',
+      "Kolkata stores for tant and Baluchari sarees, Kantha, leather, tea and mishti, plus wholesale portals for Burrabazar traders. Bengali storefronts, UPI and GST. A draft store before you sign.",
     url: 'https://factoryjet.com/services/ecommerce-development/kolkata',
     images: [
       {
@@ -63,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Kolkata | FactoryJet',
+    title: "Ecommerce Website Development Company in Kolkata | FactoryJet",
     description:
-      'Kolkata ecommerce: saree, leather, tea and wholesale stores with Bengali, UPI and GST.',
+      "Kolkata ecommerce: saree, leather, tea and wholesale stores with Bengali, UPI and GST.",
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -92,7 +93,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-11-07';
+const PAGE_MODIFIED = '2026-11-24';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -130,7 +131,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/kolkata',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Kolkata, Howrah and Salt Lake businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing. 7-day delivery.',
+    'Ecommerce development company serving Kolkata, Howrah and Salt Lake businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing.',
   areaServed: [
     'Salt Lake', 'Rajarhat', 'Park Street', 'Alipore', 'Gariahat',
     'New Town', 'Behala', 'Ballygunge',
@@ -192,7 +193,7 @@ const KOLKATA_ECOM_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How long does a Kolkata ecommerce store take?',
     answer:
-      'A standard Shopify or WooCommerce store goes live in 7 days once we have your products, photos and gateway approval. A custom theme takes 3 to 5 weeks. Wholesale portals for Burrabazar traders take 5 to 8 weeks, and custom platforms take 8 to 14 weeks.',
+      'A store with a custom-designed theme takes 3 to 5 weeks once we have your products, photos and gateway approval. Wholesale portals for Burrabazar traders take 5 to 8 weeks, and custom platforms take 8 to 14 weeks.',
   },
   {
     category: 'pricing',
@@ -320,6 +321,24 @@ const KOLKATA_ECOM_FAQ_ITEMS = [
     answer:
       'A lone developer can put up a basic store. Selling well also needs design, payments, couriers to the Northeast, GST and SEO, which is a wide spread of skills. A small senior team covers it at a fixed price. If you hire an ecommerce developer in Kolkata, open their past stores on your phone and check them first.',
   },
+  {
+    category: "platform",
+    question: "Who is the best Shopify development company in Kolkata for handloom and leather brands?",
+    answer:
+      "Choose a Shopify development company in Kolkata that has shown weave close-ups, leather grades and diaspora shipping on live stores. FactoryJet is a registered Shopify Partner, and our senior developers write the code. We build a draft with a few of your products first, so you can judge the store before you pay.",
+  },
+  {
+    category: "platform",
+    question: "Which B2B platform suits a Burrabazar distributor?",
+    answer:
+      "We build trade portals on Shopify Plus B2B or on Commerceflo, our own B2B platform. Shops log in, see their own rates and carton quantities, and repeat a past order in a few taps. Belle Maison, a home decor wholesaler, takes trade orders on a Commerceflo store we built.",
+  },
+  {
+    category: "india",
+    question: "Can a Kolkata tea merchant sell subscriptions online?",
+    answer:
+      "Yes. Buyers pick a pack size and a monthly delivery, and pay by card or UPI AutoPay. Each tea shows its garden and flush, so a first flush Darjeeling is never confused with a second. Export shipping can be added for buyers abroad, with duties shown at checkout.",
+  },
 ];
 
 const faqSchema = {
@@ -346,6 +365,74 @@ const speakableSchema = {
   },
   url: 'https://factoryjet.com/services/ecommerce-development/kolkata',
 };
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   India refresh, 24 Nov 2026: answer-first block, buyer questions, comparison,
+   sources. Each source opened and checked on 24 Nov 2026.
+───────────────────────────────────────────────────────────────────────────── */
+
+const CITY_CHECKED_ON = '24 November 2026';
+
+const CITY_SRC = {
+  shopifyPricing: { label: 'Shopify India pricing', url: 'https://www.shopify.com/in/pricing' },
+  razorpay: { label: 'Razorpay pricing', url: 'https://razorpay.com/pricing/' },
+  ibef: { label: 'IBEF: E-commerce industry in India', url: 'https://www.ibef.org/industry/ecommerce' },
+  shopifyGst: { label: 'Shopify Help: GST in India', url: 'https://help.shopify.com/en/manual/taxes/india-gst' },
+} as const;
+
+const CITY_QUESTIONS = [
+  {
+    q: "What does an ecommerce website cost in Kolkata?",
+    a: ["In Kolkata the build price moves with wholesale price lists and credit terms, a Bengali storefront, shipping to the diaspora, and delivery rules for perishable sweets. A retail store needing none of these costs much less. Platform costs are extra and published. Shopify's India page lists Basic at ₹1,499 a month on yearly billing, and Razorpay lists 2% per domestic transaction plus GST on the fee. We write the build price per phase after a short call."],
+    sources: [CITY_SRC.shopifyPricing, CITY_SRC.razorpay],
+  },
+  {
+    q: "Is Shopify a good choice for a Kolkata saree or Burrabazar wholesale business?",
+    a: ["For saree and handloom retail, yes. Shopify handles colours, blouse options and fabric types as variants, plays product video, and takes UPI, COD and international cards. For Burrabazar wholesale it depends on volume. A few trade buyers fit a login-only price list on the same store. Hundreds of shops with their own credit limits usually need a separate portal."],
+  },
+  {
+    q: "How long will my Kolkata online store take to build?",
+    a: ["A store with a custom-designed theme takes 3 to 5 weeks. Wholesale portals for Burrabazar traders, with buyer price lists and credit terms, take 5 to 8 weeks. Custom platforms take 8 to 14 weeks. Durga Puja shoppers start buying weeks early, so brief us at least 8 weeks before Puja if you want the store tested in time."],
+  },
+  {
+    q: "What should I check before hiring a Shopify developer in Kolkata?",
+    a: ["Ask who writes your code and whether they have built Bengali pages that rank, a wholesale login, or delivery zones for short shelf-life food. Open two stores they built on your phone. Check the price per phase and launch date are in writing, and that the store, domain and code are in your business name from the start."],
+  },
+];
+
+const CITY_COMPARISON_COLUMNS = [
+  { label: 'FactoryJet', isFactoryJet: true },
+  { label: "Typical Kolkata agency" },
+  { label: 'Freelancer' },
+  { label: 'Marketplace only' },
+] as const;
+
+const CITY_COMPARISON_ROWS = [
+  {
+    feature: 'Draft store on your products before you sign',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Sometimes" />, <CompareIcon key="freelancer" kind="partial" label="Sometimes" />, <CompareIcon key="marketplace" kind="no" label="No own store" />],
+  },
+  {
+    feature: 'Fixed price per phase, in writing',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Varies" />, <CompareIcon key="freelancer" kind="partial" label="Varies" />, 'Fees per order'],
+  },
+  {
+    feature: "Wholesale portal with credit limits and Tally or Busy export",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="no" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: "Bengali storefront on its own URL with hreflang tags",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="partial" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Customer list and brand stay yours',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="yes" />, <CompareIcon key="freelancer" kind="yes" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Typical time for a custom-theme store',
+    values: ['3 to 5 weeks', 'Varies', 'Varies', 'Listing in days, no store'],
+  },
+];
 
 export default function KolkataEcommercePage() {
   return (
@@ -378,32 +465,63 @@ export default function KolkataEcommercePage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Kolkata', url: 'https://factoryjet.com/services/ecommerce-development/kolkata' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Kolkata", url: 'https://factoryjet.com/services/ecommerce-development/kolkata' },
         ]}
       />
 
       <main className="bg-fj-cream">
       <Breadcrumbs items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Kolkata', url: 'https://factoryjet.com/services/ecommerce-development/kolkata' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Kolkata", url: 'https://factoryjet.com/services/ecommerce-development/kolkata' },
         ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_kolkata_hero" />}
-          eyebrow="ECOMMERCE DEVELOPMENT · KOLKATA"
-          headline="Ecommerce Development in Kolkata: Store Live in 7 Days"
-          lead="FactoryJet builds online stores for Kolkata saree, Kantha, leather and tea brands, and wholesale ordering portals for Burrabazar traders who supply East and Northeast India. Bengali storefronts on request, UPI and COD at checkout, Lighthouse 90+ on mobile. 7-day delivery."
-          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
+          eyebrow="ECOMMERCE WEBSITE DEVELOPMENT · KOLKATA"
+          headline="Ecommerce Website Development Company in Kolkata for Saree, Leather and Wholesale Brands"
+          lead="FactoryJet builds online stores for Kolkata saree, Kantha, leather and tea brands, and wholesale ordering portals for Burrabazar traders who supply East and Northeast India. Bengali storefronts on request, UPI and COD at checkout, GST invoices on every order, and a draft of your store before you sign."
+          secondaryCta={{ label: 'See a draft of my store', modal: true as const, region: 'in' as const }}
           trustItems={[
-            '7-day delivery',
+            'Draft store before you sign',
             'Razorpay + UPI + COD ready',
           ]}
-          rightSlot={<HeroBrowserMockup />}
+          rightSlot={
+            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-7 shadow-sm">
+              <p className="font-fj-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">WHAT A KOLKATA STORE USUALLY NEEDS</p>
+              <ul className="mt-5 space-y-3">
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Wholesale</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Shop logins, own rates, carton quantities, credit limits</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Sarees</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Weave, region and weaver details with close-ups</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Language</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Bengali pages on their own URLs</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Mishti</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Delivery zones and dispatch cut-off times</p></li>
+              </ul>
+              <p className="mt-5 rounded-xl bg-[rgba(240,90,40,0.08)] px-4 py-3 font-fj-body text-[0.875rem] font-semibold text-[#B23E13]">Custom-theme stores take 3 to 5 weeks. Fixed price per phase, in writing.</p>
+            </div>
+          }
+        />
+
+        {/* ── 1b. ANSWER FIRST ─────────────────────────────────────────────── */}
+        <AnswerFirst
+          eyebrow="THE SHORT ANSWER"
+          question={"Which is the best ecommerce website development company in Kolkata?"}
+          answer={[
+            "Kolkata buyers know their products, so the firm you hire should know how to describe them. A Shantipur tant needs its weave named, a Bantala bag its leather grade, a Darjeeling tea its garden and flush. A Burrabazar trader needs a portal where shops in Bihar or Assam log in and reorder at their own rates. FactoryJet builds for that buyer, fixes each phase's price in writing, and shows a draft on your products before you sign.",
+            "We are a registered Shopify Partner, rated 5.0 on Clutch from 4 reviews and 5.0 on GoodFirms from 5 reviews. Before you pick a Kolkata firm, ask to see a store in Bengali or a wholesale portal it has built, and try it on your phone.",
+          ]}
+          factsTitle="FactoryJet at a glance"
+          facts={[
+            { k: 'Shopify status', v: 'Registered Shopify Partner' },
+            { k: 'Reviews', v: 'Clutch 5.0 (4 reviews), GoodFirms 5.0 (5 reviews)' },
+            { k: 'Track record', v: '500+ businesses served, 97% of projects on time or early, founded 2014' },
+            { k: 'Timelines', v: 'Custom-theme store 3 to 5 weeks; advanced store 5 to 8; headless or custom 8 to 14' },
+          ]}
+          links={[
+            { label: 'Ecommerce development in India', href: '/ecommerce-development' },
+            { label: 'Shopify development company in India', href: '/shopify-development' },
+            { label: 'Ecommerce website cost in India', href: '/blog/ecommerce-website-development-cost-india' },
+          ]}
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
@@ -412,8 +530,8 @@ export default function KolkataEcommercePage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Retail stores and wholesale portals for businesses in India, the US, the UK and the UAE. Kolkata clients get a fixed price per phase, all code and logins handed over, and 7-day delivery on standard stores."
+          headline="500+ businesses served. 97% on-time delivery. Founded 2014."
+          description="Retail stores and wholesale portals for businesses in India, the US, the UK and the UAE. Kolkata clients get a fixed price per phase, all code and logins handed over, and a draft store before they sign."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
@@ -447,32 +565,6 @@ export default function KolkataEcommercePage() {
               <p>
                 Kolkata buyers know their products. A Bengali shopper can tell a Shantipur tant from a power-loom copy, and a tea buyer knows a first flush from a second. A store that uses vague words and stock photos loses that buyer at once. The page has to name the weave, the region, the leather grade or the garden, and show real pictures.
               </p>
-
-              <div className="grid grid-cols-3 gap-3" aria-hidden>
-                {[
-                  { value: '0.9%', label: 'India avg. ecommerce conversion rate' },
-                  { value: '65%', label: 'India ecommerce traffic via mobile' },
-                  { value: '78%', label: 'cart abandonment rate in India' },
-                ].map((b) => (
-                  <div
-                    key={b.value}
-                    className="rounded-xl border border-fj-neutral-200 bg-white px-3 py-4 text-center shadow-sm"
-                  >
-                    <p
-                      className="fj-display font-bold text-[#F05A28]"
-                      style={{ fontSize: '1.375rem', lineHeight: 1, letterSpacing: '-0.03em' }}
-                    >
-                      {b.value}
-                    </p>
-                    <p
-                      className="mt-1.5 font-fj-mono font-medium uppercase text-fj-neutral-400"
-                      style={{ fontSize: '0.6875rem', letterSpacing: '0.07em' }}
-                    >
-                      {b.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
 
               <div className="border-l-2 border-[#F05A28] pl-5 py-1" aria-hidden>
                 <p
@@ -541,16 +633,24 @@ export default function KolkataEcommercePage() {
           }
         />
 
+        {/* ── 4b. BUYER QUESTIONS ──────────────────────────────────────────── */}
+        <QuestionAnswers
+          eyebrow={"WHAT KOLKATA BUYERS ASK BEFORE HIRING"}
+          intro="Short answers to the questions buyers type into Google and ask AI assistants. Prices quoted here are Shopify's and Razorpay's published prices, not ours."
+          items={CITY_QUESTIONS}
+          bgClassName="bg-white"
+        />
+
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Kolkata Businesses Pick FactoryJet"
-          lead="For a Kolkata brand, the busiest weeks of the year come before Durga Puja, and a late or broken store costs a whole season. We fix the price per phase in writing, put 7-day delivery for standard stores into the agreement, and show you a working draft on your own products before you sign."
+          lead="For a Kolkata brand, the busiest weeks of the year come before Durga Puja, and a late or broken store costs a whole season. We fix the price per phase in writing, put the launch date into the agreement, and show you a working draft on your own products before you sign."
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing.',
-              body: 'Standard stores for Kolkata businesses go live in 7 days after products, photos and gateway approval reach us, and the date is written into the agreement. We have met the deadline on 97% of builds.',
+              title: 'A draft store before you sign.',
+              body: 'We build a draft with a few of your real products, so you can check weave photos, prices and checkout on a phone before Puja planning starts. The launch date goes into the agreement, and 97% of our projects have been delivered on time or early.',
             },
             {
               icon: '📱',
@@ -585,24 +685,34 @@ export default function KolkataEcommercePage() {
           ]}
           stats={[
             {
-              value: '40 Cr+',
-              label: "People in Eastern India: Kolkata's underserved ecommerce hinterland",
-              sourceUrl: 'https://www.ibef.org/states/west-bengal',
-              sourceLabel: 'IBEF West Bengal',
-            },
-            {
-              value: '23%',
-              label: "India's projected ecommerce market growth rate, year over year through 2030",
-              sourceUrl: 'https://www.ibef.org/industry/ecommerce',
+              value: 'US$ 345B',
+              label: "India's projected e-commerce market by 2030, up from US$ 125 billion in 2024 (18.4% a year)",
+              sourceUrl: CITY_SRC.ibef.url,
               sourceLabel: 'India Brand Equity Foundation',
             },
             {
-              value: '500M+',
-              label: 'UPI transactions per month in India: the payment rail your store must support',
-              sourceUrl: 'https://www.npci.org.in/what-we-do/upi/product-statistics',
-              sourceLabel: 'NPCI UPI Statistics',
+              value: '₹1,499',
+              label: 'a month for Shopify Basic in India on yearly billing, before apps and fees',
+              sourceUrl: CITY_SRC.shopifyPricing.url,
+              sourceLabel: 'Shopify India pricing',
+            },
+            {
+              value: '2%',
+              label: 'Razorpay platform fee per domestic transaction, plus GST on the fee',
+              sourceUrl: CITY_SRC.razorpay.url,
+              sourceLabel: 'Razorpay pricing',
             },
           ]}
+        />
+
+        {/* ── 7b. COMPARISON ───────────────────────────────────────────────── */}
+        <ComparisonTable
+          eyebrow="HOW TO CHOOSE"
+          headline={"Choosing an Ecommerce Developer in Kolkata"}
+          lead={"Four ways to get an online store in Kolkata, compared on what decides the result."}
+          columns={CITY_COMPARISON_COLUMNS}
+          rows={CITY_COMPARISON_ROWS}
+          footer="Agency and freelancer cells are general patterns, not claims about any one firm. Ask every firm you shortlist the same questions."
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
@@ -667,7 +777,7 @@ export default function KolkataEcommercePage() {
               description:
                 'Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.',
               imageSrc: '/images/portfolio/belle-maison.webp',
-              stat1: 'Live in 7 days',
+              stat1: 'Trade price tiers',
               stat2: 'Commerceflo · B2B',
             },
             {
@@ -676,7 +786,7 @@ export default function KolkataEcommercePage() {
               description:
                 'Impulse Branding is a Mumbai print branding and general contracting company. FactoryJet built impulsebranding.in and is now building their next-generation site.',
               imageSrc: '/images/work/impulse-branding-desktop.webp',
-              stat1: 'Launched in 6 days',
+              stat1: '75+ page site',
               stat2: 'Web · SEO',
             },
           ]}
@@ -684,7 +794,11 @@ export default function KolkataEcommercePage() {
           ctaLabel="View full portfolio"
         />
 
-        <GetFreeQuoteCTA />
+        <MidPageCTA
+          headline={"See your Kolkata store before you sign."}
+          sub={"Send product photos, a wholesale rate list or your current store link. We will build a draft on your real products and write down the price of each phase."}
+          label="See a draft of my store"
+        />
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
@@ -700,15 +814,25 @@ export default function KolkataEcommercePage() {
           items={KOLKATA_ECOM_FAQ_ITEMS}
         />
 
+        {/* ── 12b. SOURCES ─────────────────────────────────────────────────── */}
+        <SourceList
+          checkedOn={CITY_CHECKED_ON}
+          sources={[
+            { ...CITY_SRC.shopifyPricing, note: 'Shopify plan prices in rupees and third-party transaction fees' },
+            { ...CITY_SRC.razorpay, note: '2% platform fee on domestic transactions, plus GST on the fee' },
+            { ...CITY_SRC.ibef, note: 'India e-commerce market size for 2024 and projection for 2030' },
+          ]}
+        />
+
         {/* ── 13. FINAL CTA (DARK) ─────────────────────────────────────────── */}
         <FinalCTA
-          variant="dark"
+          variant="light"
           eyebrow="READY TO LAUNCH"
-          headline="Your Kolkata Store, Live in 7 Days"
+          headline="Your Kolkata Store, Ready Before the Puja Rush"
           sub="500+ businesses across India, the US, the UK and the UAE have worked with FactoryJet. Tell us what you sell, retail or wholesale, and we will recommend a platform, price each phase in writing and show you a draft of your store before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price per phase. 7-day delivery. UPI, COD and GST set up. You own the code and every account."
+          objectionHandler="Fixed price per phase. Draft before contract. UPI, COD and GST set up. You own the code and every account."
         />
 
       </main>

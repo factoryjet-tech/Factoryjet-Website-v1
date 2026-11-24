@@ -14,20 +14,21 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
-import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { ecommerceCityAlternatesIN } from '@/data/hreflangMap';
-import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
+import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
+import { AnswerFirst, QuestionAnswers, SourceList } from '@/components/india-pages/IndiaAnswerBlocks';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development in Chandigarh | FactoryJet',
+  title: "Best Ecommerce Website Development Chandigarh | FactoryJet",
   description:
-    'Ecommerce development in Chandigarh for Tricity brands, Baddi pharma makers and Ludhiana suppliers. Shopify, WooCommerce, UPI, COD, GST. 7-day delivery.',
+    "Ecommerce website development company in Chandigarh for Tricity fashion and food brands, Baddi pharma and Ludhiana hosiery. UPI, COD and cards abroad.",
   keywords: [
     'ecommerce development company chandigarh',
     'ecommerce website development chandigarh',
@@ -47,9 +48,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Company in Chandigarh | FactoryJet',
+    title: "Ecommerce Website Development Company in Chandigarh | FactoryJet",
     description:
-      'Ecommerce stores for Chandigarh, Mohali and Panchkula: Phulkari and jutti labels, Punjabi food brands, B2B portals for pharma and hosiery. 7-day delivery.',
+      "Shopify and WooCommerce stores for Chandigarh, Mohali and Panchkula brands selling to Punjab, Canada and the UK, plus trade portals for pharma and hosiery. A draft store before you sign.",
     url: 'https://factoryjet.com/services/ecommerce-development/chandigarh',
     images: [
       {
@@ -63,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Chandigarh | FactoryJet',
+    title: "Ecommerce Website Development Company in Chandigarh | FactoryJet",
     description:
-      'Chandigarh ecommerce: Shopify and WooCommerce stores, diaspora shipping, B2B portals, GST invoicing.',
+      "Tricity ecommerce: Phulkari, jutti and Punjabi food stores for India and the diaspora, plus B2B portals.",
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -92,7 +93,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-11-07';
+const PAGE_MODIFIED = '2026-11-24';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -130,7 +131,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/chandigarh',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Chandigarh, Mohali and Panchkula businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing. 7-day delivery.',
+    'Ecommerce development company serving Chandigarh, Mohali and Panchkula businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing.',
   areaServed: [
     'Sector 17', 'Sector 22', 'Sector 35', 'IT Park', 'Industrial Area Phase 1',
     'Mohali', 'Panchkula', 'Zirakpur',
@@ -192,7 +193,7 @@ const CHANDIGARH_ECOM_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How long does it take to launch a store in Chandigarh?',
     answer:
-      'A standard Shopify or WooCommerce store goes live in 7 days once we have products, photos and gateway approval. A custom theme takes 3 to 5 weeks. Stores with wholesale pricing, subscriptions or a migration take 5 to 8 weeks, and fully custom builds take 8 to 14 weeks.',
+      'A store with a custom-designed theme takes 3 to 5 weeks once we have products, photos and gateway approval. Stores with wholesale pricing, subscriptions or a migration take 5 to 8 weeks, and fully custom builds take 8 to 14 weeks.',
   },
   {
     category: 'pricing',
@@ -320,6 +321,24 @@ const CHANDIGARH_ECOM_FAQ_ITEMS = [
     answer:
       "One developer can launch a simple store. Selling to Punjab and the diaspora also needs design, payments, cross-border shipping, GST and SEO, which is rarely one person's skill set. A small senior team covers it for a fixed price. If you hire an ecommerce developer in Chandigarh, check their past stores on your phone first.",
   },
+  {
+    category: "platform",
+    question: "Who is the best Shopify developer in Chandigarh for selling to Canada and the UK?",
+    answer:
+      "Pick a Shopify developer who has set up Shopify Markets, a cross-border courier and duty messages, not just a theme. FactoryJet is a registered Shopify Partner, and we build a draft store on your own products before you sign, so you can place a test order from abroad first.",
+  },
+  {
+    category: "platform",
+    question: "Can Ludhiana or Baddi suppliers take B2B orders online?",
+    answer:
+      "Yes. Retailers or chemists log in, see their own prices, minimum quantities and credit terms, and reorder in a few taps. We build these portals on Shopify Plus B2B or on Commerceflo, our own B2B platform. Belle Maison, a home decor wholesaler, takes trade orders on a Commerceflo store we built.",
+  },
+  {
+    category: "india",
+    question: "Do Mohali and Panchkula orders get different GST from Chandigarh orders?",
+    answer:
+      "Yes. Chandigarh is a Union Territory, so a sale to a buyer inside it carries CGST and UTGST. Mohali is in Punjab and Panchkula is in Haryana, so if you ship from Chandigarh, those orders carry IGST. We set these rules in the store so every invoice shows the right split.",
+  },
 ];
 
 const faqSchema = {
@@ -346,6 +365,74 @@ const speakableSchema = {
   },
   url: 'https://factoryjet.com/services/ecommerce-development/chandigarh',
 };
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   India refresh, 24 Nov 2026: answer-first block, buyer questions, comparison,
+   sources. Each source opened and checked on 24 Nov 2026.
+───────────────────────────────────────────────────────────────────────────── */
+
+const CITY_CHECKED_ON = '24 November 2026';
+
+const CITY_SRC = {
+  shopifyPricing: { label: 'Shopify India pricing', url: 'https://www.shopify.com/in/pricing' },
+  razorpay: { label: 'Razorpay pricing', url: 'https://razorpay.com/pricing/' },
+  ibef: { label: 'IBEF: E-commerce industry in India', url: 'https://www.ibef.org/industry/ecommerce' },
+  shopifyGst: { label: 'Shopify Help: GST in India', url: 'https://help.shopify.com/en/manual/taxes/india-gst' },
+} as const;
+
+const CITY_QUESTIONS = [
+  {
+    q: "What is the cost of an ecommerce website in Chandigarh?",
+    a: ["The build price follows scope. For Tricity brands the main drivers are selling abroad in more than one currency, wholesale price lists, the number of products and variants, and links to billing or ERP software. Running costs are separate and published. Shopify Basic is ₹1,499 a month on yearly billing, per Shopify's India pricing page. Razorpay charges 2% on each domestic transaction, plus GST on the fee. You get a fixed price per phase after one scoping call."],
+    sources: [CITY_SRC.shopifyPricing, CITY_SRC.razorpay],
+  },
+  {
+    q: "Should a Chandigarh fashion brand use Shopify or WooCommerce?",
+    a: ["Shopify, for most Phulkari, jutti and Punjabi suit labels. Shopify Markets shows prices in Canadian dollars or pounds, and the same store takes UPI and COD in India. WooCommerce suits a brand with a large WordPress site it wants to keep. For Baddi pharma or Ludhiana hosiery suppliers, the real need is often a login-only trade portal rather than a public shop."],
+  },
+  {
+    q: "How long does it take to build an online store in Chandigarh before wedding season?",
+    a: ["A store with a custom-designed theme takes 3 to 5 weeks. Stores with wholesale pricing, subscriptions or a migration take 5 to 8 weeks, and headless or custom builds take 8 to 14. Punjabi wedding demand runs from about October to February, and NRI buyers order weeks ahead. Brief us at least 8 weeks before you want orders, so overseas shipping can be tested too."],
+  },
+  {
+    q: "What should I look for when hiring an ecommerce developer in Chandigarh?",
+    a: ["Ask to see a store they built that sells outside India, and check how it shows prices, duty and delivery dates. Ask how they keep big fashion photos fast on mobile. If you sell from Chandigarh itself, ask how they set CGST and UTGST, since it is a Union Territory. Get the price for each phase in writing and keep every account in your company name."],
+  },
+];
+
+const CITY_COMPARISON_COLUMNS = [
+  { label: 'FactoryJet', isFactoryJet: true },
+  { label: "Typical Chandigarh agency" },
+  { label: 'Freelancer' },
+  { label: 'Marketplace only' },
+] as const;
+
+const CITY_COMPARISON_ROWS = [
+  {
+    feature: 'Draft store on your products before you sign',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Sometimes" />, <CompareIcon key="freelancer" kind="partial" label="Sometimes" />, <CompareIcon key="marketplace" kind="no" label="No own store" />],
+  },
+  {
+    feature: 'Fixed price per phase, in writing',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Varies" />, <CompareIcon key="freelancer" kind="partial" label="Varies" />, 'Fees per order'],
+  },
+  {
+    feature: "Canadian dollar and pound prices with cross-border shipping and duty notes",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="partial" />, <CompareIcon key="marketplace" kind="partial" />],
+  },
+  {
+    feature: "Trade portal that records each chemist's drug licence and GSTIN",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="no" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Customer list and brand stay yours',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="yes" />, <CompareIcon key="freelancer" kind="yes" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Typical time for a custom-theme store',
+    values: ['3 to 5 weeks', 'Varies', 'Varies', 'Listing in days, no store'],
+  },
+];
 
 export default function ChandigarhEcommercePage() {
   return (
@@ -378,32 +465,63 @@ export default function ChandigarhEcommercePage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Chandigarh', url: 'https://factoryjet.com/services/ecommerce-development/chandigarh' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Chandigarh", url: 'https://factoryjet.com/services/ecommerce-development/chandigarh' },
         ]}
       />
 
       <main className="bg-fj-cream">
       <Breadcrumbs items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Chandigarh', url: 'https://factoryjet.com/services/ecommerce-development/chandigarh' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Chandigarh", url: 'https://factoryjet.com/services/ecommerce-development/chandigarh' },
         ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_chandigarh_hero" />}
-          eyebrow="ECOMMERCE DEVELOPMENT · CHANDIGARH"
-          headline="Ecommerce Development in Chandigarh: Store Live in 7 Days"
-          lead="FactoryJet builds online stores for Tricity fashion and food brands that sell to Punjab and to families in Canada and the UK, plus ordering portals for pharma and hosiery suppliers across the region. UPI, COD and international cards at checkout, Lighthouse 90+ on mobile. 7-day delivery."
-          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
+          eyebrow="ECOMMERCE WEBSITE DEVELOPMENT · CHANDIGARH"
+          headline="Ecommerce Website Development Company in Chandigarh for Fashion, Food and Pharma Brands"
+          lead="FactoryJet builds online stores for Tricity fashion and food brands that sell across Punjab and to families in Canada, the UK and Australia, plus login-only ordering portals for Baddi drug makers and Ludhiana hosiery units. UPI and COD at home, local currency and international cards abroad, CGST and UTGST invoices set up correctly, and a draft of your store before you sign."
+          secondaryCta={{ label: 'See a draft of my store', modal: true as const, region: 'in' as const }}
           trustItems={[
-            '7-day delivery',
+            'Draft store before you sign',
             'Razorpay + UPI + COD ready',
           ]}
-          rightSlot={<HeroBrowserMockup />}
+          rightSlot={
+            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-7 shadow-sm">
+              <p className="font-fj-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">WHAT A TRICITY STORE USUALLY NEEDS</p>
+              <ul className="mt-5 space-y-3">
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Diaspora</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Prices in Canadian dollars or pounds, with a cross-border courier</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Fashion</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Large photos that still load fast, size help for juttis</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Trade</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Chemist and retailer logins with their own rates</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Tax</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">CGST and UTGST inside Chandigarh, IGST to Mohali and Panchkula</p></li>
+              </ul>
+              <p className="mt-5 rounded-xl bg-[rgba(240,90,40,0.08)] px-4 py-3 font-fj-body text-[0.875rem] font-semibold text-[#B23E13]">Custom-theme stores take 3 to 5 weeks. Fixed price per phase, in writing.</p>
+            </div>
+          }
+        />
+
+        {/* ── 1b. ANSWER FIRST ─────────────────────────────────────────────── */}
+        <AnswerFirst
+          eyebrow="THE SHORT ANSWER"
+          question={"Which is the best ecommerce website development company in Chandigarh?"}
+          answer={[
+            "Choose a team that can make a premium Punjabi brand look premium on a phone and take payment from two continents. FactoryJet plans Tricity stores around where buyers live: Sector 35, Ludhiana, Brampton or Southall. We set currencies, couriers and duty messages first, then design. Each phase has a fixed written price, and you see a working draft on your own products before you sign.",
+            "FactoryJet is a registered Shopify Partner, rated 5.0 on Clutch from 4 reviews and 5.0 on GoodFirms from 5 reviews, and has served 500+ businesses since 2014. Ask any Chandigarh firm you shortlist to show a store that sells abroad, and place a test order in another currency.",
+          ]}
+          factsTitle="FactoryJet at a glance"
+          facts={[
+            { k: 'Shopify status', v: 'Registered Shopify Partner' },
+            { k: 'Reviews', v: 'Clutch 5.0 (4 reviews), GoodFirms 5.0 (5 reviews)' },
+            { k: 'Track record', v: '500+ businesses served, 97% of projects on time or early, founded 2014' },
+            { k: 'Timelines', v: 'Custom-theme store 3 to 5 weeks; advanced store 5 to 8; headless or custom 8 to 14' },
+          ]}
+          links={[
+            { label: 'Ecommerce development in India', href: '/ecommerce-development' },
+            { label: 'Shopify development company in India', href: '/shopify-development' },
+            { label: 'Ecommerce website cost in India', href: '/blog/ecommerce-website-development-cost-india' },
+          ]}
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
@@ -412,8 +530,8 @@ export default function ChandigarhEcommercePage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="We have built for businesses across India, the US, the UK and the UAE, from D2C labels to B2B distributors. Tricity clients get the same deal: a fixed price per phase, every line of code handed over, and 7-day delivery."
+          headline="500+ businesses served. 97% on-time delivery. Founded 2014."
+          description="We have built for businesses across India, the US, the UK and the UAE, from D2C labels to B2B distributors. Tricity clients get the same deal: a fixed price per phase, every line of code handed over, and a draft store before they sign."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
@@ -447,32 +565,6 @@ export default function ChandigarhEcommercePage() {
               <p>
                 Tricity shoppers spend on quality and expect a store to look the part. Weak photos, a template that feels cheap, or a checkout that fails on the second try will cost you the order. Many of your buyers also live abroad, in Brampton, Surrey or Southall, and they need prices in their currency and a delivery date they can trust.
               </p>
-
-              <div className="grid grid-cols-3 gap-3" aria-hidden>
-                {[
-                  { value: '0.9%', label: 'India avg. ecommerce conversion rate' },
-                  { value: '65%', label: 'India ecommerce traffic via mobile' },
-                  { value: '78%', label: 'cart abandonment rate in India' },
-                ].map((b) => (
-                  <div
-                    key={b.value}
-                    className="rounded-xl border border-fj-neutral-200 bg-white px-3 py-4 text-center shadow-sm"
-                  >
-                    <p
-                      className="fj-display font-bold text-[#F05A28]"
-                      style={{ fontSize: '1.375rem', lineHeight: 1, letterSpacing: '-0.03em' }}
-                    >
-                      {b.value}
-                    </p>
-                    <p
-                      className="mt-1.5 font-fj-mono font-medium uppercase text-fj-neutral-400"
-                      style={{ fontSize: '0.6875rem', letterSpacing: '0.07em' }}
-                    >
-                      {b.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
 
               <div className="border-l-2 border-[#F05A28] pl-5 py-1" aria-hidden>
                 <p
@@ -541,16 +633,24 @@ export default function ChandigarhEcommercePage() {
           }
         />
 
+        {/* ── 4b. BUYER QUESTIONS ──────────────────────────────────────────── */}
+        <QuestionAnswers
+          eyebrow={"WHAT CHANDIGARH BUYERS ASK BEFORE HIRING"}
+          intro="Short answers to the questions buyers type into Google and ask AI assistants. Prices quoted here are Shopify's and Razorpay's published prices, not ours."
+          items={CITY_QUESTIONS}
+          bgClassName="bg-white"
+        />
+
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Tricity Brands Work With FactoryJet"
-          lead="A Tricity store has to look premium, take payments from two continents and ship on time in wedding season. We price each phase in writing, commit to 7-day delivery for standard stores, and show you a working draft built on your own products before any contract."
+          lead="A Tricity store has to look premium, take payments from two continents and ship on time in wedding season. We price each phase in writing, agree the launch date before work starts, and show you a working draft built on your own products before any contract."
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing.',
-              body: 'Standard Shopify and WooCommerce stores for Chandigarh brands go live in 7 days after products, photos and gateway approval arrive. The date is in the agreement. Our on-time record is 97% of builds, and delays nearly always traced back to missing content.',
+              title: 'A draft store before you sign.',
+              body: 'We build a draft on a handful of your products, so you can place a test order from India and from abroad. The launch date sits in the agreement, and 97% of our projects have been delivered on time or early.',
             },
             {
               icon: '📱',
@@ -585,24 +685,34 @@ export default function ChandigarhEcommercePage() {
           ]}
           stats={[
             {
-              value: 'Top-tier',
-              label: "Per-capita income in Chandigarh: among the most affluent markets in India",
-              sourceUrl: 'https://www.ibef.org/states/chandigarh',
-              sourceLabel: 'IBEF Chandigarh',
-            },
-            {
-              value: '23%',
-              label: "India's projected ecommerce market growth rate, year over year through 2030",
-              sourceUrl: 'https://www.ibef.org/industry/ecommerce',
+              value: 'US$ 345B',
+              label: "India's projected e-commerce market by 2030, up from US$ 125 billion in 2024 (18.4% a year)",
+              sourceUrl: CITY_SRC.ibef.url,
               sourceLabel: 'India Brand Equity Foundation',
             },
             {
-              value: '500M+',
-              label: 'UPI transactions per month in India: the payment rail your store must support',
-              sourceUrl: 'https://www.npci.org.in/what-we-do/upi/product-statistics',
-              sourceLabel: 'NPCI UPI Statistics',
+              value: '₹1,499',
+              label: 'a month for Shopify Basic in India on yearly billing, before apps and fees',
+              sourceUrl: CITY_SRC.shopifyPricing.url,
+              sourceLabel: 'Shopify India pricing',
+            },
+            {
+              value: '2%',
+              label: 'Razorpay platform fee per domestic transaction, plus GST on the fee',
+              sourceUrl: CITY_SRC.razorpay.url,
+              sourceLabel: 'Razorpay pricing',
             },
           ]}
+        />
+
+        {/* ── 7b. COMPARISON ───────────────────────────────────────────────── */}
+        <ComparisonTable
+          eyebrow="HOW TO CHOOSE"
+          headline={"Choosing an Ecommerce Developer in Chandigarh"}
+          lead={"Four ways to get an online store in Chandigarh, compared on what decides the result."}
+          columns={CITY_COMPARISON_COLUMNS}
+          rows={CITY_COMPARISON_ROWS}
+          footer="Agency and freelancer cells are general patterns, not claims about any one firm. Ask every firm you shortlist the same questions."
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
@@ -667,7 +777,7 @@ export default function ChandigarhEcommercePage() {
               description:
                 'Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.',
               imageSrc: '/images/portfolio/belle-maison.webp',
-              stat1: 'Live in 7 days',
+              stat1: 'Trade price tiers',
               stat2: 'Commerceflo · B2B',
             },
             {
@@ -676,7 +786,7 @@ export default function ChandigarhEcommercePage() {
               description:
                 'Impulse Branding is a Mumbai print branding and general contracting company. FactoryJet built impulsebranding.in and is now building their next-generation site.',
               imageSrc: '/images/work/impulse-branding-desktop.webp',
-              stat1: 'Launched in 6 days',
+              stat1: '75+ page site',
               stat2: 'Web · SEO',
             },
           ]}
@@ -684,7 +794,11 @@ export default function ChandigarhEcommercePage() {
           ctaLabel="View full portfolio"
         />
 
-        <GetFreeQuoteCTA />
+        <MidPageCTA
+          headline={"Place a test order on your draft store."}
+          sub={"Send your catalogue or current store. We will build a draft on a few of your products and price each phase in writing."}
+          label="See a draft of my store"
+        />
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
@@ -700,15 +814,25 @@ export default function ChandigarhEcommercePage() {
           items={CHANDIGARH_ECOM_FAQ_ITEMS}
         />
 
+        {/* ── 12b. SOURCES ─────────────────────────────────────────────────── */}
+        <SourceList
+          checkedOn={CITY_CHECKED_ON}
+          sources={[
+            { ...CITY_SRC.shopifyPricing, note: 'Shopify plan prices in rupees and third-party transaction fees' },
+            { ...CITY_SRC.razorpay, note: '2% platform fee on domestic transactions, plus GST on the fee' },
+            { ...CITY_SRC.ibef, note: 'India e-commerce market size for 2024 and projection for 2030' },
+          ]}
+        />
+
         {/* ── 13. FINAL CTA (DARK) ─────────────────────────────────────────── */}
         <FinalCTA
-          variant="dark"
+          variant="light"
           eyebrow="READY TO LAUNCH"
-          headline="Your Chandigarh Store, Live in 7 Days"
+          headline="Your Chandigarh Store, Built for Two Continents"
           sub="500+ businesses in India, the US, the UK and the UAE have built with FactoryJet. Tell us what you sell and where your buyers live. We will suggest a platform, fix the price for each phase in writing and show you a draft of your store before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price per phase. 7-day delivery. UPI, COD and international cards. Every login and every file is yours."
+          objectionHandler="Fixed price per phase. Draft before contract. UPI, COD and international cards. Every login and every file is yours."
         />
 
       </main>

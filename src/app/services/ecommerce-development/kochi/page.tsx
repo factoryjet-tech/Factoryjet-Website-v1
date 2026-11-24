@@ -14,20 +14,21 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
-import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { ecommerceCityAlternatesIN } from '@/data/hreflangMap';
-import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
+import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
+import { AnswerFirst, QuestionAnswers, SourceList } from '@/components/india-pages/IndiaAnswerBlocks';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development in Kochi | FactoryJet',
+  title: "Best Ecommerce Website Development in Kochi | FactoryJet",
   description:
-    'Ecommerce development in Kochi for spice traders, ayurveda brands, Kasavu sellers and seafood exporters. Shopify, UPI, Gulf shipping, GST. 7-day delivery.',
+    "Ecommerce website development company in Kochi for spice, ayurveda, Kasavu and seafood businesses. UPI at home, Gulf currency checkout, GST invoices.",
   keywords: [
     'ecommerce development company kochi',
     'ecommerce website development kochi',
@@ -47,9 +48,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Company in Kochi | FactoryJet',
+    title: "Ecommerce Website Development Company in Kochi | FactoryJet",
     description:
-      'Kochi ecommerce stores: Kerala spices and ayurveda, Kasavu and handloom, coir and snacks, with checkout for Gulf and NRI buyers. 7-day delivery.',
+      "Shopify and WooCommerce stores for Kochi spice, ayurveda, Kasavu and snack brands selling across Kerala and the Gulf, plus trade portals for exporters. A draft store before you sign.",
     url: 'https://factoryjet.com/services/ecommerce-development/kochi',
     images: [
       {
@@ -63,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Kochi | FactoryJet',
+    title: "Ecommerce Website Development Company in Kochi | FactoryJet",
     description:
-      'Kochi ecommerce: spice, ayurveda and handloom stores with Malayalam, UPI and Gulf shipping.',
+      "Kochi ecommerce: spice, ayurveda and Kasavu stores with Gulf checkout, plus export trade portals.",
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -92,7 +93,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-11-07';
+const PAGE_MODIFIED = '2026-11-24';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -130,7 +131,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/kochi',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Kochi and Ernakulam businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD, international shipping and GST invoicing. 7-day delivery.',
+    'Ecommerce development company serving Kochi and Ernakulam businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD, international shipping and GST invoicing.',
   areaServed: [
     'Kakkanad', 'Infopark', 'Edappally', 'MG Road', 'Fort Kochi',
     'Aluva', 'Thrippunithura', 'Kalamassery',
@@ -192,7 +193,7 @@ const KOCHI_ECOM_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How long does it take to set up an online store in Kochi?',
     answer:
-      'A standard Shopify or WooCommerce store goes live in 7 days once your products, photos and gateway approval are ready. A custom theme takes 3 to 5 weeks. Stores with export trade portals or subscriptions take 5 to 8 weeks, and custom platforms take 8 to 14 weeks.',
+      'A store with a custom-designed theme takes 3 to 5 weeks once your products, photos and gateway approval are ready. Stores with export trade portals or subscriptions take 5 to 8 weeks, and custom platforms take 8 to 14 weeks.',
   },
   {
     category: 'pricing',
@@ -320,6 +321,24 @@ const KOCHI_ECOM_FAQ_ITEMS = [
     answer:
       'A single developer can build a basic store. Selling across Kerala and the Gulf also needs design, multi-currency payments, export shipping, GST and SEO, which is more than most individuals cover. A small senior team handles it at a fixed price. If you hire an ecommerce developer in Kochi, try their past stores on your phone first.',
   },
+  {
+    category: "platform",
+    question: "Who is the best Shopify developer in Kochi for Gulf and NRI buyers?",
+    answer:
+      "Look for a Shopify developer who has set up Shopify Markets, Gulf couriers and duty notes, and who can block a product for a country that restricts it. FactoryJet is a registered Shopify Partner. We build a draft store with a few of your own products before you sign, so you can test it as a buyer in Dubai would.",
+  },
+  {
+    category: "platform",
+    question: "Can a Kochi exporter take B2B trade orders online?",
+    answer:
+      "Yes. Approved importers and hotel buyers log in to see spec sheets, MOQ, lead times and their own prices, and can request quotes for custom packs. We build these portals on Shopify Plus B2B or on Commerceflo, our own B2B platform. Belle Maison, a home decor wholesaler, takes trade orders on a Commerceflo store we built.",
+  },
+  {
+    category: "india",
+    question: "Does a Kochi store need different delivery dates in the monsoon?",
+    answer:
+      "Yes. Heavy rain slows deliveries across Kerala, so we lengthen the delivery estimates shown for Kerala pincodes during the monsoon months. Buyers then see a date they can trust. Orders to the rest of India and to the Gulf keep their normal estimates.",
+  },
 ];
 
 const faqSchema = {
@@ -346,6 +365,74 @@ const speakableSchema = {
   },
   url: 'https://factoryjet.com/services/ecommerce-development/kochi',
 };
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   India refresh, 24 Nov 2026: answer-first block, buyer questions, comparison,
+   sources. Each source opened and checked on 24 Nov 2026.
+───────────────────────────────────────────────────────────────────────────── */
+
+const CITY_CHECKED_ON = '24 November 2026';
+
+const CITY_SRC = {
+  shopifyPricing: { label: 'Shopify India pricing', url: 'https://www.shopify.com/in/pricing' },
+  razorpay: { label: 'Razorpay pricing', url: 'https://razorpay.com/pricing/' },
+  ibef: { label: 'IBEF: E-commerce industry in India', url: 'https://www.ibef.org/industry/ecommerce' },
+  shopifyGst: { label: 'Shopify Help: GST in India', url: 'https://help.shopify.com/en/manual/taxes/india-gst' },
+} as const;
+
+const CITY_QUESTIONS = [
+  {
+    q: "How much does an ecommerce website cost for a Kochi business?",
+    a: ["Scope sets the build price. For Kochi brands the main drivers are selling to the Gulf in local currency, a Malayalam storefront, export trade portals and catalogue size. Running costs are separate. Shopify's India pricing page lists Basic at ₹1,499 a month on yearly billing, and Razorpay lists 2% per domestic transaction plus GST on the fee. We put a fixed price on each phase in writing after a short scoping call."],
+    sources: [CITY_SRC.shopifyPricing, CITY_SRC.razorpay],
+  },
+  {
+    q: "Shopify or WooCommerce for a Kerala spice or ayurveda brand selling to the Gulf?",
+    a: ["Shopify, for most. Pack sizes work as variants, Shopify Markets shows prices in dirhams, riyals or pounds, and checkout takes UPI and COD in India and cards abroad. WooCommerce fits a brand that already runs a WordPress site full of recipes or wellness articles. Seafood exporters selling to importers usually need a login-only trade portal next to, or instead of, a retail store."],
+  },
+  {
+    q: "How long does it take to build an online store in Kochi before Onam?",
+    a: ["A store with a custom-designed theme takes 3 to 5 weeks. Export trade portals and subscription stores take 5 to 8 weeks, and headless or custom platforms take 8 to 14. Gulf buyers order early for Onam to allow for shipping, so brief us at least 8 weeks ahead. That covers the build, gateway approval and test shipments. Leave extra room for slower deliveries in the monsoon."],
+  },
+  {
+    q: "What should I ask before hiring an ecommerce developer in Kochi?",
+    a: ["Ask to see a store they built that sells abroad, and try it with a Gulf address. Ask how they handle customs rules for food and herbal products, and whether they can block an item for one country. If you want Malayalam, ask how they test the script on budget phones. Get a fixed price per phase in writing, and keep the store and accounts in your name."],
+  },
+];
+
+const CITY_COMPARISON_COLUMNS = [
+  { label: 'FactoryJet', isFactoryJet: true },
+  { label: "Typical Kochi agency" },
+  { label: 'Freelancer' },
+  { label: 'Marketplace only' },
+] as const;
+
+const CITY_COMPARISON_ROWS = [
+  {
+    feature: 'Draft store on your products before you sign',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Sometimes" />, <CompareIcon key="freelancer" kind="partial" label="Sometimes" />, <CompareIcon key="marketplace" kind="no" label="No own store" />],
+  },
+  {
+    feature: 'Fixed price per phase, in writing',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Varies" />, <CompareIcon key="freelancer" kind="partial" label="Varies" />, 'Fees per order'],
+  },
+  {
+    feature: "Rupee and Gulf currency prices with a courier that reaches the Gulf",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="partial" />, <CompareIcon key="marketplace" kind="partial" />],
+  },
+  {
+    feature: "Customs flags per product for food and ayurveda sent abroad",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="no" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Customer list and brand stay yours',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="yes" />, <CompareIcon key="freelancer" kind="yes" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Typical time for a custom-theme store',
+    values: ['3 to 5 weeks', 'Varies', 'Varies', 'Listing in days, no store'],
+  },
+];
 
 export default function KochiEcommercePage() {
   return (
@@ -378,32 +465,63 @@ export default function KochiEcommercePage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Kochi', url: 'https://factoryjet.com/services/ecommerce-development/kochi' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Kochi", url: 'https://factoryjet.com/services/ecommerce-development/kochi' },
         ]}
       />
 
       <main className="bg-fj-cream">
       <Breadcrumbs items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Kochi', url: 'https://factoryjet.com/services/ecommerce-development/kochi' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Kochi", url: 'https://factoryjet.com/services/ecommerce-development/kochi' },
         ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_kochi_hero" />}
-          eyebrow="ECOMMERCE DEVELOPMENT · KOCHI"
-          headline="Ecommerce Development in Kochi: Store Live in 7 Days"
-          lead="FactoryJet builds online stores for Kochi spice, ayurveda, Kasavu and snack brands that sell across Kerala, India and the Gulf, plus trade portals for exporters. Malayalam storefronts on request, UPI and COD at home, cards abroad, Lighthouse 90+. 7-day delivery."
-          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
+          eyebrow="ECOMMERCE WEBSITE DEVELOPMENT · KOCHI"
+          headline="Ecommerce Website Development Company in Kochi for Spice, Ayurveda and Export Brands"
+          lead="FactoryJet builds online stores for Kochi spice, ayurveda, Kasavu and snack brands that sell across Kerala, the rest of India and the Gulf, plus login-only trade portals for seafood and food exporters. Prices in rupees and dirhams or riyals, couriers that reach the Gulf, Malayalam pages on request, and a draft of your store before you sign."
+          secondaryCta={{ label: 'See a draft of my store', modal: true as const, region: 'in' as const }}
           trustItems={[
-            '7-day delivery',
+            'Draft store before you sign',
             'Razorpay + UPI + COD ready',
           ]}
-          rightSlot={<HeroBrowserMockup />}
+          rightSlot={
+            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-7 shadow-sm">
+              <p className="font-fj-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">WHAT A KOCHI STORE USUALLY NEEDS</p>
+              <ul className="mt-5 space-y-3">
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Gulf</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Dirham or riyal prices and a courier that reaches Dubai and Doha</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Customs</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Notes per product on what Gulf countries allow for food and herbs</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Ayurveda</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">AYUSH licence, ingredients and usage on every product page</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Export trade</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Importer logins, spec sheets, MOQ and quote requests</p></li>
+              </ul>
+              <p className="mt-5 rounded-xl bg-[rgba(240,90,40,0.08)] px-4 py-3 font-fj-body text-[0.875rem] font-semibold text-[#B23E13]">Custom-theme stores take 3 to 5 weeks. Fixed price per phase, in writing.</p>
+            </div>
+          }
+        />
+
+        {/* ── 1b. ANSWER FIRST ─────────────────────────────────────────────── */}
+        <AnswerFirst
+          eyebrow="THE SHORT ANSWER"
+          question={"Which is the best ecommerce website development company in Kochi?"}
+          answer={[
+            "Pick the team that builds for both of your buyers: the one paying by UPI in Kerala and the one in Dubai or Riyadh paying by card. FactoryJet sets up currencies, Gulf couriers and customs notes for each product first, then designs the store around your spices, oils or sarees. Each phase has a fixed price in writing, and you see a working draft with your own products before you sign.",
+            "We are a registered Shopify Partner, rated 5.0 on Clutch from 4 reviews and 5.0 on GoodFirms from 5 reviews, working since 2014. Before you choose a Kochi firm, ask for a store they built that ships to the Gulf, and check its prices and delivery dates as an overseas buyer would.",
+          ]}
+          factsTitle="FactoryJet at a glance"
+          facts={[
+            { k: 'Shopify status', v: 'Registered Shopify Partner' },
+            { k: 'Reviews', v: 'Clutch 5.0 (4 reviews), GoodFirms 5.0 (5 reviews)' },
+            { k: 'Track record', v: '500+ businesses served, 97% of projects on time or early, founded 2014' },
+            { k: 'Timelines', v: 'Custom-theme store 3 to 5 weeks; advanced store 5 to 8; headless or custom 8 to 14' },
+          ]}
+          links={[
+            { label: 'Ecommerce development in India', href: '/ecommerce-development' },
+            { label: 'Shopify development company in India', href: '/shopify-development' },
+            { label: 'Ecommerce website cost in India', href: '/blog/ecommerce-website-development-cost-india' },
+          ]}
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
@@ -412,8 +530,8 @@ export default function KochiEcommercePage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Stores and trade portals for businesses in India, the US, the UK and the UAE. Kochi brands get a fixed price per phase, the full codebase in their own name, and 7-day delivery on standard stores."
+          headline="500+ businesses served. 97% on-time delivery. Founded 2014."
+          description="Stores and trade portals for businesses in India, the US, the UK and the UAE. Kochi brands get a fixed price per phase, the full codebase in their own name, and a draft store before they sign."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
@@ -447,32 +565,6 @@ export default function KochiEcommercePage() {
               <p>
                 Kerala brands sell to two audiences at once. One lives in Kerala and the rest of India and pays by UPI. The other lives in Dubai, Doha, Riyadh or London, misses home, and buys spices, snacks, sarees and ayurveda products for themselves and for family visits. A store built for only one of them leaves money on the table.
               </p>
-
-              <div className="grid grid-cols-3 gap-3" aria-hidden>
-                {[
-                  { value: '0.9%', label: 'India avg. ecommerce conversion rate' },
-                  { value: '65%', label: 'India ecommerce traffic via mobile' },
-                  { value: '78%', label: 'cart abandonment rate in India' },
-                ].map((b) => (
-                  <div
-                    key={b.value}
-                    className="rounded-xl border border-fj-neutral-200 bg-white px-3 py-4 text-center shadow-sm"
-                  >
-                    <p
-                      className="fj-display font-bold text-[#F05A28]"
-                      style={{ fontSize: '1.375rem', lineHeight: 1, letterSpacing: '-0.03em' }}
-                    >
-                      {b.value}
-                    </p>
-                    <p
-                      className="mt-1.5 font-fj-mono font-medium uppercase text-fj-neutral-400"
-                      style={{ fontSize: '0.6875rem', letterSpacing: '0.07em' }}
-                    >
-                      {b.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
 
               <div className="border-l-2 border-[#F05A28] pl-5 py-1" aria-hidden>
                 <p
@@ -541,16 +633,24 @@ export default function KochiEcommercePage() {
           }
         />
 
+        {/* ── 4b. BUYER QUESTIONS ──────────────────────────────────────────── */}
+        <QuestionAnswers
+          eyebrow={"WHAT KOCHI BUYERS ASK BEFORE HIRING"}
+          intro="Short answers to the questions buyers type into Google and ask AI assistants. Prices quoted here are Shopify's and Razorpay's published prices, not ours."
+          items={CITY_QUESTIONS}
+          bgClassName="bg-white"
+        />
+
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Kochi Businesses Work With FactoryJet"
-          lead="Kerala brands often lose overseas orders to a checkout that only takes Indian cards or a courier that cannot reach the Gulf. We fix the price per phase in writing, commit to 7-day delivery for standard stores, and show you a working draft with your own products before you sign."
+          lead="Kerala brands often lose overseas orders to a checkout that only takes Indian cards or a courier that cannot reach the Gulf. We fix the price per phase in writing, agree the launch date before work starts, and show you a working draft with your own products before you sign."
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing.',
-              body: 'Standard Shopify and WooCommerce stores for Kochi brands go live in 7 days once products, photos and gateway approval arrive. The date is in the agreement, and 97% of our builds have shipped on time.',
+              title: 'A draft store before you sign.',
+              body: 'We build a draft with a few of your real products, priced in rupees and dirhams, so you can test it as a buyer at home and in the Gulf. The launch date is in the agreement, and 97% of our projects have been delivered on time or early.',
             },
             {
               icon: '📱',
@@ -585,24 +685,34 @@ export default function KochiEcommercePage() {
           ]}
           stats={[
             {
-              value: '3.5 Cr+',
-              label: "Kerala diaspora globally: the NRI buyer base your Kochi store can reach",
-              sourceUrl: 'https://www.ibef.org/states/kerala',
-              sourceLabel: 'IBEF Kerala',
-            },
-            {
-              value: '23%',
-              label: "India's projected ecommerce market growth rate, year over year through 2030",
-              sourceUrl: 'https://www.ibef.org/industry/ecommerce',
+              value: 'US$ 345B',
+              label: "India's projected e-commerce market by 2030, up from US$ 125 billion in 2024 (18.4% a year)",
+              sourceUrl: CITY_SRC.ibef.url,
               sourceLabel: 'India Brand Equity Foundation',
             },
             {
-              value: '500M+',
-              label: 'UPI transactions per month in India: the payment rail your store must support',
-              sourceUrl: 'https://www.npci.org.in/what-we-do/upi/product-statistics',
-              sourceLabel: 'NPCI UPI Statistics',
+              value: '₹1,499',
+              label: 'a month for Shopify Basic in India on yearly billing, before apps and fees',
+              sourceUrl: CITY_SRC.shopifyPricing.url,
+              sourceLabel: 'Shopify India pricing',
+            },
+            {
+              value: '2%',
+              label: 'Razorpay platform fee per domestic transaction, plus GST on the fee',
+              sourceUrl: CITY_SRC.razorpay.url,
+              sourceLabel: 'Razorpay pricing',
             },
           ]}
+        />
+
+        {/* ── 7b. COMPARISON ───────────────────────────────────────────────── */}
+        <ComparisonTable
+          eyebrow="HOW TO CHOOSE"
+          headline={"Choosing an Ecommerce Developer in Kochi"}
+          lead={"Four ways to get an online store in Kochi, compared on what decides the result."}
+          columns={CITY_COMPARISON_COLUMNS}
+          rows={CITY_COMPARISON_ROWS}
+          footer="Agency and freelancer cells are general patterns, not claims about any one firm. Ask every firm you shortlist the same questions."
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
@@ -667,7 +777,7 @@ export default function KochiEcommercePage() {
               description:
                 'Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.',
               imageSrc: '/images/portfolio/belle-maison.webp',
-              stat1: 'Live in 7 days',
+              stat1: 'Trade price tiers',
               stat2: 'Commerceflo · B2B',
             },
             {
@@ -676,7 +786,7 @@ export default function KochiEcommercePage() {
               description:
                 'Impulse Branding is a Mumbai print branding and general contracting company. FactoryJet built impulsebranding.in and is now building their next-generation site.',
               imageSrc: '/images/work/impulse-branding-desktop.webp',
-              stat1: 'Launched in 6 days',
+              stat1: '75+ page site',
               stat2: 'Web · SEO',
             },
           ]}
@@ -684,7 +794,11 @@ export default function KochiEcommercePage() {
           ctaLabel="View full portfolio"
         />
 
-        <GetFreeQuoteCTA />
+        <MidPageCTA
+          headline={"See your Kochi store working for Kerala and the Gulf."}
+          sub={"Send your product list or current site. We will build a draft on a few of your real products and price each phase in writing."}
+          label="See a draft of my store"
+        />
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
@@ -700,15 +814,25 @@ export default function KochiEcommercePage() {
           items={KOCHI_ECOM_FAQ_ITEMS}
         />
 
+        {/* ── 12b. SOURCES ─────────────────────────────────────────────────── */}
+        <SourceList
+          checkedOn={CITY_CHECKED_ON}
+          sources={[
+            { ...CITY_SRC.shopifyPricing, note: 'Shopify plan prices in rupees and third-party transaction fees' },
+            { ...CITY_SRC.razorpay, note: '2% platform fee on domestic transactions, plus GST on the fee' },
+            { ...CITY_SRC.ibef, note: 'India e-commerce market size for 2024 and projection for 2030' },
+          ]}
+        />
+
         {/* ── 13. FINAL CTA (DARK) ─────────────────────────────────────────── */}
         <FinalCTA
-          variant="dark"
+          variant="light"
           eyebrow="READY TO LAUNCH"
-          headline="Your Kochi Store, Live in 7 Days"
+          headline="Your Kochi Store, Ready for Kerala and the Gulf"
           sub="FactoryJet has worked with 500+ businesses in India, the US, the UK and the UAE. Tell us what you sell and where your buyers live. We will recommend a platform, fix the price for each phase in writing and show you a draft of your store before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price per phase. 7-day delivery. UPI, COD and Gulf-ready checkout. Your code, your accounts, from day one."
+          objectionHandler="Fixed price per phase. Draft before contract. UPI, COD and Gulf-ready checkout. Your code, your accounts, from day one."
         />
 
       </main>

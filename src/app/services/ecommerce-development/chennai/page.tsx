@@ -14,20 +14,21 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
-import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { ecommerceCityAlternatesIN } from '@/data/hreflangMap';
-import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
+import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
+import { AnswerFirst, QuestionAnswers, SourceList } from '@/components/india-pages/IndiaAnswerBlocks';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development in Chennai | FactoryJet',
+  title: "Best Ecommerce Website Development in Chennai | FactoryJet",
   description:
-    'Ecommerce development in Chennai for Kanchipuram silk sellers, T. Nagar jewellers and auto parts suppliers. Shopify, WooCommerce, UPI, GST. 7-day delivery.',
+    "Ecommerce website development company in Chennai for Kanchipuram silk sellers, T. Nagar jewellers and auto parts suppliers. Shopify, Tamil, UPI, GST.",
   keywords: [
     'ecommerce development company chennai',
     'ecommerce website development chennai',
@@ -47,9 +48,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Company in Chennai | FactoryJet',
+    title: "Ecommerce Website Development Company in Chennai | FactoryJet",
     description:
-      'Chennai ecommerce stores: silk sarees and gold jewellery with Tamil storefronts, dealer portals for Ambattur and Oragadam suppliers. 7-day delivery.',
+      "Silk saree and gold jewellery stores with Tamil storefronts, and dealer portals for Ambattur and Oragadam component makers. UPI, COD and GST. A draft before you sign.",
     url: 'https://factoryjet.com/services/ecommerce-development/chennai',
     images: [
       {
@@ -63,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Chennai | FactoryJet',
+    title: "Ecommerce Website Development Company in Chennai | FactoryJet",
     description:
-      'Chennai ecommerce: silk, jewellery and auto parts stores with Tamil, UPI, COD and GST invoicing.',
+      "Chennai ecommerce: silk, jewellery and auto parts stores with Tamil, UPI, COD and GST.",
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -92,7 +93,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-11-07';
+const PAGE_MODIFIED = '2026-11-24';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -130,7 +131,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/chennai',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Chennai retailers, D2C brands and manufacturers. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing. 7-day delivery.',
+    'Ecommerce development company serving Chennai retailers, D2C brands and manufacturers. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing.',
   areaServed: [
     'Anna Nagar', 'T. Nagar', 'Velachery', 'Sholinganallur',
     'Nungambakkam', 'Adyar', 'OMR', 'Ambattur',
@@ -192,7 +193,7 @@ const CHENNAI_ECOM_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How soon can my Chennai store go live?',
     answer:
-      'A standard Shopify or WooCommerce store goes live in 7 days after you share products, photos and gateway approval. A custom-designed theme takes 3 to 5 weeks. Dealer portals and stores with daily gold-rate pricing take 5 to 8 weeks. Fully custom platforms take 8 to 14 weeks.',
+      'A store with a custom-designed theme takes 3 to 5 weeks after you share products, photos and gateway approval. Dealer portals and stores with daily gold-rate pricing take 5 to 8 weeks. Fully custom platforms take 8 to 14 weeks.',
   },
   {
     category: 'pricing',
@@ -320,6 +321,24 @@ const CHENNAI_ECOM_FAQ_ITEMS = [
     answer:
       'A single developer can build a basic store. Running one well takes design, payments, couriers, GST, Tamil content and SEO together, which few individuals cover. A small senior team handles all of it at a fixed price. If you hire an ecommerce developer in Chennai, open two of their stores on your phone and time them.',
   },
+  {
+    category: "platform",
+    question: "Which is the best Shopify development company in Chennai for silk and jewellery?",
+    answer:
+      "Choose a Shopify team that has built variant-heavy saree catalogues, gold-rate pricing and Tamil storefronts, not only template installs. FactoryJet is a registered Shopify Partner. We design Chennai stores on your real products, test Tamil fonts on low-cost Android phones, and show you a working draft before any contract is signed.",
+  },
+  {
+    category: "pricing",
+    question: "What is the top ecommerce development company in Chennai for B2B dealer portals?",
+    answer:
+      "For dealer ordering, choose a firm that has built login-only catalogues with account pricing, credit terms and fast reorder. We build these on Shopify Plus B2B or on Commerceflo, our own B2B platform. Belle Maison, a home decor wholesaler, takes trade orders on a Commerceflo store we built. Ask any Chennai firm to show you a working portal like that.",
+  },
+  {
+    category: "india",
+    question: "Can my staff set up Aadi and Deepavali offers without a developer?",
+    answer:
+      "Yes. On Shopify your staff can create sale prices, festival collections and gift-box bundles from the admin, with no code. We set the store up so a banner, a collection page and a discount can go live together, and we record short videos of each step. Plan your stock pages a few weeks before the Aadi month begins.",
+  },
 ];
 
 const faqSchema = {
@@ -346,6 +365,74 @@ const speakableSchema = {
   },
   url: 'https://factoryjet.com/services/ecommerce-development/chennai',
 };
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   India refresh, 24 Nov 2026: answer-first block, buyer questions, comparison,
+   sources. Each source opened and checked on 24 Nov 2026.
+───────────────────────────────────────────────────────────────────────────── */
+
+const CITY_CHECKED_ON = '24 November 2026';
+
+const CITY_SRC = {
+  shopifyPricing: { label: 'Shopify India pricing', url: 'https://www.shopify.com/in/pricing' },
+  razorpay: { label: 'Razorpay pricing', url: 'https://razorpay.com/pricing/' },
+  ibef: { label: 'IBEF: E-commerce industry in India', url: 'https://www.ibef.org/industry/ecommerce' },
+  shopifyGst: { label: 'Shopify Help: GST in India', url: 'https://help.shopify.com/en/manual/taxes/india-gst' },
+} as const;
+
+const CITY_QUESTIONS = [
+  {
+    q: "How much does it cost to build an ecommerce website in Chennai?",
+    a: ["Scope sets the build price. For Chennai stores the big drivers are daily gold-rate pricing, a Tamil version, dealer price lists, NRI shipping and links to Tally or Zoho Books. A simple retail store costs much less than a dealer portal. Ongoing costs are separate: Shopify's India page lists Basic at ₹1,499 a month on yearly billing, and Razorpay lists 2% per domestic transaction plus GST on the fee. Every phase gets a fixed written price."],
+    sources: [CITY_SRC.shopifyPricing, CITY_SRC.razorpay],
+  },
+  {
+    q: "Is Shopify good for a Chennai silk saree or jewellery store?",
+    a: ["Yes, for most. Shopify handles saree colours, lengths and blouse options as variants, plays drape video on product pages and takes UPI, COD and international cards for NRI buyers. Jewellers can price pieces from a daily gold rate. WooCommerce suits a store that already runs a content-heavy WordPress site. Auto component suppliers with large part catalogues usually need a dealer portal or a custom build."],
+  },
+  {
+    q: "How long does an ecommerce website take to build in Chennai?",
+    a: ["A custom-designed theme takes 3 to 5 weeks. Dealer portals, gold-rate pricing or a platform move take 5 to 8 weeks, and fully custom platforms take 8 to 14 weeks. Chennai retail peaks around the Aadi sales and Deepavali, and gold buying rises at Akshaya Tritiya. Start about two months before the date you care about, so photos and Tamil product text are ready in time."],
+  },
+  {
+    q: "What should I ask an ecommerce developer in Chennai before hiring?",
+    a: ["Ask to see a live store with a Tamil version and one dealer or B2B portal. Ask how they show gold price breakups and HUID, or part fitment by vehicle, depending on your trade. Check who writes the code and get the price for each phase in writing. The store, domain, payment and courier accounts should all be opened in your business name."],
+  },
+];
+
+const CITY_COMPARISON_COLUMNS = [
+  { label: 'FactoryJet', isFactoryJet: true },
+  { label: "Typical Chennai agency" },
+  { label: 'Freelancer' },
+  { label: 'Marketplace only' },
+] as const;
+
+const CITY_COMPARISON_ROWS = [
+  {
+    feature: 'Draft store on your products before you sign',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Sometimes" />, <CompareIcon key="freelancer" kind="partial" label="Sometimes" />, <CompareIcon key="marketplace" kind="no" label="No own store" />],
+  },
+  {
+    feature: 'Fixed price per phase, in writing',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Varies" />, <CompareIcon key="freelancer" kind="partial" label="Varies" />, 'Fees per order'],
+  },
+  {
+    feature: "Tamil storefront on its own URL, tested on budget phones",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="partial" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: "Dealer portal with part number search and dealer pricing",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="no" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Customer list and brand stay yours',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="yes" />, <CompareIcon key="freelancer" kind="yes" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Typical time for a custom-theme store',
+    values: ['3 to 5 weeks', 'Varies', 'Varies', 'Listing in days, no store'],
+  },
+];
 
 export default function ChennaiEcommercePage() {
   return (
@@ -378,32 +465,63 @@ export default function ChennaiEcommercePage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Chennai', url: 'https://factoryjet.com/services/ecommerce-development/chennai' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Chennai", url: 'https://factoryjet.com/services/ecommerce-development/chennai' },
         ]}
       />
 
       <main className="bg-fj-cream">
       <Breadcrumbs items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Chennai', url: 'https://factoryjet.com/services/ecommerce-development/chennai' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Chennai", url: 'https://factoryjet.com/services/ecommerce-development/chennai' },
         ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_chennai_hero" />}
-          eyebrow="ECOMMERCE DEVELOPMENT · CHENNAI"
-          headline="Ecommerce Development in Chennai: Store Live in 7 Days"
-          lead="FactoryJet builds online stores for Chennai silk, jewellery and food brands, with Tamil where your buyers want it, and dealer portals for auto component makers from Ambattur to Oragadam. Razorpay, UPI and COD at checkout, Lighthouse 90+ on mobile. 7-day delivery."
-          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
+          eyebrow="ECOMMERCE WEBSITE DEVELOPMENT · CHENNAI"
+          headline="Ecommerce Website Development Company in Chennai for Silk, Jewellery and Auto Parts Businesses"
+          lead="FactoryJet builds online stores for T. Nagar silk and jewellery houses, Mylapore coffee and food brands, and dealer portals for auto component makers from Ambattur to Oragadam. Tamil storefronts where your buyers want them, gold-rate pricing, UPI and COD at checkout, and a draft of your store before you sign."
+          secondaryCta={{ label: 'See a draft of my store', modal: true as const, region: 'in' as const }}
           trustItems={[
-            '7-day delivery',
+            'Draft store before you sign',
             'Razorpay + UPI + COD ready',
           ]}
-          rightSlot={<HeroBrowserMockup />}
+          rightSlot={
+            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-7 shadow-sm">
+              <p className="font-fj-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">WHAT A CHENNAI STORE USUALLY NEEDS</p>
+              <ul className="mt-5 space-y-3">
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Silk</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Drape video, zari and weave notes, blouse and length options</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Gold</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Daily gold-rate pricing, price breakup, hallmark and HUID</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Dealers</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Part number search, fitment by vehicle, dealer pricing</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Language</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Tamil next to English, each on its own URL</p></li>
+              </ul>
+              <p className="mt-5 rounded-xl bg-[rgba(240,90,40,0.08)] px-4 py-3 font-fj-body text-[0.875rem] font-semibold text-[#B23E13]">Custom-theme stores take 3 to 5 weeks. Fixed price per phase, in writing.</p>
+            </div>
+          }
+        />
+
+        {/* ── 1b. ANSWER FIRST ─────────────────────────────────────────────── */}
+        <AnswerFirst
+          eyebrow="THE SHORT ANSWER"
+          question={"Which is the best ecommerce website development company in Chennai?"}
+          answer={[
+            "Chennai buyers want every detail before they pay, so judge a developer by how much detail its stores show. A silk store needs weave and zari notes and drape video. A jeweller needs a price breakup tied to the daily gold rate. An Oragadam supplier needs part number search. FactoryJet plans those pages first, fixes the price of each phase in writing, and builds a draft on your own products before you sign.",
+            "We are a registered Shopify Partner. Clutch rates us 5.0 from 4 reviews and GoodFirms 5.0 from 5 reviews, and 97% of our projects have been delivered on time or early. Before you pick any Chennai firm, ask to see a Tamil store it built and open it on a low-cost Android phone.",
+          ]}
+          factsTitle="FactoryJet at a glance"
+          facts={[
+            { k: 'Shopify status', v: 'Registered Shopify Partner' },
+            { k: 'Reviews', v: 'Clutch 5.0 (4 reviews), GoodFirms 5.0 (5 reviews)' },
+            { k: 'Track record', v: '500+ businesses served, 97% of projects on time or early, founded 2014' },
+            { k: 'Timelines', v: 'Custom-theme store 3 to 5 weeks; advanced store 5 to 8; headless or custom 8 to 14' },
+          ]}
+          links={[
+            { label: 'Ecommerce development in India', href: '/ecommerce-development' },
+            { label: 'Shopify development company in India', href: '/shopify-development' },
+            { label: 'Ecommerce website cost in India', href: '/blog/ecommerce-website-development-cost-india' },
+          ]}
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
@@ -412,8 +530,8 @@ export default function ChennaiEcommercePage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="From D2C labels to component suppliers, we have built for businesses in India, the US, the UK and the UAE. Chennai clients get a fixed price per phase, the complete codebase, and 7-day delivery on standard stores."
+          headline="500+ businesses served. 97% on-time delivery. Founded 2014."
+          description="From D2C labels to component suppliers, we have built for businesses in India, the US, the UK and the UAE. Chennai clients get a fixed price per phase, the complete codebase, and a draft store before they sign."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
@@ -447,32 +565,6 @@ export default function ChennaiEcommercePage() {
               <p>
                 Chennai buyers are careful with money and want full details before they pay. For silk that means weave, zari type and length. For gold, it means weight, purity, making charges and the hallmark. For an auto part, it means the part number and the vehicles it fits. A store that hides any of this gets a phone call at best and a lost sale at worst.
               </p>
-
-              <div className="grid grid-cols-3 gap-3" aria-hidden>
-                {[
-                  { value: '0.9%', label: 'India avg. ecommerce conversion rate' },
-                  { value: '65%', label: 'India ecommerce traffic via mobile' },
-                  { value: '78%', label: 'cart abandonment rate in India' },
-                ].map((b) => (
-                  <div
-                    key={b.value}
-                    className="rounded-xl border border-fj-neutral-200 bg-white px-3 py-4 text-center shadow-sm"
-                  >
-                    <p
-                      className="fj-display font-bold text-[#F05A28]"
-                      style={{ fontSize: '1.375rem', lineHeight: 1, letterSpacing: '-0.03em' }}
-                    >
-                      {b.value}
-                    </p>
-                    <p
-                      className="mt-1.5 font-fj-mono font-medium uppercase text-fj-neutral-400"
-                      style={{ fontSize: '0.6875rem', letterSpacing: '0.07em' }}
-                    >
-                      {b.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
 
               <div className="border-l-2 border-[#F05A28] pl-5 py-1" aria-hidden>
                 <p
@@ -541,16 +633,24 @@ export default function ChennaiEcommercePage() {
           }
         />
 
+        {/* ── 4b. BUYER QUESTIONS ──────────────────────────────────────────── */}
+        <QuestionAnswers
+          eyebrow={"WHAT CHENNAI BUYERS ASK BEFORE HIRING"}
+          intro="Short answers to the questions buyers type into Google and ask AI assistants. Prices quoted here are Shopify's and Razorpay's published prices, not ours."
+          items={CITY_QUESTIONS}
+          bgClassName="bg-white"
+        />
+
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Chennai Businesses Choose FactoryJet"
-          lead="Chennai owners tend to ask hard questions about cost and timing before they commit. We answer with a fixed price per phase in writing, 7-day delivery for standard stores in the agreement, and a working draft built on your own products before you sign anything."
+          lead="Chennai owners tend to ask hard questions about cost and timing before they commit. We answer with a fixed price per phase in writing, a launch date agreed before work starts, and a working draft built on your own products before you sign anything."
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing.',
-              body: 'A standard store for a Chennai business is live in 7 days from the day products, photos and payment gateway approval reach us. That date goes into the agreement. We have hit our deadline on 97% of builds.',
+              title: 'A draft store before you sign.',
+              body: 'We build a draft with a few of your real products, so you and your family or partners can try it on your phones. The launch date goes into the agreement, and 97% of our projects have been delivered on time or early.',
             },
             {
               icon: '📱',
@@ -585,24 +685,34 @@ export default function ChennaiEcommercePage() {
           ]}
           stats={[
             {
-              value: '4,000+',
-              label: 'Auto component manufacturers in Chennai: India\'s automotive manufacturing capital',
-              sourceUrl: 'https://www.ibef.org/states/tamil-nadu',
-              sourceLabel: 'IBEF Tamil Nadu',
-            },
-            {
-              value: '23%',
-              label: "India's projected ecommerce market growth rate, year over year through 2030",
-              sourceUrl: 'https://www.ibef.org/industry/ecommerce',
+              value: 'US$ 345B',
+              label: "India's projected e-commerce market by 2030, up from US$ 125 billion in 2024 (18.4% a year)",
+              sourceUrl: CITY_SRC.ibef.url,
               sourceLabel: 'India Brand Equity Foundation',
             },
             {
-              value: '500M+',
-              label: 'UPI transactions per month in India: the payment rail your store must support',
-              sourceUrl: 'https://www.npci.org.in/what-we-do/upi/product-statistics',
-              sourceLabel: 'NPCI UPI Statistics',
+              value: '₹1,499',
+              label: 'a month for Shopify Basic in India on yearly billing, before apps and fees',
+              sourceUrl: CITY_SRC.shopifyPricing.url,
+              sourceLabel: 'Shopify India pricing',
+            },
+            {
+              value: '2%',
+              label: 'Razorpay platform fee per domestic transaction, plus GST on the fee',
+              sourceUrl: CITY_SRC.razorpay.url,
+              sourceLabel: 'Razorpay pricing',
             },
           ]}
+        />
+
+        {/* ── 7b. COMPARISON ───────────────────────────────────────────────── */}
+        <ComparisonTable
+          eyebrow="HOW TO CHOOSE"
+          headline={"Choosing an Ecommerce Developer in Chennai"}
+          lead={"Four ways to get an online store in Chennai, compared on what decides the result."}
+          columns={CITY_COMPARISON_COLUMNS}
+          rows={CITY_COMPARISON_ROWS}
+          footer="Agency and freelancer cells are general patterns, not claims about any one firm. Ask every firm you shortlist the same questions."
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
@@ -667,7 +777,7 @@ export default function ChennaiEcommercePage() {
               description:
                 'Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.',
               imageSrc: '/images/portfolio/belle-maison.webp',
-              stat1: 'Live in 7 days',
+              stat1: 'Trade price tiers',
               stat2: 'Commerceflo · B2B',
             },
             {
@@ -676,7 +786,7 @@ export default function ChennaiEcommercePage() {
               description:
                 'Impulse Branding is a Mumbai print branding and general contracting company. FactoryJet built impulsebranding.in and is now building their next-generation site.',
               imageSrc: '/images/work/impulse-branding-desktop.webp',
-              stat1: 'Launched in 6 days',
+              stat1: '75+ page site',
               stat2: 'Web · SEO',
             },
           ]}
@@ -684,7 +794,11 @@ export default function ChennaiEcommercePage() {
           ctaLabel="View full portfolio"
         />
 
-        <GetFreeQuoteCTA />
+        <MidPageCTA
+          headline={"Check your Chennai store on your phone before you sign."}
+          sub={"Send a few product photos, your price list or your current website. We will build a draft on real products and write down the price for each phase."}
+          label="See a draft of my store"
+        />
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
@@ -700,15 +814,25 @@ export default function ChennaiEcommercePage() {
           items={CHENNAI_ECOM_FAQ_ITEMS}
         />
 
+        {/* ── 12b. SOURCES ─────────────────────────────────────────────────── */}
+        <SourceList
+          checkedOn={CITY_CHECKED_ON}
+          sources={[
+            { ...CITY_SRC.shopifyPricing, note: 'Shopify plan prices in rupees and third-party transaction fees' },
+            { ...CITY_SRC.razorpay, note: '2% platform fee on domestic transactions, plus GST on the fee' },
+            { ...CITY_SRC.ibef, note: 'India e-commerce market size for 2024 and projection for 2030' },
+          ]}
+        />
+
         {/* ── 13. FINAL CTA (DARK) ─────────────────────────────────────────── */}
         <FinalCTA
-          variant="dark"
+          variant="light"
           eyebrow="READY TO LAUNCH"
-          headline="Your Chennai Store, Live in 7 Days"
+          headline="Your Chennai Store, With Every Detail on the Page"
           sub="500+ businesses in India, the US, the UK and the UAE have worked with FactoryJet. Share what you sell and who buys it. We will recommend a platform, put the price for each phase in writing and show you a draft of your store before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price per phase. 7-day delivery. Tamil-ready, with UPI, COD and GST. Your code, your accounts."
+          objectionHandler="Fixed price per phase. Draft before contract. Tamil-ready, with UPI, COD and GST. Your code, your accounts."
         />
 
       </main>

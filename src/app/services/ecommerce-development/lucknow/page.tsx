@@ -14,20 +14,21 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
-import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { ecommerceCityAlternatesIN } from '@/data/hreflangMap';
-import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
+import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
+import { AnswerFirst, QuestionAnswers, SourceList } from '@/components/india-pages/IndiaAnswerBlocks';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development in Lucknow | FactoryJet',
+  title: "Best Ecommerce Website Development in Lucknow | FactoryJet",
   description:
-    'Ecommerce development in Lucknow for chikankari brands, Awadhi food makers, attar sellers and UP wholesalers. Shopify, UPI, COD, Hindi and GST. 7-day delivery.',
+    "Ecommerce website development company in Lucknow for chikankari, Awadhi food and attar brands, plus UP wholesalers. UPI, COD, Hindi or Urdu stores.",
   keywords: [
     'ecommerce development company lucknow',
     'ecommerce website development lucknow',
@@ -47,9 +48,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Company in Lucknow | FactoryJet',
+    title: "Ecommerce Website Development Company in Lucknow | FactoryJet",
     description:
-      'Lucknow ecommerce stores: chikankari and zardozi, Awadhi food and mangoes, attar, plus wholesale ordering for UP traders. 7-day delivery.',
+      "Shopify and WooCommerce stores for Lucknow chikankari and zardozi houses, Awadhi food brands and attar sellers, plus wholesale portals for UP traders. A draft store before you sign.",
     url: 'https://factoryjet.com/services/ecommerce-development/lucknow',
     images: [
       {
@@ -63,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Lucknow | FactoryJet',
+    title: "Ecommerce Website Development Company in Lucknow | FactoryJet",
     description:
-      'Lucknow ecommerce: chikankari, food and wholesale stores with Hindi, Urdu, UPI and COD.',
+      "Lucknow ecommerce: chikankari, Awadhi food and attar stores, wholesale portals for UP, with UPI, COD and WhatsApp.",
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -92,7 +93,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-11-07';
+const PAGE_MODIFIED = '2026-11-24';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -130,7 +131,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/lucknow',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Lucknow businesses in Hazratganj, Aminabad, Chowk and Gomti Nagar. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing. 7-day delivery.',
+    'Ecommerce development company serving Lucknow businesses in Hazratganj, Aminabad, Chowk and Gomti Nagar. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing.',
   areaServed: [
     'Hazratganj', 'Gomti Nagar', 'Indira Nagar', 'Aliganj', 'Mahanagar',
     'Chinhat', 'Alambagh', 'Vikas Nagar',
@@ -192,7 +193,7 @@ const LUCKNOW_ECOM_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How long does it take to build a store in Lucknow?',
     answer:
-      'A standard Shopify or WooCommerce store goes live in 7 days once your products, photos and payment gateway approval are ready. A custom theme takes 3 to 5 weeks. Wholesale portals and made-to-order setups take 5 to 8 weeks, and custom platforms take 8 to 14 weeks.',
+      'A store with a custom-designed theme takes 3 to 5 weeks once your products, photos and payment gateway approval are ready. Wholesale portals and made-to-order setups take 5 to 8 weeks, and custom platforms take 8 to 14 weeks.',
   },
   {
     category: 'pricing',
@@ -320,6 +321,24 @@ const LUCKNOW_ECOM_FAQ_ITEMS = [
     answer:
       'One developer can launch a simple store. A store that sells across UP and abroad also needs design, payments, couriers, GST, language work and SEO, which is a lot for one person. A small senior team covers it at a fixed price. If you hire an ecommerce developer in Lucknow, check their past stores on your phone first.',
   },
+  {
+    category: "platform",
+    question: "Who is the best Shopify developer in Lucknow for chikankari brands?",
+    answer:
+      "The best fit is a Shopify developer who can show hand work clearly: sharp close-ups, stitch video and honest fabric notes, on a page that still loads fast on a phone. FactoryJet is a registered Shopify Partner. We build a draft with a few of your own pieces before you sign, so you can judge it with your own eyes.",
+  },
+  {
+    category: "platform",
+    question: "Can a Lucknow wholesaler run a B2B ordering portal?",
+    answer:
+      "Yes. Shops log in to see their own rates and credit limit, order in sets or cartons, and repeat a past order in a few taps. We build these on Shopify Plus B2B or on Commerceflo, our own B2B platform. Belle Maison, a home decor wholesaler, takes trade orders on a Commerceflo store we built.",
+  },
+  {
+    category: "india",
+    question: "Can a Lucknow store ship chikankari to buyers in the Gulf, UK and US?",
+    answer:
+      "Yes. We connect a cross-border courier alongside Shiprocket for India, show delivery dates buyers abroad can trust, and use zero-rated GST invoices for exports. Clear size charts matter even more for overseas buyers, because a return from abroad costs far more than one from Kanpur.",
+  },
 ];
 
 const faqSchema = {
@@ -346,6 +365,74 @@ const speakableSchema = {
   },
   url: 'https://factoryjet.com/services/ecommerce-development/lucknow',
 };
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   India refresh, 24 Nov 2026: answer-first block, buyer questions, comparison,
+   sources. Each source opened and checked on 24 Nov 2026.
+───────────────────────────────────────────────────────────────────────────── */
+
+const CITY_CHECKED_ON = '24 November 2026';
+
+const CITY_SRC = {
+  shopifyPricing: { label: 'Shopify India pricing', url: 'https://www.shopify.com/in/pricing' },
+  razorpay: { label: 'Razorpay pricing', url: 'https://razorpay.com/pricing/' },
+  ibef: { label: 'IBEF: E-commerce industry in India', url: 'https://www.ibef.org/industry/ecommerce' },
+  shopifyGst: { label: 'Shopify Help: GST in India', url: 'https://help.shopify.com/en/manual/taxes/india-gst' },
+} as const;
+
+const CITY_QUESTIONS = [
+  {
+    q: "How much does it cost to build an ecommerce website in Lucknow?",
+    a: ["Your build price depends on scope. In Lucknow the big drivers are made-to-order options for chikankari, wholesale price lists for UP shops, shipping to families abroad, Hindi or Urdu pages, and seasonal stock rules for food. Monthly running costs are separate. Shopify's India pricing page shows Basic at ₹1,499 a month on yearly billing. Razorpay takes 2% of each domestic transaction, plus GST on that fee. We quote each phase at a fixed price after a short call."],
+    sources: [CITY_SRC.shopifyPricing, CITY_SRC.razorpay],
+  },
+  {
+    q: "Is Shopify or WooCommerce better for a Lucknow chikankari brand?",
+    a: ["Shopify fits most chikankari and zardozi labels. It handles fabric, colour and size variants, made-to-order notes and stitch videos, and takes UPI, COD and international cards. WooCommerce makes sense if you already publish a lot on WordPress, such as guides to stitch types. A wholesaler supplying shops across UP may need a trade portal with login-only rates, next to or instead of a retail store."],
+  },
+  {
+    q: "How long does an online store take to build in Lucknow?",
+    a: ["Plan on 3 to 5 weeks for a store with a custom-designed theme. Wholesale portals and made-to-order setups take 5 to 8 weeks, and headless or custom platforms take 8 to 14. Time it to your season. Festival gift boxes for Eid and Diwali, and Malihabad Dussehri mangoes in summer, all sell in short windows, so brief us about two months before the first order you want."],
+  },
+  {
+    q: "What should I check before hiring an ecommerce developer in Lucknow?",
+    a: ["Open two stores they built on a budget Android phone and see how the close-up photos load. Ask how they handle COD: WhatsApp confirmation, limits by order value, and pincodes with poor delivery history. If you need Urdu, ask to see a right-to-left layout they have tested. Get the price per phase in writing, and keep the store, domain and accounts in your own name."],
+  },
+];
+
+const CITY_COMPARISON_COLUMNS = [
+  { label: 'FactoryJet', isFactoryJet: true },
+  { label: "Typical Lucknow agency" },
+  { label: 'Freelancer' },
+  { label: 'Marketplace only' },
+] as const;
+
+const CITY_COMPARISON_ROWS = [
+  {
+    feature: 'Draft store on your products before you sign',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Sometimes" />, <CompareIcon key="freelancer" kind="partial" label="Sometimes" />, <CompareIcon key="marketplace" kind="no" label="No own store" />],
+  },
+  {
+    feature: 'Fixed price per phase, in writing',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Varies" />, <CompareIcon key="freelancer" kind="partial" label="Varies" />, 'Fees per order'],
+  },
+  {
+    feature: "Stitch close-ups and video planned for every product",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="partial" />, <CompareIcon key="marketplace" kind="partial" />],
+  },
+  {
+    feature: "Wholesale login for UP shops with own rates and GST invoices",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="no" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Customer list and brand stay yours',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="yes" />, <CompareIcon key="freelancer" kind="yes" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Typical time for a custom-theme store',
+    values: ['3 to 5 weeks', 'Varies', 'Varies', 'Listing in days, no store'],
+  },
+];
 
 export default function LucknowEcommercePage() {
   return (
@@ -378,32 +465,63 @@ export default function LucknowEcommercePage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Lucknow', url: 'https://factoryjet.com/services/ecommerce-development/lucknow' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Lucknow", url: 'https://factoryjet.com/services/ecommerce-development/lucknow' },
         ]}
       />
 
       <main className="bg-fj-cream">
       <Breadcrumbs items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Lucknow', url: 'https://factoryjet.com/services/ecommerce-development/lucknow' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Lucknow", url: 'https://factoryjet.com/services/ecommerce-development/lucknow' },
         ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_lucknow_hero" />}
-          eyebrow="ECOMMERCE DEVELOPMENT · LUCKNOW"
-          headline="Ecommerce Development in Lucknow: Store Live in 7 Days"
-          lead="FactoryJet builds online stores for Lucknow chikankari and zardozi houses, Awadhi food brands and attar sellers, and wholesale portals for traders who supply shops across Uttar Pradesh. Hindi or Urdu storefronts, UPI and COD at checkout, Lighthouse 90+. 7-day delivery."
-          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
+          eyebrow="ECOMMERCE WEBSITE DEVELOPMENT · LUCKNOW"
+          headline="Ecommerce Website Development Company in Lucknow for Chikankari, Food and Wholesale Brands"
+          lead="FactoryJet builds online stores for Chowk and Aminabad chikankari and zardozi houses, Awadhi food and masala brands and attar sellers, plus wholesale portals for traders who supply shops across Uttar Pradesh. Stitch close-ups that prove hand work, UPI and COD with WhatsApp confirmation, Hindi or Urdu where it helps, and a draft of your store before you sign."
+          secondaryCta={{ label: 'See a draft of my store', modal: true as const, region: 'in' as const }}
           trustItems={[
-            '7-day delivery',
+            'Draft store before you sign',
             'Razorpay + UPI + COD ready',
           ]}
-          rightSlot={<HeroBrowserMockup />}
+          rightSlot={
+            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-7 shadow-sm">
+              <p className="font-fj-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">WHAT A LUCKNOW STORE USUALLY NEEDS</p>
+              <ul className="mt-5 space-y-3">
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Proof</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Stitch close-ups and short video that show hand work</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Payments</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">UPI first, COD confirmed on WhatsApp before dispatch</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Wholesale</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Login-only rates, set or carton quantities, credit limits</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Language</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Hindi or Urdu next to English, each on its own URL</p></li>
+              </ul>
+              <p className="mt-5 rounded-xl bg-[rgba(240,90,40,0.08)] px-4 py-3 font-fj-body text-[0.875rem] font-semibold text-[#B23E13]">Custom-theme stores take 3 to 5 weeks. Fixed price per phase, in writing.</p>
+            </div>
+          }
+        />
+
+        {/* ── 1b. ANSWER FIRST ─────────────────────────────────────────────── */}
+        <AnswerFirst
+          eyebrow="THE SHORT ANSWER"
+          question={"Which is the best ecommerce website development company in Lucknow?"}
+          answer={[
+            "Look for a team that can make hand-made chikan look hand-made on a phone, and that knows how UP buyers like to pay. FactoryJet starts with your buyers: shoppers in Lucknow, the rest of India, families in the Gulf, UK and US, or shops across Uttar Pradesh. Then we choose the platform, fix each phase's price in writing and build a draft with your own products before you sign.",
+            "We are a registered Shopify Partner with a 5.0 rating on Clutch (4 reviews) and 5.0 on GoodFirms (5 reviews), founded in 2014. When you compare Lucknow firms, ask each one to show a store with real close-up product photos, then try its COD checkout on your own phone.",
+          ]}
+          factsTitle="FactoryJet at a glance"
+          facts={[
+            { k: 'Shopify status', v: 'Registered Shopify Partner' },
+            { k: 'Reviews', v: 'Clutch 5.0 (4 reviews), GoodFirms 5.0 (5 reviews)' },
+            { k: 'Track record', v: '500+ businesses served, 97% of projects on time or early, founded 2014' },
+            { k: 'Timelines', v: 'Custom-theme store 3 to 5 weeks; advanced store 5 to 8; headless or custom 8 to 14' },
+          ]}
+          links={[
+            { label: 'Ecommerce development in India', href: '/ecommerce-development' },
+            { label: 'Shopify development company in India', href: '/shopify-development' },
+            { label: 'Ecommerce website cost in India', href: '/blog/ecommerce-website-development-cost-india' },
+          ]}
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
@@ -412,8 +530,8 @@ export default function LucknowEcommercePage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Stores and wholesale portals for businesses in India, the US, the UK and the UAE. Lucknow clients get a fixed price per phase, the complete code and every login, and 7-day delivery on standard stores."
+          headline="500+ businesses served. 97% on-time delivery. Founded 2014."
+          description="Stores and wholesale portals for businesses in India, the US, the UK and the UAE. Lucknow clients get a fixed price per phase, the complete code and every login, and a draft store before they sign."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
@@ -447,32 +565,6 @@ export default function LucknowEcommercePage() {
               <p>
                 Chikankari buyers have been burned by machine copies sold as hand work. Food buyers worry about freshness. Wholesale buyers want rates without five phone calls. In each case the store has to answer the worry before the buyer asks. That means honest close-ups, stitch and fabric details, clear dispatch dates, and prices that match what the buyer pays.
               </p>
-
-              <div className="grid grid-cols-3 gap-3" aria-hidden>
-                {[
-                  { value: '0.9%', label: 'India avg. ecommerce conversion rate' },
-                  { value: '65%', label: 'India ecommerce traffic via mobile' },
-                  { value: '78%', label: 'cart abandonment rate in India' },
-                ].map((b) => (
-                  <div
-                    key={b.value}
-                    className="rounded-xl border border-fj-neutral-200 bg-white px-3 py-4 text-center shadow-sm"
-                  >
-                    <p
-                      className="fj-display font-bold text-[#F05A28]"
-                      style={{ fontSize: '1.375rem', lineHeight: 1, letterSpacing: '-0.03em' }}
-                    >
-                      {b.value}
-                    </p>
-                    <p
-                      className="mt-1.5 font-fj-mono font-medium uppercase text-fj-neutral-400"
-                      style={{ fontSize: '0.6875rem', letterSpacing: '0.07em' }}
-                    >
-                      {b.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
 
               <div className="border-l-2 border-[#F05A28] pl-5 py-1" aria-hidden>
                 <p
@@ -541,16 +633,24 @@ export default function LucknowEcommercePage() {
           }
         />
 
+        {/* ── 4b. BUYER QUESTIONS ──────────────────────────────────────────── */}
+        <QuestionAnswers
+          eyebrow={"WHAT LUCKNOW BUYERS ASK BEFORE HIRING"}
+          intro="Short answers to the questions buyers type into Google and ask AI assistants. Prices quoted here are Shopify's and Razorpay's published prices, not ours."
+          items={CITY_QUESTIONS}
+          bgClassName="bg-white"
+        />
+
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Lucknow Businesses Choose FactoryJet"
-          lead="Lucknow brands tell us the same story: a site that took months and still did not sell. We fix the price per phase in writing, put 7-day delivery for standard stores into the agreement, and build a draft on your own products before you sign anything."
+          lead="Lucknow brands tell us the same story: a site that took months and still did not sell. We fix the price per phase in writing, agree the launch date before work starts, and build a draft on your own products before you sign anything."
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing.',
-              body: 'Standard Shopify and WooCommerce stores for Lucknow brands go live in 7 days once products, photos and gateway approval reach us. The date is part of the agreement. We have delivered on time on 97% of builds.',
+              title: 'A draft store before you sign.',
+              body: 'We build a draft with some of your own pieces so you can check the close-ups and the checkout on your phone. The launch date is written into the agreement, and 97% of our projects have been delivered on time or early.',
             },
             {
               icon: '📱',
@@ -585,24 +685,34 @@ export default function LucknowEcommercePage() {
           ]}
           stats={[
             {
-              value: '24 Cr+',
-              label: "People in Uttar Pradesh: India's largest state and Lucknow's ecommerce hinterland",
-              sourceUrl: 'https://www.ibef.org/states/uttar-pradesh',
-              sourceLabel: 'IBEF Uttar Pradesh',
-            },
-            {
-              value: '23%',
-              label: "India's projected ecommerce market growth rate, year over year through 2030",
-              sourceUrl: 'https://www.ibef.org/industry/ecommerce',
+              value: 'US$ 345B',
+              label: "India's projected e-commerce market by 2030, up from US$ 125 billion in 2024 (18.4% a year)",
+              sourceUrl: CITY_SRC.ibef.url,
               sourceLabel: 'India Brand Equity Foundation',
             },
             {
-              value: '500M+',
-              label: 'UPI transactions per month in India: the payment rail your store must support',
-              sourceUrl: 'https://www.npci.org.in/what-we-do/upi/product-statistics',
-              sourceLabel: 'NPCI UPI Statistics',
+              value: '₹1,499',
+              label: 'a month for Shopify Basic in India on yearly billing, before apps and fees',
+              sourceUrl: CITY_SRC.shopifyPricing.url,
+              sourceLabel: 'Shopify India pricing',
+            },
+            {
+              value: '2%',
+              label: 'Razorpay platform fee per domestic transaction, plus GST on the fee',
+              sourceUrl: CITY_SRC.razorpay.url,
+              sourceLabel: 'Razorpay pricing',
             },
           ]}
+        />
+
+        {/* ── 7b. COMPARISON ───────────────────────────────────────────────── */}
+        <ComparisonTable
+          eyebrow="HOW TO CHOOSE"
+          headline={"Choosing an Ecommerce Developer in Lucknow"}
+          lead={"Four ways to get an online store in Lucknow, compared on what decides the result."}
+          columns={CITY_COMPARISON_COLUMNS}
+          rows={CITY_COMPARISON_ROWS}
+          footer="Agency and freelancer cells are general patterns, not claims about any one firm. Ask every firm you shortlist the same questions."
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
@@ -667,7 +777,7 @@ export default function LucknowEcommercePage() {
               description:
                 'Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.',
               imageSrc: '/images/portfolio/belle-maison.webp',
-              stat1: 'Live in 7 days',
+              stat1: 'Trade price tiers',
               stat2: 'Commerceflo · B2B',
             },
             {
@@ -676,7 +786,7 @@ export default function LucknowEcommercePage() {
               description:
                 'Impulse Branding is a Mumbai print branding and general contracting company. FactoryJet built impulsebranding.in and is now building their next-generation site.',
               imageSrc: '/images/work/impulse-branding-desktop.webp',
-              stat1: 'Launched in 6 days',
+              stat1: '75+ page site',
               stat2: 'Web · SEO',
             },
           ]}
@@ -684,7 +794,11 @@ export default function LucknowEcommercePage() {
           ctaLabel="View full portfolio"
         />
 
-        <GetFreeQuoteCTA />
+        <MidPageCTA
+          headline={"Try a draft of your Lucknow store first."}
+          sub={"Send a few product photos or your current site. We will build a draft with your real pieces and put the price for each phase in writing."}
+          label="See a draft of my store"
+        />
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
@@ -700,15 +814,25 @@ export default function LucknowEcommercePage() {
           items={LUCKNOW_ECOM_FAQ_ITEMS}
         />
 
+        {/* ── 12b. SOURCES ─────────────────────────────────────────────────── */}
+        <SourceList
+          checkedOn={CITY_CHECKED_ON}
+          sources={[
+            { ...CITY_SRC.shopifyPricing, note: 'Shopify plan prices in rupees and third-party transaction fees' },
+            { ...CITY_SRC.razorpay, note: '2% platform fee on domestic transactions, plus GST on the fee' },
+            { ...CITY_SRC.ibef, note: 'India e-commerce market size for 2024 and projection for 2030' },
+          ]}
+        />
+
         {/* ── 13. FINAL CTA (DARK) ─────────────────────────────────────────── */}
         <FinalCTA
-          variant="dark"
+          variant="light"
           eyebrow="READY TO LAUNCH"
-          headline="Your Lucknow Store, Live in 7 Days"
+          headline="Your Lucknow Store, Built to Show the Hand Work"
           sub="500+ businesses in India, the US, the UK and the UAE have built with FactoryJet. Tell us what you sell and who buys it. We will recommend a platform, put the price for each phase in writing and show you a draft of your store before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price per phase. 7-day delivery. UPI, COD and WhatsApp built in. The code and every account are yours."
+          objectionHandler="Fixed price per phase. Draft before contract. UPI, COD and WhatsApp built in. The code and every account are yours."
         />
 
       </main>

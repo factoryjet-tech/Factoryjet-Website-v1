@@ -7,48 +7,46 @@ import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
-import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
 import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/ServiceJourneyRow';
 import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
-import CityContextSection from '@/components/v2/CityContextSection';
-import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
+import MidPageCTA from '@/components/v2/MidPageCTA';
+import { AnswerFirst, QuestionAnswers, SourceList } from '@/components/india-pages/IndiaAnswerBlocks';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
+   Refreshed 24 Nov 2026 for India buyer searches (Google Ads, India, monthly):
+   whatsapp ai chatbot 1,600; whatsapp ai agent 720; whatsapp chatbot for
+   business 480. AI buyer prompt: "Which company builds WhatsApp AI agents for
+   businesses in India?"
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'WhatsApp Chatbot Development India | FactoryJet',
+  title: 'Best WhatsApp AI Chatbot Development in India | FactoryJet',
   description:
-    'WhatsApp chatbots for Indian businesses on the WhatsApp Business API: orders, support and lead capture. Fixed-price, scoped after a free call. 7-day delivery.',
+    'WhatsApp AI chatbot and AI agent development for businesses in India. Orders, support, lead capture and payments on the official WhatsApp Business Platform.',
   keywords: [
-    'WhatsApp chatbot development India',
-    'WhatsApp Business API India',
-    'WhatsApp chatbot India',
-    'WhatsApp automation India',
-    'WhatsApp chatbot banana',
-    'WhatsApp bot development India',
-    'WhatsApp chatbot for business India',
-    'WhatsApp chatbot service India',
-    'WhatsApp Business API integration',
-    'WhatsApp chatbot cost India',
-    'WhatsApp bot Hindi',
-    'WhatsApp chatbot Razorpay',
-    'n8n WhatsApp automation India',
-    'WhatsApp chatbot D2C India',
-    'WhatsApp chatbot restaurant India',
+    'whatsapp ai chatbot',
+    'whatsapp ai agent',
+    'whatsapp chatbot for business',
+    'whatsapp chatbot development india',
+    'best whatsapp chatbot company in india',
+    'whatsapp business api india',
+    'whatsapp chatbot cost india',
+    'whatsapp ai agent for business india',
+    'whatsapp chatbot shopify',
+    'whatsapp chatbot razorpay',
   ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'WhatsApp Chatbot Development India | FactoryJet',
+    title: 'Best WhatsApp AI Chatbot Development in India | FactoryJet',
     description:
-      'WhatsApp chatbots for Indian businesses: support, orders, lead capture and payments. Fixed price after a free call. 7-day delivery. Hindi, Tamil, Telugu, more.',
+      'WhatsApp AI chatbots and AI agents for Indian businesses: answers, orders, lead capture and payments, built on the official WhatsApp Business Platform.',
     url: 'https://factoryjet.com/whatsapp-chatbot',
     images: [
       {
@@ -62,9 +60,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'WhatsApp Chatbot Development India | FactoryJet',
+    title: 'Best WhatsApp AI Chatbot Development in India | FactoryJet',
     description:
-      'WhatsApp chatbots for Indian businesses. Automate orders, support & lead capture. Fixed-price, scoped after a free call. 7-day delivery.',
+      'WhatsApp AI chatbots and AI agents for Indian businesses, on the official WhatsApp Business Platform.',
     images: ['https://factoryjet.com/og-default.png'],
   },
   alternates: {
@@ -84,29 +82,46 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
+   Sources (each opened and checked on 24 Nov 2026)
+───────────────────────────────────────────────────────────────────────────── */
+
+const CHECKED_ON = '24 November 2026';
+
+const SRC = {
+  metaPricing: { label: 'Meta: Pricing on the WhatsApp Business Platform', url: 'https://developers.facebook.com/docs/whatsapp/pricing' },
+  waPlatform: { label: 'WhatsApp Business Platform', url: 'https://whatsappbusiness.com/products/business-platform/' },
+  n8nWhatsApp: { label: 'n8n: WhatsApp Business Cloud integration', url: 'https://n8n.io/integrations/whatsapp-business-cloud/' },
+} as const;
+
+/* ─────────────────────────────────────────────────────────────────────────────
    JSON-LD Schemas
 ───────────────────────────────────────────────────────────────────────────── */
 
-// Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
-// Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-10-11';
+// Freshness signal. Keep honest: bump only when the page's content actually changes.
+const PAGE_MODIFIED = '2026-11-24';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': 'https://factoryjet.com/whatsapp-chatbot#webpage',
   url: 'https://factoryjet.com/whatsapp-chatbot',
+  name: 'Best WhatsApp AI Chatbot Development in India',
   dateModified: PAGE_MODIFIED,
+  inLanguage: 'en-IN',
   isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
   publisher: { '@id': 'https://factoryjet.com/#organization' },
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', '#short-answer h2', '#short-answer p'],
+  },
 };
 
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'WhatsApp Chatbot Development India',
+  name: 'WhatsApp AI Chatbot and AI Agent Development India',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   description:
-    'WhatsApp chatbot development and WhatsApp Business API integration for Indian businesses. Automate orders, support, lead capture and payments. Fixed-price, scoped after a free call.',
+    'WhatsApp AI chatbots and AI agents for Indian businesses on the official WhatsApp Business Platform: answers, order tracking, lead capture, payment links and hand-off to staff, connected to Shopify, Razorpay, CRMs and n8n.',
   areaServed: { '@type': 'Country', name: 'India' },
   serviceType: 'WhatsApp Chatbot Development',
 };
@@ -115,36 +130,10 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'Home',
-      item: 'https://factoryjet.com',
-    },
-    {
-      '@type': 'ListItem',
-      position: 2,
-      name: 'Services',
-      item: 'https://factoryjet.com/services',
-    },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: 'WhatsApp Chatbot India',
-      item: 'https://factoryjet.com/whatsapp-chatbot',
-    },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://factoryjet.com' },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://factoryjet.com/services' },
+    { '@type': 'ListItem', position: 3, name: 'WhatsApp Chatbot India', item: 'https://factoryjet.com/whatsapp-chatbot' },
   ],
-};
-
-const speakableSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  '@id': 'https://factoryjet.com/whatsapp-chatbot#webpage',
-  speakable: {
-    '@type': 'SpeakableSpecification',
-    cssSelector: ['h1', 'h2:first-of-type'],
-  },
-  url: 'https://factoryjet.com/whatsapp-chatbot',
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -154,256 +143,355 @@ const speakableSchema = {
 const WHATSAPP_JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discovery Call',
+    title: 'Scope',
     description:
-      'Day 1. A 45-minute call where we map your business flow, top WhatsApp queries, conversion steps, existing tools (Shopify, Razorpay, CRM). We identify the highest-ROI chatbot flows and fix the scope before a single line of code is written.',
+      'A call to list your most common WhatsApp questions, the actions the bot should take, and the systems it must reach: Shopify, Razorpay, your CRM, a spreadsheet. We price each phase in writing.',
   },
   {
     number: '02',
-    title: 'API Setup & Architecture',
+    title: 'Number and provider',
     description:
-      'Days 2–3. We select your BSP (Interakt, Wati, or AiSensy based on your volume and budget), complete Meta Business API verification, and design your conversation flows and n8n automation architecture: all approved by you before build.',
+      'We help you choose a WhatsApp Business Platform provider, verify your business with Meta, register your number and get message templates approved.',
   },
   {
     number: '03',
-    title: 'Build, Integrate & Train',
+    title: 'Build and connect',
     description:
-      'Days 4–6. We build your chatbot flows, connect Razorpay, Shiprocket, Shopify, Google Sheets, or your CRM, and train the bot on your FAQs, products, and pricing. Every integration tested end-to-end with real data before handover.',
+      'Conversation flows, the AI layer trained on your own answers and documents, and links to your store, payments and CRM, usually through n8n so you can see and change each step.',
   },
   {
     number: '04',
-    title: 'Go Live + 30-Day Support',
+    title: 'Test on real questions',
     description:
-      'Day 7. Your chatbot goes live on your WhatsApp Business number. We monitor conversation logs for the first 30 days, tune underperforming responses, and run a training session so your team can manage the bot confidently.',
+      'We replay real customer questions, check every answer and action, and set the rules for when the bot hands a chat to a person.',
+  },
+  {
+    number: '05',
+    title: 'Launch and tune',
+    description:
+      'Go live on your number, read the first weeks of chats with you and fix weak answers. Defects in our build are fixed inside the build price for a cover period agreed upfront.',
   },
 ];
 
-const WHATSAPP_STATS = [
+const WHATSAPP_USE_CASES = [
   {
-    value: '535M+',
-    label: 'WhatsApp users in India: the world\'s largest market',
-    microcopy: 'Meta India, 2026',
-    categoryLabel: 'INDIA USERS',
-  },
-  {
-    value: '98%',
-    label: 'Open rate for WhatsApp messages vs. 22% for email',
-    microcopy: 'AiSensy marketing statistics 2026',
-    categoryLabel: 'OPEN RATE',
-  },
-  {
-    value: '78%',
-    label: 'of Indian SMBs already use WhatsApp for business communication',
-    microcopy: 'Hyperleap AI India stats 2026',
-    categoryLabel: 'SMB ADOPTION',
-  },
-];
-
-const WHATSAPP_MARKET_STATS = [
-  {
-    value: '7 days',
-    label: 'Standard delivery for a FactoryJet WhatsApp chatbot: fixed-price, scoped up front',
-    sourceUrl: 'https://factoryjet.com/pricing',
-    sourceLabel: 'FactoryJet Pricing',
-  },
-  {
-    value: '7 Days',
-    label: 'Average build-to-live time for a FactoryJet WhatsApp chatbot, fastest globally',
-    sourceUrl: 'https://factoryjet.com/case-studies',
-    sourceLabel: 'FactoryJet Track Record',
-  },
-  {
-    value: '60–80%',
-    label: 'of incoming WhatsApp queries handled automatically by well-designed chatbots, no human required',
-    sourceUrl: 'https://robylon.ai/blog/whatsapp-automation-stats',
-    sourceLabel: 'Robylon AI Report 2026',
-  },
-] as const;
-
-const WHATSAPP_INDUSTRIES = [
-  {
-    name: 'Restaurants & Food',
+    name: 'D2C and Ecommerce',
     description:
-      'Show your digital menu on WhatsApp, take orders, confirm reservations, handle table bookings, and collect customer reviews: all automatically, even during peak hours. No app download needed for your customers.',
-    example: 'Restaurants report 25% more completed orders during peak times with chatbot ordering.',
-    linkLabel: 'Learn more',
-    linkHref: '/whatsapp-chatbot',
+      'Order status from your courier, COD confirmation before dispatch, return and exchange requests, product questions and Razorpay payment links, linked to Shopify or WooCommerce.',
+    example: 'Useful when the same "where is my order" message arrives all day.',
+    linkLabel: 'Shopify development',
+    linkHref: '/shopify-development',
   },
   {
-    name: 'D2C & Ecommerce',
+    name: 'B2B and Distribution',
     description:
-      'Automate order tracking via Shiprocket, process return requests, browse product catalogs, send Razorpay payment links, confirm COD orders, and recover abandoned carts, integrated directly with Shopify or WooCommerce.',
-    example: 'D2C brands report 70%+ WhatsApp support ticket deflection within 30 days.',
+      'Dealers check stock, price lists and order status, place repeat orders and download invoices on WhatsApp instead of calling your sales desk.',
+    example: 'Useful when dealer calls pile up in the morning and after month-end.',
   },
   {
     name: 'Real Estate',
     description:
-      'Qualify leads from 99acres, MagicBricks, and Google Ads by asking budget, location, and timeline questions. Route hot leads to your sales team with full context logged to Zoho CRM or LeadSquared automatically.',
-    example: 'Builders see 35–50% more site visit bookings without adding telecallers.',
+      'Leads from portals and ads get asked budget, location and timeline, then routed to the right salesperson with the answers logged in your CRM.',
+    example: 'Useful when leads arrive at night and go cold by morning.',
   },
   {
-    name: 'Coaching & EdTech',
+    name: 'Clinics and Services',
     description:
-      'Answer course queries, collect student details, process Razorpay enrollment fees, send onboarding material, and manage batch registration, reducing counsellor workload by 60%+ without growing your team.',
-    example: 'EdTech platforms report 3× faster lead-to-enrollment conversion with WhatsApp bots.',
+      'Appointment booking, reminders, rescheduling and intake questions, with a clean hand-off to the front desk for anything medical or sensitive.',
+    example: 'Useful when the front desk spends hours on booking chats.',
   },
   {
-    name: 'Healthcare & Clinics',
+    name: 'Education and Coaching',
     description:
-      'Book doctor appointments, check availability, send 24-hour reminders, handle rescheduling, and collect patient intake forms: all on WhatsApp, DPDP-compliant, with full audit trails for every interaction.',
-    example: 'Clinics recover 3–4 hours of front-desk staff time every single day.',
+      'Course questions, batch timings, fee payment links and onboarding material, with counsellors taking over once a student is ready to enrol.',
+    example: 'Useful when the same course questions repeat every admission season.',
   },
   {
-    name: 'Travel Agencies',
+    name: 'Restaurants and Food',
     description:
-      'Share itineraries and quotes, answer destination FAQs, collect booking details, process payments, and send pre-departure reminders: all automated on WhatsApp, reducing manual back-and-forth by 70%.',
-    example: 'Travel agents handle 3× more inquiries without adding staff.',
-  },
-  {
-    name: 'Manufacturing & B2B',
-    description:
-      'Let your dealers place orders, check stock levels, track delivery status, download GST invoices, and get price lists on WhatsApp, without calling your sales team or waiting for business hours.',
-    example: 'B2B distributors report 40% fewer inbound sales calls after WhatsApp bot launch.',
-  },
-  {
-    name: 'Retail',
-    description:
-      'Run WhatsApp sale campaigns, send product launch alerts, handle loyalty program queries, collect review requests, and manage customer service, replacing expensive SMS campaigns with 98% open-rate WhatsApp messages.',
-    example: 'Retail brands see 5–10× higher response rates on WhatsApp vs. email campaigns.',
+      'Menus, orders, table bookings and review requests on WhatsApp, with the kitchen or manager alerted for anything the bot cannot settle.',
+    example: 'Useful at peak hours when nobody can watch the phone.',
   },
 ];
 
+const WHATSAPP_COMPARISON_COLUMNS = [
+  { label: 'FactoryJet custom build', isFactoryJet: true },
+  { label: 'Provider flow builder (DIY)' },
+  { label: 'Off-the-shelf chatbot app' },
+  { label: 'Freelancer' },
+] as const;
+
+const WHATSAPP_COMPARISON_ROWS = [
+  {
+    feature: 'AI answers from your own documents and policies',
+    values: [
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="diy" kind="partial" label="Basic" />,
+      <CompareIcon key="app" kind="partial" label="Depends on plan" />,
+      <CompareIcon key="fr" kind="partial" label="Varies" />,
+    ],
+  },
+  {
+    feature: 'Takes real actions: order status, payment links, CRM updates',
+    values: [
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="diy" kind="partial" label="Common apps only" />,
+      <CompareIcon key="app" kind="partial" label="Built-in apps only" />,
+      <CompareIcon key="fr" kind="partial" label="Varies" />,
+    ],
+  },
+  {
+    feature: 'Works with your own systems (ERP, Tally, Zoho, custom)',
+    values: [
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="diy" kind="no" />,
+      <CompareIcon key="app" kind="no" />,
+      <CompareIcon key="fr" kind="partial" label="Sometimes" />,
+    ],
+  },
+  {
+    feature: 'Clear hand-off rules to a person',
+    values: [
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="diy" kind="yes" />,
+      <CompareIcon key="app" kind="yes" />,
+      <CompareIcon key="fr" kind="partial" label="Varies" />,
+    ],
+  },
+  {
+    feature: 'Tested on your real customer questions before launch',
+    values: [
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="diy" kind="no" label="You test" />,
+      <CompareIcon key="app" kind="no" label="You test" />,
+      <CompareIcon key="fr" kind="partial" label="Sometimes" />,
+    ],
+  },
+  {
+    feature: 'Who you call when it breaks',
+    values: ['Us, with each change quoted first', 'Your own team', 'App support desk', 'The freelancer, if free'],
+  },
+  {
+    feature: 'Price shape',
+    values: ['Fixed price per phase for the build', 'Monthly provider plan', 'Monthly subscription', 'Hourly or per task'],
+  },
+];
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Question sections (question H2s, each answered in 40 to 100 words)
+───────────────────────────────────────────────────────────────────────────── */
+
+const WHATSAPP_QUESTIONS = [
+  {
+    q: 'What is a WhatsApp AI chatbot?',
+    a: [
+      'A WhatsApp AI chatbot is software connected to your business WhatsApp number that reads customer messages and replies on its own. A simple bot follows fixed menus. An AI chatbot understands questions written in normal words, answers from your own policies and product data, and hands the chat to a person when it should. It runs on the WhatsApp Business Platform, Meta\'s official API for businesses, not on the free WhatsApp Business app.',
+    ],
+    sources: [SRC.waPlatform],
+  },
+  {
+    q: 'What is the difference between a WhatsApp chatbot and a WhatsApp AI agent?',
+    a: [
+      'A chatbot mostly answers. An AI agent also does things: it checks an order in Shopify, creates a payment link in Razorpay, books a slot, updates a lead in your CRM or raises a ticket, then tells the customer what it did. Agents need tighter rules, because they act on real systems. We set what the agent may do alone, what needs a person\'s approval, and what it must never touch.',
+    ],
+  },
+  {
+    q: 'How much does a WhatsApp chatbot cost per message in India?',
+    a: [
+      'Meta charges per message, by message type and country, and only for messages a business sends. Messages customers send you are free. Marketing, utility and authentication templates are charged per message. From 1 October 2026, each business phone number gets 1,000 free service messages a month, and service messages beyond that are charged. Your WhatsApp provider adds its own plan fee. The build itself is a separate one-time cost that we quote as a fixed price.',
+    ],
+    sources: [SRC.metaPricing],
+  },
+  {
+    q: 'What is the 24-hour customer service window on WhatsApp?',
+    a: [
+      'When a customer messages or calls your business number, a 24-hour timer called the customer service window starts, and it resets each time they write again. Inside that window your bot can reply with normal messages. Outside it, you can only start a chat with an approved template, such as an order update or a reminder. Good bot design keeps answers inside the window and uses templates only where they are needed.',
+    ],
+    sources: [SRC.metaPricing],
+  },
+  {
+    q: 'Which company builds WhatsApp AI agents for businesses in India?',
+    a: [
+      'Two kinds of firms do. WhatsApp providers such as Interakt, Wati, AiSensy and Gallabox sell platforms with flow builders you set up yourself. Development firms such as FactoryJet build a custom AI agent on top of a provider, connected to your store, payments, CRM and internal systems. Choose a provider alone for simple menus. Choose a development firm when the bot must answer from your own data and take actions in your systems.',
+    ],
+  },
+  {
+    q: 'Can a WhatsApp chatbot connect to Shopify, Razorpay and my CRM?',
+    a: [
+      'Yes. Through the provider\'s API and an automation tool such as n8n, the bot can read order status from Shopify or WooCommerce, create Razorpay payment links, push leads to Zoho CRM, HubSpot or LeadSquared, and write to Google Sheets. n8n has a WhatsApp Business Cloud integration, so each step of the flow is visible and can be changed without rebuilding the bot.',
+    ],
+    sources: [SRC.n8nWhatsApp],
+  },
+];
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   FAQ (single source: the visible FAQ and the FAQPage schema both read this array)
+───────────────────────────────────────────────────────────────────────────── */
+
 const WHATSAPP_FAQ_CATEGORIES = [
-  { key: 'basics',     label: 'Chatbot Basics' },
-  { key: 'api',        label: 'WhatsApp API' },
-  { key: 'india',      label: 'India-Specific' },
-  { key: 'process',    label: 'Build Process' },
-  { key: 'pricing',    label: 'Pricing & Costs' },
+  { key: 'choose',  label: 'Choosing a Builder' },
+  { key: 'basics',  label: 'Chatbot Basics' },
+  { key: 'api',     label: 'WhatsApp API' },
+  { key: 'india',   label: 'India-Specific' },
+  { key: 'pricing', label: 'Pricing & Costs' },
+  { key: 'process', label: 'Build Process' },
 ];
 
 const WHATSAPP_FAQ_ITEMS = [
-  /* ── Chatbot Basics ── */
+  /* ── Choosing ── */
   {
-    category: 'basics',
-    question: 'What exactly is a WhatsApp chatbot?',
+    category: 'choose',
+    question: 'Which is the best WhatsApp chatbot company in India?',
     answer:
-      'A WhatsApp chatbot is an automated messaging system built on the WhatsApp Business API that responds to customer messages instantly, without a human typing. It can answer FAQs, capture leads, track orders, process payments, book appointments, and escalate to a real person when needed. Unlike the WhatsApp Business app where your team replies manually, a chatbot works 24/7 with zero delay.',
+      'For a bot that only shows menus, a WhatsApp provider\'s own flow builder may be enough. For an AI chatbot or AI agent that answers from your data and works inside your systems, pick a firm that writes the integration code, tests on your real questions and fixes the price in writing. FactoryJet does all three, and we show you a working demo on your own questions before you sign.',
   },
   {
-    category: 'basics',
-    question: 'How is a WhatsApp chatbot different from just using the WhatsApp Business app?',
+    category: 'choose',
+    question: 'What is the best WhatsApp AI chatbot for business?',
     answer:
-      'The WhatsApp Business app requires someone to manually type and send every reply. A chatbot built on the WhatsApp Business API responds instantly and automatically to any message, even at 2 AM on a Sunday. It also integrates with your Shopify store, Razorpay, and CRM to take real actions, not just send text. The difference is 4-hour human response times vs. 3-second automated replies.',
+      'The best one answers your customers\' real questions correctly and does the job they came for: track an order, pay, book, or reach a person. That depends far more on how it is trained and connected than on the brand of the platform. Ask any builder to run your ten most common questions through a demo before you decide.',
   },
   {
-    category: 'basics',
-    question: 'What can a WhatsApp chatbot actually do for my business?',
+    category: 'choose',
+    question: 'Can we see a demo before we sign?',
     answer:
-      'The most common tasks: answering repeated WhatsApp queries (pricing, availability, order status), qualifying inbound leads from ads and capturing them to your CRM, sending Razorpay payment links and confirming receipt, processing returns by checking Shopify orders, booking appointments without a human, and sending proactive notifications like shipment updates and payment reminders. If your team does it more than a few times a day, a chatbot can handle it.',
+      'Yes. We build a short demo on your own questions and documents so your team can try it before any contract. If it does not fit, there is nothing to cancel.',
   },
   {
-    category: 'basics',
-    question: 'What happens when the chatbot cannot answer a question?',
+    category: 'choose',
+    question: 'Do you also build AI chatbots for websites and other channels?',
     answer:
-      'Every FactoryJet chatbot includes a human escalation path. When the bot is not confident, it hands off to a human agent, passing the full conversation history so the customer does not have to repeat themselves. You control where escalations go: a specific WhatsApp number, a Freshdesk ticket, a Zoho CRM task, or a Slack notification to your team.',
-  },
-
-  /* ── WhatsApp API ── */
-  {
-    category: 'api',
-    question: 'What is the difference between WhatsApp Business app and WhatsApp Business API?',
-    answer:
-      'The WhatsApp Business app is free and designed for very small businesses: one device, manual replies, quick replies and away messages only. The WhatsApp Business API is for businesses that need automation at scale: chatbots, bulk template messaging, multi-agent team inboxes, and integrations with CRM and ecommerce tools. The API requires a Meta-approved BSP and has per-conversation charges from Meta.',
-  },
-  {
-    category: 'api',
-    question: 'Does my business need Meta approval to use WhatsApp Business API?',
-    answer:
-      'Yes, WhatsApp Business API requires Meta Business verification. FactoryJet handles the entire process: BSP selection, Meta Business Manager setup, document submission, and approval tracking. Most Indian businesses are verified and live within 5–7 business days of submitting their GST certificate, business registration, and phone number documents.',
-  },
-  {
-    category: 'api',
-    question: 'WhatsApp Business API approval mein kitna time lagta hai?',
-    answer:
-      'Meta Business verification aur WhatsApp API approval mein generally 3–7 business days lagte hain, agar documents sahi ho. FactoryJet poora process handle karta hai, BSP selection se le kar Meta approval tak. Aapko separately kuch apply nahi karna, hum sab sambhal lete hain aur aapko live hone ki date confirm karte hain.',
-  },
-  {
-    category: 'api',
-    question: 'Which WhatsApp BSP is best for Indian businesses: Interakt, Wati, or AiSensy?',
-    answer:
-      'For most Indian SMBs, Interakt and AiSensy offer the best value: INR pricing, strong Razorpay and Shopify integration, and India-focused support teams. Wati is better for larger teams needing advanced CRM-style team inbox features. For enterprise workflows with complex automation, we pair any of these BSPs with n8n as the automation backbone. FactoryJet recommends the right BSP after your discovery call.',
+      'Yes. The same AI layer can answer on your website, in email or inside internal tools. See our AI chatbot development page for chatbots beyond WhatsApp, and AI automation for back-office workflows.',
   },
 
-  /* ── India-Specific ── */
+  /* ── Basics ── */
   {
-    category: 'india',
-    question: 'Kya mera chatbot Hindi mein baat kar sakta hai?',
+    category: 'basics',
+    question: 'How is a WhatsApp chatbot different from the WhatsApp Business app?',
     answer:
-      'Haan, bilkul. FactoryJet ke WhatsApp chatbots Hindi, Hinglish, Tamil, Telugu, Marathi, Gujarati, aur doosri Indian languages support karte hain. Language automatic detect hoti hai, customer jis bhi language mein type kare, chatbot usi mein jawab deta hai. Ek hi bot sab languages handle karta hai, alag-alag bots nahi chahiye.',
+      'The free WhatsApp Business app is for a person replying by hand from a phone, with simple quick replies and away messages. A chatbot runs on the WhatsApp Business Platform (the API), replies on its own at any hour, and can connect to your store, payments and CRM.',
   },
   {
-    category: 'india',
-    question: 'Can the chatbot integrate with Razorpay for payments?',
+    category: 'basics',
+    question: 'What happens when the chatbot cannot answer?',
     answer:
-      'Yes. FactoryJet integrates Razorpay webhooks so your chatbot can generate and send payment links on WhatsApp when a customer confirms an order, receive payment success notifications, confirm the transaction to the customer, and log the payment to your CRM or accounting system automatically. UPI payment links and COD confirmation workflows are also fully supported.',
+      'It hands the chat to a person, with the conversation so far, through your provider\'s team inbox. We set clear rules for this: angry customers, refunds over a limit, medical or legal questions, and anything the bot is unsure about go to staff.',
   },
   {
-    category: 'india',
-    question: 'Can the chatbot handle order tracking with Shiprocket or Delhivery?',
+    category: 'basics',
+    question: 'Will the AI make up answers?',
     answer:
-      'Yes. FactoryJet connects your WhatsApp chatbot to Shiprocket, Delhivery, or any logistics platform with an API. When a customer asks "where is my order" or types anything similar, the chatbot queries the logistics API and replies with the live tracking link and status in under 3 seconds, 24/7, without any human intervention.',
+      'We reduce that risk by making the bot answer only from your approved content, telling it to say it does not know when the answer is missing, and testing it on real questions before launch. Anything about money, refunds or policy exceptions goes to a person.',
   },
   {
-    category: 'india',
-    question: 'What is n8n and why do you use it instead of Zapier for Indian businesses?',
+    category: 'basics',
+    question: 'Can the chatbot send broadcasts and offers?',
     answer:
-      'n8n is an open-source workflow automation tool, similar in concept to Zapier but self-hosted, dramatically cheaper at scale, and far more flexible for complex Indian business logic. For workflows involving Razorpay + Zoho CRM + Shiprocket triggers, n8n can handle conditions that SaaS tools cannot. You own the workflows, there are no per-operation fees, and the automation keeps running without third-party subscriptions.',
-  },
-
-  /* ── Build Process ── */
-  {
-    category: 'process',
-    question: 'How long does it take to build and launch a WhatsApp chatbot?',
-    answer:
-      'FactoryJet delivers WhatsApp chatbots in 7 days. Day 1 is the discovery call. Days 2–3 cover API setup and architecture approval. Days 4–6 are build, integration, and testing. Day 7 is go-live. 30-day post-launch support is included in every project.',
-  },
-  {
-    category: 'process',
-    question: 'What information do you need from me before you start building?',
-    answer:
-      'We need: access to your WhatsApp Business number (or we set up a new one), API keys for tools we integrate (Shopify, Razorpay, Zoho, etc.), your FAQ content and pricing information (even a Google Doc works), and your brand guidelines for tone and language. We send a structured onboarding form after the discovery call: most clients complete it in 20 minutes.',
-  },
-  {
-    category: 'process',
-    question: 'Do you provide support and maintenance after the chatbot goes live?',
-    answer:
-      'Every FactoryJet WhatsApp chatbot project includes 30 days of post-launch support: conversation log review, response tuning, integration fixes, and a team training session. After 30 days, you manage the bot through your BSP dashboard. Optional monthly retainers are available for ongoing optimisation, new conversation flows, and seasonal campaign setup.',
+      'Yes, using approved marketing templates sent to customers who opted in. Meta charges marketing templates per message, and sending too many can hurt your number\'s quality rating, so we keep broadcasts targeted.',
   },
 
-  /* ── Pricing & Costs ── */
+  /* ── API ── */
+  {
+    category: 'api',
+    question: 'What is the WhatsApp Business API?',
+    answer:
+      'It is Meta\'s official way for businesses to connect software to WhatsApp, now called the WhatsApp Business Platform. Most businesses reach it through a provider such as Interakt, Wati, AiSensy or Gallabox, which supplies the inbox, templates and billing.',
+  },
+  {
+    category: 'api',
+    question: 'Does my business need Meta approval?',
+    answer:
+      'Yes. Your business is verified in Meta Business Manager, your phone number is registered on the platform, and each message template is approved before use. We guide you through each step. How long Meta takes is outside our control.',
+  },
+  {
+    category: 'api',
+    question: 'Which WhatsApp provider is best for Indian businesses: Interakt, Wati or AiSensy?',
+    answer:
+      'Each bills in rupees and connects to common Indian tools. The right one depends on your message volume, how many agents use the inbox, and the integrations you need. We compare them for your case during scoping.',
+  },
+  {
+    category: 'api',
+    question: 'Can I keep my existing business number?',
+    answer:
+      'Usually yes. A number used on the WhatsApp Business app can be moved to the platform, but chat history on the phone does not move with it, and the number then works only through the platform.',
+  },
+  {
+    category: 'api',
+    question: 'Will my number get banned?',
+    answer:
+      'Numbers get restricted when people block or report them, usually after unwanted broadcasts. We build on the official platform only, send templates only to opted-in customers and keep marketing light to protect your quality rating.',
+  },
+
+  /* ── India ── */
+  {
+    category: 'india',
+    question: 'Can the chatbot reply in Hindi or Hinglish?',
+    answer:
+      'Yes. Current AI models handle Hindi and Hinglish well, and we test answers in the languages your customers use before launch. For other Indian languages we test first and tell you honestly how well it works for your content.',
+  },
+  {
+    category: 'india',
+    question: 'Can the chatbot take payments through Razorpay?',
+    answer:
+      'Yes. The bot creates a Razorpay payment link for an order, invoice or booking, sends it in the chat and confirms once the payment succeeds. UPI, cards and net banking all work through the link.',
+  },
+  {
+    category: 'india',
+    question: 'Can it confirm COD orders before dispatch?',
+    answer:
+      'Yes. After a COD order is placed, the bot asks the customer to confirm or cancel. Unconfirmed orders can be held, and confirmed ones flow to your courier as usual. This cuts parcels sent to buyers who never meant to pay.',
+  },
+  {
+    category: 'india',
+    question: 'Can it track orders with Shiprocket or Delhivery?',
+    answer:
+      'Yes. The bot reads the tracking status from your courier panel or store and replies with the latest update, so customers do not need to call you for a delivery date.',
+  },
+  {
+    category: 'india',
+    question: 'Can it work with Tally or Zoho?',
+    answer:
+      'Yes, where those systems expose the data. Zoho has APIs. Tally needs a connector on the machine or server running it. We check what your setup allows before we promise a flow.',
+  },
+
+  /* ── Pricing ── */
   {
     category: 'pricing',
     question: 'How much does WhatsApp chatbot development cost in India?',
     answer:
-      'FactoryJet WhatsApp chatbot pricing is fixed-price and scoped to your build. The main drivers are flow complexity and integrations: the Starter tier is a FAQ and lead-capture bot; the Business tier adds multi-flow logic, order tracking, Razorpay, and CRM sync; and the Enterprise tier adds AI NLP, multi-language support, n8n automation, and custom integrations. Every project is quoted up front after a free discovery call, no hourly billing, no scope creep surprises.',
+      'The build is a one-time price that depends on the number of flows, the AI layer, and the systems it connects to. We quote it as a fixed price per phase after a scoping call. Running costs are separate: Meta\'s per-message charges and your provider\'s plan.',
   },
   {
     category: 'pricing',
-    question: 'What are the ongoing costs after a WhatsApp chatbot is built?',
+    question: 'What are the ongoing costs after launch?',
     answer:
-      'Two recurring costs go to third parties, not to us: your BSP subscription (Interakt, Wati, or AiSensy charge a monthly fee depending on plan and message volume) and Meta\'s per-conversation charges (marketing and utility messages carry a per-conversation fee, while customer-initiated service conversations are free). FactoryJet charges nothing ongoing unless you choose an optional retainer.',
+      'Meta\'s message charges, your WhatsApp provider\'s plan, AI model usage and hosting for any automation. These bills can sit in your own accounts at cost. Support from us is optional, with each change quoted first and no monthly minimum.',
   },
   {
     category: 'pricing',
-    question: 'What is the ROI of a WhatsApp chatbot for an Indian business?',
+    question: 'Are customer messages free on WhatsApp?',
     answer:
-      'The clearest ROI: a chatbot handling 60–70% of WhatsApp queries reaches payback in 3–6 months for most businesses. Secondary ROI: leads getting an instant reply instead of waiting 6 hours convert at significantly higher rates. Indian D2C brands report 200–300% ROI on WhatsApp marketing vs. traditional channels, with chatbots amplifying that further.',
+      'Meta does not charge for messages customers send to you. It charges for messages a business sends, by category. From 1 October 2026, each business number gets 1,000 free service messages a month, and service messages beyond that are charged.',
+  },
+
+  /* ── Process ── */
+  {
+    category: 'process',
+    question: 'How long does it take to launch a WhatsApp chatbot?',
+    answer:
+      'It depends on Meta verification, template approval and how many systems the bot connects to. We agree the timeline in writing at scoping. 97% of our projects have been delivered on time or early.',
   },
   {
-    category: 'pricing',
-    question: 'Is my customer data safe with a WhatsApp chatbot?',
+    category: 'process',
+    question: 'What do you need from us to start?',
     answer:
-      'Yes. FactoryJet builds on Meta-approved BSPs that comply with GDPR and India\'s DPDP Act. All data integrations use API-level connections (no screen scraping), least-privilege access controls, and full audit trails on every action. For healthcare and financial services, stricter data residency controls are available on request.',
+      'Your most common customer questions, your policies and product data, access to the systems the bot should use, and someone who can approve answers. A Meta Business Manager account helps, and we can set one up with you.',
+  },
+  {
+    category: 'process',
+    question: 'Who owns the chatbot and the data?',
+    answer:
+      'You do. The WhatsApp number, provider account, automation workflows and code are in your company name, and chat data stays in your provider and systems. You can change builders at any time.',
   },
 ];
 
@@ -418,10 +506,10 @@ const faqSchema = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   Page
+   Page Component
 ───────────────────────────────────────────────────────────────────────────── */
 
-export default function WhatsAppChatbotINPage() {
+export default function WhatsAppChatbotPage() {
   return (
     <>
       <script
@@ -429,23 +517,19 @@ export default function WhatsAppChatbotINPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
       <script
-        id="wa-chatbot-in-service-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
         id="wa-chatbot-in-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <script
+        id="wa-chatbot-in-service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
         id="wa-chatbot-in-breadcrumb-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
 
       <SiteHeader
@@ -453,9 +537,10 @@ export default function WhatsAppChatbotINPage() {
         navLinks={[
           { label: 'Services', href: '/services' },
           { label: 'WhatsApp Bot', href: '/whatsapp-chatbot' },
-          { label: 'Portfolio', href: '/portfolio' },          { label: 'Contact', modal: true, region: 'in' },
+          { label: 'Portfolio', href: '/portfolio' },
+          { label: 'Contact', modal: true, region: 'in' },
         ]}
-        cta={{ label: 'Get a Free Demo', modal: true, region: 'in' }}
+        cta={{ label: 'See a demo on my data', modal: true, region: 'in' }}
       />
 
       <BreadcrumbSchema
@@ -467,7 +552,7 @@ export default function WhatsAppChatbotINPage() {
       />
 
       <main className="bg-fj-cream">
-      <Breadcrumbs items={[
+        <Breadcrumbs items={[
           { name: 'Home', url: 'https://factoryjet.com' },
           { name: 'Services', url: 'https://factoryjet.com/services' },
           { name: 'WhatsApp Chatbot India', url: 'https://factoryjet.com/whatsapp-chatbot' },
@@ -475,140 +560,86 @@ export default function WhatsAppChatbotINPage() {
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
-        formSlot={<HeroInlineForm region="in" source="whatsapp_chatbot_hero" />}
-          eyebrow="WHATSAPP CHATBOT DEVELOPMENT · INDIA"
-          headline="WhatsApp Chatbot Development India"
-          lead="India has 535 million WhatsApp users. 98% of your WhatsApp messages get opened. And 78% of Indian SMBs already use WhatsApp for business, yet most are still typing every reply by hand. Automate your orders, support, lead capture, and payments with a WhatsApp Business API chatbot. Fixed-price, scoped to your build. Live in 7 days."
-          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
+          formSlot={<HeroInlineForm region="in" source="whatsapp_chatbot_hero" />}
+          eyebrow="WHATSAPP AI CHATBOT AND AI AGENT DEVELOPMENT · INDIA"
+          headline="WhatsApp AI Chatbot and AI Agent Development for Businesses in India"
+          lead="FactoryJet builds WhatsApp AI chatbots that answer your customers from your own policies and product data, and AI agents that act on it: order status, COD confirmation, Razorpay payment links, bookings and CRM updates. Built on the official WhatsApp Business Platform, with clear rules for when a person takes over."
+          secondaryCta={{ label: 'See a demo on my data', modal: true as const, region: 'in' as const }}
           trustItems={[
-            '7-Day Delivery',
-            '500+ Businesses Served',
-            'Fixed-Price Quotes',
+            'Official WhatsApp Business Platform',
+            'Demo on your questions before you sign',
           ]}
           rightSlot={
-            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
-              <p
-                className="font-fj-mono font-medium uppercase text-[#B23E13]"
-                style={{ fontSize: '11px', letterSpacing: '0.14em' }}
-              >
-                WHATSAPP CHATBOT IN ACTION
+            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-7 shadow-sm">
+              <p className="font-fj-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">
+                A WHATSAPP AI AGENT AT WORK
               </p>
-              <p className="mt-4 font-fj-display text-[1.875rem] font-medium leading-[1.1] tracking-[-0.025em] text-fj-ink">
-                Automated on WhatsApp, while you sleep.
-              </p>
-              <div className="mt-6 space-y-3">
-                {[
-                  'Customer: "Order kahan hai?" → Bot checks Shiprocket → tracking link in 3 seconds',
-                  'Lead from Instagram ad asks price → Bot qualifies → books demo to Zoho CRM automatically',
-                  'Restaurant customer → Bot shows menu → confirms order → Razorpay link sent instantly',
-                ].map((step, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#F05A28]/10 font-fj-mono text-[10px] font-bold text-[#B23E13]">
-                      {i + 1}
-                    </span>
-                    <p className="font-fj-body text-[0.875rem] leading-[1.5] text-fj-neutral-600">
-                      {step}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6 border-t border-fj-neutral-100 pt-6">
-                <p className="font-fj-body text-[0.8125rem] text-fj-neutral-400">
-                  Runs 24/7 in Hindi, English, Tamil, Telugu and more, no salary, no sick leave.
+              <div className="mt-5 space-y-3 font-fj-body text-[0.9rem] leading-snug">
+                <p className="ml-auto max-w-[85%] rounded-2xl rounded-br-sm bg-[#E7F7EE] px-4 py-2.5 text-fj-ink">
+                  Hi, where is my order? I ordered on Monday.
+                </p>
+                <p className="max-w-[85%] rounded-2xl rounded-bl-sm bg-fj-neutral-100 px-4 py-2.5 text-fj-ink">
+                  Found it. Your order left the warehouse yesterday and the courier shows delivery by Thursday. Want the tracking link?
+                </p>
+                <p className="ml-auto max-w-[85%] rounded-2xl rounded-br-sm bg-[#E7F7EE] px-4 py-2.5 text-fj-ink">
+                  Yes. Also can I change size to M?
+                </p>
+                <p className="max-w-[85%] rounded-2xl rounded-bl-sm bg-fj-neutral-100 px-4 py-2.5 text-fj-ink">
+                  Here is the link. A size change needs our team, so I have passed your chat to them with your order details.
                 </p>
               </div>
+              <p className="mt-5 font-fj-body text-[0.8125rem] text-fj-neutral-600">
+                Illustration of a typical flow: it reads the order, answers, and hands over what it should not decide.
+              </p>
             </div>
           }
         />
 
-        {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
-        <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
-
-        {/* ── 3. TRUST STATS ───────────────────────────────────────────────── */}
-        <BigThreeTrustBlock
-          eyebrow="BY THE NUMBERS"
-          headline="500+ businesses. 12 years of building. One goal: your results."
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+        {/* ── 2. ANSWER FIRST ──────────────────────────────────────────────── */}
+        <AnswerFirst
+          eyebrow="THE SHORT ANSWER"
+          question="Which company builds the best WhatsApp AI chatbots for businesses in India?"
+          answer={[
+            'The best WhatsApp AI chatbot for an Indian business is one that answers from your own data, takes the actions customers ask for, and hands over to a person at the right moment. FactoryJet builds these on the official WhatsApp Business Platform, connects them to your store, payments and CRM, tests them on your real customer questions, and shows you a working demo before you sign.',
+            'WhatsApp providers such as Interakt, Wati and AiSensy sell the platform and a flow builder. We build the custom AI layer and integrations on top of the provider you choose, at a fixed price per phase.',
+          ]}
+          factsTitle="FactoryJet at a glance"
+          facts={[
+            { k: 'Platform', v: 'Official WhatsApp Business Platform, through the provider you choose' },
+            { k: 'Reviews', v: 'Clutch 5.0 (4 reviews), GoodFirms 5.0 (5 reviews)' },
+            { k: 'Track record', v: '500+ businesses served, 97% of projects on time or early, founded 2014' },
+            { k: 'Before you sign', v: 'A demo on your own questions and documents' },
+            { k: 'Ownership', v: 'Number, accounts, workflows and code in your company name' },
+          ]}
+          links={[
+            { label: 'AI chatbot development', href: '/ai-chatbot-development' },
+            { label: 'AI automation services', href: '/ai-automation' },
+            { label: 'n8n automation', href: '/n8n-automation' },
+          ]}
         />
 
-        {/* ── 4. STATS BENTO (DARK) ─────────────────────────────────────────── */}
-        <section
-          className="py-14 md:py-20"
-          style={{ backgroundColor: '#0F0F12' }}
-        >
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <p
-              className="font-fj-mono font-bold uppercase text-[#F05A28]"
-              style={{ fontSize: '11px', letterSpacing: '0.14em' }}
-            >
-              WHY WHATSAPP IS NON-NEGOTIABLE IN INDIA
-            </p>
-            <h2
-              className="mt-4 font-fj-display font-bold text-white"
-              style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)', lineHeight: 1.1, letterSpacing: '-0.03em', maxWidth: '640px' }}
-            >
-              The numbers that make WhatsApp automation obvious.
-            </h2>
-            <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-3">
-              {[
-                { stat: '535M', label: 'WhatsApp users in India', sub: 'World\'s largest market' },
-                { stat: '98%', label: 'Message open rate', sub: 'vs. 22% for email' },
-                { stat: '78%', label: 'Indian SMBs on WhatsApp', sub: 'Already using it for business' },
-                { stat: '15M', label: 'WhatsApp Business accounts', sub: 'Globally on the platform' },
-                { stat: 'Fixed', label: 'Fixed-price quotes', sub: 'Scoped up front, no hourly billing' },
-                { stat: '7 Days', label: 'Average build time', sub: 'Fastest delivery in India' },
-              ].map((item) => (
-                <div
-                  key={item.stat}
-                  className="rounded-2xl p-6"
-                  style={{
-                    background: 'rgba(255,255,255,0.04)',
-                    border: '1px solid rgba(255,255,255,0.08)',
-                    backdropFilter: 'blur(12px)',
-                  }}
-                >
-                  <p
-                    className="font-fj-display font-bold"
-                    style={{ fontSize: 'clamp(1.75rem, 3vw, 2.5rem)', lineHeight: 1, letterSpacing: '-0.04em', color: '#F05A28' }}
-                  >
-                    {item.stat}
-                  </p>
-                  <p className="mt-3 font-fj-body font-semibold text-white" style={{ fontSize: '0.9375rem', lineHeight: 1.4 }}>
-                    {item.label}
-                  </p>
-                  <p className="mt-1 font-fj-body text-white/40" style={{ fontSize: '0.8125rem' }}>
-                    {item.sub}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* ── 3. LOGO BAR ──────────────────────────────────────────────────── */}
+        <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
 
-        {/* ── 5. WHAT IS A WHATSAPP CHATBOT (GEO/AEO ANCHOR) ──────────────── */}
+        {/* ── 4. WHAT IT DOES ──────────────────────────────────────────────── */}
         <ServiceExplanation
-          eyebrow="WHAT IS A WHATSAPP CHATBOT"
-          headline="What Is a WhatsApp Chatbot, and Why Does Your Business Need One?"
-          lead="A WhatsApp chatbot is an automated messaging system that uses the WhatsApp Business API to respond to customer messages instantly, take actions in your business systems, and work 24/7 without human intervention."
+          eyebrow="WHATSAPP CHATBOT FOR BUSINESS"
+          headline="What a WhatsApp Chatbot for Business Should Do"
+          lead="Most WhatsApp traffic is the same few questions: where is my order, what does it cost, is it in stock, can I book, can I pay. A good bot settles those in the chat and passes the rest to your team with the context already written down."
           body={
             <>
               <p>
-                A WhatsApp chatbot is software connected to the official WhatsApp Business API (provided by Meta) that receives customer messages, processes them, and sends automated replies, without any human typing a response. Unlike the free WhatsApp Business app where your team replies manually, a chatbot works around the clock, handles hundreds of simultaneous conversations, and integrates with your Shopify store, Razorpay account, CRM, and logistics platform to take real actions.
+                We start from your real chats, not a template. The top questions become answers the AI gives from your
+                approved content. The top requests become actions: reading an order, sending a payment link, booking a
+                slot, logging a lead. Everything else goes to a person.
               </p>
               <p>
-                For Indian businesses, WhatsApp chatbots are particularly powerful because your customers are already on WhatsApp, it is their default messaging app. You are not asking them to download a new app, visit a website, or call a helpline. You meet them where they already are, and you respond in the language they prefer.
+                The bot runs on the WhatsApp Business Platform through a provider such as Interakt, Wati, AiSensy or
+                Gallabox. We usually wire the actions through n8n, an automation tool where each step is visible, so your
+                team can see why the bot did something and change it later.
               </p>
               <div className="flex flex-wrap gap-2" aria-hidden>
-                {[
-                  'Order Tracking',
-                  'Lead Capture',
-                  'FAQ Automation',
-                  'Appointment Booking',
-                  'Product Catalog',
-                  'Payment Reminders',
-                  'COD Confirmation',
-                  'Return Processing',
-                ].map((cap) => (
+                {['Order status', 'COD confirmation', 'Payment links', 'Lead capture', 'Bookings', 'Returns', 'Dealer orders', 'Hand-off to staff'].map((cap) => (
                   <span
                     key={cap}
                     className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
@@ -623,375 +654,115 @@ export default function WhatsAppChatbotINPage() {
           rightSlot={
             <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
               <div className="border-b border-fj-neutral-100 px-7 py-4">
-                <p
-                  className="font-fj-mono font-medium uppercase text-fj-neutral-400"
-                  style={{ fontSize: '11px', letterSpacing: '0.14em' }}
-                >
-                  6 Core WhatsApp Chatbot Use Cases
+                <p className="font-fj-mono text-[11px] font-medium uppercase tracking-[0.14em] text-fj-neutral-500">
+                  How WhatsApp charges businesses (Meta)
                 </p>
               </div>
-              <div className="divide-y divide-fj-neutral-100">
+              <div className="divide-y divide-fj-neutral-100 px-7">
                 {[
-                  {
-                    icon: '📦',
-                    title: 'Order Tracking',
-                    desc: 'Connects to Shiprocket/Delhivery and gives customers live tracking without human help.',
-                  },
-                  {
-                    icon: '🎯',
-                    title: 'Lead Capture',
-                    desc: 'Qualifies ad leads, collects contact details, and pushes them to your CRM automatically.',
-                  },
-                  {
-                    icon: '❓',
-                    title: 'FAQ Automation',
-                    desc: 'Answers your 50 most repeated questions instantly, pricing, availability, policies.',
-                  },
-                  {
-                    icon: '📅',
-                    title: 'Appointment Booking',
-                    desc: 'Checks availability and confirms bookings for clinics, coaches, and service businesses.',
-                  },
-                  {
-                    icon: '🛍️',
-                    title: 'Product Catalog',
-                    desc: 'Lets customers browse products, ask questions, and get Razorpay payment links on WhatsApp.',
-                  },
-                  {
-                    icon: '💳',
-                    title: 'Payment Reminders',
-                    desc: 'Sends Razorpay links, confirms payments, and follows up on pending invoices automatically.',
-                  },
-                ].map((item) => (
-                  <div key={item.title} className="flex items-start gap-4 px-7 py-4">
-                    <span className="text-xl" aria-hidden="true">{item.icon}</span>
-                    <div>
-                      <p className="font-fj-body font-semibold text-fj-ink" style={{ fontSize: '0.9rem' }}>{item.title}</p>
-                      <p className="mt-0.5 font-fj-body text-fj-neutral-500" style={{ fontSize: '0.8125rem', lineHeight: 1.55 }}>{item.desc}</p>
-                    </div>
+                  { k: 'Messages customers send you', v: 'Free' },
+                  { k: 'Marketing, utility, authentication templates', v: 'Charged per message, by country' },
+                  { k: 'Service replies', v: '1,000 free a month per number from 1 Oct 2026, then charged' },
+                  { k: 'Customer service window', v: '24 hours from the customer’s last message' },
+                ].map((row) => (
+                  <div key={row.k} className="py-3.5">
+                    <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">{row.k}</p>
+                    <p className="mt-0.5 font-fj-body text-[0.8125rem] text-fj-neutral-600">{row.v}</p>
                   </div>
                 ))}
+              </div>
+              <div className="border-t border-fj-neutral-100 bg-fj-neutral-50 px-7 py-5">
+                <p className="font-fj-body text-[0.8125rem] leading-snug text-fj-neutral-600">
+                  Source:{' '}
+                  <a href={SRC.metaPricing.url} target="_blank" rel="noopener noreferrer" className="underline">
+                    Meta WhatsApp pricing docs
+                  </a>
+                  , checked {CHECKED_ON}. Your provider adds its own plan fee.
+                </p>
               </div>
             </div>
           }
         />
 
-        {/* ── 6. THE PROBLEM (DARK) ─────────────────────────────────────────── */}
-        <StrategicDarkSection
-          eyebrow="THE PROBLEM"
-          headline="You are answering the same WhatsApp messages, on repeat, every day"
-          lead="The biggest hidden cost in most Indian businesses is not salary, it is repetition. Your team spends 60–70% of their WhatsApp time answering questions with the same 10 answers. An automated chatbot eliminates that entirely."
-          pillars={[
-            {
-              icon: '💬',
-              title: 'Manual WhatsApp is your most expensive bottleneck',
-              body: '535 million Indians use WhatsApp. Your customers message you there. Your team manages it manually, typing the same tracking links, pricing answers, and booking confirmations all day. One WhatsApp chatbot handles 60–80% of these automatically, in the customer\'s language, while your team focuses on what actually needs a human.',
-            },
-            {
-              icon: '⏱️',
-              title: 'Leads go cold while your team is offline',
-              body: 'A lead who messages your business at 11 PM and gets a reply at 9 AM the next morning has already contacted three competitors. Research shows responding within 5 minutes increases conversion 21×. A WhatsApp chatbot responds in under 3 seconds, around the clock, qualifying and capturing the lead before any competitor even sees the message.',
-            },
-            {
-              icon: '🌐',
-              title: 'Language barriers are costing you customers',
-              body: 'India has 22 official languages and hundreds of dialects. Customers message in Hindi, Hinglish, Tamil, Telugu, Marathi, and your English-only support team misses the nuance or delays replies. A multilingual WhatsApp chatbot detects the language automatically and responds in kind, making every customer feel like you built the service specifically for them.',
-            },
-          ]}
+        {/* ── 5. BUYER QUESTIONS ───────────────────────────────────────────── */}
+        <QuestionAnswers
+          eyebrow="WHAT INDIAN BUYERS ASK ABOUT WHATSAPP AI CHATBOTS"
+          intro="Short answers to the questions buyers type into Google and ask AI assistants. Message charges quoted here are Meta's, not ours."
+          items={WHATSAPP_QUESTIONS}
+          bgClassName="bg-white"
         />
 
-        {/* ── 7. HOW IT WORKS ──────────────────────────────────────────────── */}
+        {/* ── 6. USE CASES ─────────────────────────────────────────────────── */}
+        <IndustriesGrid variant="cards"
+          eyebrow="WHERE IT HELPS"
+          headline="WhatsApp AI Agents for the Businesses That Get the Most Chats"
+          lead="Each industry asks different questions and needs different actions. We build for your flows, not a generic menu."
+          sectors={WHATSAPP_USE_CASES}
+        />
+
+        {/* ── 7. COMPARISON ────────────────────────────────────────────────── */}
+        <ComparisonTable
+          eyebrow="HOW TO CHOOSE"
+          headline="Custom WhatsApp AI Agent vs Flow Builder vs Chatbot App vs Freelancer"
+          lead="Four ways to put a chatbot on your business WhatsApp number, compared on what decides whether customers get their answer."
+          columns={WHATSAPP_COMPARISON_COLUMNS}
+          rows={WHATSAPP_COMPARISON_ROWS}
+          footer="Non-FactoryJet cells are general patterns, not claims about any one product or person. Many businesses start with a flow builder and add a custom AI layer later."
+        />
+
+        {/* ── 8. MID-PAGE CTA ──────────────────────────────────────────────── */}
+        <MidPageCTA
+          headline="Try it on your own questions first."
+          sub="Send us your ten most common WhatsApp questions. We will build a short demo that answers them from your content, then price each phase in writing."
+          label="See a demo on my data"
+        />
+
+        {/* ── 9. PROCESS ───────────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="HOW IT WORKS"
-          headline="From discovery to live WhatsApp chatbot in 7 days"
+          headline="From Your Real Chats to a Live WhatsApp AI Agent"
+          lead="Scope and price first. Meta verification and templates next. Tested on real questions before it talks to a customer."
           stages={WHATSAPP_JOURNEY_STAGES}
-          closingNote="Every project ends with a working chatbot on your WhatsApp Business number, and 30 days of post-launch support included as standard."
+          closingNote="5 STAGES · OFFICIAL WHATSAPP BUSINESS PLATFORM · FIXED PRICE PER PHASE · ACCOUNTS IN YOUR NAME"
         />
 
-        {/* ── 8. INDIA MARKET CONTEXT ───────────────────────────────────────── */}
-        <CityContextSection
-          eyebrow="INDIA WHATSAPP MARKET"
-          headline="535 million users. 98% open rates. The channel Indian businesses cannot ignore."
-          leadParagraphs={[
-            "India is the world's largest WhatsApp market, 535 million monthly active users, growing year on year. WhatsApp messages achieve a 98% open rate versus 22% for email, and 45% response rates versus 6% for email. For Indian businesses, this is not a marketing channel, it is the primary customer communication layer. The businesses automating it now are compounding an advantage their manual competitors cannot easily close.",
-            "78% of Indian SMBs already use WhatsApp for business, and 65% report increased sales after adoption. The gap is not in adoption, it is in automation. Most businesses are still handling every WhatsApp conversation manually, capping their capacity at whatever their team can type. A WhatsApp chatbot removes that ceiling entirely.",
-          ]}
-          bodySlot={
-            <>
-              <div className="border-l-2 border-[#F05A28] py-1 pl-5" aria-hidden="true">
-                <p
-                  className="font-fj-display font-semibold text-fj-ink"
-                  style={{ fontSize: '1.125rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
-                >
-                  A chatbot handles 60–80% of your WhatsApp queries without a single human reply.
-                </p>
-              </div>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {[
-                  'D2C & Ecommerce',
-                  'Real Estate',
-                  'Restaurants',
-                  'Healthcare',
-                  'EdTech',
-                  'Manufacturing',
-                  'Travel',
-                  'Retail',
-                ].map((ind) => (
-                  <span
-                    key={ind}
-                    className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-medium text-[#B23E13]"
-                    style={{ fontSize: '10px', letterSpacing: '0.08em' }}
-                  >
-                    {ind}
-                  </span>
-                ))}
-              </div>
-            </>
-          }
-          stats={WHATSAPP_MARKET_STATS}
-        />
-
-        {/* ── 9. INDUSTRIES GRID (DARK) ────────────────────────────────────── */}
-        <IndustriesGrid variant="cards"
-          eyebrow="INDUSTRIES WE BUILD FOR"
-          headline="WhatsApp chatbots built for every major Indian industry"
-          lead="Every industry has different conversation patterns, integrations, and compliance requirements. We build for yours, not a generic template."
-          sectors={WHATSAPP_INDUSTRIES}
-        />
-
-        {/* ── 10. API FEATURES (LIGHT) ─────────────────────────────────────── */}
-        <ServiceExplanation
-          eyebrow="WHATSAPP API FEATURES"
-          headline="Official WhatsApp Business API, everything your business needs"
-          lead="We build exclusively on the official Meta-approved WhatsApp Business API, not unofficial workarounds that risk your account getting banned."
-          reverseOnDesktop
-          body={
-            <>
-              <p>
-                The WhatsApp Business API supports far more than plain text messages. Your chatbot can send interactive buttons, scrollable lists, product catalogs, PDFs and images, appointment confirmation cards, and payment links, creating a richer customer experience than most businesses realise is possible on WhatsApp.
-              </p>
-              <div className="overflow-hidden rounded-xl border border-fj-neutral-200 bg-white" aria-hidden>
-                <table className="w-full text-left">
-                  <thead>
-                    <tr className="border-b border-fj-neutral-100 bg-fj-neutral-50">
-                      <th className="px-5 py-3 font-fj-mono text-[10px] font-semibold uppercase tracking-widest text-fj-neutral-400">Feature</th>
-                      <th className="px-5 py-3 font-fj-mono text-[10px] font-semibold uppercase tracking-widest text-fj-neutral-400">Details</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-fj-neutral-100">
-                    {[
-                      { feature: 'Message Types',       detail: 'Text, Buttons, Lists, Images, PDFs, Video, Templates, Flows' },
-                      { feature: 'Integrations',        detail: 'Razorpay, Shiprocket, Shopify, WooCommerce, Google Sheets, n8n' },
-                      { feature: 'Languages',           detail: 'English, Hindi, Tamil, Telugu, Marathi, Gujarati, Kannada + more' },
-                      { feature: 'CRM Connectors',      detail: 'Zoho CRM, HubSpot, LeadSquared, Freshdesk, Google Sheets' },
-                      { feature: 'Uptime',              detail: '99.9%: Meta-grade infrastructure, BSP-backed delivery' },
-                      { feature: 'Compliance',          detail: 'GDPR compliant, India DPDP Act ready, full audit trail' },
-                      { feature: 'Automation Engine',   detail: 'n8n workflows for complex multi-step business logic' },
-                    ].map((row) => (
-                      <tr key={row.feature}>
-                        <td className="px-5 py-3 font-fj-body font-semibold text-fj-ink" style={{ fontSize: '0.8125rem' }}>{row.feature}</td>
-                        <td className="px-5 py-3 font-fj-body text-fj-neutral-500" style={{ fontSize: '0.8125rem' }}>{row.detail}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </>
-          }
-          rightSlot={
-            <div className="w-full overflow-hidden rounded-2xl border border-fj-neutral-200 bg-white shadow-sm">
-              <div className="border-b border-fj-neutral-100 px-7 py-4">
-                <p
-                  className="font-fj-mono font-medium uppercase text-fj-neutral-400"
-                  style={{ fontSize: '11px', letterSpacing: '0.14em' }}
-                >
-                  Why FactoryJet for WhatsApp Chatbots
-                </p>
-              </div>
-              <div className="divide-y divide-fj-neutral-100">
-                {[
-                  {
-                    title: '500+ businesses served across India, the US, the UK and the UAE',
-                    desc: '12+ years building for Indian businesses. We know Razorpay, Zoho, Shiprocket, and the Indian payments stack inside out.',
-                  },
-                  {
-                    title: '7-day delivery | fastest globally',
-                    desc: 'Discovery to live chatbot in 7 days. No other agency at this quality level matches this timeline.',
-                  },
-                  {
-                    title: 'Senior team, no agency overhead',
-                    desc: 'You work directly with the engineers who build your chatbot, no account managers or project coordinators inflating invoices. Production-grade work, fixed price upfront.',
-                  },
-                  {
-                    title: 'India-specific stack knowledge',
-                    desc: 'Razorpay, UPI, COD workflows, Shiprocket, Indian language support, baked into every chatbot we build.',
-                  },
-                  {
-                    title: '30-day post-launch support included',
-                    desc: 'We monitor, tune, and fix after go-live. You are not handed a chatbot and left to figure it out.',
-                  },
-                ].map((item) => (
-                  <div key={item.title} className="px-7 py-4">
-                    <p className="font-fj-body font-semibold text-fj-ink" style={{ fontSize: '0.9rem' }}>{item.title}</p>
-                    <p className="mt-0.5 font-fj-body text-fj-neutral-500" style={{ fontSize: '0.8125rem', lineHeight: 1.55 }}>{item.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          }
-        />
-
-        {/* ── 11. STATS BAND ─────────────────────────────────────────────────── */}
-        <section
-          className="py-12 md:py-16"
-          style={{
-            backgroundColor: '#FAFAF7',
-            borderTop: '1.5px solid rgba(240,90,40,0.18)',
-            borderBottom: '1.5px solid rgba(240,90,40,0.18)',
-          }}
-        >
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
-              {WHATSAPP_STATS.map((stat) => (
-                <div key={stat.value}>
-                  {stat.categoryLabel && (
-                    <div
-                      className="mb-3 inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-fj-mono font-bold uppercase"
-                      style={{
-                        fontSize: '9px',
-                        letterSpacing: '0.13em',
-                        color: '#B23E13',
-                        background: 'rgba(240,90,40,0.06)',
-                        border: '1px solid rgba(240,90,40,0.22)',
-                      }}
-                    >
-                      <span className="inline-block h-1 w-1 rounded-full" style={{ backgroundColor: '#F05A28' }} aria-hidden="true" />
-                      {stat.categoryLabel}
-                    </div>
-                  )}
-                  <p
-                    className="font-fj-display font-bold"
-                    style={{ fontSize: 'clamp(2.25rem, 4vw, 3.25rem)', lineHeight: 1, letterSpacing: '-0.04em', color: '#F05A28' }}
-                  >
-                    {stat.value}
-                  </p>
-                  <p className="mt-3 font-fj-body font-semibold text-fj-ink" style={{ fontSize: '0.9375rem', lineHeight: 1.5 }}>
-                    {stat.label}
-                  </p>
-                  {stat.microcopy && (
-                    <p className="mt-1.5 font-fj-body text-fj-neutral-400" style={{ fontSize: '0.8125rem', lineHeight: 1.55 }}>
-                      {stat.microcopy}
-                    </p>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── 12. CASE STUDIES / SOCIAL PROOF (DARK) ───────────────────────── */}
-        <section
-          className="py-14 md:py-20"
-          style={{ backgroundColor: '#0F0F12' }}
-        >
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <p
-              className="font-fj-mono font-bold uppercase text-[#F05A28]"
-              style={{ fontSize: '11px', letterSpacing: '0.14em' }}
-            >
-              RESULTS IN THE REAL WORLD
-            </p>
-            <h2
-              className="mt-4 font-fj-display font-bold text-white"
-              style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)', lineHeight: 1.1, letterSpacing: '-0.03em', maxWidth: '640px' }}
-            >
-              What actually happened when Indian businesses deployed WhatsApp chatbots.
-            </h2>
-            <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
-              {[
-                {
-                  industry: 'D2C Brand: Mumbai',
-                  problem: 'Support team manually answering 400+ WhatsApp messages per day, mostly order status queries. Response time: 3–6 hours.',
-                  solution: 'FactoryJet built a WhatsApp chatbot connected to Shiprocket for live tracking, Shopify for order data, and Razorpay for payment confirmations.',
-                  result: '72% of support queries deflected automatically. Response time dropped from 3 hours to 8 seconds. Support team reduced manual WhatsApp time by 5 hours per day.',
-                },
-                {
-                  industry: 'Coaching Institute: Bangalore',
-                  problem: 'Counsellors spending 70% of their day answering the same course questions on WhatsApp. Peak enrollment season required 3 extra temp hires.',
-                  solution: 'WhatsApp chatbot built to handle course FAQs, collect student details, process Razorpay enrollment payments, and push qualified leads to Zoho CRM.',
-                  result: '3× faster lead-to-enrollment conversion. Zero temp hires needed during peak enrollment. ₹2.8 lakh saved in seasonal staffing costs in the first cycle.',
-                },
-                {
-                  industry: 'Real Estate Developer: Delhi NCR',
-                  problem: 'Leads from 99acres and Google Ads arriving on WhatsApp after hours, no one responding until 9 AM. Competitors capturing the same leads overnight.',
-                  solution: 'WhatsApp lead qualification bot that engaged every inbound lead instantly, asked budget and timeline questions, and booked site visits to Google Calendar, logged to LeadSquared.',
-                  result: '47% more site visits booked in month one. After-hours leads converted at 2.3× the rate of the previous manual follow-up process.',
-                },
-              ].map((item) => (
-                <div
-                  key={item.industry}
-                  className="rounded-2xl p-7"
-                  style={{
-                    background: 'rgba(255,255,255,0.04)',
-                    border: '1px solid rgba(240,90,40,0.25)',
-                    borderLeft: '3px solid #F05A28',
-                  }}
-                >
-                  <p
-                    className="font-fj-mono font-bold uppercase text-[#F05A28]"
-                    style={{ fontSize: '10px', letterSpacing: '0.12em' }}
-                  >
-                    {item.industry}
-                  </p>
-                  <div className="mt-4 space-y-3">
-                    <div>
-                      <p className="font-fj-mono font-semibold uppercase text-white/40" style={{ fontSize: '9px', letterSpacing: '0.1em' }}>Problem</p>
-                      <p className="mt-1 font-fj-body text-white/70" style={{ fontSize: '0.875rem', lineHeight: 1.6 }}>{item.problem}</p>
-                    </div>
-                    <div>
-                      <p className="font-fj-mono font-semibold uppercase text-white/40" style={{ fontSize: '9px', letterSpacing: '0.1em' }}>Solution</p>
-                      <p className="mt-1 font-fj-body text-white/70" style={{ fontSize: '0.875rem', lineHeight: 1.6 }}>{item.solution}</p>
-                    </div>
-                    <div>
-                      <p className="font-fj-mono font-semibold uppercase text-[#F05A28]" style={{ fontSize: '9px', letterSpacing: '0.1em' }}>Result</p>
-                      <p className="mt-1 font-fj-body font-semibold text-white" style={{ fontSize: '0.875rem', lineHeight: 1.6 }}>{item.result}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <GetFreeQuoteCTA />
-        {/* ── 14. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
+        {/* ── 10. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What Indian businesses say after we build their WhatsApp chatbots"
+          headline="What founders say after working with FactoryJet"
         />
 
-        {/* ── 15. FAQ (LIGHT) ───────────────────────────────────────────────── */}
+        {/* ── 11. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Everything to Know Before You Start"
-          lead="The questions we answer on every WhatsApp chatbot discovery call, answered honestly, in plain language, without the runaround."
+          headline="WhatsApp AI Chatbots in India: Questions Buyers Ask"
+          lead="From choosing the best WhatsApp chatbot company in India to Meta charges, Razorpay and COD, answered plainly."
           categories={WHATSAPP_FAQ_CATEGORIES}
           items={WHATSAPP_FAQ_ITEMS}
         />
 
-        {/* ── 16. FINAL CTA (DARK) ─────────────────────────────────────────── */}
+        {/* ── 12. SOURCES ──────────────────────────────────────────────────── */}
+        <SourceList
+          checkedOn={CHECKED_ON}
+          sources={[
+            { ...SRC.metaPricing, note: 'per-message charges, free customer messages, 1,000 free service messages a month from 1 Oct 2026, and the 24-hour customer service window' },
+            { ...SRC.waPlatform, note: 'what the WhatsApp Business Platform is' },
+            { ...SRC.n8nWhatsApp, note: 'n8n integration for WhatsApp Business Cloud' },
+          ]}
+        />
+
+        {/* ── 13. FINAL CTA (DARK) ─────────────────────────────────────────── */}
         <div id="final-cta">
           <FinalCTA
             variant="dark"
             eyebrow="GET STARTED"
-            headline="535 Million People Are On WhatsApp. Is Your Business Ready?"
-            sub="Get a free WhatsApp chatbot demo built for your business. No commitment, no fluff, just a working prototype in 48 hours showing exactly how automation would work for your specific use case. Fixed price, 7-day delivery, 30-day support included."
-            primaryCta={{ label: 'Book My Free Demo', modal: true, region: 'in' }}
-            secondaryCta={{ label: 'Email us', href: 'mailto:connect@factoryjet.com' }}
-            objectionHandler="Fixed price. 7-day delivery. India-specific stack. 30-day post-launch support included."
+            headline="See Your WhatsApp AI Agent Answer Your Own Customers"
+            sub="Tell us what your customers ask most and which systems hold the answers. We will recommend a provider, price each phase in writing and show you a demo on your own questions before you sign."
+            primaryCta={{ label: 'See a demo on my data', modal: true, region: 'in' }}
+            secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
+            objectionHandler="Official platform. Fixed price per phase. Demo before contract. Accounts in your name."
           />
         </div>
-
       </main>
 
       <SiteFooter locale="in" />

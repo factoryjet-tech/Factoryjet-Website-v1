@@ -14,20 +14,21 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
-import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { ecommerceCityAlternatesIN } from '@/data/hreflangMap';
-import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
+import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
+import { AnswerFirst, QuestionAnswers, SourceList } from '@/components/india-pages/IndiaAnswerBlocks';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development in Jaipur | FactoryJet',
+  title: "Best Ecommerce Website Development in Jaipur | FactoryJet",
   description:
-    'Ecommerce development in Jaipur for gem and silver jewellers, block-print and blue pottery brands, and exporters. Shopify, UPI, global checkout. 7-day delivery.',
+    "Ecommerce website development company in Jaipur for gem jewellers, block-print and blue pottery brands and exporters. Shopify, UPI and global checkout.",
   keywords: [
     'ecommerce development company jaipur',
     'ecommerce website development jaipur',
@@ -47,9 +48,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Company in Jaipur | FactoryJet',
+    title: "Ecommerce Website Development Company in Jaipur | FactoryJet",
     description:
-      'Jaipur ecommerce stores for Johari Bazaar jewellers, Sanganer and Bagru block printers, blue pottery makers and wholesale exporters. 7-day delivery.',
+      "Online stores for Johari Bazaar jewellers, Sanganer and Bagru block printers, blue pottery makers and exporters, with UPI at home and local currency abroad. A draft store before you sign.",
     url: 'https://factoryjet.com/services/ecommerce-development/jaipur',
     images: [
       {
@@ -63,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Jaipur | FactoryJet',
+    title: "Ecommerce Website Development Company in Jaipur | FactoryJet",
     description:
-      'Jaipur ecommerce: gems, block print and craft stores with global checkout, UPI and GST.',
+      "Jaipur ecommerce: gem, block print and craft stores with global checkout, UPI and GST.",
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -92,7 +93,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-11-07';
+const PAGE_MODIFIED = '2026-11-24';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -130,7 +131,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/jaipur',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Jaipur jewellers, craft brands and exporters. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD, international checkout and GST invoicing. 7-day delivery.',
+    'Ecommerce development company serving Jaipur jewellers, craft brands and exporters. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD, international checkout and GST invoicing.',
   areaServed: [
     'Vaishali Nagar', 'Malviya Nagar', 'C-Scheme', 'Mansarovar', 'Jagatpura',
     'Sanganer', 'Bani Park', 'Tonk Road',
@@ -192,7 +193,7 @@ const JAIPUR_ECOM_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How long will it take to launch my Jaipur store?',
     answer:
-      'A standard Shopify or WooCommerce store goes live in 7 days once products, photos and gateway approval arrive. A custom theme takes 3 to 5 weeks. Wholesale catalogues for overseas boutiques take 5 to 8 weeks, and fully custom platforms take 8 to 14 weeks.',
+      'A store with a custom-designed theme takes 3 to 5 weeks once products, photos and gateway approval arrive. Wholesale catalogues for overseas boutiques take 5 to 8 weeks, and fully custom platforms take 8 to 14 weeks.',
   },
   {
     category: 'pricing',
@@ -320,6 +321,24 @@ const JAIPUR_ECOM_FAQ_ITEMS = [
     answer:
       'A single developer can make a basic store. Selling crafts at home and abroad also needs design, payments in several currencies, export shipping, GST and SEO. A small senior team covers it at a fixed price. If you hire an ecommerce developer in Jaipur, check two of their stores on your phone first.',
   },
+  {
+    category: "platform",
+    question: "Who is the best Shopify developer in Jaipur for craft and jewellery brands?",
+    answer:
+      "Pick a Shopify developer in Jaipur who has built stores with zoomable craft photos, certificates and overseas checkout, not only standard themes. FactoryJet is a registered Shopify Partner with senior developers on every build. We make a draft with a few of your pieces first, so you see your craft online before you pay.",
+  },
+  {
+    category: "platform",
+    question: "Can overseas boutiques reorder from a Jaipur wholesale portal on their own?",
+    answer:
+      "Yes. We build wholesale portals on Shopify Plus B2B or on Commerceflo, our own B2B platform. Approved boutiques log in, see trade prices and minimum quantities, and repeat a past order without emailing a spreadsheet. Belle Maison, a home decor wholesaler, takes trade orders on a Commerceflo store we built.",
+  },
+  {
+    category: "india",
+    question: "Can tourists who bought in Jaipur reorder from home?",
+    answer:
+      "Yes. A store with global checkout lets a visitor who bought a quilt or mojaris in Jaipur find the same piece again and pay in their own currency. We add a cross-border courier, show duties at checkout, and keep product names the same as on your shop labels so returning buyers find them.",
+  },
 ];
 
 const faqSchema = {
@@ -346,6 +365,74 @@ const speakableSchema = {
   },
   url: 'https://factoryjet.com/services/ecommerce-development/jaipur',
 };
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   India refresh, 24 Nov 2026: answer-first block, buyer questions, comparison,
+   sources. Each source opened and checked on 24 Nov 2026.
+───────────────────────────────────────────────────────────────────────────── */
+
+const CITY_CHECKED_ON = '24 November 2026';
+
+const CITY_SRC = {
+  shopifyPricing: { label: 'Shopify India pricing', url: 'https://www.shopify.com/in/pricing' },
+  razorpay: { label: 'Razorpay pricing', url: 'https://razorpay.com/pricing/' },
+  ibef: { label: 'IBEF: E-commerce industry in India', url: 'https://www.ibef.org/industry/ecommerce' },
+  shopifyGst: { label: 'Shopify Help: GST in India', url: 'https://help.shopify.com/en/manual/taxes/india-gst' },
+} as const;
+
+const CITY_QUESTIONS = [
+  {
+    q: "How much does it cost to build an ecommerce website in Jaipur?",
+    a: ["The build price for a Jaipur store depends mostly on selling abroad in several currencies, wholesale rules for overseas boutiques, how many products and colourways you list, and certificate handling for stones. Running costs are separate and published by the platforms. Shopify's India page lists Basic at ₹1,499 a month on yearly billing. Razorpay lists 2% per domestic transaction plus GST on the fee. We quote the build as a fixed price per phase."],
+    sources: [CITY_SRC.shopifyPricing, CITY_SRC.razorpay],
+  },
+  {
+    q: "Which ecommerce platform is best for a Jaipur jeweller or craft exporter?",
+    a: ["Shopify suits most Jaipur makers. It treats colours, sizes and sets as variants, and Shopify Markets shows prices in each buyer's currency. Gem dealers with many certified stones can stay on Shopify with enquiry-only pages for high-value pieces, or move to a custom build. WooCommerce fits a studio that already has a WordPress site full of craft stories."],
+  },
+  {
+    q: "How long does a Jaipur online store take to launch?",
+    a: ["A store with a custom-designed theme takes 3 to 5 weeks. Wholesale catalogues for overseas boutiques, with trade prices and quote requests, take 5 to 8 weeks. Fully custom platforms take 8 to 14 weeks. Teej, Diwali and the wedding season bring the busiest domestic orders, so brief us about two months before the season you want to catch."],
+  },
+  {
+    q: "What should a Jaipur exporter check before hiring an ecommerce developer?",
+    a: ["Ask for a live store that sells overseas and place a test order in a foreign currency. Ask how they would show certificates for stones, colour variation in hand-printed fabric, and packing rules for fragile pottery. Ask who writes the code. Get the price per phase in writing, and keep the store, domain and code in your business name."],
+  },
+];
+
+const CITY_COMPARISON_COLUMNS = [
+  { label: 'FactoryJet', isFactoryJet: true },
+  { label: "Typical Jaipur agency" },
+  { label: 'Freelancer' },
+  { label: 'Marketplace only' },
+] as const;
+
+const CITY_COMPARISON_ROWS = [
+  {
+    feature: 'Draft store on your products before you sign',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Sometimes" />, <CompareIcon key="freelancer" kind="partial" label="Sometimes" />, <CompareIcon key="marketplace" kind="no" label="No own store" />],
+  },
+  {
+    feature: 'Fixed price per phase, in writing',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Varies" />, <CompareIcon key="freelancer" kind="partial" label="Varies" />, 'Fees per order'],
+  },
+  {
+    feature: "Prices in overseas currencies with a cross-border courier at checkout",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="partial" />, <CompareIcon key="marketplace" kind="partial" />],
+  },
+  {
+    feature: "Login-only wholesale catalogue for boutiques abroad",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="no" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Customer list and brand stay yours',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="yes" />, <CompareIcon key="freelancer" kind="yes" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Typical time for a custom-theme store',
+    values: ['3 to 5 weeks', 'Varies', 'Varies', 'Listing in days, no store'],
+  },
+];
 
 export default function JaipurEcommercePage() {
   return (
@@ -378,32 +465,63 @@ export default function JaipurEcommercePage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Jaipur', url: 'https://factoryjet.com/services/ecommerce-development/jaipur' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Jaipur", url: 'https://factoryjet.com/services/ecommerce-development/jaipur' },
         ]}
       />
 
       <main className="bg-fj-cream">
       <Breadcrumbs items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Jaipur', url: 'https://factoryjet.com/services/ecommerce-development/jaipur' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Jaipur", url: 'https://factoryjet.com/services/ecommerce-development/jaipur' },
         ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_jaipur_hero" />}
-          eyebrow="ECOMMERCE DEVELOPMENT · JAIPUR"
-          headline="Ecommerce Development in Jaipur: Store Live in 7 Days"
-          lead="FactoryJet builds online stores for Jaipur gem and silver jewellers, block-print and blue pottery brands, and wholesale catalogues for exporters who sell to boutiques abroad. UPI and COD for Indian buyers, cards and local currency for overseas ones, Lighthouse 90+. 7-day delivery."
-          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
+          eyebrow="ECOMMERCE WEBSITE DEVELOPMENT · JAIPUR"
+          headline="Ecommerce Website Development Company in Jaipur for Jewellers, Craft Brands and Exporters"
+          lead="FactoryJet builds online stores for Jaipur gem and silver jewellers, Sanganer and Bagru block printers and blue pottery studios, plus wholesale catalogues for exporters who sell to boutiques abroad. UPI and COD for Indian buyers, cards and local currency for overseas ones, and a draft of your store before you sign."
+          secondaryCta={{ label: 'See a draft of my store', modal: true as const, region: 'in' as const }}
           trustItems={[
-            '7-day delivery',
+            'Draft store before you sign',
             'Razorpay + UPI + COD ready',
           ]}
-          rightSlot={<HeroBrowserMockup />}
+          rightSlot={
+            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-7 shadow-sm">
+              <p className="font-fj-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">WHAT A JAIPUR STORE USUALLY NEEDS</p>
+              <ul className="mt-5 space-y-3">
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Gems</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Certificate images, carat and cut details, close-up video</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Crafts</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Colour variation notes and maker details</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Exports</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Overseas currencies and a cross-border courier</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Wholesale</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Login-only trade prices for boutiques abroad</p></li>
+              </ul>
+              <p className="mt-5 rounded-xl bg-[rgba(240,90,40,0.08)] px-4 py-3 font-fj-body text-[0.875rem] font-semibold text-[#B23E13]">Custom-theme stores take 3 to 5 weeks. Fixed price per phase, in writing.</p>
+            </div>
+          }
+        />
+
+        {/* ── 1b. ANSWER FIRST ─────────────────────────────────────────────── */}
+        <AnswerFirst
+          eyebrow="THE SHORT ANSWER"
+          question={"Which is the best ecommerce website development company in Jaipur?"}
+          answer={[
+            "A Jaipur store has to sell a craft to someone who cannot touch it. The firm you pick should know how to show a hand-carved block print, a blue pottery glaze or an emerald certificate on a phone screen, and how to take payment in rupees and in dollars. FactoryJet designs around close-up photos, maker notes and global checkout, fixes each phase's price in writing, and builds a draft on your own pieces before you sign.",
+            "We are a registered Shopify Partner, rated 5.0 on Clutch from 4 reviews and 5.0 on GoodFirms from 5 reviews. Ask any Jaipur firm on your list to show a store that sells abroad, then check the checkout in a foreign currency.",
+          ]}
+          factsTitle="FactoryJet at a glance"
+          facts={[
+            { k: 'Shopify status', v: 'Registered Shopify Partner' },
+            { k: 'Reviews', v: 'Clutch 5.0 (4 reviews), GoodFirms 5.0 (5 reviews)' },
+            { k: 'Track record', v: '500+ businesses served, 97% of projects on time or early, founded 2014' },
+            { k: 'Timelines', v: 'Custom-theme store 3 to 5 weeks; advanced store 5 to 8; headless or custom 8 to 14' },
+          ]}
+          links={[
+            { label: 'Ecommerce development in India', href: '/ecommerce-development' },
+            { label: 'Shopify development company in India', href: '/shopify-development' },
+            { label: 'Ecommerce website cost in India', href: '/blog/ecommerce-website-development-cost-india' },
+          ]}
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
@@ -412,8 +530,8 @@ export default function JaipurEcommercePage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Stores for craft brands, jewellers and exporters in India, the US, the UK and the UAE. Jaipur makers get a fixed price per phase, every file and login handed over, and 7-day delivery on standard stores."
+          headline="500+ businesses served. 97% on-time delivery. Founded 2014."
+          description="Stores for craft brands, jewellers and exporters in India, the US, the UK and the UAE. Jaipur makers get a fixed price per phase, every file and login handed over, and a draft store before they sign."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
@@ -447,32 +565,6 @@ export default function JaipurEcommercePage() {
               <p>
                 Jaipur products carry a story: a hand-carved block, a natural dye, a stone cut in the old city. Online, that story is most of the sale. A buyer in Paris or Pune cannot touch the fabric, so the photos, the maker details and the care notes have to do the work a shopkeeper does in Johari Bazaar. A generic template hides all of it.
               </p>
-
-              <div className="grid grid-cols-3 gap-3" aria-hidden>
-                {[
-                  { value: '0.9%', label: 'India avg. ecommerce conversion rate' },
-                  { value: '65%', label: 'India ecommerce traffic via mobile' },
-                  { value: '78%', label: 'cart abandonment rate in India' },
-                ].map((b) => (
-                  <div
-                    key={b.value}
-                    className="rounded-xl border border-fj-neutral-200 bg-white px-3 py-4 text-center shadow-sm"
-                  >
-                    <p
-                      className="fj-display font-bold text-[#F05A28]"
-                      style={{ fontSize: '1.375rem', lineHeight: 1, letterSpacing: '-0.03em' }}
-                    >
-                      {b.value}
-                    </p>
-                    <p
-                      className="mt-1.5 font-fj-mono font-medium uppercase text-fj-neutral-400"
-                      style={{ fontSize: '0.6875rem', letterSpacing: '0.07em' }}
-                    >
-                      {b.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
 
               <div className="border-l-2 border-[#F05A28] pl-5 py-1" aria-hidden>
                 <p
@@ -541,16 +633,24 @@ export default function JaipurEcommercePage() {
           }
         />
 
+        {/* ── 4b. BUYER QUESTIONS ──────────────────────────────────────────── */}
+        <QuestionAnswers
+          eyebrow={"WHAT JAIPUR BUYERS ASK BEFORE HIRING"}
+          intro="Short answers to the questions buyers type into Google and ask AI assistants. Prices quoted here are Shopify's and Razorpay's published prices, not ours."
+          items={CITY_QUESTIONS}
+          bgClassName="bg-white"
+        />
+
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Jaipur Makers Work With FactoryJet"
-          lead="Many Jaipur businesses have been burned by a site that looked fine and sold nothing abroad. We price each phase in writing, put 7-day delivery for standard stores into the agreement, and build a draft on your own products before you pay us anything."
+          lead="Many Jaipur businesses have been burned by a site that looked fine and sold nothing abroad. We price each phase in writing, put the launch date into the agreement, and build a draft on your own products before you pay us anything."
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing.',
-              body: 'Standard stores for Jaipur brands go live in 7 days once products, photos and gateway approval are ready. The date sits in the agreement. We have delivered on time on 97% of builds.',
+              title: 'A draft store before you sign.',
+              body: 'We build a draft with a handful of your real pieces, so you can see your prints, glazes or stones on a phone before you pay. The launch date goes into the agreement, and 97% of our projects have been delivered on time or early.',
             },
             {
               icon: '📱',
@@ -585,24 +685,34 @@ export default function JaipurEcommercePage() {
           ]}
           stats={[
             {
-              value: '23%',
-              label: "India's projected ecommerce market growth rate, year over year through 2030",
-              sourceUrl: 'https://www.ibef.org/industry/ecommerce',
+              value: 'US$ 345B',
+              label: "India's projected e-commerce market by 2030, up from US$ 125 billion in 2024 (18.4% a year)",
+              sourceUrl: CITY_SRC.ibef.url,
               sourceLabel: 'India Brand Equity Foundation',
             },
             {
-              value: '23%',
-              label: "India's projected ecommerce market growth rate, year over year through 2030",
-              sourceUrl: 'https://www.ibef.org/industry/ecommerce',
-              sourceLabel: 'India Brand Equity Foundation',
+              value: '₹1,499',
+              label: 'a month for Shopify Basic in India on yearly billing, before apps and fees',
+              sourceUrl: CITY_SRC.shopifyPricing.url,
+              sourceLabel: 'Shopify India pricing',
             },
             {
-              value: '500M+',
-              label: "UPI transactions per month in India: the payment rail your store must support",
-              sourceUrl: 'https://www.npci.org.in/what-we-do/upi/product-statistics',
-              sourceLabel: 'NPCI UPI Statistics',
+              value: '2%',
+              label: 'Razorpay platform fee per domestic transaction, plus GST on the fee',
+              sourceUrl: CITY_SRC.razorpay.url,
+              sourceLabel: 'Razorpay pricing',
             },
           ]}
+        />
+
+        {/* ── 7b. COMPARISON ───────────────────────────────────────────────── */}
+        <ComparisonTable
+          eyebrow="HOW TO CHOOSE"
+          headline={"Choosing an Ecommerce Developer in Jaipur"}
+          lead={"Four ways to get an online store in Jaipur, compared on what decides the result."}
+          columns={CITY_COMPARISON_COLUMNS}
+          rows={CITY_COMPARISON_ROWS}
+          footer="Agency and freelancer cells are general patterns, not claims about any one firm. Ask every firm you shortlist the same questions."
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
@@ -667,7 +777,7 @@ export default function JaipurEcommercePage() {
               description:
                 'Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.',
               imageSrc: '/images/portfolio/belle-maison.webp',
-              stat1: 'Live in 7 days',
+              stat1: 'Trade price tiers',
               stat2: 'Commerceflo · B2B',
             },
             {
@@ -676,7 +786,7 @@ export default function JaipurEcommercePage() {
               description:
                 'Impulse Branding is a Mumbai print branding and general contracting company. FactoryJet built impulsebranding.in and is now building their next-generation site.',
               imageSrc: '/images/work/impulse-branding-desktop.webp',
-              stat1: 'Launched in 6 days',
+              stat1: '75+ page site',
               stat2: 'Web · SEO',
             },
           ]}
@@ -684,7 +794,11 @@ export default function JaipurEcommercePage() {
           ctaLabel="View full portfolio"
         />
 
-        <GetFreeQuoteCTA />
+        <MidPageCTA
+          headline={"See your Jaipur store before you sign."}
+          sub={"Send a few product photos, a price list or your current store link. We will build a draft on your real pieces and put the price of each phase in writing."}
+          label="See a draft of my store"
+        />
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
@@ -700,15 +814,25 @@ export default function JaipurEcommercePage() {
           items={JAIPUR_ECOM_FAQ_ITEMS}
         />
 
+        {/* ── 12b. SOURCES ─────────────────────────────────────────────────── */}
+        <SourceList
+          checkedOn={CITY_CHECKED_ON}
+          sources={[
+            { ...CITY_SRC.shopifyPricing, note: 'Shopify plan prices in rupees and third-party transaction fees' },
+            { ...CITY_SRC.razorpay, note: '2% platform fee on domestic transactions, plus GST on the fee' },
+            { ...CITY_SRC.ibef, note: 'India e-commerce market size for 2024 and projection for 2030' },
+          ]}
+        />
+
         {/* ── 13. FINAL CTA (DARK) ─────────────────────────────────────────── */}
         <FinalCTA
-          variant="dark"
+          variant="light"
           eyebrow="READY TO LAUNCH"
-          headline="Your Jaipur Store, Live in 7 Days"
+          headline="Your Jaipur Craft, Sold at Home and Abroad"
           sub="FactoryJet has worked with 500+ businesses across India, the US, the UK and the UAE. Tell us what you make and where your buyers are. We will recommend a platform, put the price per phase in writing and show you a working draft before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price per phase. 7-day delivery. UPI, COD and global checkout. The code and every account belong to you."
+          objectionHandler="Fixed price per phase. Draft before contract. UPI, COD and global checkout. The code and every account belong to you."
         />
 
       </main>
