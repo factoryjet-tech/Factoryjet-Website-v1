@@ -14,20 +14,21 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
-import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { ecommerceCityAlternatesIN } from '@/data/hreflangMap';
-import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
+import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
+import { AnswerFirst, QuestionAnswers, SourceList } from '@/components/india-pages/IndiaAnswerBlocks';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development in Pune | FactoryJet',
+  title: "Best Ecommerce Website Development in Pune | FactoryJet",
   description:
-    'Ecommerce development in Pune for D2C brands and Pimpri-Chinchwad suppliers. Shopify, WooCommerce, Razorpay, UPI, COD and GST invoicing. 7-day delivery.',
+    "Ecommerce website development company in Pune for D2C brands and Chakan auto suppliers. Shopify stores, dealer portals, UPI, COD and GST invoices.",
   keywords: [
     'ecommerce development company pune',
     'ecommerce website development pune',
@@ -47,9 +48,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Company in Pune | FactoryJet',
+    title: "Ecommerce Website Development Company in Pune | FactoryJet",
     description:
-      'Shopify, WooCommerce and dealer portals for Pune businesses, from Hinjewadi D2C brands to Chakan auto suppliers. GST-ready checkout. 7-day delivery.',
+      "Shopify stores for Pune D2C brands and dealer portals for Pimpri-Chinchwad and Chakan suppliers, with Razorpay, UPI, COD and GST invoices. A draft store before you sign.",
     url: 'https://factoryjet.com/services/ecommerce-development/pune',
     images: [
       {
@@ -63,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Pune | FactoryJet',
+    title: "Ecommerce Website Development Company in Pune | FactoryJet",
     description:
-      'Pune ecommerce stores and dealer portals: Shopify, WooCommerce, Razorpay and GST invoicing.',
+      "Pune ecommerce: D2C Shopify stores and dealer portals with Razorpay, UPI and GST invoices.",
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -92,7 +93,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-11-07';
+const PAGE_MODIFIED = '2026-11-24';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -130,7 +131,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/pune',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Pune, Pimpri-Chinchwad and Chakan businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing. 7-day delivery.',
+    'Ecommerce development company serving Pune, Pimpri-Chinchwad and Chakan businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing.',
   areaServed: [
     'Koregaon Park', 'Hinjewadi', 'Viman Nagar', 'Kothrud',
     'Baner', 'Wakad', 'Hadapsar', 'Shivajinagar',
@@ -192,7 +193,7 @@ const PUNE_ECOM_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How quickly can a Pune ecommerce store go live?',
     answer:
-      'A standard Shopify or WooCommerce store goes live in 7 days once your products, photos and payment gateway approval are ready. A custom-theme store takes 3 to 5 weeks. Dealer portals for Pimpri-Chinchwad suppliers, with buyer price lists and GST invoicing, take 5 to 8 weeks. Headless or fully custom builds take 8 to 14 weeks.',
+      'A store with a custom-designed theme takes 3 to 5 weeks once your products, photos and payment gateway approval are ready. Dealer portals for Pimpri-Chinchwad suppliers, with buyer price lists and GST invoicing, take 5 to 8 weeks. Headless or fully custom builds take 8 to 14 weeks.',
   },
   {
     category: 'pricing',
@@ -320,6 +321,24 @@ const PUNE_ECOM_FAQ_ITEMS = [
     answer:
       'A freelancer can set up a basic store. Selling at volume takes design, payment setup, courier rules, GST and SEO at once, which is a lot for one person. A small senior team covers it at a fixed price. If you hire an ecommerce developer in Pune directly, test two of their live stores on your phone first.',
   },
+  {
+    category: "platform",
+    question: "Which is the top Shopify development company in Pune for D2C brands?",
+    answer:
+      "Choose a Shopify development company in Pune that has set up subscriptions, Razorpay and Shiprocket on live stores, not only installed themes. FactoryJet is a registered Shopify Partner. Our senior developers write the code, and we build a draft on your own products first, so you can judge the work before paying.",
+  },
+  {
+    category: "platform",
+    question: "Can a Chakan parts maker use the same system as a big B2B platform?",
+    answer:
+      "Yes. We build dealer portals on Shopify Plus B2B or on Commerceflo, our own B2B platform. Dealers log in, see their price slab and minimum order, and reorder last month's parts. Belle Maison, a home decor wholesaler, takes trade orders on a Commerceflo store we built.",
+  },
+  {
+    category: "trust",
+    question: "Can I move my Pune store from another developer to FactoryJet?",
+    answer:
+      "Yes. We start by listing what the current store runs: theme, apps, payment gateway, courier and any Tally link. Then we plan the move so products, customers, order history and page addresses carry across, and Google keeps your rankings. You keep every account in your company name throughout.",
+  },
 ];
 
 const faqSchema = {
@@ -346,6 +365,74 @@ const speakableSchema = {
   },
   url: 'https://factoryjet.com/services/ecommerce-development/pune',
 };
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   India refresh, 24 Nov 2026: answer-first block, buyer questions, comparison,
+   sources. Each source opened and checked on 24 Nov 2026.
+───────────────────────────────────────────────────────────────────────────── */
+
+const CITY_CHECKED_ON = '24 November 2026';
+
+const CITY_SRC = {
+  shopifyPricing: { label: 'Shopify India pricing', url: 'https://www.shopify.com/in/pricing' },
+  razorpay: { label: 'Razorpay pricing', url: 'https://razorpay.com/pricing/' },
+  ibef: { label: 'IBEF: E-commerce industry in India', url: 'https://www.ibef.org/industry/ecommerce' },
+  shopifyGst: { label: 'Shopify Help: GST in India', url: 'https://help.shopify.com/en/manual/taxes/india-gst' },
+} as const;
+
+const CITY_QUESTIONS = [
+  {
+    q: "How much does an ecommerce website cost in Pune?",
+    a: ["Four things set the build price for a Pune project: dealer price slabs for trade buyers, subscriptions for health and coffee brands, the number of products and variants, and links to Tally or an ERP. A plain retail store with none of these costs much less than a dealer portal. Running costs come on top. Shopify's India page lists Basic at ₹1,499 a month on yearly billing. Razorpay lists 2% per domestic transaction plus GST on that fee."],
+    sources: [CITY_SRC.shopifyPricing, CITY_SRC.razorpay],
+  },
+  {
+    q: "Should a Pune business use Shopify, WooCommerce or a custom build?",
+    a: ["It depends on who buys from you. Pune D2C brands selling supplements, gadgets or streetwear usually do best on Shopify, which runs subscriptions, UPI and Instagram selling with little upkeep. A brand whose sales come from a busy WordPress blog may stay on WooCommerce. Auto and engineering suppliers who sell to dealers often need Shopify Plus B2B or a custom portal, so each dealer sees their own prices."],
+  },
+  {
+    q: "How long does it take to build an online store in Pune?",
+    a: ["Plan on 3 to 5 weeks for a store with a custom-designed theme. Dealer portals for Pimpri-Chinchwad suppliers, with buyer price lists and GST invoicing, take 5 to 8 weeks. Headless or fully custom builds take 8 to 14 weeks. If you want the store selling before the festive season, start about two months ahead so payments and couriers are tested first."],
+  },
+  {
+    q: "What should I ask a Shopify developer in Pune before hiring?",
+    a: ["Ask who will write your code and whether they have built a dealer portal or a subscription store before. Ask for two live stores you can test on your phone, and check the price and launch date are written into the agreement. Make sure the store, domain and code sit in your company name. Ask them to build a draft on your products before you sign."],
+  },
+];
+
+const CITY_COMPARISON_COLUMNS = [
+  { label: 'FactoryJet', isFactoryJet: true },
+  { label: "Typical Pune agency" },
+  { label: 'Freelancer' },
+  { label: 'Marketplace only' },
+] as const;
+
+const CITY_COMPARISON_ROWS = [
+  {
+    feature: 'Draft store on your products before you sign',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Sometimes" />, <CompareIcon key="freelancer" kind="partial" label="Sometimes" />, <CompareIcon key="marketplace" kind="no" label="No own store" />],
+  },
+  {
+    feature: 'Fixed price per phase, in writing',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Varies" />, <CompareIcon key="freelancer" kind="partial" label="Varies" />, 'Fees per order'],
+  },
+  {
+    feature: "Dealer portal with part number search and price slabs",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="no" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: "Orders pushed into Tally, Zoho Books or your ERP",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="partial" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Customer list and brand stay yours',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="yes" />, <CompareIcon key="freelancer" kind="yes" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Typical time for a custom-theme store',
+    values: ['3 to 5 weeks', 'Varies', 'Varies', 'Listing in days, no store'],
+  },
+];
 
 export default function PuneEcommercePage() {
   return (
@@ -378,32 +465,63 @@ export default function PuneEcommercePage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Pune', url: 'https://factoryjet.com/services/ecommerce-development/pune' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Pune", url: 'https://factoryjet.com/services/ecommerce-development/pune' },
         ]}
       />
 
       <main className="bg-fj-cream">
       <Breadcrumbs items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Pune', url: 'https://factoryjet.com/services/ecommerce-development/pune' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Pune", url: 'https://factoryjet.com/services/ecommerce-development/pune' },
         ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_pune_hero" />}
-          eyebrow="ECOMMERCE DEVELOPMENT · PUNE"
-          headline="Ecommerce Development in Pune: Store Live in 7 Days"
-          lead="FactoryJet builds Shopify and WooCommerce stores for Pune D2C brands, and ordering portals for auto component suppliers in Pimpri-Chinchwad and Chakan. Razorpay, UPI and COD at checkout, a GST invoice on every order, Lighthouse 90+ on mobile. 7-day delivery."
-          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
+          eyebrow="ECOMMERCE WEBSITE DEVELOPMENT · PUNE"
+          headline="Ecommerce Website Development Company in Pune for D2C Brands and Auto Component Suppliers"
+          lead="FactoryJet builds Shopify and WooCommerce stores for Pune D2C brands in health, gadgets and fashion, and dealer portals for auto component makers in Pimpri-Chinchwad, Bhosari and Chakan. Razorpay, UPI and COD at checkout, a GST invoice on every order, and a draft of your store before you sign."
+          secondaryCta={{ label: 'See a draft of my store', modal: true as const, region: 'in' as const }}
           trustItems={[
-            '7-day delivery',
+            'Draft store before you sign',
             'Razorpay + UPI + COD ready',
           ]}
-          rightSlot={<HeroBrowserMockup />}
+          rightSlot={
+            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-7 shadow-sm">
+              <p className="font-fj-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">WHAT A PUNE STORE USUALLY NEEDS</p>
+              <ul className="mt-5 space-y-3">
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Dealers</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Part number search, price slabs and one-click reorder</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">D2C brands</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Subscriptions with UPI AutoPay, Instagram selling</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Accounts</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Orders pushed into Tally, Zoho Books or your ERP</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Checkout</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Razorpay with UPI, cards, EMI and COD limits</p></li>
+              </ul>
+              <p className="mt-5 rounded-xl bg-[rgba(240,90,40,0.08)] px-4 py-3 font-fj-body text-[0.875rem] font-semibold text-[#B23E13]">Custom-theme stores take 3 to 5 weeks. Fixed price per phase, in writing.</p>
+            </div>
+          }
+        />
+
+        {/* ── 1b. ANSWER FIRST ─────────────────────────────────────────────── */}
+        <AnswerFirst
+          eyebrow="THE SHORT ANSWER"
+          question={"Which is the best ecommerce website development company in Pune?"}
+          answer={[
+            "Pune has two kinds of online seller, and the right firm can build for both. A Hinjewadi supplement brand needs a fast Shopify store with subscriptions. A Chakan parts maker needs a dealer portal with price slabs, part number search and GST invoices that flow into Tally. FactoryJet scopes which one comes first, fixes the price per phase in writing, and builds a working draft on your own products before you sign.",
+            "We are a registered Shopify Partner, rated 5.0 on Clutch from 4 reviews and 5.0 on GoodFirms from 5 reviews. Whoever you shortlist in Pune, ask to see one consumer store and one trade portal they built, and test both on your phone.",
+          ]}
+          factsTitle="FactoryJet at a glance"
+          facts={[
+            { k: 'Shopify status', v: 'Registered Shopify Partner' },
+            { k: 'Reviews', v: 'Clutch 5.0 (4 reviews), GoodFirms 5.0 (5 reviews)' },
+            { k: 'Track record', v: '500+ businesses served, 97% of projects on time or early, founded 2014' },
+            { k: 'Timelines', v: 'Custom-theme store 3 to 5 weeks; advanced store 5 to 8; headless or custom 8 to 14' },
+          ]}
+          links={[
+            { label: 'Ecommerce development in India', href: '/ecommerce-development' },
+            { label: 'Shopify development company in India', href: '/shopify-development' },
+            { label: 'Ecommerce website cost in India', href: '/blog/ecommerce-website-development-cost-india' },
+          ]}
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
@@ -412,8 +530,8 @@ export default function PuneEcommercePage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Built for D2C brands, B2B suppliers and Shopify sellers in India, the US, the UK and the UAE. Pune buyers get the same terms: a fixed price per phase, the full codebase, and 7-day delivery."
+          headline="500+ businesses served. 97% on-time delivery. Founded 2014."
+          description="Built for D2C brands, B2B suppliers and Shopify sellers in India, the US, the UK and the UAE. Pune buyers get the same terms: a fixed price per phase, the full codebase, and a draft store before they sign."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
@@ -447,32 +565,6 @@ export default function PuneEcommercePage() {
               <p>
                 Pune shoppers compare before they buy. Many work in IT, read specs closely and leave a store that hides delivery dates or return terms. For them the store has to load fast on a phone, show the total price early and offer UPI in one tap. Trade buyers in the MIDC belts want something else: part numbers, price slabs and a GST invoice they can file.
               </p>
-
-              <div className="grid grid-cols-3 gap-3" aria-hidden>
-                {[
-                  { value: '0.9%', label: 'India avg. ecommerce conversion rate' },
-                  { value: '65%', label: 'India ecommerce traffic via mobile' },
-                  { value: '78%', label: 'cart abandonment rate in India' },
-                ].map((b) => (
-                  <div
-                    key={b.value}
-                    className="rounded-xl border border-fj-neutral-200 bg-white px-3 py-4 text-center shadow-sm"
-                  >
-                    <p
-                      className="fj-display font-bold text-[#F05A28]"
-                      style={{ fontSize: '1.375rem', lineHeight: 1, letterSpacing: '-0.03em' }}
-                    >
-                      {b.value}
-                    </p>
-                    <p
-                      className="mt-1.5 font-fj-mono font-medium uppercase text-fj-neutral-400"
-                      style={{ fontSize: '0.6875rem', letterSpacing: '0.07em' }}
-                    >
-                      {b.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
 
               <div className="border-l-2 border-[#F05A28] pl-5 py-1" aria-hidden>
                 <p
@@ -541,16 +633,24 @@ export default function PuneEcommercePage() {
           }
         />
 
+        {/* ── 4b. BUYER QUESTIONS ──────────────────────────────────────────── */}
+        <QuestionAnswers
+          eyebrow={"WHAT PUNE BUYERS ASK BEFORE HIRING"}
+          intro="Short answers to the questions buyers type into Google and ask AI assistants. Prices quoted here are Shopify's and Razorpay's published prices, not ours."
+          items={CITY_QUESTIONS}
+          bgClassName="bg-white"
+        />
+
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Pune Founders Work With FactoryJet"
-          lead="Two things go wrong most often with store builds: the price moves and the launch slips. We quote a fixed price for each phase, write 7-day delivery into the agreement for standard stores, and show you a working draft on your own products before you sign."
+          lead="Two things go wrong most often with store builds: the price moves and the launch slips. We quote a fixed price for each phase, write the launch date into the agreement, and show you a working draft on your own products before you sign."
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing.',
-              body: 'A standard Shopify or WooCommerce store for a Pune brand goes live in 7 days once products, photos and gateway approval are in. The date sits in the agreement. We have delivered on time on 97% of builds, and most late ones were waiting on product photos.',
+              title: 'A draft store before you sign.',
+              body: 'We build a draft on a handful of your real products, so your team can test the product page, cart and checkout on their phones. The launch date goes into the agreement, and 97% of our projects have been delivered on time or early.',
             },
             {
               icon: '📱',
@@ -585,24 +685,34 @@ export default function PuneEcommercePage() {
           ]}
           stats={[
             {
-              value: '5L+',
-              label: 'IT professionals in Pune\'s tech corridor: one of India\'s most sophisticated D2C consumer bases',
-              sourceUrl: 'https://www.ibef.org/states/maharashtra',
-              sourceLabel: 'IBEF Maharashtra',
-            },
-            {
-              value: '23%',
-              label: "India's projected ecommerce market growth rate, year over year through 2030",
-              sourceUrl: 'https://www.ibef.org/industry/ecommerce',
+              value: 'US$ 345B',
+              label: "India's projected e-commerce market by 2030, up from US$ 125 billion in 2024 (18.4% a year)",
+              sourceUrl: CITY_SRC.ibef.url,
               sourceLabel: 'India Brand Equity Foundation',
             },
             {
-              value: '500M+',
-              label: 'UPI transactions per month in India: the payment rail your store must support',
-              sourceUrl: 'https://www.npci.org.in/what-we-do/upi/product-statistics',
-              sourceLabel: 'NPCI UPI Statistics',
+              value: '₹1,499',
+              label: 'a month for Shopify Basic in India on yearly billing, before apps and fees',
+              sourceUrl: CITY_SRC.shopifyPricing.url,
+              sourceLabel: 'Shopify India pricing',
+            },
+            {
+              value: '2%',
+              label: 'Razorpay platform fee per domestic transaction, plus GST on the fee',
+              sourceUrl: CITY_SRC.razorpay.url,
+              sourceLabel: 'Razorpay pricing',
             },
           ]}
+        />
+
+        {/* ── 7b. COMPARISON ───────────────────────────────────────────────── */}
+        <ComparisonTable
+          eyebrow="HOW TO CHOOSE"
+          headline={"Choosing an Ecommerce Developer in Pune"}
+          lead={"Four ways to get an online store in Pune, compared on what decides the result."}
+          columns={CITY_COMPARISON_COLUMNS}
+          rows={CITY_COMPARISON_ROWS}
+          footer="Agency and freelancer cells are general patterns, not claims about any one firm. Ask every firm you shortlist the same questions."
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
@@ -667,7 +777,7 @@ export default function PuneEcommercePage() {
               description:
                 'Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.',
               imageSrc: '/images/portfolio/belle-maison.webp',
-              stat1: 'Live in 7 days',
+              stat1: 'Trade price tiers',
               stat2: 'Commerceflo · B2B',
             },
             {
@@ -676,7 +786,7 @@ export default function PuneEcommercePage() {
               description:
                 'Impulse Branding is a Mumbai print branding and general contracting company. FactoryJet built impulsebranding.in and is now building their next-generation site.',
               imageSrc: '/images/work/impulse-branding-desktop.webp',
-              stat1: 'Launched in 6 days',
+              stat1: '75+ page site',
               stat2: 'Web · SEO',
             },
           ]}
@@ -684,7 +794,11 @@ export default function PuneEcommercePage() {
           ctaLabel="View full portfolio"
         />
 
-        <GetFreeQuoteCTA />
+        <MidPageCTA
+          headline={"See your Pune store working before you sign."}
+          sub={"Share your catalogue, dealer price list or current store link. We will build a draft on a few of your real products and put the price of each phase in writing."}
+          label="See a draft of my store"
+        />
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
@@ -700,15 +814,25 @@ export default function PuneEcommercePage() {
           items={PUNE_ECOM_FAQ_ITEMS}
         />
 
+        {/* ── 12b. SOURCES ─────────────────────────────────────────────────── */}
+        <SourceList
+          checkedOn={CITY_CHECKED_ON}
+          sources={[
+            { ...CITY_SRC.shopifyPricing, note: 'Shopify plan prices in rupees and third-party transaction fees' },
+            { ...CITY_SRC.razorpay, note: '2% platform fee on domestic transactions, plus GST on the fee' },
+            { ...CITY_SRC.ibef, note: 'India e-commerce market size for 2024 and projection for 2030' },
+          ]}
+        />
+
         {/* ── 13. FINAL CTA (DARK) ─────────────────────────────────────────── */}
         <FinalCTA
-          variant="dark"
+          variant="light"
           eyebrow="READY TO LAUNCH"
-          headline="Your Pune Store, Live in 7 Days"
+          headline="Your Pune Store or Dealer Portal, Built Around Your Buyers"
           sub="500+ businesses across India, the US, the UK and the UAE have worked with FactoryJet. Tell us what you sell in Pune and we will recommend a platform, fix the price per phase in writing, and show you a draft of the store before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price per phase. 7-day delivery. Razorpay, GST and Shiprocket set up. The code is yours from day one."
+          objectionHandler="Fixed price per phase. Draft before contract. Razorpay, GST and Shiprocket set up. The code is yours from day one."
         />
 
       </main>
