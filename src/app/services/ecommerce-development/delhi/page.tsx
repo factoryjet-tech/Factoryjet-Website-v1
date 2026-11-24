@@ -14,20 +14,21 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
-import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { ecommerceCityAlternatesIN } from '@/data/hreflangMap';
-import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
+import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
+import { AnswerFirst, QuestionAnswers, SourceList } from '@/components/india-pages/IndiaAnswerBlocks';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development in Delhi | FactoryJet',
+  title: "Best Ecommerce Website Development in Delhi | FactoryJet",
   description:
-    'Ecommerce development in Delhi NCR for Chandni Chowk and Karol Bagh traders, Sadar Bazaar wholesalers and D2C brands. Shopify, UPI, COD, GST. 7-day delivery.',
+    "Ecommerce website development company in Delhi NCR for Chandni Chowk traders, Sadar Bazaar wholesalers and D2C brands. Shopify, UPI, COD and GST.",
   keywords: [
     'ecommerce development company delhi',
     'ecommerce website development delhi',
@@ -47,9 +48,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Company in Delhi | FactoryJet',
+    title: "Ecommerce Website Development Company in Delhi | FactoryJet",
     description:
-      'Delhi NCR ecommerce: bridal and jewellery stores, wholesale ordering for Sadar Bazaar and Gandhi Nagar traders, D2C brands in Gurugram, Noida. 7-day delivery.',
+      "Shopify stores and wholesale portals for Delhi NCR traders, bridal houses and D2C brands, with UPI, COD and GST for buyers in Delhi, Noida and Gurugram. A draft before you sign.",
     url: 'https://factoryjet.com/services/ecommerce-development/delhi',
     images: [
       {
@@ -63,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Delhi | FactoryJet',
+    title: "Ecommerce Website Development Company in Delhi | FactoryJet",
     description:
-      'Delhi NCR ecommerce: retail, wholesale and D2C stores with UPI, COD and GST invoicing.',
+      "Delhi NCR ecommerce: retail stores, wholesale portals and D2C builds with UPI, COD and GST.",
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -92,7 +93,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-11-07';
+const PAGE_MODIFIED = '2026-11-24';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -130,7 +131,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/delhi',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Delhi, Noida, Gurugram, Ghaziabad and Faridabad businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing. 7-day delivery.',
+    'Ecommerce development company serving Delhi, Noida, Gurugram, Ghaziabad and Faridabad businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing.',
   areaServed: [
     'Connaught Place', 'Lajpat Nagar', 'Karol Bagh', 'Rohini',
     'Dwarka', 'Noida', 'Gurugram', 'Saket',
@@ -192,7 +193,7 @@ const DELHI_ECOM_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How long does it take to build an ecommerce store in Delhi?',
     answer:
-      'A standard Shopify or WooCommerce store is ready in 7 days once your products, photos and payment gateway approval arrive. A custom theme takes 3 to 5 weeks. Wholesale portals with price slabs and credit limits take 5 to 8 weeks, and custom platforms take 8 to 14 weeks.',
+      'A store with a custom-designed theme takes 3 to 5 weeks once your products, photos and payment gateway approval arrive. Wholesale portals with price slabs and credit limits take 5 to 8 weeks, and custom platforms take 8 to 14 weeks.',
   },
   {
     category: 'pricing',
@@ -320,6 +321,24 @@ const DELHI_ECOM_FAQ_ITEMS = [
     answer:
       'A solo developer can launch a basic store. A store that trades well also needs design, payments, couriers, GST across states and SEO, which is a lot for one person. A small senior team covers it at a fixed price. If you hire an ecommerce developer in Delhi, test their past stores on your phone before you commit.',
   },
+  {
+    category: "platform",
+    question: "Which is the best Shopify development company in Delhi for a wholesale business?",
+    answer:
+      "Pick a Shopify team that has built trade logins, price slabs and reorder lists, not only retail themes. FactoryJet is a registered Shopify Partner. We build retail stores and Shopify B2B wholesale sections for Delhi traders, and we show you a draft on your own products first, so you can judge the work before you pay.",
+  },
+  {
+    category: "trust",
+    question: "How do I choose an ecommerce agency in Delhi?",
+    answer:
+      "Compare every ecommerce agency in Delhi you meet on three points: who writes the code, whether the price is fixed per phase in writing, and whether the accounts are in your name at the end. Then test two of their live stores on your phone, including checkout. Ask for references from traders or brands that sell the way you do.",
+  },
+  {
+    category: "platform",
+    question: "Can one website serve my retail buyers and my wholesale shops?",
+    answer:
+      "Yes. Retail visitors see the public store with UPI and COD. Approved shops log in to the same catalogue and see their own rates, carton quantities and credit terms. For larger trade catalogues we can build the wholesale side on Commerceflo, our own B2B platform. Belle Maison, a home decor wholesaler, takes trade orders on a Commerceflo store we built.",
+  },
 ];
 
 const faqSchema = {
@@ -346,6 +365,74 @@ const speakableSchema = {
   },
   url: 'https://factoryjet.com/services/ecommerce-development/delhi',
 };
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   India refresh, 24 Nov 2026: answer-first block, buyer questions, comparison,
+   sources. Each source opened and checked on 24 Nov 2026.
+───────────────────────────────────────────────────────────────────────────── */
+
+const CITY_CHECKED_ON = '24 November 2026';
+
+const CITY_SRC = {
+  shopifyPricing: { label: 'Shopify India pricing', url: 'https://www.shopify.com/in/pricing' },
+  razorpay: { label: 'Razorpay pricing', url: 'https://razorpay.com/pricing/' },
+  ibef: { label: 'IBEF: E-commerce industry in India', url: 'https://www.ibef.org/industry/ecommerce' },
+  shopifyGst: { label: 'Shopify Help: GST in India', url: 'https://help.shopify.com/en/manual/taxes/india-gst' },
+} as const;
+
+const CITY_QUESTIONS = [
+  {
+    q: "How much does an ecommerce website cost in Delhi?",
+    a: ["Your build price is set by a few things: a retail store, a wholesale portal or both, how many price slabs your buyers get, catalogue size, and extras like bridal made-to-measure options. Running costs come on top. Shopify's India page lists the Basic plan at ₹1,499 a month on yearly billing. Razorpay lists 2% per domestic transaction, plus GST on that fee. We send a fixed written price for each phase after one short call."],
+    sources: [CITY_SRC.shopifyPricing, CITY_SRC.razorpay],
+  },
+  {
+    q: "Is Shopify or WooCommerce better for a Delhi wholesaler?",
+    a: ["For most Sadar Bazaar and Gandhi Nagar wholesalers, Shopify with a login-only trade section works well: each shop sees its own rates, minimum quantities and reorder list. Shopify Plus suits bigger B2B catalogues. WooCommerce fits a trader who already runs a WordPress site. A custom build makes sense only when your price rules are too complex for either. Bridal and jewellery houses selling retail usually start on Shopify."],
+  },
+  {
+    q: "How long does it take to build an ecommerce website in Delhi?",
+    a: ["Plan on 3 to 5 weeks for a store with a custom-designed theme. A wholesale portal with price slabs and credit limits, or a move from another platform, takes 5 to 8 weeks. Headless or fully custom builds take 8 to 14 weeks. Corporate gifting orders across NCR peak before Diwali, so a gifting catalogue should be live several weeks before the season starts."],
+  },
+  {
+    q: "What should I check before hiring an ecommerce developer in Delhi?",
+    a: ["Ask to see a wholesale portal they built, not only retail themes. Check that they know the GST split between buyers in Delhi, Noida and Gurugram. Ask who writes the code, and get the price for each phase on paper. Make sure the store, domain and payment accounts are opened in your business name. A serious team will show you a draft on your products before any contract."],
+  },
+];
+
+const CITY_COMPARISON_COLUMNS = [
+  { label: 'FactoryJet', isFactoryJet: true },
+  { label: "Typical Delhi ecommerce agency" },
+  { label: 'Freelancer' },
+  { label: 'Marketplace only' },
+] as const;
+
+const CITY_COMPARISON_ROWS = [
+  {
+    feature: 'Draft store on your products before you sign',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Sometimes" />, <CompareIcon key="freelancer" kind="partial" label="Sometimes" />, <CompareIcon key="marketplace" kind="no" label="No own store" />],
+  },
+  {
+    feature: 'Fixed price per phase, in writing',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Varies" />, <CompareIcon key="freelancer" kind="partial" label="Varies" />, 'Fees per order'],
+  },
+  {
+    feature: "Login-only wholesale portal with price slabs and credit limits",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="no" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: "Correct GST split for Delhi, Noida and Gurugram buyers",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="partial" />, <CompareIcon key="marketplace" kind="partial" />],
+  },
+  {
+    feature: 'Customer list and brand stay yours',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="yes" />, <CompareIcon key="freelancer" kind="yes" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Typical time for a custom-theme store',
+    values: ['3 to 5 weeks', 'Varies', 'Varies', 'Listing in days, no store'],
+  },
+];
 
 export default function DelhiEcommercePage() {
   return (
@@ -378,32 +465,63 @@ export default function DelhiEcommercePage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Delhi', url: 'https://factoryjet.com/services/ecommerce-development/delhi' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Delhi", url: 'https://factoryjet.com/services/ecommerce-development/delhi' },
         ]}
       />
 
       <main className="bg-fj-cream">
       <Breadcrumbs items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Delhi', url: 'https://factoryjet.com/services/ecommerce-development/delhi' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Delhi", url: 'https://factoryjet.com/services/ecommerce-development/delhi' },
         ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_delhi_hero" />}
-          eyebrow="ECOMMERCE DEVELOPMENT · DELHI"
-          headline="Ecommerce Development in Delhi: Store Live in 7 Days"
-          lead="FactoryJet builds online stores for Delhi traders taking their market names online, wholesale ordering portals for Sadar Bazaar and Gandhi Nagar businesses, and D2C stores for Gurugram and Noida brands. UPI and COD at checkout, GST done right across NCR, Lighthouse 90+. 7-day delivery."
-          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
+          eyebrow="ECOMMERCE WEBSITE DEVELOPMENT · DELHI"
+          headline="Ecommerce Website Development Company in Delhi for Traders, Wholesalers and D2C Brands"
+          lead="FactoryJet builds Shopify stores for Chandni Chowk and Karol Bagh houses taking the family name online, login-only wholesale portals for Sadar Bazaar and Gandhi Nagar traders, and D2C stores for Gurugram and Noida brands. UPI and COD at checkout, the right GST split for buyers across NCR, and a draft of your store before you sign."
+          secondaryCta={{ label: 'See a draft of my store', modal: true as const, region: 'in' as const }}
           trustItems={[
-            '7-day delivery',
+            'Draft store before you sign',
             'Razorpay + UPI + COD ready',
           ]}
-          rightSlot={<HeroBrowserMockup />}
+          rightSlot={
+            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-7 shadow-sm">
+              <p className="font-fj-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">WHAT A DELHI STORE USUALLY NEEDS</p>
+              <ul className="mt-5 space-y-3">
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Wholesale</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Buyer logins with price slabs, carton quantities and credit limits</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Bridal</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Video, made-to-measure options and dispatch dates set by the wedding</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">GST</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">CGST and SGST in Delhi, IGST for Noida, Gurugram and Faridabad</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Checkout</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Razorpay with UPI, cards and COD limits by pincode</p></li>
+              </ul>
+              <p className="mt-5 rounded-xl bg-[rgba(240,90,40,0.08)] px-4 py-3 font-fj-body text-[0.875rem] font-semibold text-[#B23E13]">Custom-theme stores take 3 to 5 weeks. Fixed price per phase, in writing.</p>
+            </div>
+          }
+        />
+
+        {/* ── 1b. ANSWER FIRST ─────────────────────────────────────────────── */}
+        <AnswerFirst
+          eyebrow="THE SHORT ANSWER"
+          question={"Which is the best ecommerce website development company in Delhi?"}
+          answer={[
+            "Start with how you sell today. A Karol Bagh jeweller, a Sadar Bazaar toy wholesaler and a Gurugram skincare brand each need a different build, so the right Delhi partner asks about your trade before it names a platform. FactoryJet scopes a retail store, a wholesale portal or both, fixes the price for each phase in writing, and builds a working draft on your own products before you sign anything.",
+            "We are a registered Shopify Partner with a 5.0 rating on Clutch (4 reviews) and 5.0 on GoodFirms (5 reviews), and we have served 500+ businesses since 2014. Whoever you shortlist in Delhi, place a test order on two of their live stores from your own phone.",
+          ]}
+          factsTitle="FactoryJet at a glance"
+          facts={[
+            { k: 'Shopify status', v: 'Registered Shopify Partner' },
+            { k: 'Reviews', v: 'Clutch 5.0 (4 reviews), GoodFirms 5.0 (5 reviews)' },
+            { k: 'Track record', v: '500+ businesses served, 97% of projects on time or early, founded 2014' },
+            { k: 'Timelines', v: 'Custom-theme store 3 to 5 weeks; advanced store 5 to 8; headless or custom 8 to 14' },
+          ]}
+          links={[
+            { label: 'Ecommerce development in India', href: '/ecommerce-development' },
+            { label: 'Shopify development company in India', href: '/shopify-development' },
+            { label: 'Ecommerce website cost in India', href: '/blog/ecommerce-website-development-cost-india' },
+          ]}
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
@@ -412,8 +530,8 @@ export default function DelhiEcommercePage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Retail stores, wholesale portals and D2C builds for businesses in India, the US, the UK and the UAE. Delhi NCR clients get a fixed price per phase, the full code in their name, and 7-day delivery."
+          headline="500+ businesses served. 97% on-time delivery. Founded 2014."
+          description="Retail stores, wholesale portals and D2C builds for businesses in India, the US, the UK and the UAE. Delhi NCR clients get a fixed price per phase, the full code in their name, and a draft store before they sign."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
@@ -447,32 +565,6 @@ export default function DelhiEcommercePage() {
               <p>
                 Delhi trade runs on trust built over decades in one market lane. Online, that trust has to be rebuilt from scratch. Buyers want to see the real product, the real price, the return terms and a phone number that answers. Wholesale buyers want something else again: price slabs, minimum quantities, credit and a GST invoice for every order.
               </p>
-
-              <div className="grid grid-cols-3 gap-3" aria-hidden>
-                {[
-                  { value: '0.9%', label: 'India avg. ecommerce conversion rate' },
-                  { value: '65%', label: 'India ecommerce traffic via mobile' },
-                  { value: '78%', label: 'cart abandonment rate in India' },
-                ].map((b) => (
-                  <div
-                    key={b.value}
-                    className="rounded-xl border border-fj-neutral-200 bg-white px-3 py-4 text-center shadow-sm"
-                  >
-                    <p
-                      className="fj-display font-bold text-[#F05A28]"
-                      style={{ fontSize: '1.375rem', lineHeight: 1, letterSpacing: '-0.03em' }}
-                    >
-                      {b.value}
-                    </p>
-                    <p
-                      className="mt-1.5 font-fj-mono font-medium uppercase text-fj-neutral-400"
-                      style={{ fontSize: '0.6875rem', letterSpacing: '0.07em' }}
-                    >
-                      {b.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
 
               <div className="border-l-2 border-[#F05A28] pl-5 py-1" aria-hidden>
                 <p
@@ -541,16 +633,24 @@ export default function DelhiEcommercePage() {
           }
         />
 
+        {/* ── 4b. BUYER QUESTIONS ──────────────────────────────────────────── */}
+        <QuestionAnswers
+          eyebrow={"WHAT DELHI BUYERS ASK BEFORE HIRING"}
+          intro="Short answers to the questions buyers type into Google and ask AI assistants. Prices quoted here are Shopify's and Razorpay's published prices, not ours."
+          items={CITY_QUESTIONS}
+          bgClassName="bg-white"
+        />
+
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Delhi NCR Businesses Pick FactoryJet"
-          lead="Delhi owners know how to bargain and hate surprises. So we put the price for each phase in writing, write 7-day delivery for standard stores into the agreement, and build a working draft on your own products before you sign."
+          lead="Delhi owners know how to bargain and hate surprises. So we put the price for each phase in writing, agree the launch date before work starts, and build a working draft on your own products before you sign."
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing.',
-              body: 'Standard Shopify and WooCommerce stores for Delhi NCR businesses go live in 7 days once products, photos and gateway approval are in. The date is part of the agreement. We have delivered on time on 97% of builds.',
+              title: 'A draft store before you sign.',
+              body: 'We build a draft on a few of your real products, so you and your partners can test it on your phones. The launch date is part of the agreement, and 97% of our projects have been delivered on time or early.',
             },
             {
               icon: '📱',
@@ -585,24 +685,34 @@ export default function DelhiEcommercePage() {
           ]}
           stats={[
             {
-              value: '3.0 Cr+',
-              label: "Consumers in Delhi NCR: India's largest single metro ecommerce market",
-              sourceUrl: 'https://www.ibef.org/states/delhi',
-              sourceLabel: 'IBEF Delhi',
-            },
-            {
-              value: '23%',
-              label: "India's projected ecommerce market growth rate, year over year through 2030",
-              sourceUrl: 'https://www.ibef.org/industry/ecommerce',
+              value: 'US$ 345B',
+              label: "India's projected e-commerce market by 2030, up from US$ 125 billion in 2024 (18.4% a year)",
+              sourceUrl: CITY_SRC.ibef.url,
               sourceLabel: 'India Brand Equity Foundation',
             },
             {
-              value: '500M+',
-              label: 'UPI transactions per month in India: the payment rail your store must support',
-              sourceUrl: 'https://www.npci.org.in/what-we-do/upi/product-statistics',
-              sourceLabel: 'NPCI UPI Statistics',
+              value: '₹1,499',
+              label: 'a month for Shopify Basic in India on yearly billing, before apps and fees',
+              sourceUrl: CITY_SRC.shopifyPricing.url,
+              sourceLabel: 'Shopify India pricing',
+            },
+            {
+              value: '2%',
+              label: 'Razorpay platform fee per domestic transaction, plus GST on the fee',
+              sourceUrl: CITY_SRC.razorpay.url,
+              sourceLabel: 'Razorpay pricing',
             },
           ]}
+        />
+
+        {/* ── 7b. COMPARISON ───────────────────────────────────────────────── */}
+        <ComparisonTable
+          eyebrow="HOW TO CHOOSE"
+          headline={"Choosing an Ecommerce Developer in Delhi"}
+          lead={"Four ways to get an online store in Delhi, compared on what decides the result."}
+          columns={CITY_COMPARISON_COLUMNS}
+          rows={CITY_COMPARISON_ROWS}
+          footer="Agency and freelancer cells are general patterns, not claims about any one firm. Ask every firm you shortlist the same questions."
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
@@ -667,7 +777,7 @@ export default function DelhiEcommercePage() {
               description:
                 'Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.',
               imageSrc: '/images/portfolio/belle-maison.webp',
-              stat1: 'Live in 7 days',
+              stat1: 'Trade price tiers',
               stat2: 'Commerceflo · B2B',
             },
             {
@@ -676,7 +786,7 @@ export default function DelhiEcommercePage() {
               description:
                 'Impulse Branding is a Mumbai print branding and general contracting company. FactoryJet built impulsebranding.in and is now building their next-generation site.',
               imageSrc: '/images/work/impulse-branding-desktop.webp',
-              stat1: 'Launched in 6 days',
+              stat1: '75+ page site',
               stat2: 'Web · SEO',
             },
           ]}
@@ -684,7 +794,11 @@ export default function DelhiEcommercePage() {
           ctaLabel="View full portfolio"
         />
 
-        <GetFreeQuoteCTA />
+        <MidPageCTA
+          headline={"Test your Delhi store on your phone first."}
+          sub={"Share your catalogue, price list or current website. We will build a draft on a few of your real products and put the price for each phase in writing."}
+          label="See a draft of my store"
+        />
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
@@ -700,15 +814,25 @@ export default function DelhiEcommercePage() {
           items={DELHI_ECOM_FAQ_ITEMS}
         />
 
+        {/* ── 12b. SOURCES ─────────────────────────────────────────────────── */}
+        <SourceList
+          checkedOn={CITY_CHECKED_ON}
+          sources={[
+            { ...CITY_SRC.shopifyPricing, note: 'Shopify plan prices in rupees and third-party transaction fees' },
+            { ...CITY_SRC.razorpay, note: '2% platform fee on domestic transactions, plus GST on the fee' },
+            { ...CITY_SRC.ibef, note: 'India e-commerce market size for 2024 and projection for 2030' },
+          ]}
+        />
+
         {/* ── 13. FINAL CTA (DARK) ─────────────────────────────────────────── */}
         <FinalCTA
-          variant="dark"
+          variant="light"
           eyebrow="READY TO LAUNCH"
-          headline="Your Delhi Store, Live in 7 Days"
+          headline="Your Delhi Store, Retail or Wholesale, Priced in Writing"
           sub="FactoryJet has worked with 500+ businesses across India, the US, the UK and the UAE. Tell us how you sell today, retail or wholesale, and we will propose a platform, fix the price per phase in writing and show you a draft before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price per phase. 7-day delivery. UPI, COD and NCR-ready GST. The code and every account stay in your name."
+          objectionHandler="Fixed price per phase. Draft before contract. UPI, COD and NCR-ready GST. The code and every account stay in your name."
         />
 
       </main>

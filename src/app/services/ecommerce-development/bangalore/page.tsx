@@ -14,20 +14,21 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
-import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { ecommerceCityAlternatesIN } from '@/data/hreflangMap';
-import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
+import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
+import { AnswerFirst, QuestionAnswers, SourceList } from '@/components/india-pages/IndiaAnswerBlocks';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development in Bangalore | FactoryJet',
+  title: "Best Ecommerce Website Development in Bangalore | FactoryJet",
   description:
-    'Ecommerce development in Bangalore for D2C startups, SP Road electronics sellers and Peenya suppliers. Shopify, headless, Razorpay and GST. 7-day delivery.',
+    "Ecommerce website development company in Bangalore for D2C startups, SP Road electronics sellers and Peenya makers. Shopify, headless, UPI and GST.",
   keywords: [
     'ecommerce development company bangalore',
     'ecommerce website development bangalore',
@@ -47,9 +48,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Company in Bangalore | FactoryJet',
+    title: "Ecommerce Website Development Company in Bangalore | FactoryJet",
     description:
-      'Bangalore ecommerce builds: Shopify stores for Koramangala D2C brands, headless storefronts, B2B portals for Peenya makers. UPI, COD, GST. 7-day delivery.',
+      "Shopify and headless Next.js stores for Bengaluru D2C brands, EMI-ready electronics catalogues and trade portals for Peenya manufacturers. A draft store before you sign.",
     url: 'https://factoryjet.com/services/ecommerce-development/bangalore',
     images: [
       {
@@ -63,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Bangalore | FactoryJet',
+    title: "Ecommerce Website Development Company in Bangalore | FactoryJet",
     description:
-      'Bangalore ecommerce: Shopify, headless and B2B builds with Razorpay, UPI and GST invoicing.',
+      "Bangalore ecommerce: Shopify, headless and B2B stores with UPI, EMI and GST invoicing.",
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -92,7 +93,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-11-07';
+const PAGE_MODIFIED = '2026-11-24';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -126,7 +127,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/bangalore',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Bengaluru startups, retailers and manufacturers. Shopify, WooCommerce, headless and B2B builds with Razorpay, UPI, COD and GST invoicing. 7-day delivery.',
+    'Ecommerce development company serving Bengaluru startups, retailers and manufacturers. Shopify, WooCommerce, headless and B2B builds with Razorpay, UPI, COD and GST invoicing.',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Bangalore',
@@ -194,7 +195,7 @@ const BANGALORE_ECOM_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How long does a Bangalore ecommerce build take?',
     answer:
-      'A standard Shopify or WooCommerce store is live in 7 days once products, photos and gateway approval are with us. A custom theme takes 3 to 5 weeks. Subscriptions, B2B pricing or a migration from another platform take 5 to 8 weeks. A headless Next.js storefront takes 8 to 14 weeks.',
+      'A store with a custom-designed theme takes 3 to 5 weeks once products, photos and gateway approval are with us. Subscriptions, B2B pricing or a migration from another platform take 5 to 8 weeks. A headless Next.js storefront takes 8 to 14 weeks.',
   },
   {
     category: 'pricing',
@@ -322,6 +323,24 @@ const BANGALORE_ECOM_FAQ_ITEMS = [
     answer:
       'Hiring works if you plan a long product roadmap and can manage engineers. For a launch, one hire rarely covers design, payments, logistics, tax and search together. A small senior team does it at a fixed price. If you hire an ecommerce developer in Bangalore, ask to see two stores they shipped, live, on your phone.',
   },
+  {
+    category: "platform",
+    question: "Which is the best Shopify development company in Bangalore for a D2C brand?",
+    answer:
+      "Look for a team that has shipped both Shopify themes and headless builds, so its advice is not tied to one stack. FactoryJet is a registered Shopify Partner. We pick the stack after seeing your catalogue and team, test speed on mobile before launch, and build a draft on your products before you sign, so you judge real work.",
+  },
+  {
+    category: "platform",
+    question: "Can a Peenya manufacturer take trade orders online?",
+    answer:
+      "Yes. Trade buyers log in, see price lists set for their account, send RFQs, place bulk orders and get GST B2B invoices. We build this on Shopify Plus B2B or on Commerceflo, our own B2B platform. Belle Maison, a home decor wholesaler, takes trade orders on a Commerceflo store we built.",
+  },
+  {
+    category: "india",
+    question: "Should a Bengaluru brand sell on its own store or on Myntra and Nykaa?",
+    answer:
+      "Most brands do both. Marketplaces bring shoppers who are already searching, but the marketplace keeps the customer data and sets the fees. Your own store keeps the customer list and lets you sell bundles and subscriptions. We connect both through a tool such as Unicommerce or EasyEcom, so stock and prices match everywhere and sale weeks do not cause overselling.",
+  },
 ];
 
 const faqSchema = {
@@ -348,6 +367,74 @@ const speakableSchema = {
   },
   url: 'https://factoryjet.com/services/ecommerce-development/bangalore',
 };
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   India refresh, 24 Nov 2026: answer-first block, buyer questions, comparison,
+   sources. Each source opened and checked on 24 Nov 2026.
+───────────────────────────────────────────────────────────────────────────── */
+
+const CITY_CHECKED_ON = '24 November 2026';
+
+const CITY_SRC = {
+  shopifyPricing: { label: 'Shopify India pricing', url: 'https://www.shopify.com/in/pricing' },
+  razorpay: { label: 'Razorpay pricing', url: 'https://razorpay.com/pricing/' },
+  ibef: { label: 'IBEF: E-commerce industry in India', url: 'https://www.ibef.org/industry/ecommerce' },
+  shopifyGst: { label: 'Shopify Help: GST in India', url: 'https://help.shopify.com/en/manual/taxes/india-gst' },
+} as const;
+
+const CITY_QUESTIONS = [
+  {
+    q: "What is the cost of ecommerce website development in Bangalore?",
+    a: ["The build price swings on four things: a theme build or a headless one, subscription logic, international payments, and how many systems the store must talk to, such as marketplaces, billing software and couriers. Running costs are separate. Shopify's India pricing page lists Basic at ₹1,499 a month on yearly billing. Razorpay charges 2% per domestic transaction, plus GST on the fee. We fix the build price per phase in writing after a scoping call."],
+    sources: [CITY_SRC.shopifyPricing, CITY_SRC.razorpay],
+  },
+  {
+    q: "Should a Bangalore D2C brand use Shopify, WooCommerce or a headless build?",
+    a: ["Start on a fast Shopify theme unless you have a clear reason not to. Headless, meaning a Next.js front end with Shopify behind it, pays off when your marketing team ships many pages and campaigns or you have in-house developers. WooCommerce fits a brand whose content already lives on WordPress. Peenya manufacturers selling to trade buyers usually need a B2B portal rather than a retail store."],
+  },
+  {
+    q: "How long does it take to build an ecommerce store in Bangalore?",
+    a: ["A custom-designed Shopify theme takes 3 to 5 weeks. Add subscriptions, B2B pricing or a migration from another platform and it becomes 5 to 8 weeks. A headless Next.js storefront takes 8 to 14 weeks. If your launch is tied to a festival sale or an influencer drop, work back from that date and leave room for product photos and payment gateway approval."],
+  },
+  {
+    q: "What should I check before hiring an ecommerce developer in Bangalore?",
+    a: ["Ask for two stores they shipped and test them on a budget Android phone. Ask whether they render headless pages on the server, because a badly built headless store can hide products from Google. Confirm the repo sits in your GitHub organisation, with a README your own developers can follow. Then get the scope and price for each phase in writing before work begins."],
+  },
+];
+
+const CITY_COMPARISON_COLUMNS = [
+  { label: 'FactoryJet', isFactoryJet: true },
+  { label: "Typical Bangalore agency" },
+  { label: 'Freelancer' },
+  { label: 'Marketplace only' },
+] as const;
+
+const CITY_COMPARISON_ROWS = [
+  {
+    feature: 'Draft store on your products before you sign',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Sometimes" />, <CompareIcon key="freelancer" kind="partial" label="Sometimes" />, <CompareIcon key="marketplace" kind="no" label="No own store" />],
+  },
+  {
+    feature: 'Fixed price per phase, in writing',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Varies" />, <CompareIcon key="freelancer" kind="partial" label="Varies" />, 'Fees per order'],
+  },
+  {
+    feature: "Theme or headless choice explained in writing",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="partial" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: "Repo in your GitHub organisation, with a setup README",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="partial" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Customer list and brand stay yours',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="yes" />, <CompareIcon key="freelancer" kind="yes" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Typical time for a custom-theme store',
+    values: ['3 to 5 weeks', 'Varies', 'Varies', 'Listing in days, no store'],
+  },
+];
 
 export default function BangaloreEcommercePage() {
   return (
@@ -380,32 +467,63 @@ export default function BangaloreEcommercePage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Bangalore', url: 'https://factoryjet.com/services/ecommerce-development/bangalore' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Bangalore", url: 'https://factoryjet.com/services/ecommerce-development/bangalore' },
         ]}
       />
 
       <main className="bg-fj-cream">
       <Breadcrumbs items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Bangalore', url: 'https://factoryjet.com/services/ecommerce-development/bangalore' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Bangalore", url: 'https://factoryjet.com/services/ecommerce-development/bangalore' },
         ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_bangalore_hero" />}
-          eyebrow="ECOMMERCE DEVELOPMENT · BANGALORE"
-          headline="Ecommerce Development in Bangalore: Store Live in 7 Days"
-          lead="FactoryJet builds Shopify and headless stores for Bengaluru D2C startups, EMI-ready catalogues for electronics sellers, and trade portals for Peenya manufacturers. UPI first at checkout, GST on every invoice, Lighthouse 90+ on mobile. 7-day delivery."
-          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
+          eyebrow="ECOMMERCE WEBSITE DEVELOPMENT · BANGALORE"
+          headline="Ecommerce Website Development Company in Bangalore for D2C Startups, Electronics Sellers and Manufacturers"
+          lead="FactoryJet builds Shopify and headless stores for Koramangala and Indiranagar D2C brands, spec-filtered catalogues with EMI for SP Road electronics dealers, and buyer-login trade portals for Peenya and Electronic City makers. UPI first at checkout, GST on every invoice, the repo in your name, and a draft of your store before you sign."
+          secondaryCta={{ label: 'See a draft of my store', modal: true as const, region: 'in' as const }}
           trustItems={[
-            '7-day delivery',
+            'Draft store before you sign',
             'Razorpay + UPI + COD ready',
           ]}
-          rightSlot={<HeroBrowserMockup />}
+          rightSlot={
+            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-7 shadow-sm">
+              <p className="font-fj-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">WHAT A BENGALURU STORE USUALLY NEEDS</p>
+              <ul className="mt-5 space-y-3">
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Speed</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Lighthouse 90+ on mobile, LCP under 2.5 seconds</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Stack</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Shopify theme or headless Next.js, with the reason in writing</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Electronics</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Spec filters, EMI on the product page, warranty registration</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Trade</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Buyer logins, account price lists and RFQ forms</p></li>
+              </ul>
+              <p className="mt-5 rounded-xl bg-[rgba(240,90,40,0.08)] px-4 py-3 font-fj-body text-[0.875rem] font-semibold text-[#B23E13]">Custom-theme stores take 3 to 5 weeks. Fixed price per phase, in writing.</p>
+            </div>
+          }
+        />
+
+        {/* ── 1b. ANSWER FIRST ─────────────────────────────────────────────── */}
+        <AnswerFirst
+          eyebrow="THE SHORT ANSWER"
+          question={"Which is the best ecommerce website development company in Bangalore?"}
+          answer={[
+            "Ask any Bangalore firm to justify its stack before you hire it. A seed-stage skincare label usually sells well on a fast Shopify theme. A brand with its own developers and heavy content may need headless Next.js on top of Shopify. FactoryJet makes that call in writing, prices each phase up front, and hands the code to your GitHub organisation. You click through a draft on your real products before signing.",
+            "FactoryJet is a registered Shopify Partner, rated 5.0 on Clutch across 4 reviews and 5.0 on GoodFirms across 5. Since 2014 we have served 500+ businesses. When you compare Bengaluru teams, open their live stores on a mid-range phone over 4G and time how long a product page takes to load.",
+          ]}
+          factsTitle="FactoryJet at a glance"
+          facts={[
+            { k: 'Shopify status', v: 'Registered Shopify Partner' },
+            { k: 'Reviews', v: 'Clutch 5.0 (4 reviews), GoodFirms 5.0 (5 reviews)' },
+            { k: 'Track record', v: '500+ businesses served, 97% of projects on time or early, founded 2014' },
+            { k: 'Timelines', v: 'Custom-theme store 3 to 5 weeks; advanced store 5 to 8; headless or custom 8 to 14' },
+          ]}
+          links={[
+            { label: 'Ecommerce development in India', href: '/ecommerce-development' },
+            { label: 'Shopify development company in India', href: '/shopify-development' },
+            { label: 'Ecommerce website cost in India', href: '/blog/ecommerce-website-development-cost-india' },
+          ]}
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
@@ -414,8 +532,8 @@ export default function BangaloreEcommercePage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Stores and B2B portals for founders in India, the US, the UK and the UAE. Bengaluru teams get a fixed price per phase, a repo they own from day one, and 7-day delivery on standard stores."
+          headline="500+ businesses served. 97% on-time delivery. Founded 2014."
+          description="Stores and B2B portals for founders in India, the US, the UK and the UAE. Bengaluru teams get a fixed price per phase, a repo they own from day one, and a draft store before they sign."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
@@ -449,32 +567,6 @@ export default function BangaloreEcommercePage() {
               <p>
                 Bengaluru buyers order groceries in minutes and expect the same speed from every app on their phone. A store that takes four seconds to show a product photo loses them. So does a checkout that asks for an address twice or hides the UPI option below the cards. These are build decisions, made long before any ad goes live.
               </p>
-
-              <div className="grid grid-cols-3 gap-3" aria-hidden>
-                {[
-                  { value: '0.9%', label: 'India avg. ecommerce conversion rate' },
-                  { value: '65%', label: 'India ecommerce traffic via mobile' },
-                  { value: '78%', label: 'cart abandonment rate in India' },
-                ].map((b) => (
-                  <div
-                    key={b.value}
-                    className="rounded-xl border border-fj-neutral-200 bg-white px-3 py-4 text-center shadow-sm"
-                  >
-                    <p
-                      className="fj-display font-bold text-[#F05A28]"
-                      style={{ fontSize: '1.375rem', lineHeight: 1, letterSpacing: '-0.03em' }}
-                    >
-                      {b.value}
-                    </p>
-                    <p
-                      className="mt-1.5 font-fj-mono font-medium uppercase text-fj-neutral-400"
-                      style={{ fontSize: '0.6875rem', letterSpacing: '0.07em' }}
-                    >
-                      {b.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
 
               <div className="border-l-2 border-[#F05A28] pl-5 py-1" aria-hidden>
                 <p
@@ -543,16 +635,24 @@ export default function BangaloreEcommercePage() {
           }
         />
 
+        {/* ── 4b. BUYER QUESTIONS ──────────────────────────────────────────── */}
+        <QuestionAnswers
+          eyebrow={"WHAT BANGALORE BUYERS ASK BEFORE HIRING"}
+          intro="Short answers to the questions buyers type into Google and ask AI assistants. Prices quoted here are Shopify's and Razorpay's published prices, not ours."
+          items={CITY_QUESTIONS}
+          bgClassName="bg-white"
+        />
+
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Bengaluru Founders Pick FactoryJet"
-          lead="Startup founders in Bengaluru usually have a launch date tied to a funding round, a festival sale or an influencer drop. We fix the price per phase in writing, put 7-day delivery for standard stores into the agreement, and show you a working draft on your own products before you commit."
+          lead="Startup founders in Bengaluru usually have a launch date tied to a funding round, a festival sale or an influencer drop. We fix the price per phase in writing, agree the launch date before work starts, and show you a working draft on your own products before you commit."
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing.',
-              body: 'A standard store goes live in 7 days once your products, photos and gateway approval are ready, and that date is written into the agreement. We have delivered on time on 97% of builds. When one slipped, it was usually waiting on assets from the client.',
+              title: 'A draft store before you sign.',
+              body: 'We build a draft on a handful of your real products, and your team clicks through it on their own phones. The launch date goes into the agreement, and 97% of our projects have been delivered on time or early.',
             },
             {
               icon: '📱',
@@ -587,24 +687,34 @@ export default function BangaloreEcommercePage() {
           ]}
           stats={[
             {
-              value: '13,000+',
-              label: 'Active startups in Bangalore: India\'s most digitally sophisticated consumer base',
-              sourceUrl: 'https://www.ibef.org/states/karnataka',
-              sourceLabel: 'IBEF Karnataka',
-            },
-            {
-              value: '23%',
-              label: "India's projected ecommerce market growth rate, year over year through 2030",
-              sourceUrl: 'https://www.ibef.org/industry/ecommerce',
+              value: 'US$ 345B',
+              label: "India's projected e-commerce market by 2030, up from US$ 125 billion in 2024 (18.4% a year)",
+              sourceUrl: CITY_SRC.ibef.url,
               sourceLabel: 'India Brand Equity Foundation',
             },
             {
-              value: '500M+',
-              label: 'UPI transactions per month in India: the payment rail your store must support',
-              sourceUrl: 'https://www.npci.org.in/what-we-do/upi/product-statistics',
-              sourceLabel: 'NPCI UPI Statistics',
+              value: '₹1,499',
+              label: 'a month for Shopify Basic in India on yearly billing, before apps and fees',
+              sourceUrl: CITY_SRC.shopifyPricing.url,
+              sourceLabel: 'Shopify India pricing',
+            },
+            {
+              value: '2%',
+              label: 'Razorpay platform fee per domestic transaction, plus GST on the fee',
+              sourceUrl: CITY_SRC.razorpay.url,
+              sourceLabel: 'Razorpay pricing',
             },
           ]}
+        />
+
+        {/* ── 7b. COMPARISON ───────────────────────────────────────────────── */}
+        <ComparisonTable
+          eyebrow="HOW TO CHOOSE"
+          headline={"Choosing an Ecommerce Developer in Bangalore"}
+          lead={"Four ways to get an online store in Bangalore, compared on what decides the result."}
+          columns={CITY_COMPARISON_COLUMNS}
+          rows={CITY_COMPARISON_ROWS}
+          footer="Agency and freelancer cells are general patterns, not claims about any one firm. Ask every firm you shortlist the same questions."
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
@@ -669,7 +779,7 @@ export default function BangaloreEcommercePage() {
               description:
                 'Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.',
               imageSrc: '/images/portfolio/belle-maison.webp',
-              stat1: 'Live in 7 days',
+              stat1: 'Trade price tiers',
               stat2: 'Commerceflo · B2B',
             },
             {
@@ -678,7 +788,7 @@ export default function BangaloreEcommercePage() {
               description:
                 'Impulse Branding is a Mumbai print branding and general contracting company. FactoryJet built impulsebranding.in and is now building their next-generation site.',
               imageSrc: '/images/work/impulse-branding-desktop.webp',
-              stat1: 'Launched in 6 days',
+              stat1: '75+ page site',
               stat2: 'Web · SEO',
             },
           ]}
@@ -686,7 +796,11 @@ export default function BangaloreEcommercePage() {
           ctaLabel="View full portfolio"
         />
 
-        <GetFreeQuoteCTA />
+        <MidPageCTA
+          headline={"Click through your Bengaluru store before you commit."}
+          sub={"Send your catalogue, Figma file or current store link. We will build a draft on a few real products and price each phase in writing."}
+          label="See a draft of my store"
+        />
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
@@ -702,15 +816,25 @@ export default function BangaloreEcommercePage() {
           items={BANGALORE_ECOM_FAQ_ITEMS}
         />
 
+        {/* ── 12b. SOURCES ─────────────────────────────────────────────────── */}
+        <SourceList
+          checkedOn={CITY_CHECKED_ON}
+          sources={[
+            { ...CITY_SRC.shopifyPricing, note: 'Shopify plan prices in rupees and third-party transaction fees' },
+            { ...CITY_SRC.razorpay, note: '2% platform fee on domestic transactions, plus GST on the fee' },
+            { ...CITY_SRC.ibef, note: 'India e-commerce market size for 2024 and projection for 2030' },
+          ]}
+        />
+
         {/* ── 13. FINAL CTA (DARK) ─────────────────────────────────────────── */}
         <FinalCTA
-          variant="dark"
+          variant="light"
           eyebrow="READY TO LAUNCH"
-          headline="Your Bangalore Store, Live in 7 Days"
+          headline="Your Bangalore Store, Fast on Every Phone"
           sub="FactoryJet has worked with 500+ businesses in India, the US, the UK and the UAE. Send us your catalogue and launch date, and we will propose a stack, price each phase in writing and show you a draft of your store before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price per phase. 7-day delivery. UPI, GST and couriers wired in. Repo in your name from day one."
+          objectionHandler="Fixed price per phase. Draft before contract. UPI, GST and couriers wired in. Repo in your name from day one."
         />
 
       </main>

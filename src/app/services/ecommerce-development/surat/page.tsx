@@ -14,20 +14,21 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
-import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { ecommerceCityAlternatesIN } from '@/data/hreflangMap';
-import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
+import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
+import { AnswerFirst, QuestionAnswers, SourceList } from '@/components/india-pages/IndiaAnswerBlocks';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development in Surat | FactoryJet',
+  title: "Best Ecommerce Website Development in Surat | FactoryJet",
   description:
-    'Ecommerce development in Surat for saree and dress material traders, natural and lab-grown diamond sellers and farsan brands. Shopify, UPI, GST. 7-day delivery.',
+    "Ecommerce website development company in Surat for saree traders, diamond dealers and farsan brands. Reseller logins, UPI, COD and GST invoices.",
   keywords: [
     'ecommerce development company surat',
     'ecommerce website development surat',
@@ -47,9 +48,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Company in Surat | FactoryJet',
+    title: "Ecommerce Website Development Company in Surat | FactoryJet",
     description:
-      'Surat ecommerce: retail stores and reseller catalogues for Ring Road textile traders, private portals for diamond dealers, Surti food brands. 7-day delivery.',
+      "Shopify and WooCommerce stores for Ring Road textile traders, private catalogues for diamond dealers and stores for Surti food brands. A draft store before you sign.",
     url: 'https://factoryjet.com/services/ecommerce-development/surat',
     images: [
       {
@@ -63,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Surat | FactoryJet',
+    title: "Ecommerce Website Development Company in Surat | FactoryJet",
     description:
-      'Surat ecommerce: textile, diamond and food stores with reseller catalogues, UPI and GST.',
+      "Surat ecommerce: reseller catalogues for textile traders, private diamond portals and Surti food stores, with UPI and GST.",
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -92,7 +93,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-11-07';
+const PAGE_MODIFIED = '2026-11-24';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -130,7 +131,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/surat',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Surat traders and makers in Varachha, Katargam, Adajan and the Ring Road markets. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST. 7-day delivery.',
+    'Ecommerce development company serving Surat traders and makers in Varachha, Katargam, Adajan and the Ring Road markets. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST.',
   areaServed: [
     'Althan', 'Adajan', 'Vesu', 'Udhna', 'Varachha',
     'Ring Road', 'Katargam', 'Sachin GIDC',
@@ -192,7 +193,7 @@ const SURAT_ECOM_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How quickly can a Surat trader get a store live?',
     answer:
-      'A standard Shopify or WooCommerce store goes live in 7 days once products, photos and gateway approval are ready. A custom theme takes 3 to 5 weeks. Reseller catalogues or diamond trade portals take 5 to 8 weeks, and fully custom platforms take 8 to 14 weeks.',
+      'A store with a custom-designed theme takes 3 to 5 weeks once products, photos and gateway approval are ready. Reseller catalogues or diamond trade portals take 5 to 8 weeks, and fully custom platforms take 8 to 14 weeks.',
   },
   {
     category: 'pricing',
@@ -320,6 +321,24 @@ const SURAT_ECOM_FAQ_ITEMS = [
     answer:
       'One developer can start a simple store. A Surat store with resellers, wholesale pricing, bulk uploads, couriers, GST and SEO needs more hands than that. A small senior team covers it at a fixed price. If you hire an ecommerce developer in Surat, open two stores they built on your phone first.',
   },
+  {
+    category: "platform",
+    question: "Who is the best Shopify developer in Surat for reseller catalogues?",
+    answer:
+      "Choose a Shopify developer who has built stores where resellers log in, see their own margins and share product links on WhatsApp, not only retail themes. FactoryJet is a registered Shopify Partner. We build a draft on a few of your real designs before you sign, so you and your resellers can try it first.",
+  },
+  {
+    category: "platform",
+    question: "Can a Surat fabric wholesaler take trade orders online?",
+    answer:
+      "Yes. Approved shops log in to see set-wise prices, minimum quantities and their past orders, then reorder in a few taps. We build this on Shopify Plus B2B or on Commerceflo, our own B2B platform. Belle Maison, a home decor wholesaler, takes trade orders on a Commerceflo store we built.",
+  },
+  {
+    category: "india",
+    question: "Should a Surat trader sell on Meesho or on its own website?",
+    answer:
+      "Most do both. Meesho and other marketplaces bring resellers and buyers who are already shopping, but they set the fees and keep the customer details. Your own store keeps the reseller list and the margin. Link both to one stock count with a tool such as Unicommerce or EasyEcom, so a design that sells out on Meesho shows sold out on your site too.",
+  },
 ];
 
 const faqSchema = {
@@ -346,6 +365,74 @@ const speakableSchema = {
   },
   url: 'https://factoryjet.com/services/ecommerce-development/surat',
 };
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   India refresh, 24 Nov 2026: answer-first block, buyer questions, comparison,
+   sources. Each source opened and checked on 24 Nov 2026.
+───────────────────────────────────────────────────────────────────────────── */
+
+const CITY_CHECKED_ON = '24 November 2026';
+
+const CITY_SRC = {
+  shopifyPricing: { label: 'Shopify India pricing', url: 'https://www.shopify.com/in/pricing' },
+  razorpay: { label: 'Razorpay pricing', url: 'https://razorpay.com/pricing/' },
+  ibef: { label: 'IBEF: E-commerce industry in India', url: 'https://www.ibef.org/industry/ecommerce' },
+  shopifyGst: { label: 'Shopify Help: GST in India', url: 'https://help.shopify.com/en/manual/taxes/india-gst' },
+} as const;
+
+const CITY_QUESTIONS = [
+  {
+    q: "What does an ecommerce website cost for a Surat business?",
+    a: ["Three things move the build price most in Surat: reseller logins with margins, set-wise wholesale pricing, and how many designs you upload each week. A private diamond catalogue or a Gujarati storefront adds work too. Running costs come on top. Shopify's India page lists the Basic plan at ₹1,499 a month on yearly billing, and Razorpay charges 2% per domestic transaction plus GST on that fee. We give a fixed written price for each phase after one call about how you sell."],
+    sources: [CITY_SRC.shopifyPricing, CITY_SRC.razorpay],
+  },
+  {
+    q: "Shopify or WooCommerce for a Surat saree and dress material trader?",
+    a: ["For most Ring Road traders we suggest Shopify. It copes with large catalogues, takes bulk uploads from a sheet, and supports reseller logins and wholesale price lists. WooCommerce fits a trader who already runs a WordPress site with lots of content. A diamond dealer with private trade and parcel quotes may need a custom portal instead. We decide after we see how your orders come in today."],
+  },
+  {
+    q: "How long does it take to build an online store in Surat?",
+    a: ["A Surat store with a custom-designed theme takes 3 to 5 weeks. Reseller catalogues and diamond trade portals take 5 to 8 weeks, and headless or fully custom platforms take 8 to 14. Chaniya choli and festive wear sell in one short season, so brief us about two months before Navratri. That leaves time for the build, payment gateway approval and test orders from a reseller account."],
+  },
+  {
+    q: "What should I ask an ecommerce developer in Surat before hiring?",
+    a: ["Ask them to show a store where resellers log in and see their own prices, and test it on your phone. Ask how your team will upload fifty new designs in one go. Ask who writes the code, and get the price for each phase in writing. Finally, make sure the store, domain and payment accounts are registered in your company name from day one."],
+  },
+];
+
+const CITY_COMPARISON_COLUMNS = [
+  { label: 'FactoryJet', isFactoryJet: true },
+  { label: "Typical Surat agency" },
+  { label: 'Freelancer' },
+  { label: 'Marketplace only' },
+] as const;
+
+const CITY_COMPARISON_ROWS = [
+  {
+    feature: 'Draft store on your products before you sign',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Sometimes" />, <CompareIcon key="freelancer" kind="partial" label="Sometimes" />, <CompareIcon key="marketplace" kind="no" label="No own store" />],
+  },
+  {
+    feature: 'Fixed price per phase, in writing',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Varies" />, <CompareIcon key="freelancer" kind="partial" label="Varies" />, 'Fees per order'],
+  },
+  {
+    feature: "Reseller logins with their own margins and shareable links",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="partial" />, <CompareIcon key="marketplace" kind="partial" />],
+  },
+  {
+    feature: "Private, login-only catalogue for diamond trade",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="no" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Customer list and brand stay yours',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="yes" />, <CompareIcon key="freelancer" kind="yes" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Typical time for a custom-theme store',
+    values: ['3 to 5 weeks', 'Varies', 'Varies', 'Listing in days, no store'],
+  },
+];
 
 export default function SuratEcommercePage() {
   return (
@@ -378,32 +465,63 @@ export default function SuratEcommercePage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Surat', url: 'https://factoryjet.com/services/ecommerce-development/surat' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Surat", url: 'https://factoryjet.com/services/ecommerce-development/surat' },
         ]}
       />
 
       <main className="bg-fj-cream">
       <Breadcrumbs items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Surat', url: 'https://factoryjet.com/services/ecommerce-development/surat' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Surat", url: 'https://factoryjet.com/services/ecommerce-development/surat' },
         ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_surat_hero" />}
-          eyebrow="ECOMMERCE DEVELOPMENT · SURAT"
-          headline="Ecommerce Development in Surat: Store Live in 7 Days"
-          lead="FactoryJet builds online stores and reseller catalogues for Surat saree and dress material traders, private portals for natural and lab-grown diamond dealers, and stores for Surti food brands. UPI and COD at checkout, GST on every invoice, Lighthouse 90+. 7-day delivery."
-          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
+          eyebrow="ECOMMERCE WEBSITE DEVELOPMENT · SURAT"
+          headline="Ecommerce Website Development Company in Surat for Textile, Diamond and Food Businesses"
+          lead="FactoryJet builds Shopify and WooCommerce stores for Ring Road saree and dress material traders, with reseller logins and catalogues they can share on WhatsApp. Diamond dealers get private, login-only catalogues with a certificate on every stone. Surti farsan and ghari brands get festival boxes and shipping across Gujarat. You see a draft on your own designs before you sign."
+          secondaryCta={{ label: 'See a draft of my store', modal: true as const, region: 'in' as const }}
           trustItems={[
-            '7-day delivery',
+            'Draft store before you sign',
             'Razorpay + UPI + COD ready',
           ]}
-          rightSlot={<HeroBrowserMockup />}
+          rightSlot={
+            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-7 shadow-sm">
+              <p className="font-fj-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">WHAT A SURAT STORE USUALLY NEEDS</p>
+              <ul className="mt-5 space-y-3">
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Resellers</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Own logins, own margins, product links they can share on WhatsApp</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Uploads</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Hundreds of new designs from one sheet, or one design from a phone in minutes</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Diamonds</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Approved buyers only, a certificate on every stone, parcel quotes</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Checkout</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">UPI first, COD with limits, GST invoices with HSN codes</p></li>
+              </ul>
+              <p className="mt-5 rounded-xl bg-[rgba(240,90,40,0.08)] px-4 py-3 font-fj-body text-[0.875rem] font-semibold text-[#B23E13]">Custom-theme stores take 3 to 5 weeks. Fixed price per phase, in writing.</p>
+            </div>
+          }
+        />
+
+        {/* ── 1b. ANSWER FIRST ─────────────────────────────────────────────── */}
+        <AnswerFirst
+          eyebrow="THE SHORT ANSWER"
+          question={"Which is the best ecommerce website development company in Surat?"}
+          answer={[
+            "Pick the firm that builds around how Surat trades. For a Ring Road textile house that means reseller logins, set-wise wholesale prices and bulk uploads, all planned before any design work. For a diamond dealer it means a private catalogue the public never sees. FactoryJet maps your selling model first, prices each phase in writing, and builds a draft on your own designs before you sign.",
+            "We are a registered Shopify Partner, rated 5.0 on Clutch from 4 reviews and 5.0 on GoodFirms from 5 reviews, and we have served 500+ businesses since 2014. Before you choose anyone in Surat, ask to see a reseller or wholesale store they built and place a test order on your phone.",
+          ]}
+          factsTitle="FactoryJet at a glance"
+          facts={[
+            { k: 'Shopify status', v: 'Registered Shopify Partner' },
+            { k: 'Reviews', v: 'Clutch 5.0 (4 reviews), GoodFirms 5.0 (5 reviews)' },
+            { k: 'Track record', v: '500+ businesses served, 97% of projects on time or early, founded 2014' },
+            { k: 'Timelines', v: 'Custom-theme store 3 to 5 weeks; advanced store 5 to 8; headless or custom 8 to 14' },
+          ]}
+          links={[
+            { label: 'Ecommerce development in India', href: '/ecommerce-development' },
+            { label: 'Shopify development company in India', href: '/shopify-development' },
+            { label: 'Ecommerce website cost in India', href: '/blog/ecommerce-website-development-cost-india' },
+          ]}
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
@@ -412,8 +530,8 @@ export default function SuratEcommercePage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="Stores, reseller catalogues and trade portals for businesses in India, the US, the UK and the UAE. Surat traders get a fixed price per phase, the code and every login, and 7-day delivery on standard stores."
+          headline="500+ businesses served. 97% on-time delivery. Founded 2014."
+          description="Stores, reseller catalogues and trade portals for businesses in India, the US, the UK and the UAE. Surat traders get a fixed price per phase, the code and every login, and a draft store before they sign."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
@@ -447,32 +565,6 @@ export default function SuratEcommercePage() {
               <p>
                 Surat textile trade moves through resellers. A trader posts a new design in a WhatsApp group in the morning and has orders by noon. The store has to fit that rhythm: new designs live in minutes, catalogues resellers can share, set-wise wholesale prices, and dispatch the same day. A slow upload screen or a clumsy cart breaks the chain.
               </p>
-
-              <div className="grid grid-cols-3 gap-3" aria-hidden>
-                {[
-                  { value: '0.9%', label: 'India avg. ecommerce conversion rate' },
-                  { value: '65%', label: 'India ecommerce traffic via mobile' },
-                  { value: '78%', label: 'cart abandonment rate in India' },
-                ].map((b) => (
-                  <div
-                    key={b.value}
-                    className="rounded-xl border border-fj-neutral-200 bg-white px-3 py-4 text-center shadow-sm"
-                  >
-                    <p
-                      className="fj-display font-bold text-[#F05A28]"
-                      style={{ fontSize: '1.375rem', lineHeight: 1, letterSpacing: '-0.03em' }}
-                    >
-                      {b.value}
-                    </p>
-                    <p
-                      className="mt-1.5 font-fj-mono font-medium uppercase text-fj-neutral-400"
-                      style={{ fontSize: '0.6875rem', letterSpacing: '0.07em' }}
-                    >
-                      {b.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
 
               <div className="border-l-2 border-[#F05A28] pl-5 py-1" aria-hidden>
                 <p
@@ -541,16 +633,24 @@ export default function SuratEcommercePage() {
           }
         />
 
+        {/* ── 4b. BUYER QUESTIONS ──────────────────────────────────────────── */}
+        <QuestionAnswers
+          eyebrow={"WHAT SURAT BUYERS ASK BEFORE HIRING"}
+          intro="Short answers to the questions buyers type into Google and ask AI assistants. Prices quoted here are Shopify's and Razorpay's published prices, not ours."
+          items={CITY_QUESTIONS}
+          bgClassName="bg-white"
+        />
+
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Surat Traders Work With FactoryJet"
-          lead="Surat business is decided quickly and judged on delivery. So we give you a fixed price for each phase in writing, put 7-day delivery for standard stores into the agreement, and build a working draft on your own designs before you sign."
+          lead="Surat business is decided quickly and judged on delivery. So we give you a fixed price for each phase in writing, agree the launch date before work starts, and build a working draft on your own designs before you sign."
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing.',
-              body: 'A standard store for a Surat trader goes live in 7 days after products, photos and gateway approval arrive. That date is written into the agreement. We have delivered on time on 97% of builds.',
+              title: 'A draft store before you sign.',
+              body: 'We build a draft on a few of your real designs, with a reseller login, so you and your resellers can test it on a phone. The launch date goes into the agreement, and 97% of our projects have been delivered on time or early.',
             },
             {
               icon: '📱',
@@ -585,24 +685,34 @@ export default function SuratEcommercePage() {
           ]}
           stats={[
             {
-              value: '23%',
-              label: "India's projected ecommerce market growth rate, year over year through 2030",
-              sourceUrl: 'https://www.ibef.org/industry/ecommerce',
+              value: 'US$ 345B',
+              label: "India's projected e-commerce market by 2030, up from US$ 125 billion in 2024 (18.4% a year)",
+              sourceUrl: CITY_SRC.ibef.url,
               sourceLabel: 'India Brand Equity Foundation',
             },
             {
-              value: '23%',
-              label: "India's projected ecommerce market growth rate, year over year through 2030",
-              sourceUrl: 'https://www.ibef.org/industry/ecommerce',
-              sourceLabel: 'India Brand Equity Foundation',
+              value: '₹1,499',
+              label: 'a month for Shopify Basic in India on yearly billing, before apps and fees',
+              sourceUrl: CITY_SRC.shopifyPricing.url,
+              sourceLabel: 'Shopify India pricing',
             },
             {
-              value: '500M+',
-              label: 'UPI transactions per month in India: the payment rail your store must support',
-              sourceUrl: 'https://www.npci.org.in/what-we-do/upi/product-statistics',
-              sourceLabel: 'NPCI UPI Statistics',
+              value: '2%',
+              label: 'Razorpay platform fee per domestic transaction, plus GST on the fee',
+              sourceUrl: CITY_SRC.razorpay.url,
+              sourceLabel: 'Razorpay pricing',
             },
           ]}
+        />
+
+        {/* ── 7b. COMPARISON ───────────────────────────────────────────────── */}
+        <ComparisonTable
+          eyebrow="HOW TO CHOOSE"
+          headline={"Choosing an Ecommerce Developer in Surat"}
+          lead={"Four ways to get an online store in Surat, compared on what decides the result."}
+          columns={CITY_COMPARISON_COLUMNS}
+          rows={CITY_COMPARISON_ROWS}
+          footer="Agency and freelancer cells are general patterns, not claims about any one firm. Ask every firm you shortlist the same questions."
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
@@ -667,7 +777,7 @@ export default function SuratEcommercePage() {
               description:
                 'Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.',
               imageSrc: '/images/portfolio/belle-maison.webp',
-              stat1: 'Live in 7 days',
+              stat1: 'Trade price tiers',
               stat2: 'Commerceflo · B2B',
             },
             {
@@ -676,7 +786,7 @@ export default function SuratEcommercePage() {
               description:
                 'Impulse Branding is a Mumbai print branding and general contracting company. FactoryJet built impulsebranding.in and is now building their next-generation site.',
               imageSrc: '/images/work/impulse-branding-desktop.webp',
-              stat1: 'Launched in 6 days',
+              stat1: '75+ page site',
               stat2: 'Web · SEO',
             },
           ]}
@@ -684,7 +794,11 @@ export default function SuratEcommercePage() {
           ctaLabel="View full portfolio"
         />
 
-        <GetFreeQuoteCTA />
+        <MidPageCTA
+          headline={"Try your Surat store with your resellers first."}
+          sub={"Send a few designs or your current catalogue. We will build a draft with a reseller login and price each phase in writing."}
+          label="See a draft of my store"
+        />
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
@@ -700,15 +814,25 @@ export default function SuratEcommercePage() {
           items={SURAT_ECOM_FAQ_ITEMS}
         />
 
+        {/* ── 12b. SOURCES ─────────────────────────────────────────────────── */}
+        <SourceList
+          checkedOn={CITY_CHECKED_ON}
+          sources={[
+            { ...CITY_SRC.shopifyPricing, note: 'Shopify plan prices in rupees and third-party transaction fees' },
+            { ...CITY_SRC.razorpay, note: '2% platform fee on domestic transactions, plus GST on the fee' },
+            { ...CITY_SRC.ibef, note: 'India e-commerce market size for 2024 and projection for 2030' },
+          ]}
+        />
+
         {/* ── 13. FINAL CTA (DARK) ─────────────────────────────────────────── */}
         <FinalCTA
-          variant="dark"
+          variant="light"
           eyebrow="READY TO LAUNCH"
-          headline="Your Surat Store, Live in 7 Days"
+          headline="Your Surat Store, Built for Resellers and Trade"
           sub="500+ businesses across India, the US, the UK and the UAE have worked with FactoryJet. Tell us how you sell, retail, resellers or trade, and we will propose a platform, price each phase in writing and show you a draft of the store before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price per phase. 7-day delivery. Reseller logins, UPI, COD and GST. The code and accounts stay in your name."
+          objectionHandler="Fixed price per phase. Draft before contract. Reseller logins, UPI, COD and GST. The code and accounts stay in your name."
         />
 
       </main>

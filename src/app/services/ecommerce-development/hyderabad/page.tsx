@@ -14,20 +14,21 @@ import IndustriesGrid from '@/components/v2/IndustriesGrid';
 import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
-import HeroBrowserMockup from '@/components/v2/HeroBrowserMockup';
 import SiteHeader from '@/components/v2/SiteHeader';
 import SiteFooter from '@/components/v2/SiteFooter';
 import { ecommerceCityAlternatesIN } from '@/data/hreflangMap';
-import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
+import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
+import { AnswerFirst, QuestionAnswers, SourceList } from '@/components/india-pages/IndiaAnswerBlocks';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Ecommerce Development in Hyderabad | FactoryJet',
+  title: "Best Ecommerce Website Development in Hyderabad | FactoryJet",
   description:
-    'Ecommerce development in Hyderabad for pearl jewellers, Pochampally ikat weavers, pharma suppliers and HITEC City D2C brands. Shopify, UPI, GST. 7-day delivery.',
+    "Ecommerce website development company in Hyderabad for pearl jewellers, ikat weavers, food brands and pharma distributors. Shopify, UPI, COD and GST.",
   keywords: [
     'ecommerce development company hyderabad',
     'ecommerce website development hyderabad',
@@ -47,9 +48,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Ecommerce Development Company in Hyderabad | FactoryJet',
+    title: "Ecommerce Development Company in Hyderabad | FactoryJet",
     description:
-      'Hyderabad ecommerce stores: pearls and bangles from the old city, ikat sarees, food brands, and B2B portals for pharma distributors. 7-day delivery.',
+      "Stores for Pathergatti pearl jewellers, Pochampally ikat weavers and Hyderabadi food brands, plus login portals for pharma distributors. Telugu or Urdu on request. A draft before you sign.",
     url: 'https://factoryjet.com/services/ecommerce-development/hyderabad',
     images: [
       {
@@ -63,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ecommerce Development Hyderabad | FactoryJet',
+    title: "Ecommerce Development Company in Hyderabad | FactoryJet",
     description:
-      'Hyderabad ecommerce: pearl, ikat, food and pharma B2B stores with UPI, COD, Telugu and GST.',
+      "Hyderabad ecommerce: pearl, ikat, food and pharma B2B stores with UPI, COD and GST.",
     images: ['https://factoryjet.com/images/services/card-ecommerce.webp'],
   },
   alternates: {
@@ -92,7 +93,7 @@ export const metadata: Metadata = {
 // Freshness signal. Benchmark: 56% of Google-AI-Overview-cited pages carry
 // dateModified; these pages carried none. Keep this honest: bump it when the
 // page's content actually changes, not on every unrelated deploy.
-const PAGE_MODIFIED = '2026-11-07';
+const PAGE_MODIFIED = '2026-11-24';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -130,7 +131,7 @@ const localBusinessSchema = {
   url: 'https://factoryjet.com/services/ecommerce-development/hyderabad',
   image: 'https://factoryjet.com/logo.png',
   description:
-    'Ecommerce development company serving Hyderabad and Secunderabad businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing. 7-day delivery.',
+    'Ecommerce development company serving Hyderabad and Secunderabad businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing.',
   areaServed: [
     'HITEC City', 'Madhapur', 'Gachibowli', 'Banjara Hills',
     'Jubilee Hills', 'Secunderabad', 'Kukatpally', 'Ameerpet',
@@ -192,7 +193,7 @@ const HYDERABAD_ECOM_FAQ_ITEMS = [
     category: 'pricing',
     question: 'How long does a Hyderabad ecommerce store take to build?',
     answer:
-      'A standard Shopify or WooCommerce store goes live in 7 days once products, photos and gateway approval are ready. A custom theme takes 3 to 5 weeks. B2B pharma portals or stores with subscriptions take 5 to 8 weeks, and custom platforms take 8 to 14 weeks.',
+      'A store with a custom-designed theme takes 3 to 5 weeks once products, photos and gateway approval are ready. B2B pharma portals or stores with subscriptions take 5 to 8 weeks, and custom platforms take 8 to 14 weeks.',
   },
   {
     category: 'pricing',
@@ -320,6 +321,24 @@ const HYDERABAD_ECOM_FAQ_ITEMS = [
     answer:
       'One developer can set up a simple store. Selling well also needs design, payments, couriers, GST and SEO, plus language work for Telugu or Urdu, which rarely sits with one person. A small senior team covers it at a fixed price. If you hire an ecommerce developer in Hyderabad, test their live stores on your phone first.',
   },
+  {
+    category: "pricing",
+    question: "What is the top ecommerce development company in Hyderabad for B2B ordering?",
+    answer:
+      "For B2B, pick a firm that has built login-only catalogues with buyer-wise prices, credit terms and quick reorder. That is the setup we scope for pharma distributors and Begum Bazaar wholesalers. Commerceflo is our own B2B platform, and Belle Maison, a home decor wholesaler, takes trade orders on a Commerceflo store we built.",
+  },
+  {
+    category: "platform",
+    question: "Who is the best Shopify developer in Hyderabad for a pearl jewellery store?",
+    answer:
+      "Look for Shopify work with pearl size, colour and strand length as variants, certificate images, insured shipping and NRI checkout in dollars or dirhams. FactoryJet is a registered Shopify Partner. We build a draft on a few of your own pieces before you sign, so you can see how grading and price details look on a phone.",
+  },
+  {
+    category: "india",
+    question: "Can my Hyderabad food brand ship pickles and masalas across India?",
+    answer:
+      "Yes. Product pages show FSSAI details and shelf life, and festival hampers can be set up as bundles. Shiprocket covers most routes with returns handled, and same-day partners such as Porter suit deliveries inside Hyderabad. We set packaging rules for long routes so jars and sweets arrive in good shape.",
+  },
 ];
 
 const faqSchema = {
@@ -346,6 +365,74 @@ const speakableSchema = {
   },
   url: 'https://factoryjet.com/services/ecommerce-development/hyderabad',
 };
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   India refresh, 24 Nov 2026: answer-first block, buyer questions, comparison,
+   sources. Each source opened and checked on 24 Nov 2026.
+───────────────────────────────────────────────────────────────────────────── */
+
+const CITY_CHECKED_ON = '24 November 2026';
+
+const CITY_SRC = {
+  shopifyPricing: { label: 'Shopify India pricing', url: 'https://www.shopify.com/in/pricing' },
+  razorpay: { label: 'Razorpay pricing', url: 'https://razorpay.com/pricing/' },
+  ibef: { label: 'IBEF: E-commerce industry in India', url: 'https://www.ibef.org/industry/ecommerce' },
+  shopifyGst: { label: 'Shopify Help: GST in India', url: 'https://help.shopify.com/en/manual/taxes/india-gst' },
+} as const;
+
+const CITY_QUESTIONS = [
+  {
+    q: "How much does ecommerce development cost in Hyderabad?",
+    a: ["What you pay for the build depends on scope: NRI selling with international shipping, buyer-wise pricing for B2B, drug licence checks for pharmacies, a Telugu or Urdu storefront, and catalogue size. Platform and payment fees are extra and published. Shopify's India page lists Basic at ₹1,499 a month on yearly billing. Razorpay lists a 2% fee per domestic transaction, plus GST on the fee. You get a fixed written price per phase after a scoping call."],
+    sources: [CITY_SRC.shopifyPricing, CITY_SRC.razorpay],
+  },
+  {
+    q: "Shopify, WooCommerce or custom: what suits a Hyderabad pharma distributor?",
+    a: ["A distributor selling to pharmacies, clinics and hospitals needs a login-only portal, not a public shop. We build these on Shopify Plus B2B or on Commerceflo, our own B2B platform, with buyer-wise rates, licence capture at sign-up and GST invoices. WooCommerce can suit a smaller distributor already on WordPress. A custom build fits when batch, expiry and stock rules live in your own billing software. Selling prescription drugs to consumers needs legal advice first."],
+  },
+  {
+    q: "How long does it take to launch an ecommerce store in Hyderabad?",
+    a: ["A store with a custom-designed theme takes 3 to 5 weeks. B2B pharma portals and stores with subscriptions take 5 to 8 weeks, and headless or custom platforms take 8 to 14. Hyderabadi food and festive sales peak around Ramzan, Sankranti and Diwali, so brief us about two months before the season you are aiming at, with photos and shelf-life details ready."],
+  },
+  {
+    q: "What should I check before hiring an ecommerce developer in Hyderabad?",
+    a: ["Ask whether they have built a Telugu version or right-to-left Urdu, and open it on a low-cost Android phone. If you sell to pharmacies or kirana shops, ask to see a B2B portal with buyer logins. Find out who writes the code and get each phase priced in writing. Make sure the store, domain, Razorpay and courier accounts are registered to your business, so you can change developers later."],
+  },
+];
+
+const CITY_COMPARISON_COLUMNS = [
+  { label: 'FactoryJet', isFactoryJet: true },
+  { label: "Typical Hyderabad agency" },
+  { label: 'Freelancer' },
+  { label: 'Marketplace only' },
+] as const;
+
+const CITY_COMPARISON_ROWS = [
+  {
+    feature: 'Draft store on your products before you sign',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Sometimes" />, <CompareIcon key="freelancer" kind="partial" label="Sometimes" />, <CompareIcon key="marketplace" kind="no" label="No own store" />],
+  },
+  {
+    feature: 'Fixed price per phase, in writing',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" label="Varies" />, <CompareIcon key="freelancer" kind="partial" label="Varies" />, 'Fees per order'],
+  },
+  {
+    feature: "Pharmacy logins with drug licence and GSTIN checks",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="no" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: "Telugu or right-to-left Urdu storefront next to English",
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="partial" />, <CompareIcon key="freelancer" kind="partial" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Customer list and brand stay yours',
+    values: [<CompareIcon key="fj" kind="yes" />, <CompareIcon key="agency" kind="yes" />, <CompareIcon key="freelancer" kind="yes" />, <CompareIcon key="marketplace" kind="no" />],
+  },
+  {
+    feature: 'Typical time for a custom-theme store',
+    values: ['3 to 5 weeks', 'Varies', 'Varies', 'Listing in days, no store'],
+  },
+];
 
 export default function HyderabadEcommercePage() {
   return (
@@ -378,32 +465,63 @@ export default function HyderabadEcommercePage() {
       <BreadcrumbSchema
         items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Hyderabad', url: 'https://factoryjet.com/services/ecommerce-development/hyderabad' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Hyderabad", url: 'https://factoryjet.com/services/ecommerce-development/hyderabad' },
         ]}
       />
 
       <main className="bg-fj-cream">
       <Breadcrumbs items={[
           { name: 'Home', url: 'https://factoryjet.com' },
-          { name: 'Services', url: 'https://factoryjet.com/services' },
-          { name: 'Ecommerce Development', url: 'https://factoryjet.com/services/ecommerce-development' },
-          { name: 'Hyderabad', url: 'https://factoryjet.com/services/ecommerce-development/hyderabad' },
+          { name: 'Ecommerce Development India', url: 'https://factoryjet.com/ecommerce-development' },
+          { name: "Hyderabad", url: 'https://factoryjet.com/services/ecommerce-development/hyderabad' },
         ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
         formSlot={<HeroInlineForm region="in" source="services_ecommerce_development_hyderabad_hero" />}
-          eyebrow="ECOMMERCE DEVELOPMENT · HYDERABAD"
-          headline="Ecommerce Development in Hyderabad: Store Live in 7 Days"
-          lead="FactoryJet builds online stores for Hyderabad pearl jewellers, Pochampally ikat weavers and food brands, plus B2B ordering portals for pharma distributors. Telugu or Urdu storefronts on request, UPI and COD at checkout, Lighthouse 90+ on mobile. 7-day delivery."
-          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
+          eyebrow="ECOMMERCE WEBSITE DEVELOPMENT · HYDERABAD"
+          headline="Ecommerce Website Development Company in Hyderabad for Jewellers, Weavers and Pharma Distributors"
+          lead="FactoryJet builds online stores for Pathergatti pearl jewellers, Pochampally and Gadwal weavers and Hyderabadi food brands, plus login-only ordering portals where pharmacies and clinics buy from distributors. Telugu or Urdu storefronts on request, UPI and COD at checkout, GST on every invoice, and a draft of your store before you sign."
+          secondaryCta={{ label: 'See a draft of my store', modal: true as const, region: 'in' as const }}
           trustItems={[
-            '7-day delivery',
+            'Draft store before you sign',
             'Razorpay + UPI + COD ready',
           ]}
-          rightSlot={<HeroBrowserMockup />}
+          rightSlot={
+            <div className="rounded-2xl border border-fj-neutral-200 bg-white p-7 shadow-sm">
+              <p className="font-fj-mono text-[11px] font-medium uppercase tracking-[0.14em] text-[#B23E13]">WHAT A HYDERABAD STORE USUALLY NEEDS</p>
+              <ul className="mt-5 space-y-3">
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Pearls</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Grading details, close-up video, certificates, insured shipping</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Pharma</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Drug licence and GSTIN at sign-up, batch and expiry shown</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">NRI buyers</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Prices in dollars or dirhams, duties shown before payment</p></li>
+                <li className="border-b border-fj-neutral-100 pb-3"><p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">Language</p><p className="mt-0.5 font-fj-body text-[0.875rem] text-fj-neutral-600">Telugu, or right-to-left Urdu, next to English</p></li>
+              </ul>
+              <p className="mt-5 rounded-xl bg-[rgba(240,90,40,0.08)] px-4 py-3 font-fj-body text-[0.875rem] font-semibold text-[#B23E13]">Custom-theme stores take 3 to 5 weeks. Fixed price per phase, in writing.</p>
+            </div>
+          }
+        />
+
+        {/* ── 1b. ANSWER FIRST ─────────────────────────────────────────────── */}
+        <AnswerFirst
+          eyebrow="THE SHORT ANSWER"
+          question={"Which is the best ecommerce website development company in Hyderabad?"}
+          answer={[
+            "Hyderabad has two kinds of buyer: app-native shoppers in HITEC City and Gachibowli, and old-city and Telangana buyers who check prices on WhatsApp and often pay on delivery. A good partner builds one store that works for both. FactoryJet starts from your catalogue and your buyers, fixes the price for each phase in writing, and puts a draft built on your own products in front of you before you sign.",
+            "FactoryJet is a registered Shopify Partner, founded in 2014, with ratings of 5.0 on Clutch (4 reviews) and 5.0 on GoodFirms (5 reviews). When you compare Hyderabad firms, ask each one for a live store where you can place a test order yourself, once by UPI and once by COD.",
+          ]}
+          factsTitle="FactoryJet at a glance"
+          facts={[
+            { k: 'Shopify status', v: 'Registered Shopify Partner' },
+            { k: 'Reviews', v: 'Clutch 5.0 (4 reviews), GoodFirms 5.0 (5 reviews)' },
+            { k: 'Track record', v: '500+ businesses served, 97% of projects on time or early, founded 2014' },
+            { k: 'Timelines', v: 'Custom-theme store 3 to 5 weeks; advanced store 5 to 8; headless or custom 8 to 14' },
+          ]}
+          links={[
+            { label: 'Ecommerce development in India', href: '/ecommerce-development' },
+            { label: 'Shopify development company in India', href: '/shopify-development' },
+            { label: 'Ecommerce website cost in India', href: '/blog/ecommerce-website-development-cost-india' },
+          ]}
         />
 
         {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
@@ -412,8 +530,8 @@ export default function HyderabadEcommercePage() {
         {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
         <BigThreeTrustBlock
           eyebrow="BY THE NUMBERS"
-          headline="500+ stores launched. 12 years of ecommerce engineering. 7-day delivery."
-          description="We have shipped stores and B2B portals for businesses in India, the US, the UK and the UAE. Hyderabad clients get the same terms: fixed price per phase, complete code ownership, and 7-day delivery on standard stores."
+          headline="500+ businesses served. 97% on-time delivery. Founded 2014."
+          description="We have shipped stores and B2B portals for businesses in India, the US, the UK and the UAE. Hyderabad clients get the same terms: fixed price per phase, complete code ownership, and a draft store before they sign."
         />
 
         {/* ── 4. PLATFORM EXPLANATION ──────────────────────────────────────── */}
@@ -447,32 +565,6 @@ export default function HyderabadEcommercePage() {
               <p>
                 Hyderabad has two kinds of online buyer. In HITEC City and Gachibowli, tech workers order everything on apps and leave any store that feels slow or clumsy. In the old city and across Telangana, buyers want to see the real product, check the price on WhatsApp and often pay on delivery. A store has to work for both without feeling built for neither.
               </p>
-
-              <div className="grid grid-cols-3 gap-3" aria-hidden>
-                {[
-                  { value: '0.9%', label: 'India avg. ecommerce conversion rate' },
-                  { value: '65%', label: 'India ecommerce traffic via mobile' },
-                  { value: '78%', label: 'cart abandonment rate in India' },
-                ].map((b) => (
-                  <div
-                    key={b.value}
-                    className="rounded-xl border border-fj-neutral-200 bg-white px-3 py-4 text-center shadow-sm"
-                  >
-                    <p
-                      className="fj-display font-bold text-[#F05A28]"
-                      style={{ fontSize: '1.375rem', lineHeight: 1, letterSpacing: '-0.03em' }}
-                    >
-                      {b.value}
-                    </p>
-                    <p
-                      className="mt-1.5 font-fj-mono font-medium uppercase text-fj-neutral-400"
-                      style={{ fontSize: '0.6875rem', letterSpacing: '0.07em' }}
-                    >
-                      {b.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
 
               <div className="border-l-2 border-[#F05A28] pl-5 py-1" aria-hidden>
                 <p
@@ -541,16 +633,24 @@ export default function HyderabadEcommercePage() {
           }
         />
 
+        {/* ── 4b. BUYER QUESTIONS ──────────────────────────────────────────── */}
+        <QuestionAnswers
+          eyebrow={"WHAT HYDERABAD BUYERS ASK BEFORE HIRING"}
+          intro="Short answers to the questions buyers type into Google and ask AI assistants. Prices quoted here are Shopify's and Razorpay's published prices, not ours."
+          items={CITY_QUESTIONS}
+          bgClassName="bg-white"
+        />
+
         {/* ── 5. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
         <StrategicDarkSection
           eyebrow="WHY FACTORYJET"
           headline="Why Hyderabad Businesses Choose FactoryJet"
-          lead="Hyderabad owners want to know three things before they start: the final price, the launch date and who owns the store. Each phase gets a fixed price in writing, standard stores get 7-day delivery in the agreement, and you see a working draft on your own products before you sign."
+          lead="Hyderabad owners want to know three things before they start: the final price, the launch date and who owns the store. Each phase gets a fixed price in writing, the launch date is written into the agreement, and you see a working draft on your own products before you sign."
           pillars={[
             {
               icon: '⚡',
-              title: '7-day delivery. In writing.',
-              body: 'A standard Shopify or WooCommerce store for a Hyderabad brand goes live in 7 days once products, photos and gateway approval are with us. The date is written into the agreement. 97% of our builds have shipped on time.',
+              title: 'A draft store before you sign.',
+              body: 'We build a draft on a few of your real products and you test it on your own phone, from browsing to checkout. The launch date is written into the agreement, and 97% of our projects have been delivered on time or early.',
             },
             {
               icon: '📱',
@@ -585,24 +685,34 @@ export default function HyderabadEcommercePage() {
           ]}
           stats={[
             {
-              value: '1M+',
-              label: 'IT professionals in HITEC City: one of India\'s most digitally sophisticated consumer bases',
-              sourceUrl: 'https://www.ibef.org/states/telangana',
-              sourceLabel: 'IBEF Telangana',
-            },
-            {
-              value: '23%',
-              label: "India's projected ecommerce market growth rate, year over year through 2030",
-              sourceUrl: 'https://www.ibef.org/industry/ecommerce',
+              value: 'US$ 345B',
+              label: "India's projected e-commerce market by 2030, up from US$ 125 billion in 2024 (18.4% a year)",
+              sourceUrl: CITY_SRC.ibef.url,
               sourceLabel: 'India Brand Equity Foundation',
             },
             {
-              value: '500M+',
-              label: 'UPI transactions per month in India: the payment rail your store must support',
-              sourceUrl: 'https://www.npci.org.in/what-we-do/upi/product-statistics',
-              sourceLabel: 'NPCI UPI Statistics',
+              value: '₹1,499',
+              label: 'a month for Shopify Basic in India on yearly billing, before apps and fees',
+              sourceUrl: CITY_SRC.shopifyPricing.url,
+              sourceLabel: 'Shopify India pricing',
+            },
+            {
+              value: '2%',
+              label: 'Razorpay platform fee per domestic transaction, plus GST on the fee',
+              sourceUrl: CITY_SRC.razorpay.url,
+              sourceLabel: 'Razorpay pricing',
             },
           ]}
+        />
+
+        {/* ── 7b. COMPARISON ───────────────────────────────────────────────── */}
+        <ComparisonTable
+          eyebrow="HOW TO CHOOSE"
+          headline={"Choosing an Ecommerce Developer in Hyderabad"}
+          lead={"Four ways to get an online store in Hyderabad, compared on what decides the result."}
+          columns={CITY_COMPARISON_COLUMNS}
+          rows={CITY_COMPARISON_ROWS}
+          footer="Agency and freelancer cells are general patterns, not claims about any one firm. Ask every firm you shortlist the same questions."
         />
 
         {/* ── 8. INDUSTRIES (DARK) ─────────────────────────────────────────── */}
@@ -667,7 +777,7 @@ export default function HyderabadEcommercePage() {
               description:
                 'Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. FactoryJet built their B2B quote-to-cash store on Commerceflo, with trade pricing tiers, quote-to-order workflows, and account-based ordering.',
               imageSrc: '/images/portfolio/belle-maison.webp',
-              stat1: 'Live in 7 days',
+              stat1: 'Trade price tiers',
               stat2: 'Commerceflo · B2B',
             },
             {
@@ -676,7 +786,7 @@ export default function HyderabadEcommercePage() {
               description:
                 'Impulse Branding is a Mumbai print branding and general contracting company. FactoryJet built impulsebranding.in and is now building their next-generation site.',
               imageSrc: '/images/work/impulse-branding-desktop.webp',
-              stat1: 'Launched in 6 days',
+              stat1: '75+ page site',
               stat2: 'Web · SEO',
             },
           ]}
@@ -684,7 +794,11 @@ export default function HyderabadEcommercePage() {
           ctaLabel="View full portfolio"
         />
 
-        <GetFreeQuoteCTA />
+        <MidPageCTA
+          headline={"Try your Hyderabad store before you sign."}
+          sub={"Send your catalogue or current website. We will build a draft on a handful of your real products and price each phase in writing."}
+          label="See a draft of my store"
+        />
         {/* ── 11. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
@@ -700,15 +814,25 @@ export default function HyderabadEcommercePage() {
           items={HYDERABAD_ECOM_FAQ_ITEMS}
         />
 
+        {/* ── 12b. SOURCES ─────────────────────────────────────────────────── */}
+        <SourceList
+          checkedOn={CITY_CHECKED_ON}
+          sources={[
+            { ...CITY_SRC.shopifyPricing, note: 'Shopify plan prices in rupees and third-party transaction fees' },
+            { ...CITY_SRC.razorpay, note: '2% platform fee on domestic transactions, plus GST on the fee' },
+            { ...CITY_SRC.ibef, note: 'India e-commerce market size for 2024 and projection for 2030' },
+          ]}
+        />
+
         {/* ── 13. FINAL CTA (DARK) ─────────────────────────────────────────── */}
         <FinalCTA
-          variant="dark"
+          variant="light"
           eyebrow="READY TO LAUNCH"
-          headline="Your Hyderabad Store, Live in 7 Days"
+          headline="Your Hyderabad Store, Built for Both Halves of the City"
           sub="500+ businesses in India, the US, the UK and the UAE have built with FactoryJet. Tell us what you sell in Hyderabad and who buys it. We will recommend a platform, price each phase in writing and show you a draft of the store before you sign."
           primaryCta={{ label: 'Book a Free Strategy Call', modal: true, region: 'in' }}
           secondaryCta={{ label: 'View Our Portfolio', href: '/portfolio' }}
-          objectionHandler="Fixed price per phase. 7-day delivery. UPI, COD and GST set up. Your store, your code, your accounts."
+          objectionHandler="Fixed price per phase. Draft before contract. UPI, COD and GST set up. Your store, your code, your accounts."
         />
 
       </main>
