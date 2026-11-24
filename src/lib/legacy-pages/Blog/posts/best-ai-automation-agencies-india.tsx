@@ -35,7 +35,7 @@ const FIRMS: Firm[] = [
     stated: [
       'Rated 5.0 on Clutch from 4 reviews and 5.0 on GoodFirms from 5 reviews',
       'The workflows sit in your accounts and the code is yours',
-      'Other named projects on our site: Sow Easy (WooCommerce trade ordering connected to Odoo) and GPSUK (online ordering for trade buyers who reorder)',
+      'Other named projects on our site: Sow Easy (WooCommerce trade ordering connected to Odoo, now being tested on staging) and GPSUK (online ordering for trade buyers who reorder)',
     ],
   },
   {

@@ -138,10 +138,10 @@ const AGENT_COMPARISON_ROWS = [
 ];
 
 const AGENT_COST_ROWS = [
-  { tier: 'Simple, single-task agent', range: '₹1,50,000 to ₹4,00,000' },
-  { tier: 'Departmental agent with several tools', range: '₹4,00,000 to ₹12,00,000' },
-  { tier: 'Multi-agent enterprise system', range: '₹12,00,000 to ₹40,00,000' },
-  { tier: 'Enterprise agent platform', range: '₹40,00,000 and above' },
+  { tier: 'Single-task agent', range: '₹1,50,000 to ₹4,00,000' },
+  { tier: 'Departmental agent', range: '₹4,00,000 to ₹12,00,000' },
+  { tier: 'Multi-agent system', range: '₹12,00,000 to ₹40,00,000' },
+  { tier: 'Enterprise agentic platform', range: '₹40,00,000 and above' },
 ];
 
 const AGENT_STEPS = [
@@ -196,7 +196,7 @@ const AGENT_FAQS = [
     category: 'choosing',
     question: 'Which AI company is best in India for a mid-sized business?',
     answer:
-      'Mid-sized businesses usually need one working agent, not a transformation programme. Look for a company that will start with a single workflow, show it on a sample of your data, and let you decide on each next phase after seeing the last one work.',
+      'Mid-sized businesses usually need one working agent first. Look for a company that will start with a single workflow, show it on a sample of your data, and let you decide on each next phase after seeing the last one work.',
   },
   {
     category: 'choosing',
@@ -214,7 +214,7 @@ const AGENT_FAQS = [
     category: 'choosing',
     question: 'Is there a good AI agent development company for businesses in Bangalore?',
     answer:
-      'Yes. We work with businesses across India, and scoping, demos and reviews run over video calls, so a company in Bengaluru, Mumbai or Delhi NCR is served the same way. Send the job description and we will say whether an agent fits.',
+      'Yes. We work with businesses across India, including Bengaluru, Mumbai and Delhi NCR. Send the job description and we will say whether an agent fits.',
   },
   /* ── Cost ── */
   {
@@ -245,14 +245,14 @@ const AGENT_FAQS = [
     category: 'cost',
     question: 'How long does AI agent development take?',
     answer:
-      'It depends on the job and how many systems it touches. A single document or support workflow is much smaller than a calling agent wired into a CRM. We agree the timeline in writing during scoping, before any work starts, and tie payments to milestones.',
+      'Timelines follow the job and how many systems it touches. A single document or support workflow is much smaller than a calling agent wired into a CRM. We agree the timeline in writing during scoping, before any work starts, and tie payments to milestones.',
   },
   /* ── What it is and does ── */
   {
     category: 'build',
     question: 'What is custom AI agent development?',
     answer:
-      'Custom AI agent development means building software that takes a job from start to finish inside your own systems, such as reading a purchase order, drafting the record and asking a person to approve it. It is built around your data and rules, not configured from a generic template.',
+      'Custom AI agent development means building software that takes a job from start to finish inside your own systems, such as reading a purchase order, drafting the record and asking a person to approve it. It is built around your own data and rules.',
   },
   {
     category: 'build',
@@ -270,7 +270,7 @@ const AGENT_FAQS = [
     category: 'build',
     question: 'Can the agent connect to my existing software?',
     answer:
-      'Usually. We check at scoping which of your systems offer a way in, such as an API or an export, and which do not. Typical targets are a CRM such as HubSpot or Salesforce, an ERP, a help desk and a calendar. Anything that blocks a connection is named before you sign.',
+      'Often, yes. At scoping we list which of your tools can be connected to, through an API or an export, and which cannot. Typical targets are a CRM such as HubSpot or Salesforce, an ERP, a help desk and a calendar. Anything that blocks a connection is named before you sign.',
   },
   {
     category: 'build',
@@ -282,7 +282,7 @@ const AGENT_FAQS = [
     category: 'build',
     question: 'How do you show the agent working before I sign?',
     answer:
-      'We run the agent on a sample of your own documents, emails or calls and walk you through the results, including the cases it handed off. You judge it on your data, not on someone else\'s logo. No contract is needed for that step.',
+      'We run the agent on a sample of your own documents, emails or calls and walk you through the results, including the cases it handed off. You judge it on your own data. No contract is needed for that step.',
   },
   {
     category: 'build',
@@ -333,7 +333,7 @@ const AGENT_FAQS = [
     category: 'data',
     question: 'Is my business data safe with an AI agent?',
     answer:
-      'We scope exactly what data the agent can see and what it can change, and AI and hosting can run in your own accounts so the data stays under your control. Ask any vendor, us included, to write down where your data goes and who can read it.',
+      'At scoping we write down which data the agent can see and what it can change, and AI and hosting can run in your own accounts so the data stays under your control. Ask any vendor, us included, to write down where your data goes and who can read it.',
   },
   {
     category: 'data',
@@ -734,11 +734,11 @@ export default function AiAgentDevelopmentIndiaPage() {
             <a className={LINK} href="/blog/best-ai-agent-development-companies-india">
               list of the best AI agent development companies in India
             </a>
-            . The{' '}
-            <a className={LINK} href="/services/ai-agent-development">
-              AI agent development service page
+            . Our{' '}
+            <a className={LINK} href="/ai-development">
+              AI development page
             </a>{' '}
-            lists more of the agents we build, grouped by industry.
+            covers custom AI software beyond single agents.
           </p>
         </Section>
 

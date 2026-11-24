@@ -97,8 +97,8 @@ const faqs: FAQItem[] = [
     a: 'For a simple, no-code start that is not connected to your systems, Innovative AI Solutions says a lightweight agent can be scoped for ₹25,000 to ₹3,00,000, with monthly running costs under ₹2,500. Sigosoft lists a Starter agent at ₹25,000 to ₹1 lakh. Both are vendor figures. A short pilot on one process, with the cost per task measured, tells you more than a large plan on paper.',
   },
   {
-    q: 'Is AI agent development in India cheaper than in the US or UK?',
-    a: 'The two guides that compare say yes. WavX Solutions lists a blended hourly rate of ₹1,200 to ₹4,500 in India against ₹8,000 to ₹22,000 in the US and UK, and a typical departmental agent at ₹4 lakh to ₹12 lakh against ₹25 lakh to ₹80 lakh. Innovative AI Solutions says senior talent costs 60 to 80 percent less. Running costs depend on usage, not geography.',
+    q: 'Does the build price change what an AI agent costs to run?',
+    a: 'Build prices differ by firm and by scope, and the guides we read set their ranges in rupees for work done for Indian buyers. Running costs depend on usage, such as model calls and hosting, and the build price does not change them.',
   },
   {
     q: 'Do I pay for the AI model separately from the build?',
@@ -232,7 +232,7 @@ export const post: BlogPost = {
       <p>
         We are FactoryJet, an AI services company that builds AI agents for businesses across India. We are one of the firms
         you may compare, so we have kept our own prices off this page. To see how we work, read our{' '}
-        <a href="/ai-agent-development">AI agent development page</a>, or our list of the{' '}
+        <a href="/ai-agent-development">AI agent development page</a>, our <a href="/ai-chatbot-development">AI chatbot development page</a> for chatbots that only reply, or our list of the{' '}
         <a href="/blog/best-ai-agent-development-companies-india">best AI agent development companies in India</a>.
       </p>
 

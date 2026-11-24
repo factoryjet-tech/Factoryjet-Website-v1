@@ -184,8 +184,11 @@ try {
       dests.add(parts[1].replace(/\/+$/, '') || '/');
     }
   }
+  // Trailing-slash-to-bare rules ("/x/ /x 301") normalise to source == destination here
+  // but are not loops: Cloudflare Pages matches the literal path and never re-adds the slash.
+  const SLASH_TO_BARE_ALLOW = new Set(['/ecommerce-development']);
   for (const s of srcs) {
-    if (dests.has(s) && !s.includes('*') && !s.includes(':')) {
+    if (dests.has(s) && !s.includes('*') && !s.includes(':') && !SLASH_TO_BARE_ALLOW.has(s)) {
       warns.push(`_redirects — "${s}" is both a redirect source and a destination (possible loop; reconcile direction)`);
     }
   }
@@ -196,6 +199,7 @@ try {
   // a duplicate. This is the /services/web-design/* + Mumbai failure mode.
   const REDIRECT_SOURCE_ALLOW = new Set([
     // add a source path here only if a live page at that path is intentional
+    '/ecommerce-development', // rule is "/ecommerce-development/ /ecommerce-development" (slash variant only)
   ]);
   for (const s of srcs) {
     if (s === '/' || s.includes('*') || s.includes(':') || REDIRECT_SOURCE_ALLOW.has(s)) continue;

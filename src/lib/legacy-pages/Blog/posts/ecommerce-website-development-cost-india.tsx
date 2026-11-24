@@ -33,7 +33,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'Is Shopify 100% free?',
-    a: 'No. Shopify’s India pricing page lists a trial of 3 days free, then ₹20 a month for 3 months, and plan prices from ₹1,499 a month billed yearly for Basic. A store that takes real orders also pays the fee on third-party payments (2% on Basic), plus the payment provider’s own fee, any paid apps, and a domain. The trial lets you test, not run a business for free.',
+    a: 'No. Shopify’s India pricing page lists a trial of 3 days free, then ₹20 a month for 3 months, and plan prices from ₹1,499 a month billed yearly for Basic. A store that takes real orders also pays the fee on third-party payments (2% on Basic), plus the payment provider’s own fee, any paid apps, and a domain. The trial is for testing a store before you open it.',
   },
   {
     q: 'Which Shopify plan is cheaper for an Indian store, Basic or Grow?',
@@ -81,7 +81,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: 'How to create an eCommerce website for free in India?',
-    a: 'You can build a small test store yourself. Shopify’s India page lists 3 days free, then ₹20 a month for 3 months, and WooCommerce software is free, though Webhorse Studio notes you still pay for hosting and extensions. Real selling brings costs: a payment gateway fee on each order, a domain, and your time. Free works for a trial, not for a store you depend on.',
+    a: 'You can build a small test store yourself. Shopify’s India page lists 3 days free, then ₹20 a month for 3 months, and WooCommerce software is free, though Webhorse Studio notes you still pay for hosting and extensions. Real selling brings costs: a payment gateway fee on each order, a domain, and your time. Free suits a trial. A store you depend on has running costs.',
   },
   {
     q: 'Do I have to pay GST on ecommerce website development?',
@@ -167,7 +167,7 @@ const SHOPIFY_ROWS: { plan: string; yearly: string; monthly: string; fee: string
   { plan: 'Basic', yearly: '₹1,499 a month', monthly: '₹1,994 a month', fee: '2%' },
   { plan: 'Grow', yearly: '₹5,599 a month', monthly: '₹7,447 a month', fee: '1%' },
   { plan: 'Advanced', yearly: '₹22,680 a month', monthly: '₹30,164 a month', fee: '0.6%' },
-  { plan: 'Plus', yearly: 'Not offered yearly', monthly: 'From ₹1,75,000 a month', fee: '0.2%' },
+  { plan: 'Plus', yearly: 'No yearly price shown', monthly: 'From ₹1,75,000 a month', fee: '0.2%' },
 ];
 
 const PLATFORM_ROWS: { source: string; platform: string; build: string; running: string }[] = [

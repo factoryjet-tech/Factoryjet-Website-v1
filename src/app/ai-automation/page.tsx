@@ -765,11 +765,11 @@ export default function AiAutomationIndiaPage() {
             ))}
           </ol>
           <p className={`mt-6 max-w-[760px] ${PROSE}`}>
-            The{' '}
-            <a className={LINK} href="/services/ai-automation">
-              AI automation service page
+            Our{' '}
+            <a className={LINK} href="/blog/best-ai-automation-agencies-india">
+              list of the best AI automation agencies in India
             </a>{' '}
-            goes deeper on the tools and the build items.
+            compares more firms and the build items to ask about.
           </p>
         </Section>
 

@@ -244,11 +244,11 @@ const PLATFORM_FEES = [
 ];
 
 const BUILD_COSTS = [
-  { tier: 'Basic starter store', range: '₹25,000 to ₹80,000', source: 'Webhorse Studio, before GST' },
-  { tier: 'Small business store', range: '₹80,000 to ₹2 lakh', source: 'Webhorse Studio, before GST' },
-  { tier: 'Mid-scale store', range: '₹2 lakh to ₹5 lakh', source: 'Webhorse Studio, before GST' },
-  { tier: 'Advanced store', range: '₹5 lakh to ₹10 lakh', source: 'Webhorse Studio, before GST' },
-  { tier: 'Enterprise or marketplace', range: '₹10 lakh to ₹25 lakh+', source: 'Webhorse Studio, before GST' },
+  { tier: 'Basic starter store', range: '₹25,000 to ₹80,000', source: 'Webhorse Studio, before GST (tiers from HTBG\'s 2026 guide)' },
+  { tier: 'Small business store', range: '₹80,000 to ₹2 lakh', source: 'Webhorse Studio, before GST (tiers from HTBG\'s 2026 guide)' },
+  { tier: 'Mid-scale store', range: '₹2 lakh to ₹5 lakh', source: 'Webhorse Studio, before GST (tiers from HTBG\'s 2026 guide)' },
+  { tier: 'Advanced store', range: '₹5 lakh to ₹10 lakh', source: 'Webhorse Studio, before GST (tiers from HTBG\'s 2026 guide)' },
+  { tier: 'Enterprise or marketplace', range: '₹10 lakh to ₹25 lakh+', source: 'Webhorse Studio, before GST (tiers from HTBG\'s 2026 guide)' },
   { tier: 'Starter store', range: '₹50,000 to ₹1,50,000', source: 'CodeVibe' },
   { tier: 'Mid-range store', range: '₹1,50,000 to ₹5,00,000', source: 'CodeVibe' },
   { tier: 'Custom or enterprise', range: '₹5,00,000 to ₹25,00,000+', source: 'CodeVibe' },
@@ -386,7 +386,7 @@ const ECOM_FAQS = [
     category: 'platforms',
     question: 'Can you connect the store to accounting or ERP software?',
     answer:
-      'Yes. Exaco runs a Shopify store connected to QuickBooks Enterprise, and Sow Easy has a WooCommerce store reading stock and prices from Odoo. For other software, we check what connections it offers before we price the work.',
+      'Yes. Exaco runs a Shopify store connected to QuickBooks Enterprise, and Sow Easy is building a WooCommerce store that reads stock and prices from Odoo, now on staging. For other software, we check what connections it offers before we price the work.',
   },
   /* ── Apps ── */
   {
@@ -864,7 +864,7 @@ export default function EcommerceDevelopmentIndiaPage() {
             headline="Bring your product list. Leave with a store you can judge."
             sub="Share your catalogue on a short call. We build a draft theme in your own store account. Look at it, then decide."
             primaryCta={{ label: 'Book my scoping call', modal: true, region: 'in' }}
-            secondaryCta={{ label: 'See our US ecommerce work', href: '/services/ecommerce-development' }}
+            secondaryCta={{ label: 'See our Shopify work', href: '/shopify-development' }}
             objectionHandler="The price is written down for each phase. Store, code and accounts stay in your name. Support is your choice."
           />
         </div>

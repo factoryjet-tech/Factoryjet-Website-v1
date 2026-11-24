@@ -684,9 +684,9 @@ export default function AiDevelopmentIndiaPage() {
             >
               NIST AI Risk Management Framework
             </a>{' '}
-            is a voluntary US guide we use as a shared vocabulary. The{' '}
-            <a className={LINK} href="/services/ai-development">
-              AI development service page
+            is a voluntary US guide we use as a shared vocabulary. Our{' '}
+            <a className={LINK} href="/ai-agent-development">
+              AI agent development page
             </a>{' '}
             goes deeper on the build items, and our{' '}
             <a className={LINK} href="/services/ai-consulting">

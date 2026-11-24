@@ -624,10 +624,10 @@ export default function AiChatbotDevelopmentIndiaPage() {
             </a>{' '}
             lists English, Hindi, Tamil, Telugu, Marathi, Gujarati and Kannada, and says the bot detects the language
             a customer writes in. Which of those your project needs is confirmed at scoping. Our{' '}
-            <a className={LINK} href="/services/ai-chatbot-development">
-              US AI chatbot page
+            <a className={LINK} href="/ai-agent-development">
+              AI agent development page
             </a>{' '}
-            describes the same build process for American buyers.
+            covers the build steps for bots that also act inside your systems.
           </p>
         </Section>
 
@@ -638,8 +638,8 @@ export default function AiChatbotDevelopmentIndiaPage() {
               <SectionHead eyebrow="CHOOSING A PARTNER">How do you choose a chatbot development company in India?</SectionHead>
               <p className={`mt-5 ${PROSE}`}>
                 On 24 November 2026 we asked ChatGPT for the best AI chatbot development company in India. Its answer
-                named Jio Haptik, SoluLab, Yellow.ai, Gupshup, CoRover and Fingent, grouped by what each does best, and
-                it added that no firm is the objective number one. We agree with that last part. Sort the companies
+                named platform vendors and custom builders, grouped by what each does best, and it added that no firm
+                is the objective number one. We agree with that last part. Sort the companies
                 into platforms, custom builders and large enterprise vendors first, then compare within a group.
               </p>
               <p className={`mt-4 ${PROSE}`}>
@@ -809,7 +809,7 @@ export default function AiChatbotDevelopmentIndiaPage() {
             headline="Bring your customers' questions. Leave with a bot you can judge."
             sub="Share a few months of questions on a short call. We answer a sample of them from your documents. Read the results, then decide."
             primaryCta={{ label: 'Book my scoping call', modal: true, region: 'in' }}
-            secondaryCta={{ label: 'See our US chatbot work', href: '/services/ai-chatbot-development' }}
+            secondaryCta={{ label: 'See our WhatsApp chatbot work', href: '/whatsapp-chatbot' }}
             objectionHandler="One written price per phase. The code and accounts are yours. Support is optional."
           />
         </div>

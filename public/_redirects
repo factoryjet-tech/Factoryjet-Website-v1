@@ -151,8 +151,8 @@
 /services/web-design/surat /web-design/surat 301
 
 # NOTE: /ecommerce-development URL migration was reverted 2026-05-18.
-# /services/ecommerce-development is the canonical India ecommerce hub (page.tsx exists).
-# No redirect needed — page serves directly.
+# /services/ecommerce-development is the US ecommerce hub (geo mirror sends Indian visitors
+# to /ecommerce-development). No redirect needed here.
 
 # Bare /ecommerce-development is NOT redirected since 2026-11-24: a dedicated India page
 # now lives at that path (src/app/ecommerce-development). The old bare 301 would have hidden it
@@ -160,6 +160,7 @@
 # City paths under the retired /ecommerce-development prefix → canonical /services/ URL
 # (legacy static public/ecommerce-development/* deleted 2026-06-05; see FJ-001)
 /ecommerce-development/mumbai /services/ecommerce-development/mumbai 301
+/ecommerce-development/ /ecommerce-development 301
 /ecommerce-development/* /services/ecommerce-development/:splat 301
 
 # ── SHOPIFY INDIA URL MIGRATION (2026-05-24) ─────────────────────────────────

@@ -28,7 +28,7 @@ const FIRMS: Firm[] = [
     group: 'first',
     work: 'Custom AI software for one business job at a time: answers from your documents, AI inside your CRM or store, generative AI apps',
     detail: 'Rated 5.0 on Clutch from 4 reviews and 5.0 on GoodFirms from 5 reviews',
-    what: 'We start with one job and a test set of real cases from your business, then agree a pass mark before building. We try models from OpenAI, Anthropic, Google and open-weight families on those cases and pick on accuracy, cost and data terms. We fine-tune late, once better prompts and retrieval have failed to give the format you need. Each phase has one fixed price in writing, and the code, prompts and test sets sit in your own repository and cloud account. Two named examples: Sow Easy, where WooCommerce trade ordering is connected to Odoo, and GPSUK, online ordering for trade buyers who reorder the same promotional products again and again.',
+    what: 'We start with one job and a test set of real cases from your business, then agree a pass mark before building. We try models from OpenAI, Anthropic, Google and open-weight families on those cases and pick on accuracy, cost and data terms. We fine-tune late, once better prompts and retrieval have failed to give the format you need. Each phase has one fixed price in writing, and the code, prompts and test sets sit in your own repository and cloud account. Other named projects on our site (ecommerce work): Sow Easy, where WooCommerce trade ordering connected to Odoo is now being tested on staging, and GPSUK, online ordering for trade buyers who reorder the same promotional products again and again.',
   },
   {
     name: 'Maruti Techlabs',

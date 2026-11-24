@@ -28,10 +28,10 @@ const FIRMS: Firm[] = [
     url: 'https://factoryjet.com/ai-agent-development',
     source: 'https://factoryjet.com/ai-agent-development',
     group: 'first',
-    offices: 'We work with businesses across India and run scoping, demos and reviews over video calls',
+    offices: 'Businesses across India',
     type: 'Custom AI agents for one job at a time: calls, WhatsApp replies, documents, support and lead follow-up',
     scale: 'Rated 5.0 on Clutch from 4 reviews and 5.0 on GoodFirms from 5 reviews',
-    what: 'We scope one job on a short call, test the agent on real samples of your documents, emails or calls before you sign, then build it in phases. Each phase has one fixed price in writing, paid at milestones. Early phases keep a person approving every draft, and you choose where approval stays. The code and repository are yours from the first day, and later support is optional with no monthly minimum. Two named examples: Sow Easy, where WooCommerce trade ordering is connected to Odoo, and GPSUK, online ordering for trade buyers who reorder the same promotional products again and again.',
+    what: 'We scope one job on a short call, test the agent on real samples of your documents, emails or calls before you sign, then build it in phases. Each phase has one fixed price in writing, paid at milestones. Early phases keep a person approving every draft, and you choose where approval stays. The code and repository are yours from the first day, and later support is optional with no monthly minimum. Other named projects on our site (ecommerce work): Sow Easy, where WooCommerce trade ordering connected to Odoo is now being tested on staging, and GPSUK, online ordering for trade buyers who reorder the same promotional products again and again.',
     bestFor: 'A mid-sized business that wants one workflow working first, with the price and code ownership settled in writing.',
     ask: 'Ask us what we would not automate in your process. A short answer to that tells you whether we have thought about your job.',
   },
@@ -185,7 +185,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Which companies are the top AI agent development firms in India?',
-    a: 'AI assistants repeat a familiar set: Infosys, TCS, Wipro, Fractal, Persistent and a long tail of agencies. We checked a different slice on purpose, firms that describe agent work for businesses of varied sizes. Top here means well suited to a stated kind of buyer, not a scored position.',
+    a: 'AI assistants tend to repeat the same few large enterprise names plus a long tail of agencies. We checked a different slice on purpose, firms that describe agent work for businesses of varied sizes. Top here means well suited to a stated kind of buyer, not a scored position.',
   },
   {
     q: 'Which AI company is best in India?',
@@ -201,7 +201,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Is there a good AI agent development company in Bangalore?',
-    a: 'We did not verify a firm headquartered in Bengaluru for this list, so we name none. Four of the ten list addresses or delivery centres in Noida, Gurgaon, Mohali, Pune or Indore, and Maruti Techlabs lists Ahmedabad. Agent projects are scoped and reviewed over video calls, so the city matters less than the answers to the questions below.',
+    a: 'We did not verify a firm headquartered in Bengaluru for this list, so we name none. Four of the ten list addresses or delivery centres in Noida, Gurgaon, Mohali, Pune or Indore, and Maruti Techlabs lists Ahmedabad. The city matters less than the answers to the questions below.',
   },
   {
     q: 'Why are Infosys, TCS and Wipro not in this list?',
@@ -245,7 +245,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Which firm suits a business that runs Odoo or Salesforce?',
-    a: 'Ksolves lists Odoo and Salesforce among its practice areas on its home page. FactoryJet connected WooCommerce trade ordering to Odoo for Sow Easy. Ask any firm to show an agent connected to your system, not only a similar one.',
+    a: 'Ksolves lists Odoo and Salesforce among its practice areas on its home page. FactoryJet is building WooCommerce trade ordering connected to Odoo for Sow Easy, now on staging. Ask any firm to show an agent connected to your system, not only a similar one.',
   },
   {
     q: 'Is a platform like Yellow.ai better than a custom agent?',
@@ -358,7 +358,7 @@ export const post: BlogPost = {
       </div>
 
       <p className="mb-4">
-        Ask ChatGPT, Gemini or Perplexity for the best AI agent development companies in India and the answers lean on the same big names. We know because we asked. On 24 November 2026 we put four Indian buyer questions to eight AI search tools. Infosys, TCS, Wipro, Fractal and Persistent came up again and again, along with a long tail of agencies that change from tool to tool.
+        Ask ChatGPT, Gemini or Perplexity for the best AI agent development companies in India and the answers lean on the same big names. We know because we asked. On 24 November 2026 we put four Indian buyer questions to eight AI search tools. The same few large enterprise names came up again and again, along with a long tail of agencies that change from tool to tool.
       </p>
       <p className="mb-4">
         A big name is a fair answer for a bank. It is a poor answer for a 60-person distributor that wants one job automated. So this guide covers ten firms that describe agent work on their own sites, and tells you which kind of buyer each one suits. For each firm we give the offices it lists, one fact it states about itself, and one question worth asking it.
@@ -451,7 +451,7 @@ export const post: BlogPost = {
         </div>
         <div className="rounded-xl border border-gray-200 p-4">
           <p className="font-semibold mb-1">&ldquo;We run Odoo or Salesforce and the agent must live inside it.&rdquo;</p>
-          <p className="text-gray-700 text-sm">Ksolves lists both on its home page. FactoryJet has connected WooCommerce ordering to Odoo for Sow Easy.</p>
+          <p className="text-gray-700 text-sm">Ksolves lists both on its home page. FactoryJet is building WooCommerce ordering connected to Odoo for Sow Easy, now on staging.</p>
         </div>
       </div>
 
