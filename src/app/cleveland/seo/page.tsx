@@ -453,6 +453,18 @@ const BREADCRUMB_SCHEMA = {
   ],
 };
 
+const SERVICE_AREAS = [
+  { area: 'Fairview Park', note: 'A small west-side suburb next to Cleveland, so buyers often search it by name alongside nearby Lakewood and North Olmsted.' },
+  { area: 'North Olmsted', note: 'Cuyahoga County, west of the city. A business based here can list it as its address and add neighbouring suburbs as its service area.' },
+  { area: 'Westlake and ZIP 44145', note: 'The 44145 ZIP code is Westlake. Some people search by ZIP code, so we put it on the page next to the town name.' },
+  { area: 'Rocky River', note: 'On the lakefront west of Cleveland. Reviews that name the town and the job help a profile show for searches here.' },
+  { area: 'Lakewood', note: 'Borders Cleveland on the west and is searched as its own place, so it gets its own mention in your profile and on the page.' },
+  { area: 'Avon', note: 'Lorain County rather than Cuyahoga, further west. A service-area profile can cover it without opening a second office.' },
+  { area: 'Parma', note: 'South of the city. Homeowner services such as HVAC and roofing are searched with the town name, so the service page names it.' },
+  { area: 'Euclid', note: 'East of Cleveland on Lake Erie. We check the Euclid results for your terms before deciding what to write.' },
+  { area: 'Mentor', note: 'Lake County, east of the city. It sits inside the roughly two hours of driving Google allows for a service-area business based in Cleveland.' },
+]
+
 export default function ClevelandSeoPage() {
   return (
     <>
@@ -647,6 +659,28 @@ export default function ClevelandSeoPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ── AREAS WE SERVE (Search Console gap, 24 Nov 2026) ── */}
+        <section id="areas-we-serve" className="pp-sec" style={{ backgroundColor: '#FFFFFF', padding: 'clamp(56px, 8vh, 96px) 0' }}>
+          <div className="pp-wrap">
+            <div style={{ maxWidth: '720px', margin: '0 0 36px' }}>
+              <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: '#141414', letterSpacing: '-0.025em', margin: 0 }}>
+                Areas we serve across Northeast Ohio
+              </h2>
+              <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
+                We work with Cleveland and Northeast Ohio businesses, HVAC and other trades included. These are the suburbs people ask us about most.
+              </p>
+            </div>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '20px' }}>
+              {SERVICE_AREAS.map((a) => (
+                <li key={a.area} style={{ background: '#FFFFFF', border: '1px solid #E6E6EC', borderRadius: '16px', padding: '24px' }}>
+                  <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#141414', margin: '0 0 8px', letterSpacing: '-0.015em' }}>{a.area}</h3>
+                  <p style={{ fontSize: '13.5px', color: '#6E6E80', lineHeight: 1.55, margin: 0 }}>{a.note}</p>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 

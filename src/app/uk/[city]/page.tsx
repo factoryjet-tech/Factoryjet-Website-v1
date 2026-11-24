@@ -19,8 +19,14 @@ export async function generateMetadata({
   const url = `https://factoryjet.com/uk/${city.slug}`
 
   return {
-    title: `Web Design & Digital Agency in ${city.name} | FactoryJet`,
-    description: `FactoryJet serves ${city.name} businesses with web design, AI websites, ecommerce, SEO, and AI agents. ${city.businesses.toLocaleString()}+ local businesses. Free consultation.`,
+    title:
+      city.slug === 'cardiff'
+        ? 'Web Design & SEO Agency in Cardiff | FactoryJet'
+        : `Web Design & Digital Agency in ${city.name} | FactoryJet`,
+    description:
+      city.slug === 'cardiff'
+        ? `FactoryJet serves Cardiff businesses with web design, SEO, AI search visibility, ecommerce, and AI agents. ${city.businesses.toLocaleString()}+ local businesses. Free consultation.`
+        : `FactoryJet serves ${city.name} businesses with web design, AI websites, ecommerce, SEO, and AI agents. ${city.businesses.toLocaleString()}+ local businesses. Free consultation.`,
     alternates: {
       canonical: url,
       // These 15 city pages are UK-only: there is no India or US twin to point
