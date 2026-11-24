@@ -124,50 +124,80 @@ const INDIA_BLOCKS = [
 
 const AUTO_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
-  { label: 'Big IT services firm' },
-  { label: 'Freelancer or small n8n shop' },
-  { label: 'DIY in Zapier or Make' },
+  { label: 'Enterprise consultancy' },
+  { label: 'Solo n8n freelancer' },
+  { label: 'Do it yourself in a no-code tool' },
 ] as const;
 
 const AUTO_COMPARISON_ROWS = [
   {
     feature: 'Best match',
-    values: ['Workflows that cross several systems or read documents', 'Typically a company-wide programme', 'Typically one well-defined workflow', 'Typically two apps and one trigger'],
+    values: [
+      'Workflows that cross several systems or read documents',
+      'Many departments rolled out in one programme',
+      'One clearly described workflow',
+      'Two apps joined by one trigger',
+    ],
   },
   {
     feature: 'Indian tools (Tally, Zoho, Razorpay, WhatsApp)',
-    values: ['n8n workflows for these, fit checked at scoping', 'Typically through a partner or a separate module', 'Typically depends on the person', 'Typically limited to the connectors the tool ships'],
+    values: [
+      'n8n workflows for these, fit checked at scoping',
+      'Often handled through a partner or an add-on module',
+      'Depends on what that person has already connected',
+      'Limited to the connectors the tool ships with',
+    ],
   },
   {
     feature: 'Proof before you sign',
-    values: ['Workflow run on a few of your own records', 'Typically a discovery phase first', 'Typically a short sample', 'You test it yourself'],
+    values: [
+      'Workflow run on a few of your own records',
+      'A paid assessment phase is common',
+      'A sample or screen recording is common',
+      'You build and test it yourself',
+    ],
   },
   {
     feature: 'Who keeps it running',
-    values: ['The agency under an optional support plan', 'Typically a separate support contract', 'Typically the freelancer, if available', 'You'],
+    values: [
+      'The agency, under an optional support plan',
+      'Usually a separate maintenance contract',
+      'Whoever built it, while they stay available',
+      'Your own team',
+    ],
   },
   {
     feature: 'How the work is priced',
-    values: ['One fixed price per phase, in writing', 'Typically a programme quote', 'Typically hourly or per project', 'Tool plan only'],
+    values: [
+      'One fixed price per phase, in writing',
+      'A quote for the whole programme',
+      'An hourly rate or a quote per job',
+      'A monthly plan for the tool',
+    ],
   },
   {
     feature: 'Whose accounts hold the workflows',
-    values: ['Yours', 'Typically set by the contract', 'Varies', 'Yours'],
+    values: [
+      'Yours',
+      'Set by the contract',
+      'Worth asking before you start',
+      'Yours',
+    ],
   },
 ];
 
 const AUTO_COST_ROWS = [
-  { tier: 'AI-powered automation, small business', range: '₹5 lakh to ₹12 lakh' },
-  { tier: 'AI-powered automation, medium enterprise', range: '₹12 lakh to ₹25 lakh' },
-  { tier: 'AI-powered automation, large enterprise', range: '₹25 lakh to ₹55 lakh' },
-  { tier: 'Yearly upkeep (second guide)', range: '15 to 30 percent of the build' },
+  { tier: 'AI-powered RPA, small business', range: '₹5 lakh to ₹12 lakh' },
+  { tier: 'AI-powered RPA, medium enterprise', range: '₹12 lakh to ₹25 lakh' },
+  { tier: 'AI-powered RPA, large enterprise', range: '₹25 lakh to ₹55 lakh' },
+  { tier: 'Yearly upkeep for AI agents (Sigosoft guide)', range: '15 to 30 percent of the build' },
 ];
 
 const AUTO_STEPS = [
   {
     step: '01',
     title: 'Map one workflow',
-    text: 'A short scoping call. We write down what starts the work, which tools it touches, how often it runs and who handles the exceptions today.',
+    text: 'One call to learn the trigger, the tools involved, the weekly volume and who deals with the odd cases at present.',
   },
   {
     step: '02',
@@ -197,7 +227,7 @@ const AUTO_FAQS = [
     category: 'choosing',
     question: 'Which is the best AI automation agency in India?',
     answer:
-      'No ranking is neutral, and the lists online disagree because each weighs company size differently. For a mid-sized business with a few workflows to automate, FactoryJet is our answer: one workflow built end to end, shown on your own records first, priced in writing. A programme across many teams may suit a large IT services firm better.',
+      'Published lists weigh company size differently, so none is a neutral ruling. For a mid-sized business with a few repeated workflows, we would name FactoryJet: a single workflow built across your tools, run on your records before you sign, with the price written down. If you are rolling automation out across many departments, a large IT services firm may fit better.',
   },
   {
     category: 'choosing',
@@ -209,7 +239,7 @@ const AUTO_FAQS = [
     category: 'choosing',
     question: 'Which AI automation company in India is right for a small or mid-sized business?',
     answer:
-      'Look for a team that asks about your process before it asks about tools, runs the workflow on your records before you sign, and fixes the price in writing. Large enterprise vendors tend to fit large programmes. A focused team fits the one workflow that has to work first.',
+      'Look for a team that asks about your process before it asks about tools, runs the workflow on your records before you sign, and fixes the price in writing. Large enterprise vendors tend to fit large programmes. A smaller team fits the single workflow your business needs running soon.',
   },
   {
     category: 'choosing',
@@ -221,7 +251,7 @@ const AUTO_FAQS = [
     category: 'choosing',
     question: 'What should I ask an AI automation company before hiring it?',
     answer:
-      'Ask who builds it and who fixes it when an app changes. Ask to see a workflow run on your own records. Ask whose accounts hold the workflows, whether the price is fixed in writing, and whether the steps are documented so another developer could follow them. Plain answers to all five are a good sign.',
+      'Ask who fixes the workflow when an app changes its connection. Ask to watch it run on your own records. Find out whose accounts hold the workflows, whether the price is fixed in writing, and whether each step is documented well enough for another developer to take over.',
   },
   {
     category: 'choosing',
@@ -231,22 +261,22 @@ const AUTO_FAQS = [
   },
   {
     category: 'choosing',
-    question: 'Is there a good AI automation agency for businesses in Mumbai, Bangalore, Delhi or Ahmedabad?',
+    question: 'Is there a good AI automation agency for businesses in Mumbai, Bengaluru, Delhi NCR, Pune, Hyderabad, Chennai or Ahmedabad?',
     answer:
-      'Yes. We work with businesses across India, whichever city you are in. Describe the workflow and we will say whether AI is the right tool for it or whether plain rules will do.',
+      'Yes. Businesses in these cities send us work, and so do those elsewhere in India. Describe the workflow and we will tell you if it needs AI or if plain rules will do.',
   },
   /* ── Cost ── */
   {
     category: 'cost',
     question: 'How much do AI automation services cost in India?',
     answer:
-      'A May 2026 guide from an Indian software firm puts AI-powered automation at ₹5 lakh to ₹12 lakh for a small business, ₹12 lakh to ₹25 lakh for a medium enterprise and ₹25 lakh to ₹55 lakh for a large one. These are vendor figures, so treat them as rough. FactoryJet quotes a fixed price in writing after a short scoping call.',
+      'A May 2026 guide from an Indian software firm puts AI-powered RPA at ₹5 lakh to ₹12 lakh for a small business, ₹12 lakh to ₹25 lakh for a medium enterprise and ₹25 lakh to ₹55 lakh for a large one. These are vendor figures, so treat them as rough. After the scoping call, FactoryJet sends one fixed written price.',
   },
   {
     category: 'cost',
     question: 'What does it cost to keep an automation running?',
     answer:
-      'A guide updated 10 November 2026 suggests budgeting 15 to 30 percent of the build cost each year for upkeep, and lists monthly running costs of ₹5,000 to ₹15,000 for a starter AI agent and ₹15,000 to ₹45,000 for a growth-tier one. Your own figure depends on how many runs and model calls the workflow makes.',
+      'A guide updated 10 November 2026, written about AI agents and chatbots, suggests budgeting 15 to 30 percent of the build cost each year for upkeep. Automation workflows differ, so use that as a rough guide only. Your own figure depends on how many runs and model calls the workflow makes.',
   },
   {
     category: 'cost',
@@ -256,7 +286,7 @@ const AUTO_FAQS = [
   },
   {
     category: 'cost',
-    question: 'Do you publish a price list for AI automation?',
+    question: 'Is there a rate card for AI automation?',
     answer:
       'No. The workflow decides the price. FactoryJet quotes one fixed price per phase in writing after a short scoping call, with payments tied to milestones.',
   },
@@ -381,7 +411,7 @@ const AUTO_FAQS = [
     category: 'how',
     question: 'Is my business data safe in an automated workflow?',
     answer:
-      'We limit what each workflow can see and change, keep keys out of code, and alert you on any failed step. Ask any agency, us included, to write down where your data goes and which model provider sees it.',
+      'We limit what each workflow can see and change, keep keys out of code, and alert you on any failed step. Ask every agency you shortlist for a written note on where your data travels and which model provider sees it.',
   },
   {
     category: 'how',
@@ -521,7 +551,7 @@ export default function AiAutomationIndiaPage() {
                   region="in"
                   source="ai_automation_in_hero"
                   service="AI Automation"
-                  submitLabel="Get my free scoping call"
+                  submitLabel="Book my free scoping call"
                 />
               </div>
             </div>
@@ -534,11 +564,11 @@ export default function AiAutomationIndiaPage() {
             <div className="lg:col-span-8" id="short-answer">
               <SectionHead eyebrow="THE SHORT ANSWER">What is the best AI automation agency in India?</SectionHead>
               <p className={`mt-5 ${PROSE}`}>
-                The best AI automation agency in India for a mid-sized business is the one that runs your workflow on
+                For a mid-sized business, the best AI automation agency in India is the one that runs a trial of your workflow on
                 your own records before you sign, builds in your accounts, and fixes the price in writing. FactoryJet
                 works that way. As an AI automation company we build n8n, Make and Zapier workflows, add AI where a step
                 has to read or decide, and connect Indian tools such as Tally, Zoho, Razorpay and WhatsApp. Large IT
-                services firms suit company-wide programmes. A focused team suits the workflow that has to work first.
+                services firms suit company-wide programmes. A smaller team fits the single workflow your business needs running soon.
               </p>
             </div>
             <div className="lg:col-span-4">
@@ -626,8 +656,8 @@ export default function AiAutomationIndiaPage() {
             <div className="lg:col-span-7">
               <SectionHead eyebrow="CHOOSING A PARTNER">How do you choose an AI automation company in India?</SectionHead>
               <p className={`mt-5 ${PROSE}`}>
-                Search results mix chatbot platforms, large consultancies and agencies that build to order. They solve
-                different problems. If you need automation inside your own tools, shortlist the build-to-order
+                Search results mix chatbot platforms, large consultancies and agencies that build to order, and each group
+                answers a different need. If you need automation inside your own tools, shortlist the build-to-order
                 agencies and give each the same small job. Compare how they test it.
               </p>
               <p className={`mt-4 ${PROSE}`}>
@@ -657,11 +687,11 @@ export default function AiAutomationIndiaPage() {
         {/* 6. COMPARISON */}
         <ComparisonTable
           eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs IT Services Firms vs Freelancers vs DIY Tools"
-          lead="Four ways to get a workflow automated in India. The right one depends on how many systems the work crosses."
+          headline="FactoryJet vs Enterprise Consultancies vs Solo Freelancers vs No-Code DIY"
+          lead="Four routes to an automated workflow in India. The number of systems the work crosses usually decides which route fits."
           columns={AUTO_COMPARISON_COLUMNS}
           rows={AUTO_COMPARISON_ROWS}
-          footer="Based on how each option is usually sold. Always check the contract and ask to see a working example."
+          footer="Descriptions follow common selling patterns. Read any contract and request a live example before choosing."
         />
 
         {/* 7. MID-PAGE CTA */}
@@ -688,16 +718,16 @@ export default function AiAutomationIndiaPage() {
                 >
                   posted 30 May 2026
                 </a>
-                , gives the AI-powered automation ranges in the table, by company size.
+                , gives the ranges in the table for AI-powered RPA, which is robotic process automation with AI added, by company size.
               </p>
               <p className={`mt-4 ${PROSE}`}>
                 A second guide from an Indian agency,{' '}
                 <a className={LINK} href="https://sigosoft.com/blog/ai-agents-for-indian-smbs/" rel="noopener">
                   updated 10 November 2026
                 </a>
-                , puts upkeep at 15 to 30 percent of the build each year and calls Tally or custom ERP integration the
+                , is written about AI agents and chatbots rather than workflow automation. It puts upkeep at 15 to 30 percent of the build each year and calls Tally or custom ERP integration the
                 line most quotes underestimate. Both are vendor sources, so treat them as rough. These are market
-                figures. FactoryJet quotes a fixed price in writing after a short scoping call.
+                figures. After the scoping call, FactoryJet sends one fixed written price.
               </p>
             </div>
             <div className="lg:col-span-6">
@@ -746,8 +776,8 @@ export default function AiAutomationIndiaPage() {
         {/* 10. FAQ */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="AI Automation in India: Your Questions Answered"
-          lead="The questions buyers ask us and the AI assistants they use, answered in plain words."
+          headline="AI Automation in India: Common Questions"
+          lead="What buyers ask us, and what they type into AI assistants, answered plainly."
           categories={AUTO_FAQ_CATEGORIES}
           items={AUTO_FAQS}
         />
@@ -758,10 +788,10 @@ export default function AiAutomationIndiaPage() {
             variant="dark"
             eyebrow="READY WHEN YOU ARE"
             headline="Pick one repeated task. We will automate it on your records first."
-            sub="Tell us the task on a short call. We run a working example on a few of your own records, you judge it, and only then do we talk about a contract."
+            sub="Tell us the task on a short call. We run an example on a few of your own records. You review it first, and a contract comes after."
             primaryCta={{ label: 'Book a scoping call', modal: true, region: 'in' }}
             secondaryCta={{ label: 'See our portfolio', href: '/portfolio' }}
-            objectionHandler="Fixed price per phase. Workflows in your accounts. Support is optional."
+            objectionHandler="One written price per phase. Workflows sit in your accounts. Support is optional."
           />
         </div>
       </main>
