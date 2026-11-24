@@ -437,6 +437,27 @@ const SERVICE_RULES: ServiceRule[] = [
     keywords: ['roofing', 'roofer', 'contractor seo', 'home services'],
     weight: 4,
   },
+  {
+    href: '/services/plumber-seo',
+    label: 'Plumber SEO',
+    blurb: 'Search for plumbing companies: emergency calls, planned jobs and Local Services Ads.',
+    keywords: ['plumber', 'plumbers', 'plumbing seo', 'plumbing company', 'plumbing marketing'],
+    weight: 4,
+  },
+  {
+    href: '/services/electrician-seo',
+    label: 'Electrician SEO',
+    blurb: 'Search for electrical contractors: license and permit questions and higher-value jobs.',
+    keywords: ['electrician', 'electricians', 'electrical contractor', 'electrician marketing'],
+    weight: 4,
+  },
+  {
+    href: '/services/cleaning-company-seo',
+    label: 'Cleaning Company SEO',
+    blurb: 'Search for cleaning businesses built around recurring and commercial clients.',
+    keywords: ['cleaning company', 'cleaning business', 'house cleaning', 'janitorial', 'maid service', 'commercial cleaning'],
+    weight: 4,
+  },
   // --- Tools / reference ---
   {
     href: '/ai-visibility-checker',
@@ -764,6 +785,9 @@ const SERVICE_FAMILY: Record<string, ServiceFamily> = {
   '/services/shopify-seo': 'search',
   '/services/small-business-seo': 'search',
   '/services/roofing-seo': 'search',
+  '/services/plumber-seo': 'search',
+  '/services/electrician-seo': 'search',
+  '/services/cleaning-company-seo': 'search',
   '/services/technical-seo': 'search',
   '/ai-visibility-checker': 'search',
   '/uk/ai-seo': 'search',
