@@ -77,7 +77,7 @@ export const post: BlogPost = {
       <p className="mb-4">The test is simple. Ask yourself whether you are short of <strong>capability</strong> or <strong>capacity</strong>. If you have people who could do the work but nobody sure what work to do, you want a consultant. If you know roughly what needs doing and have nobody to do it, you want a firm. If you genuinely have neither, the sequence that works is an independent audit first to set direction, then execution against it.</p>
       <p className="mb-4">One signal worth noting from our testing: <strong>four of our twelve AI engine answers named individual people rather than companies.</strong> That almost never happens in other service categories, and it tells you the independents genuinely dominate the strategy end of this market.</p>
 
-      <p className="mb-4"><strong>Which page do you actually need?</strong> This one is a shortlist. If you have already decided to hire and want scope and terms, go to our <a href="/services/seo-consulting" className="text-orange-600 underline">SEO consulting service page</a> instead.</p>
+      <p className="mb-4"><strong>Which page do you actually need?</strong> This one is a shortlist. If you have already decided to hire and want scope, terms and what a first consultation covers, go to our <a href="/services/seo-consulting" className="text-orange-600 underline">SEO consultant and SEO consultancy service page</a> instead.</p>
 
       <p className="mb-4"><strong>Disclosure, up front:</strong> FactoryJet is on this list, at number ten. Everything said about the other nine was fetched from their own websites on 7 September 2026 and is quoted or attributed. Nobody paid to appear.</p>
 

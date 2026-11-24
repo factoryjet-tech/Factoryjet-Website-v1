@@ -17,7 +17,10 @@ import HeroInlineForm from '@/components/HeroInlineForm';
    Intent split (anti-cannibalization, read this before editing):
      - THIS page owns ADVISORY intent: "seo consulting services", "seo
        consultants services", "seo services consultant", "seo consultancy
-       services", "consulting seo services". Buyer already has people who can
+       services", "consulting seo services", "seo consultant", "seo
+       consultancy", "seo consultation". (24 Nov 2026: GSC showed Google
+       ranking /blog/best-seo-consulting-companies-usa at 70-90 for these;
+       the blog owns the "best ... companies" listicle intent only.) Buyer already has people who can
        execute and wants diagnosis, strategy, a roadmap, and a senior brain.
      - /services/seo owns DONE-FOR-YOU retainer intent. Buyer wants an agency
        to run the whole program. The two pages link to each other and state the
@@ -52,9 +55,9 @@ const LAV_SOFT = '#ECEAFB';
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'SEO Consulting Services: Strategy & Roadmaps | FactoryJet',
+  title: 'SEO Consultant & SEO Consultancy Services | FactoryJet',
   description:
-    'Advisory-first SEO consulting services for US teams. Traffic diagnosis, strategy, keyword research, and an execution roadmap. Free consultation.',
+    'Hire a senior SEO consultant to diagnose stuck traffic and hand your team a roadmap. SEO consultancy for US teams. Book a free SEO consultation.',
   keywords: [
     'seo consulting services',
     'seo consultants services',
@@ -62,6 +65,9 @@ export const metadata: Metadata = {
     'seo consultancy services',
     'consulting seo services',
     'seo consultant',
+    'seo consultancy',
+    'seo consultation',
+    'search engine optimization consultant',
     'seo strategy consultant',
     'technical seo consultant',
     'fractional seo lead',
@@ -70,9 +76,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'SEO Consulting Services in the US: Audits, Strategy & Roadmaps | FactoryJet',
+    title: 'SEO Consultant & SEO Consultancy Services in the US | FactoryJet',
     description:
-      'Advisory-first SEO consulting for US teams with in-house marketers or developers. Diagnosis, strategy, keyword and AI-query research, and a roadmap your team owns.',
+      'An SEO consultant for US teams with in-house marketers or developers. A free SEO consultation, then diagnosis, strategy, keyword and AI-query research, and a roadmap your team owns.',
     url: PAGE_URL,
     images: [
       {
@@ -86,7 +92,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SEO Consulting Services in the US: Audits, Strategy & Roadmaps | FactoryJet',
+    title: 'SEO Consultant & SEO Consultancy Services in the US | FactoryJet',
     description:
       'Advisory-first SEO consulting for US teams that already have people to execute. Diagnosis, strategy, and a roadmap your team owns.',
     images: ['https://factoryjet.com/og-default.png'],
@@ -240,7 +246,7 @@ const COMPARISON_ROWS: ReadonlyArray<CompRow> = [
 ];
 
 /* ─────────────────────────────────────────────────────────────────────────────
-   FAQ data: 30 items across 6 categories, grounded in live US PAA
+   FAQ data: 35 items across 6 categories, grounded in live US PAA
 ───────────────────────────────────────────────────────────────────────────── */
 
 const FAQ_CATEGORIES: ReadonlyArray<FAQCategory> = [
@@ -291,6 +297,12 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
       'It is a consulting arrangement where a senior specialist acts as your head of SEO on a part-time, ongoing basis: sitting in your planning meetings, reviewing work before it ships, and owning the roadmap. It suits companies that need consistent senior direction but do not have enough SEO work to justify a full-time executive hire. Practically, it is the same skill set as a project engagement, applied continuously rather than in one burst.',
   },
 
+  {
+    category: 'basics',
+    question: 'What does an SEO consultancy do day to day?',
+    answer:
+      'Most of the work is reading evidence and making calls. An SEO consultancy crawls the site, reads Search Console and analytics, studies which pages Google ranks for which queries, and checks what the competitors who win are doing differently. Then it decides what to change and in what order, writes that up so your team can build it, and reviews the work before it ships. The output is decisions, not volume.',
+  },
   /* ── Consultant vs agency vs in-house ───────────────────────────────── */
   {
     category: 'compare',
@@ -324,6 +336,30 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   },
 
   /* ── How an engagement works ────────────────────────────────────────── */
+  {
+    category: 'engagement',
+    question: 'What happens in a free SEO consultation?',
+    answer:
+      'It is a 30-minute call with Bhavesh Barot, the founder, not a sales rep. Before the call we look at your site, and if you share it, your Search Console data and the queries you care about. On the call we tell you what we think is holding organic traffic back, what we would look at first, and whether consulting is the right shape of help or whether you need a done-for-you team instead. You leave with that answer whether or not you hire us.',
+  },
+  {
+    category: 'engagement',
+    question: 'How should I prepare for an SEO consultation?',
+    answer:
+      'Bring three things. The pages or services that matter most to revenue. The queries you wish you ranked for. And who on your side can actually ship changes, such as a developer, a writer, or nobody yet. Read access to Search Console helps a lot but is optional for the first call. If traffic dropped, note roughly when, because the date usually points to the cause faster than anything else.',
+  },
+  {
+    category: 'engagement',
+    question: 'What do I get from an SEO consultant after the consultation?',
+    answer:
+      'If you go ahead, the deliverable is a written diagnosis that names the constraint, a roadmap written as tickets your developers and writers can pick up, each with an owner, an effort estimate and a reason, and working sessions so your team understands the thinking behind it. If the consultation shows you need something else, such as a local SEO program or a team to do the work, we say so on the call.',
+  },
+  {
+    category: 'engagement',
+    question: 'Is an SEO consultation the same as an SEO audit?',
+    answer:
+      'No. A consultation is a conversation that tells you where the problem probably is and what kind of help fits. An audit is a full written review of the site, crawled page by page, that becomes the base of the roadmap. The consultation is free and decides whether an audit or a consulting engagement is worth doing at all.',
+  },
   {
     category: 'engagement',
     question: 'What does an SEO consulting engagement look like?',
@@ -453,10 +489,10 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
-  dateModified: '2026-10-21',
+  dateModified: '2026-11-24',
   '@id': `${PAGE_URL}#webpage`,
   url: PAGE_URL,
-  name: 'SEO Consulting Services in the US: Audits, Strategy & Roadmaps',
+  name: 'SEO Consultant & SEO Consultancy Services in the US',
   description:
     'Advisory-first SEO consulting services for US teams that already have people who can execute. Diagnosis, technical audit, keyword and AI-query research, and a prioritised roadmap your team owns.',
   inLanguage: 'en-US',
@@ -610,12 +646,12 @@ export default function SeoConsultingPage() {
         <section className="relative overflow-hidden">
           <div className="mx-auto grid max-w-[1180px] grid-cols-1 items-center gap-12 px-6 py-16 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:py-20">
             <div>
-              <p className="fj-eyebrow">SEO consulting services &middot; United States</p>
+              <p className="fj-eyebrow">SEO consultancy services &middot; United States</p>
               <h1
                 className="fj-display mt-5 font-bold text-fj-ink"
                 style={{ fontSize: 'clamp(2.35rem, 5vw, 3.75rem)', lineHeight: 1.06, letterSpacing: '-0.03em' }}
               >
-                SEO consulting for teams that already have{' '}
+                An SEO consultant for teams that already have{' '}
                 <span className="italic" style={{ color: ORANGE }}>hands to build</span>
               </h1>
               <p
@@ -624,7 +660,8 @@ export default function SeoConsultingPage() {
               >
                 You have writers. You have developers. What you do not have is someone senior enough to tell
                 them which twenty things to ignore. That is the job. We diagnose why organic traffic is stuck,
-                set the strategy, and hand your team a roadmap they can start on Monday.{' '}
+                set the strategy, and hand your team a roadmap they can start on Monday. That is SEO consultancy
+                done by one senior person, and it starts with a free SEO consultation.{' '}
                 <b className="font-bold text-fj-ink">You keep the plan, and the knowledge.</b>
               </p>
               <HeroInlineForm region="us" source="services_seo_consulting_hero" submitLabel="Get an SEO diagnosis" />
@@ -714,10 +751,10 @@ export default function SeoConsultingPage() {
                 Short answer
               </p>
               <h2 id="what-is-seo-consulting" className="fj-display mt-3 text-[1.35rem] font-bold text-fj-ink" style={{ letterSpacing: '-0.02em' }}>
-                What are SEO consulting services?
+                What is SEO consultancy, and what does an SEO consultant do?
               </h2>
               <p className="mt-3 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
-                <b className="text-fj-ink">SEO consulting services provide senior strategic direction.</b> An experienced consultant audits your website and diagnoses traffic drops. We prioritize exact technical fixes into developer tickets. Your internal engineers and writers ship the changes. Strategic knowledge stays inside your company. Engagements cover technical audits, keyword clustering, AI search visibility, and a 90-day execution roadmap.
+                <b className="text-fj-ink">SEO consultancy provides senior strategic direction.</b> An experienced SEO consultant audits your website and diagnoses traffic drops. We prioritize exact technical fixes into developer tickets. Your internal engineers and writers ship the changes. Strategic knowledge stays inside your company. Engagements cover technical audits, keyword clustering, AI search visibility, and a 90-day execution roadmap.
               </p>
               <p className="mt-4 max-w-[900px] font-fj-body text-[1.0625rem] leading-[1.7] text-fj-neutral-600">
                 Choose consulting when you already have people who can ship and your gap is direction. Choose a{' '}
@@ -1002,7 +1039,7 @@ export default function SeoConsultingPage() {
               className="fj-display mt-3.5 max-w-[720px] font-bold text-fj-ink"
               style={{ fontSize: 'clamp(1.75rem, 3.6vw, 2.75rem)', lineHeight: 1.07, letterSpacing: '-0.025em' }}
             >
-              From first call to a plan your team can <span className="italic" style={{ color: ORANGE }}>start on Monday</span>
+              From SEO consultation to a plan your team can <span className="italic" style={{ color: ORANGE }}>start on Monday</span>
             </h2>
 
             <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
