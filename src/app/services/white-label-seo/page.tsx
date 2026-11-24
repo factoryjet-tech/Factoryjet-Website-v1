@@ -34,9 +34,13 @@ import { ORG_ID, ORG_REF, FOUNDER_ID } from '@/data/organization';
      Studio, no proprietary score (/services/local-seo); no ranking guarantee
      (/services/seo-consulting); house terms (fixed price per phase, no monthly
      minimum); 500+ businesses served, 97% on-time delivery, founded 2014.
-   - NOT confirmed, so NOT on the page: whether FactoryJet signs an NDA or a
-     non-solicit, task turnaround in days, report file formats, link building.
-     The agreement checklist below is advice for choosing any provider.
+   - Confirmed by Bhavesh on 24 Nov 2026 (relayed by the gap-audit session):
+     FactoryJet signs an NDA and promises in writing not to contact or approach
+     the agency's clients; typical turnaround is same day for an SEO audit,
+     7 days for a batch of technical fixes, 7 days for a batch of pages (such
+     as 5 service pages), with a quote per job carrying its own date; NO link
+     building; reports as PDF, Looker Studio or both, as the client prefers,
+     with the agency's logo; all six services are offered white label.
    - No FactoryJet prices. Dollar figures are third parties' published ranges,
      each linked through SRC.
    - The vendor branch of the lead form goes to a separate inbox. The trust
@@ -155,7 +159,7 @@ const serviceSchema = {
   areaServed: { '@type': 'Country', name: 'United States' },
   audience: { '@type': 'BusinessAudience', audienceType: 'Marketing agencies, web design agencies and consultants' },
   description:
-    'FactoryJet does SEO work for agencies\' clients without its own name on the deliverables. The agency keeps the client relationship, the brand and the price it charges. FactoryJet quotes each task in writing, does the work after the agency approves it, and sends a monthly plain-language report built on the client\'s own Google Analytics and Search Console data.',
+    'FactoryJet does SEO work for agencies\' clients without its own name on the deliverables. The agency keeps the client relationship, the brand and the price it charges. FactoryJet signs an NDA, promises in writing not to approach the agency\'s clients, quotes each job in writing, does the work after the agency approves it, and sends a monthly plain-language report with the agency\'s logo, built on the client\'s own Google Analytics and Search Console data. Link building is not included.',
   url: CANONICAL_URL,
 };
 
@@ -268,13 +272,13 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'delivery',
     question: 'What do white label SEO reports look like?',
     answer:
-      'A monthly report in plain language, tied to calls, form fills and sales rather than a wall of keyword positions. It is a Looker Studio view built on the client\'s own Google Analytics 4 and Search Console data, with no FactoryJet name on it. We do not invent a score that only we can calculate.',
+      'A monthly report in plain language, tied to calls, form fills and sales rather than a wall of keyword positions. It comes as a PDF, a Looker Studio view or both, as your client prefers, with your agency\'s logo and no FactoryJet name. The numbers come from the client\'s own Google Analytics 4 and Search Console.',
   },
   {
     category: 'delivery',
     question: 'How fast is white label SEO work delivered?',
     answer:
-      'Each task gets a delivery date in the written quote, before you approve it. An audit, a set of technical fixes and a batch of new pages take different amounts of time, so we date each one rather than promise one number. Across all projects, FactoryJet delivers 97% on time.',
+      'Typical times: an SEO audit goes out the same day, a batch of technical fixes takes 7 days, and a batch of pages, such as 5 service pages, takes 7 days. Each job is quoted on its own, and the quote carries its own delivery date before you approve it. Across all projects, FactoryJet delivers 97% on time.',
   },
   {
     category: 'delivery',
@@ -288,12 +292,18 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     answer:
       'No, and no provider honestly can. Google\'s own guidance on hiring an SEO says no one can guarantee a number one ranking. What we commit to in writing is the task, the delivery date and a written list of every change we made.',
   },
+  {
+    category: 'delivery',
+    question: 'Do you do link building?',
+    answer:
+      'No. We do not do link building, so it is not part of any white label job. Our work is audits, technical fixes, page writing, local SEO, ecommerce SEO and AI search visibility. If a client needs links, that sits outside our scope.',
+  },
   // ── Brand ──────────────────────────────────────────────────────
   {
     category: 'brand',
     question: 'Will my client know I use a white label provider?',
     answer:
-      'Not from us. Reports, audits and files carry your brand, not ours, and we do not contact your client. You keep the relationship and every call. What you tell your client about how your agency works is your decision.',
+      'Not from us. Reports, audits and files carry your brand, not ours. We sign an NDA and promise in writing not to contact or approach your clients. You keep the relationship and every call. What you tell your client about how your agency works is your decision.',
   },
   {
     category: 'brand',
@@ -303,9 +313,15 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
   },
   {
     category: 'brand',
+    question: 'Do you sign an NDA and a non-solicit agreement?',
+    answer:
+      'Yes. We sign an NDA before you share client details, and we promise in writing not to contact or approach your clients. Your client names, data and results stay private during the work and after it ends.',
+  },
+  {
+    category: 'brand',
     question: 'What should a white label SEO agreement include?',
     answer:
-      'With any provider, put five things in writing: confidentiality of your client list and data, a promise not to approach your clients, who owns the work and the accounts, how access is removed when the work ends, and what happens to work in progress if either side stops.',
+      'Five things: confidentiality of your client list and data, a promise not to approach your clients, who owns the work and the accounts, how access is removed when the work ends, and what happens to work in progress if either side stops. We sign the first two as standard.',
   },
   // ── Working ────────────────────────────────────────────────────
   {
@@ -324,7 +340,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'working',
     question: 'Is there a minimum contract or monthly minimum?',
     answer:
-      'No monthly minimum. Each task is quoted and approved on its own, so you can start with one audit for one client and add more when it works. Ongoing monthly work is also quoted in writing before it starts.',
+      'No monthly minimum. Each job is quoted and approved on its own, so you can start with one audit for one client and add more when it works. Ongoing monthly work is also quoted in writing before it starts.',
   },
   {
     category: 'working',
@@ -406,12 +422,12 @@ const PROCESS: ReadonlyArray<{ n: string; t: string; b: string }> = [
   {
     n: '01',
     t: 'You send the brief',
-    b: 'The client\'s website, what they sell, where they sell it and what they have asked you for. Add anything you have already promised them.',
+    b: 'We sign an NDA first. Then send the client\'s website, what they sell, where they sell it and what they have asked you for, plus anything you have already promised them.',
   },
   {
     n: '02',
-    t: 'We quote each task in writing',
-    b: 'A fixed price, a scope and a delivery date per task. You approve it before any work starts, and you price it to your client however you like.',
+    t: 'We quote each job in writing',
+    b: 'A fixed price, a scope and a delivery date per job. You approve it before any work starts, and you price it to your client however you like.',
   },
   {
     n: '03',
@@ -431,8 +447,16 @@ const PROCESS: ReadonlyArray<{ n: string; t: string; b: string }> = [
   {
     n: '06',
     t: 'A monthly report goes out in your name',
-    b: 'Plain language, tied to calls, form fills and sales, built on the client\'s own data. You present it. We stay in the background.',
+    b: 'Plain language, tied to calls, form fills and sales, built on the client\'s own data. A PDF, a Looker Studio view or both, with your logo. You present it.',
   },
+];
+
+/* ── Typical turnaround, confirmed by Bhavesh 24 Nov 2026. Each quote still
+   carries its own date. ── */
+const TURNAROUND: ReadonlyArray<{ job: string; time: string }> = [
+  { job: 'An SEO audit', time: 'Same day' },
+  { job: 'A batch of technical fixes', time: '7 days' },
+  { job: 'A batch of pages, such as 5 service pages', time: '7 days' },
 ];
 
 /* ── Included and not included. ── */
@@ -447,8 +471,9 @@ const INCLUDED: ReadonlyArray<string> = [
   'A monthly plain-language report on the client\'s own data',
 ];
 const NOT_INCLUDED: ReadonlyArray<{ t: string; b: string }> = [
+  { t: 'Link building', b: 'We do not do link building. No link packages, guest posts for links or outreach.' },
   { t: 'Ranking guarantees', b: 'Nobody can promise a position on Google. Google says so itself.' },
-  { t: 'Contact with your client', b: 'You keep the relationship. We talk to your agency, not to your client.' },
+  { t: 'Contact with your client', b: 'We promise in writing not to contact or approach your clients. We talk to your agency.' },
   { t: 'A proprietary score', b: 'Reports use the client\'s own Analytics and Search Console numbers, which anyone can check.' },
   { t: 'Work you have not approved', b: 'Every task is quoted in writing and approved before it starts.' },
   { t: 'A monthly minimum', b: 'Start with one audit for one client. Add more when it works.' },
@@ -602,8 +627,9 @@ export default function WhiteLabelSeoPage() {
                     keeps the client, the brand on every report and the price the client pays.
                   </p>
                   <p className="mt-4 font-fj-body text-lg leading-relaxed text-fj-neutral-600">
-                    Each task is quoted to you in writing and starts only after you approve it. Reports are built on
-                    the client&rsquo;s own Analytics and Search Console data, with no FactoryJet name on them.
+                    We sign an NDA and never approach your clients. An SEO audit typically goes out the same day, and a
+                    batch of fixes or pages in 7 days. Each job is quoted to you in writing and starts only after you
+                    approve it.
                   </p>
                 </div>
                 <div className="mt-6">
@@ -664,7 +690,7 @@ export default function WhiteLabelSeoPage() {
                     </ul>
                   </div>
                   <p className="mt-4 rounded-xl bg-fj-cream px-4 py-3 font-fj-body text-[13px] leading-snug text-fj-ink">
-                    We work for your agency. We do not contact your client.
+                    We sign an NDA and promise in writing not to contact your clients.
                   </p>
                 </figure>
               </div>
@@ -773,9 +799,20 @@ export default function WhiteLabelSeoPage() {
                   they go live. We never step in front of you.
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-ink">
-                  Turnaround is set per task. Each quote carries its own delivery date, and across all our projects we
+                  Each job is quoted on its own and the quote carries its own delivery date. Across all our projects we
                   deliver 97% on time.
                 </p>
+                <div className="mt-6 rounded-2xl border border-fj-neutral-200 bg-white p-5">
+                  <p className="font-fj-mono text-xs font-bold uppercase tracking-wider text-[#B23E13]">Typical turnaround</p>
+                  <dl className="mt-1 grid gap-3">
+                    {TURNAROUND.map((x) => (
+                      <div key={x.job} className="flex items-baseline justify-between gap-4 border-t border-fj-neutral-200 pt-3">
+                        <dt className="font-fj-body text-[15px] text-fj-ink">{x.job}</dt>
+                        <dd className="flex-shrink-0 font-fj-display text-base font-bold text-fj-ink">{x.time}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </div>
               </div>
               <ol className="grid gap-4 lg:col-span-8">
                 {PROCESS.map((p) => (
@@ -806,7 +843,7 @@ export default function WhiteLabelSeoPage() {
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                   A white label report is only as good as the numbers behind it. If they come from the provider&rsquo;s
                   own tool, you cannot show the client where they came from. Ours come from the client&rsquo;s own
-                  Google Analytics 4 and Search Console, in a Looker Studio view.
+                  Google Analytics 4 and Search Console, delivered as a PDF, a Looker Studio view or both.
                 </p>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                   It is written in plain language and tied to what the client cares about: calls, form fills and sales.
@@ -816,7 +853,8 @@ export default function WhiteLabelSeoPage() {
               <ul className="grid gap-3 lg:col-span-7">
                 {[
                   { t: 'Monthly', d: 'One report a month per client, ready for you to present.' },
-                  { t: 'Your brand, not ours', d: 'No FactoryJet name, logo or link on the report.' },
+                  { t: 'Your logo, not ours', d: 'White labelled with your agency\u2019s logo. No FactoryJet name or link.' },
+                  { t: 'PDF, Looker Studio or both', d: 'Whichever format your client prefers.' },
                   { t: 'The client’s own data', d: 'Built on their Analytics 4 and Search Console, so every number can be checked.' },
                   { t: 'A list of every change', d: 'Which pages and settings changed this month, and why.' },
                   { t: 'No invented score', d: 'We do not report a number only we can calculate.' },
@@ -871,7 +909,7 @@ export default function WhiteLabelSeoPage() {
 
         <MidPageCTA
           headline="Have a client asking for SEO? Send us the brief."
-          sub="Tell us the client's website and what they asked you for. We reply with questions, then a fixed quote per task that you approve before anything starts."
+          sub="Tell us the client's website and what they asked you for. We sign an NDA, reply with questions, then send a fixed quote per job that you approve before anything starts."
           label="Send a client brief"
         />
 
@@ -882,11 +920,14 @@ export default function WhiteLabelSeoPage() {
               <div className="lg:col-span-5">
                 <p className="fj-eyebrow">Confidentiality</p>
                 <h2 className="mt-4 font-fj-display text-3xl font-bold text-fj-ink sm:text-4xl">
-                  Put these five things in writing with any provider.
+                  We sign an NDA and promise not to approach your clients.
                 </h2>
                 <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-neutral-600">
                   Your client list is the most valuable thing your agency owns. Before you share a single client name
-                  or login with a white label provider, agree these points on paper. They protect you whoever you hire.
+                  or login, we sign an NDA and put in writing that we will not contact or approach your clients.
+                </p>
+                <p className="mt-4 font-fj-body text-base leading-relaxed text-fj-ink">
+                  Whoever you hire, agree these five points on paper. They protect you with any provider.
                 </p>
               </div>
               <ol className="grid gap-3 lg:col-span-7">
@@ -1087,10 +1128,10 @@ export default function WhiteLabelSeoPage() {
           variant="light"
           eyebrow="White label SEO"
           headline="Your brand on the report. Our team on the work."
-          sub="Send us one client brief. We quote each task in writing, do the work after you approve it and send a monthly report in your name, built on the client's own data."
+          sub="Send us one client brief. We sign an NDA, quote each job in writing, do the work after you approve it and send a monthly report with your logo, built on the client's own data."
           primaryCta={{ label: 'Send a client brief', modal: true, region: 'us' }}
           secondaryCta={{ label: 'Talk to the founder', href: '/contact' }}
-          objectionHandler="Fixed quote per task. No monthly minimum. We never contact your client."
+          objectionHandler="NDA signed. Fixed quote per job. We never contact your clients."
         />
       </main>
 
