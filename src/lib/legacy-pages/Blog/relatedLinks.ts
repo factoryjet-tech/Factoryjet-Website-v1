@@ -67,6 +67,13 @@ const SERVICE_RULES: ServiceRule[] = [
     weight: 3,
   },
   {
+    href: '/services/white-label-seo',
+    label: 'White Label SEO',
+    blurb: 'SEO work for agencies, delivered under the agency\'s brand.',
+    keywords: ['white label seo', 'white-label seo', 'seo reseller', 'seo outsourcing', 'outsource seo'],
+    weight: 4,
+  },
+  {
     href: '/services/seo-audit',
     label: 'SEO Audit',
     blurb: 'Find what is holding the site back before spending on content or links.',
@@ -733,6 +740,7 @@ const SERVICE_FAMILY: Record<string, ServiceFamily> = {
   // search: organic visibility, classic SEO through to GEO/AEO
   '/services/ai-seo': 'search',
   '/services/seo-consulting': 'search',
+  '/services/white-label-seo': 'search',
   '/services/seo-audit': 'search',
   '/services/local-seo': 'search',
   '/services/google-business-profile-optimization': 'search',
