@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Breadcrumbs from '@/components/v2/Breadcrumbs';
-import Image from 'next/image';
 import { BreadcrumbSchema } from '@/components/BreadcrumbSchema';
 
 import SiteHeader from '@/components/v2/SiteHeader';
@@ -8,9 +7,7 @@ import SiteFooter from '@/components/v2/SiteFooter';
 import Hero from '@/components/v2/Hero';
 import HeroInlineForm from '@/components/HeroInlineForm';
 import LogoBar from '@/components/v2/LogoBar';
-import BigThreeTrustBlock from '@/components/v2/BigThreeTrustBlock';
 import ServiceExplanation from '@/components/v2/ServiceExplanation';
-import StrategicDarkSection from '@/components/v2/StrategicDarkSection';
 import ServiceJourneyRow, { type ServiceJourneyStage } from '@/components/v2/ServiceJourneyRow';
 import CityContextSection from '@/components/v2/CityContextSection';
 import ComparisonTable, { CompareIcon } from '@/components/v2/ComparisonTable';
@@ -19,38 +16,42 @@ import TestimonialsSection from '@/components/v2/TestimonialsSection';
 import FAQ from '@/components/v2/FAQ';
 import FinalCTA from '@/components/v2/FinalCTA';
 import PortfolioShowcase from '@/components/v2/PortfolioShowcase';
-import GetFreeQuoteCTA from '@/components/v2/GetFreeQuoteCTA';
+import MidPageCTA from '@/components/v2/MidPageCTA';
+import { AnswerFirst, QuestionAnswers, SourceList } from '@/components/india-pages/IndiaAnswerBlocks';
 
 /* ─────────────────────────────────────────────────────────────────────────────
    SEO / Metadata
+   Refreshed 24 Nov 2026 for India buyer searches (Google Ads, India, monthly):
+   shopify developer 3,600; shopify development services 1,600; shopify website
+   development 1,300; shopify development company 1,000; shopify plus company 880;
+   shopify app development 880; hire shopify developers 720; shopify expert 590;
+   shopify expert in india 320; best/top shopify development company in india.
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const metadata: Metadata = {
-  title: 'Shopify Website Development Company India | FactoryJet',
+  title: 'Best Shopify Development Company in India | FactoryJet',
   description:
-    'Shopify website development company in India. Custom Shopify and Shopify Plus stores for D2C brands, with Razorpay, UPI, GST and Shiprocket. 7-day delivery.',
+    'Hire Shopify developers and Shopify experts in India for custom stores, Shopify Plus, apps and migrations. Razorpay, UPI, GST and Shiprocket set up and tested.',
   keywords: [
-    'Shopify website development company India',
-    'Shopify web development company India',
-    'Shopify development company India',
-    'Shopify development India',
-    'Shopify store development India',
-    'Shopify developer India',
-    'Shopify app development company India',
-    'Shopify Plus development company India',
-    'Shopify store setup India',
-    'Shopify theme customization India',
-    'custom Shopify development India',
-    'Shopify with Razorpay integration',
-    'Shopify migration India',
-    'Shopify SEO India',
+    'shopify developer',
+    'shopify development company india',
+    'best shopify development company in india',
+    'top shopify development company in india',
+    'shopify development services',
+    'shopify website development',
+    'hire shopify developers',
+    'shopify expert in india',
+    'shopify plus company',
+    'shopify app development',
+    'shopify agency india',
+    'shopify store development india',
   ],
   openGraph: {
     type: 'website',
     siteName: 'FactoryJet',
-    title: 'Shopify Website Development Company India | FactoryJet',
+    title: 'Best Shopify Development Company in India | FactoryJet',
     description:
-      'Custom Shopify stores for Indian D2C brands. Razorpay + UPI integrated. GST-compliant. Shiprocket + Delhivery. 7-day delivery.',
+      'Shopify developers and experts for Indian D2C and B2B brands: custom themes, Shopify Plus, apps, migrations. A draft in your own store before you sign.',
     url: 'https://factoryjet.com/shopify-development',
     images: [
       {
@@ -64,9 +65,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shopify Website Development Company India | FactoryJet',
+    title: 'Best Shopify Development Company in India | FactoryJet',
     description:
-      'Custom Shopify stores for Indian D2C brands. Razorpay + UPI + GST built in. 7-day delivery.',
+      'Hire Shopify developers in India for custom stores, Shopify Plus and apps. Razorpay, UPI, GST and Shiprocket set up and tested.',
     images: ['https://factoryjet.com/images/services/card-shopify-store-laptop-bottles.webp'],
   },
   alternates: {
@@ -90,74 +91,49 @@ export const metadata: Metadata = {
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
+   Sources (each opened and checked on 24 Nov 2026)
+───────────────────────────────────────────────────────────────────────────── */
+
+const CHECKED_ON = '24 November 2026';
+
+const SRC = {
+  shopifyPricing: { label: 'Shopify India pricing', url: 'https://www.shopify.com/in/pricing' },
+  shopifyGst: { label: 'Shopify Help: GST in India', url: 'https://help.shopify.com/en/manual/taxes/india-gst' },
+  razorpay: { label: 'Razorpay pricing', url: 'https://razorpay.com/pricing/' },
+  ibef: { label: 'IBEF: E-commerce industry in India', url: 'https://www.ibef.org/industry/ecommerce' },
+} as const;
+
+/* ─────────────────────────────────────────────────────────────────────────────
    JSON-LD Schemas
 ───────────────────────────────────────────────────────────────────────────── */
 
-// Freshness signal. Benchmark: 56% of AI-Overview-cited pages carry it.
-// Keep honest: bump when the page's content actually changes.
-const PAGE_MODIFIED = '2026-08-04';
+// Freshness signal. Keep honest: bump only when the page's content actually changes.
+const PAGE_MODIFIED = '2026-11-24';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
   '@id': 'https://factoryjet.com/shopify-development#webpage',
   url: 'https://factoryjet.com/shopify-development',
+  name: 'Best Shopify Development Company in India',
   dateModified: PAGE_MODIFIED,
+  inLanguage: 'en-IN',
   isPartOf: { '@type': 'WebSite', '@id': 'https://factoryjet.com/#website', url: 'https://factoryjet.com', name: 'FactoryJet' },
   publisher: { '@id': 'https://factoryjet.com/#organization' },
-};
-
-const SHOPIFY_serviceSchema = { '@context': 'https://schema.org', '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' };
-
-const SHOPIFY_howToSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'HowTo',
-  '@id': 'https://factoryjet.com/shopify-development#howto',
-  name: 'How FactoryJet builds your Shopify store in 7 days',
-  description: 'Our 5-stage process for delivering a high-converting Shopify store for Indian D2C brands.',
-  totalTime: 'P7D',
-  step: [
-    {
-      '@type': 'HowToStep',
-      position: 1,
-      name: 'Day 1 | Store Audit & Platform Plan',
-      text: 'We review your current platform, catalogue, traffic, and conversion data, then recommend the right Shopify architecture, payment stack, and logistics integration before scoping.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 2,
-      name: 'Day 2 | Figma Design',
-      text: 'Full Figma mockups for homepage, product page, collection page, and cart. You approve desktop and mobile before we write a line of Liquid.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 3,
-      name: 'Days 3–5 | Liquid Build',
-      text: 'Custom Liquid theme with daily commits to your GitHub. Razorpay + UPI wired in, Shiprocket rate calculator at checkout, GST invoice metafields configured, WhatsApp flow set up.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 4,
-      name: 'Day 6 | Testing',
-      text: 'Full checkout tested across Razorpay (UPI, cards, net banking, EMI, wallets), Shiprocket shipping rate calculation, and GST invoice generation. Cross-device Lighthouse audit before sign-off.',
-    },
-    {
-      '@type': 'HowToStep',
-      position: 5,
-      name: 'Day 7 | Launch',
-      text: 'DNS transfer, GA4 and Search Console setup, sitemap submission, and recorded handover walkthrough. Theme code and all API credentials delivered to your GitHub.',
-    },
-  ],
-};
-
-const SHOPIFY_speakableSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  '@id': 'https://factoryjet.com/shopify-development#webpage',
   speakable: {
     '@type': 'SpeakableSpecification',
-    cssSelector: ['h1', 'h2:first-of-type'],
+    cssSelector: ['h1', '#short-answer h2', '#short-answer p'],
   },
-  url: 'https://factoryjet.com/shopify-development',
+};
+
+const SHOPIFY_serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Shopify Development Services in India',
+  serviceType: 'Shopify development',
+  provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
+  areaServed: { '@type': 'Country', name: 'India' },
+  description:
+    'Shopify website development, custom Shopify themes, Shopify Plus builds, Shopify app development and store migrations for Indian D2C and B2B brands, with Razorpay, UPI, COD, GST invoicing and Shiprocket set up and tested.',
 };
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -166,51 +142,51 @@ const SHOPIFY_speakableSchema = {
 
 const SHOPIFY_SERVICES = [
   {
-    name: 'Custom Shopify Theme Development',
+    name: 'Shopify Website Development',
     description:
-      'A Shopify theme built from scratch in Figma, then coded in Liquid with custom sections your team can edit from the theme editor, no developer needed for day-to-day content changes. Mobile-first, Lighthouse 95+ on delivery.',
-    example: 'Average 2.4× improvement in mobile add-to-cart rate vs. generic Shopify themes.',
-    linkLabel: 'See theme examples',
-    linkHref: '/portfolio',
+      'A full store from an empty Shopify account: theme, collections, product import, payments, shipping, taxes, policies and launch. You get a store your team can run from the Shopify admin.',
+    example: 'For brands opening their first serious online store or leaving a marketplace-only setup.',
+    linkLabel: 'See a draft of my store',
+    linkHref: '/contact',
   },
   {
-    name: 'Full Shopify Store Setup & Launch',
+    name: 'Custom Shopify Theme Development',
     description:
-      'Complete store configuration: product catalogue import, collections architecture, Razorpay + UPI payment integration, Shiprocket logistics, GST-compliant invoicing, and a live launch with DNS transfer.',
-    example: 'Custom Shopify launch, theme, products, payments, logistics, in 7–14 days.',
-    linkLabel: 'Book a Call',
+      'A theme designed in Figma for your products and coded in Liquid, Shopify\'s theme language, with sections your team can edit without a developer. Built phone first.',
+    example: 'For brands whose bought theme looks like everyone else\'s, or fights their catalogue.',
+    linkLabel: 'Talk about a custom theme',
     linkHref: '/contact',
   },
   {
     name: 'Shopify Plus Development',
     description:
-      'Checkout Extensibility (custom checkout UI, payment method customisation), B2B wholesale portal with company accounts and dealer pricing, multi-storefront management, and Shopify Flow automation for Indian business workflows.',
-    example: 'Required for brands processing ₹5 crore+/year or needing B2B wholesale features.',
-    linkLabel: 'Assess if you need Plus',
+      'Checkout changes with Checkout Extensibility, B2B company accounts with their own price lists, several storefronts from one admin, and Shopify Flow automations.',
+    example: 'For high-volume brands and wholesalers who need features only Plus offers.',
+    linkLabel: 'Ask if you need Plus',
     linkHref: '/contact',
   },
   {
-    name: 'Store Migrations to Shopify',
+    name: 'Shopify App Development',
     description:
-      'Full data migrations from WooCommerce, OpenCart, Magento, Wix, Squarespace, and custom PHP platforms, preserving products, customers, order history, and SEO URL structure with 301 redirects.',
-    example: 'Zero downtime on launch day. All redirects mapped before DNS switch.',
-    linkLabel: 'Plan your migration',
+      'Private apps that connect Shopify to your ERP, warehouse or accounting software, and custom features the app store does not offer. We also set up and theme the apps you already use.',
+    example: 'For stores that run on spreadsheets between Shopify and Tally, Zoho or a warehouse system.',
+    linkLabel: 'Scope an app',
+    linkHref: '/contact',
+  },
+  {
+    name: 'Migration to Shopify',
+    description:
+      'Products, variants, customers, order history and reviews moved from WooCommerce, Magento, OpenCart, Wix or a custom site, with a 301 redirect for every changed URL before the domain switches.',
+    example: 'For brands whose old platform is slow, costly to patch or hard to extend.',
+    linkLabel: 'Plan a migration',
     linkHref: '/contact',
   },
   {
     name: 'Headless Shopify (Hydrogen)',
     description:
-      "Decouple your storefront from Shopify's backend using Hydrogen (React/Remix) for sub-1-second page loads on Indian 4G networks, full design freedom, and custom UX impossible within standard Liquid themes.",
-    example: 'Best for Indian D2C brands at ₹5 crore+/month where performance directly moves revenue.',
-    linkLabel: 'Is headless right for you?',
-    linkHref: '/contact',
-  },
-  {
-    name: 'Shopify App Integration & WhatsApp Commerce',
-    description:
-      'Integrate and theme-configure any Shopify app (reviews, subscriptions, loyalty, upsell, bundles). Add WhatsApp order notifications, abandoned cart recovery, and shipping tracking via Interakt, Wati, or AiSensy.',
-    example: 'WhatsApp abandoned cart recovery delivers 3× better open rates than email in India.',
-    linkLabel: 'Get an Assessment',
+      'A custom storefront built with Hydrogen, Shopify\'s React framework, while Shopify still runs products, orders and checkout. Full design freedom, more code to maintain.',
+    example: 'For brands where a theme cannot do what the shopping experience needs.',
+    linkLabel: 'Ask if headless fits',
     linkHref: '/contact',
   },
 ];
@@ -218,340 +194,366 @@ const SHOPIFY_SERVICES = [
 const SHOPIFY_JOURNEY_STAGES: ServiceJourneyStage[] = [
   {
     number: '01',
-    title: 'Discover',
+    title: 'Scope',
     description:
-      'A 30-minute store audit. We review your current platform, catalogue, traffic, and conversion data, then recommend the right Shopify architecture, payment stack (Razorpay vs. PayU), and logistics integration before scoping a line of work.',
+      'A short call on your catalogue, channels, payment gateway, courier and accounting software. We recommend a Shopify plan and an architecture, then write a fixed price for each phase.',
   },
   {
     number: '02',
-    title: 'Design',
+    title: 'Draft',
     description:
-      'Full Figma mockups for your homepage, product page, collection page, and cart. You approve desktop and mobile before we write a line of Liquid. Indian consumer UX patterns built in, thumb-friendly tap targets, UPI quick-pay placement, trust signals above the fold.',
+      'Before you sign, we build a draft theme on a handful of your real products, often inside your own Shopify store, so your team can browse it on their phones.',
   },
   {
     number: '03',
     title: 'Build',
     description:
-      'Custom Liquid theme with daily commits to your GitHub repo. Staging store URL available within 48 hours. Razorpay + UPI wired in, Shiprocket rate calculator at checkout, GST invoice metafields configured, WhatsApp flow set up.',
+      'Liquid theme, product import, Razorpay with UPI, cards and COD rules, GST settings, Shiprocket or your courier, and any apps or integrations in the scope. Commits go to a repository in your name.',
   },
   {
     number: '04',
     title: 'Test',
     description:
-      'Full checkout tested across Razorpay (UPI, cards, net banking, EMI, wallets), Shiprocket shipping rate calculation, and GST invoice generation. Cross-device testing on iOS, Android, Chrome, and Safari. Lighthouse audit before sign-off.',
+      'Real test orders through every payment method, shipping rates by pincode, tax lines on the invoice, and a Lighthouse speed check on mobile for home, collection, product and cart pages.',
   },
   {
     number: '05',
-    title: 'Launch',
+    title: 'Launch and support',
     description:
-      'DNS transfer, Google Analytics 4 and Search Console setup, sitemap submission, and a recorded handover walkthrough. Your theme code and all API credentials delivered to your GitHub. 14-day support window included.',
-  },
-];
-
-const SHOPIFY_STATS = [
-  {
-    value: '2.4×',
-    label: 'improvement in mobile add-to-cart rate with a custom theme vs. generic Shopify theme',
-    microcopy: 'average across FactoryJet Indian Shopify builds in 2024',
-    categoryLabel: 'CONVERSION LIFT',
-  },
-  {
-    value: '120+',
-    label: 'Shopify stores built and launched for Indian and global D2C brands',
-    microcopy: 'across fashion, health, food, electronics, and lifestyle categories',
-    categoryLabel: 'STORES LAUNCHED',
-  },
-  {
-    value: '7 Days',
-    label: 'delivery for standard Shopify store builds, theme, products, payments, and launch',
-    microcopy: 'the fastest professional Shopify build timeline in India',
-    categoryLabel: 'DELIVERY',
-  },
-];
-
-const SHOPIFY_MARKET_STATS = [
-  {
-    value: '2.85M+',
-    label: 'live Shopify stores globally, Shopify powers more e-commerce than any other platform',
-    sourceUrl: 'https://www.shopify.com/blog/shopify-stats',
-    sourceLabel: 'Shopify 2025 Statistics',
-  },
-  {
-    value: '65%',
-    label: 'of Indian e-commerce traffic is mobile: Shopify is built for the mobile-first experience',
-    sourceUrl: 'https://www.redseer.com/reports',
-    sourceLabel: 'RedSeer Strategy Consultants',
-  },
-  {
-    value: '₹3,000 Cr+',
-    label: 'in daily UPI transaction volume, Shopify + Razorpay is the native stack for Indian D2C',
-    sourceUrl: 'https://www.npci.org.in/statistics',
-    sourceLabel: 'NPCI Monthly Statistics',
+      'Domain switch, redirects, sitemap in Search Console, and a recorded handover. Defects in our build are fixed inside the build price for a cover period agreed before work starts.',
   },
 ];
 
 const SHOPIFY_COMPARISON_COLUMNS = [
   { label: 'FactoryJet', isFactoryJet: true },
-  { label: 'Indian Shopify Agency' },
-  { label: 'Freelancer' },
-  { label: 'Shopify Theme Store' },
+  { label: 'Large Indian agency' },
+  { label: 'Freelance Shopify developer' },
+  { label: 'Theme you set up yourself' },
 ] as const;
 
 const SHOPIFY_COMPARISON_ROWS = [
   {
-    feature: 'Pricing model',
+    feature: 'Who writes the code',
+    values: ['Our own senior Shopify developers', 'Varies: ask who will code', 'One person', 'You'],
+  },
+  {
+    feature: 'Draft in your own store before you sign',
     values: [
-      'Fixed-price, scoped up front',
-      'High agency retainers',
-      'Variable, often re-quoted',
-      'Cheap theme, you configure it',
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="ia" kind="partial" label="Sometimes" />,
+      <CompareIcon key="fr" kind="partial" label="Sometimes" />,
+      <CompareIcon key="tp" kind="no" />,
     ],
   },
   {
-    feature: 'Delivery timeline',
-    values: ['7 days', '8–20 weeks', '4–12 weeks (unreliable)', '~1 week (you build it)'],
+    feature: 'Fixed price per phase, in writing',
+    values: [
+      <CompareIcon key="fj" kind="yes" />,
+      <CompareIcon key="ia" kind="partial" label="Varies" />,
+      <CompareIcon key="fr" kind="partial" label="Varies" />,
+      <CompareIcon key="tp" kind="yes" label="Theme price only" />,
+    ],
   },
   {
-    feature: 'Custom Figma design (not a premade theme)',
+    feature: 'Razorpay, UPI, COD rules, GST and courier tested with real orders',
     values: [
       <CompareIcon key="fj" kind="yes" />,
       <CompareIcon key="ia" kind="yes" />,
-      <CompareIcon key="fr" kind="partial" />,
+      <CompareIcon key="fr" kind="partial" label="Depends on the person" />,
       <CompareIcon key="tp" kind="no" />,
     ],
   },
   {
-    feature: 'Razorpay + UPI + EMI integration',
+    feature: 'Shopify Plus, B2B and custom app work',
     values: [
       <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ia" kind="partial" />,
-      <CompareIcon key="fr" kind="partial" />,
+      <CompareIcon key="ia" kind="yes" />,
+      <CompareIcon key="fr" kind="partial" label="Rarely" />,
       <CompareIcon key="tp" kind="no" />,
     ],
   },
   {
-    feature: 'GST-compliant invoicing',
+    feature: 'Code and accounts in your company name',
     values: [
       <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ia" kind="partial" />,
-      <CompareIcon key="fr" kind="no" />,
-      <CompareIcon key="tp" kind="no" />,
-    ],
-  },
-  {
-    feature: 'Shiprocket / Delhivery integration',
-    values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ia" kind="partial" />,
-      <CompareIcon key="fr" kind="partial" />,
-      <CompareIcon key="tp" kind="no" />,
-    ],
-  },
-  {
-    feature: 'Lighthouse 95+ on delivery',
-    values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ia" kind="partial" />,
-      <CompareIcon key="fr" kind="partial" />,
-      <CompareIcon key="tp" kind="no" />,
-    ],
-  },
-  {
-    feature: 'Technical SEO built in',
-    values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ia" kind="partial" />,
-      <CompareIcon key="fr" kind="no" />,
-      <CompareIcon key="tp" kind="no" />,
-    ],
-  },
-  {
-    feature: 'Full code ownership (your GitHub)',
-    values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ia" kind="partial" />,
-      <CompareIcon key="fr" kind="yes" />,
+      <CompareIcon key="ia" kind="partial" label="Ask" />,
+      <CompareIcon key="fr" kind="partial" label="Ask" />,
       <CompareIcon key="tp" kind="yes" />,
     ],
   },
   {
-    feature: 'Fixed-price contract (no hourly billing)',
-    values: [
-      <CompareIcon key="fj" kind="yes" />,
-      <CompareIcon key="ia" kind="no" />,
-      <CompareIcon key="fr" kind="partial" />,
-      <CompareIcon key="tp" kind="yes" />,
-    ],
+    feature: 'Support after launch',
+    values: ['Optional, each change quoted, no monthly minimum', 'Monthly retainer is common', 'If the person is free', 'Theme author forum'],
+  },
+  {
+    feature: 'Typical time for a custom-theme store',
+    values: ['3 to 5 weeks', 'Often longer', 'Varies', 'Days, with a stock look'],
   },
 ];
 
+/* ─────────────────────────────────────────────────────────────────────────────
+   Question sections (question H2s, each answered in 40 to 100 words)
+───────────────────────────────────────────────────────────────────────────── */
+
+const SHOPIFY_QUESTIONS = [
+  {
+    q: 'What does a Shopify developer do?',
+    a: [
+      'A Shopify developer builds and changes the code behind a Shopify store. That means the theme (written in Liquid, Shopify\'s template language), custom sections, app integrations, checkout changes on Shopify Plus, and private apps that link Shopify to an ERP, warehouse or accounting tool. A Shopify expert usually also advises on plan choice, apps, speed and conversion. Setting up products and settings is admin work. Writing and fixing code is developer work.',
+    ],
+  },
+  {
+    q: 'Should you hire Shopify developers, a Shopify expert or a Shopify development company?',
+    a: [
+      'Hire one Shopify developer for small, clear tasks: a section, a bug, an app setting. Hire a Shopify development company when the job spans design, code, payments, GST, couriers, migration and launch, because one person rarely covers all of it well and nobody covers them when they are away. Either way, ask who writes the code, ask for two live stores to test on your phone, and get the price in writing before work starts.',
+    ],
+  },
+  {
+    q: 'How much does it cost to have a Shopify website per month in India?',
+    a: [
+      'Shopify\'s own India page lists, on yearly billing: Basic ₹1,499 a month, Grow ₹5,599, Advanced ₹22,680, and Plus from ₹1,75,000. Monthly billing costs more (Basic is ₹1,994). If you use a third-party gateway instead of Shopify Payments, Shopify adds a fee of 2% on Basic, 1% on Grow and 0.6% on Advanced. Razorpay lists a 2% platform fee per domestic transaction plus GST on the fee. Paid apps, a theme and courier charges come on top. These are Shopify\'s and Razorpay\'s prices, not ours.',
+    ],
+    sources: [SRC.shopifyPricing, SRC.razorpay],
+  },
+  {
+    q: 'Is Shopify still worth it in 2026?',
+    a: [
+      'For most Indian D2C brands, yes. Shopify runs hosting, security, checkout and updates, so your team spends time on products and marketing instead of servers. It is less suited to a business that needs deep custom logic on every order, or one that wants no monthly fee at all. The real question is fit: count your channels, catalogue size, B2B needs and the apps you would pay for, then compare the total with WooCommerce or a custom build.',
+    ],
+  },
+  {
+    q: 'What are the disadvantages of Shopify?',
+    a: [
+      'Four come up most. Monthly plan fees never stop. Paid apps add up, and each one can slow the store. Using a gateway like Razorpay instead of Shopify Payments adds a Shopify transaction fee on Basic, Grow and Advanced. And Shopify does not create a GST-compliant bill by itself, so Indian stores need an app or accounting link for proper invoices. A good build keeps the app list short and sets up invoicing on day one.',
+    ],
+    sources: [SRC.shopifyPricing, SRC.shopifyGst],
+  },
+  {
+    q: 'Is Amazon better or Shopify?',
+    a: [
+      'They do different jobs. Amazon brings buyers who are already shopping, but it owns the customer, sets the fees and lets rivals sit next to your listing. Shopify gives you your own store, your own customer list and your own brand, but you must bring the traffic. Most Indian brands that grow do both: marketplaces for reach, Shopify for margin and repeat buyers, with one stock count shared between them.',
+    ],
+  },
+  {
+    q: 'Shopify or WooCommerce for an Indian business?',
+    a: [
+      'Pick Shopify when you want a managed platform, a fast launch and a team that edits the store without a developer. Pick WooCommerce when you already run WordPress, want full control of the code and hosting, or need custom logic Shopify makes hard. WooCommerce has no platform fee, but you pay for hosting, security and updates instead. We build on both and recommend one after looking at your catalogue and channels.',
+    ],
+  },
+  {
+    q: 'Does Shopify handle GST in India?',
+    a: [
+      'Partly. Shopify\'s India GST help page sets default tax rates you can adjust, and HSN codes go in each product\'s HS tariff code field. But Shopify says it does not create a GST-compliant bill on its own. So we set the tax rates for your state, add HSN codes to products, capture a buyer\'s GSTIN for B2B orders, and connect an invoicing app or your accounting software so every order has a proper GST invoice.',
+    ],
+    sources: [SRC.shopifyGst],
+  },
+  {
+    q: 'When does a brand need a Shopify Plus company?',
+    a: [
+      'When you need what only Plus offers: checkout changes through Checkout Extensibility, B2B company accounts with their own price lists and payment terms, many storefronts from one admin, or high-volume automation with Shopify Flow. Plus starts at ₹1,75,000 a month on Shopify\'s India page, so it only pays off at real scale. A good Shopify Plus company will tell you if Advanced is enough.',
+    ],
+    sources: [SRC.shopifyPricing],
+  },
+];
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   FAQ (single source: the visible FAQ and the FAQPage schema both read this array)
+───────────────────────────────────────────────────────────────────────────── */
+
 const SHOPIFY_FAQ_CATEGORIES = [
+  { key: 'choose',    label: 'Choosing a Shopify Partner' },
   { key: 'cost',      label: 'Cost & Timeline' },
-  { key: 'india',     label: 'India-Specific (Razorpay, GST, Shiprocket)' },
+  { key: 'india',     label: 'India: Payments, GST, Shipping' },
   { key: 'platform',  label: 'Platform & Features' },
   { key: 'migration', label: 'Migrations' },
-  { key: 'technical', label: 'Technical & SEO' },
   { key: 'trust',     label: 'Working With Us' },
 ];
 
 const SHOPIFY_FAQ_ITEMS = [
+  /* ── Choosing ── */
+  {
+    category: 'choose',
+    question: 'Which is the best Shopify development company in India?',
+    answer:
+      'The best Shopify development company in India for you is the one whose own developers write the code, who quotes a fixed price in writing and who shows you working pages before you sign. FactoryJet does all three and builds a draft theme inside your own Shopify store before any contract. We are a registered Shopify Partner, rated 5.0 on Clutch (4 reviews) and 5.0 on GoodFirms (5 reviews).',
+  },
+  {
+    category: 'choose',
+    question: 'What are the top Shopify development companies in India?',
+    answer:
+      'Top lists usually rank firms by size or portfolio count. For a buyer, three checks matter more: who writes the code, whether the price is fixed in writing, and how the firm\'s live stores perform on a phone. Shopify\'s Partner Directory, Clutch and GoodFirms all list Indian Shopify agencies with reviews. FactoryJet is on all three checks, and we are happy to be compared on them.',
+  },
+  {
+    category: 'choose',
+    question: 'How do I hire a Shopify developer in India?',
+    answer:
+      'Write down what you need (new store, theme change, app, migration), ask each candidate for two live Shopify stores they built, test those stores on your phone, and ask who will write your code. Ask for a fixed price and a written scope. For anything beyond a small fix, ask to see a draft on your own products before you pay.',
+  },
+  {
+    category: 'choose',
+    question: 'What does a Shopify expert in India do differently from a developer?',
+    answer:
+      'A Shopify expert advises as well as builds: which plan, which apps to keep or drop, how to set up payments, GST and shipping for India, and what is slowing the store or losing carts. A developer writes the code. On our projects the same senior people do both, so the advice and the build come from one place.',
+  },
+  {
+    category: 'choose',
+    question: 'Is FactoryJet a Shopify Partner?',
+    answer:
+      'Yes. FactoryJet is a registered Shopify Partner. That lets us create development stores, work inside your store with collaborator access you control, and hand the store over to your account at launch.',
+  },
+  {
+    category: 'choose',
+    question: 'Which Shopify stores has FactoryJet built?',
+    answer:
+      'Recent Shopify work includes the European Garden store for Exaco, connected to QuickBooks Enterprise; a custom theme for DTF Virginia, a print shop where buyers build their own gang sheets; and a custom theme for Shop Holistico, a whole-food supplement brand with Subscribe & Save. We also build B2B stores on Commerceflo, our own platform, for wholesale distributors.',
+  },
 
   /* ── Cost & Timeline ── */
   {
     category: 'cost',
-    question: 'How much does a custom Shopify store cost in India?',
+    question: 'How much does a Shopify website cost in India?',
     answer:
-      "FactoryJet's Shopify pricing is fixed-price and scoped to your build. The main drivers are whether you need a custom Liquid theme on an existing store, a full store build (custom theme, products, Razorpay + UPI payment integration, Shiprocket logistics, GST invoicing, WhatsApp notifications, and launch), or a Shopify Plus build with Checkout Extensibility, B2B wholesale portals, and multi-storefront management. Every project is quoted up front after a free discovery call, with no hourly billing and no scope creep.",
+      'Two costs add up. The build is a one-time price that depends on design, catalogue size, integrations and migration. Running costs come every month: Shopify\'s India page lists Basic at ₹1,499 a month on yearly billing, Grow at ₹5,599 and Advanced at ₹22,680, plus paid apps and gateway fees. FactoryJet quotes the build as a fixed price per phase after a short scoping call.',
   },
   {
     category: 'cost',
-    question: 'How long does it take to build a Shopify store in India?',
+    question: 'Is Shopify free in India?',
     answer:
-      'A custom Shopify theme applied to an existing store takes 5–7 days. A full store build from scratch, theme, products, Razorpay + UPI payments, Shiprocket, GST invoicing, WhatsApp flows, and launch, takes 7–14 days. Shopify Plus builds with B2B features or headless Hydrogen take 5–10 weeks depending on complexity. FactoryJet is the fastest professional Shopify development studio in India for standard builds.',
+      'No. After any trial Shopify offers, you need a paid plan to sell. Shopify\'s India pricing page lists the plans in rupees, with lower prices for yearly billing than monthly billing.',
   },
   {
     category: 'cost',
-    question: 'Why is FactoryJet cheaper than other Indian Shopify agencies?',
+    question: 'How long does it take to build a Shopify store?',
     answer:
-      "We are a specialised Shopify engineering team, not a full-service agency. No account management layers, no generalist developers, no large office overhead. The same Figma-first design process, the same Liquid engineering quality, the same Lighthouse audit before handover, at 50–60% lower cost. We have been building Shopify stores. You pay for the build, not our admin structure.",
+      'A store with a custom-designed theme takes 3 to 5 weeks. An advanced store with subscriptions, B2B pricing or a migration takes 5 to 8 weeks. Headless Hydrogen builds take 8 to 14 weeks. The clock runs fastest when products, photos and gateway approval are ready.',
   },
   {
     category: 'cost',
-    question: 'What does 7-day delivery include?',
+    question: 'How is a Shopify project billed?',
     answer:
-      "7-day delivery covers standard Shopify theme builds and full store builds. The clock starts from design sign-off, not from the first call. We have delivered on time on 97% of all projects. Shopify Plus and headless Hydrogen builds have longer, separately agreed timelines, but we still put them in writing.",
+      'Phase by phase. Each phase has a written scope and a fixed price you sign before it starts, so the bill does not grow with hours. Bank transfer and UPI both work.',
+  },
+  {
+    category: 'cost',
+    question: 'How much does it cost to run an ecommerce website on Shopify each month?',
+    answer:
+      'Add the Shopify plan, paid apps, any theme licence, the gateway fee per order (Razorpay lists 2% plus GST on the fee), the Shopify third-party transaction fee if you do not use Shopify Payments, and courier charges. Marketing is usually the biggest cost of all, and it is separate from the store.',
   },
 
-  /* ── India-Specific ── */
+  /* ── India ── */
   {
     category: 'india',
-    question: 'Does Shopify work well for Indian businesses: Razorpay, UPI, and GST?',
+    question: 'Does Shopify work with Razorpay and UPI?',
     answer:
-      "Yes, Shopify has strong native support for Indian commerce. Razorpay's Shopify plugin covers UPI, cards, net banking, EMI, Paytm, PhonePe, Mobikwik, and BNPL (LazyPay, Simpl) in a single checkout widget. PayU and CCAvenue are available as alternatives. GST-compliant invoices are generated automatically at order placement using Shopify metafields or third-party apps. Shiprocket integrates natively with Shopify for access to 15+ Indian courier partners. FactoryJet configures all of this as standard, you receive a fully wired, production-ready Indian Shopify store.",
+      'Yes. Razorpay\'s Shopify integration covers UPI, cards, net banking, wallets, EMI and pay-later in one checkout. PayU, Cashfree and PhonePe are options if your finance team already uses them. We set COD rules too, such as a value cap or prepaid-only for first orders.',
   },
   {
     category: 'india',
     question: 'Can you set up Shiprocket or Delhivery on my Shopify store?',
     answer:
-      'Yes, logistics integration is standard in every Indian Shopify build we deliver. We configure Shiprocket for access to Delhivery, Bluedart, XpressBees, Ekart, Shadowfax, and other carriers under one integration, with automated AWB generation, real-time shipping rate calculation at checkout, tracking updates pushed to customers via WhatsApp and SMS, and automated NDR (non-delivery report) workflows. For high-volume brands (10,000+ shipments/month), we integrate Delhivery directly via API for custom SLAs.',
+      'Yes. Shiprocket gives you Delhivery, Blue Dart, Xpressbees and other couriers from one panel, with labels, rates at checkout and tracking updates. High-volume brands often add a direct courier contract later, which we can connect as well.',
   },
   {
     category: 'india',
-    question: 'Can you add WhatsApp abandoned cart recovery and order notifications to my Shopify store?',
+    question: 'Can you reduce COD returns on Shopify?',
     answer:
-      'Yes, WhatsApp commerce is standard in our Indian Shopify builds. We integrate Interakt, Wati, or AiSensy for: order confirmation and dispatch notifications, shipping tracking updates via WhatsApp, abandoned cart recovery messages (Indian consumers open WhatsApp messages at 3× the rate of email), post-delivery review requests, and re-engagement campaigns. All flows are configured with opt-in at checkout and comply with TRAI DLT registration requirements for business messaging.',
+      'Yes. Common fixes are a WhatsApp or SMS confirmation before a COD order ships, a small prepaid amount on large orders, COD switched off for pincodes with high refusal, and an exchange-first returns flow for fashion so buyers swap sizes instead of refusing parcels.',
   },
   {
     category: 'india',
-    question: 'Can you build a Shopify store in Hindi or other regional Indian languages?',
+    question: 'Can you add WhatsApp order updates and cart reminders to Shopify?',
     answer:
-      'Yes, multi-language Shopify stores are a standard capability. We implement the Shopify Translate & Adapt app or Langify for regional language storefronts in Hindi, Tamil, Telugu, Kannada, Bengali, Marathi, and Gujarati. Language-switched URLs follow SEO-safe hreflang patterns. Automatic translation is available via DeepL API for product descriptions at scale. All currency and price display remain in INR across all language variants.',
+      'Yes, through a WhatsApp Business Platform provider such as Interakt, Wati or AiSensy. Typical flows are order confirmation, dispatch and delivery updates, COD confirmation and abandoned cart reminders, each with opt-in at checkout. For a WhatsApp assistant that answers questions, see our WhatsApp chatbot page.',
+  },
+  {
+    category: 'india',
+    question: 'Can my Shopify store be in Hindi or another Indian language?',
+    answer:
+      'Yes. Shopify Markets and translation apps such as Translate and Adapt run Hindi or other language versions next to English, each on its own URL. Product copy should be written or checked by a person, because machine translation gets size and material terms wrong.',
+  },
+  {
+    category: 'india',
+    question: 'Can an Indian brand sell abroad on Shopify?',
+    answer:
+      'Yes. Shopify Markets shows prices in the buyer\'s currency, and a cross-border courier ships the order with duties shown before payment. Brands selling to overseas stores can also get a separate trade login with their own prices.',
   },
 
-  /* ── Platform & Features ── */
+  /* ── Platform ── */
   {
     category: 'platform',
-    question: 'Do I need Shopify Plus, or will standard Shopify work?',
+    question: 'Do I need Shopify Plus, or will a standard plan work?',
     answer:
-      "Standard Shopify (Basic, Grow, or Advanced plans) works well for most Indian D2C brands doing under ₹5 crore/year online. Shopify Plus is worth the investment when you need: fully custom checkout UI via Checkout Extensibility, a B2B wholesale portal with company accounts and net-30 credit terms, management of 10+ storefronts from one admin, or advanced Shopify Flow automation for complex order routing. We assess this during discovery, we will not push you to Plus if your revenue does not justify the subscription cost.",
+      'Most Indian D2C brands do well on Basic, Grow or Advanced. Plus is worth it when you need checkout changes, B2B company accounts with their own prices and terms, many storefronts or heavy automation. We tell you if Advanced is enough.',
   },
   {
     category: 'platform',
-    question: 'What Shopify apps do you recommend for Indian D2C brands?',
+    question: 'Can you build a B2B wholesale store on Shopify?',
     answer:
-      "Our standard Indian D2C Shopify stack: Razorpay for payments, Shiprocket for logistics, Interakt or Wati for WhatsApp, Stamped.io or Okendo for reviews, ReCharge or Appstle for subscriptions, Yotpo Loyalty for retention points, Privy or Klaviyo for email capture and automations, and QuickBooks Commerce or Zoho Books for GST accounting sync. We configure, theme-integrate, and test every app we recommend, we do not just install it and leave.",
+      'Yes. Shopify Plus has B2B tools: company accounts, buyer logins, price lists, minimum quantities and payment terms. On other plans we use wholesale apps or a separate trade storefront that shares one inventory with retail.',
   },
   {
     category: 'platform',
-    question: 'Can you build a B2B wholesale portal on Shopify for Indian distributor networks?',
+    question: 'Do you build custom Shopify apps?',
     answer:
-      'Yes, B2B Shopify development for Indian distributors and wholesalers is a growing part of our work. Shopify Plus has native B2B tools: company accounts with multiple buyer users, dealer-tier price lists, minimum order quantities, and net payment terms. Standard Shopify B2B uses WholesaleX, B2BKing, or custom metafield-based price overrides. We build separate retail and wholesale storefronts sharing a single inventory source, no double-entry, no manual price list management.',
+      'Yes. Most are private apps that link Shopify to an ERP, warehouse or accounting tool, or add a feature no public app offers. We have connected Shopify to QuickBooks Enterprise for a live client store.',
   },
   {
     category: 'platform',
-    question: 'What is Shopify Hydrogen and should my brand consider it?',
+    question: 'What is Shopify Hydrogen and should my brand use it?',
     answer:
-      "Hydrogen is Shopify's React/Remix-based headless storefront framework. It decouples your storefront from Shopify's rendering engine, giving you complete design freedom and sub-1-second page loads on Indian 4G via Cloudflare Workers. Consider Hydrogen if your brand does ₹5 crore+ in monthly GMV and performance is a direct revenue lever, or if you need a custom UX that Liquid themes cannot deliver. For most Indian D2C brands under that GMV, a well-optimised Liquid theme delivers 95%+ of the benefit at a fraction of the cost and maintenance overhead.",
+      'Hydrogen is Shopify\'s React framework for a custom storefront, while Shopify still runs products, orders and checkout. It gives full design freedom but means more code to maintain. Most brands get what they need from a well-built theme.',
+  },
+  {
+    category: 'platform',
+    question: 'Which Shopify apps should an Indian D2C brand start with?',
+    answer:
+      'Keep the list short: a gateway (often Razorpay), a shipping app (often Shiprocket), a GST invoicing app or accounting link, reviews, and a WhatsApp or email tool. Each extra app adds a monthly fee and can slow the store, so add more only when the numbers ask for it.',
+  },
+  {
+    category: 'platform',
+    question: 'Can ChatGPT build me a Shopify store?',
+    answer:
+      'It can write product copy, suggest a layout and explain settings, and Shopify has its own AI tools. It cannot test payments, set GST correctly for your state, connect your courier or answer for the result. Use AI for drafts and a developer for the build.',
   },
 
-  /* ── Migrations ── */
+  /* ── Migration ── */
   {
     category: 'migration',
-    question: 'Can you migrate my WooCommerce or OpenCart store to Shopify?',
+    question: 'Can you migrate my WooCommerce or Magento store to Shopify?',
     answer:
-      "Yes, Shopify migrations are one of our most common engagements in India. We migrate products (including variants, images, and metafields), customers, order history, and reviews from WooCommerce, OpenCart, Magento, BigCommerce, Wix, Squarespace, and custom PHP platforms. We map your URL structure and implement 301 redirects for every changed URL before DNS switch. Zero downtime on launch day, DNS switches only after the staging store is fully validated with payments and logistics tested.",
+      'Yes. We move products with variants and images, customers, order history and reviews from WooCommerce, Magento, OpenCart, Wix and custom sites. Every changed URL gets a 301 redirect before the domain switches, and payments and shipping are tested on the new store first.',
   },
   {
     category: 'migration',
-    question: 'Will my Google rankings survive migration to Shopify?',
+    question: 'Will my Google rankings survive a move to Shopify?',
     answer:
-      "Yes, if done correctly. Before the migration, we audit your existing URL structure, identify pages with rankings worth protecting, and build a complete redirect map before touching DNS. Every changed URL gets a 301 redirect. We submit the new sitemap to Google Search Console on launch day and monitor organic traffic for 30 days post-launch. Indian e-commerce stores typically see rankings fully recover within 6–8 weeks. Shopify's default canonical URL handling is fixed during migration to prevent common duplicate content issues.",
+      'They usually do when the move is careful. We list every URL that gets search traffic, map each to its new address with a 301 redirect, submit the new sitemap on launch day and watch Search Console afterwards. A short dip can happen. Missing redirects cause lasting losses.',
   },
 
-  /* ── Technical & SEO ── */
-  {
-    category: 'technical',
-    question: 'Will my Shopify store be optimised for Google India and mobile search?',
-    answer:
-      "Yes. Every Shopify store we build includes technical SEO: Product and BreadcrumbList schema for Google Shopping eligibility, optimised title and meta templates for all product and collection pages, canonical URLs to fix Shopify's native duplicate URL issues, compressed WebP images with descriptive alt text, XML sitemap submission to Google Search Console, and Core Web Vitals optimisation targeting green status on Indian 4G networks. Lighthouse 95+ on mobile before delivery.",
-  },
-  {
-    category: 'technical',
-    question: "How do you optimise Shopify for India's mobile users on 4G?",
-    answer:
-      "India has 65% mobile commerce share and a significant percentage of users on 4G with variable data speeds. Our Shopify optimisation for Indian mobile: mobile-first Liquid templates designed at 375px before desktop, WebP image format served via Shopify CDN with lazy loading for below-fold images, Razorpay Turbo for one-tap UPI checkout (eliminates 3–4 redirect steps), sticky Add-to-Cart on PDPs, and thumb-friendly tap targets throughout. Every store passes Lighthouse 90+ on mobile before launch.",
-  },
-  {
-    category: 'technical',
-    question: 'How do you handle Shopify SEO for Indian product and collection pages?',
-    answer:
-      "Shopify has several known SEO issues that most agencies ignore: duplicate URLs (collection/product vs. direct product URLs), auto-generated paginated collection URLs, missing canonical tags, and slow Shopify CDN image delivery on Indian 4G. We fix all of these: canonical URL configuration, pagination handling with rel=prev/next or noindex depending on content, Product schema markup with price, availability, and review aggregates for Google Shopping, and WebP image conversion with Shopify's image transformation API. Collection pages targeting Indian search intent are written as an add-on service.",
-  },
-
-  /* ── Working With Us ── */
+  /* ── Trust ── */
   {
     category: 'trust',
-    question: 'Do I own my Shopify theme code after the project?',
+    question: 'Can we see a draft before we sign?',
     answer:
-      "Yes, 100%. The full Liquid theme codebase is delivered to your GitHub repository on launch day. You own every file, every section, every metafield schema, and all API credentials. You can hire any Shopify developer in the world to maintain or extend it. No FactoryJet retainer required to keep your store running. We document all custom sections and app integrations during handover, future developers will not need archaeology.",
+      'Yes. We build a draft theme on a few of your real products, often inside your own Shopify store, so your team can browse it on their own phones. If it does not fit, there is no contract to cancel.',
   },
   {
     category: 'trust',
-    question: 'What ongoing support does FactoryJet offer after Shopify launch?',
+    question: 'Do I own my Shopify theme code?',
     answer:
-      'Every Shopify project includes a 14-day post-launch support window covering bug fixes, minor adjustments, and launch questions at no extra cost. Beyond that, FactoryJet offers monthly retainer plans scoped to the hours you need: Shopify development time, priority same-day bug response, and a dedicated engineer who knows your theme codebase. Retainer pricing is fixed and quoted up front. Retainer clients get pre-built festival campaign assets (Diwali sale banners, Holi offers, Independence Day promotions) and quarterly performance reviews.',
+      'Yes. The store, domain, gateway and app accounts are in your company name, and the theme code sits in a repository you own. Any Shopify developer can maintain it after us.',
   },
   {
     category: 'trust',
-    question: 'How is FactoryJet different from a Shopify Partner agency in India?',
+    question: 'What support do you offer after launch?',
     answer:
-      "Three things: specialisation (we build Shopify stores and web projects exclusively, no social media campaigns, no print design, no SEO retainers disconnected from the build), speed (7-day delivery for standard builds: the fastest in India), and ownership (full Liquid codebase to your GitHub on launch day, zero lock-in). We have delivered 120+ Shopify stores for Indian and global brands. We know what actually converts on Shopify, and we build around those data points, not around what looks impressive in a mock-up.",
+      'Defects in our build are fixed inside the build price during a cover period agreed before work starts. After that, support is optional: each change is quoted and approved first, with no monthly minimum.',
   },
   {
     category: 'trust',
-    question: 'Can FactoryJet help me choose between Shopify and WooCommerce?',
+    question: 'How often do you deliver on time?',
     answer:
-      "Yes, platform selection is part of every discovery call and we give you an honest recommendation. Choose Shopify when: you want managed infrastructure (no server management), you are a pure D2C brand focusing on product and marketing, you process ₹50 lakh–₹10 crore+ in annual GMV, or you want the fastest time to market. Choose WooCommerce when: you want zero monthly SaaS subscription, need deep customisation beyond what Shopify's Liquid allows, or already have a WordPress ecosystem. We build both, we will tell you which one fits your business, not which one earns us more.",
-  },
-
-  // Money-query coverage, added 2026-06-11
-  {
-    category: 'trust',
-    question: 'Which is the best Shopify development company in India?',
-    answer:
-      'For D2C brands and small businesses, FactoryJet makes a strong case: custom Shopify stores built by senior engineers at a fixed, written price, with standard builds launching in one week. The best agency for you still depends on scope though: a brand moving to Shopify Plus needs real Plus migration experience, while a first store mostly needs solid conversion fundamentals at a price that fits. Whoever you compare us against, ask to see real store speed scores before deciding, that is usually what separates a strong Shopify build from an average one.',
-  },
-  {
-    category: 'trust',
-    question: 'What are the top 10 Shopify development companies in India?',
-    answer:
-      'Lists like this usually rank by portfolio size, which is the wrong filter for a small business picking a Shopify partner. What actually matters: who writes the code (not who resells the work), a fixed quote confirmed up front, and real launch speed. Judge any top 10 roundup, including ours, by those three things, not by how many logos sit in the portfolio.',
-  },
-  {
-    category: 'cost',
-    question: 'How much does Shopify website cost in India?',
-    answer:
-      'Shopify website cost in India ranges widely: a basic template setup sits at the low end, while a custom theme with advanced features costs more. If you are asking how much does Shopify store cost in India all-in, factor in apps and your monthly Shopify plan fee too: an honest agency quotes both. Our pricing is fixed-price and scoped to your build after a free discovery call. And if speed matters, we can launch a standard Shopify store in one week.',
+      '97% of our projects have been delivered on time or early. When a launch slips, it is usually waiting on product photos, content or payment gateway approval, so we agree those dates at the start.',
   },
 ];
 
@@ -562,6 +564,20 @@ const SHOPIFY_faqSchema = {
     '@type': 'Question',
     name: item.question,
     acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const SHOPIFY_howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  '@id': 'https://factoryjet.com/shopify-development#howto',
+  name: 'How FactoryJet builds a Shopify store for an Indian brand',
+  description: 'Five stages from scoping to launch. A custom-theme store takes 3 to 5 weeks.',
+  step: SHOPIFY_JOURNEY_STAGES.map((s, i) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    name: s.title,
+    text: s.description,
   })),
 };
 
@@ -590,10 +606,6 @@ export default function ShopifyDevelopmentPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(SHOPIFY_howToSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(SHOPIFY_speakableSchema) }}
-      />
 
       <SiteHeader locale="in" />
       <BreadcrumbSchema
@@ -604,21 +616,21 @@ export default function ShopifyDevelopmentPage() {
       />
 
       <main className="bg-fj-cream">
-      <Breadcrumbs items={[
+        <Breadcrumbs items={[
           { name: 'Home', url: 'https://factoryjet.com' },
           { name: 'Shopify Development', url: 'https://factoryjet.com/shopify-development' },
         ]} />
 
         {/* ── 1. HERO ──────────────────────────────────────────────────────── */}
         <Hero
-        formSlot={<HeroInlineForm region="in" source="shopify_development_hero" />}
-          eyebrow="SHOPIFY WEBSITE DEVELOPMENT COMPANY · INDIA"
-          headline="Shopify Website Development Company in India: Stores Built to Sell, in 7 Days"
-          lead="Generic Shopify themes convert at 0.8% in India. FactoryJet builds custom Shopify stores, designed in Figma, Razorpay and UPI integrated, GST-compliant, Lighthouse 95+, at a fixed price scoped to your build. In 7 days."
-          secondaryCta={{ label: 'Get Free Quote', modal: true as const, region: 'in' as const }}
+          formSlot={<HeroInlineForm region="in" source="shopify_development_hero" />}
+          eyebrow="SHOPIFY DEVELOPMENT COMPANY · INDIA"
+          headline="Shopify Development Company in India: Hire Shopify Developers Who Build Stores That Sell"
+          lead="FactoryJet's Shopify developers and experts design, build and support custom Shopify and Shopify Plus stores for Indian D2C and B2B brands. Razorpay, UPI, COD rules, GST settings and your courier are set up and tested with real orders. We build a draft in your own store before you sign."
+          secondaryCta={{ label: 'See a draft of my store', modal: true as const, region: 'in' as const }}
           trustItems={[
-            '120+ Shopify stores launched',
-            '7-day delivery',
+            'Registered Shopify Partner',
+            'Clutch 5.0 from 4 reviews',
           ]}
           rightSlot={
             <div className="rounded-2xl border border-fj-neutral-200 bg-white p-8 shadow-sm">
@@ -626,68 +638,82 @@ export default function ShopifyDevelopmentPage() {
                 className="font-fj-mono font-medium uppercase text-[#B23E13]"
                 style={{ fontSize: '11px', letterSpacing: '0.14em' }}
               >
-                CUSTOM THEME vs. GENERIC THEME
+                WHAT A FACTORYJET SHOPIFY BUILD INCLUDES
               </p>
-              <p className="mt-4 font-fj-display text-[2rem] font-medium leading-[1.1] tracking-[-0.025em] text-fj-ink">
-                Same store. Different design. The gap is revenue.
+              <p className="mt-4 font-fj-display text-[1.75rem] font-bold leading-[1.15] tracking-[-0.025em] text-fj-ink">
+                One team for design, code, payments and launch.
               </p>
-              <div className="mt-6 space-y-4">
+              <ul className="mt-6 space-y-3">
                 {[
-                  { label: 'Monthly visitors', value: '5,000' },
-                  { label: 'Average order value', value: '₹1,800' },
-                  { label: 'Generic Shopify theme (0.8%)', value: '₹72,000/mo' },
-                  { label: 'Custom FactoryJet theme (2.4%)', value: '₹2,16,000/mo' },
+                  { k: 'Theme', v: 'Designed for your products, coded in Liquid' },
+                  { k: 'Payments', v: 'Razorpay or your gateway, UPI, cards, COD rules' },
+                  { k: 'Tax', v: 'GST rates, HSN codes, invoices through an app or your books' },
+                  { k: 'Shipping', v: 'Shiprocket or your courier, rates by pincode' },
+                  { k: 'Ownership', v: 'Store, code and accounts in your company name' },
                 ].map((row) => (
-                  <div
-                    key={row.label}
-                    className="flex items-center justify-between border-b border-fj-neutral-100 pb-3"
-                  >
-                    <p className="font-fj-body text-[0.875rem] text-fj-neutral-500">{row.label}</p>
-                    <p
-                      className="fj-display font-semibold text-fj-ink"
-                      style={{ fontSize: '1rem', letterSpacing: '-0.02em' }}
-                    >
-                      {row.value}
-                    </p>
-                  </div>
+                  <li key={row.k} className="flex items-start justify-between gap-4 border-b border-fj-neutral-100 pb-3">
+                    <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">{row.k}</p>
+                    <p className="text-right font-fj-body text-[0.875rem] text-fj-neutral-600">{row.v}</p>
+                  </li>
                 ))}
-                <div className="rounded-xl bg-[rgba(240,90,40,0.08)] px-4 py-3">
-                  <p className="font-fj-body text-[0.875rem] font-semibold text-[#B23E13]">
-                    +₹1,44,000/month from the same traffic. A custom store pays for itself in under 21 days.
-                  </p>
-                </div>
-              </div>
+              </ul>
+              <p className="mt-5 rounded-xl bg-[rgba(240,90,40,0.08)] px-4 py-3 font-fj-body text-[0.875rem] font-semibold text-[#B23E13]">
+                Custom-theme stores take 3 to 5 weeks. Fixed price per phase, in writing.
+              </p>
             </div>
           }
         />
 
-        {/* ── 2. LOGO BAR ──────────────────────────────────────────────────── */}
-        <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
-
-        {/* ── 3. TRUST BLOCK ───────────────────────────────────────────────── */}
-        <BigThreeTrustBlock
-          eyebrow="BY THE NUMBERS"
-          headline="India's Trusted Shopify Website Development Company, 120+ Stores, 12+ Years of E-Commerce"
-          description="Websites designed and built for businesses across India, the US, the UK and the UAE: Shopify stores, B2B companies, and DTC brands. Fixed, transparent pricing, your codebase delivered in full, and 7-day delivery."
+        {/* ── 2. ANSWER FIRST ──────────────────────────────────────────────── */}
+        <AnswerFirst
+          eyebrow="THE SHORT ANSWER"
+          question="Which is the best Shopify development company in India?"
+          answer={[
+            'The best Shopify development company in India for your brand is one whose own developers write the code, who fixes the price in writing and who shows you working pages before you sign. FactoryJet does all three: we build a draft theme inside your own Shopify store before any contract, quote each phase at a fixed price, and hand over the code and accounts in your name.',
+            'We are a registered Shopify Partner, rated 5.0 on Clutch from 4 reviews and 5.0 on GoodFirms from 5 reviews. Whoever you shortlist, open two of their live stores on your phone and try the checkout before you decide.',
+          ]}
+          factsTitle="FactoryJet at a glance"
+          facts={[
+            { k: 'Shopify status', v: 'Registered Shopify Partner' },
+            { k: 'Reviews', v: 'Clutch 5.0 (4 reviews), GoodFirms 5.0 (5 reviews)' },
+            { k: 'Track record', v: '500+ businesses served, 97% of projects on time or early, founded 2014' },
+            { k: 'Timelines', v: 'Custom-theme store 3 to 5 weeks; advanced store 5 to 8; headless 8 to 14' },
+            { k: 'Before you sign', v: 'A draft on your real products' },
+          ]}
+          links={[
+            { label: 'Ecommerce development in India', href: '/ecommerce-development' },
+            { label: 'Best Shopify development companies in India', href: '/blog/best-shopify-development-companies-india' },
+            { label: 'Ecommerce website cost in India', href: '/blog/ecommerce-website-development-cost-india' },
+          ]}
         />
 
-        {/* ── 4. SHOPIFY EXPLAINED ─────────────────────────────────────────── */}
+        {/* ── 3. LOGO BAR ──────────────────────────────────────────────────── */}
+        <LogoBar tagline="Trusted by 500+ businesses across India, US, UK, and UAE" />
+
+        {/* ── 4. SERVICES ──────────────────────────────────────────────────── */}
+        <IndustriesGrid variant="cards"
+          eyebrow="SHOPIFY DEVELOPMENT SERVICES"
+          headline="Shopify Development Services for Indian D2C and B2B Brands"
+          lead="From a first store to a Shopify Plus build with B2B accounts, we scope the work to your catalogue, channels and stage."
+          sectors={SHOPIFY_SERVICES}
+        />
+
+        {/* ── 5. BUYER QUESTIONS ───────────────────────────────────────────── */}
+        <QuestionAnswers
+          eyebrow="WHAT INDIAN BUYERS ASK BEFORE HIRING A SHOPIFY DEVELOPER"
+          intro="Short answers to the questions buyers type into Google and ask AI assistants. Prices quoted here are Shopify's and Razorpay's published prices, not ours."
+          items={SHOPIFY_QUESTIONS}
+        />
+
+        {/* ── 6. INDIA STACK ───────────────────────────────────────────────── */}
         <ServiceExplanation
           eyebrow="SHOPIFY FOR INDIAN BUSINESSES"
-          headline="Why Shopify, and Why a Custom Build Pays for Itself in Weeks"
-          lead="Shopify is the right platform for most Indian D2C brands. But the platform is only as good as the theme running on it. Generic themes convert at 0.8%. Custom builds convert at 2.4%. That gap is revenue."
+          headline="Shopify Website Development Set Up for How India Pays and Ships"
+          lead="An Indian store has to take UPI, handle COD without losing money on returns, raise GST invoices and quote honest delivery dates by pincode. We set up and test each of these before launch."
           body={
             <>
               <div className="flex flex-wrap gap-2" aria-hidden>
-                {[
-                  'Shopify Liquid',
-                  'Shopify Plus',
-                  'Razorpay',
-                  'UPI',
-                  'Shiprocket',
-                  'WhatsApp Commerce',
-                  'GST Invoicing',
-                ].map((cap) => (
+                {['Shopify Liquid', 'Shopify Plus', 'Razorpay', 'UPI', 'COD rules', 'GST', 'Shiprocket', 'WhatsApp updates'].map((cap) => (
                   <span
                     key={cap}
                     className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
@@ -697,60 +723,24 @@ export default function ShopifyDevelopmentPage() {
                   </span>
                 ))}
               </div>
-
               <p>
-                Shopify is the world&apos;s most popular e-commerce platform for a reason: it handles
-                hosting, security, and payment infrastructure so Indian brand founders can focus on
-                product and marketing. Razorpay&apos;s native Shopify integration covers UPI, cards,
-                net banking, EMI, and digital wallets in a single checkout widget. Shiprocket connects
-                Shopify to 15+ Indian courier partners in one integration. GST-compliant invoices are
-                auto-generated at every order.
+                <strong className="font-semibold text-fj-ink">Payments.</strong> Razorpay is our usual starting point
+                because one account covers UPI, cards, net banking, wallets, EMI and pay-later. If you already use PayU,
+                Cashfree or PhonePe, we connect that instead. COD runs on rules you choose.
               </p>
-
-              {/* Key Shopify metrics for India */}
-              <div className="grid grid-cols-3 gap-3" aria-hidden>
-                {[
-                  { value: '0.8%', label: 'avg. conv. rate, generic Shopify theme' },
-                  { value: '2.4×', label: 'conversion lift, custom FactoryJet theme' },
-                  { value: '7 Days', label: 'standard Shopify build delivery' },
-                ].map((b) => (
-                  <div
-                    key={b.value}
-                    className="rounded-xl border border-fj-neutral-200 bg-white px-3 py-4 text-center shadow-sm"
-                  >
-                    <p
-                      className="fj-display font-bold text-[#F05A28]"
-                      style={{ fontSize: '1.375rem', lineHeight: 1, letterSpacing: '-0.03em' }}
-                    >
-                      {b.value}
-                    </p>
-                    <p
-                      className="mt-1.5 font-fj-mono font-medium uppercase text-fj-neutral-400"
-                      style={{ fontSize: '0.6875rem', letterSpacing: '0.07em' }}
-                    >
-                      {b.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="border-l-2 border-[#F05A28] pl-5 py-1" aria-hidden>
-                <p
-                  className="font-fj-display font-semibold text-fj-ink"
-                  style={{ fontSize: '1.1875rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
-                >
-                  Shopify gives you the infrastructure. A custom theme gives you the conversion. Both
-                  together pay for themselves inside 30 days.
-                </p>
-              </div>
-
               <p>
-                FactoryJet has built 120+ Shopify stores for Indian and global brands across fashion,
-                health, food, electronics, and lifestyle categories. We know where Indian consumers
-                hesitate: the UPI redirect step that loses 20% of carts, the product page layout that
-                buries &quot;Add to Cart&quot; below the fold on a 375px screen, the checkout that asks
-                for a PIN and an OTP before showing the payment options. We design around those friction
-                points, not around what looks good in a Figma file.
+                <strong className="font-semibold text-fj-ink">GST.</strong> We set tax rates for your state, add HSN
+                codes, capture GSTIN for business buyers and connect an invoicing app or your accounting software, because
+                Shopify does not create a GST-compliant bill by itself.
+              </p>
+              <p>
+                <strong className="font-semibold text-fj-ink">Shipping.</strong> Shiprocket or your courier, with rates
+                at checkout, labels, tracking messages and serviceable pincodes checked before launch.
+              </p>
+              <p>
+                <strong className="font-semibold text-fj-ink">Speed.</strong> Themes are designed phone first. We check
+                Lighthouse on mobile for home, collection, product and cart pages and keep the app list short, because
+                every app script slows the store.
               </p>
             </>
           }
@@ -761,22 +751,19 @@ export default function ShopifyDevelopmentPage() {
                   className="font-fj-mono font-medium uppercase text-fj-neutral-400"
                   style={{ fontSize: '11px', letterSpacing: '0.14em' }}
                 >
-                  Shopify Plan Comparison, India
+                  Shopify plans in India (Shopify&apos;s prices, yearly billing)
                 </p>
               </div>
               <div className="divide-y divide-fj-neutral-100 px-7">
                 {[
-                  { plan: 'Shopify Basic', best: 'New stores, testing the market', price: 'Entry plan' },
-                  { plan: 'Shopify Grow', best: 'Growing D2C brands, 2+ staff', price: 'Mid plan' },
-                  { plan: 'Shopify Advanced', best: 'Scale, advanced reports, lower MDR', price: 'Advanced plan' },
-                  { plan: 'Shopify Plus', best: 'B2B, multi-store, custom checkout', price: 'Enterprise plan' },
-                  { plan: 'Headless Hydrogen', best: 'Sub-1s loads, full design control', price: 'Custom' },
+                  { plan: 'Basic', best: 'New stores testing the market', price: '₹1,499/mo' },
+                  { plan: 'Grow', best: 'Growing brands with a small team', price: '₹5,599/mo' },
+                  { plan: 'Advanced', best: 'Scale, deeper reports, lower third-party fee', price: '₹22,680/mo' },
+                  { plan: 'Plus', best: 'B2B, many storefronts, checkout changes', price: 'From ₹1,75,000/mo' },
                 ].map((item) => (
                   <div key={item.plan} className="py-3.5">
                     <div className="flex items-center justify-between gap-4">
-                      <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">
-                        {item.plan}
-                      </p>
+                      <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">{item.plan}</p>
                       <p
                         className="fj-display flex-shrink-0 font-bold text-[#B23E13]"
                         style={{ fontSize: '0.9375rem', letterSpacing: '-0.02em' }}
@@ -784,271 +771,95 @@ export default function ShopifyDevelopmentPage() {
                         {item.price}
                       </p>
                     </div>
-                    <p
-                      className="mt-0.5 font-fj-mono text-[0.6875rem] text-fj-neutral-400"
-                      style={{ letterSpacing: '0.04em' }}
-                    >
+                    <p className="mt-0.5 font-fj-mono text-[0.6875rem] text-fj-neutral-500" style={{ letterSpacing: '0.04em' }}>
                       {item.best}
                     </p>
                   </div>
                 ))}
               </div>
               <div className="border-t border-fj-neutral-100 bg-fj-neutral-50 px-7 py-5">
-                <div className="mb-2 h-[3px] w-8 rounded-full bg-[#F05A28]" aria-hidden="true" />
-                <p
-                  className="fj-display font-semibold text-fj-ink"
-                  style={{ fontSize: '1rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
-                >
-                  We recommend the right plan. We won&apos;t push Plus if you don&apos;t need it.
+                <p className="font-fj-body text-[0.8125rem] leading-snug text-fj-neutral-600">
+                  Source:{' '}
+                  <a href={SRC.shopifyPricing.url} target="_blank" rel="noopener noreferrer" className="underline">
+                    shopify.com/in/pricing
+                  </a>
+                  , checked {CHECKED_ON}. Monthly billing costs more. These are Shopify&apos;s fees, not FactoryJet&apos;s.
                 </p>
               </div>
             </div>
           }
         />
 
-        {/* ── 5. THE PROBLEM (DARK) ─────────────────────────────────────────── */}
-        <StrategicDarkSection
-          eyebrow="THE PROBLEM"
-          headline="Your Shopify store is live. The conversion rate is where revenue disappears."
-          lead="Most Indian Shopify stores run on a cheap off-the-shelf theme with the logo swapped. They convert at 0.8% on mobile. A properly designed custom build converts at 2.4%. That 1.6-point gap represents the majority of your potential revenue, not from more traffic, but from your existing visitors."
-          pillars={[
+        {/* ── 7. PROOF ─────────────────────────────────────────────────────── */}
+        <PortfolioShowcase
+          eyebrow="RECENT SHOPIFY WORK"
+          headline="Stores our Shopify developers built and support."
+          cards={[
             {
-              icon: '📱',
-              title: 'India shops on mobile. Generic Shopify themes were not built for it.',
-              body: 'Over 65% of Indian Shopify traffic arrives on a 375px screen. Generic themes are desktop-first and adapted down, tap targets too small for thumbs, product images that take 6 seconds to load on 4G, Add-to-Cart buttons buried below the fold, and a UPI checkout that requires three redirects before the payment screen. FactoryJet builds Shopify themes mobile-first, designed at 375px before desktop, Lighthouse 90+ on mobile, and Razorpay Turbo for one-tap UPI.',
+              industry: 'Supplements · Shopify',
+              title: 'Shop Holistico',
+              description:
+                'A custom Shopify theme for a brand selling whole-food vitamin D and calcium. Shoppers pick Subscribe & Save or buy the vitamin D and calcium bundle.',
+              imageSrc: '/images/work/shopholistico-desktop.webp',
+              stat1: 'Custom theme',
+              stat2: 'Subscribe & Save',
             },
             {
-              icon: '🧾',
-              title: 'Razorpay, GST, and Shiprocket | most Shopify agencies do not set these up correctly.',
-              body: 'Payment redirects, missing GST invoices, incorrect shipping rate calculations, and WhatsApp notifications that never reach customers, these are standard in Shopify stores set up by generalist agencies. FactoryJet configures every integration properly: Razorpay Turbo checkout, GST-compliant invoices at order placement, Shiprocket with automated AWB generation and NDR workflows, and WhatsApp order notifications via Interakt. Everything tested end-to-end before launch.',
-            },
-            {
-              icon: '💸',
-              title: 'Indian Shopify agencies charge premium fees and deliver a theme installation.',
-              body: 'A mid-tier Indian digital agency charges a steep fee for Shopify development, and typically delivers a Shopify theme with the logo and colours customised. FactoryJet builds a genuinely custom Figma-designed Liquid theme, properly wired to Razorpay, Shiprocket, GST invoicing, and WhatsApp, at a fixed price scoped up front. Because our team is specialised and lean, not overhead-heavy.',
+              industry: 'Wholesale Distribution · Commerceflo',
+              title: 'Belle Maison',
+              description:
+                'A wholesale distributor of artificial plants, flowers, home décor and LED lighting. Their B2B quote-to-cash store runs on Commerceflo, our own platform, not Shopify, with trade price tiers and account-based ordering.',
+              imageSrc: '/images/portfolio/belle-maison.webp',
+              stat1: 'B2B ordering',
+              stat2: 'Built on Commerceflo',
             },
           ]}
+          ctaHref="/portfolio"
+          ctaLabel="View full portfolio"
         />
 
-        {/* ── 6. OUR PROCESS ───────────────────────────────────────────────── */}
+        {/* ── 8. COMPARISON TABLE ──────────────────────────────────────────── */}
+        <ComparisonTable
+          eyebrow="HOW TO CHOOSE"
+          headline="Shopify Development Company vs Agency vs Freelancer vs Doing It Yourself"
+          lead="Four ways to get a Shopify store built in India, compared on what decides the result."
+          pullQuote={{
+            stat: 'Draft first',
+            caption:
+              'We build a draft on your real products, often in your own Shopify store, before you sign anything.',
+          }}
+          columns={SHOPIFY_COMPARISON_COLUMNS}
+          rows={SHOPIFY_COMPARISON_ROWS}
+          footer="Agency and freelancer cells are general patterns, not claims about any one firm. Ask every firm you shortlist the same questions."
+        />
+
+        {/* ── 9. MID-PAGE CTA ──────────────────────────────────────────────── */}
+        <MidPageCTA
+          headline="See your store before you sign."
+          sub="Send us your catalogue or your current store link. We will build a draft on a few of your real products and price each phase in writing."
+          label="See a draft of my store"
+        />
+
+        {/* ── 10. PROCESS ──────────────────────────────────────────────────── */}
         <ServiceJourneyRow
           eyebrow="OUR PROCESS"
-          headline="From Store Audit to Live Shopify Store in 5 Stages"
-          lead="Platform plan confirmed before design. Mobile approval before Liquid. Payment + logistics testing before launch."
+          headline="How Our Shopify Developers Take a Store From Scope to Launch"
+          lead="Price agreed before design. Draft before contract. Real test orders before launch."
           stages={SHOPIFY_JOURNEY_STAGES}
-          closingNote="5 STAGES · 7 TO 70 DAYS · RAZORPAY + UPI + GST STANDARD · ZERO DOWNTIME LAUNCH DAY"
+          closingNote="5 STAGES · CUSTOM-THEME STORE IN 3 TO 5 WEEKS · RAZORPAY, UPI, GST TESTED · CODE IN YOUR NAME"
         />
 
-        {/* ── 7. TECH STACK ────────────────────────────────────────────────── */}
-        <ServiceExplanation
-          eyebrow="OUR SHOPIFY TECH STACK"
-          headline="Shopify Liquid Built for Indian Consumers, Not Adapted from US Templates"
-          lead="Every tool we use is chosen for performance on Indian mobile networks, compatibility with Indian payment methods, and compliance with Indian GST regulations."
-          reverseOnDesktop
-          body={
-            <>
-              <div className="flex flex-wrap gap-2" aria-hidden="true">
-                {['Shopify Liquid', 'Figma', 'Razorpay API', 'Shiprocket API', 'Interakt', 'Klaviyo', 'ReCharge', 'Cloudflare CDN'].map(
-                  (tech) => (
-                    <span
-                      key={tech}
-                      className="inline-flex items-center rounded-full border border-[rgba(240,90,40,0.25)] bg-[rgba(240,90,40,0.08)] px-3 py-1 font-fj-mono font-semibold uppercase text-[#B23E13]"
-                      style={{ fontSize: '10px', letterSpacing: '0.10em' }}
-                    >
-                      {tech}
-                    </span>
-                  )
-                )}
-              </div>
-              <p>
-                <strong className="font-semibold text-fj-ink">Shopify Liquid + Figma</strong>: Every
-                store starts as a Figma design at 375px (mobile) and 1440px (desktop). The Liquid theme
-                matches the Figma exactly. Custom sections are built so your team can edit content from
-                the Shopify theme editor without touching code.
-              </p>
-              <p>
-                <strong className="font-semibold text-fj-ink">Razorpay + UPI integration</strong>, We
-                implement Razorpay Turbo for one-tap UPI checkout, eliminating the 3–4 redirect steps
-                that cause 20% cart drop-off. Full coverage: UPI, cards, net banking, EMI, Paytm,
-                PhonePe, Mobikwik, LazyPay, and Simpl.
-              </p>
-              <p>
-                <strong className="font-semibold text-fj-ink">Shiprocket + Delhivery</strong>, Real-time
-                shipping rate calculation at checkout, automated AWB generation, tracking pushed to
-                customers via WhatsApp and SMS, automated NDR (non-delivery) workflows, and returns
-                portal.
-              </p>
-              <p>
-                <strong className="font-semibold text-fj-ink">WhatsApp Commerce (Interakt / Wati)</strong>{' '}
-: Order confirmations, dispatch notifications, abandoned cart recovery, and post-delivery
-                review requests: all via WhatsApp, where Indian consumers actually respond.
-              </p>
-              <p>
-                <strong className="font-semibold text-fj-ink">GST Compliance</strong>, Auto-generated
-                GST invoices at order placement, GSTIN capture at checkout for B2B buyers, HSN code
-                mapping, and GSTR-1 compatible export.
-              </p>
-            </>
-          }
-          rightSlot={
-            <div
-              className="w-full overflow-hidden rounded-2xl bg-white shadow-sm"
-              style={{
-                borderWidth: '1px',
-                borderStyle: 'solid',
-                borderColor: 'rgb(229, 231, 235)',
-                borderTopWidth: '2px',
-                borderTopColor: '#F05A28',
-              }}
-            >
-              <div className="border-b border-fj-neutral-100 px-8 py-5">
-                <p
-                  className="font-fj-mono font-medium uppercase text-fj-neutral-400"
-                  style={{ fontSize: '11px', letterSpacing: '0.14em' }}
-                >
-                  Shopify Tech Stack, India
-                </p>
-              </div>
-              <div className="divide-y divide-fj-neutral-100 px-8">
-                {[
-                  { category: 'Storefront', tools: 'Shopify Liquid, Hydrogen (headless)' },
-                  { category: 'Design', tools: 'Figma, custom Liquid section builder' },
-                  { category: 'Payments', tools: 'Razorpay, PayU, UPI, EMI, BNPL' },
-                  { category: 'Logistics', tools: 'Shiprocket, Delhivery, Shadowfax, Porter' },
-                  { category: 'WhatsApp', tools: 'Interakt, Wati, AiSensy' },
-                  { category: 'Email & SMS', tools: 'Klaviyo, WebEngage, MSG91' },
-                  { category: 'Analytics', tools: 'GA4, Meta Pixel, CleverTap' },
-                ].map((item) => (
-                  <div
-                    key={item.category}
-                    className="flex items-center justify-between gap-4 py-3.5"
-                  >
-                    <div className="flex items-center gap-2.5">
-                      <div
-                        className="h-1.5 w-1.5 shrink-0 rounded-full bg-[rgba(240,90,40,0.50)]"
-                        aria-hidden="true"
-                      />
-                      <p className="font-fj-body text-[0.875rem] font-semibold text-fj-ink">
-                        {item.category}
-                      </p>
-                    </div>
-                    <p className="text-right font-fj-body text-[0.875rem] text-fj-neutral-600">
-                      {item.tools}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              <div className="border-t border-fj-neutral-100 bg-fj-neutral-50 px-8 py-5">
-                <div className="mb-2 h-[3px] w-8 rounded-full bg-[#F05A28]" aria-hidden="true" />
-                <p
-                  className="fj-display font-semibold text-fj-ink"
-                  style={{ fontSize: '1.0625rem', lineHeight: 1.3, letterSpacing: '-0.02em' }}
-                >
-                  Built for India. Full code ownership. Zero lock-in.
-                </p>
-              </div>
-            </div>
-          }
-        />
-
-        {/* ── 8. STATS BAND ────────────────────────────────────────────────── */}
-        <section
-          className="py-12 md:py-16"
-          style={{
-            backgroundColor: '#FAFAF7',
-            borderTop: '1.5px solid rgba(240,90,40,0.18)',
-            borderBottom: '1.5px solid rgba(240,90,40,0.18)',
-          }}
-        >
-          <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-            <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_380px] lg:items-center lg:gap-16">
-              <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
-                {SHOPIFY_STATS.map((stat) => (
-                  <div key={stat.value}>
-                    {stat.categoryLabel && (
-                      <div
-                        className="mb-3 inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-fj-mono font-bold uppercase"
-                        style={{
-                          fontSize: '9px',
-                          letterSpacing: '0.13em',
-                          color: '#B23E13',
-                          background: 'rgba(240,90,40,0.06)',
-                          border: '1px solid rgba(240,90,40,0.22)',
-                        }}
-                      >
-                        <span
-                          className="inline-block h-1 w-1 rounded-full"
-                          style={{ backgroundColor: '#F05A28' }}
-                          aria-hidden="true"
-                        />
-                        {stat.categoryLabel}
-                      </div>
-                    )}
-                    <p
-                      className="fj-display font-bold"
-                      style={{
-                        fontSize: 'clamp(2.25rem, 4vw, 3.25rem)',
-                        lineHeight: 1,
-                        letterSpacing: '-0.04em',
-                        color: '#F05A28',
-                      }}
-                    >
-                      {stat.value}
-                    </p>
-                    <p
-                      className="mt-3 font-fj-body font-semibold text-fj-ink"
-                      style={{ fontSize: '0.9375rem', lineHeight: 1.5 }}
-                    >
-                      {stat.label}
-                    </p>
-                    {stat.microcopy && (
-                      <p
-                        className="mt-1.5 font-fj-body text-fj-neutral-400"
-                        style={{ fontSize: '0.8125rem', lineHeight: 1.55 }}
-                      >
-                        {stat.microcopy}
-                      </p>
-                    )}
-                  </div>
-                ))}
-              </div>
-              <div
-                className="relative w-full overflow-hidden rounded-2xl"
-                style={{ aspectRatio: '5 / 3' }}
-              >
-                <Image
-                  src="/images/services/card-ecommerce.webp"
-                  alt="A monitor and a phone on a dark desk, both showing an online checkout with shipping and payment steps"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 380px"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── 9. INDIA SHOPIFY MARKET ──────────────────────────────────────── */}
+        {/* ── 11. INDIA MARKET + CITY LINKS ────────────────────────────────── */}
         <CityContextSection
-          eyebrow="SHOPIFY IN INDIA"
-          headline="India Has 1.2 Million+ Shopify Stores. Most Convert Below 1%. Yours Doesn't Have To."
+          eyebrow="SHOPIFY EXPERTS FOR BRANDS ACROSS INDIA"
+          headline="Shopify Developers for Brands in Every Indian City"
           leadParagraphs={[
-            "Shopify powers over 2.85 million stores globally, and India is one of its fastest-growing markets. Indian D2C brands on Shopify collectively process billions of rupees in monthly GMV across fashion, beauty, food, electronics, and home categories. The brands capturing the highest share of that growth are not the largest ones. They are the brands with fast, properly optimised Shopify stores that convert mobile traffic efficiently, use Razorpay Turbo for frictionless UPI checkout, and recover abandoned carts via WhatsApp.",
-            "FactoryJet has built Shopify stores for brands in Mumbai, Delhi, Bangalore, Hyderabad, Chennai, Pune, Ahmedabad, Surat, Jaipur, and Kolkata, across D2C fashion, D2C health and wellness, B2B wholesale portals, food and gifting stores, and quick-commerce Shopify frontends. We understand what an Indian D2C brand at ₹10 lakh to ₹10 crore monthly GMV needs from a Shopify store.",
-            "The brands we build for have usually done the math. At 0.8% conversion (generic theme) on 5,000 monthly visitors with a ₹1,800 AOV: ₹72,000/month. At 2.4% (custom FactoryJet theme): ₹2,16,000/month. The ₹1,44,000 monthly difference pays back a full custom store build in well under a month. That is the ROI case for a custom Shopify build over a generic theme, and it is the same calculation every time.",
+            "India's e-commerce market keeps growing. The India Brand Equity Foundation puts it at Rs 10,82,875 crore (US$ 125 billion) in 2024 and projects Rs 29,88,735 crore (US$ 345 billion) by 2030. More of that money is moving to brand-owned stores, where the brand keeps the customer and the margin.",
+            'We work with brands remotely across India, so your city does not limit who builds your store. Each city page below covers what sellers there usually need: jewellery pricing in Mumbai, textile catalogues in Surat, B2B portals for Delhi and Ahmedabad traders, and more.',
           ]}
           bodySlot={
             <>
-              <div className="border-l-2 border-[#F05A28] py-1 pl-5" aria-hidden="true">
-                <p
-                  className="fj-display font-semibold text-fj-ink"
-                  style={{ fontSize: '1.125rem', lineHeight: 1.35, letterSpacing: '-0.02em' }}
-                >
-                  A custom Shopify theme is not a design expense. It is a revenue investment with a
-                  measurable 30-day payback.
-                </p>
-              </div>
-              <div className="mt-5 flex flex-wrap gap-2">
+              <div className="mt-2 flex flex-wrap gap-2">
                 {[
                   { label: 'Mumbai', slug: 'mumbai' },
                   { label: 'Delhi', slug: 'delhi' },
@@ -1074,115 +885,79 @@ export default function ShopifyDevelopmentPage() {
                   </a>
                 ))}
               </div>
+              <p className="mt-5 font-fj-body text-[0.9375rem] leading-relaxed text-fj-neutral-600">
+                Building on something other than Shopify? See{' '}
+                <a href="/ecommerce-development" className="font-semibold text-fj-ink underline underline-offset-4">
+                  ecommerce development in India
+                </a>{' '}
+                or{' '}
+                <a href="/whatsapp-chatbot" className="font-semibold text-fj-ink underline underline-offset-4">
+                  WhatsApp chatbots for stores
+                </a>
+                .
+              </p>
             </>
           }
-          stats={SHOPIFY_MARKET_STATS}
-        />
-
-        {/* ── 10. PORTFOLIO ────────────────────────────────────────────────── */}
-        <PortfolioShowcase
-          eyebrow="RECENT WORK"
-          headline="What Indian D2C brands look like after FactoryJet builds their Shopify store."
-          cards={[
+          stats={[
             {
-              industry: 'Interior Décor · Shopify',
-              title: 'Belle Maison | Mumbai',
-              description:
-                'Belle Maison is a Mumbai wholesale distributor of artificial plants, flowers, flower runners, home décor, and LED lighting. Their B2B quote-to-cash store runs on Commerceflo by FactoryJet and was built by our team with trade pricing tiers, quote-to-order workflows, and account-based ordering.',
-              imageSrc: '/images/portfolio/belle-maison.webp',
-              stat1: 'Lighthouse 95+',
-              stat2: 'Razorpay + WhatsApp',
+              value: 'US$ 345B',
+              label: "India's projected e-commerce market by 2030, up from US$ 125 billion in 2024",
+              sourceUrl: SRC.ibef.url,
+              sourceLabel: 'India Brand Equity Foundation',
             },
             {
-              industry: 'MEP / BIM Consulting · B2B',
-              title: 'Formative Concepts | Pune',
-              description:
-                'Formative Concepts is an MEP drafting and BIM consulting firm. FactoryJet rebuilt their site on WordPress with authority-first architecture, project portfolio, and technical SEO. While not Shopify, it demonstrates our B2B conversion-first design methodology applied across all builds.',
-              imageSrc: '/images/portfolio/formative-concepts.webp',
-              stat1: 'B2B authority site',
-              stat2: 'SEO + Next.js',
+              value: '₹1,499',
+              label: 'a month for Shopify Basic in India on yearly billing',
+              sourceUrl: SRC.shopifyPricing.url,
+              sourceLabel: 'Shopify India pricing',
+            },
+            {
+              value: '2%',
+              label: 'Razorpay platform fee per domestic transaction, plus GST on the fee',
+              sourceUrl: SRC.razorpay.url,
+              sourceLabel: 'Razorpay pricing',
             },
           ]}
-          ctaHref="/portfolio"
-          ctaLabel="View full portfolio"
         />
 
-        {/* ── 11. COMPARISON TABLE ─────────────────────────────────────────── */}
-        <ComparisonTable
-          eyebrow="HOW WE COMPARE"
-          headline="FactoryJet vs. Indian Shopify Agency vs. Freelancer vs. Theme Store"
-          lead="Not all Shopify development options deliver the same output. Here is the honest comparison."
-          pullQuote={{
-            stat: 'Fixed-price',
-            caption:
-              'scoped up front, same Figma-first design, Liquid engineering, Razorpay + UPI integration, and Lighthouse audit you would expect from a premium Indian agency project, without the agency overhead.',
-          }}
-          columns={SHOPIFY_COMPARISON_COLUMNS}
-          rows={SHOPIFY_COMPARISON_ROWS}
-          footer="FactoryJet fixed-price contracts available for all tiers, quoted up front after a free discovery call."
-        />
-
-        {/* ── 12. WHAT WE BUILD ────────────────────────────────────────────── */}
-        <IndustriesGrid variant="cards"
-          eyebrow="WHAT WE BUILD"
-          headline="Six Shopify Development Services for Indian D2C Brands"
-          lead="From a custom Liquid theme to a headless Shopify Plus enterprise build, we scope the right engagement for your brand, catalogue, and revenue stage."
-          sectors={SHOPIFY_SERVICES}
-        />
-
-        <GetFreeQuoteCTA />
-        {/* ── 14. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
+        {/* ── 12. TESTIMONIALS (DARK) ──────────────────────────────────────── */}
         <TestimonialsSection
           eyebrow="CLIENT RESULTS"
-          headline="What Indian D2C founders say after we build their Shopify store"
+          headline="What founders say after we build their store"
         />
 
-        {/* ── 15. FAQ ──────────────────────────────────────────────────────── */}
+        {/* ── 13. FAQ ──────────────────────────────────────────────────────── */}
         <FAQ
           eyebrow="FREQUENTLY ASKED QUESTIONS"
-          headline="Everything to Know Before You Build on Shopify"
-          lead="The questions we answer on every Indian Shopify discovery call, answered here, without the runaround."
+          headline="Shopify Development in India: Questions Buyers Ask"
+          lead="From choosing the best Shopify development company in India to GST, COD and Shopify Plus, answered plainly."
           categories={SHOPIFY_FAQ_CATEGORIES}
           items={SHOPIFY_FAQ_ITEMS}
         />
 
-        {/* ── 16. WHY FACTORYJET (DARK) ─────────────────────────────────────── */}
-        <StrategicDarkSection
-          eyebrow="WHY FACTORYJET"
-          headline="120+ Shopify stores built. We know what actually converts in India."
-          lead="FactoryJet has delivered Shopify stores for Indian and global brands. We know which design decisions move the needle on Indian conversion rates, and which ones only look good in an agency proposal."
-          pillars={[
-            {
-              icon: '🇮🇳',
-              title: 'Built for India | Razorpay Turbo, WhatsApp, GST, 4G performance.',
-              body: 'Most Shopify agencies build stores from global templates and adapt for India. FactoryJet builds India-first: Razorpay Turbo one-tap UPI checkout, WhatsApp abandoned cart recovery (3× better than email), GST-compliant invoicing, WebP images on Cloudflare CDN for 4G load speeds, and thumb-friendly mobile UX designed at 375px before desktop. Every Shopify store we build is optimised for how Indian consumers actually shop.',
-            },
-            {
-              icon: '📊',
-              title: 'Conversion-first design backed by 120+ Shopify store builds.',
-              body: 'We know from 120+ Shopify builds that sticky Add-to-Cart outperforms static, that social proof within 200px of the buy button lifts conversion by 12%, that UPI quick-pay must appear above card fields in the Razorpay widget for Indian consumers, and that product images must load under 1.5 seconds on 4G for bounce rate not to spike. We design around those data points, not around what wins a design award.',
-            },
-            {
-              icon: '🔒',
-              title: 'Your Liquid code, your GitHub, your Shopify store | on launch day.',
-              body: 'The full Liquid theme codebase is delivered to your GitHub on launch day. You own every section, every metafield schema, every Razorpay and Shiprocket integration script. No FactoryJet dependency baked in. Any Shopify developer in the world can maintain and extend it. We have seen too many Indian brands locked into agencies that hold their theme code hostage, we do not build those.',
-            },
+        {/* ── 14. SOURCES ──────────────────────────────────────────────────── */}
+        <SourceList
+          checkedOn={CHECKED_ON}
+          sources={[
+            { ...SRC.shopifyPricing, note: 'plan prices in rupees and third-party transaction fees' },
+            { ...SRC.shopifyGst, note: 'default GST settings, HSN codes, and the note that Shopify does not create a GST-compliant bill' },
+            { ...SRC.razorpay, note: '2% platform fee on domestic transactions, plus GST on the fee' },
+            { ...SRC.ibef, note: 'India e-commerce market size for 2024 and projection for 2030' },
           ]}
         />
 
-        {/* ── 17. FINAL CTA ─────────────────────────────────────────────────── */}
+        {/* ── 15. FINAL CTA (DARK) ─────────────────────────────────────────── */}
         <div id="final-cta">
           <FinalCTA
             variant="dark"
             eyebrow="READY TO BUILD"
-            headline="Book a Shopify Audit. We'll Tell You Exactly What to Fix"
-            sub="In 30 minutes, we will audit your current Shopify store or business model, identify what is costing you conversion, recommend the right Shopify plan and payment stack, and give you a fixed price. No pitch. No pressure. An honest assessment from engineers who have built 120+ Shopify stores."
-            primaryCta={{ label: 'Book Your Shopify Audit', modal: true, region: 'in' }}
+            headline="Hire Shopify Developers Who Show You the Store First"
+            sub="Tell us what you sell, where you sell it and what slows you down. We will recommend a Shopify plan and payment setup, price each phase in writing, and build a draft on your own products before you sign."
+            primaryCta={{ label: 'See a draft of my store', modal: true, region: 'in' }}
             secondaryCta={{ label: 'See Our Portfolio', href: '/portfolio' }}
-            objectionHandler="Fixed price. 7-day delivery. Full code ownership. Razorpay + UPI + GST standard."
+            objectionHandler="Fixed price per phase. Draft before contract. Code and accounts in your name."
           />
         </div>
-
       </main>
 
       <SiteFooter locale="in" />
