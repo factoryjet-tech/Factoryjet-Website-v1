@@ -514,7 +514,11 @@ export default function ShopifyPlusB2BPage() {
               <Link href="/blog/best-b2b-ecommerce-platform-manufacturers-distributors-2026" style={srcLink}>
                 how Shopify Plus compares with OroCommerce, BigCommerce B2B Edition and Adobe Commerce
               </Link>
-              {' '}for manufacturers and distributors.
+              {' '}for manufacturers and distributors. Setting it up yourself? Follow our{' '}
+              <Link href="/blog/how-to-set-up-shopify-b2b" style={srcLink}>
+                step-by-step Shopify B2B setup guide
+              </Link>
+              .
             </p>
           </div>
         </section>

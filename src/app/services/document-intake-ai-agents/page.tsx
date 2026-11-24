@@ -1163,6 +1163,8 @@ const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
   { href: '/services/erp-ai-agents', t: 'AI agents for ERP systems', b: 'Quotes, orders and bookkeeping drafted inside Odoo, NetSuite, SAP Business One and ERPNext.' },
   { href: '/services/sales-order-automation-ai-agents', t: 'Sales order automation agents', b: 'Customer purchase orders turned into draft sales orders in your ERP.' },
   { href: '/services/insurance-ai-agents', t: 'AI agents for insurance', b: 'Claim calls, quote details and certificate requests for agencies, MGAs and small carriers.' },
+  { href: '/services/ai-underwriting-agents', t: 'AI underwriting agents for lenders', b: 'Loan packets read and checked, conditions listed and figures traced to the source page, with the decision left to the underwriter.' },
+  { href: '/services/accounting-firm-ai-agents', t: 'AI for accounting firms', b: 'Client document chasing and filing for CPA, tax and bookkeeping firms, with the signing preparer in charge.' },
   { href: '/services/ai-automation', t: 'AI workflow automation', b: 'The steps before and after the document, joined into one process.' },
   { href: '/services/ai-agent-development/rfq-bidding-agent', t: 'RFQ automation agent', b: 'Inbound requests for quote read, matched to your catalogue and drafted for approval.' },
   { href: '/services/claude-ai-agent-development', t: 'Claude AI agent development', b: 'Agents built on Anthropic Claude, the model family that reads PDFs directly as described above.' },

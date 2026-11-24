@@ -199,6 +199,7 @@ export const SIMPLE_MENUS: SimpleMenu[] = [
         { label: 'Real Estate', href: '/services/ai-agents-for-real-estate' },
         { label: 'Automotive Dealers', href: '/services/automotive-ai-voice-agents' },
         { label: 'Insurance', href: '/services/insurance-ai-agents' },
+        { label: 'Banking & Financial Services', href: '/services/financial-services-ai-agents' },
         { label: 'Construction', href: '/services/construction-ai-agents' },
       ] },
       { heading: 'Websites & SEO by industry', kind: 'compact', items: [

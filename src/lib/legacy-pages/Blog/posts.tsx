@@ -194,6 +194,8 @@ import { post as bestAiAutomationAgenciesIndiaPost } from './posts/best-ai-autom
 import { post as aiAgentDevelopmentCostIndiaPost } from './posts/ai-agent-development-cost-india';
 import { post as bestShopifyDevelopmentCompaniesIndiaPost } from './posts/best-shopify-development-companies-india';
 import { post as ecommerceWebsiteDevelopmentCostIndiaPost } from './posts/ecommerce-website-development-cost-india';
+import { post as bestAiAgentCompaniesFinancialServicesPost } from './posts/best-ai-agent-companies-financial-services';
+import { post as howToSetUpShopifyB2bPost } from './posts/how-to-set-up-shopify-b2b';
 
 export const POSTS: BlogPost[] = [
   // --- DIRECT-ANSWER GUIDES (2026-10-24): AI agent implementation timeline, Shopify Plus returns agents ---
@@ -4852,4 +4854,6 @@ export const POSTS: BlogPost[] = [
   aiAgentDevelopmentCostIndiaPost,
   bestShopifyDevelopmentCompaniesIndiaPost,
   ecommerceWebsiteDevelopmentCostIndiaPost,
+  bestAiAgentCompaniesFinancialServicesPost,
+  howToSetUpShopifyB2bPost,
 ];

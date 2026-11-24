@@ -687,7 +687,7 @@ export const post: BlogPost = {
         </div>
         <div className="rounded-xl border border-gray-200 p-4">
           <p className="font-semibold mb-1">&ldquo;We are a credit union, community bank or university.&rdquo;</p>
-          <p className="text-gray-700 text-sm">A sector boutique: Advisor Labs names these clients directly.</p>
+          <p className="text-gray-700 text-sm">A sector boutique: Advisor Labs names these clients directly. For firms that build the AI agents themselves, see our <a href="/blog/best-ai-agent-companies-financial-services" className="underline">AI agent companies for financial services</a>.</p>
         </div>
         <div className="rounded-xl border border-gray-200 p-4">
           <p className="font-semibold mb-1">&ldquo;We sell online and want AI in orders, support and the store itself.&rdquo;</p>

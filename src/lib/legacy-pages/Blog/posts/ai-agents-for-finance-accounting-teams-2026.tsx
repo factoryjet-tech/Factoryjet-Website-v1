@@ -321,6 +321,11 @@ export const post: BlogPost = {
         fixed prices in writing after a short scoping call.
       </p>
       <p>
+        This guide is for the finance team inside a company. If you run a CPA, tax or bookkeeping firm, see{' '}
+        <a href="/services/accounting-firm-ai-agents">AI agents for accounting firms</a>. If you run a bank, credit union or
+        lender, see <a href="/services/financial-services-ai-agents">AI agents for banks and financial services</a>.
+      </p>
+      <p>
         See <a href="/services/accounts-payable-automation">accounts payable automation</a>,{' '}
         <a href="/services/accounts-receivable-automation">accounts receivable automation</a>,{' '}
         <a href="/services/document-intake-ai-agents">document intake AI agents</a>,{' '}
