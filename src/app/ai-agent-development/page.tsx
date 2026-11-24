@@ -313,7 +313,7 @@ const AGENT_FAQS = [
     category: 'voice',
     question: 'Which Indian languages can a voice agent handle?',
     answer:
-      'That depends on the languages and accents your callers use, so we test on recordings of your own calls during the demo step before you sign. Where a language does not work well enough, we say so then, not after launch.',
+      'Tell us the languages your callers use and we say during scoping whether we can build for them. Before you sign, we run sample calls built from your own service rules, so you hear what the agent does and where it hands the call to a person.',
   },
   /* ── WhatsApp ── */
   {
@@ -541,8 +541,8 @@ export default function AiAgentDevelopmentIndiaPage() {
                 Why build a custom AI agent instead of buying a tool?
               </SectionHead>
               <p className={`mt-5 ${PROSE}`}>
-                A tool is made for the average business. Your business is not average: your forms have odd fields, your
-                customers phone at odd hours, and your software has quirks. Custom AI agent development starts from those
+                A ready-made tool is built for the typical business. Yours has forms with odd fields, customers who phone
+                at odd hours, and software with quirks. Custom AI agent development starts from those
                 details, so the agent follows your rules instead of asking you to change them.
               </p>
               <p className={`mt-4 ${PROSE}`}>
@@ -637,14 +637,14 @@ export default function AiAgentDevelopmentIndiaPage() {
         <Section>
           <SectionHead eyebrow="AI VOICE AGENT INDIA">What should an AI voice agent in India get right?</SectionHead>
           <p className={`mt-5 max-w-[760px] ${PROSE}`}>
-            A good AI voice agent in India sounds natural to the callers you actually have. That means testing on real
-            recordings of your own calls, not on clean studio audio. Accents, background noise and mixed languages
-            decide whether callers get through or give up.
+            A good AI voice agent in India works for the callers you actually have. Accents, background noise and mixed
+            languages decide whether callers get through or give up, so the languages your callers use are the first
+            thing we ask about during scoping.
           </p>
           <p className={`mt-4 max-w-[760px] ${PROSE}`}>
-            It also means a clean way out. The voice agent should pass the call to a person when it is unsure or the
-            caller asks, with the notes so far, so nobody repeats themselves. We test both on your recordings during the
-            demo step, before you sign, and tell you which languages worked well enough.
+            It also needs a clean way out. The voice agent should pass the call to a person when it is unsure or the
+            caller asks, with the notes so far, so nobody repeats themselves. Before you sign, we run sample calls built
+            from your own service rules, so you can hear both the answers and the hand-over.
           </p>
         </Section>
 
