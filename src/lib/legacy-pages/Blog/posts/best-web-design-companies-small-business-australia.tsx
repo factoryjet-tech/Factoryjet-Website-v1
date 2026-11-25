@@ -64,7 +64,7 @@ export const post: BlogPost = {
   meta: {
     // 16 Nov 2026: leads with the keyword and carries the cost answer, because page 1 titles that show a price get the clicks.
     title: "Small Business Web Design Australia: 2026 Costs + 10 Firms",
-    description: "Small business web design in Australia costs $3,000 to $7,000 and takes 4 to 8 weeks (2026 guides). Pages you need, 10 firms checked, questions to ask.",
+    description: "Compare 10 web design companies for Australian small businesses. See published costs, ownership checks and the questions to ask before you hire.",
   },
   keyTakeaways: [
     "A professionally built small business website in Australia costs about $3,500 to $7,000 for 5 to 8 pages (Keen to Design, April 2026) or $3,000 to $7,000 for a brochure site (WolfIQ, 2026). These are market ranges, not FactoryJet prices.",

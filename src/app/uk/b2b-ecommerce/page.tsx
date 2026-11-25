@@ -8,7 +8,8 @@ import { twinAlternates } from '@/data/hreflangMap';
 import '../ai-agents/ai-agents.css';
 
 const CANONICAL = 'https://factoryjet.com/uk/b2b-ecommerce';
-const UPDATED = '2026-10-31';
+const UPDATED = '2026-11-25';
+const SRC_SHOPIFY_B2B_PLANS = 'https://help.shopify.com/en/manual/b2b/getting-started/plan-features';
 const TITLE = 'B2B Ecommerce Agency UK | Trade Portals & ERP | FactoryJet';
 const H1 = 'B2B Ecommerce Agency UK: Trade Portals Built Around Your Prices, Credit Terms and ERP';
 const DESCRIPTION =
@@ -88,13 +89,13 @@ const FAQ_ITEMS: { category: string; question: string; answer: string }[] = [
 
   // ── Platforms & features ──
   { category: 'platforms', question: 'What is the best B2B ecommerce platform in the UK?',
-    answer: 'There is no single best one. Shopify Plus B2B suits most wholesalers who want a fast, hosted platform and often run DTC too. Adobe Commerce B2B suits very large catalogues and complex quoting and approval rules. BigCommerce B2B Edition sits well in the mid-market. WooCommerce B2B suits smaller catalogues and WordPress teams. The right answer depends on your catalogue, pricing rules and ERP.' },
+    answer: 'There is no single best one. Shopify offers native B2B on Basic, Grow, Advanced and Plus; the plan depends on catalogue assignments, account pricing and payment requirements. Adobe Commerce B2B suits complex quoting and approval rules. BigCommerce B2B Edition and WooCommerce B2B are other options. We compare your catalogue, pricing rules and ERP before choosing.' },
   { category: 'platforms', question: 'Is Shopify suitable for B2B?',
-    answer: 'Yes, on Shopify Plus. Shopify Plus B2B includes company accounts with several buyers and locations, customer-specific catalogues and price lists, volume pricing, quantity rules and payment terms. It suits most wholesalers and brands selling to retailers, especially if you also sell to the public. It is less suited to very complex quote and approval chains, which usually point to Adobe Commerce.' },
+    answer: 'Yes. Basic, Grow and Advanced support native B2B, with up to three active catalogue assignments across active B2B markets. One catalogue assigned to two markets uses two assignments. Plus removes that limit and adds direct company/location catalogues, deposits and partial payments. Buyers sign in for the company location receiving those prices. We check your Markets setup and quoting rules before deciding whether native features, apps or custom work fit.' },
   { category: 'platforms', question: 'Is Magento good for B2B ecommerce?',
     answer: 'Yes, and it is the deepest option for complex trade selling. The B2B features, such as company accounts, shared catalogues, negotiable quotes, requisition lists and purchase approvals, come with Adobe Commerce, the paid version of Magento. Magento Open Source can do B2B too, but through extensions and custom work. It needs more hosting and developer care than a hosted platform like Shopify Plus.' },
   { category: 'platforms', question: 'Which ecommerce platform is best for wholesale?',
-    answer: 'For most UK wholesalers, Shopify Plus B2B or BigCommerce B2B Edition, because they are hosted, quick to run and handle trade pricing, minimum order quantities and payment terms. If you have a very large catalogue, many buyer roles per account, or long quote negotiations, Adobe Commerce is usually the better fit. Small wholesalers already on WordPress can start well with WooCommerce B2B.' },
+    answer: 'Start with how trade buyers get their prices, place orders and pay. A hosted Shopify B2B or BigCommerce B2B setup may fit; Plus is needed for Shopify’s direct company/location catalogues or advanced payment features. Complex quote negotiations may need Adobe Commerce or custom work. An existing WordPress catalogue may suit WooCommerce. We map those decisions before recommending a platform.' },
   { category: 'platforms', question: 'What features does a B2B ecommerce website need?',
     answer: 'At minimum: trade account login and approval, customer-specific prices, quick order by SKU, bulk order upload, one-click reorder, quotes for large or custom orders, pay on account with credit limits, VAT-correct invoices, live stock, and ERP integration. Larger businesses also need several buyers per account with spending limits, approval steps, and a sales rep view. We list twelve in detail on this page.' },
   { category: 'platforms', question: 'Can we run B2B and DTC from one website?',
@@ -469,6 +470,11 @@ export default function B2bEcommerceUKPage() {
                 For the trade builds themselves, see{' '}
                 <a href="/uk/shopify-plus-b2b" style={{ textDecoration: 'underline' }}>Shopify Plus B2B for UK wholesalers</a> and{' '}
                 <a href="/uk/bigcommerce-b2b" style={{ textDecoration: 'underline' }}>BigCommerce B2B Edition for UK distributors</a>.
+              </p>
+              <p className="mt-4">
+                The table compares Shopify Plus. Native B2B also exists on Basic, Grow and Advanced with a lower
+                catalogue-assignment limit. See <a href={SRC_SHOPIFY_B2B_PLANS} style={{ textDecoration: 'underline' }}>Shopify’s B2B features by plan</a>, checked 25 November 2026.
+                For a standard-plan build, start with our <a href="/uk/shopify-development" style={{ textDecoration: 'underline' }}>UK Shopify development service</a>.
               </p>
             </div>
             <div className="card mt-8" style={{ padding: 0, overflow: 'hidden' }}>

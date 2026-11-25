@@ -15,7 +15,7 @@ import './page.css';
 import './visual.css';
 
 const CANONICAL = 'https://factoryjet.com/au/shopify-development';
-const UPDATED = '2026-10-31';
+const UPDATED = '2026-11-25';
 const TITLE = 'Shopify Agency Australia | Shopify Developers | FactoryJet';
 const H1 = 'Shopify Agency Australia: Shopify Developers Who Stay After Launch';
 const DESCRIPTION =
@@ -45,6 +45,8 @@ const SRC_PRICING = 'https://www.shopify.com/au/pricing';
 // revenue and business model". fetch-verified 2026-09-25
 const SRC_PLUS_PLAN =
   'https://help.shopify.com/en/manual/intro-to-shopify/pricing-plans/plans-features/shopify-plus-plan';
+// Only this B2B plan distinction was rechecked on 2026-11-25; older source checks retain their dates.
+const SRC_B2B_PLANS = 'https://help.shopify.com/en/manual/b2b/getting-started/plan-features';
 // Shopify Help Center: "As of June 30, 2026, Shopify Scripts has been deprecated. Any
 // Scripts that were still published on your store have been deactivated and no longer
 // work." Points to Shopify Functions. fetch-verified 2026-09-25
@@ -150,8 +152,8 @@ const FAQ_ITEMS: { category: string; question: string; answer: string; links?: {
   { category: 'build', question: 'Can you set up Afterpay, Zip and Australian shipping?',
     answer: 'Yes. Afterpay and Zip both work with Shopify for buy now, pay later at checkout. For shipping we set up Australia Post, Sendle or StarShipIt, depending on your volumes and where you send, with live rates or flat rules, label printing and tracking emails. We test real checkouts end to end before launch, including a refund.' },
   { category: 'build', question: 'Can Shopify handle B2B wholesale in Australia?',
-    answer: 'Yes. Standard plans can run a simple trade store with apps. Shopify Plus adds native B2B: companies with their own buyers and locations, custom catalogues and price lists, payment terms, deposits and partial payments. That lets your wholesale and retail customers share one admin, one stock pool and one set of product data, with trade prices shown only to trade buyers.',
-    links: [{ href: '/au/b2b-ecommerce', label: 'B2B ecommerce trade portals' }] },
+    answer: 'Yes. Basic, Grow and Advanced include native company accounts, quantity rules and net terms. Their B2B catalogues use Markets, with up to three active catalogue assignments across active B2B markets. Assigning one catalogue to two markets uses two assignments. Plus removes that limit and adds direct company/location catalogues, deposits and partial payments. We check your Markets setup and account rules before choosing a plan or an app.',
+    links: [{ href: '/au/b2b-ecommerce', label: 'B2B ecommerce trade portals' }, { href: SRC_B2B_PLANS, label: 'Shopify B2B features by plan' }] },
   { category: 'build', question: 'Can you connect Shopify to our ERP or warehouse?',
     answer: 'Yes. We connect Shopify to ERPs such as NetSuite, Microsoft Dynamics 365 Business Central and Pronto, and to third-party logistics warehouses, through a proven connector or a small custom integration. We agree which system owns each piece of data, such as stock, prices and customers, before writing anything, which prevents the double-counting problems most integrations suffer from.',
     links: [{ href: '/au/ecommerce-erp-integration', label: 'Ecommerce ERP integration in Australia' }] },
@@ -566,7 +568,7 @@ export default function ShopifyDevelopmentAUPage() {
                   <tr><th scope="row">Themes, products, collections</th><td>Full</td><td className="fj">Full, same themes</td></tr>
                   <tr><th scope="row">Checkout customisation</th><td>Branding and approved apps</td><td className="fj">Extensions, custom checkout flows</td></tr>
                   <tr><th scope="row">Custom Shopify Functions</th><td>Through public apps only</td><td className="fj">Your own custom apps</td></tr>
-                  <tr><th scope="row">B2B wholesale</th><td>Via apps and workarounds</td><td className="fj">Native: companies, price lists, terms</td></tr>
+                  <tr><th scope="row">B2B wholesale</th><td>Native B2B; up to 3 active B2B-market catalogue assignments</td><td className="fj">No market-assignment cap; direct company catalogues, deposits and partial payments</td></tr>
                   <tr><th scope="row">Separate stores (e.g. New Zealand)</th><td>Separate accounts</td><td className="fj">9 expansion stores</td></tr>
                   <tr><th scope="row">Inventory locations</th><td>Limited by plan</td><td className="fj">Up to 200</td></tr>
                   <tr><th scope="row">Staff accounts</th><td>Limited by plan</td><td className="fj">Unlimited</td></tr>
@@ -577,7 +579,7 @@ export default function ShopifyDevelopmentAUPage() {
               </table>
             </div>
             <p className="tablenote">
-              Plus figures from <a href={SRC_PLUS_PLAN} {...extLink}>Shopify Help Center, Shopify Plus plan</a>, checked 25 September 2026. For current plan fees, see <a href={SRC_PRICING} {...extLink}>Shopify’s Australian pricing page</a>.
+              Plus figures from <a href={SRC_PLUS_PLAN} {...extLink}>Shopify Help Center, Shopify Plus plan</a>, checked 25 September 2026. The B2B row follows <a href={SRC_B2B_PLANS} {...extLink}>Shopify’s B2B features by plan</a>, checked 25 November 2026. For current plan fees, see <a href={SRC_PRICING} {...extLink}>Shopify’s Australian pricing page</a>.
             </p>
             <div className="au-split">
               <div>
@@ -763,15 +765,14 @@ export default function ShopifyDevelopmentAUPage() {
               <div className="factlist">
                 <div className="fact"><div className="sec">§01</div><p>
                   Plenty of Australian brands sell to both shoppers and stockists. The old way was a second store, a
-                  spreadsheet price list and orders by email. Shopify now handles much of this in one place. On Shopify
-                  Plus, native B2B lets you set up each trade customer as a company with its own buyers, delivery
-                  locations, catalogue, price list and payment terms, with deposits and partial payments where you need
-                  them.
+                  spreadsheet price list and orders by email. Native company accounts, quantity rules and net terms
+                  are available on Basic, Grow, Advanced and Plus. Below Plus, catalogue pricing uses B2B markets
+                  within the three-assignment limit. Plus adds direct company/location catalogues, deposits and partial payments.
                 </p></div>
                 <div className="fact"><div className="sec">§02</div><p>
-                  On standard plans we can build a simpler trade portal with a well-chosen app. Either way we connect it
-                  to your stock and accounting, so wholesale and retail orders come from one pool of stock and land in
-                  the same books.
+                  A buyer signs in and purchases for a company location to receive its B2B catalogue prices.
+                  We check the market conditions so the intended trade prices reach those buyers. The stock and
+                  accounting connection is scoped separately; an app is added when native rules do not fit.
                 </p></div>
               </div>
               <VisualSlot page={PAGE_KEY} slot="facts-2" src="/images/au/visual-pass-2026-10-03/shopify-development/b2b-1536.webp" srcSet="/images/au/visual-pass-2026-10-03/shopify-development/b2b-640.webp 640w, /images/au/visual-pass-2026-10-03/shopify-development/b2b-1280.webp 1280w, /images/au/visual-pass-2026-10-03/shopify-development/b2b-1536.webp 1536w" sizes="(max-width: 820px) calc(100vw - 40px), 560px" kind="photo" ratio="3:2" className="factphoto" captionClassName="figcap"
@@ -1149,6 +1150,7 @@ export default function ShopifyDevelopmentAUPage() {
             <div className="refs">
               <a href={SRC_PRICING} {...extLink}>Shopify Australia pricing</a>
               <a href={SRC_PLUS_PLAN} {...extLink}>Shopify Plus plan</a>
+              <a href={SRC_B2B_PLANS} {...extLink}>Shopify B2B features by plan</a>
               <a href={SRC_SCRIPTS} {...extLink}>Shopify Scripts deprecation</a>
               <a href={SRC_ACCC} {...extLink}>ACCC, Selling online</a>
             </div>
