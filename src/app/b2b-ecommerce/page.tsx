@@ -17,7 +17,7 @@ import { twinAlternates } from '@/data/hreflangMap';
 import '@/components/v2/PlatformPage.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
-const PAGE_MODIFIED = '2026-11-15';
+const PAGE_MODIFIED = '2026-11-25';
 
 /* House terms, approved wording (2026-10-16). Same terms as /services/ai-automation. */
 const HOUSE_TERMS = [
@@ -797,6 +797,12 @@ export default function B2BEcommercePage() {
                 <h3>Trade ordering for a promotional products supplier</h3>
                 <p className="pp-lead" style={{ marginTop: '16px', fontSize: '15px' }}>FactoryJet built GPSUK’s Commerceflo storefront for UK trade buyers. Account-based pricing and quote-to-order workflows support customers buying against agreed terms. We also provide ongoing SEO and AI search work.</p>
                 <Link href="/case-studies/gpsuk-promotional-products" className="rv-btn-secondary" style={{ marginTop: '18px' }}>Read the GPSUK case study →</Link>
+              </article>
+              <article className="pp-card">
+                <p className="pp-mlabel">Mannik · WooCommerce quote catalogue</p>
+                <h3>Product choices collected before the seller quotes</h3>
+                <p className="pp-lead" style={{ marginTop: '16px', fontSize: '15px' }}>FactoryJet rebuilt Mannik’s WordPress/WooCommerce catalogue and product-to-quote journey. Buyers choose a colour and branding method, enter a quantity and add the item to a quote list. There is nothing to pay online; Mannik’s team prepares the price. The site launched on 16 October 2026, with phone and desktop quote-list checks recorded on 23 November. No sales or conversion increase is claimed.</p>
+                <a href="https://mannik.co.uk/product/2-in-1-keyring-charger/" className="rv-btn-secondary" style={{ marginTop: '18px' }}>Inspect Mannik’s public product page →</a>
               </article>
               {/* Sow Easy naming approved 2026-10-29. Facts from the public case study
                   /case-studies/sow-easy-distributor-portal: WooCommerce on WordPress,

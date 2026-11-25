@@ -59,7 +59,7 @@ const PAGE_TITLE = 'Ecommerce ERP Integration Services | FactoryJet';
 const PAGE_DESC =
   'Ecommerce ERP integration for Shopify, BigCommerce, WooCommerce and Adobe Commerce stores on QuickBooks, NetSuite, Odoo, SAP Business One or ERPNext.';
 const PAGE_PUBLISHED = '2026-10-11';
-const PAGE_MODIFIED = '2026-10-31';
+const PAGE_MODIFIED = '2026-11-25';
 const CHECKED_ON = '11 Oct 2026';
 const OG_IMAGE = 'https://factoryjet.com/og-default.png';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
@@ -1038,7 +1038,7 @@ const COMPARE_ROWS: ReadonlyArray<ComparisonRow> = [
   },
 ];
 
-/* ── The pages under this hub. Every href exists as of 2026-10-11. ── */
+/* ── Related services under this hub. ── */
 const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
   {
     href: '/services/shopify-quickbooks-integration',
@@ -1049,6 +1049,11 @@ const RELATED: ReadonlyArray<{ href: string; t: string; b: string }> = [
     href: '/services/wordpress-shopify-integration',
     t: 'WordPress Shopify integration',
     b: 'A Shopify store beside, or inside, a WordPress site.',
+  },
+  {
+    href: '/services/shopify-netsuite-integration',
+    t: 'Shopify NetSuite integration',
+    b: 'Choose a connector, Celigo or custom middleware for stock, orders and B2B prices.',
   },
   {
     href: '/services/netsuite-ai-agents',

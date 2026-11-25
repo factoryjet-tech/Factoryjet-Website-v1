@@ -15,7 +15,7 @@ const CANONICAL_URL = 'https://factoryjet.com/services/legal-ai-agents';
 const PAGE_TITLE = 'AI for Law Firms: Legal AI Agents & AI Intake | FactoryJet';
 const PAGE_DESC =
   'AI for law firms: custom legal AI agents and an AI receptionist for intake, contract redlining and discovery, synced with Clio, MyCase and Filevine.';
-const PAGE_MODIFIED = '2026-11-15';
+const PAGE_MODIFIED = '2026-11-25';
 
 /** Single source of truth for the breadcrumb trail. Feeds BOTH the visible
  *  <Breadcrumbs> component and the BreadcrumbList JSON-LD below. So the two
@@ -489,7 +489,7 @@ export default function LegalAiAgentsPage() {
             <div className="rounded-2xl border border-[#E7DED6] bg-[#FAFAF7] p-6 sm:p-8">
               <p className="font-mono text-xs text-[#B23E13] font-bold uppercase tracking-wider mb-2">Case study</p>
               <h2 className="text-xl sm:text-2xl font-bold text-[#14110F] font-heading mb-4">Washington Law Group: An Agent That Finds Serious Truck Crashes</h2>
-              <p className="text-[#46403B] leading-relaxed mb-4">We built this personal injury firm an agent that reads news and police sources across all 50 states every two hours and emails the firm the serious commercial-vehicle crashes that qualify. Every victim name is checked against the article text before it is saved, and repeated reports of one crash are merged into one record. The firm&apos;s lawyers review every lead themselves. It runs on a dedicated US server with named sign-in and encrypted daily backups. This agent does research and monitoring. The intake, contract review and docketing agents on this page are scoped and tested as separate builds.</p>
+              <p className="text-[#46403B] leading-relaxed mb-4">FactoryJet built Washington Law Group a crash-news monitoring workflow with article-name checks, a missing-name watchlist and source-linked email alerts. The firm reviews the alerts. A name appearing in an article does not independently establish identity or the person&apos;s role. Support is documented through 12 November 2026, including missed-report and filtering fixes. We claim no measured hours saved or signed-case result, and production uptime was not rechecked for this case update. This example covers research and monitoring. Intake, contract review and docketing are separate scopes.</p>
               <Link href="/case-studies/washington-law-group-accident-detection-agent" className="text-[#B23E13] underline font-semibold">Read the full case study</Link>
             </div>
           </div>

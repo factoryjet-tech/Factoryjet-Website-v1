@@ -21,7 +21,7 @@ const PAGE_DESCRIPTION =
   'Faire charges 15% plus a $10 new customer fee on opening orders, 15% on reorders and 0% on Faire Direct. We connect Shopify or your ERP to Faire.';
 
 // Freshness signal. Bump only when the page content actually changes.
-const PAGE_MODIFIED = '2026-10-29';
+const PAGE_MODIFIED = '2026-11-25';
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -190,6 +190,12 @@ const FAQ_ITEMS = [
   },
 
   // B2B Scaling
+  {
+    category: 'growth',
+    question: 'Can you improve the Faire account and Shopify wholesale store we already run?',
+    answer:
+      'Yes. We can scope fixes on the stores you already use. We check the product list, wholesale prices, stock and fulfillment handoffs, then agree which system owns each field and which changes need your approval. A new storefront is only included if that review shows it is needed.',
+  },
   {
     category: 'growth',
     question: 'How do you rank higher in Faire marketplace search results?',

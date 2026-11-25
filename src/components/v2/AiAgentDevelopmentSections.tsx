@@ -23,9 +23,9 @@ const PHASES = [
 
 const PROOF = [
   {
-    tag: 'RESEARCH AND ALERTS · LIVE',
+    tag: 'RESEARCH AND ALERTS · DELIVERED',
     title: 'Washington Law Group',
-    body: 'Reads news and police sources across all 50 states every two hours and emails the firm each crash that qualifies. The code is assigned to the firm.',
+    body: 'A crash-news monitoring workflow with article-name checks, a missing-name watchlist and source-linked email alerts for the firm to review. Continued support is documented through 12 November 2026.',
     links: [{ label: 'Read the case study', href: '/case-studies/washington-law-group-accident-detection-agent' }],
   },
   {
@@ -879,13 +879,13 @@ export default function AiAgentDevelopmentSections() {
             <div className="section-head">
               <div className="eyebrow eyebrowBlue">Case Study</div>
               <h2>The AI Agent We Built for Washington Law Group</h2>
-              <p>A personal injury firm needed to hear about serious commercial-vehicle crashes fast. The agent reads news and police sources across all 50 states every two hours and emails the firm the crashes that qualify.</p>
+              <p>A personal injury firm needed to follow serious commercial-vehicle crash reports. We built a monitoring workflow that reads published reports, applies the firm’s rules and emails qualifying cases with source links. The firm reviews the alerts.</p>
             </div>
             <div className="ventries">
               <div className="ventry">
                 <span className="vtag">SOURCES</span>
-                <h3>It never invents a name</h3>
-                <p>An AI model pulls the facts from each article. Every name it returns is checked against the article text before it is saved. If the name is not there, it is dropped. This check has caught invented names in real runs.</p>
+                <h3>Names are checked against the article</h3>
+                <p>The extractor drops names that do not appear in the article text. A matching name still needs review: text presence alone does not prove identity or that the person is a victim. Cases without a usable published name stay on a watchlist.</p>
               </div>
               <div className="ventry">
                 <span className="vtag">RULES</span>
@@ -894,8 +894,8 @@ export default function AiAgentDevelopmentSections() {
               </div>
               <div className="ventry">
                 <span className="vtag">OPERATIONS</span>
-                <h3>Owned by the client, run by us</h3>
-                <p>The code is assigned to the firm under the agreement. FactoryJet runs and maintains the agent on a dedicated US server with named sign-in and encrypted daily backups. We publish no lead counts or revenue figures, because none have been measured yet.</p>
+                <h3>Delivered workflow with continuing support</h3>
+                <p>Support records through 12 November 2026 include missed reports and fixes to source coverage and filtering. This is implemented monitoring work. We have not measured hours saved or signed cases, and this case update is not a fresh production-uptime check.</p>
               </div>
             </div>
             <div className="timelineAction">

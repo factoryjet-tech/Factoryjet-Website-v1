@@ -477,7 +477,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     imageUrl: '/images/case-studies/formative-concepts-bim-hero.jpg',
     ogImageUrl: '/images/case-studies/formative-concepts-bim-og.png',
     publishedDate: '2026-05-28',
-    modifiedDate: '2026-10-22',
+    modifiedDate: '2026-11-25',
     clientUrl: 'https://formativeconcepts.com/',
     ctaTeaser: 'Selling a technical service to buyers abroad? We build the pages they search for and the proof they check.',
     relatedSlugs: ['impulse-branding-migration', 'yadav-entrance-automation-website-seo'],
@@ -487,6 +487,10 @@ export const CASE_STUDIES: CaseStudy[] = [
       { label: 'AI SEO services', href: '/services/ai-seo' },
     ],
     faqs: [
+      {
+        q: 'Do we need a new WordPress site to use this approach?',
+        a: 'Not necessarily. This case is a WordPress build. For an existing site, we review the service pages, project examples and enquiry path first, then scope the changes on your current platform. A rebuild is a separate decision, based on what the site cannot support.',
+      },
       {
         q: 'What is consultative SEO and how is it different from standard SEO?',
         a: 'Standard SEO chases the highest-volume keyword. Consultative SEO targets the specific technical question a decision-maker types when they have a real problem, such as "MEP coordination for a hospital project". Fewer people search those terms, but the people who do are much closer to hiring someone.',

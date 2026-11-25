@@ -9,7 +9,7 @@ import './shopify-development.css';
 
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const CANONICAL = 'https://factoryjet.com/uk/shopify-development';
-const UPDATED = '2026-10-31';
+const UPDATED = '2026-11-25';
 const TITLE = 'Shopify Agency UK | Shopify Developer & Partner | FactoryJet';
 const H1 = 'Shopify Agency UK: Expert Shopify Developers and a Development Partner';
 const DESCRIPTION =
@@ -528,6 +528,7 @@ export default function ShopifyDevelopmentPage() {
         <span className="eyebrow">SHOPIFY PARTNER UK</span>
         <h2 style={{ marginBottom: '20px' }}>Choosing a Shopify development partner: what the Partner label does and does not prove</h2>
         <p className="lead" style={{ marginBottom: '20px' }}>Anyone can type &#8220;Shopify expert&#8221; into a website. A Shopify Partner is a business registered in Shopify&#8217;s partner programme to build for merchants. Shopify&#8217;s own directory then groups partners into Select, Plus, Premier and Platinum tiers based on their track record. FactoryJet is a registered Shopify Partner. We do not claim a tier, and you should check the claims of any agency you shortlist, including ours.</p>
+        <p style={{ marginBottom: '20px' }}>For a build you can inspect, read our <a href="/case-studies/shopholistico-shopify-store" style={inlineLink}>Shop Holistico Shopify case study</a>. It covers a custom theme and subscription setup for a US store. Your UK payment, VAT and shipping requirements are scoped separately.</p>
 
         <div className="flex-wrap" style={{ marginBottom: '24px' }}>
           <span className="chip">Custom Liquid Theme</span>
@@ -1259,7 +1260,7 @@ export default function ShopifyDevelopmentPage() {
           Every figure quoted above traces to a primary source you can open yourself. If a claim on
           an agency page has no link behind it, treat it as marketing rather than fact.
         </p>
-        <p style={{ fontSize: '13px', color: 'var(--n400)', marginTop: '14px' }}>Checked {UPDATED}.</p>
+        <p style={{ fontSize: '13px', color: 'var(--n400)', marginTop: '14px' }}>Page updated {UPDATED}.</p>
       </div>
       <ol className="srcs">
         {SOURCES.map((s) => (

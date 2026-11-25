@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/app/uk/shopify-development/shopify-development.css"
+        ],
+        "createdAt": "2026-11-25T08:04:14.162Z",
+        "reason": "Codex review, 25 Nov 2026: intentional answer-first text callout, identified by the Answer-first block CSS comment and data-speakable markup. Existing 3px brand-orange border committed in 34e2450 on 25 Aug 2026; unchanged by this P1 copy/link work. Preserve this callout treatment; no user confirmation claimed."
+      }
+    ]
+  }
+}
