@@ -80,7 +80,8 @@ export const metadata: Metadata = {
    JSON-LD Schema
 ───────────────────────────────────────────────────────────────────────────── */
 
-const PAGE_MODIFIED = '2026-10-29';
+const PAGE_MODIFIED = '2026-11-25';
+const SHOPIFY_B2B_PLAN_SOURCE = 'https://help.shopify.com/en/manual/b2b/getting-started/plan-features';
 const webPageSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebPage',
@@ -144,7 +145,7 @@ const SHOPIFY_SERVICES = [
     name: 'Shopify Plus Development.',
     description:
       'Checkout Extensibility (checkout UI extensions, payment customization), B2B wholesale portal with net terms and company accounts, multi-storefront management, and Shopify Flow automation.',
-    example: 'Required for brands processing $1M+/year or needing B2B wholesale features.',
+    example: 'Assess Plus when you need direct company-specific catalogs, deposits or partial payments. Native B2B also exists on Basic, Grow and Advanced.',
     linkLabel: 'Assess if you need Plus',
     linkHref: '/contact',
   },
@@ -506,7 +507,7 @@ const FAQ_ITEMS = [
     category: 'platform',
     question: 'Do I need Shopify Plus, or will standard Shopify work?',
     answer:
-      'Standard Shopify works well for most DTC brands under $2M in annual revenue. Shopify Plus is worth the investment when you need custom checkout extensions, native B2B wholesale pricing, or multi-storefront setups. We evaluate your sales volume during discovery. We never recommend Plus unless your operations require it.',
+      'Choose from the features your store needs. Basic, Grow and Advanced include native B2B, with up to three active catalog assignments across B2B markets. The same catalog assigned to two markets uses two assignments. Plus removes that limit and adds direct company/location catalogs, deposits and partial payments. We check your current Markets setup, account pricing rules and checkout requirements before recommending a plan.',
   },
   {
     category: 'platform',
@@ -585,7 +586,7 @@ const FAQ_ITEMS = [
     category: 'platform',
     question: 'Can you build a Shopify store for B2B wholesale or dealer ordering?',
     answer:
-      'Yes, Shopify B2B is a core agency specialization. For Shopify Plus clients, we configure native wholesale features. These include company accounts, custom price lists, net payment terms, and tax resale rules. For standard Shopify, we configure wholesale tools like Wholesale Gorilla or Locksmith. We set up minimum order quantities, volume pricing, and custom reorder pads. Shopify B2B replaces expensive legacy portals with a streamlined checkout.',
+      'Yes. Shopify B2B is available on Basic, Grow, Advanced and Plus. We scope company accounts, catalogs, quantity rules and net terms around the way your dealers order. Below Plus, catalogs are assigned through B2B markets within the three-assignment limit. Direct company/location catalogs and advanced payment features need Plus. Apps or custom work are considered when the native rules do not fit. Buyers must sign in for the company location receiving the catalog prices.',
   },
   {
     category: 'platform',
@@ -1561,6 +1562,9 @@ export default function ShopifyPage() {
           categories={FAQ_CATEGORIES}
           items={FAQ_ITEMS}
         />
+        <p className="max-w-6xl mx-auto px-6 pb-8 text-sm text-[#3A3A40]">
+          B2B plan limits checked 25 November 2026: <a href={SHOPIFY_B2B_PLAN_SOURCE} className="text-[#B23E13] underline underline-offset-2">Shopify’s current B2B features by plan</a>.
+        </p>
 
         {/* Cities We Serve, internal linking for SEO */}
         <section className="py-10 bg-[#FAFAF7]">
