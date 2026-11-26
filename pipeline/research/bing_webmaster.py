@@ -277,8 +277,16 @@ def cmd_links():
     res = call("GetLinkCounts", {"siteUrl": s, "page": 0})
     if _err("links", res):
         return
-    rows = sorted(res, key=lambda r: r.get("Count", 0) or 0, reverse=True)
+    # GetLinkCounts returns {Links: [...], TotalPages: N}, not a bare list.
+    links = res.get("Links", []) if isinstance(res, dict) else res
+    if not isinstance(links, list):
+        links = []
+    rows = sorted((r for r in links if isinstance(r, dict)),
+                  key=lambda r: r.get("Count", 0) or 0, reverse=True)
     print(f"INBOUND LINKS — {s} ({len(rows)})\n" + "=" * 60)
+    if not rows:
+        print("  No inbound link rows returned by GetLinkCounts (page 0).")
+        print("  This does not establish that the site has no backlinks.")
     for r in rows[:60]:
         print(f"{r.get('Count', 0):>8}  {r.get('Url', '')}")
     save("links", rows)
