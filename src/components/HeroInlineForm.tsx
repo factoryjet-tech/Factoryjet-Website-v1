@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * HeroInlineForm, compact, low-friction inline lead form for the /us hero.
+ * HeroInlineForm — compact, low-friction inline lead form for the /us hero.
  *
  * Mirrors the lead pipeline of ContactFormModal / LeadFormInline so leads land
  * identically: writes name+email to the `contactus` Firestore collection, fires
@@ -43,8 +43,6 @@ export interface HeroInlineFormProps {
   secondaryLabel?: string;
   /** Optional trust note shown below the submit row. */
   trustText?: string;
-  /** Confirmation copy for pages with a specific service promise. */
-  successText?: string;
   /** Service this form is about (e.g. 'AI Agent Development'), sent with the lead
    *  so it is labelled, not guessed from the URL. */
   service?: string;
@@ -58,7 +56,6 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
   secondaryHref,
   secondaryLabel,
   trustText,
-  successText,
   service,
 }) => {
   const [intent, setIntent] = useState<LeadIntent | ''>('');
@@ -153,13 +150,13 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
     }
     trackFormSubmit(source, { service: service || '', lead_intent: 'hire' });
     try {
-      // Durable, server-first capture, never hangs on the browser Firestore SDK.
+      // Durable, server-first capture — never hangs on the browser Firestore SDK.
       const turnstileToken = await turnstile.freshToken();
       const { ok, docId, enrichToken } = await submitLead({ name, email, region, source, service, turnstileToken, ...qualifiers });
       trackFormSuccess(source);
       // Counts the lead now, then opens the step-2 details modal; it goes to
       // /thank-you?...&counted=1 when the visitor sends or skips.
-      enrichment.start({ ok, docId, enrichToken, name, email, source, region: region || 'us', responseNote: successText });
+      enrichment.start({ ok, docId, enrichToken, name, email, source, region: region || 'us' });
     } catch (err) {
       console.error('Hero inline form error:', err);
       trackFormError(source, 'submit_failed');
@@ -291,7 +288,7 @@ const HeroInlineForm: React.FC<HeroInlineFormProps> = ({
         {/* Invisible Turnstile (interaction-only): no visible widget unless challenged. */}
         <div ref={turnstile.containerRef} className="empty:hidden" />
 
-        {sent && <p className="mt-2 font-fj-body text-[13px]" role="status" style={{ color: '#0F2138' }}>{successText ?? 'Request sent. We reply within 24 hours.'}</p>}
+        {sent && <p className="mt-2 font-fj-body text-[13px]" role="status" style={{ color: '#0F2138' }}>Request sent. We reply within 24 hours.</p>}
       </div>
     </form>
     {enrichment.modal}

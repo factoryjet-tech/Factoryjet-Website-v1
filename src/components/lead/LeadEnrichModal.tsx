@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * LeadEnrichModal, step 2 of the inline lead forms. Opens after name + email are
+ * LeadEnrichModal — step 2 of the inline lead forms. Opens after name + email are
  * saved and asks what the project is (type, systems, timeline), a free-text
  * brief, an optional brief file, company, budget, role, how they found us and phone. Company size was
  * dropped on 2026-10-29 (Bhavesh: keep the form short); the server still accepts it.
@@ -56,14 +56,13 @@ function readAsBase64(file: File): Promise<string> {
 
 export interface LeadEnrichModalProps {
   firstName: string;
-  responseNote?: string;
   onSubmit: (fields: EnrichFields) => Promise<void>;
   onSkip: () => void;
 }
 
 const FOCUSABLE = 'button:not([disabled]), input:not([tabindex="-1"]), select, textarea';
 
-export default function LeadEnrichModal({ firstName, onSubmit, onSkip, responseNote }: LeadEnrichModalProps) {
+export default function LeadEnrichModal({ firstName, onSubmit, onSkip }: LeadEnrichModalProps) {
   const [phone, setPhone] = useState('');
   const [company, setCompany] = useState('');
   const [message, setMessage] = useState('');
@@ -146,15 +145,13 @@ export default function LeadEnrichModal({ firstName, onSubmit, onSkip, responseN
         <p className="lem-eyebrow">Got it{firstName ? `, ${firstName}` : ''}. Your request is in.</p>
         <h2 id="lem-title" className="lem-title">Add a few details, get a real answer</h2>
         <p id="lem-lead" className="lem-lead">
-          {responseNote ? 'Tell us what the project is and which systems it touches.' : <>
-            Tell us what the project is and which systems it touches. Then our first reply can be an actual answer: a
-            recommendation, a rough timeline, what it would take. Without it, it&apos;s usually a round of questions first.
-          </>}
+          Tell us what the project is and which systems it touches. Then our first reply can be an actual answer: a
+          recommendation, a rough timeline, what it would take. Without it, it&apos;s usually a round of questions first.
         </p>
-        {!responseNote && <div className="lem-founder">
+        <div className="lem-founder">
           <img src="/images/team/bhavesh-barot.webp" alt="Bhavesh Barot, founder of FactoryJet" width={40} height={40} />
           <p><strong>I read every request myself.</strong>Bhavesh Barot, Founder</p>
-        </div>}
+        </div>
         <form className="lem-form" onSubmit={handleSubmit} noValidate>
           <fieldset className="lem-field lem-set">
             <legend className="lem-label">What is the project?</legend>
@@ -242,7 +239,7 @@ export default function LeadEnrichModal({ firstName, onSubmit, onSkip, responseN
             <button type="button" className="lem-skip" onClick={skip}>Skip, just email me</button>
           </div>
         </form>
-        <p className="lem-trust">{responseNote ?? <>You&apos;ll hear back within 24 hours on business days. We never sell or share your details.</>}</p>
+        <p className="lem-trust">You&apos;ll hear back within 24 hours on business days. We never sell or share your details.</p>
       </div>
     </div>,
     document.body,

@@ -60,7 +60,6 @@ const COPY = {
   service: 'FactoryJet plans and builds Shopify Xero connections, with an agreed owner for products, stock and prices and a test of sales, refunds, fees and payouts.',
   mid: 'We review your order flow with you before choosing an app or a custom connection.',
   final: 'We start with your products, payment gateways and accounting requirements.',
-  sent: 'Request sent. Your Shopify Xero integration details have been received.',
 };
 
 const PROCESS = [
@@ -165,7 +164,7 @@ export default function ShopifyXeroIntegrationPage() {
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
     <BreadcrumbSchema items={CRUMBS} />
-    <SiteHeader showNamedCaseStudies={false} contactHref="#integration-demo" />
+    <SiteHeader />
     <main className={styles.page}>
       <Breadcrumbs items={CRUMBS} />
       <section className={styles.hero} id="integration-demo">
@@ -176,7 +175,7 @@ export default function ShopifyXeroIntegrationPage() {
               <h1>Connect Shopify to Xero. Keep the sale and the settlement clear.</h1>
               <p className={styles.lead}>{COPY.hero}</p>
               <p>Retail orders, wholesale invoices, bundles or foreign-currency sales: start with what needs to reach the books and who controls stock.</p>
-              <HeroInlineForm region="us" source="services_shopify_xero_integration_hero" service="Shopify Xero Integration" submitLabel="See it on my products" trustText={COPY.demo} successText={COPY.sent} />
+              <HeroInlineForm region="us" source="services_shopify_xero_integration_hero" service="Shopify Xero Integration" submitLabel="See it on my products" trustText={COPY.demo} />
               <ul className={styles.proof}><li>Registered Shopify Partner</li><li>500+ businesses since 2014</li><li>97% of projects shipped on time</li></ul>
             </div>
             <figure className={styles.ledger}>
@@ -274,6 +273,6 @@ export default function ShopifyXeroIntegrationPage() {
       </section>
       <FinalCTA variant="light" eyebrow="Your Shopify Xero connection" headline="Start with your products and a sample order." sub={COPY.final} primaryCta={{ label: 'See it on my products', href: '#integration-demo' }} secondaryCta={{ label: 'Contact FactoryJet', href: '/contact' }} objectionHandler={COPY.demo} />
     </main>
-    <SiteFooter linkColumns={US_FOOTER_COLUMNS} showClients={false} showRecognition={false} />
+    <SiteFooter linkColumns={US_FOOTER_COLUMNS} />
   </>;
 }

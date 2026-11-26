@@ -1,7 +1,7 @@
 'use client';
 
 /**
- * useLeadEnrichment, what an inline lead form does after submitLead() succeeds:
+ * useLeadEnrichment — what an inline lead form does after submitLead() succeeds:
  *   1. lazy-load LeadEnrichModal;
  *   2. once it has loaded, count the lead (fireLeadConversion) and open it, so a
  *      visitor who closes the tab with the modal open is still a conversion;
@@ -26,7 +26,6 @@ export interface EnrichStart {
   email: string;
   source: string;
   region: string;
-  responseNote?: string;
 }
 
 type ModalComponent = React.ComponentType<LeadEnrichModalProps>;
@@ -109,7 +108,7 @@ export function useLeadEnrichment() {
   }, [active, finish]);
 
   const firstName = active ? active.ctx.name.trim().split(/\s+/)[0].slice(0, 30) : '';
-  const modal = active ? <active.Modal firstName={firstName} responseNote={active.ctx.responseNote} onSkip={onSkip} onSubmit={onSubmit} /> : null;
+  const modal = active ? <active.Modal firstName={firstName} onSkip={onSkip} onSubmit={onSubmit} /> : null;
 
   return { start, prefetch, modal };
 }
