@@ -10,7 +10,7 @@ export const post: BlogPost = {
   category: 'Web Design & Strategy',
   author: 'Bhavesh Barot',
   date: 'Jun 2, 2026',
-  dateModified: 'Nov 24, 2026',
+  dateModified: 'Nov 26, 2026',
   readTime: '11 min read',
   imageUrl: '/blog-images/website-development-cost-india-2026-hero.webp',
   isFeatured: false,
@@ -521,6 +521,35 @@ export const post: BlogPost = {
           <p className="text-gray-700 text-sm leading-relaxed">{item.text}</p>
         </div>
       ))}
+
+      <h2 className="text-2xl font-bold mt-12 mb-4">
+        Risks to Check in a Low-Cost Website Quote
+      </h2>
+      <p className="mb-4 text-gray-700">
+        Ask the developer to demonstrate what the quote includes before you sign. Alongside the
+        hosting, performance and SEO checks above, inspect these parts of the handover:
+      </p>
+      <ul className="list-disc pl-6 mb-8 space-y-3 text-gray-700">
+        <li>
+          <strong>Theme and plugin licences.</strong> Ask who supplies and owns each paid licence,
+          and who renews it. Decline pirated or nulled downloads.
+        </li>
+        <li>
+          <strong>Enquiry delivery.</strong> Submit the contact form from a phone and confirm the
+          message arrives in the intended inbox or CRM. A confirmation screen alone does not
+          prove delivery.
+        </li>
+        <li>
+          <strong>Future changes.</strong> Ask for a demonstration of adding a product or service
+          page. Have the developer explain how a later CRM or inventory integration would work
+          and identify anything that would require a rebuild.
+        </li>
+        <li>
+          <strong>The buyer journey.</strong> Walk from a product or service page to an enquiry.
+          Check that buyers can find specifications, service coverage and quote requirements
+          before they submit, and that someone owns the follow-up.
+        </li>
+      </ul>
 
       {/* ── 7-Day Delivery ────────────────────────────────────────────────── */}
       <h2 className="text-2xl font-bold mt-12 mb-4">
