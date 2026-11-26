@@ -17,7 +17,7 @@ const CHANGEFREQ = {
 
 type ChangeFreq = MetadataRoute.Sitemap[number]['changeFrequency']
 
-// US route paths — hardcoded for now. The programmatic SEO pipeline will
+// US route paths, hardcoded for now. The programmatic SEO pipeline will
 // replace this with a data-layer enumeration once src/data/us/ exists,
 // mirroring sitemap-uk.
 // A URL belongs to exactly one sitemap. The homepage, /about, /portfolio and
@@ -201,6 +201,7 @@ const US_ROUTES: { path: string; source: string }[] = [
   { path: '/faire-alternatives',                           source: 'src/app/faire-alternatives/page.tsx' },
   { path: '/services/shopify-checkout-customization',      source: 'src/app/services/shopify-checkout-customization/page.tsx' },
   { path: '/services/shopify-quickbooks-integration',      source: 'src/app/services/shopify-quickbooks-integration/page.tsx' },
+  { path: '/services/shopify-xero-integration',            source: 'src/app/services/shopify-xero-integration/page.tsx' },
   { path: '/services/shopify-netsuite-integration',       source: 'src/app/services/shopify-netsuite-integration/page.tsx' },
   { path: '/services/shopify-hubspot-integration',         source: 'src/app/services/shopify-hubspot-integration/page.tsx' },
   { path: '/services/wordpress-shopify-integration',       source: 'src/app/services/wordpress-shopify-integration/page.tsx' },

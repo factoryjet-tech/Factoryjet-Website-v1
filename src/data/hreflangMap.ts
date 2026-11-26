@@ -883,8 +883,9 @@ export const twinAlternates = {
     'x-default': 'https://factoryjet.com/uk/ecommerce-redesign',
   },
   'shopify-xero-integration': {
+    'en-US': 'https://factoryjet.com/services/shopify-xero-integration',
     'en-GB': 'https://factoryjet.com/uk/shopify-xero-integration',
     'en-AU': 'https://factoryjet.com/au/shopify-xero-integration',
-    'x-default': 'https://factoryjet.com/uk/shopify-xero-integration',
+    'x-default': 'https://factoryjet.com/services/shopify-xero-integration',
   },
 } as const

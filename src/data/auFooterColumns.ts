@@ -35,6 +35,7 @@ export const AU_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Omnichannel Commerce',   href: '/omnichannel-commerce' },
       { label: 'Replatforming',          href: '/replatforming' },
       { label: 'Shopify Migration',      href: '/au/shopify-migration' },
+      { label: 'Neto to Shopify',         href: '/au/neto-to-shopify' },
       { label: 'Headless Commerce',      href: '/headless-commerce' },
       { label: 'Agentic Commerce',       href: '/agentic-commerce' },
       { label: 'For Manufacturers',      href: '/ecommerce-for-manufacturers' },
@@ -147,7 +148,7 @@ export const AU_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
 export const AU_FOOTER_FEATURED_COLUMNS: ReadonlyArray<SiteFooterColumn> = pickFooterLinks(AU_FOOTER_COLUMNS, [
   ['Commerce', [
     '/au/ecommerce-development', '/au/ecommerce-consultant', '/au/b2b-ecommerce',
-    '/omnichannel-commerce', '/replatforming', '/au/shopify-migration',
+    '/omnichannel-commerce', '/replatforming', '/au/shopify-migration', '/au/neto-to-shopify',
   ]],
   ['AI Agents & Automation', [
     '/au/ai-consulting', '/au/ai-development', '/au/ai-agents',

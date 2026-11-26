@@ -508,6 +508,7 @@ export default function ShopifyMigrationAUPage() {
                 Here is what is specific to each.
               </p>
             </div>
+            <p className="au-note">Leaving Neto or Maropost? Read the <a href="/au/neto-to-shopify">Neto to Shopify migration guide</a> for export fields, order history and redirect exceptions.</p>
             <div className="platlist" role="list">
               {PLATFORMS.map((p) => (
                 <div key={p.n} className="plat plat-2col" role="listitem">

@@ -605,7 +605,7 @@ export default function EcommerceRedesignAUPage() {
                   <p>
                     After launch we read Search Console daily: new 404 errors, clicks on your top pages against the same
                     weekdays before launch, and whether the new sitemap was fetched. Ongoing content work then sits with
-                    our <a href="/au/ecommerce-seo">ecommerce SEO team in Australia</a>.
+                    our <a href="/au/ecommerce-seo">ecommerce SEO team in Australia</a>. If the redesign includes leaving Neto, use the <a href="/au/neto-to-shopify">Neto to Shopify migration guide</a> to plan the data transfer and old URLs.
                   </p>
                   <p className="au-note">
                     Source: <a href={SRC_GOOGLE_MOVE} {...extLink}>Google Search Central, site moves with URL changes</a>.

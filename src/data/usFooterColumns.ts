@@ -73,6 +73,7 @@ export const US_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
       { label: 'Wayfair Marketplace',    href: '/wayfair-marketplace' },
       { label: 'Shopify Checkout Customization', href: '/services/shopify-checkout-customization' },
       { label: 'Shopify QuickBooks Integration', href: '/services/shopify-quickbooks-integration' },
+      { label: 'Shopify Xero Integration', href: '/services/shopify-xero-integration' },
       { label: 'Shopify HubSpot Integration', href: '/services/shopify-hubspot-integration' },
       { label: 'WordPress Shopify Integration', href: '/services/wordpress-shopify-integration' },
       { label: 'Ecommerce ERP Integration', href: '/services/ecommerce-erp-integration' },

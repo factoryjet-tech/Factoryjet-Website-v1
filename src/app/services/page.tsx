@@ -113,6 +113,7 @@ const SERVICE_GROUPS: { label: string; items: { title: string; href: string }[] 
     items: [
       { title: 'Ecommerce ERP Integration', href: '/services/ecommerce-erp-integration' },
       { title: 'Shopify QuickBooks Integration', href: '/services/shopify-quickbooks-integration' },
+      { title: 'Shopify Xero Integration', href: '/services/shopify-xero-integration' },
       { title: 'Shopify HubSpot Integration', href: '/services/shopify-hubspot-integration' },
       { title: 'Shopify EDI Integration', href: '/services/shopify-edi-integration' },
       { title: 'WordPress Shopify Integration', href: '/services/wordpress-shopify-integration' },
