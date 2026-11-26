@@ -61,7 +61,7 @@ const PAGE_TITLE = 'Faire Alternatives: 9 Options Checked in 2026 | FactoryJet';
 const PAGE_DESC =
   "Faire alternatives for US brands, checked on each platform's own site on 5 Oct 2026. Fees, payment terms, regions, and how your own wholesale portal compares.";
 const PAGE_PUBLISHED = '2026-10-05';
-const PAGE_MODIFIED = '2026-10-05';
+const PAGE_MODIFIED = '2026-11-26';
 /** The day every third-party page below was fetched. Shown next to each fee. */
 const CHECKED_ON = '5 October 2026';
 const CHECKED_SHORT = '5 OCT 2026';
@@ -205,9 +205,9 @@ const FAIRE_FACTS = [
     sourceLabel: 'Payment processing rates',
   },
   {
-    value: 'Same or lower',
+    value: 'Check your terms',
     label:
-      'Faire\'s pricing policy. Your wholesale price on Faire must match or beat your price anywhere else, including your own wholesale site.',
+      'We can map a price list for each channel. Your team must confirm the prices allowed by its current Faire account terms before those lists go live.',
     sourceUrl: FAIRE_URL.pricingPolicy,
     sourceLabel: 'Pricing policy, US and Canada brands',
   },
@@ -303,7 +303,7 @@ const ALTERNATIVES: ReadonlyArray<Platform> = [
     summary:
       'Mable is for food and drink brands. It says most of its buyers are independent grocery stores, markets and co-ops. It lists 12.5% commission on orders from its buyers, plus a one-time extra 12.5% on a new retailer\'s first order. Buyers you bring are 0%.',
     watchOut:
-      'Mable also sells access to distributor marketplaces, listed at $500 setup, $450 a year each and 12.5% an order. Confirm which program you are joining.',
+      'Mable lists its US Foods Direct program at $500 setup, $450 a year and 12.5% an order. Confirm which program you are joining.',
     suits: 'Food and drink brands selling to independent grocers',
     fees: '12.5%, plus an extra 12.5% once on a new retailer. 0% on buyers you bring',
     terms: 'You are paid on net 30. Retailer terms were not on the pages we read',
@@ -345,12 +345,12 @@ const ALTERNATIVES: ReadonlyArray<Platform> = [
     name: 'RangeMe',
     kind: 'Buyer discovery site',
     summary:
-      'RangeMe is a product discovery site. Retail and foodservice buyers browse brand profiles, request samples and message the brands they like. RangeMe says more than 15,000 buyers use it. The free plan shows 3 products, and paid plans are listed at $99, $1,399 and $2,499 a year.',
+      'RangeMe is a product discovery site. Retail and foodservice buyers browse brand profiles, request samples and message the brands they like. RangeMe says more than 15,000 buyers use it. The free plan shows 3 products, and its supplier page lists paid subscriptions starting at $99 a year.',
     watchOut:
-      'It gets you seen. Its pricing page lists no order commission and no payment terms, so you still need a way to take the order.',
+      'It gets you seen. Confirm the current plan, ordering options and payment terms with RangeMe before joining.',
     suits: 'Brands that want retail and foodservice buyers to find them',
-    fees: 'Free for 3 products, then $99, $1,399 or $2,499 a year',
-    terms: 'None. You agree terms with each buyer',
+    fees: 'Free for 3 products. Paid subscriptions start at $99 a year',
+    terms: 'Confirm with RangeMe and each buyer',
     regions: 'Not published',
     relationship: 'Yours',
     sources: [
@@ -388,11 +388,11 @@ const ALTERNATIVES: ReadonlyArray<Platform> = [
     name: 'Orderchamp',
     kind: 'Marketplace · Europe',
     summary:
-      'Orderchamp is a wholesale marketplace for retailers across Europe and says it has 200,000 of them. Brands pay a monthly subscription plus commission. The base tier is 18% on a new retailer\'s first order, capped at €250, and 7% on reorders. Both fall with volume, to as low as 12% and 1%.',
+      'Orderchamp is a wholesale marketplace for retailers across Europe and says it has 200,000 of them. Brands pay a monthly subscription plus commission that falls with sales volume. Current subscription prices, commission tiers and payout rates are shown inside a brand account.',
     watchOut:
       'The subscription price shows only inside a brand account. Some lists call Orderchamp dropshipping only, but its homepage still read "online wholesale marketplace" on 5 October 2026.',
     suits: 'Brands that want independent retailers in Europe',
-    fees: 'Subscription (price not published) plus 18% first order, 7% reorders. 0% on retailers you bring',
+    fees: 'Subscription and tiered commission (check your account). 0% on retailers you bring',
     terms: 'Retailers get up to 60 days. Weekly or monthly payouts',
     regions: 'Retailers across Europe',
     relationship: 'Shared',
@@ -451,7 +451,7 @@ const FAIRE_BASELINE = {
   suits: 'Brands that want new independent retailers to find them',
   fees: '15% plus $10 once for each new retailer. 0% on Faire Direct orders. Processing of 1.9% to 3.5% plus $0.30',
   terms: 'Eligible retailers get 60 days. You pick a next-day, 30-day or 60-day payout',
-  regions: 'Retailers in 34 listed countries, including the US, Canada, the UK and Australia',
+  regions: 'Retailers in listed countries including the US, Canada, the UK and Australia',
   relationship: 'Shared',
 } as const;
 
@@ -472,7 +472,7 @@ const CLOSED: ReadonlyArray<{ name: string; status: string; detail: string; sour
     name: 'Tundra',
     status: 'Closed',
     detail:
-      'Business of Home reported that Tundra announced in July 2023 it was shutting down its marketplace. The security certificate on tundra.com expired on 17 October 2024.',
+      'Business of Home reported that Tundra announced in July 2023 it was shutting down its marketplace.',
     source: {
       label: 'Business of Home, 31 Aug 2023',
       url: 'https://businessofhome.com/articles/inside-the-lawsuit-between-b2b-digital-marketplaces-faire-and-tundra',
@@ -604,7 +604,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'faire',
     question: 'What are the cons of using Faire?',
     answer:
-      'Four that Faire\'s own pages confirm. The 15% commission applies to every reorder from a retailer Faire introduced. Your wholesale price there must be the same as or lower than anywhere else, including your own wholesale site. Faire reviews applications and can say no. And orders, payments and retailer accounts sit in Faire\'s system, outside your own store.',
+      'For North American brands, marketplace reorders carry 15% commission plus payment processing. Your team must check the pricing allowed by its current Faire account terms before channel price lists go live. Faire reviews applications and can say no. Orders, payments and retailer accounts sit in Faire\'s system, outside your own store.',
   },
   {
     category: 'faire',
@@ -635,7 +635,7 @@ const FAQ_ITEMS: ReadonlyArray<FAQItem> = [
     category: 'portal',
     question: 'Can I run my own wholesale portal and stay on Faire?',
     answer:
-      'Yes, with two rules in mind. Faire\'s pricing policy says your wholesale price on Faire must be the same as or lower than on your own wholesale site. The Faire brand terms we were shown also include a No Circumvention clause against steering retailers to order outside Faire. Use your portal for retailers you win yourself.',
+      'Yes. We can map a price list for each channel. Your team must confirm the prices and retailer ordering arrangements allowed by its current Faire account terms before those lists go live. We agree which system owns stock, when orders reserve it and when cancellations release it. We test delayed updates and competing orders. Stock buffers reduce overselling risk; they cannot guarantee it.',
   },
   // ── Working with FactoryJet ──────────────────────────────────────
   {
@@ -1163,16 +1163,16 @@ export default function FaireAlternativesPage() {
                 <div className="rounded-2xl border border-fj-neutral-200 bg-fj-cream p-6">
                   <h3 className="font-fj-display text-lg font-semibold text-fj-ink">Running a portal and Faire together</h3>
                   <p className="mt-2 font-fj-body text-sm leading-relaxed text-fj-neutral-600">
-                    Two Faire rules shape this. Its pricing policy says your wholesale price on Faire must be the
-                    same as or lower than on your own wholesale site, so a portal cannot undercut your Faire shop.
-                    The brand terms Faire showed us (the Faire Wholesale B.V. version, last updated 15 April 2026)
-                    include a No Circumvention clause against steering retailers to order outside Faire. We could
-                    not open the version shown to US accounts, so read yours.
+                    We can map a price list for each channel. Your team must confirm the prices and retailer ordering
+                    arrangements allowed by its current Faire account terms before those lists go live. We agree
+                    which system owns stock, when orders reserve it and when cancellations release it. We test
+                    delayed updates and competing orders. Stock buffers reduce overselling risk; they cannot
+                    guarantee it.
                   </p>
                   <p className="mt-3 font-fj-body text-sm leading-relaxed text-fj-neutral-600">
-                    So Faire keeps the retailers Faire found, and your portal serves the ones you win yourself.
-                    Faire Direct already charges 0% commission on those, as do Creoate, Mable, FashionGo and
-                    Orderchamp for shops you bring. The reason to move them to your own store is control. Their
+                    Check your current Faire account terms before changing where existing retailers order.
+                    Qualified Faire Direct orders carry 0% commission. Creoate, Mable, FashionGo and
+                    Orderchamp also list 0% commission for shops you bring. The reason to move them to your own store is control. Their
                     accounts, prices and order history sit in a system you own.
                   </p>
                   <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">

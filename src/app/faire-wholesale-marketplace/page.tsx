@@ -10,18 +10,18 @@ import '@/components/v2/PlatformPage.css';
 const CALENDLY = 'https://calendly.com/bhavesh-factoryjet/30min';
 const IMG = '/images/us/marketplace';
 const PAGE_URL = 'https://factoryjet.com/faire-wholesale-marketplace';
-// Faire's current brand terms page. Full text read 22 Oct 2026 from Faire's published PDF
-// (https://cdn.faire.com/Brand-TOS-July-5-2023-English-version-2.pdf). Re-read before changing a fee.
-const FAIRE_TERMS = 'https://www.faire.com/tos-brand';
-const FAIRE_HOME = 'https://www.faire.com/';
+// Public North American fee schedule fetched on 26 November 2026.
+// Sellers must check their own current Faire account terms before launch.
+const FAIRE_FEES = 'https://www.faire.com/support/articles/360015893392';
+const FAIRE_HOME = 'https://www.faire.com/support/articles/360015893392';
 const LINK = { color: 'var(--pp-orange-dark)', fontWeight: 600, textDecoration: 'underline' } as const;
 
 const PAGE_TITLE = 'Faire Wholesale B2B Agency: Fees and ERP Sync | FactoryJet';
 const PAGE_DESCRIPTION =
-  'Faire charges 15% plus a $10 new customer fee on opening orders, 15% on reorders and 0% on Faire Direct. We connect Shopify or your ERP to Faire.';
+  'For North American brands, Faire lists 15% plus $10 on opening marketplace orders, 15% on reorders and 0% on qualified Faire Direct orders. Processing fees apply.';
 
 // Freshness signal. Bump only when the page content actually changes.
-const PAGE_MODIFIED = '2026-11-25';
+const PAGE_MODIFIED = '2026-11-26';
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -62,49 +62,49 @@ const FAQ_ITEMS = [
     category: 'basics',
     question: 'How much does it cost to sell on Faire?',
     answer:
-      'Under Faire’s brand terms, an opening order (the first order from a new retailer) costs 15% of the order subtotal plus a $10 new customer fee. Reorders from that retailer cost 15%. Qualified Faire Direct orders, from retailers you bring yourself, carry 0% commission. Faire also charges a payment processing fee. Terms change, so check the current commission in your Faire Brand Portal before you set prices.',
+      'For North American brands, Faire’s public fee page lists an opening marketplace order (the first order from a new retailer) at 15% of the order subtotal plus a $10 new customer fee. Reorders from that retailer cost 15%. Qualified Faire Direct orders, from retailers you bring yourself, carry 0% commission. Faire also charges a payment processing fee. Terms change, so check the current commission in your Faire Brand Portal before you set prices.',
   },
   {
     category: 'basics',
     question: 'What is Faire Wholesale and how does it work for brands?',
     answer:
-      'Faire is an online wholesale marketplace that connects brands with independent retailers in North America and Europe. Retailers browse brand catalogs and place orders. Faire gives retailers invoices due in 60 days, interest-free, and lets them return first orders to Faire at no cost. The brand ships each order, and Faire pays the brand after taking its commission and fees.',
+      'Faire is an online wholesale marketplace that connects brands with independent retailers in North America and Europe. Retailers browse brand catalogs and place orders. Eligible retailers can get interest-free 60-day payment terms. Faire offers free returns on eligible opening orders. The brand ships each order, and Faire pays the brand after taking its commission and fees.',
   },
   {
     category: 'basics',
     question: 'Why is Faire so expensive?',
     answer:
-      'The 15% commission pays for what Faire gives both sides: 60-day interest-free invoices for retailers, free returns of first orders to Faire, and a marketplace where new shops can find you. The extra $10 fee applies only to the first order from each new retailer. To lower your cost, move retailers you already sell to onto Faire Direct, where qualified orders carry 0% commission.',
+      'For North American brands, Faire lists 15% commission on marketplace orders and a $10 fee on the first order from each new retailer it introduces. Faire offers eligible retailers 60-day terms and free opening-order returns, alongside marketplace discovery. To lower your cost, move retailers you already sell to onto Faire Direct, where qualified orders carry 0% commission.',
   },
   {
     category: 'basics',
     question: 'How does Faire differ from selling on Amazon or direct to consumers?',
     answer:
-      'Faire is business-to-business. Buyers are retailers, such as boutiques, gift shops and specialty stores, buying stock to resell, often in case packs with order minimums. Amazon and your own store sell to consumers one unit at a time. On Faire the goal is a retailer who reorders every season, so a steady base of repeat accounts matters more than one big sale.',
+      'Faire is business-to-business. Buyers are retailers, such as boutiques, gift shops and specialty stores, buying stock to resell, often in case packs with order minimums. A consumer storefront can sell individual units directly to shoppers. On Faire the goal is a retailer who reorders every season, so a steady base of repeat accounts matters more than one big sale.',
   },
   {
     category: 'basics',
     question: 'Is Faire a B2B marketplace?',
     answer:
-      'Yes. Faire is a B2B wholesale marketplace. Brands list wholesale and suggested retail prices, and retailers buy to resell in their own stores. Faire sits between the two: it gives the retailer payment terms and pays the brand, so the brand does not chase unpaid invoices. That is why buyers search for it as a Faire B2B platform.',
+      'Yes. Faire is a B2B wholesale marketplace. Brands list wholesale and suggested retail prices, and retailers buy to resell in their own stores. Faire sits between the two: it offers eligible retailers payment terms and pays the brand on the selected payout schedule. That is why buyers search for it as a Faire B2B platform.',
   },
   {
     category: 'basics',
     question: 'Can any brand sell on Faire?',
     answer:
-      'Brands apply to Faire, and Faire reviews each application. Strong applications have retail-ready packaging, clear wholesale and retail prices, good product photos and a catalog that fits independent shops. We help brands get the catalog, pricing and product data ready before they apply, so the brand portal is complete on day one.',
+      'Brands apply to Faire, and Faire reviews each application. Faire says it considers product category, location, SKU count and the existing business. We help brands get the catalog, pricing and product data ready before they apply, so the brand portal is complete on day one.',
   },
   {
     category: 'basics',
     question: 'Can you buy from Faire without a business?',
     answer:
-      'Faire is built for retailers buying stock to resell. Retailers sign up with business details, and Faire uses them to decide who can order at wholesale prices. If you are a shopper, buy from the brand’s own store or from a shop that carries it. For brands this is a plus, because wholesale prices stay with real retailers.',
+      'Faire is built for retailers buying stock to resell. Retailers sign up with business details, and Faire uses them to decide who can order at wholesale prices. If you are a shopper, buy from the brand’s own store or from a shop that carries it. Faire reviews retailer business details before approving access to wholesale shopping.',
   },
   {
     category: 'basics',
     question: 'Which wholesale platform has the most active retail buyers?',
     answer:
-      'No wholesale platform publishes audited buyer counts that you can compare side by side, so be careful with any ranking you read. Compare platforms on fit instead: which retailers in your category use them, what each one charges, the payment terms and how orders reach your systems. Faire is a common choice for independent shops. Our Faire alternatives page compares the other options.',
+      'Published buyer totals alone do not establish which platform fits your brand. Compare platforms on fit: which retailers in your category use them, what each one charges, the payment terms and how orders reach your systems. Faire is a common choice for independent shops. Our Faire alternatives page compares the other options.',
   },
 
   // Integration & ERP
@@ -112,7 +112,7 @@ const FAQ_ITEMS = [
     category: 'sync',
     question: 'How does Shopify or ERP integration with Faire work?',
     answer:
-      'We connect your store or ERP to Faire through Faire’s integrations or its API. Products, wholesale prices, case packs and stock levels stay in step with Faire. New Faire orders land in your order system or 3PL for picking, and tracking numbers flow back. Before you sign, we show the sync working on your own catalog.',
+      'We connect your store or ERP to Faire through Faire’s integrations or its API. We map products, wholesale prices, case packs and stock levels, then agree and test the update interval and the action to take when a sync fails. New Faire orders land in your order system or 3PL for picking, and tracking numbers flow back. Before you sign, we show the sync working on your own catalog.',
   },
   {
     category: 'sync',
@@ -124,31 +124,31 @@ const FAQ_ITEMS = [
     category: 'sync',
     question: 'How do you prevent stockouts between direct sales and wholesale orders?',
     answer:
-      'We set stock allocation rules and safety buffers across channels. When a large Faire order comes in, the stock shown on your own store and other marketplaces drops right away to reflect the units now reserved. That way two channels never sell the same last units, and you do not have to cancel a retailer’s order.',
+      'We agree which system owns stock, when an order reserves it, and when cancellation releases it. We test delayed updates and competing orders before launch. Stock buffers reduce overselling risk; they cannot guarantee that two channels will never accept the same units.',
   },
   {
     category: 'sync',
     question: 'Can we set custom case packs and order minimums?',
     answer:
-      'Yes. Faire’s Brand Portal has settings for order minimums and case pack sizes, so retailers buy in the quantities you choose instead of single units. We set the minimums and pack sizes in Faire and in your own system, so the two always match and your warehouse picks the right quantity.',
+      'Yes. Faire’s Brand Portal has settings for order minimums and case pack sizes, so retailers buy in the quantities you choose instead of single units. We set the minimums and pack sizes in Faire and in your own system, then test how quantities map before the warehouse starts picking orders.',
   },
   {
     category: 'sync',
     question: 'How are shipping labels and logistics handled on Faire?',
     answer:
-      'Brands can buy shipping labels through Faire or ship with their own carrier accounts and 3PL. Faire sets the current shipping options and any reimbursement rules, so check them in your Brand Portal. We pick the option that fits your product sizes and warehouse, and connect tracking so retailers can see where their order is.',
+      'Faire offers shipping labels and, where available, shipping with your own carrier. International orders shipping from the US must use Ship with Faire. Check the shipping options and reimbursement rules for your account before choosing a carrier or 3PL. We pick the option that fits your product sizes and warehouse, and connect tracking so retailers can see where their order is.',
   },
   {
     category: 'sync',
     question: 'Can you run Faire and our Shopify wholesale store from one catalog?',
     answer:
-      'Yes. Your products live in one place, usually Shopify or your ERP. Faire and your Shopify wholesale store both read from that list. When you change a product, a photo or a stock count, both channels update. Wholesale prices can still differ by channel, because each one gets its own price list.',
+      'Yes. Your products live in one place, usually Shopify or your ERP. Faire and your Shopify wholesale store both read from that list. We agree and test the update interval and the action to take when a sync fails. We can map a price list for each channel. Your team must confirm the prices allowed by its current Faire account terms before those lists go live.',
   },
   {
     category: 'sync',
     question: 'Can we charge different wholesale prices on Faire and on our own wholesale site?',
     answer:
-      'Yes. Some brands set a lower price on their own wholesale site, since Faire takes 15% on marketplace orders and their own site carries no commission. We set up a price list for each channel and keep both tied to the same products. You change a price in one place, and the right channel picks it up.',
+      'We can map a price list for each channel. Your team must confirm the prices allowed by its current Faire account terms before those lists go live.',
   },
   {
     category: 'sync',
@@ -160,7 +160,7 @@ const FAQ_ITEMS = [
     category: 'growth',
     question: 'Should we move our Faire retailers to our own wholesale store?',
     answer:
-      'Sometimes. Retailers you brought yourself can order through Faire Direct at 0% commission and still get Faire’s payment terms, so moving them may not save much. Shops that found you on Faire often like Faire’s 60-day terms. Your own store suits large accounts that want net terms from you, custom prices or quick reorders. We look at your order history and suggest which accounts go where.',
+      'Sometimes. Retailers you brought yourself can order through Faire Direct at 0% commission, with payment terms for eligible retailers, so moving them may not save much. Eligible shops can use Faire’s 60-day terms. Check your current Faire account terms before changing where any retailer orders. Your own store suits large accounts that want net terms from you, custom prices or quick reorders. We look at your order history and suggest which accounts go where.',
   },
 
   // Margins & Terms
@@ -168,13 +168,13 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'How do 60-day terms work without cash flow risk for the brand?',
     answer:
-      'Faire gives retailers invoices due in 60 days, interest-free. The retailer pays Faire, not you. Faire pays the brand on its own payout schedule, shown in your Brand Portal. Faire also charges a payment processing fee. Check the current rate and payout options in your Brand Portal, because Faire sets and changes them.',
+      'Faire offers eligible retailers interest-free invoices due in 60 days. The retailer pays Faire, not you. Faire pays the brand on its own payout schedule, shown in your Brand Portal. Faire also charges a payment processing fee. Check the current rate and payout options in your Brand Portal, because Faire sets and changes them.',
   },
   {
     category: 'pricing',
     question: 'What percentage should I take off retail for my wholesale price?',
     answer:
-      'Many brands use keystone pricing: the wholesale price is half the suggested retail price, so a $20 retail item sells to shops at $10. That leaves the retailer room for their margin. Before you copy that, start from your cost per unit, then take off Faire’s 15% commission, its fees and your shipping. If the numbers fail at half of retail, change the price or the pack size.',
+      'Many brands use keystone pricing: the wholesale price is half the suggested retail price, so a $20 retail item sells to shops at $10. That leaves the retailer room for their margin. Before you copy that, start from your cost per unit, then allow for the commission and fees that apply to your Faire account, plus shipping. If the numbers fail at half of retail, change the price or the pack size.',
   },
   {
     category: 'pricing',
@@ -186,7 +186,7 @@ const FAQ_ITEMS = [
     category: 'pricing',
     question: 'What is Faire Direct?',
     answer:
-      'Faire Direct is Faire’s program for retailers you bring yourself. You send a retailer your Faire Direct link, they order through Faire, and qualified Faire Direct orders carry 0% commission under Faire’s brand terms. The retailer still gets Faire’s payment terms. It is the cheapest way to move your existing wholesale accounts onto Faire.',
+      'Faire Direct is Faire’s program for retailers you bring yourself. You send a retailer your Faire Direct link, they order through Faire, and qualified Faire Direct orders carry 0% commission under Faire’s published commission policy. Eligible retailers can still get Faire’s payment terms. Payment processing fees still apply.',
   },
 
   // B2B Scaling
@@ -200,7 +200,7 @@ const FAQ_ITEMS = [
     category: 'growth',
     question: 'How do you rank higher in Faire marketplace search results?',
     answer:
-      'Faire does not publish its ranking formula. What you can control is complete product data, clear photos, short lead times, few cancelled orders, quick replies to retailers and a steady reorder rate. We fix catalog data first, then track those operating numbers every week, so one slow shipping week does not drag your listing down.',
+      'We review product data, photos, lead times, cancellations and replies to retailers. We fix catalog data first, then track operating numbers every week. We do not promise a search position or assume that a change will improve ranking.',
   },
   {
     category: 'growth',
@@ -280,7 +280,7 @@ const HOW_STEPS = [
   {
     stage: 'Stage 2',
     name: 'Direct API & Webhook Integration',
-    text: 'We build live connectors between Faire, Shopify and your ERP, so stock drops the moment an order lands and tracking numbers sync on their own.',
+    text: 'We agree and test the update interval and the action to take when a sync fails. We define stock ownership, reservation and release rules, then test delayed updates and competing orders.',
   },
   {
     stage: 'Stage 3',
@@ -296,11 +296,12 @@ const BUILD_STEPS = [
   },
   {
     t: 'Wholesale price lists',
-    d: 'Each channel gets its own price list. Faire prices allow for Faire’s commission, and your own wholesale store can carry a different price, tiers by volume or prices for named accounts.',
+    d: 'We can map a price list for each channel. Your team must confirm the prices allowed by its current Faire account terms before those lists go live.',
   },
   {
     t: 'Order routing to the warehouse or ERP',
     d: 'Faire orders and Shopify wholesale orders land in the same order list in your ERP or warehouse system, tagged by channel. Tracking numbers go back to Faire or to the buyer on your site.',
+    handoff: true,
   },
   {
     t: 'Reorder flows',
@@ -328,37 +329,37 @@ const BREADCRUMB_SCHEMA = {
   ],
 };
 
-// Fee figures: Faire brand terms, read 22 Oct 2026. Retailer terms: faire.com, read 22 Oct 2026.
+// Fee figures and eligible retailer benefits: Faire North American fee page, read 26 Nov 2026.
 const STATS = [
-  { b: '15% + $10', s: 'Faire fee on an opening order' },
-  { b: '15%', s: 'Faire commission on reorders' },
+  { b: '15% + $10', s: 'North American opening marketplace order' },
+  { b: '15%', s: 'North American marketplace reorder commission' },
   { b: '0% Commission', s: 'on qualified Faire Direct orders' },
-  { b: '60-Day Terms', s: 'interest-free invoices for retailers' },
+  { b: '60-Day Terms', s: 'interest-free invoices for eligible retailers' },
 ];
 
 const SOURCED = [
   {
     v: '15% + $10',
-    d: 'on an opening order: 15% of the order subtotal plus a $10 new customer fee on the first order from each new retailer.',
-    src: 'Faire brand terms (read 22 Oct 2026)',
-    href: FAIRE_TERMS,
+    d: 'for North American brands on an opening marketplace order: 15% of the order subtotal plus a $10 new customer fee on the first order from each new retailer.',
+    src: 'Faire North American fees (read 26 Nov 2026)',
+    href: FAIRE_FEES,
   },
   {
     v: '0%',
     d: 'commission on qualified Faire Direct orders, which come from retailers you bring to Faire yourself. Reorders on the marketplace stay at 15%.',
-    src: 'Faire brand terms (read 22 Oct 2026)',
-    href: FAIRE_TERMS,
+    src: 'Faire North American fees (read 26 Nov 2026)',
+    href: FAIRE_FEES,
   },
   {
     v: '60 days',
-    d: 'for retailers to pay, interest-free. Retailers can also return first orders to Faire at no cost to them.',
-    src: 'faire.com (read 22 Oct 2026)',
+    d: 'for eligible retailers to pay, interest-free. Faire also offers free returns on eligible opening orders.',
+    src: 'Faire benefits (read 26 Nov 2026)',
     href: FAIRE_HOME,
   },
 ];
 
 const BENEFITS = [
-  { i: '◈', t: 'Automated Catalog & Inventory Sync', d: 'No more manual CSV uploads. Product changes in Shopify or your ERP sync to Faire, with stock buffers so you never oversell.' },
+  { i: '◈', t: 'Automated Catalog & Inventory Sync', d: 'We agree which system owns stock, when an order reserves it, and when cancellation releases it. We test delayed updates and competing orders before launch. Stock buffers reduce overselling risk; they cannot guarantee that two channels will never accept the same units.' },
   { i: '◇', t: 'Faire Direct 0% Commission Funnel', d: 'Bring existing retail accounts and trade show leads in through your Faire Direct link, so qualified orders carry 0% commission.' },
   { i: '↯', t: 'Operating Numbers, Tracked Weekly', d: 'We track lead times, cancellations and reply times, the numbers retailers see, and flag a slip before it shows on your listing.' },
   { i: '▤', t: 'B2B Case Packs & Order Minimums', d: 'Set case packs, opening minimums and volume breaks that lift the size of each boutique order without scaring off new shops.' },
@@ -404,10 +405,10 @@ export default function FaireWholesaleMarketplacePage() {
                   Sell wholesale to <span className="pp-grad">independent retailers on Faire.</span>
                 </h1>
                 <p className="pp-lead" style={{ maxWidth: '48ch' }}>
-                  Selling on Faire costs 15% plus a $10 new customer fee on an opening order, 15% on reorders and 0% on
+                  For North American brands, Faire lists 15% plus a $10 new customer fee on an opening marketplace order, 15% on reorders and 0% on
                   qualified Faire Direct orders, per{' '}
-                  <a href={FAIRE_TERMS} target="_blank" rel="noopener noreferrer" style={LINK}>Faire’s brand terms</a>{' '}
-                  (read 22 Oct 2026). Faire also charges a payment processing fee. FactoryJet connects Shopify or your ERP
+                  <a href={FAIRE_FEES} target="_blank" rel="noopener noreferrer" style={LINK}>Faire’s North American fee page</a>{' '}
+                  (read 26 Nov 2026). Faire also charges a payment processing fee. FactoryJet connects Shopify or your ERP
                   to Faire so wholesale orders flow in on their own.
                 </p>
                 <HeroInlineForm source="us_faire_wholesale_hero" region="us" submitLabel="Get a Faire Wholesale Scope" trustText="Prefer a flat monthly scope for 6 months? We can quote that too. Founder replies within 24 hours." />
@@ -440,16 +441,16 @@ export default function FaireWholesaleMarketplacePage() {
                 >
                   Faire Wholesale Brand Hub
                   <small style={{ display: 'block', fontFamily: 'var(--pp-mono)', fontSize: '11px', color: 'var(--pp-orange-dark)', fontWeight: 600, marginTop: '2px' }}>
-                    Shopify Plus / ERP Master Sync · Case Packs · 60-Day Terms
+                    Shopify Plus / ERP Master Sync · Case Packs · Terms for Eligible Retailers
                   </small>
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
                   {[
                     { name: 'Faire Retailers', desc: 'Independent Stores' },
-                    { name: 'Opening Orders', desc: '15% + $10' },
+                    { name: 'Opening Orders', desc: 'North America: 15% + $10' },
                     { name: 'Faire Direct', desc: '0% Commission' },
                     { name: 'ERP Ingestion', desc: 'Automated 3PL' },
-                    { name: '60-Day Terms', desc: 'For Retailers' },
+                    { name: '60-Day Terms', desc: 'For Eligible Retailers' },
                     { name: 'Faire Markets', desc: 'Trade Events' },
                   ].map((ch) => (
                     <div key={ch.name} style={{ border: '1px solid var(--pp-line)', borderRadius: '10px', background: '#fff', padding: '12px 8px', textAlign: 'center' }}>
@@ -513,10 +514,10 @@ export default function FaireWholesaleMarketplacePage() {
                 <li>You apply as a brand, and Faire reviews your application.</li>
                 <li>You list products with wholesale prices, suggested retail prices, case packs and order minimums.</li>
                 <li>A retailer finds you on the marketplace, or through your Faire Direct link, and places an order.</li>
-                <li>Faire gives the retailer an invoice due in 60 days, interest-free.</li>
+                <li>Faire offers eligible retailers interest-free 60-day payment terms.</li>
                 <li>You ship the order from your warehouse or 3PL and add tracking.</li>
                 <li>Faire pays you, minus its commission and payment processing fee.</li>
-                <li>The retailer reorders. Reorders cost 15%, or 0% if they qualify as Faire Direct orders.</li>
+                <li>The retailer reorders. For North American brands, reorders cost 15%, or 0% if they qualify as Faire Direct orders.</li>
               </ol>
               <p>
                 Done by hand, with spreadsheet uploads and retyped orders, this creates stockouts and late shipments.
@@ -538,8 +539,8 @@ export default function FaireWholesaleMarketplacePage() {
         {/* ── Sourced Stats ── */}
         <section className="pp-sec tint">
           <div className="pp-wrap">
-            <p className="pp-mlabel">// faire fees, read 22 oct 2026</p>
-            <h2 style={{ marginTop: '10px' }}>What Faire charges a brand</h2>
+            <p className="pp-mlabel">// faire fees, read 26 nov 2026</p>
+            <h2 style={{ marginTop: '10px' }}>What Faire charges a North American brand</h2>
             <ul className="pp-bento" style={{ marginTop: '32px' }}>
               {SOURCED.map((s) => (
                 <li className="pp-card" key={s.v}>
@@ -558,9 +559,9 @@ export default function FaireWholesaleMarketplacePage() {
             </ul>
             <div className="pp-editorial" style={{ marginTop: '28px', maxWidth: '68ch' }}>
               <p>
-                What Faire charges, from{' '}
-                <a href={FAIRE_TERMS} target="_blank" rel="noopener noreferrer" style={LINK}>Faire’s brand terms</a>{' '}
-                (read 22 Oct 2026):
+                What Faire charges North American brands, from{' '}
+                <a href={FAIRE_FEES} target="_blank" rel="noopener noreferrer" style={LINK}>Faire’s North American fee page</a>{' '}
+                (read 26 Nov 2026):
               </p>
               <ul style={{ paddingLeft: '20px', marginTop: '12px', display: 'grid', gap: '8px' }}>
                 <li>Opening order (the first order from a retailer): 15% of the order subtotal plus a $10 new customer fee.</li>
@@ -727,6 +728,12 @@ export default function FaireWholesaleMarketplacePage() {
                   <div className="pp-eyebrow" style={{ marginBottom: '6px' }}>{`Step ${i + 1}`}</div>
                   <h3 style={{ fontSize: '18px', color: 'var(--pp-ink)' }}>{step.t}</h3>
                   <p style={{ marginTop: '8px', color: 'var(--pp-body)' }}>{step.d}</p>
+                  {'handoff' in step && step.handoff && (
+                    <p style={{ marginTop: '8px', color: 'var(--pp-body)' }}>
+                      Agree who owns paid and unpaid orders, when stock is reserved, and who approves freight or accounting exceptions. See our{' '}
+                      <a href="/services/ecommerce-erp-integration" style={LINK}>ecommerce ERP integration service</a> for that handoff.
+                    </p>
+                  )}
                 </li>
               ))}
             </ol>
@@ -737,7 +744,7 @@ export default function FaireWholesaleMarketplacePage() {
               phase has a fixed price in writing.
             </p>
             <div style={{ marginTop: '22px' }}>
-              <ModalCTAButton label="Scope my Faire and Shopify wholesale build" region="us" btnVariant="primary-dark" />
+              <ModalCTAButton label="Review my existing Faire and Shopify handoff" region="us" btnVariant="primary-dark" />
             </div>
           </div>
         </section>
