@@ -114,11 +114,7 @@ export const metadata: Metadata = {
     description: PAGE_DESC,
     images: [OG_IMAGE],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
-  },
+  robots: { index: false, follow: true },
 };
 
 /** One array feeds the visible <Breadcrumbs> and the BreadcrumbList JSON-LD. */

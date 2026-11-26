@@ -32,6 +32,8 @@ import MotionFadeUp, { type MotionFadeUpProps } from './MotionFadeUp';
 export interface FAQItem {
   question: string;
   answer: string;
+  /** Optional rich rendering of the same answer text, for inline links. */
+  answerContent?: ReactNode;
   /** Optional — must match a `key` in the `categories` prop. */
   category?: string;
 }
@@ -121,7 +123,7 @@ function AccordionItem({ item }: { item: FAQItem }) {
           data-faq-answer
           className="font-fj-body text-[0.9375rem] leading-[1.7] text-fj-neutral-600"
         >
-          {item.answer}
+          {item.answerContent ?? item.answer}
         </p>
       </div>
     </details>
@@ -193,7 +195,7 @@ export default function FAQ({
                     data-faq-answer
                     className="mt-4 font-fj-body text-[0.9375rem] leading-[1.7] text-fj-neutral-600"
                   >
-                    {item.answer}
+                    {item.answerContent ?? item.answer}
                   </p>
                 </article>
               </FadeUp>

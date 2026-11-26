@@ -850,7 +850,7 @@ export default function WixToShopifyPage() {
                 Hiring Help for a Wix Move: What to Check
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                The Wix-specific gaps are where quotes differ most. Compare how each partner handles them:
+                The Wix-specific gaps are where quotes differ most. Compare how each partner handles them. If your source is Squarespace, use the <Link href="/replatforming/squarespace-to-shopify" style={EXT_LINK}>Squarespace product, blog and customer migration checklist</Link>:
               </p>
             </div>
 

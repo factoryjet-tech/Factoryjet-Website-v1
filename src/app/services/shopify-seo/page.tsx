@@ -246,6 +246,8 @@ const SPRINT_ROADMAP = [
   },
 ];
 
+const INTERNATIONAL_SEO_ANSWER = 'We set up automated hreflang tags across all international domains. Search engines direct shoppers to localized currencies and languages. This avoids duplicate content penalties across regional stores.';
+
 const FAQS = [
   {
     question: 'What is Shopify SEO?',
@@ -309,7 +311,8 @@ const FAQS = [
   },
   {
     question: 'How do you handle international SEO with Shopify Markets?',
-    answer: 'We set up automated hreflang tags across all international domains. Search engines direct shoppers to localized currencies and languages. This avoids duplicate content penalties across regional stores.',
+    answer: `${INTERNATIONAL_SEO_ANSWER} See our international SEO service.`,
+    answerContent: <>{INTERNATIONAL_SEO_ANSWER} See our <Link href="/services/international-seo" className="underline">international SEO</Link> service.</>,
   },
   {
     question: 'How do you track and measure Shopify SEO success?',

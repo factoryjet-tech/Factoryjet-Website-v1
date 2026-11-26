@@ -798,7 +798,7 @@ export default function ReplatformingHubPage() {
                 </table>
               </div>
               <p style={{ fontSize: '14.5px', color: '#494852', lineHeight: 1.6, margin: '20px 0 8px' }}>
-                Still choosing between platforms? Our comparison pages set the options side by side:
+                Moving a content-led store? Review the <Link href="/replatforming/squarespace-to-shopify" style={linkStyle}>Squarespace to Shopify export limits and migration checks</Link>. Still choosing between platforms? Our comparison pages set the options side by side:
               </p>
               <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '14.5px', color: '#494852', lineHeight: 1.7 }}>
                 {COMPARISONS.map((c) => (
