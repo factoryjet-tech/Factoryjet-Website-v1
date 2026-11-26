@@ -10,11 +10,11 @@ import AuthorCard from '@/components/v2/AuthorCard';
 import CommerceRoiCalculator from '@/components/v2/CommerceRoiCalculator';
 import '@/components/v2/PlatformPage.css';
 
-const PAGE_MODIFIED = '2026-10-22';
+const PAGE_MODIFIED = '2026-11-26';
 
-const PAGE_TITLE = 'Squarespace to Shopify Migration: Steps & 301s | FactoryJet';
+const PAGE_TITLE = 'Squarespace to Shopify Migration: Data & SEO | FactoryJet';
 const PAGE_DESC =
-  'Squarespace to Shopify migration: the product CSV skips images, alt text and reviews, only one blog exports, and /p/ product URLs need 301s. The full plan.';
+  'Plan your Squarespace to Shopify migration: CSV export limits, variant checks, blog rebuilds, customer sign-in, SEO redirects and launch testing.';
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -38,7 +38,15 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 
-/* Official sources, all opened and read on 22 Oct 2026. */
+/* Official sources checked on 26 Nov 2026. Squarespace pages were read via web retrieval;
+   direct crawler requests returned 403. Shopify pages returned 200 directly.
+   Export exclusions: https://support.squarespace.com/hc/en-us/articles/360000694948-Export-products-to-a-csv
+   Blog and page limits: https://support.squarespace.com/hc/en-us/articles/206566687-Export-your-site-content
+   Variant failures, contact fields and test orders: https://help.shopify.com/en/manual/migrating-to-shopify/migrating-from-squarespace
+   Option limits: https://help.shopify.com/en/manual/products/variants/add-variants
+   Passwordless sign-in: https://help.shopify.com/en/manual/customers/customer-accounts
+   Reserved paths: https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect
+   The migration steps below describe a proposed scope, not a delivered Squarespace project. */
 const SRC = {
   shopifySq: { label: 'Shopify Help: Migrate from Squarespace', url: 'https://help.shopify.com/en/manual/migrating-to-shopify/migrating-from-squarespace' },
   sqProducts: { label: 'Squarespace Help: Export products to a .csv', url: 'https://support.squarespace.com/hc/en-us/articles/360000694948-Export-products-to-a-csv' },
@@ -47,11 +55,11 @@ const SRC = {
   sqMappings: { label: 'Squarespace Help: URL mappings', url: 'https://support.squarespace.com/hc/en-us/articles/205815308-URL-mappings' },
   sqDomain: { label: 'Squarespace Help: Transferring a domain away', url: 'https://support.squarespace.com/hc/en-us/articles/205812338-Transferring-a-domain-away-from-Squarespace' },
   shopifyProducts: { label: 'Shopify Help: Import products', url: 'https://help.shopify.com/en/manual/products/import-export/import-products' },
+  shopifyAccounts: { label: 'Shopify Help: Customer accounts', url: 'https://help.shopify.com/en/manual/customers/customer-accounts' },
+  shopifyVariants: { label: 'Shopify Help: Adding variants', url: 'https://help.shopify.com/en/manual/products/variants/add-variants' },
   shopifyCustomers: { label: 'Shopify Help: Import customers', url: 'https://help.shopify.com/en/manual/customers/import-export-customers' },
   shopifyRedirects: { label: 'Shopify Help: URL redirects', url: 'https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect' },
-  shopifyPricing: { label: 'Shopify: Pricing', url: 'https://www.shopify.com/pricing' },
   storeMigrationApp: { label: 'Shopify App Store: Store Migration', url: 'https://apps.shopify.com/store-migration' },
-  sqPricing: { label: 'Squarespace: Pricing', url: 'https://www.squarespace.com/pricing' },
   shopifyConsiderations: { label: 'Shopify Help: Migration considerations', url: 'https://help.shopify.com/en/manual/migrating-to-shopify/considerations' },
 };
 
@@ -63,7 +71,7 @@ const FAQ_CATEGORIES = [
   { key: 'squarespace-content', label: 'Blog, Pages & Design' },
   { key: 'squarespace-urls', label: 'Squarespace URLs & Redirects' },
   { key: 'squarespace-domain', label: 'Domain & Email' },
-  { key: 'squarespace-cost', label: 'Cost & Timeline' },
+  { key: 'squarespace-cost', label: 'Scope & Timeline' },
 ];
 
 const FAQ_ITEMS = [
@@ -71,7 +79,7 @@ const FAQ_ITEMS = [
     category: 'squarespace-planning',
     question: 'Can I migrate from Squarespace to Shopify?',
     answer:
-      'Yes. Shopify publishes its own Squarespace migration guide covering products, customers, order history and reviews. Products and customers move by CSV file. Order history moves through an app; Shopify’s guide names EZ Importer and Migration Pro. Your design, portfolio pages and custom CSS do not move, so they are rebuilt inside a Shopify theme.',
+      'Yes. Shopify publishes its own Squarespace migration guide covering products, customers, order history and reviews. Products and customers move by CSV file. Order history moves through an app; Shopify’s guide names EZ Importer. Your design, portfolio pages and custom CSS do not move, so they are rebuilt inside a Shopify theme.',
   },
   {
     category: 'squarespace-planning',
@@ -101,13 +109,25 @@ const FAQ_ITEMS = [
     category: 'squarespace-planning',
     question: 'Is there a Shopify app that imports a Squarespace store automatically?',
     answer:
-      'Not from Shopify itself, as of 22 October 2026. Shopify’s free Store Migration app lists Square, WooCommerce, Etsy, Wix, Amazon, eBay, Clover and Lightspeed as sources, and Squarespace was not on that list when we checked. The older Store Importer app is no longer available. So a Squarespace move runs on the product .csv, the .xml export and a few third-party apps.',
+      'The Shopify Store Migration app does not list Squarespace as a supported source as of 26 November 2026. Shopify’s free Store Migration app lists Square, WooCommerce, Etsy, Wix, Amazon, eBay, Clover and Lightspeed as sources, and Squarespace was not on that list when we checked. Plan around the product .csv and content .xml exports, manual rebuilds and any third-party apps approved in your scope.',
   },
   {
     category: 'squarespace-store-data',
     question: 'How do I export my products from Squarespace?',
     answer:
       'Open the Products panel and choose Export all, or select products and click Export. Squarespace exports physical and service products to a .csv, up to 10,000 products. The file is a one-time copy: later edits on either side do not sync. Re-map the columns to Shopify’s product CSV template and import under Products > Import, keeping each file under 15 MB.',
+  },
+  {
+    category: 'squarespace-store-data',
+    question: 'Will my Squarespace product variants import correctly?',
+    answer:
+      'Not without checks. Shopify warns that a missing variant option can prevent a product from importing. Map each option name and value, then compare SKUs, stock, weights and variant images with the source. Shopify supports up to 3 options per product; products needing more require an agreed app or line item properties. Test a representative product before importing the whole catalog.',
+  },
+  {
+    category: 'squarespace-store-data',
+    question: 'Which customer details are missing from the Squarespace export?',
+    answer:
+      'Shopify’s Squarespace guide says contact notes and saved addresses are excluded, except the address from the most recent physical product order. Match the customer CSV to Shopify’s headings, including email marketing consent, and supply country codes where required. Validate sample customer profiles before importing the rest; a successful upload does not establish that every address or consent field is correct.',
   },
   {
     category: 'squarespace-store-data',
@@ -125,13 +145,13 @@ const FAQ_ITEMS = [
     category: 'squarespace-store-data',
     question: 'Can Squarespace customer accounts and passwords move to Shopify?',
     answer:
-      'Customer records move; passwords cannot. Shopify’s Squarespace guide says it cannot import a customer CSV that does not match Shopify’s headings, so the Squarespace file is rewritten first. Shopify also says customer passwords cannot be migrated by CSV, so customers get an invite to set a new one. We draft that invite email with you so it reads as your brand.',
+      'Customer records can move after the CSV headings are matched to Shopify’s template; passwords cannot migrate by CSV. With current Shopify customer accounts, customers sign in using an emailed one-time verification code, without a password. Legacy customer accounts use invitations to create a password. Agree the account type and test a returning customer’s sign-in before launch.',
   },
   {
     category: 'squarespace-store-data',
     question: 'Can I move my Squarespace order history?',
     answer:
-      'Yes. Squarespace exports Commerce orders as a .csv, filtered by status, date range or product. Know two quirks: partially refunded orders show the full purchase price, and hidden products or disabled store pages are left out. Shopify points to apps such as EZ Importer and Migration Pro for the import. Switch off new order notifications first.',
+      'Yes. Squarespace exports Commerce orders as a .csv, filtered by status, date range or product. Check the export before import: partially refunded line items show the full purchase price, and orders for hidden products or disabled store pages are excluded. Shopify points to apps such as EZ Importer for the import. Switch off new order notifications first.',
   },
   {
     category: 'squarespace-store-data',
@@ -161,7 +181,7 @@ const FAQ_ITEMS = [
     category: 'squarespace-content',
     question: 'Will my Shopify store look like my Squarespace site?',
     answer:
-      'It can look as close as you want, but it is a rebuild. Squarespace style settings and custom CSS do not export, so the look is recreated in a Shopify theme. FactoryJet builds custom-theme stores in 3 to 5 weeks and migrations in 5 to 8 weeks, and you see a working demo on your own products before you sign anything.',
+      'The design needs rebuilding because Squarespace style settings and custom CSS do not export. A Shopify theme can use your existing colors, typography and images, but its templates and checkout work differently. Agree which page layouts and interactions to recreate, then review them on your own catalog at phone and desktop widths.',
   },
   {
     category: 'squarespace-content',
@@ -173,7 +193,7 @@ const FAQ_ITEMS = [
     category: 'squarespace-urls',
     question: 'Will I lose search rankings when I move off Squarespace?',
     answer:
-      'Some movement after a platform change is normal and nobody can promise none. What protects rankings is a one-to-one 301 map, with each old URL pointing straight to its closest Shopify page in one hop. We gather every URL from your Squarespace sitemap and Search Console, map each one and retest after launch. Titles and meta descriptions move with the content.',
+      'Some movement after a platform change is normal and nobody can promise none. What protects rankings is a one-to-one 301 map, with each old URL pointing straight to its closest Shopify page in one hop. We gather every URL from your Squarespace sitemap and Search Console, map each one and retest after launch. Record SEO titles, meta descriptions and image alt text separately before export, then check the rendered Shopify pages. Update internal links to their final URLs and monitor indexing and 404s after launch; an imported file alone does not prove SEO carry-over.',
   },
   {
     category: 'squarespace-urls',
@@ -185,7 +205,7 @@ const FAQ_ITEMS = [
     category: 'squarespace-urls',
     question: 'My Squarespace store page is called shop. Does that cause a problem?',
     answer:
-      'Yes, and it is the trap we check first. Shopify says you cannot redirect URLs that begin with /shop, so old /shop/p/ product links cannot be redirected with Shopify’s own redirect tool. They need a rule outside Shopify, for example at your DNS or CDN provider, and we agree which during scoping. Store pages with other slugs, such as /store or /buy, redirect normally.',
+      'Yes, and it is the trap we check first. Shopify says you cannot redirect URLs that begin with /shop, so old /shop/p/ product links cannot be redirected with Shopify’s own redirect tool. They need a separately tested HTTP redirect layer outside Shopify, such as an approved CDN or server; DNS records alone cannot redirect a URL path. Agree who operates that layer before scheduling launch. Store pages with other slugs, such as /store or /buy, redirect normally.',
   },
   {
     category: 'squarespace-urls',
@@ -212,6 +232,18 @@ const FAQ_ITEMS = [
       'If Google Workspace is attached to your domain, Squarespace says to adjust your MX records with your new domain provider after transferring, to avoid an email outage. Squarespace also says you keep managing the Workspace subscription through Squarespace unless you cancel it. We list your MX records before launch and check mail delivery after the switch.',
   },
   {
+    category: 'squarespace-planning',
+    question: 'What happens to forms, subscriptions and integrations?',
+    answer:
+      'Treat these as separate workstreams rather than assuming a product CSV moves them. List each form, subscription, email flow and connection to accounting or fulfillment. Agree the replacement tool, data owner and test for each workflow before choosing apps. A rebuilt form must deliver a submission, and an order integration must send the correct SKU and stock data before cutover.',
+  },
+  {
+    category: 'squarespace-planning',
+    question: 'What must pass before I switch my domain to Shopify?',
+    answer:
+      'Validate products and customer records, then configure shipping, taxes and payments. On phone and desktop, run a successful and a failed transaction in test mode, then test refund and fulfillment notifications. Check returning-customer sign-in, forms, images and old URL redirects. Agree a final stock and order reconciliation window so sales made during the build are accounted for before changing the domain.',
+  },
+  {
     category: 'squarespace-cost',
     question: 'How much does a Squarespace to Shopify migration cost?',
     answer:
@@ -221,7 +253,7 @@ const FAQ_ITEMS = [
     category: 'squarespace-cost',
     question: 'How long does moving from Squarespace to Shopify take?',
     answer:
-      'FactoryJet migrations run 5 to 8 weeks from signed scope to launch. A single store page with a small blog sits at the short end. Several store pages, a second blog captured from the live site, or many portfolio pages push it toward the long end. Across 500+ businesses since 2014, 97% of our projects have shipped on time.',
+      'Set the schedule after auditing the exports and testing a sample import. Product options, image recovery, extra blogs, theme rebuilds and integrations determine the work. Agree milestones for data validation, storefront review, test orders and domain cutover. Domain registration transfer is separate from storefront launch, so its waiting period should not be presented as the build timeline.',
   },
 ];
 
@@ -265,7 +297,6 @@ const PARTNERS = [
   'Squarespace .xml site export',
   'Squarespace URL mappings',
   'EZ Importer',
-  'Migration Pro',
   'Shopify Blog API',
   'Google Workspace MX records',
 ];
@@ -292,19 +323,19 @@ const MIGRATION_STEPS = [
   {
     n: '04',
     t: 'Import into Shopify with publishing off',
-    d: 'Columns are re-mapped to Shopify’s template, files kept under 15 MB, and products imported to the online store only until checked.',
+    d: 'Re-map to Shopify’s template, keep files under 15 MB and clear Publish new products to all sales channels. Check a sample product’s variant options, SKU, stock and images before the full import.',
     icon: '⬆️',
   },
   {
     n: '05',
     t: 'Rewrite the customer file to Shopify headings',
-    d: 'Shopify rejects customer files that do not match its headings. Passwords do not move, so the account invite email is drafted now.',
+    d: 'Shopify rejects customer files that do not match its headings. Preserve marketing consent and check addresses. Agree passwordless customer accounts or legacy account invitations, then test sign-in.',
     icon: '👥',
   },
   {
     n: '06',
     t: 'Export Commerce orders and import with an app',
-    d: 'Orders come out as a .csv by status and date. Partially refunded orders show full price, so we flag them before EZ Importer or Migration Pro loads the history.',
+    d: 'Orders come out as a .csv by status and date. Partially refunded orders show full price, so we flag them before an approved order-import app loads the history.',
     icon: '🧾',
   },
   {
@@ -328,7 +359,7 @@ const MIGRATION_STEPS = [
   {
     n: '10',
     t: 'Point the domain and check email',
-    d: 'DNS points to Shopify while the transfer, if any, runs in the background. MX records for Google Workspace are checked the same day.',
+    d: 'After test orders, notifications and redirects pass, reconcile final orders and stock, then point the domain. Verify Google Workspace mail and HTTPS before cancelling the old site.',
     icon: '🚀',
   },
 ];
@@ -359,6 +390,8 @@ const ASK_A_PARTNER = [
 ];
 
 const RELATED_LINKS = [
+  { href: '/replatforming', label: 'Ecommerce replatforming: compare source platforms and plan the cutover' },
+  { href: '/omnichannel-commerce', label: 'Omnichannel commerce: connect the store to sales and operations' },
   { href: '/services/shopify-migration-agency', label: 'Shopify migration agency: scope and what a fixed quote covers' },
   { href: '/services/shopify-theme-development', label: 'Shopify theme development to recreate your Squarespace look' },
   { href: '/services/shopify-seo', label: 'Shopify SEO after launch: Search Console checks and redirects' },
@@ -488,11 +521,11 @@ export default function SquarespaceToShopifyPage() {
                 </div>
 
                 <h1 style={{ color: '#141414', margin: '0 0 20px', lineHeight: 1.12, letterSpacing: '-0.03em', fontSize: 'clamp(34px, 5.2vw, 56px)' }}>
-                  Squarespace to Shopify Migration, Product Images Included
+                  Squarespace to Shopify Migration With a Data and SEO Plan
                 </h1>
 
                 <p className="pp-lead" style={{ color: '#494852', maxWidth: '52ch', margin: '0 0 28px', fontSize: 'clamp(16px, 1.8vw, 18.5px)', lineHeight: 1.6 }}>
-                  To move from Squarespace to Shopify, export products as a .csv (up to 10,000), import them into Shopify, then bring customers and order history across. The Squarespace file leaves out product images, alt text and reviews, so those are recovered separately. Blog posts export as a WordPress-format .xml file, one blog only. Every /p/ product URL then needs its own 301.
+                  A Squarespace to Shopify migration needs separate routes for products, customers, orders and content. The product CSV leaves out images and reviews; the WordPress-format XML contains only one blog. FactoryJet can scope the data mapping, theme rebuild and URL redirects around your catalog, with variant checks and test orders before cutover.
                 </p>
 
                 <div className="rv-actions">
@@ -508,7 +541,7 @@ export default function SquarespaceToShopifyPage() {
                 </div>
 
                 <p style={{ fontSize: '13px', color: '#6E6E80', margin: '20px 0 0' }}>
-                  Updated 22 October 2026 · Bhavesh Barot, Founder
+                  Updated 26 November 2026 · Bhavesh Barot, Founder
                 </p>
               </div>
 
@@ -582,7 +615,7 @@ export default function SquarespaceToShopifyPage() {
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  Squarespace gives you two files: a product .csv and a WordPress-format .xml. Neither carries your product photos or your design. FactoryJet, a registered Shopify Partner serving 500+ businesses since 2014, plans each Squarespace job around these numbers and shows you a working Shopify demo on your own catalog before you commit.
+                  Squarespace exports products as CSV and supported page content as WordPress-format XML. Customers and orders need separate exports. Product photos and theme styling need their own work. FactoryJet can use these platform limits to scope a migration plan, then validate it against your export files and a sample import.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -700,7 +733,7 @@ export default function SquarespaceToShopifyPage() {
                 Squarespace Export Limits Next to Shopify Import Rules
               </h2>
               <p className="pp-lead" style={{ marginTop: '12px', color: '#494852' }}>
-                Every fact below is taken from the official help article in the last column, opened on 22 October 2026. Check them again before a large move, since both companies update these pages.
+                The official guides linked below describe the export and import limits, checked on 26 November 2026. The Shopify column also states the proposed work needed where a file is incomplete.
               </p>
             </div>
 
@@ -711,7 +744,7 @@ export default function SquarespaceToShopifyPage() {
                     <th style={{ color: '#141414', fontWeight: 700 }}>Data</th>
                     <th style={{ color: '#141414', fontWeight: 700 }}>What Squarespace gives you</th>
                     <th style={{ color: '#141414', fontWeight: 700 }}>Where it goes in Shopify</th>
-                    <th style={{ color: '#141414', fontWeight: 700 }}>Source (checked 22 Oct 2026)</th>
+                    <th style={{ color: '#141414', fontWeight: 700 }}>Source (checked 26 Nov 2026)</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -722,6 +755,12 @@ export default function SquarespaceToShopifyPage() {
                     <td><a href={SRC.sqProducts.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.sqProducts.label}</a>; <a href={SRC.shopifyProducts.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.shopifyProducts.label}</a></td>
                   </tr>
                   <tr>
+                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Product variants</td>
+                    <td>Option combinations need mapping; variant images require separate recovery.</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Missing variant options can block import. Check the 3-option limit, SKUs, stock and images on a sample product.</td>
+                    <td><a href={SRC.shopifySq.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.shopifySq.label}</a>; <a href={SRC.shopifyVariants.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.shopifyVariants.label}</a></td>
+                  </tr>
+                  <tr>
                     <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Product images</td>
                     <td>Not in the .csv: featured images, variant images, image alt text, reviews, additional information.</td>
                     <td style={{ color: '#047857', fontWeight: 600 }}>Recovered from the live store and attached per product and variant.</td>
@@ -730,13 +769,13 @@ export default function SquarespaceToShopifyPage() {
                   <tr>
                     <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Customers</td>
                     <td>Customer list export</td>
-                    <td style={{ color: '#047857', fontWeight: 600 }}>File must match Shopify headings. Passwords cannot be migrated. Limit 15 MB.</td>
-                    <td><a href={SRC.shopifySq.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.shopifySq.label}</a>; <a href={SRC.shopifyCustomers.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.shopifyCustomers.label}</a></td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Match Shopify headings, consent and address fields. Passwords do not migrate; current accounts use email-code sign-in. Limit 15 MB.</td>
+                    <td><a href={SRC.shopifySq.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.shopifySq.label}</a>; <a href={SRC.shopifyCustomers.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.shopifyCustomers.label}</a>; <a href={SRC.shopifyAccounts.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.shopifyAccounts.label}</a></td>
                   </tr>
                   <tr>
                     <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Orders</td>
-                    <td>.csv filtered by status, date or product. Partially refunded orders show full price; hidden products are left out.</td>
-                    <td style={{ color: '#047857', fontWeight: 600 }}>Imported with an app; Shopify names EZ Importer and Migration Pro.</td>
+                    <td>.csv filtered by status, date or product. Partially refunded line items show full price; orders for hidden products and disabled store pages are excluded.</td>
+                    <td style={{ color: '#047857', fontWeight: 600 }}>Imported with an app; Shopify names EZ Importer.</td>
                     <td><a href={SRC.sqOrders.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.sqOrders.label}</a>; <a href={SRC.shopifySq.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.shopifySq.label}</a></td>
                   </tr>
                   <tr>
@@ -762,12 +801,6 @@ export default function SquarespaceToShopifyPage() {
                     <td>Lock removed, then the emailed auth code goes to the new provider. Up to 15 days; new domains may carry a 60-day lock.</td>
                     <td style={{ color: '#047857', fontWeight: 600 }}>Point the domain to Shopify while the transfer runs.</td>
                     <td><a href={SRC.sqDomain.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.sqDomain.label}</a></td>
-                  </tr>
-                  <tr>
-                    <td className="name" style={{ fontWeight: 700, color: '#141414' }}>Monthly platform fee</td>
-                    <td>Basic $25/mo monthly or $19 yearly (2% store transaction fee); Core $39 or $29; Plus $65 or $49; Advanced $139 or $99.</td>
-                    <td style={{ color: '#047857', fontWeight: 600 }}>Basic $39/mo monthly or $29/mo yearly; Grow $105 or $89; Advanced $399 or $359 (USD).</td>
-                    <td><a href={SRC.sqPricing.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.sqPricing.label}</a>; <a href={SRC.shopifyPricing.url} target="_blank" rel="noopener noreferrer" style={EXT_LINK}>{SRC.shopifyPricing.label}</a></td>
                   </tr>
                 </tbody>
               </table>
@@ -806,7 +839,7 @@ export default function SquarespaceToShopifyPage() {
                   Moving Off Squarespace in 10 Steps
                 </h2>
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  Images are the long pole on most Squarespace jobs, so we start capturing them on day one while the product file is re-mapped. FactoryJet migrations run 5 to 8 weeks.
+                  Image recovery, variant mapping and content rebuilds determine the schedule. Agree the timeline after a sample import, with review gates for the catalog, storefront and checkout before the domain switch.
                 </p>
                 <ModalCTAButton label="Start Your Squarespace Audit" region="us" btnVariant="primary-dark" />
               </div>
