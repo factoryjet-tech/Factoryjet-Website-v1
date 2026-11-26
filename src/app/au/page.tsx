@@ -115,6 +115,7 @@ const AU_MORE_PAGES = [
   { href: '/au/b2b-ecommerce', name: "B2B ecommerce" },
   { href: '/au/shopify-plus', name: "Shopify Plus Australia" },
   { href: '/au/shopify-migration', name: "Shopify migration" },
+  { href: '/au/neto-to-shopify', name: "Neto to Shopify migration" },
   { href: '/au/ecommerce-consultant', name: "Ecommerce Consultant Australia" },
   { href: '/au/ecommerce-redesign', name: "Ecommerce Redesign Australia" },
   { href: '/au/woocommerce', name: "WooCommerce development" },
