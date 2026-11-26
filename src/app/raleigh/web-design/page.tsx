@@ -386,42 +386,16 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Raleigh Web Design Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  priceRange: '$$',
-  areaServed: [
-    { '@type': 'City', name: 'Raleigh' },
-    { '@type': 'City', name: 'Durham' },
-    { '@type': 'City', name: 'Cary' },
-    { '@type': 'City', name: 'Chapel Hill' },
-    { '@type': 'City', name: 'Apex' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & CEO',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'Raleigh Web Design & Next.js Development',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Web Design, Frontend Engineering & Conversion Optimization',
   description:
     'Senior engineering-led custom Next.js web design, sub-second page performance, mobile conversion optimization, and full IP ownership for Research Triangle businesses.',
-  areaServed: { '@type': 'State', name: 'North Carolina' },
+  areaServed: [{ '@type': 'State', name: 'North Carolina' }, { '@type': 'City', name: 'Raleigh' }, { '@type': 'City', name: 'Durham' }, { '@type': 'City', name: 'Cary' }, { '@type': 'City', name: 'Chapel Hill' }, { '@type': 'City', name: 'Apex' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -457,7 +431,6 @@ export default function RaleighWebDesignPage() {
   return (
     <>
       <script id="rdu-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="rdu-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="rdu-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="rdu-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="rdu-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

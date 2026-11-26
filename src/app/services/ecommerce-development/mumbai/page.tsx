@@ -110,30 +110,15 @@ const serviceSchema = {
   name: 'Ecommerce Development Mumbai',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Ecommerce Development',
-  areaServed: {
+  areaServed: [{
     '@type': 'City',
     name: 'Mumbai',
     '@id': 'https://www.wikidata.org/wiki/Q1156', // Wikidata label: Mumbai (capital of Maharashtra, India)
-  },
+  }, 'Andheri', 'Bandra', 'BKC', 'Lower Parel', 'Navi Mumbai', 'Thane', 'Powai', 'Malad', 'Goregaon', 'Kurla'],
   description:
     'Ecommerce development for Mumbai businesses: Shopify and WooCommerce stores for fashion, beauty and FMCG brands, jewellery catalogues with gold-rate pricing, omnichannel stock with outlets, warehouse integrations, GST invoicing. Lighthouse 95+.',
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet Ecommerce Development Mumbai',
-  url: 'https://factoryjet.com/services/ecommerce-development/mumbai',
-  image: 'https://factoryjet.com/logo.png',
-  description:
-    'Ecommerce development company serving Mumbai, Thane and Navi Mumbai businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD, warehouse sync and GST invoicing.',
-  areaServed: [
-    'Andheri', 'Bandra', 'BKC', 'Lower Parel', 'Navi Mumbai',
-    'Thane', 'Powai', 'Malad', 'Goregaon', 'Kurla',
-  ],
-  
-};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Journey Stages
@@ -458,11 +443,6 @@ export default function MumbaiEcommercePage() {
         id="mumbai-ecom-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        id="mumbai-ecom-local-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <script
         type="application/ld+json"

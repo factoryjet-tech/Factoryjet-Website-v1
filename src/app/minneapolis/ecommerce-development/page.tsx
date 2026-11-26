@@ -416,42 +416,16 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Minneapolis Ecommerce Development Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  priceRange: '$$$',
-  areaServed: [
-    { '@type': 'City', name: 'Minneapolis' },
-    { '@type': 'City', name: 'St. Paul' },
-    { '@type': 'City', name: 'Bloomington' },
-    { '@type': 'City', name: 'Plymouth' },
-    { '@type': 'City', name: 'Eden Prairie' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & CEO',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'Minneapolis Ecommerce Development & Headless Shopify Plus',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Ecommerce Development, Headless Shopify Plus, B2B Wholesale & Next.js Storefronts',
   description:
     'Custom headless Shopify Plus and Next.js ecommerce development in Minneapolis MN. Sub-second performance, full IP code ownership, and a fixed quote before work starts for Minnesota businesses.',
-  areaServed: { '@type': 'State', name: 'Minnesota' },
+  areaServed: [{ '@type': 'State', name: 'Minnesota' }, { '@type': 'City', name: 'Minneapolis' }, { '@type': 'City', name: 'St. Paul' }, { '@type': 'City', name: 'Bloomington' }, { '@type': 'City', name: 'Plymouth' }, { '@type': 'City', name: 'Eden Prairie' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -487,7 +461,6 @@ export default function MinneapolisEcommercePage() {
   return (
     <>
       <script id="mpls-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="mpls-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="mpls-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="mpls-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="mpls-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

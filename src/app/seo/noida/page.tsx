@@ -67,26 +67,6 @@ const webPageSchema = {
   publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  '@id': 'https://factoryjet.com/seo/noida#localbusiness',
-  name: 'FactoryJet SEO Company in Noida',
-  image: 'https://factoryjet.com/images/services/seo.webp',
-  description:
-    'SEO company in Noida for IT, software, startups, and online brands. We fix your site, get you into the top three businesses on the map, into Google results, and into Google AI answers. No lock-in.',
-  url: 'https://factoryjet.com/seo/noida',
-  email: 'connect@factoryjet.com',
-  areaServed: [
-    { '@type': 'City', name: 'Noida' },
-    { '@type': 'City', name: 'Greater Noida' },
-    { '@type': 'City', name: 'Delhi' },
-    { '@type': 'City', name: 'Ghaziabad' },
-  ],
-  geo: { '@type': 'GeoCircle', geoMidpoint: { '@type': 'GeoCoordinates', latitude: 28.5355, longitude: 77.391 }, geoRadius: '40000' },
-  serviceType: 'Search Engine Optimisation',
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -97,7 +77,7 @@ const serviceSchema = {
   description: 'SEO company in Noida for IT, software, startups, and online brands. Get into the top three businesses on the map, into Google results, and into Google AI answers. No lock-in.',
   url: 'https://factoryjet.com/seo/noida',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  areaServed: { '@type': 'City', name: 'Noida' },
+  areaServed: [{ '@type': 'City', name: 'Noida' }, { '@type': 'City', name: 'Greater Noida' }, { '@type': 'City', name: 'Delhi' }, { '@type': 'City', name: 'Ghaziabad' }],
 };
 
 const speakableSchema = {
@@ -195,7 +175,6 @@ export default function NoidaSeoPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
-      <script id="noi-seo-localbusiness" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script id="noi-seo-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="noi-seo-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />

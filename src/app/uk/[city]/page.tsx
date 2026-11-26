@@ -17,16 +17,36 @@ export async function generateMetadata({
   if (!city) return {}
 
   const url = `https://factoryjet.com/uk/${city.slug}`
+  const title =
+    city.slug === 'cardiff'
+      ? 'Web Design & SEO Agency in Cardiff | FactoryJet'
+      : `Web Design & Digital Agency in ${city.name} | FactoryJet`
+  const description =
+    city.slug === 'cardiff'
+      ? `FactoryJet serves Cardiff businesses with web design, SEO, AI search visibility, ecommerce, and AI agents. ${city.businesses.toLocaleString()}+ local businesses. Free consultation.`
+      : `FactoryJet serves ${city.name} businesses with web design, AI websites, ecommerce, SEO, and AI agents. ${city.businesses.toLocaleString()}+ local businesses. Free consultation.`
 
   return {
-    title:
-      city.slug === 'cardiff'
-        ? 'Web Design & SEO Agency in Cardiff | FactoryJet'
-        : `Web Design & Digital Agency in ${city.name} | FactoryJet`,
-    description:
-      city.slug === 'cardiff'
-        ? `FactoryJet serves Cardiff businesses with web design, SEO, AI search visibility, ecommerce, and AI agents. ${city.businesses.toLocaleString()}+ local businesses. Free consultation.`
-        : `FactoryJet serves ${city.name} businesses with web design, AI websites, ecommerce, SEO, and AI agents. ${city.businesses.toLocaleString()}+ local businesses. Free consultation.`,
+    title,
+    description,
+    // Own Open Graph block: without it, every city inherited the /uk homepage's
+    // og:url, title and description from src/app/uk/metadata.ts (Ahrefs, 2026-11-25).
+    openGraph: {
+      title,
+      description,
+      url,
+      type: 'website',
+      siteName: 'FactoryJet',
+      locale: 'en_GB',
+      images: [
+        {
+          url: '/images/uk/hero-uk.webp',
+          width: 1200,
+          height: 630,
+          alt: `FactoryJet, web design and digital agency serving ${city.name}`,
+        },
+      ],
+    },
     alternates: {
       canonical: url,
       // These 15 city pages are UK-only: there is no India or US twin to point

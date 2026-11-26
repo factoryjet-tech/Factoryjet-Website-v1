@@ -428,42 +428,16 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Boise Ecommerce Development Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  priceRange: '$$$',
-  areaServed: [
-    { '@type': 'City', name: 'Boise' },
-    { '@type': 'City', name: 'Meridian' },
-    { '@type': 'City', name: 'Nampa' },
-    { '@type': 'City', name: 'Eagle' },
-    { '@type': 'City', name: 'Caldwell' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & CEO',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'Boise Ecommerce Development & Shopify Plus Engineering',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Ecommerce Development, Headless Shopify Plus, B2B Commerce & Next.js Storefronts',
   description:
     'Custom headless Shopify Plus and Next.js ecommerce development in Boise ID. Sub-second performance, full IP code ownership, and a fixed quote before work starts for Idaho brands.',
-  areaServed: [{ '@type': 'State', name: 'Idaho' }],
+  areaServed: [{ '@type': 'State', name: 'Idaho' }, { '@type': 'City', name: 'Boise' }, { '@type': 'City', name: 'Meridian' }, { '@type': 'City', name: 'Nampa' }, { '@type': 'City', name: 'Eagle' }, { '@type': 'City', name: 'Caldwell' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -499,7 +473,6 @@ export default function BoiseEcommerceDevelopmentPage() {
   return (
     <>
       <script id="boise-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="boise-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="boise-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="boise-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="boise-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

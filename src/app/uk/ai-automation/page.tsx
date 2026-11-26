@@ -411,6 +411,7 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL, languages: twinAlternates['ai-automation'] },
   openGraph: {
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet' }],
     title: TITLE,
     description:
       'How UK operations teams automate orders, payouts, supplier bills and reports in n8n, Make or Zapier, with MTD digital links, UK GDPR and the EU AI Act covered, and sourced UK build ranges.',

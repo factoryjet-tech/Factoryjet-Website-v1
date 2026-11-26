@@ -69,31 +69,6 @@ const webPageSchema = {
   publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  '@id': 'https://factoryjet.com/seo/hyderabad#localbusiness',
-  name: 'FactoryJet | SEO Company in Hyderabad',
-  description:
-    'FactoryJet provides SEO services in Hyderabad for pharma companies, IT services, real estate developers, healthcare providers, and local businesses across Banjara Hills, Jubilee Hills, Madhapur, Gachibowli, HITEC City, and Secunderabad.',
-  url: 'https://factoryjet.com/seo/hyderabad',
-  email: 'connect@factoryjet.com',
-  areaServed: [
-    { '@type': 'City', name: 'Hyderabad' },
-    { '@type': 'City', name: 'Secunderabad' },
-    { '@type': 'City', name: 'Gachibowli' },
-    { '@type': 'City', name: 'HITEC City' },
-  ],
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-    opens: '09:00',
-    closes: '18:00',
-  },
-  
-  sameAs: ['https://www.linkedin.com/company/factoryjet', 'https://clutch.co/profile/factoryjet-private', 'https://www.goodfirms.co/company/factoryjet-private-limited', 'https://www.designrush.com/agency/profile/factoryjet', 'https://www.softwaresuggest.com/factoryjet', 'https://www.crunchbase.com/organization/factoryjet'],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -105,7 +80,7 @@ const serviceSchema = {
     'SEO services in Hyderabad for pharma, IT, real estate, healthcare, and local businesses. Serving Banjara Hills, Jubilee Hills, Madhapur, Gachibowli, HITEC City, Ameerpet, and Secunderabad.',
   url: 'https://factoryjet.com/seo/hyderabad',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  areaServed: { '@type': 'City', name: 'Hyderabad' },
+  areaServed: [{ '@type': 'City', name: 'Hyderabad' }, { '@type': 'City', name: 'Secunderabad' }, { '@type': 'City', name: 'Gachibowli' }, { '@type': 'City', name: 'HITEC City' }],
 };
 
 const speakableSchema = {
@@ -365,7 +340,6 @@ export default function SeoHyderabad() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
-      <script id="hyd-seo-localbusiness" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script id="hyd-seo-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="hyd-seo-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />

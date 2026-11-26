@@ -69,31 +69,6 @@ const webPageSchema = {
   publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  '@id': 'https://factoryjet.com/seo/pune#localbusiness',
-  name: 'FactoryJet | SEO Company in Pune',
-  description:
-    'FactoryJet provides SEO services in Pune for IT companies, automotive suppliers, manufacturing firms, real estate developers, education businesses, and local service providers across Hinjewadi, Kharadi, Baner, Koregaon Park, Viman Nagar, Pimple Saudagar, and Wakad.',
-  url: 'https://factoryjet.com/seo/pune',
-  email: 'connect@factoryjet.com',
-  areaServed: [
-    { '@type': 'City', name: 'Pune' },
-    { '@type': 'City', name: 'Pimpri-Chinchwad' },
-    { '@type': 'City', name: 'Hinjewadi' },
-    { '@type': 'City', name: 'Kharadi' },
-  ],
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-    opens: '09:00',
-    closes: '18:00',
-  },
-  
-  sameAs: ['https://www.linkedin.com/company/factoryjet', 'https://clutch.co/profile/factoryjet-private', 'https://www.goodfirms.co/company/factoryjet-private-limited', 'https://www.designrush.com/agency/profile/factoryjet', 'https://www.softwaresuggest.com/factoryjet', 'https://www.crunchbase.com/organization/factoryjet'],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -105,7 +80,7 @@ const serviceSchema = {
     'SEO services in Pune for IT companies, auto suppliers, manufacturing firms, real estate developers, education institutions, and local businesses. Serving Hinjewadi, Kharadi, Baner, Koregaon Park, Viman Nagar, Wakad, Pimple Saudagar, and Pimpri-Chinchwad.',
   url: 'https://factoryjet.com/seo/pune',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  areaServed: { '@type': 'City', name: 'Pune' },
+  areaServed: [{ '@type': 'City', name: 'Pune' }, { '@type': 'City', name: 'Pimpri-Chinchwad' }, { '@type': 'City', name: 'Hinjewadi' }, { '@type': 'City', name: 'Kharadi' }],
 };
 
 const speakableSchema = {
@@ -368,7 +343,6 @@ export default function SeoPune() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
-      <script id="pune-seo-localbusiness" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script id="pune-seo-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="pune-seo-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />

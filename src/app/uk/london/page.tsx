@@ -449,28 +449,12 @@ const jsonLd = {
   '@graph': [
     { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
     {
-      '@type': 'LocalBusiness',
-      '@id': `${CANONICAL}#localbusiness`,
+      '@type': 'Service',
+      '@id': `${CANONICAL}#service`,
       name: 'FactoryJet: Web Design & Digital Agency for London',
       url: CANONICAL,
       areaServed: { '@type': 'City', name: 'London' },
       provider: { '@id': 'https://factoryjet.com/#organization' },
-      parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-      // NOTE (2026-08-25): an aggregateRating of 4.9 from 64 reviews was removed
-      // here. No review of that count is visible on this page and the figure was
-      // never sourced, which makes it both a Google structured-data policy breach
-      // and a claim we cannot stand behind. Do not reinstate it without real,
-      // on-page, verifiable reviews.
-      author: {
-        '@type': 'Person',
-        name: 'Bhavesh Barot',
-        jobTitle: 'Founder & CEO',
-        url: 'https://factoryjet.com/about',
-        sameAs: [
-          'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-          'https://github.com/factoryjet-tech',
-        ],
-      },
     },
     breadcrumbSchema,
     {

@@ -273,6 +273,7 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL, languages: twinAlternates['ai-integration-services'] },
   openGraph: {
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet' }],
     title: TITLE,
     description:
       'AI connected to Xero, MYOB, NetSuite, Cin7, Unleashed, Australian marketplaces and couriers, with approval on anything involving money. Demo on your data before you sign. You own the code.',

@@ -4,8 +4,11 @@
  * Rules enforced:
  *   - Absolute URLs only.
  *   - x-default always points to the India (en-IN) URL (or US if IN doesn't exist).
- *   - en-AE points to /uae (country landing) until a dedicated UAE service page
- *     exists for that topic. The first exception shipped 2026-08-01:
+ *   - Only pair true equivalents. Never point a topic page at a country homepage
+ *     (/uae, /uk): those homepages belong to the homepage cluster and cannot return
+ *     the tag, so the pair is non-reciprocal and ignored (Ahrefs flagged 7 pages on
+ *     2026-11-25 for exactly this). Omit en-AE / en-GB until a dedicated country page
+ *     exists for that topic. Dedicated UAE pages are handled as follows; the first shipped 2026-08-01:
  *     ecommerce-development now has a dedicated /uae/ecommerce-development page,
  *     so en-AE for that topic points there instead (see
  *     ecommerceDevelopmentAlternatesUAE below). Repeat this pattern: a new
@@ -73,7 +76,7 @@ export const auHubAlternates = {
 export const webDesignAlternates = {
   'en-IN': 'https://factoryjet.com/web-design',
   'en-US': 'https://factoryjet.com/services/web-design',
-  'en-AE': 'https://factoryjet.com/uae',
+  // en-AE removed 2026-11-26: /uae is a homepage and never returned the tag.
   // en-GB → the dedicated /uk/web-design page, not the /uk country landing.
   // Corrected 2026-08-04: a dedicated UK web-design page exists, but this map
   // still pointed en-GB at /uk while /uk/web-design emitted no languages at all,
@@ -144,8 +147,7 @@ export const ecommerceDevelopmentAlternatesUAE = {
 export const pricingAlternates = {
   'en-IN': 'https://factoryjet.com/pricing',
   'en-US': 'https://factoryjet.com/pricing',
-  'en-AE': 'https://factoryjet.com/uae',
-  'en-GB': 'https://factoryjet.com/uk',
+  // No UAE or UK pricing page exists; en-AE/en-GB pointed at country homepages (removed 2026-11-26).
   'x-default': 'https://factoryjet.com/pricing',
 } as const
 
@@ -153,8 +155,7 @@ export const pricingAlternates = {
 export const aboutAlternates = {
   'en-IN': 'https://factoryjet.com/about',
   'en-US': 'https://factoryjet.com/about',
-  'en-AE': 'https://factoryjet.com/uae',
-  'en-GB': 'https://factoryjet.com/uk',
+  // No UAE or UK about page exists; en-AE/en-GB pointed at country homepages (removed 2026-11-26).
   'x-default': 'https://factoryjet.com/about',
 } as const
 
@@ -287,16 +288,15 @@ export const aiSeoAlternates = {
 } as const
 
 /**
- * Digital Marketing hub — India-positioned (/digital-marketing). No dedicated US
- * digital-marketing page exists, so en-US + x-default point at the US /services hub
- * (keeps generic/NA searchers off the India-scoped page, matching the geo-seg fix).
+ * Digital Marketing hub, India-positioned (/digital-marketing). Single-country page, so
+ * only en-IN + x-default (rule above). Until 2026-11-26 en-US/x-default pointed at
+ * /services and en-AE/en-GB at /uae and /uk; none of those pages returned the tag, so
+ * search engines ignored the pairs. US/CA humans are still steered by the edge
+ * geo-redirect in functions/_middleware.js.
  */
 export const digitalMarketingAlternates = {
   'en-IN': 'https://factoryjet.com/digital-marketing',
-  'en-US': 'https://factoryjet.com/services',
-  'en-AE': 'https://factoryjet.com/uae',
-  'en-GB': 'https://factoryjet.com/uk',
-  'x-default': 'https://factoryjet.com/services',
+  'x-default': 'https://factoryjet.com/digital-marketing',
 } as const
 
 // ===========================================================================

@@ -67,24 +67,6 @@ const webPageSchema = {
   publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  '@id': 'https://factoryjet.com/seo/jaipur#localbusiness',
-  name: 'FactoryJet SEO Company in Jaipur',
-  image: 'https://factoryjet.com/images/services/seo.webp',
-  description: 'SEO company in Jaipur for gem and jewellery exporters, handicraft brands, hotels, and IT firms. We fix your site, help you win abroad, win the top three businesses on the map, and get named in Google AI answers. No lock-in.',
-  url: 'https://factoryjet.com/seo/jaipur',
-  email: 'connect@factoryjet.com',
-  areaServed: [
-    { '@type': 'City', name: 'Jaipur' },
-    { '@type': 'City', name: 'Sitapura' },
-    { '@type': 'City', name: 'Sanganer' },
-  ],
-  geo: { '@type': 'GeoCircle', geoMidpoint: { '@type': 'GeoCoordinates', latitude: 26.9124, longitude: 75.7873 }, geoRadius: '40000' },
-  serviceType: 'Search Engine Optimisation',
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -95,7 +77,7 @@ const serviceSchema = {
   description: 'SEO company in Jaipur for gem and jewellery exporters, handicraft brands, hotels, and IT firms. Win abroad, win the top three businesses on the map, and get named in Google AI answers. No lock-in.',
   url: 'https://factoryjet.com/seo/jaipur',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  areaServed: { '@type': 'City', name: 'Jaipur' },
+  areaServed: [{ '@type': 'City', name: 'Jaipur' }, { '@type': 'City', name: 'Sitapura' }, { '@type': 'City', name: 'Sanganer' }],
 };
 
 const speakableSchema = {
@@ -193,7 +175,6 @@ export default function JaipurSeoPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
-      <script id="jai-seo-localbusiness" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script id="jai-seo-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="jai-seo-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />

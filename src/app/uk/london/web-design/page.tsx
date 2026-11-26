@@ -165,15 +165,6 @@ const jsonLd = {
       areaServed: { '@type': 'City', name: 'London' },
       url: CANONICAL,
     },
-    {
-      '@type': 'LocalBusiness',
-      parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-      '@id': `${CANONICAL}#business`,
-      name: 'FactoryJet Web Design London',
-      url: CANONICAL,
-      areaServed: { '@type': 'City', name: 'London' },
-      provider: { '@id': 'https://factoryjet.com/#organization' },
-    },
     breadcrumbSchema,
     {
       '@type': ['WebPage', 'Article'],

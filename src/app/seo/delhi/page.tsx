@@ -70,32 +70,6 @@ const webPageSchema = {
   publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  '@id': 'https://factoryjet.com/seo/delhi#localbusiness',
-  name: 'FactoryJet | SEO Company in Delhi',
-  description:
-    'FactoryJet provides SEO services in Delhi NCR for exporters, traders, wholesalers, clinics, coaching institutes, and local businesses across Connaught Place, Nehru Place, Rohini, Dwarka, South Delhi, Noida, and Gurugram.',
-  url: 'https://factoryjet.com/seo/delhi',
-  email: 'connect@factoryjet.com',
-  areaServed: [
-    { '@type': 'City', name: 'Delhi' },
-    { '@type': 'City', name: 'New Delhi' },
-    { '@type': 'City', name: 'Noida' },
-    { '@type': 'City', name: 'Gurugram' },
-    { '@type': 'City', name: 'Faridabad' },
-  ],
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-    opens: '09:00',
-    closes: '18:00',
-  },
-  
-  sameAs: ['https://www.linkedin.com/company/factoryjet', 'https://clutch.co/profile/factoryjet-private', 'https://www.goodfirms.co/company/factoryjet-private-limited', 'https://www.designrush.com/agency/profile/factoryjet', 'https://www.softwaresuggest.com/factoryjet', 'https://www.crunchbase.com/organization/factoryjet'],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -107,7 +81,7 @@ const serviceSchema = {
     'SEO services in Delhi covering local SEO, technical SEO, ecommerce SEO, export SEO, link building, and SEO audits. Serving Connaught Place, Nehru Place, Rohini, Dwarka, South Delhi, Noida, and Gurugram.',
   url: 'https://factoryjet.com/seo/delhi',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  areaServed: { '@type': 'City', name: 'Delhi' },
+  areaServed: [{ '@type': 'City', name: 'Delhi' }, { '@type': 'City', name: 'New Delhi' }, { '@type': 'City', name: 'Noida' }, { '@type': 'City', name: 'Gurugram' }, { '@type': 'City', name: 'Faridabad' }],
 };
 
 const speakableSchema = {
@@ -451,7 +425,6 @@ export default function SeoDelhi() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
-      <script id="delhi-seo-localbusiness" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script id="delhi-seo-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="delhi-seo-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />

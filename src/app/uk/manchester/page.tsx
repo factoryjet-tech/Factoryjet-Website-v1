@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL },
   },
   openGraph: {
+    type: 'website',
     locale: 'en_GB',
     title: 'SEO Agency Manchester | Web Design, AI SEO | FactoryJet',
     description:
@@ -32,28 +33,6 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-    {
-      '@type': 'LocalBusiness',
-      parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-      '@id': `${CANONICAL}#business`,
-      name: 'FactoryJet: Manchester',
-      url: CANONICAL,
-      description: 'SEO, web design, e-commerce and AI search agency serving Manchester and the North West.',
-      areaServed: {
-        '@type': 'City',
-        name: 'Manchester',
-      },
-      author: {
-        '@type': 'Person',
-        name: 'Bhavesh Barot',
-        jobTitle: 'Founder & CEO',
-        url: 'https://factoryjet.com/about',
-        sameAs: [
-          'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-          'https://github.com/factoryjet-tech',
-        ],
-      },
-    },
     // No aggregateRating on the Service node below: there is no review corpus
     // behind a number, and Google treats review markup it can't trace to real
     // reviews as a structured-data policy problem. Add it back only with real,
@@ -66,16 +45,6 @@ const jsonLd = {
       provider: { '@id': 'https://factoryjet.com/#organization' },
       areaServed: { '@type': 'City', name: 'Manchester' },
       url: CANONICAL,
-      author: {
-        '@type': 'Person',
-        name: 'Bhavesh Barot',
-        jobTitle: 'Founder & CEO',
-        url: 'https://factoryjet.com/about',
-        sameAs: [
-          'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-          'https://github.com/factoryjet-tech',
-        ],
-      },
     },
     {
       '@type': 'WebPage',

@@ -418,35 +418,10 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Chicago E-Commerce Development Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  areaServed: [
-    { '@type': 'City', name: 'Chicago' },
-    { '@type': 'City', name: 'Naperville' },
-    { '@type': 'City', name: 'Schaumburg' },
-    { '@type': 'City', name: 'Oak Brook' },
-    { '@type': 'City', name: 'Evanston' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & Chief Technical Architect',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'Chicago E-Commerce Development & Shopify Plus Architecture',
   provider: {
     '@type': 'Organization',
@@ -457,11 +432,7 @@ const SERVICE_SCHEMA = {
   serviceType: 'E-Commerce Development, Shopify Plus Engineering & B2B Wholesale Portals',
   description:
     'Senior engineering-led custom Shopify Plus storefronts, B2B wholesale portals, ERP integrations, and headless commerce engineering for Chicago businesses.',
-  areaServed: [
-    { '@type': 'City', name: 'Chicago' },
-    { '@type': 'State', name: 'Illinois' },
-    { '@type': 'Country', name: 'United States' },
-  ],
+  areaServed: [{ '@type': 'City', name: 'Chicago' }, { '@type': 'State', name: 'Illinois' }, { '@type': 'Country', name: 'United States' }, { '@type': 'City', name: 'Naperville' }, { '@type': 'City', name: 'Schaumburg' }, { '@type': 'City', name: 'Oak Brook' }, { '@type': 'City', name: 'Evanston' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -505,7 +476,6 @@ export default function ChicagoEcommercePage() {
   return (
     <>
       <script id="chi-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="chi-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="chi-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="chi-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="chi-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

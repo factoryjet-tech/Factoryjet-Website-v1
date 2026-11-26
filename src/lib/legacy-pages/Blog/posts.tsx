@@ -4484,7 +4484,7 @@ export const POSTS: BlogPost[] = [
         Unlike agencies that focus only on design aesthetics, FactoryJet approaches every project from a <strong>business-growth and conversion-first perspective</strong>.
       </p>
       <p className="mb-4">
-        At FactoryJet, <strong>our <a href="https://factoryjet.com/web-design/mumbai" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 transition-colors">web design services in Mumbai</a></strong> are built around lead generation and measurable growth.
+        At FactoryJet, <strong>our <a href="https://factoryjet.com/web-design/mumbai" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 transition-colors">web design services in Mumbai</a></strong> are built around lead generation and measurable growth. For online stores, see our <a href="/services/ecommerce-development/mumbai" className="text-blue-600 underline hover:text-blue-800 transition-colors">ecommerce website development in Mumbai</a> page.
       </p>
       <ul className="list-disc pl-6 space-y-2 mb-4">
         <li>conversion rate optimization (CRO)</li>

@@ -114,30 +114,15 @@ const serviceSchema = {
     url: 'https://factoryjet.com',
   },
   serviceType: 'Ecommerce Development',
-  areaServed: {
+  areaServed: [{
     '@type': 'City',
     name: 'Surat',
     '@id': 'https://www.wikidata.org/wiki/Q4629', // Wikidata label: Surat (city in Gujarat, India)
-  },
+  }, 'Althan', 'Adajan', 'Vesu', 'Udhna', 'Varachha', 'Ring Road', 'Katargam', 'Sachin GIDC'],
   description:
     'Ecommerce development for Surat businesses: Shopify and WooCommerce stores for saree and dress material brands, catalogues for resellers, private portals for natural and lab-grown diamond dealers, GST invoicing. Lighthouse 95+.',
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet Ecommerce Development Surat',
-  url: 'https://factoryjet.com/services/ecommerce-development/surat',
-  image: 'https://factoryjet.com/logo.png',
-  description:
-    'Ecommerce development company serving Surat traders and makers in Varachha, Katargam, Adajan and the Ring Road markets. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST.',
-  areaServed: [
-    'Althan', 'Adajan', 'Vesu', 'Udhna', 'Varachha',
-    'Ring Road', 'Katargam', 'Sachin GIDC',
-  ],
-  
-};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Journey Stages
@@ -450,11 +435,6 @@ export default function SuratEcommercePage() {
         id="surat-ecom-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        id="surat-ecom-local-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <script
         type="application/ld+json"

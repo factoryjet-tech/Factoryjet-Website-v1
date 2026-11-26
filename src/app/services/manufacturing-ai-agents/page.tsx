@@ -1148,6 +1148,10 @@ export default function ManufacturingAiAgentsPage() {
               <Link href="/blog/agentic-ai-in-manufacturing-use-cases-2026" className="font-semibold underline underline-offset-2 text-[#B23E13]">
                 agentic AI in manufacturing
               </Link>
+              . To compare a quoting product with a custom quoting agent, see{' '}
+              <Link href="/services/ai-quoting-software" className="font-semibold underline underline-offset-2 text-[#B23E13]">
+                AI quoting software
+              </Link>
               . If you work in construction, see{' '}
               <Link href="/services/construction-ai-agents" className="font-semibold underline underline-offset-2 text-[#B23E13]">
                 AI agents for contractors and building suppliers

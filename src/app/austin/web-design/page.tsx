@@ -446,35 +446,10 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Austin Web Design Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  areaServed: [
-    { '@type': 'City', name: 'Austin' },
-    { '@type': 'City', name: 'Round Rock' },
-    { '@type': 'City', name: 'Cedar Park' },
-    { '@type': 'City', name: 'Georgetown' },
-    { '@type': 'City', name: 'San Marcos' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & Chief Technical Architect',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'Austin Web Design & Next.js Development',
   provider: {
     '@type': 'Organization',
@@ -485,11 +460,7 @@ const SERVICE_SCHEMA = {
   serviceType: 'Web Design, Frontend Engineering & Conversion Optimization',
   description:
     'Senior engineering-led custom Next.js web design, sub-second page performance, mobile conversion optimization, and full IP ownership for Austin businesses.',
-  areaServed: [
-    { '@type': 'City', name: 'Austin' },
-    { '@type': 'State', name: 'Texas' },
-    { '@type': 'Country', name: 'United States' },
-  ],
+  areaServed: [{ '@type': 'City', name: 'Austin' }, { '@type': 'State', name: 'Texas' }, { '@type': 'Country', name: 'United States' }, { '@type': 'City', name: 'Round Rock' }, { '@type': 'City', name: 'Cedar Park' }, { '@type': 'City', name: 'Georgetown' }, { '@type': 'City', name: 'San Marcos' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -533,7 +504,6 @@ export default function AustinWebDesignPage() {
   return (
     <>
       <script id="atx-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="atx-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="atx-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="atx-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="atx-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

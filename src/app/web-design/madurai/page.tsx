@@ -125,8 +125,8 @@ const webPageSchema = {
 export default function Page() {
   const localBusinessSchema = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
+    '@type': 'Service',
+    provider: { '@id': 'https://factoryjet.com/#organization' },
     name: 'FactoryJet Web Design Madurai',
     description: 'Professional web design company serving Madurai businesses across textile, engineering, healthcare, education, and tourism sectors.',
     url: 'https://factoryjet.com/web-design/madurai',

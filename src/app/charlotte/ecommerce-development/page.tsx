@@ -451,41 +451,16 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Charlotte Ecommerce Development Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  areaServed: [
-    { '@type': 'City', name: 'Charlotte' },
-    { '@type': 'City', name: 'Huntersville' },
-    { '@type': 'City', name: 'Matthews' },
-    { '@type': 'City', name: 'Concord' },
-    { '@type': 'City', name: 'Fort Mill' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & CEO',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'Charlotte Ecommerce Development & Shopify Plus Engineering',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Ecommerce Development, Shopify Plus & B2B Portals',
   description:
     'Senior engineering-led Shopify Plus and WooCommerce development, Shop Pay acceleration, wholesale B2B portals, and ERP integrations in Charlotte NC.',
-  areaServed: { '@type': 'State', name: 'North Carolina' },
+  areaServed: [{ '@type': 'State', name: 'North Carolina' }, { '@type': 'City', name: 'Charlotte' }, { '@type': 'City', name: 'Huntersville' }, { '@type': 'City', name: 'Matthews' }, { '@type': 'City', name: 'Concord' }, { '@type': 'City', name: 'Fort Mill' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -521,7 +496,6 @@ export default function CharlotteEcommerceDevelopmentPage() {
   return (
     <>
       <script id="charlotte-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="charlotte-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="charlotte-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="charlotte-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="charlotte-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

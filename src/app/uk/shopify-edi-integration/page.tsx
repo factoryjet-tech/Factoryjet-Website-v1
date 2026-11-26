@@ -360,6 +360,7 @@ export const metadata: Metadata = {
     languages: twinAlternates['shopify-edi-integration'],
   },
   openGraph: {
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet' }],
     title: TITLE,
     description:
       'How UK suppliers take EDI orders from retailers and distributors into Shopify and send despatch advice and VAT invoices back: EANCOM, Tradacoms, GS1 numbers and the 2029 e-invoicing change.',

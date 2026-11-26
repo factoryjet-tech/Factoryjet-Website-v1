@@ -422,41 +422,16 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Nashville E-Commerce Development Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  areaServed: [
-    { '@type': 'City', name: 'Nashville' },
-    { '@type': 'City', name: 'Brentwood' },
-    { '@type': 'City', name: 'Franklin' },
-    { '@type': 'City', name: 'Murfreesboro' },
-    { '@type': 'City', name: 'Hendersonville' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & CEO',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'Nashville E-Commerce Development & Headless Architecture',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'E-Commerce Development, Shopify Plus, BigCommerce B2B & ERP Integration',
   description:
     'Senior engineering-led custom headless e-commerce development, sub-second checkout speeds, ERP integrations, and full IP code ownership for Nashville enterprise brands.',
-  areaServed: { '@type': 'State', name: 'Tennessee' },
+  areaServed: [{ '@type': 'State', name: 'Tennessee' }, { '@type': 'City', name: 'Nashville' }, { '@type': 'City', name: 'Brentwood' }, { '@type': 'City', name: 'Franklin' }, { '@type': 'City', name: 'Murfreesboro' }, { '@type': 'City', name: 'Hendersonville' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -492,7 +467,6 @@ export default function NashvilleEcommercePage() {
   return (
     <>
       <script id="bna-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="bna-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="bna-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="bna-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="bna-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

@@ -67,25 +67,6 @@ const webPageSchema = {
   publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  '@id': 'https://factoryjet.com/seo/vadodara#localbusiness',
-  name: 'FactoryJet SEO Agency in Vadodara',
-  image: 'https://factoryjet.com/images/services/seo.webp',
-  description: 'SEO agency in Vadodara for engineering, petrochemical, pharmaceutical, and manufacturing firms. We give you a fast site Google can read, the right search plan to win business across India and abroad, and a place in Google AI answers. No lock-in.',
-  url: 'https://factoryjet.com/seo/vadodara',
-  email: 'connect@factoryjet.com',
-  areaServed: [
-    { '@type': 'City', name: 'Vadodara' },
-    { '@type': 'City', name: 'Makarpura' },
-    { '@type': 'City', name: 'Nandesari' },
-    { '@type': 'City', name: 'Halol' },
-  ],
-  geo: { '@type': 'GeoCircle', geoMidpoint: { '@type': 'GeoCoordinates', latitude: 22.3072, longitude: 73.1812 }, geoRadius: '50000' },
-  serviceType: 'Search Engine Optimisation',
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -96,7 +77,7 @@ const serviceSchema = {
   description: 'SEO agency in Vadodara for engineering, petrochemical, pharma, and manufacturing firms. Win business across India, win export orders, and get named in Google AI answers. No lock-in.',
   url: 'https://factoryjet.com/seo/vadodara',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  areaServed: { '@type': 'City', name: 'Vadodara' },
+  areaServed: [{ '@type': 'City', name: 'Vadodara' }, { '@type': 'City', name: 'Makarpura' }, { '@type': 'City', name: 'Nandesari' }, { '@type': 'City', name: 'Halol' }],
 };
 
 const speakableSchema = {
@@ -194,7 +175,6 @@ export default function VadodaraSeoPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
-      <script id="vad-seo-localbusiness" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script id="vad-seo-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="vad-seo-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />

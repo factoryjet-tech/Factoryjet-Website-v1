@@ -433,41 +433,16 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Phoenix Web Design Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  areaServed: [
-    { '@type': 'City', name: 'Phoenix' },
-    { '@type': 'City', name: 'Scottsdale' },
-    { '@type': 'City', name: 'Tempe' },
-    { '@type': 'City', name: 'Chandler' },
-    { '@type': 'City', name: 'Gilbert' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & CEO',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'Phoenix Web Design & Next.js Development',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Web Design, Next.js Development, UI/UX Design & Headless CMS',
   description:
     'Custom Next.js web design and engineering in Phoenix AZ. Sub-second performance, full IP code ownership, and rapid 7-day delivery for Arizona businesses.',
-  areaServed: { '@type': 'State', name: 'Arizona' },
+  areaServed: [{ '@type': 'State', name: 'Arizona' }, { '@type': 'City', name: 'Phoenix' }, { '@type': 'City', name: 'Scottsdale' }, { '@type': 'City', name: 'Tempe' }, { '@type': 'City', name: 'Chandler' }, { '@type': 'City', name: 'Gilbert' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -503,7 +478,6 @@ export default function PhoenixWebDesignPage() {
   return (
     <>
       <script id="phx-web-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="phx-web-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="phx-web-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="phx-web-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="phx-web-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

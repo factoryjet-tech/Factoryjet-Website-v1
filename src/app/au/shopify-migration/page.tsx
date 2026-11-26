@@ -270,6 +270,7 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL, languages: twinAlternates['shopify-migration'] },
   openGraph: {
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet' }],
     title: TITLE,
     description:
       'Moving an established Australian store from Magento, WooCommerce, Neto or BigCommerce to Shopify: a draft on your own data before you sign, a written redirect map, and Xero, MYOB, Afterpay and marketplaces reconnected.',

@@ -1544,7 +1544,11 @@ export default function ConstructionAiAgentsPage() {
               >
                 RFQ automation agent
               </Link>{' '}
-              page.
+              page, and to weigh a quoting product against a custom agent, see{' '}
+              <Link href="/services/ai-quoting-software" className="font-semibold text-fj-ink underline underline-offset-4">
+                AI quoting software
+              </Link>
+              .
             </p>
 
             <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-12">

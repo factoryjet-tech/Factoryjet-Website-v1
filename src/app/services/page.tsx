@@ -45,6 +45,7 @@ export const metadata: Metadata = {
   description: PAGE_DESC,
   alternates: { canonical: CANONICAL_URL },
   openGraph: {
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet' }],
     locale: 'en_US',
     title: PAGE_TITLE,
     description: PAGE_DESC,

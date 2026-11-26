@@ -421,41 +421,16 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - St. Louis Web Design Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  areaServed: [
-    { '@type': 'City', name: 'St. Louis' },
-    { '@type': 'City', name: 'Clayton' },
-    { '@type': 'City', name: 'Chesterfield' },
-    { '@type': 'City', name: 'St. Charles' },
-    { '@type': 'City', name: 'Hazelwood' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & CEO',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'St. Louis Web Design & Next.js Development',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Web Design, Next.js Development, UI/UX Design & Headless CMS',
   description:
     'Custom Next.js web design and engineering in St. Louis MO. Sub-second performance, full IP code ownership, and rapid 7-day delivery for Missouri businesses.',
-  areaServed: { '@type': 'State', name: 'Missouri' },
+  areaServed: [{ '@type': 'State', name: 'Missouri' }, { '@type': 'City', name: 'St. Louis' }, { '@type': 'City', name: 'Clayton' }, { '@type': 'City', name: 'Chesterfield' }, { '@type': 'City', name: 'St. Charles' }, { '@type': 'City', name: 'Hazelwood' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -491,7 +466,6 @@ export default function StLouisWebDesignPage() {
   return (
     <>
       <script id="stl-web-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="stl-web-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="stl-web-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="stl-web-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="stl-web-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

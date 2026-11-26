@@ -493,14 +493,6 @@ const jsonLd = {
         ].map((n) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: n } })),
       },
     },
-    {
-      '@type': 'LocalBusiness',
-      '@id': `${CANONICAL}#localbusiness`,
-      name: 'FactoryJet SEO Agency London',
-      url: CANONICAL,
-      areaServed: { '@type': 'City', name: 'London' },
-      parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-    },
     breadcrumbSchema,
     {
       '@type': ['WebPage', 'Article'],

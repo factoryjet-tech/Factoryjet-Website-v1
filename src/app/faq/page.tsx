@@ -10,6 +10,16 @@ export const metadata: Metadata = {
   description:
     '24 answers on ecommerce builds, B2B and DTC on one store, AI agents, platforms, costs and working with FactoryJet, each linked to the page that goes deeper.',
   alternates: { canonical: 'https://factoryjet.com/faq', languages: faqAlternates },
+  // Own Open Graph block: it used to inherit the homepage's og:url, title and description.
+  openGraph: {
+    type: 'website',
+    siteName: 'FactoryJet',
+    title: 'Ecommerce, AI Agent and B2B Commerce FAQ | FactoryJet',
+    description:
+      '24 answers on ecommerce builds, B2B and DTC on one store, AI agents, platforms, costs and working with FactoryJet, each linked to the page that goes deeper.',
+    url: 'https://factoryjet.com/faq',
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet ecommerce, AI agent and B2B commerce FAQ' }],
+  },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
 };
 

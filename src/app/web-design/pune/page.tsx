@@ -101,15 +101,14 @@ const webPageSchema = {
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  '@id': 'https://factoryjet.com/web-design/pune#localbusiness',
+  '@type': 'Service',
+  provider: { '@id': 'https://factoryjet.com/#organization' },
+  '@id': 'https://factoryjet.com/web-design/pune#service',
   name: 'FactoryJet | Website Design for Pune Businesses',
   image: 'https://factoryjet.com/images/services/web-design.webp',
   description:
     'Website design for Pune software houses, Chakan and PCMC component makers, coaching institutes and consumer brands. Next.js builds delivered in 7 days.',
   url: 'https://factoryjet.com/web-design/pune',
-  email: 'connect@factoryjet.com',
   areaServed: [
     { '@type': 'City', name: 'Pune' },
     { '@type': 'City', name: 'Pimpri-Chinchwad' },

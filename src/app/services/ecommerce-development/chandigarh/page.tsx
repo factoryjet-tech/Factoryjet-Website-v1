@@ -114,30 +114,15 @@ const serviceSchema = {
     url: 'https://factoryjet.com',
   },
   serviceType: 'Ecommerce Development',
-  areaServed: {
+  areaServed: [{
     '@type': 'City',
     name: 'Chandigarh',
     '@id': 'https://www.wikidata.org/wiki/Q43433', // Wikidata label: Chandigarh (Union Territory, capital of Punjab and Haryana, India)
-  },
+  }, 'Sector 17', 'Sector 22', 'Sector 35', 'IT Park', 'Industrial Area Phase 1', 'Mohali', 'Panchkula', 'Zirakpur'],
   description:
     'Ecommerce development for Chandigarh Tricity businesses: Shopify and WooCommerce stores for fashion and food brands, international shipping to the Punjabi diaspora, B2B ordering for pharma and hosiery makers. Lighthouse 95+.',
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet Ecommerce Development Chandigarh',
-  url: 'https://factoryjet.com/services/ecommerce-development/chandigarh',
-  image: 'https://factoryjet.com/logo.png',
-  description:
-    'Ecommerce development company serving Chandigarh, Mohali and Panchkula businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing.',
-  areaServed: [
-    'Sector 17', 'Sector 22', 'Sector 35', 'IT Park', 'Industrial Area Phase 1',
-    'Mohali', 'Panchkula', 'Zirakpur',
-  ],
-  
-};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Journey Stages
@@ -450,11 +435,6 @@ export default function ChandigarhEcommercePage() {
         id="chandigarh-ecom-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        id="chandigarh-ecom-local-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <script
         type="application/ld+json"

@@ -102,14 +102,13 @@ const webPageSchema = {
 
 const localBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  '@id': 'https://factoryjet.com/web-design/kolkata#organization',
-  name: 'FactoryJet',
+  '@type': 'Service',
+  provider: { '@id': 'https://factoryjet.com/#organization' },
+  '@id': 'https://factoryjet.com/web-design/kolkata#service',
+  name: 'FactoryJet Web Design Kolkata',
   description:
     'Web design company in Kolkata. We build quick-loading, search-ready websites for jute and tea exporters, Sector V IT firms, port logistics and retail brands. 7-day delivery.',
   url: 'https://factoryjet.com/web-design/kolkata',
-  email: 'connect@factoryjet.com',
   areaServed: [
     { '@type': 'City', name: 'Kolkata' },
     { '@type': 'City', name: 'Howrah' },

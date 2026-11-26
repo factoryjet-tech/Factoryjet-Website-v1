@@ -422,41 +422,16 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Kansas City Web Design Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  areaServed: [
-    { '@type': 'City', name: 'Kansas City' },
-    { '@type': 'City', name: 'Overland Park' },
-    { '@type': 'City', name: 'Olathe' },
-    { '@type': 'City', name: 'Lenexa' },
-    { '@type': 'City', name: 'Lee\'s Summit' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & CEO',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'Kansas City Web Design & Next.js Development',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Web Design, Next.js Development, UI/UX Design & Headless CMS',
   description:
     'Custom Next.js web design and engineering in Kansas City MO. Sub-second performance, full IP code ownership, and rapid 7-day delivery for Midwest businesses.',
-  areaServed: [{ '@type': 'State', name: 'Missouri' }, { '@type': 'State', name: 'Kansas' }],
+  areaServed: [{ '@type': 'State', name: 'Missouri' }, { '@type': 'State', name: 'Kansas' }, { '@type': 'City', name: 'Kansas City' }, { '@type': 'City', name: 'Overland Park' }, { '@type': 'City', name: 'Olathe' }, { '@type': 'City', name: 'Lenexa' }, { '@type': 'City', name: 'Lee\'s Summit' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -492,7 +467,6 @@ export default function KansasCityWebDesignPage() {
   return (
     <>
       <script id="kc-web-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="kc-web-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="kc-web-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="kc-web-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="kc-web-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

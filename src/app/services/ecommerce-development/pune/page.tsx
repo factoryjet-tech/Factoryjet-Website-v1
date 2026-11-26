@@ -114,30 +114,15 @@ const serviceSchema = {
     url: 'https://factoryjet.com',
   },
   serviceType: 'Ecommerce Development',
-  areaServed: {
+  areaServed: [{
     '@type': 'City',
     name: 'Pune',
     '@id': 'https://www.wikidata.org/wiki/Q1538', // Wikidata label: Pune (city in Maharashtra, India)
-  },
+  }, 'Koregaon Park', 'Hinjewadi', 'Viman Nagar', 'Kothrud', 'Baner', 'Wakad', 'Hadapsar', 'Shivajinagar'],
   description:
     'Ecommerce development for Pune businesses: Shopify and WooCommerce stores for D2C brands, dealer ordering portals for auto component makers, Razorpay and UPI checkout, GST invoicing. Lighthouse 95+.',
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet Ecommerce Development Pune',
-  url: 'https://factoryjet.com/services/ecommerce-development/pune',
-  image: 'https://factoryjet.com/logo.png',
-  description:
-    'Ecommerce development company serving Pune, Pimpri-Chinchwad and Chakan businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing.',
-  areaServed: [
-    'Koregaon Park', 'Hinjewadi', 'Viman Nagar', 'Kothrud',
-    'Baner', 'Wakad', 'Hadapsar', 'Shivajinagar',
-  ],
-  
-};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Journey Stages
@@ -450,11 +435,6 @@ export default function PuneEcommercePage() {
         id="pune-ecom-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        id="pune-ecom-local-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <script
         type="application/ld+json"

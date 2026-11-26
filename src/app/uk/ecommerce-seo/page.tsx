@@ -164,17 +164,6 @@ const jsonLd = {
       name: 'Ecommerce SEO Agency UK',
       serviceType: 'Ecommerce SEO services',
       areaServed: { '@type': 'Country', name: 'United Kingdom' },
-      author: {
-        '@type': 'Person',
-        name: 'Bhavesh Barot',
-        jobTitle: 'Founder & CEO',
-        url: 'https://factoryjet.com/about',
-        sameAs: [
-          'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-          'https://github.com/factoryjet-tech',
-        ],
-      },
-      publisher: { '@id': 'https://factoryjet.com/#organization' },
     },
     {
       '@type': 'WebPage',

@@ -423,35 +423,10 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Denver E-Commerce Development Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  areaServed: [
-    { '@type': 'City', name: 'Denver' },
-    { '@type': 'City', name: 'Boulder' },
-    { '@type': 'City', name: 'Greenwood Village' },
-    { '@type': 'City', name: 'Golden' },
-    { '@type': 'City', name: 'RiNo' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & Chief Technical Architect',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'Denver E-Commerce Development & Headless Shopify Plus Engineering',
   provider: {
     '@type': 'Organization',
@@ -462,11 +437,7 @@ const SERVICE_SCHEMA = {
   serviceType: 'Headless E-Commerce Development, Shopify Plus, BigCommerce B2B & ERP Integration',
   description:
     'Custom headless Next.js ecommerce engineering, Shopify Plus architectures, NetSuite ERP integrations, and sub-second performance for Colorado brands.',
-  areaServed: [
-    { '@type': 'City', name: 'Denver' },
-    { '@type': 'State', name: 'Colorado' },
-    { '@type': 'Country', name: 'United States' },
-  ],
+  areaServed: [{ '@type': 'City', name: 'Denver' }, { '@type': 'State', name: 'Colorado' }, { '@type': 'Country', name: 'United States' }, { '@type': 'City', name: 'Boulder' }, { '@type': 'City', name: 'Greenwood Village' }, { '@type': 'City', name: 'Golden' }, { '@type': 'City', name: 'RiNo' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -510,7 +481,6 @@ export default function DenverEcommercePage() {
   return (
     <>
       <script id="den-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="den-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="den-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="den-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="den-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

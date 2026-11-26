@@ -73,6 +73,7 @@ export const metadata: Metadata = {
     'maid service seo',
   ],
   openGraph: {
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet' }],
     type: 'website',
     siteName: 'FactoryJet',
     title: 'SEO for Cleaning Companies: Cleaning Business SEO | FactoryJet',

@@ -114,30 +114,15 @@ const serviceSchema = {
     url: 'https://factoryjet.com',
   },
   serviceType: 'Ecommerce Development',
-  areaServed: {
+  areaServed: [{
     '@type': 'City',
     name: 'Ahmedabad',
     '@id': 'https://www.wikidata.org/wiki/Q1070', // Wikidata label: Ahmedabad (city in Gujarat, India)
-  },
+  }, 'SG Highway', 'Prahlad Nagar', 'CG Road', 'Satellite', 'Navrangpura', 'Bopal', 'Maninagar', 'Vastrapur'],
   description:
     'Ecommerce development for Ahmedabad businesses: Shopify and WooCommerce stores for textile, denim and Kutch craft brands, wholesale ordering portals for GIDC manufacturers, NRI checkout, GST invoicing. Lighthouse 95+.',
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet Ecommerce Development Ahmedabad',
-  url: 'https://factoryjet.com/services/ecommerce-development/ahmedabad',
-  image: 'https://factoryjet.com/logo.png',
-  description:
-    'Ecommerce development company serving Ahmedabad and Gandhinagar businesses, from SG Highway brands to GIDC estates. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing.',
-  areaServed: [
-    'SG Highway', 'Prahlad Nagar', 'CG Road', 'Satellite',
-    'Navrangpura', 'Bopal', 'Maninagar', 'Vastrapur',
-  ],
-  
-};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Journey Stages
@@ -456,11 +441,6 @@ export default function AhmedabadEcommercePage() {
         id="ahmedabad-ecom-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        id="ahmedabad-ecom-local-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <script
         type="application/ld+json"

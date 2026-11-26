@@ -428,42 +428,16 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Raleigh Ecommerce Development Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  priceRange: '$$$',
-  areaServed: [
-    { '@type': 'City', name: 'Raleigh' },
-    { '@type': 'City', name: 'Durham' },
-    { '@type': 'City', name: 'Cary' },
-    { '@type': 'City', name: 'Chapel Hill' },
-    { '@type': 'City', name: 'Morrisville' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & CEO',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'Raleigh Ecommerce Development & Shopify Plus Engineering',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Ecommerce Development, Headless Shopify Plus, B2B Commerce & Next.js Storefronts',
   description:
     'Custom headless Shopify Plus and Next.js ecommerce development in Raleigh NC. Sub-second performance, full IP code ownership, and a fixed quote before work starts for Research Triangle brands.',
-  areaServed: [{ '@type': 'State', name: 'North Carolina' }],
+  areaServed: [{ '@type': 'State', name: 'North Carolina' }, { '@type': 'City', name: 'Raleigh' }, { '@type': 'City', name: 'Durham' }, { '@type': 'City', name: 'Cary' }, { '@type': 'City', name: 'Chapel Hill' }, { '@type': 'City', name: 'Morrisville' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -499,7 +473,6 @@ export default function RaleighEcommerceDevelopmentPage() {
   return (
     <>
       <script id="raleigh-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="raleigh-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="raleigh-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="raleigh-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="raleigh-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

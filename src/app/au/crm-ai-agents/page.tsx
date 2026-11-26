@@ -299,6 +299,7 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL, languages: twinAlternates['crm-ai-agents'] },
   openGraph: {
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet' }],
     title: TITLE,
     description:
       'HubSpot and Salesforce AI agents for Australian sales teams. Leads scored, deals updated, Xero and MYOB data on the account, Spam Act checks before every draft. Demo on your own records before you sign.',

@@ -80,20 +80,6 @@ const jsonLd = {
       })),
     },
     {
-      '@type': 'LocalBusiness',
-      parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-      '@id': `${CANONICAL}#business`,
-      name: 'FactoryJet: Birmingham',
-      url: CANONICAL,
-      description:
-        'SEO agency serving Birmingham and the West Midlands. Technical SEO, local search, content and AI search visibility, plus web design and e-commerce build.',
-      areaServed: [
-        { '@type': 'City', name: 'Birmingham' },
-        { '@type': 'AdministrativeArea', name: 'West Midlands' },
-      ],
-      author: AUTHOR,
-    },
-    {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
       name: 'SEO Agency Birmingham',
@@ -104,7 +90,6 @@ const jsonLd = {
         { '@type': 'AdministrativeArea', name: 'West Midlands' },
       ],
       url: CANONICAL,
-      author: AUTHOR,
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
         name: 'Birmingham SEO services',

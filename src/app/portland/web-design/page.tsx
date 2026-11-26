@@ -415,42 +415,16 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Portland Web Design Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  priceRange: '$$',
-  areaServed: [
-    { '@type': 'City', name: 'Portland' },
-    { '@type': 'City', name: 'Beaverton' },
-    { '@type': 'City', name: 'Hillsboro' },
-    { '@type': 'City', name: 'Lake Oswego' },
-    { '@type': 'City', name: 'Tigard' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & CEO',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'Portland Web Design & Next.js Development',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Web Design, Frontend Engineering & Conversion Optimization',
   description:
     'Senior engineering-led custom Next.js web design, sub-second page performance, mobile conversion optimization, and full IP ownership for Portland businesses.',
-  areaServed: { '@type': 'State', name: 'Oregon' },
+  areaServed: [{ '@type': 'State', name: 'Oregon' }, { '@type': 'City', name: 'Portland' }, { '@type': 'City', name: 'Beaverton' }, { '@type': 'City', name: 'Hillsboro' }, { '@type': 'City', name: 'Lake Oswego' }, { '@type': 'City', name: 'Tigard' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -486,7 +460,6 @@ export default function PortlandWebDesignPage() {
   return (
     <>
       <script id="pdx-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="pdx-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="pdx-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="pdx-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="pdx-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

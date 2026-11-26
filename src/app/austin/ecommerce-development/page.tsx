@@ -431,35 +431,10 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Austin Ecommerce Development Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  areaServed: [
-    { '@type': 'City', name: 'Austin' },
-    { '@type': 'City', name: 'Round Rock' },
-    { '@type': 'City', name: 'Cedar Park' },
-    { '@type': 'City', name: 'West Lake Hills' },
-    { '@type': 'City', name: 'Lakeway' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & Chief Technical Architect',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'Austin Ecommerce Development & Shopify Plus Engineering',
   provider: {
     '@type': 'Organization',
@@ -470,11 +445,7 @@ const SERVICE_SCHEMA = {
   serviceType: 'Ecommerce Development, Shopify Plus & B2B Portals',
   description:
     'Senior engineering-led Shopify Plus and WooCommerce development, Shop Pay acceleration, wholesale B2B portals, and ERP integrations in Austin TX.',
-  areaServed: [
-    { '@type': 'City', name: 'Austin' },
-    { '@type': 'State', name: 'Texas' },
-    { '@type': 'Country', name: 'United States' },
-  ],
+  areaServed: [{ '@type': 'City', name: 'Austin' }, { '@type': 'State', name: 'Texas' }, { '@type': 'Country', name: 'United States' }, { '@type': 'City', name: 'Round Rock' }, { '@type': 'City', name: 'Cedar Park' }, { '@type': 'City', name: 'West Lake Hills' }, { '@type': 'City', name: 'Lakeway' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -518,7 +489,6 @@ export default function AustinEcommerceDevelopmentPage() {
   return (
     <>
       <script id="austin-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="austin-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="austin-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="austin-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="austin-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

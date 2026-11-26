@@ -67,25 +67,6 @@ const webPageSchema = {
   publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  '@id': 'https://factoryjet.com/seo/ahmedabad#localbusiness',
-  name: 'FactoryJet SEO Company in Ahmedabad',
-  image: 'https://factoryjet.com/images/services/seo.webp',
-  description: 'SEO company in Ahmedabad for pharma and denim exporters, chemical makers, and engineering firms. We make your site fast and easy for Google to read, build a search plan for orders from abroad and across India, and get you named in Google AI answers. No long contracts.',
-  url: 'https://factoryjet.com/seo/ahmedabad',
-  email: 'connect@factoryjet.com',
-  areaServed: [
-    { '@type': 'City', name: 'Ahmedabad' },
-    { '@type': 'City', name: 'Gandhinagar' },
-    { '@type': 'City', name: 'Sanand' },
-    { '@type': 'City', name: 'Changodar' },
-  ],
-  geo: { '@type': 'GeoCircle', geoMidpoint: { '@type': 'GeoCoordinates', latitude: 23.0225, longitude: 72.5714 }, geoRadius: '50000' },
-  serviceType: 'Search Engine Optimisation',
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -96,7 +77,7 @@ const serviceSchema = {
   description: 'SEO company in Ahmedabad for pharma and denim exporters, chemical makers, and engineering firms. Win orders from abroad, win across India, and get named in Google AI answers. No long contracts.',
   url: 'https://factoryjet.com/seo/ahmedabad',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  areaServed: { '@type': 'City', name: 'Ahmedabad' },
+  areaServed: [{ '@type': 'City', name: 'Ahmedabad' }, { '@type': 'City', name: 'Gandhinagar' }, { '@type': 'City', name: 'Sanand' }, { '@type': 'City', name: 'Changodar' }],
 };
 
 const speakableSchema = {
@@ -194,7 +175,6 @@ export default function AhmedabadSeoPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
-      <script id="ahm-seo-localbusiness" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script id="ahm-seo-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="ahm-seo-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />

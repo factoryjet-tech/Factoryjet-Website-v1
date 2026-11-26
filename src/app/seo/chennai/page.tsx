@@ -69,31 +69,6 @@ const webPageSchema = {
   publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  '@id': 'https://factoryjet.com/seo/chennai#localbusiness',
-  name: 'FactoryJet | SEO Company in Chennai',
-  description:
-    'FactoryJet provides SEO services in Chennai for manufacturing companies, automotive suppliers, IT services, healthcare providers, and local businesses across Anna Nagar, T. Nagar, Velachery, OMR, Ambattur, and Guindy.',
-  url: 'https://factoryjet.com/seo/chennai',
-  email: 'connect@factoryjet.com',
-  areaServed: [
-    { '@type': 'City', name: 'Chennai' },
-    { '@type': 'City', name: 'Madras' },
-    { '@type': 'City', name: 'OMR' },
-    { '@type': 'City', name: 'Guindy' },
-  ],
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-    opens: '09:00',
-    closes: '18:00',
-  },
-  
-  sameAs: ['https://www.linkedin.com/company/factoryjet', 'https://clutch.co/profile/factoryjet-private', 'https://www.goodfirms.co/company/factoryjet-private-limited', 'https://www.designrush.com/agency/profile/factoryjet', 'https://www.softwaresuggest.com/factoryjet', 'https://www.crunchbase.com/organization/factoryjet'],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -105,7 +80,7 @@ const serviceSchema = {
     'SEO services in Chennai for manufacturing, automotive, IT services, healthcare, and local businesses. Serving Anna Nagar, T. Nagar, Velachery, OMR, Guindy, Ambattur, and Perungudi.',
   url: 'https://factoryjet.com/seo/chennai',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  areaServed: { '@type': 'City', name: 'Chennai' },
+  areaServed: [{ '@type': 'City', name: 'Chennai' }, { '@type': 'City', name: 'Madras' }, { '@type': 'City', name: 'OMR' }, { '@type': 'City', name: 'Guindy' }],
 };
 
 const speakableSchema = {
@@ -360,7 +335,6 @@ export default function SeoChennai() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
-      <script id="chn-seo-localbusiness" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script id="chn-seo-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="chn-seo-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />

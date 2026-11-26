@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     languages: { 'en-GB': CANONICAL, 'x-default': CANONICAL },
   },
   openGraph: {
+    type: 'website',
     locale: 'en_GB',
     title: 'SEO Agency Sheffield | Local SEO and Web Design | FactoryJet',
     description:
@@ -44,22 +45,6 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-    // No aggregateRating: there is no review corpus behind a number, and Google
-    // treats review markup it can't trace to real reviews as a structured-data
-    // policy problem. Add it back only with real, verifiable reviews.
-    {
-      '@type': 'LocalBusiness',
-      '@id': `${CANONICAL}#business`,
-      name: 'FactoryJet: Sheffield',
-      url: CANONICAL,
-      parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-      description:
-        'SEO agency and web design studio serving Sheffield and South Yorkshire. Local SEO, technical SEO and fast Next.js websites.',
-      areaServed: {
-        '@type': 'City',
-        name: 'Sheffield',
-      },
-    },
     {
       '@type': 'Service',
       '@id': `${CANONICAL}#seo-service`,

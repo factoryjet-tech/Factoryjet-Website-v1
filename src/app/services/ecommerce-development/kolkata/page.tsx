@@ -114,30 +114,15 @@ const serviceSchema = {
     url: 'https://factoryjet.com',
   },
   serviceType: 'Ecommerce Development',
-  areaServed: {
+  areaServed: [{
     '@type': 'City',
     name: 'Kolkata',
     '@id': 'https://www.wikidata.org/wiki/Q1348', // Wikidata label: Kolkata (capital of West Bengal, India)
-  },
+  }, 'Salt Lake', 'Rajarhat', 'Park Street', 'Alipore', 'Gariahat', 'New Town', 'Behala', 'Ballygunge'],
   description:
     'Ecommerce development for Kolkata businesses: Shopify and WooCommerce stores for saree, Kantha, leather, tea and sweet brands, wholesale portals for Burrabazar traders, Bengali storefronts, GST invoicing. Lighthouse 95+.',
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet Ecommerce Development Kolkata',
-  url: 'https://factoryjet.com/services/ecommerce-development/kolkata',
-  image: 'https://factoryjet.com/logo.png',
-  description:
-    'Ecommerce development company serving Kolkata, Howrah and Salt Lake businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing.',
-  areaServed: [
-    'Salt Lake', 'Rajarhat', 'Park Street', 'Alipore', 'Gariahat',
-    'New Town', 'Behala', 'Ballygunge',
-  ],
-  
-};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Journey Stages
@@ -450,11 +435,6 @@ export default function KolkataEcommercePage() {
         id="kolkata-ecom-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        id="kolkata-ecom-local-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <script
         type="application/ld+json"

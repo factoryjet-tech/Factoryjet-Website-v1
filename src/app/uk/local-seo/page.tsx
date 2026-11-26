@@ -139,11 +139,6 @@ const jsonLd = {
         'Local SEO services for UK businesses: Google Business Profile optimisation, UK citation cleanup, review generation, LocalBusiness structured data, location pages, and AI answer visibility tracking.',
       areaServed: { '@type': 'Country', name: 'United Kingdom' },
       provider: { '@id': 'https://factoryjet.com/#organization' },
-      // Reference the single Person node by @id. Inlining a second copy here
-      // would put two Bhavesh Barot entities in one graph, which is exactly the
-      // competing-duplicate problem the 2026-08-24 schema sweep was cleaning up.
-      author: { '@id': 'https://factoryjet.com/#bhavesh' },
-      publisher: { '@id': 'https://factoryjet.com/#organization' },
     },
     // One WebPage node, carrying dateModified. Deliberately a single page-level
     // entity linked by @id to the Service and the BreadcrumbList, so nothing

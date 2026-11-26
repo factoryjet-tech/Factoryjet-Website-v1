@@ -6,18 +6,6 @@ import SiteFooter from '@/components/v2/SiteFooter'
 import { ORGANIZATION_SCHEMA } from '@/data/organization'
 
 // LocalBusiness structured data for SEO
-const localBusinessJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "parentOrganization": { "@id": "https://factoryjet.com/#organization" },
-  "name": "FactoryJet",
-  "url": "https://factoryjet.com/uae",
-  "email": "connect@factoryjet.com",
-  "areaServed": {
-    "@type": "Place",
-    "name": "Dubai"
-  }
-}
 
 // Organization structured data
 const organizationJsonLd = { "@context": "https://schema.org", "@type": "Organization", "@id": "https://factoryjet.com/#organization", "name": "FactoryJet", "url": "https://factoryjet.com" }
@@ -52,10 +40,13 @@ const serviceJsonLd = {
     name: 'FactoryJet Dubai',
     url: 'https://factoryjet.com/uae',
   },
-  areaServed: {
+  areaServed: [{
     '@type': 'Country',
     name: 'United Arab Emirates',
-  },
+  }, {
+    "@type": "Place",
+    "name": "Dubai"
+  }],
   description: 'Professional web design and development services in Dubai, UAE. Custom websites, e-commerce solutions, and AI-powered web applications.',
 }
 
@@ -113,11 +104,6 @@ export default function Page() {
       />
 
       {/* Local Business Structured Data */}
-      <script
-        id="local-business-jsonld"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
-      />
 
       {/* Breadcrumb Structured Data */}
       <script

@@ -157,9 +157,7 @@ const jsonLd = {
       areaServed: { '@type': 'Country', name: 'United Kingdom' },
       description:
         'Founder-led SEO consulting for UK businesses, covering technical SEO, on-page and content, local SEO, ecommerce SEO, and visibility inside AI answers.',
-      author: { '@id': 'https://factoryjet.com/about#bhavesh-barot' },
       provider: { '@id': 'https://factoryjet.com/#organization' },
-      publisher: { '@id': 'https://factoryjet.com/#organization' },
     },
     {
       '@type': 'ItemList',

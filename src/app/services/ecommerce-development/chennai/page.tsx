@@ -114,30 +114,15 @@ const serviceSchema = {
     url: 'https://factoryjet.com',
   },
   serviceType: 'Ecommerce Development',
-  areaServed: {
+  areaServed: [{
     '@type': 'City',
     name: 'Chennai',
     '@id': 'https://www.wikidata.org/wiki/Q1352', // Wikidata label: Chennai (capital of Tamil Nadu, India)
-  },
+  }, 'Anna Nagar', 'T. Nagar', 'Velachery', 'Sholinganallur', 'Nungambakkam', 'Adyar', 'OMR', 'Ambattur'],
   description:
     'Ecommerce development for Chennai businesses: Shopify and WooCommerce stores for silk, jewellery and food brands, Tamil storefronts, dealer portals for auto component makers, GST invoicing. Lighthouse 95+.',
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet Ecommerce Development Chennai',
-  url: 'https://factoryjet.com/services/ecommerce-development/chennai',
-  image: 'https://factoryjet.com/logo.png',
-  description:
-    'Ecommerce development company serving Chennai retailers, D2C brands and manufacturers. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing.',
-  areaServed: [
-    'Anna Nagar', 'T. Nagar', 'Velachery', 'Sholinganallur',
-    'Nungambakkam', 'Adyar', 'OMR', 'Ambattur',
-  ],
-  
-};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Journey Stages
@@ -450,11 +435,6 @@ export default function ChennaiEcommercePage() {
         id="chennai-ecom-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        id="chennai-ecom-local-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <script
         type="application/ld+json"

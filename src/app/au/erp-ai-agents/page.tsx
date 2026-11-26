@@ -322,6 +322,7 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL, languages: twinAlternates['erp-ai-agents'] },
   openGraph: {
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet' }],
     title: TITLE,
     description:
       'AI agents inside Xero, MYOB, NetSuite and Odoo for established Australian businesses. Orders, supplier bills and purchase orders drafted for your team to approve, with a demo on your own data before you sign.',

@@ -429,42 +429,16 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Lincoln Ecommerce Development Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  priceRange: '$$$',
-  areaServed: [
-    { '@type': 'City', name: 'Lincoln' },
-    { '@type': 'City', name: 'Waverly' },
-    { '@type': 'City', name: 'Hickman' },
-    { '@type': 'City', name: 'Seward' },
-    { '@type': 'City', name: 'Beatrice' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & CEO',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'Lincoln Ecommerce Development & Shopify Plus Engineering',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Ecommerce Development, Headless Shopify Plus, B2B Commerce & Next.js Storefronts',
   description:
     'Custom headless Shopify Plus and Next.js ecommerce development in Lincoln NE. Sub-second performance, full IP code ownership, and a fixed quote before work starts for Nebraska brands.',
-  areaServed: [{ '@type': 'State', name: 'Nebraska' }],
+  areaServed: [{ '@type': 'State', name: 'Nebraska' }, { '@type': 'City', name: 'Lincoln' }, { '@type': 'City', name: 'Waverly' }, { '@type': 'City', name: 'Hickman' }, { '@type': 'City', name: 'Seward' }, { '@type': 'City', name: 'Beatrice' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -500,7 +474,6 @@ export default function LincolnEcommerceDevelopmentPage() {
   return (
     <>
       <script id="lincoln-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="lincoln-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="lincoln-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="lincoln-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="lincoln-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

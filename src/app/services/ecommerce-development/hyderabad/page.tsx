@@ -114,30 +114,15 @@ const serviceSchema = {
     url: 'https://factoryjet.com',
   },
   serviceType: 'Ecommerce Development',
-  areaServed: {
+  areaServed: [{
     '@type': 'City',
     name: 'Hyderabad',
     '@id': 'https://www.wikidata.org/wiki/Q1361', // Wikidata label: Hyderabad (capital of Telangana, India)
-  },
+  }, 'HITEC City', 'Madhapur', 'Gachibowli', 'Banjara Hills', 'Jubilee Hills', 'Secunderabad', 'Kukatpally', 'Ameerpet'],
   description:
     'Ecommerce development for Hyderabad businesses: Shopify and WooCommerce stores for pearl jewellers, ikat and handloom sellers and food brands, B2B ordering portals for pharma distributors, GST invoicing. Lighthouse 95+.',
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet Ecommerce Development Hyderabad',
-  url: 'https://factoryjet.com/services/ecommerce-development/hyderabad',
-  image: 'https://factoryjet.com/logo.png',
-  description:
-    'Ecommerce development company serving Hyderabad and Secunderabad businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing.',
-  areaServed: [
-    'HITEC City', 'Madhapur', 'Gachibowli', 'Banjara Hills',
-    'Jubilee Hills', 'Secunderabad', 'Kukatpally', 'Ameerpet',
-  ],
-  
-};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Journey Stages
@@ -450,11 +435,6 @@ export default function HyderabadEcommercePage() {
         id="hyderabad-ecom-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        id="hyderabad-ecom-local-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <script
         type="application/ld+json"

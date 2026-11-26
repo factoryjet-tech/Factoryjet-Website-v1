@@ -417,42 +417,16 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Seattle E-Commerce Development Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  priceRange: '$$$',
-  areaServed: [
-    { '@type': 'City', name: 'Seattle' },
-    { '@type': 'City', name: 'Bellevue' },
-    { '@type': 'City', name: 'Redmond' },
-    { '@type': 'City', name: 'Kirkland' },
-    { '@type': 'City', name: 'Tacoma' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & CEO',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'Seattle E-Commerce Development & Headless Architecture',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'E-Commerce Development, Shopify Plus, BigCommerce B2B & ERP Integration',
   description:
     'Senior engineering-led custom headless e-commerce development, sub-second checkout speeds, ERP integrations, and full IP code ownership for Seattle enterprise brands.',
-  areaServed: { '@type': 'State', name: 'Washington' },
+  areaServed: [{ '@type': 'State', name: 'Washington' }, { '@type': 'City', name: 'Seattle' }, { '@type': 'City', name: 'Bellevue' }, { '@type': 'City', name: 'Redmond' }, { '@type': 'City', name: 'Kirkland' }, { '@type': 'City', name: 'Tacoma' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -488,7 +462,6 @@ export default function SeattleEcommercePage() {
   return (
     <>
       <script id="sea-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="sea-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="sea-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="sea-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="sea-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

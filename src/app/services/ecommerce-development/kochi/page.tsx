@@ -114,30 +114,15 @@ const serviceSchema = {
     url: 'https://factoryjet.com',
   },
   serviceType: 'Ecommerce Development',
-  areaServed: {
+  areaServed: [{
     '@type': 'City',
     name: 'Kochi',
     '@id': 'https://www.wikidata.org/wiki/Q1800', // Wikidata label: Kochi (city in Kerala, India)
-  },
+  }, 'Kakkanad', 'Infopark', 'Edappally', 'MG Road', 'Fort Kochi', 'Aluva', 'Thrippunithura', 'Kalamassery'],
   description:
     'Ecommerce development for Kochi businesses: Shopify and WooCommerce stores for spice, ayurveda, handloom and snack brands, international checkout for Gulf and NRI buyers, B2B portals for exporters, GST invoicing. Lighthouse 95+.',
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet Ecommerce Development Kochi',
-  url: 'https://factoryjet.com/services/ecommerce-development/kochi',
-  image: 'https://factoryjet.com/logo.png',
-  description:
-    'Ecommerce development company serving Kochi and Ernakulam businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD, international shipping and GST invoicing.',
-  areaServed: [
-    'Kakkanad', 'Infopark', 'Edappally', 'MG Road', 'Fort Kochi',
-    'Aluva', 'Thrippunithura', 'Kalamassery',
-  ],
-  
-};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Journey Stages
@@ -450,11 +435,6 @@ export default function KochiEcommercePage() {
         id="kochi-ecom-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        id="kochi-ecom-local-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <script
         type="application/ld+json"

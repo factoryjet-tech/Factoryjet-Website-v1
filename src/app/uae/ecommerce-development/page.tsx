@@ -109,15 +109,6 @@ const jsonLd = {
   '@graph': [
     { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
     {
-      '@type': 'LocalBusiness',
-      parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-      '@id': `${CANONICAL}#localbusiness`,
-      name: 'FactoryJet',
-      url: CANONICAL,
-      email: 'connect@factoryjet.com',
-      areaServed: { '@type': 'Country', name: 'United Arab Emirates' },
-    },
-    {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
       name: 'Ecommerce Development Services UAE',

@@ -184,17 +184,6 @@ const jsonLd = {
         'A free SEO audit for UK websites covering technical health, on-page content, backlinks, schema, and AI visibility across ChatGPT, Gemini, Perplexity, and Google AI Overviews. Reviewed by a senior person before it reaches you.',
       areaServed: { '@type': 'Country', name: 'United Kingdom' },
       provider: { '@id': 'https://factoryjet.com/#organization' },
-      author: {
-        '@type': 'Person',
-        name: 'Bhavesh Barot',
-        jobTitle: 'Founder & CEO',
-        url: 'https://factoryjet.com/about',
-        sameAs: [
-          'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-          'https://github.com/factoryjet-tech',
-        ],
-      },
-      publisher: { '@id': 'https://factoryjet.com/#organization' },
     },
     {
       '@type': 'WebPage',
@@ -204,7 +193,6 @@ const jsonLd = {
       inLanguage: 'en-GB',
       dateModified: UPDATED,
       isPartOf: { '@id': 'https://factoryjet.com/#organization' },
-      primaryTopicOf: { '@id': `${CANONICAL}#service` },
     },
     {
       '@type': 'ItemList',

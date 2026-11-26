@@ -280,6 +280,7 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL, languages: twinAlternates['shopify-xero-integration'] },
   openGraph: {
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet' }],
     title: TITLE,
     description:
       'Shopify to Xero for Australian sellers: GST split per line, Shopify Payments and Afterpay payouts cleared to the cent, trade tax invoices, and one owner for stock. Demo on your own data before you sign.',

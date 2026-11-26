@@ -69,30 +69,6 @@ const webPageSchema = {
   publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  '@id': 'https://factoryjet.com/seo/mumbai#localbusiness',
-  name: 'FactoryJet | SEO Company in Mumbai',
-  description:
-    'FactoryJet provides SEO services in Mumbai for local businesses, D2C brands, ecommerce stores, and enterprises across BKC, Andheri, Bandra, Worli, Thane, and Navi Mumbai.',
-  url: 'https://factoryjet.com/seo/mumbai',
-  email: 'connect@factoryjet.com',
-  areaServed: [
-    { '@type': 'City', name: 'Mumbai' },
-    { '@type': 'City', name: 'Thane' },
-    { '@type': 'City', name: 'Navi Mumbai' },
-  ],
-  openingHoursSpecification: {
-    '@type': 'OpeningHoursSpecification',
-    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-    opens: '09:00',
-    closes: '18:00',
-  },
-  
-  sameAs: ['https://www.linkedin.com/company/factoryjet', 'https://clutch.co/profile/factoryjet-private', 'https://www.goodfirms.co/company/factoryjet-private-limited', 'https://www.designrush.com/agency/profile/factoryjet', 'https://www.softwaresuggest.com/factoryjet', 'https://www.crunchbase.com/organization/factoryjet'],
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -104,7 +80,7 @@ const serviceSchema = {
     'SEO services in Mumbai covering local SEO, technical SEO, ecommerce SEO, link building, and SEO audits. Serving BKC, Andheri, Bandra, Worli, Thane, Navi Mumbai and all of Greater Mumbai.',
   url: 'https://factoryjet.com/seo/mumbai',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  areaServed: { '@type': 'City', name: 'Mumbai' },
+  areaServed: [{ '@type': 'City', name: 'Mumbai' }, { '@type': 'City', name: 'Thane' }, { '@type': 'City', name: 'Navi Mumbai' }],
 };
 
 const speakableSchema = {
@@ -457,11 +433,6 @@ export default function SeoMumbaiPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
-      <script
-        id="mumbai-seo-localbusiness"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <script
         id="mumbai-seo-service"

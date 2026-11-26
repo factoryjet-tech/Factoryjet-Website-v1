@@ -95,21 +95,6 @@ const jsonLd = {
   '@graph': [
     { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
     {
-      '@type': 'LocalBusiness',
-      '@id': `${CANONICAL}#business`,
-      name: 'FactoryJet: Liverpool',
-      url: CANONICAL,
-      parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-      description:
-        'SEO agency serving Liverpool and the Liverpool City Region: technical SEO, local SEO, content and AI search visibility.',
-      email: 'connect@factoryjet.com',
-      areaServed: [
-        { '@type': 'City', name: 'Liverpool' },
-        { '@type': 'AdministrativeArea', name: 'Liverpool City Region' },
-        { '@type': 'AdministrativeArea', name: 'Merseyside' },
-      ],
-    },
-    {
       '@type': 'Service',
       '@id': `${CANONICAL}#service`,
       name: 'SEO Agency Liverpool',

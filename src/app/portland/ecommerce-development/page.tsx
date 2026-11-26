@@ -417,42 +417,16 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Portland E-Commerce Development Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  priceRange: '$$$',
-  areaServed: [
-    { '@type': 'City', name: 'Portland' },
-    { '@type': 'City', name: 'Beaverton' },
-    { '@type': 'City', name: 'Hillsboro' },
-    { '@type': 'City', name: 'Lake Oswego' },
-    { '@type': 'City', name: 'Hood River' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & CEO',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'Portland E-Commerce Development & Headless Architecture',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'E-Commerce Development, Shopify Plus, BigCommerce B2B & ERP Integration',
   description:
     'Senior engineering-led custom headless e-commerce development, sub-second checkout speeds, ERP integrations, and full IP code ownership for Portland enterprise brands.',
-  areaServed: { '@type': 'State', name: 'Oregon' },
+  areaServed: [{ '@type': 'State', name: 'Oregon' }, { '@type': 'City', name: 'Portland' }, { '@type': 'City', name: 'Beaverton' }, { '@type': 'City', name: 'Hillsboro' }, { '@type': 'City', name: 'Lake Oswego' }, { '@type': 'City', name: 'Hood River' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -488,7 +462,6 @@ export default function PortlandEcommercePage() {
   return (
     <>
       <script id="pdx-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="pdx-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="pdx-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="pdx-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="pdx-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

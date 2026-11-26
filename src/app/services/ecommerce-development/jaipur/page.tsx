@@ -114,30 +114,15 @@ const serviceSchema = {
     url: 'https://factoryjet.com',
   },
   serviceType: 'Ecommerce Development',
-  areaServed: {
+  areaServed: [{
     '@type': 'City',
     name: 'Jaipur',
     '@id': 'https://www.wikidata.org/wiki/Q66485', // Wikidata label: Jaipur (capital of Rajasthan, India)
-  },
+  }, 'Vaishali Nagar', 'Malviya Nagar', 'C-Scheme', 'Mansarovar', 'Jagatpura', 'Sanganer', 'Bani Park', 'Tonk Road'],
   description:
     'Ecommerce development for Jaipur businesses: Shopify and WooCommerce stores for gemstone and silver jewellers, block-print textile and blue pottery brands, wholesale catalogues for overseas boutiques, GST invoicing. Lighthouse 95+.',
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet Ecommerce Development Jaipur',
-  url: 'https://factoryjet.com/services/ecommerce-development/jaipur',
-  image: 'https://factoryjet.com/logo.png',
-  description:
-    'Ecommerce development company serving Jaipur jewellers, craft brands and exporters. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD, international checkout and GST invoicing.',
-  areaServed: [
-    'Vaishali Nagar', 'Malviya Nagar', 'C-Scheme', 'Mansarovar', 'Jagatpura',
-    'Sanganer', 'Bani Park', 'Tonk Road',
-  ],
-  
-};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Journey Stages
@@ -450,11 +435,6 @@ export default function JaipurEcommercePage() {
         id="jaipur-ecom-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        id="jaipur-ecom-local-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <script
         type="application/ld+json"

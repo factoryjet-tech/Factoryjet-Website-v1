@@ -67,26 +67,6 @@ const webPageSchema = {
   publisher: { '@id': 'https://factoryjet.com/#organization' },
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  '@id': 'https://factoryjet.com/seo/kolkata#localbusiness',
-  name: 'FactoryJet SEO Company in Kolkata',
-  image: 'https://factoryjet.com/images/services/seo.webp',
-  description: 'SEO company in Kolkata for leather, jute, and tea exporters, Sector V IT firms, B2B suppliers, and local businesses. We make your site fast and easy for Google to read, and help you win abroad, all over India, and in Google AI answers. No long contracts.',
-  url: 'https://factoryjet.com/seo/kolkata',
-  email: 'connect@factoryjet.com',
-  areaServed: [
-    { '@type': 'City', name: 'Kolkata' },
-    { '@type': 'City', name: 'Bidhannagar' },
-    { '@type': 'City', name: 'New Town' },
-    { '@type': 'City', name: 'Howrah' },
-    { '@type': 'City', name: 'Bantala' },
-  ],
-  geo: { '@type': 'GeoCircle', geoMidpoint: { '@type': 'GeoCoordinates', latitude: 22.5726, longitude: 88.3639 }, geoRadius: '50000' },
-  serviceType: 'Search Engine Optimisation',
-};
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -97,7 +77,7 @@ const serviceSchema = {
   description: 'SEO company in Kolkata for exporters, B2B suppliers, IT firms, and local businesses. Win abroad, all over India, and in Google AI answers. No long contracts.',
   url: 'https://factoryjet.com/seo/kolkata',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
-  areaServed: { '@type': 'City', name: 'Kolkata' },
+  areaServed: [{ '@type': 'City', name: 'Kolkata' }, { '@type': 'City', name: 'Bidhannagar' }, { '@type': 'City', name: 'New Town' }, { '@type': 'City', name: 'Howrah' }, { '@type': 'City', name: 'Bantala' }],
 };
 
 const speakableSchema = {
@@ -195,7 +175,6 @@ export default function KolkataSeoPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
-      <script id="kol-seo-localbusiness" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
       <script id="kol-seo-service" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script id="kol-seo-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />

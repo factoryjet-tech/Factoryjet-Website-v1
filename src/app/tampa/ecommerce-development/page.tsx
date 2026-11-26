@@ -418,35 +418,10 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Tampa E-Commerce Development Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  areaServed: [
-    { '@type': 'City', name: 'Tampa' },
-    { '@type': 'City', name: 'St. Petersburg' },
-    { '@type': 'City', name: 'Clearwater' },
-    { '@type': 'City', name: 'Brandon' },
-    { '@type': 'City', name: 'Wesley Chapel' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & Chief Technical Architect',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'Tampa E-Commerce Development & Headless Architecture',
   provider: {
     '@type': 'Organization',
@@ -457,11 +432,7 @@ const SERVICE_SCHEMA = {
   serviceType: 'E-Commerce Development, Shopify Plus, BigCommerce B2B & ERP Integration',
   description:
     'Senior engineering-led custom headless e-commerce development, sub-second checkout speeds, ERP integrations, and full IP code ownership for Tampa enterprise brands.',
-  areaServed: [
-    { '@type': 'City', name: 'Tampa' },
-    { '@type': 'State', name: 'Florida' },
-    { '@type': 'Country', name: 'United States' },
-  ],
+  areaServed: [{ '@type': 'City', name: 'Tampa' }, { '@type': 'State', name: 'Florida' }, { '@type': 'Country', name: 'United States' }, { '@type': 'City', name: 'St. Petersburg' }, { '@type': 'City', name: 'Clearwater' }, { '@type': 'City', name: 'Brandon' }, { '@type': 'City', name: 'Wesley Chapel' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -505,7 +476,6 @@ export default function TampaEcommercePage() {
   return (
     <>
       <script id="tpa-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="tpa-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="tpa-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="tpa-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="tpa-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

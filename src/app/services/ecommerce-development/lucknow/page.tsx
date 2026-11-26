@@ -114,30 +114,15 @@ const serviceSchema = {
     url: 'https://factoryjet.com',
   },
   serviceType: 'Ecommerce Development',
-  areaServed: {
+  areaServed: [{
     '@type': 'City',
     name: 'Lucknow',
     '@id': 'https://www.wikidata.org/wiki/Q47916', // Wikidata label: Lucknow (capital of Uttar Pradesh, India)
-  },
+  }, 'Hazratganj', 'Gomti Nagar', 'Indira Nagar', 'Aliganj', 'Mahanagar', 'Chinhat', 'Alambagh', 'Vikas Nagar'],
   description:
     'Ecommerce development for Lucknow businesses: Shopify and WooCommerce stores for chikankari, zardozi, Awadhi food and attar brands, wholesale portals for Uttar Pradesh traders, Hindi and Urdu storefronts, GST invoicing. Lighthouse 95+.',
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet Ecommerce Development Lucknow',
-  url: 'https://factoryjet.com/services/ecommerce-development/lucknow',
-  image: 'https://factoryjet.com/logo.png',
-  description:
-    'Ecommerce development company serving Lucknow businesses in Hazratganj, Aminabad, Chowk and Gomti Nagar. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing.',
-  areaServed: [
-    'Hazratganj', 'Gomti Nagar', 'Indira Nagar', 'Aliganj', 'Mahanagar',
-    'Chinhat', 'Alambagh', 'Vikas Nagar',
-  ],
-  
-};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Journey Stages
@@ -450,11 +435,6 @@ export default function LucknowEcommercePage() {
         id="lucknow-ecom-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        id="lucknow-ecom-local-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <script
         type="application/ld+json"

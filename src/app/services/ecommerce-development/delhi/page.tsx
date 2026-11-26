@@ -114,30 +114,15 @@ const serviceSchema = {
     url: 'https://factoryjet.com',
   },
   serviceType: 'Ecommerce Development',
-  areaServed: {
+  areaServed: [{
     '@type': 'City',
     name: 'Delhi',
     '@id': 'https://www.wikidata.org/wiki/Q1353', // Wikidata label: Delhi (city and union territory, India)
-  },
+  }, 'Connaught Place', 'Lajpat Nagar', 'Karol Bagh', 'Rohini', 'Dwarka', 'Noida', 'Gurugram', 'Saket'],
   description:
     'Ecommerce development for Delhi NCR businesses: Shopify and WooCommerce stores for bridal, jewellery and gifting brands, wholesale ordering portals for market traders, corporate gifting catalogues, GST invoicing. Lighthouse 95+.',
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet Ecommerce Development Delhi',
-  url: 'https://factoryjet.com/services/ecommerce-development/delhi',
-  image: 'https://factoryjet.com/logo.png',
-  description:
-    'Ecommerce development company serving Delhi, Noida, Gurugram, Ghaziabad and Faridabad businesses. Shopify, WooCommerce and custom builds with Razorpay, UPI, COD and GST invoicing.',
-  areaServed: [
-    'Connaught Place', 'Lajpat Nagar', 'Karol Bagh', 'Rohini',
-    'Dwarka', 'Noida', 'Gurugram', 'Saket',
-  ],
-  
-};
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Journey Stages
@@ -450,11 +435,6 @@ export default function DelhiEcommercePage() {
         id="delhi-ecom-service-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        id="delhi-ecom-local-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <script
         type="application/ld+json"

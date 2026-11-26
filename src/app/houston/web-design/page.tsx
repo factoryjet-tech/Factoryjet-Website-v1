@@ -429,35 +429,10 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Houston Web Design Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  areaServed: [
-    { '@type': 'City', name: 'Houston' },
-    { '@type': 'City', name: 'The Woodlands' },
-    { '@type': 'City', name: 'Sugar Land' },
-    { '@type': 'City', name: 'Katy' },
-    { '@type': 'City', name: 'Pearland' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & Chief Technical Architect',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'Houston Web Design & Next.js Development',
   provider: {
     '@type': 'Organization',
@@ -468,11 +443,7 @@ const SERVICE_SCHEMA = {
   serviceType: 'Web Design, Next.js Development, UI/UX Design & Headless CMS',
   description:
     'Custom Next.js web design and engineering in Houston Texas. Sub-second performance, full IP code ownership, and rapid 7-day delivery for Houston businesses.',
-  areaServed: [
-    { '@type': 'City', name: 'Houston' },
-    { '@type': 'State', name: 'Texas' },
-    { '@type': 'Country', name: 'United States' },
-  ],
+  areaServed: [{ '@type': 'City', name: 'Houston' }, { '@type': 'State', name: 'Texas' }, { '@type': 'Country', name: 'United States' }, { '@type': 'City', name: 'The Woodlands' }, { '@type': 'City', name: 'Sugar Land' }, { '@type': 'City', name: 'Katy' }, { '@type': 'City', name: 'Pearland' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -516,7 +487,6 @@ export default function HoustonWebDesignPage() {
   return (
     <>
       <script id="houston-web-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="houston-web-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="houston-web-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="houston-web-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="houston-web-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

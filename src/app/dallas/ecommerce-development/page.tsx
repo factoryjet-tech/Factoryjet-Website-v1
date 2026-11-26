@@ -406,35 +406,10 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Dallas E-Commerce Development Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  areaServed: [
-    { '@type': 'City', name: 'Dallas' },
-    { '@type': 'City', name: 'Plano' },
-    { '@type': 'City', name: 'Frisco' },
-    { '@type': 'City', name: 'Irving' },
-    { '@type': 'City', name: 'Fort Worth' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & Chief Technical Architect',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'Dallas E-Commerce Development & Shopify Plus Architecture',
   provider: {
     '@type': 'Organization',
@@ -445,11 +420,7 @@ const SERVICE_SCHEMA = {
   serviceType: 'E-Commerce Development, Shopify Plus Engineering & B2B Wholesale Portals',
   description:
     'Senior engineering-led custom Shopify Plus storefronts, B2B wholesale portals, ERP integrations, and headless commerce engineering for Dallas businesses.',
-  areaServed: [
-    { '@type': 'City', name: 'Dallas' },
-    { '@type': 'State', name: 'Texas' },
-    { '@type': 'Country', name: 'United States' },
-  ],
+  areaServed: [{ '@type': 'City', name: 'Dallas' }, { '@type': 'State', name: 'Texas' }, { '@type': 'Country', name: 'United States' }, { '@type': 'City', name: 'Plano' }, { '@type': 'City', name: 'Frisco' }, { '@type': 'City', name: 'Irving' }, { '@type': 'City', name: 'Fort Worth' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -493,7 +464,6 @@ export default function DallasEcommercePage() {
   return (
     <>
       <script id="dal-ecom-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="dal-ecom-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="dal-ecom-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="dal-ecom-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="dal-ecom-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

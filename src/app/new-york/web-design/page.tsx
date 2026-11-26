@@ -427,42 +427,16 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - New York Web Design Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  priceRange: '$$$',
-  areaServed: [
-    { '@type': 'City', name: 'New York' },
-    { '@type': 'City', name: 'Manhattan' },
-    { '@type': 'City', name: 'Brooklyn' },
-    { '@type': 'City', name: 'Queens' },
-    { '@type': 'City', name: 'Long Island City' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & CEO',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'New York Web Design & Next.js Development',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Web Design, Next.js Development, UI/UX Design & Headless CMS',
   description:
     'Custom Next.js web design and engineering in New York City. Sub-second performance, full IP code ownership, and rapid 7-day delivery for NYC businesses.',
-  areaServed: [{ '@type': 'State', name: 'New York' }],
+  areaServed: [{ '@type': 'State', name: 'New York' }, { '@type': 'City', name: 'New York' }, { '@type': 'City', name: 'Manhattan' }, { '@type': 'City', name: 'Brooklyn' }, { '@type': 'City', name: 'Queens' }, { '@type': 'City', name: 'Long Island City' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -498,7 +472,6 @@ export default function NewYorkWebDesignPage() {
   return (
     <>
       <script id="ny-web-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="ny-web-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="ny-web-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="ny-web-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="ny-web-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

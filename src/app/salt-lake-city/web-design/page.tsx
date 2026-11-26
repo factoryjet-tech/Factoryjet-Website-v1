@@ -422,42 +422,16 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Salt Lake City Web Design Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  priceRange: '$$$',
-  areaServed: [
-    { '@type': 'City', name: 'Salt Lake City' },
-    { '@type': 'City', name: 'Lehi' },
-    { '@type': 'City', name: 'Draper' },
-    { '@type': 'City', name: 'South Jordan' },
-    { '@type': 'City', name: 'Sandy' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & CEO',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'Salt Lake City Web Design & Next.js Development',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Web Design, Next.js Development, UI/UX Design & Headless CMS',
   description:
     'Custom Next.js web design and engineering in Salt Lake City UT. Sub-second performance, full IP code ownership, and rapid 7-day delivery for Utah businesses.',
-  areaServed: { '@type': 'State', name: 'Utah' },
+  areaServed: [{ '@type': 'State', name: 'Utah' }, { '@type': 'City', name: 'Salt Lake City' }, { '@type': 'City', name: 'Lehi' }, { '@type': 'City', name: 'Draper' }, { '@type': 'City', name: 'South Jordan' }, { '@type': 'City', name: 'Sandy' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -493,7 +467,6 @@ export default function SaltLakeCityWebDesignPage() {
   return (
     <>
       <script id="slc-web-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="slc-web-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="slc-web-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="slc-web-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="slc-web-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />

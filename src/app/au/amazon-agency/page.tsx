@@ -210,6 +210,7 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL, languages: twinAlternates['amazon-agency'] },
   openGraph: {
+    images: [{ url: 'https://factoryjet.com/og-default.png', width: 1200, height: 630, alt: 'FactoryJet' }],
     title: TITLE,
     description:
       'Amazon.com.au for established Australian brands: Sponsored Ads tuned to margin, listings and Brand Registry, FBA or your own couriers, and stock and fees synced with Shopify, Cin7, Xero and MYOB. You own every account.',

@@ -370,42 +370,16 @@ const FAQ_SCHEMA = {
   })),
 };
 
-const LOCAL_BUSINESS_SCHEMA = {
-  '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
-  parentOrganization: { '@id': 'https://factoryjet.com/#organization' },
-  name: 'FactoryJet - Cleveland Web Design Agency',
-  image: 'https://factoryjet.com/og-default.png',
-  url: CANONICAL,
-  priceRange: '$$',
-  areaServed: [
-    { '@type': 'City', name: 'Cleveland' },
-    { '@type': 'City', name: 'Lakewood' },
-    { '@type': 'City', name: 'Beachwood' },
-    { '@type': 'City', name: 'Solon' },
-    { '@type': 'City', name: 'Independence' },
-  ],
-};
 
 const SERVICE_SCHEMA = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  author: {
-    '@type': 'Person',
-    name: 'Bhavesh Barot',
-    jobTitle: 'Founder & CEO',
-    url: 'https://factoryjet.com/about',
-    sameAs: [
-      'https://www.linkedin.com/in/bhavesh-ai-gtm-expert/',
-      'https://github.com/factoryjet-tech',
-    ],
-  },
   name: 'Cleveland Web Design & Next.js Development',
   provider: { '@type': 'Organization', '@id': 'https://factoryjet.com/#organization', name: 'FactoryJet', url: 'https://factoryjet.com' },
   serviceType: 'Web Design, Frontend Engineering & Conversion Optimization',
   description:
     'Senior engineering-led custom Next.js web design, sub-second page performance, mobile conversion optimization, and full IP ownership for Cleveland businesses.',
-  areaServed: { '@type': 'State', name: 'Ohio' },
+  areaServed: [{ '@type': 'State', name: 'Ohio' }, { '@type': 'City', name: 'Cleveland' }, { '@type': 'City', name: 'Lakewood' }, { '@type': 'City', name: 'Beachwood' }, { '@type': 'City', name: 'Solon' }, { '@type': 'City', name: 'Independence' }],
 };
 
 const WEBPAGE_SCHEMA = {
@@ -441,7 +415,6 @@ export default function ClevelandWebDesignPage() {
   return (
     <>
       <script id="cle-faq-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
-      <script id="cle-local-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(LOCAL_BUSINESS_SCHEMA) }} />
       <script id="cle-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SERVICE_SCHEMA) }} />
       <script id="cle-webpage-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBPAGE_SCHEMA) }} />
       <script id="cle-breadcrumb-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BREADCRUMB_SCHEMA) }} />
