@@ -39,10 +39,10 @@ export const homeAlternates = {
   'x-default': 'https://factoryjet.com',
 } as const
 
-/** US market hub page (/us) — US-only, no India/UAE equivalent */
+/** US market hub page (/us), US-only, no India/UAE equivalent */
 /**
  * /us homepage. Bilingual cluster mirrors India / homepage's emission so
- * Google sees consistent reciprocal hreflang. Fixed 2026-05-25 in PR #2 —
+ * Google sees consistent reciprocal hreflang. Fixed 2026-05-25 in PR #2 ,
  * previously emitted only en-US + x-default, leaving the en-IN reciprocal
  * to /us asymmetric vs India's en-US → /us back-pointer.
  */
@@ -56,7 +56,7 @@ export const usHubAlternates = {
 
 /**
  * /au homepage (AU market hub). Full cluster so Google sees consistent
- * reciprocal hreflang — en-AU added to homeAlternates / usHubAlternates /
+ * reciprocal hreflang, en-AU added to homeAlternates / usHubAlternates /
  * /uk metadata.ts in the same change (PR #2 lesson: never emit asymmetric
  * hreflang). Added 2026-06-11 with the AU market launch.
  */
@@ -90,10 +90,10 @@ export const webDesignAlternates = {
 } as const
 
 /**
- * Ecommerce development service hub — US-owned.
+ * Ecommerce development service hub, US-owned.
  *
  * US owns /services/ecommerce-development (US is the primary domain). Previously
- * this emitted BOTH en-IN and en-US pointing at the SAME URL — a self-referential
+ * this emitted BOTH en-IN and en-US pointing at the SAME URL, a self-referential
  * duplicate that told Google two locales share one page, which is invalid and let
  * India intent bleed onto the US hub. Fixed 2026-07-05: en-US + x-default only,
  * per the single-country page rule.
@@ -163,7 +163,7 @@ export const aboutAlternates = {
 // SINGLE-COUNTRY PAGES (no alternates in other countries)
 // ===========================================================================
 
-/** Contact page — GLOBAL/primary-domain page (renders the US header). Signalled
+/** Contact page, GLOBAL/primary-domain page (renders the US header). Signalled
  *  as en-US so Google does not treat /contact as India-only. (geo-segmentation 2026-07-06) */
 export const contactAlternates = {
   'en-US': 'https://factoryjet.com/contact',
@@ -176,31 +176,31 @@ export const faqAlternates = {
   'x-default': 'https://factoryjet.com/faq',
 } as const
 
-/** Website Cost guide page (US only — no India equivalent) */
+/** Website Cost guide page (US only, no India equivalent) */
 export const websiteCostAlternates = {
   'en-US': 'https://factoryjet.com/website-cost',
   'x-default': 'https://factoryjet.com/website-cost',
 } as const
 
-/** Small Business Website Design service page (US only — no India equivalent) */
+/** Small Business Website Design service page (US only, no India equivalent) */
 export const smallBusinessWebDesignAlternates = {
   'en-US': 'https://factoryjet.com/services/small-business-website-design',
   'x-default': 'https://factoryjet.com/services/small-business-website-design',
 } as const
 
-/** Magento Development service page (US only — no India equivalent) */
+/** Magento Development service page (US only, no India equivalent) */
 export const magentoDevelopmentAlternates = {
   'en-US': 'https://factoryjet.com/services/magento-development',
   'x-default': 'https://factoryjet.com/services/magento-development',
 } as const
 
-/** WooCommerce Development service page (US only — no India equivalent) */
+/** WooCommerce Development service page (US only, no India equivalent) */
 export const woocommerceDevelopmentAlternates = {
   'en-US': 'https://factoryjet.com/services/woocommerce-development',
   'x-default': 'https://factoryjet.com/services/woocommerce-development',
 } as const
 
-/** Ecommerce App Development service page (US only — no India equivalent) */
+/** Ecommerce App Development service page (US only, no India equivalent) */
 export const ecommerceAppDevelopmentAlternates = {
   'en-US': 'https://factoryjet.com/services/ecommerce-app-development',
   'x-default': 'https://factoryjet.com/services/ecommerce-app-development',
@@ -212,7 +212,7 @@ export const ecommerceAppDevelopmentAlternates = {
  */
 
 /**
- * Local SEO service hub — US-only. The India local-seo page (/seo/local-seo)
+ * Local SEO service hub, US-only. The India local-seo page (/seo/local-seo)
  * targets a different market and intent, so it is intentionally NOT linked as a
  * locale alternate. en-US + x-default per the single-country page rule.
  * US: /us/services/local-seo. Added 2026-06-02.
@@ -223,7 +223,7 @@ export const localSeoServicesAlternatesUS = {
 } as const
 
 /**
- * Ecommerce SEO service hub — US-only. en-US + x-default per the single-country
+ * Ecommerce SEO service hub, US-only. en-US + x-default per the single-country
  * page rule. US: /us/services/ecommerce-seo. Added 2026-06-02.
  */
 export const ecommerceSeoServicesAlternatesUS = {
@@ -232,7 +232,7 @@ export const ecommerceSeoServicesAlternatesUS = {
 } as const
 
 /**
- * Small business SEO service hub — US-only. en-US + x-default per the single-country
+ * Small business SEO service hub, US-only. en-US + x-default per the single-country
  * page rule. US: /us/services/small-business-seo. Added 2026-06-03.
  */
 export const smallBusinessSeoServicesAlternatesUS = {
@@ -241,7 +241,7 @@ export const smallBusinessSeoServicesAlternatesUS = {
 } as const
 
 /**
- * SEO audit & technical SEO service hub — US-only. en-US + x-default per the
+ * SEO audit & technical SEO service hub, US-only. en-US + x-default per the
  * single-country page rule. US: /us/services/seo-audit. Added 2026-06-03.
  */
 export const seoAuditServicesAlternatesUS = {
@@ -250,7 +250,7 @@ export const seoAuditServicesAlternatesUS = {
 } as const
 
 /**
- * AI SEO / GEO / AEO service page — bilingual cluster.
+ * AI SEO / GEO / AEO service page, bilingual cluster.
  * US:    /services/ai-seo   (targets "AI SEO agency/services/company", US-qualified)
  * India: /ai-seo            (root path, matches India URL pattern for services)
  * UAE / UK: generic regional landings.
@@ -271,7 +271,7 @@ export const seoAuditServicesAlternatesUS = {
  * "x-default → India" convention. The commercial head term "ai seo agency" is
  * US-intent and lives only in /services/ai-seo's title/H1, but x-default previously
  * pointed to the India GEO page (/ai-seo), so Google served the India-scoped page to
- * generic searchers — splitting authority and pinning the correct US page to ~pos 50.
+ * generic searchers, splitting authority and pinning the correct US page to ~pos 50.
  * x-default now points to the US page. Do NOT "restore" it to /ai-seo. Keep
  * en-IN → /ai-seo so India intent still resolves to the India page.
  */
@@ -377,7 +377,7 @@ export const webDesignCityAlternatesIN = {
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
-// US priority city pages — /us/{city}/web-design route pattern
+// US priority city pages, /us/{city}/web-design route pattern
 // (no India / UAE equivalents exist)
 // Per CITY PAGE RULE: only en-US + x-default.
 // ---------------------------------------------------------------------------
@@ -473,7 +473,7 @@ export const ecommerceCityAlternatesUS: Record<string, { 'en-US': string; 'x-def
 // US-ONLY GENERAL PAGES
 // ===========================================================================
 
-/** Portfolio (US only — no India/UAE equivalent) */
+/** Portfolio (US only, no India/UAE equivalent) */
 export const portfolioAlternatesUS = {
   'en-US': 'https://factoryjet.com/portfolio',
   'x-default': 'https://factoryjet.com/portfolio',
@@ -649,16 +649,16 @@ export const ecommerceCityAlternatesIN: Record<string, { 'en-IN': string; 'x-def
 } as const
 
 // ===========================================================================
-// SEO SERVICE PAGES (India only — no US/UAE equivalents yet)
+// SEO SERVICE PAGES (India only, no US/UAE equivalents yet)
 // Per CITY PAGE RULE: India-only pages emit only en-IN + x-default.
 // ===========================================================================
 
-/** /seo hub — India only. */
+/** /seo hub, India only. */
 export const seoHubAlternates = {
   'en-IN': 'https://factoryjet.com/seo',
 } as const
 
-/** /seo/[city] pages — India only. */
+/** /seo/[city] pages, India only. */
 export const seoCityAlternatesIN = {
   mumbai: {
     'en-IN': 'https://factoryjet.com/seo/mumbai',
@@ -695,7 +695,7 @@ export const seoCityAlternatesIN = {
   },
 } as const
 
-/** /seo/[discipline]-seo sub-service pages — India only. */
+/** /seo/[discipline]-seo sub-service pages, India only. */
 export const seoSubServiceAlternatesIN = {
   'local-seo': {
     'en-IN': 'https://factoryjet.com/seo/local-seo',
@@ -883,8 +883,9 @@ export const twinAlternates = {
     'x-default': 'https://factoryjet.com/uk/ecommerce-redesign',
   },
   'shopify-xero-integration': {
+    'en-US': 'https://factoryjet.com/services/shopify-xero-integration',
     'en-GB': 'https://factoryjet.com/uk/shopify-xero-integration',
     'en-AU': 'https://factoryjet.com/au/shopify-xero-integration',
-    'x-default': 'https://factoryjet.com/uk/shopify-xero-integration',
+    'x-default': 'https://factoryjet.com/services/shopify-xero-integration',
   },
 } as const

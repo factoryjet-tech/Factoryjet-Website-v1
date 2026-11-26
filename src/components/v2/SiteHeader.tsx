@@ -8,7 +8,7 @@ import { useContactModal } from '../../context/ContactModalContext';
 import type { ModalRegion } from '../../context/ContactModalContext';
 import Wordmark from './Wordmark';
 import { MegaNavDesktop, MegaNavMobile } from './MegaNav';
-import { AU_SERVICE_HUBS, AU_SIMPLE_MENUS, UK_SERVICE_HUBS, UK_SIMPLE_MENUS } from './megaNavData';
+import { AU_SERVICE_HUBS, AU_SIMPLE_MENUS, UK_SERVICE_HUBS, UK_SIMPLE_MENUS, SIMPLE_MENUS } from './megaNavData';
 import { containDialogFocus } from '@/utils/dialogFocus';
 
 // ─── Locale type ──────────────────────────────────────────────────────────────
@@ -53,6 +53,10 @@ export interface SiteHeaderProps {
   /** Pass a custom CTA item to override the default modal CTA. */
   cta?: CtaItem;
   className?: string;
+  /** Omit individual client links on pages that require unnamed proof. */
+  showNamedCaseStudies?: boolean;
+  /** Send both header CTAs to an inline contact section instead of a modal. */
+  contactHref?: string;
 }
 
 function ModernSiteHeader({
@@ -62,12 +66,29 @@ function ModernSiteHeader({
   prefetchLogo,
   cta,
   className = '',
+  showNamedCaseStudies = true,
+  contactHref,
 }: SiteHeaderProps) {
   const { openModal } = useContactModal();
   const cfg = LOCALE_CONFIG[locale as 'us' | 'gb' | 'au'] ?? LOCALE_CONFIG.us;
 
-  const megaData = locale === 'gb' ? { hubs: UK_SERVICE_HUBS, menus: UK_SIMPLE_MENUS }
-    : locale === 'au' ? { hubs: AU_SERVICE_HUBS, menus: AU_SIMPLE_MENUS } : {};
+  const regionalMegaData = locale === 'gb' ? { hubs: UK_SERVICE_HUBS, menus: UK_SIMPLE_MENUS }
+    : locale === 'au' ? { hubs: AU_SERVICE_HUBS, menus: AU_SIMPLE_MENUS } : { menus: SIMPLE_MENUS };
+  const megaData = showNamedCaseStudies ? regionalMegaData : {
+    ...regionalMegaData,
+    menus: regionalMegaData.menus.map((menu) => ({
+      ...menu,
+      feature: menu.feature.href === '/case-studies' ? {
+        ...menu.feature,
+        kicker: 'Service directory', title: 'Find the work you need',
+        body: 'Browse ecommerce services and integration guides.', href: '/services', cta: 'See services',
+      } : menu.feature,
+      columns: menu.columns.map((column) => ({
+        ...column,
+        items: column.items.filter((item) => !item.href.startsWith('/case-studies/')),
+      })),
+    })),
+  };
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -104,7 +125,9 @@ function ModernSiteHeader({
   }, [mobileOpen]);
 
   const handleCta = () => {
-    if (cta?.modal) {
+    if (contactHref) {
+      window.location.href = contactHref;
+    } else if (cta?.modal) {
       openModal(cta.region ?? cfg.modalRegion);
     } else if (cta?.href) {
       window.location.href = cta.href;
@@ -234,7 +257,8 @@ function ModernSiteHeader({
             type="button"
             onClick={() => {
               setMobileOpen(false);
-              openModal(cfg.modalRegion);
+              if (contactHref) window.location.href = contactHref;
+              else openModal(cfg.modalRegion);
             }}
             className="flex w-full items-center justify-center rounded-lg bg-[#B23E13] py-3.5 font-fj-body text-[15px] font-semibold text-white transition-opacity hover:opacity-90"
           >

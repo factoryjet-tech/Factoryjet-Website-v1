@@ -1226,6 +1226,9 @@ export default function ShopifyQuickBooksIntegrationPage() {
             <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
               Related ecommerce services.
             </h2>
+            <p className="mt-6 font-fj-body text-base leading-relaxed text-fj-neutral-600">
+              Keeping your books in Xero? Read our <Link href="/services/shopify-xero-integration" className="font-semibold text-[#B23E13] underline underline-offset-4">Shopify Xero integration guide</Link> for connector options, payout checks and stock ownership decisions.
+            </p>
             <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12">
               {RELATED.map((r, i) => (
                 <li key={r.href} className={i % 4 === 0 || i % 4 === 3 ? 'lg:col-span-7' : 'lg:col-span-5'}>

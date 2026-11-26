@@ -1693,6 +1693,9 @@ export default function EcommerceErpIntegrationPage() {
             <h2 className="mt-4 font-fj-display text-3xl font-semibold text-fj-ink sm:text-4xl">
               Pages under this hub.
             </h2>
+            <p className="mt-6 font-fj-body text-base leading-relaxed text-fj-neutral-600">
+              Using Xero for accounting alongside your store or ERP? Our <Link href="/services/shopify-xero-integration" className="font-semibold text-[#B23E13] underline underline-offset-4">Shopify Xero integration page</Link> covers the posting choices and the separate decision about who owns stock.
+            </p>
             <ul className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12">
               {RELATED.map((r, i) => (
                 <li key={r.href} className={i % 4 === 0 || i % 4 === 3 ? 'lg:col-span-7' : 'lg:col-span-5'}>
