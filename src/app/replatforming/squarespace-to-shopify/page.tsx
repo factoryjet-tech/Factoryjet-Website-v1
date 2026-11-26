@@ -181,7 +181,7 @@ const FAQ_ITEMS = [
     category: 'squarespace-content',
     question: 'Will my Shopify store look like my Squarespace site?',
     answer:
-      'The design needs rebuilding because Squarespace style settings and custom CSS do not export. A Shopify theme can use your existing colors, typography and images, but its templates and checkout work differently. Agree which page layouts and interactions to recreate, then review them on your own catalog at phone and desktop widths.',
+      'The design needs rebuilding because Squarespace style settings and custom CSS do not export. A Shopify theme can use your existing colors, typography and images, but its templates and checkout work differently. Agree which page layouts and interactions to recreate, then review them on your own catalog at phone and desktop widths. FactoryJet builds custom-theme stores in 3 to 5 weeks and migrations in 5 to 8 weeks, and you see a working demo on your own products before you sign anything.',
   },
   {
     category: 'squarespace-content',
@@ -253,7 +253,7 @@ const FAQ_ITEMS = [
     category: 'squarespace-cost',
     question: 'How long does moving from Squarespace to Shopify take?',
     answer:
-      'Set the schedule after auditing the exports and testing a sample import. Product options, image recovery, extra blogs, theme rebuilds and integrations determine the work. Agree milestones for data validation, storefront review, test orders and domain cutover. Domain registration transfer is separate from storefront launch, so its waiting period should not be presented as the build timeline.',
+      'FactoryJet migrations run 5 to 8 weeks from signed scope to launch. A single store page with a small blog sits at the short end. Product options, image recovery, a second blog captured from the live site, theme rebuilds and integrations push it toward the long end; we confirm the schedule after a sample import. Across 500+ businesses since 2014, 97% of our projects have shipped on time. Domain registration transfer is separate from storefront launch, so its waiting period should not be presented as the build timeline.',
   },
 ];
 
@@ -615,7 +615,7 @@ export default function SquarespaceToShopifyPage() {
                 </h2>
 
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  Squarespace exports products as CSV and supported page content as WordPress-format XML. Customers and orders need separate exports. Product photos and theme styling need their own work. FactoryJet can use these platform limits to scope a migration plan, then validate it against your export files and a sample import.
+                  Squarespace exports products as CSV and supported page content as WordPress-format XML. Customers and orders need separate exports. Product photos and theme styling need their own work. FactoryJet, a registered Shopify Partner serving 500+ businesses since 2014, plans each Squarespace job around these limits and shows you a working Shopify demo on your own catalog before you commit.
                 </p>
 
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
@@ -839,7 +839,7 @@ export default function SquarespaceToShopifyPage() {
                   Moving Off Squarespace in 10 Steps
                 </h2>
                 <p className="pp-lead" style={{ color: '#494852', margin: '0 0 28px', fontSize: '16px', lineHeight: 1.6 }}>
-                  Image recovery, variant mapping and content rebuilds determine the schedule. Agree the timeline after a sample import, with review gates for the catalog, storefront and checkout before the domain switch.
+                  Image recovery, variant mapping and content rebuilds determine the schedule. FactoryJet migrations run 5 to 8 weeks, with review gates for the catalog, storefront and checkout before the domain switch.
                 </p>
                 <ModalCTAButton label="Start Your Squarespace Audit" region="us" btnVariant="primary-dark" />
               </div>
