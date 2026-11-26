@@ -170,7 +170,7 @@ const MARKETING_JOURNEY_STAGES: ServiceJourneyStage[] = [
 
 const MARKETING_STATS = [
   {
-    value: '.01T',
+    value: '$1.01T',
     label: 'US retail sales forecast for holiday shopping windows.',
     microcopy: 'National Retail Federation holiday forecast.',
     categoryLabel: 'PEAK SEASON.',
@@ -191,13 +191,13 @@ const MARKETING_STATS = [
 
 const MARKETING_MARKET_STATS = [
   {
-    value: '.01T',
+    value: '$1.01T',
     label: 'US retail holiday sales forecast projecting major seasonal demand.',
     sourceUrl: 'https://nrf.com/media-center/press-releases/nrf-expects-holiday-sales-to-surpass-1-trillion-for-the-first-time-in-2025',
     sourceLabel: 'National Retail Federation, 2025.',
   },
   {
-    value: ',088',
+    value: '$53,088',
     label: 'maximum statutory penalty per non-compliant email under CAN-SPAM rules.',
     sourceUrl: 'https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business',
     sourceLabel: 'FTC CAN-SPAM Compliance Guide.',
