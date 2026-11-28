@@ -148,7 +148,7 @@ export const AU_FOOTER_COLUMNS: ReadonlyArray<SiteFooterColumn> = [
 export const AU_FOOTER_FEATURED_COLUMNS: ReadonlyArray<SiteFooterColumn> = pickFooterLinks(AU_FOOTER_COLUMNS, [
   ['Commerce', [
     '/au/ecommerce-development', '/au/ecommerce-consultant', '/au/b2b-ecommerce',
-    '/omnichannel-commerce', '/replatforming', '/au/shopify-migration', '/au/neto-to-shopify',
+    '/omnichannel-commerce', '/au/shopify-migration', '/au/neto-to-shopify',
   ]],
   ['AI Agents & Automation', [
     '/au/ai-consulting', '/au/ai-development', '/au/ai-agents',
