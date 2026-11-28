@@ -1,4 +1,5 @@
 /* Homepage sections on top of AiAgentDevelopmentSections.css (same design system). */
+.homePage #home-hero-form { margin-top: 18px; }
 .homePage .hero-proof { margin-top: 18px; padding: 14px 0 0; border-top: 1px solid var(--line); }
 .homePage .hero-proof p { color: var(--body); font-size: 12px; line-height: 1.55; }
 .homePage .hero-proof strong { color: var(--ink); font-weight: 700; }
@@ -135,8 +136,7 @@
   .homePage .agentflow li { font-size: 12.5px; padding: 8px 12px; }
 }
 
-/* 14 Nov 2026: hero form removed; buttons in the hero, full form in the final section. */
-.homePage .hero-trust { margin-top: 12px; color: var(--body); font-size: 12.5px; }
+/* Final section holds the full form (14 Nov 2026); the hero form came back on 28 Nov 2026. */
 .homePage .finalcta .wrap { align-items: flex-start; }
 .homePage .finalcta-form { flex: 0 1 560px; scroll-margin-top: 96px; }
 /* The section's big h2/p rules (AiAgentDevelopmentSections.css) must not reach the form card. */

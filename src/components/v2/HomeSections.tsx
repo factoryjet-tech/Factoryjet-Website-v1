@@ -1,3 +1,4 @@
+import HeroInlineForm from '@/components/HeroInlineForm';
 import LeadFormInline from '@/components/LeadFormInline';
 import { HOME_FAQS } from './HomeFaqs';
 import MobileStickyBar from './MobileStickyBar';
@@ -86,11 +87,15 @@ export default function HomeSections() {
               <div className="eyebrow">Ecommerce Development · AI Agents</div>
               <h1>Ecommerce Development <span className="hero-emphasis">Connected to Your ERP and Accounting.</span></h1>
               <p className="lead">We build Shopify and WooCommerce stores and B2B portals for DTC and B2B brands, connect them to QuickBooks, NetSuite or Odoo, and add AI agents for the repeat work, such as turning emailed purchase orders into sales orders.</p>
-              <div className="actions" id="home-hero-cta">
-                <a className="btn btn-primary" href="#get-audit">Get a commerce audit</a>
-                <a className="btn btn-ghost" href="#work">See our work</a>
-              </div>
-              <p className="hero-trust">We reply within 24 hours. No sales pressure.</p>
+              <HeroInlineForm
+                source="us_hero_inline"
+                region="us"
+                submitLabel="Get a commerce audit"
+                formId="home-hero-form"
+                secondaryHref="#work"
+                secondaryLabel="See our work"
+                trustText="We reply within 24 hours. No sales pressure."
+              />
               <aside className="hero-proof" aria-label="Selected FactoryJet clients and track record">
                 <p><strong>500+ businesses served</strong> across web, commerce and AI engagements.</p>
                 <div className="proof-brands" aria-label="Selected clients">
@@ -353,7 +358,7 @@ export default function HomeSections() {
           </div>
         </section>
       </main>
-      <MobileStickyBar targetId="home-hero-cta" scrollToId="get-audit" />
+      <MobileStickyBar targetId="home-hero-form" />
     </div>
   );
 }
