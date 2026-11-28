@@ -189,8 +189,20 @@ test('keepVendorLead saves the lead, records form_vendor_submit and never a conv
   assert.doesNotMatch(VENDOR_CONFIRMATION, /—|–/, 'no dashes as asides in user-facing text');
 });
 
+test('the hero form asks only name and work email (27 Nov 2026)', () => {
+  // Founder decision 27 Nov 2026: hero forms back to two fields. The vendor
+  // question and website stay on the contact page and modal forms.
+  const src = readFileSync(new URL('../src/components/HeroInlineForm.tsx', import.meta.url), 'utf8');
+  for (const gone of ['LEAD_INTENT_OPTIONS', 'isWebsiteLike(', 'keepVendorLead(', 'No website yet', 'validation_empty_intent', 'validation_empty_website']) {
+    assert.ok(!src.includes(gone), `HeroInlineForm must not contain ${gone}`);
+  }
+  assert.match(src, /aria-label="Your name"/);
+  assert.match(src, /aria-label="Work email"/);
+  assert.equal((src.match(/<input/g) || []).length, 3, 'name, email and the hidden honeypot only');
+});
+
 test('each qualifying form sends vendors through keepVendorLead, before any conversion call', () => {
-  for (const file of ['HeroInlineForm', 'ContactFormModal', 'LeadFormInline']) {
+  for (const file of ['ContactFormModal', 'LeadFormInline']) {
     const src = readFileSync(new URL(`../src/components/${file}.tsx`, import.meta.url), 'utf8');
     assert.ok(/LEAD_INTENT_OPTIONS/.test(src), `${file} asks what brings the visitor here`);
     assert.ok(/isWebsiteLike\(/.test(src), `${file} requires a website`);
